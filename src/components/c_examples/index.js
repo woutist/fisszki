@@ -20,7 +20,7 @@ class MainNavigation extends Component {
     }
 }
 
-var data = [
+const data = [
     {name:'Jhon', age:28, city:'HO'},
     {name:'Onhj', age:82, city:'HN'},
     {name:'Nohj', age:41, city:'IT'}
