@@ -9,11 +9,17 @@ import JsonExample from './components/c_flashcard'
 
 const jsonData = [
     {
-        'name':'Rzeczowniki',
+        'name': {
+            '_pl': 'Rzeczowniki',
+            '_en': 'Nouns'
+        },
         'data':require('./components/c_flashcard/data_json/test1.json')
     },
     {
-        'name':'Czasowniki',
+        'name': {
+            '_pl': 'Czasowniki',
+            '_en': 'verbs'
+        },
         'data':require('./components/c_flashcard/data_json/test2.json')
     }
 ];
