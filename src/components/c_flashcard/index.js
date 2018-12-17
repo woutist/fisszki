@@ -4,7 +4,7 @@ import './component.css';
 import Cookies from 'universal-cookie';
 
 /**
- * COOKIES
+ * COOKIES LANGUAGE
  */
 const cookies = new Cookies();
 let lang, translate = {};
@@ -30,7 +30,10 @@ if(typeof cookies.get('flashcard_cookie') === "undefined") {
 }
 setLanguage(lang);
 
-class JsonExample extends Component {
+/**
+ * COMPONENT FLASHCARDS
+ */
+class FlashCards extends Component {
     state = {
         callObj: 'Select exercise...',
         activePL: (lang === 'pl')?'active-lang':'',
@@ -112,7 +115,7 @@ class JsonExample extends Component {
                     {json.map(function (obj, i) {
                         return (
                             <li key={i}>
-                                <a href='#flashcard' onClick={(e) => that.callExercise(e,obj.data)}>{that.state.langNameExercise(obj.name)}</a>
+                                <a href={'#flashcard' + i} onClick={(e) => that.callExercise(e,obj.data)}>{that.state.langNameExercise(obj.name)}</a>
                             </li>
                         );
                     },that)}
@@ -125,4 +128,4 @@ class JsonExample extends Component {
     }
 }
 
-export default JsonExample;
+export default FlashCards;
