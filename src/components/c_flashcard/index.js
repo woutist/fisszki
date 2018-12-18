@@ -3,26 +3,43 @@ import React, { Component } from 'react';
 import './component.css';
 import Cookies from 'universal-cookie';
 
+let idExercise = -1, idItem;
+
 /**
  * COOKIES LANGUAGE
  */
+// COOKIES LANGUAGE
 const cookies = new Cookies();
 let lang, translate = {};
 const setLanguage = (x) => {
     switch (x) {
         case 'en':
-            translate.closeExercise = 'Close exercise';
+            translate = {
+                ButtonCloseExercise: 'Close exercise',
+                placeholderFlashCards: 'English version',
+                infoCongratulation: 'Congratultaion!',
+                buttonIKnow: 'I know',
+                buttonIDontKnow: "I don't know",
+                buttonCheckOut: 'Check out'
+            };
             break;
         default: //pl
-            translate.closeExercise = 'Zamknij ćwiczenie';
+            translate = {
+                ButtonCloseExercise: 'Zamknij ćwiczenie',
+                placeholderFlashCards: 'Polska wersja',
+                infoCongratulation: 'Gratulacje!',
+                buttonIKnow: 'Wiem',
+                buttonIDontKnow: "Nie wiem",
+                buttonCheckOut: 'Sprawdź'
+            };
     }
 };
-if(typeof cookies.get('flashcard_cookie') === "undefined") {
+if(typeof cookies.get('language_cookie') === "undefined") {
     //console.log("cookie nie ustawione");
-    cookies.set('flashcard_cookie', 'pl', { path: '/' });
+    cookies.set('language_cookie', 'pl', { path: '/' });
     lang = 'pl';
 } else {
-    if(cookies.get('flashcard_cookie') === 'pl') {
+    if(cookies.get('language_cookie') === 'pl') {
         lang = 'pl';
     } else {
         lang = 'en';
@@ -30,15 +47,34 @@ if(typeof cookies.get('flashcard_cookie') === "undefined") {
 }
 setLanguage(lang);
 
+// COOKIES FLASHCARDS DIRECTION
+let flashCardDirection;
+if(typeof cookies.get('flashcards_cookie') === "undefined") {
+    //console.log("cookie nie ustawione");
+    cookies.set('flashcards_cookie', 'left', { path: '/' });
+    flashCardDirection = 'left';
+} else {
+    if(cookies.get('flashcards_cookie') === 'left') {
+        flashCardDirection = 'left';
+    } else {
+        flashCardDirection = 'right';
+    }
+}
+
 /**
  * COMPONENT FLASHCARDS
  */
 class FlashCards extends Component {
     state = {
-        callObj: 'Select exercise...',
+        callObj: translate.placeholderFlashCards,
+        langCongratulation: translate.infoCongratulation,
+        direction: (flashCardDirection === 'right')?'en => pl':'pl => en',
         activePL: (lang === 'pl')?'active-lang':'',
         activeEN: (lang === 'en')?'active-lang':'',
-        langCloseExercise: translate.closeExercise,
+        langButtonCloseExercise: translate.ButtonCloseExercise,
+        langButtonIKnow: translate.buttonIKnow,
+        langButtonIDontKnow: translate.buttonIDontKnow,
+        langButtonCheckOut: translate.buttonCheckOut,
         langNameExercise: function (j) {
             switch (lang) {
                 case 'en': return j._en;
@@ -46,59 +82,141 @@ class FlashCards extends Component {
             }
         }
     };
-    callExercise = (event,o) => {
+    setExercise = (event,o,idE,idI) => {
+        //console.log('setExercise: ' + id);
+        idExercise = idE;
+        idItem = idI;
+        console.log(idItem);
         this.setState({
-            callObj: o.map(function (obj, i) {
-                if(lang === 'pl') {
+            // eslint-disable-next-line
+            callObj: (typeof idItem === 'undefined')?this.state.langCongratulation:o.map(function (obj, i) {
+                if(i === idI) {
                     return (
                         <div key={i}>
-                            {obj._pl} - {obj._en}
-                            <a target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl}>
-                                Google translator
-                            </a>
+                            {
+                                flashCardDirection === 'left' ?
+                                    <div>{obj._pl} - {obj._en} <a target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl}>gt</a></div>
+                                    :
+                                    <div>{obj._en} - {obj._pl} <a target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en}>gt</a></div>
+                            }
                         </div>
-                    )
-                } else {
-                    return (
-                        <div key={i}>
-                            {obj._en} - {obj._pl}
-                            <a target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en}>
-                                Google translator
-                            </a>
-                        </div>
-                    )
+                    );
                 }
+
             })
         });
-        event.preventDefault();
+        //congratulation = false;
+        if(event) event.preventDefault();
     };
     clearExercise = event => {
+        idExercise = -1;
         this.setState({
-            callObj: ''
+            callObj: translate.placeholderFlashCards
         });
         event.preventDefault();
     };
     setLang = (event,o) => {
         setLanguage(o);
-        if(o === 'pl') { // cookies.get('flashcard_cookie') === 'pl'
-            cookies.set('flashcard_cookie', 'pl', { path: '/' });
+        if(o === 'pl') { // cookies.get('language_cookie') === 'pl'
+            cookies.set('language_cookie', 'pl', { path: '/' });
             this.setState({
                 activePL: 'active-lang',
                 activeEN: ''
             });
         } else if(o === 'en') {
-            cookies.set('flashcard_cookie', 'en', { path: '/' });
+            cookies.set('language_cookie', 'en', { path: '/' });
             this.setState({
                 activePL: '',
                 activeEN: 'active-lang'
             });
         }
         this.setState({
-            langCloseExercise: translate.closeExercise
+            langButtonCloseExercise: translate.ButtonCloseExercise,
+            langButtonIKnow: translate.buttonIKnow,
+            langButtonIDontKnow: translate.buttonIDontKnow,
+            langButtonCheckOut: translate.buttonCheckOut
         });
+        if(idExercise < 0 || (typeof idItem === 'undefined') ) {
+            this.setState({
+                callObj: (typeof idItem === 'undefined' && idExercise !== -1)?translate.infoCongratulation:translate.placeholderFlashCards
+            });
+        }
+
         lang = o;
-        this.clearExercise(event);
+        //this.clearExercise(event);
         event.preventDefault();
+    };
+    changeDirection = (event,o) => {
+        if(flashCardDirection === 'left') {
+            cookies.set('flashcards_cookie', 'right', { path: '/' });
+            flashCardDirection = 'right';
+            this.setState({
+                direction: 'en => pl'
+            });
+        } else {
+            cookies.set('flashcards_cookie', 'left', { path: '/' });
+            flashCardDirection = 'left';
+            this.setState({
+                direction: 'pl => en'
+            });
+        }
+        if(idExercise > -1) {
+            //console.log('id inset changeDirection: ' + idExercise);
+            this.setExercise(event,o[idExercise].data,idExercise,this.randomItem(o[idExercise],idItem));
+        }
+
+        event.preventDefault();
+    };
+    randomItem = (ol,forceId) => {
+        //ol.excludeID
+        if(forceId) {
+            return forceId;
+        }
+        else {
+            let unique, randomNr;
+            //console.log(ol.data);
+            if(typeof ol.excludeID === 'object' && ol.excludeID.length > 0){
+                if(ol.excludeID.length < ol.data.length) {
+                    console.log(ol.excludeID.length + '<' + ol.data.length)
+                    do {
+                        unique=true;
+                        randomNr=Math.floor((Math.random()*ol.data.length));
+                        for(let i=0; i<ol.excludeID.length; i++) { if(ol.excludeID[i]===randomNr) unique=false; }
+                    } while (!unique);
+                }
+                else {
+                    ol.excludeID = [];
+                }
+            }
+            else {
+                randomNr=Math.floor((Math.random()*ol.data.length));
+            }
+
+            return randomNr;
+        }
+
+    };
+    iKnow = (o,idI) => {
+        if(idExercise > -1) {
+            if(typeof o[idExercise].excludeID !== 'object') {
+                o[idExercise].excludeID = [];
+            }
+            console.log(idExercise);
+            console.log('idI: ' + idI);
+            if(o[idExercise].excludeID.length < o[idExercise].data.length && typeof idI !== 'undefined' ) {
+                o[idExercise].excludeID.push(idI);
+            }
+            console.log(o[idExercise].excludeID);
+            this.setExercise(null,o[idExercise].data,idExercise,this.randomItem(o[idExercise]));
+        }
+    };
+    iDontKnow = (o) => {
+        if(idExercise > -1) {
+            if(typeof o[idExercise].excludeID !== 'object') {
+                o[idExercise].excludeID = [];
+            }
+            this.setExercise(null,o[idExercise].data,idExercise,this.randomItem(o[idExercise]));
+        }
     };
     render() {
         const { title, json } = this.props; // title = this.props.title, json = this.props.json
@@ -107,21 +225,27 @@ class FlashCards extends Component {
             <div className="json-example">
                 <h3>{title}</h3>
                 <ul>
-                    <li><a href='#pl' className={this.state.activePL} onClick={(e) => that.setLang(e,'pl')}>PL</a></li>
-                    <li><a href='#en' className={this.state.activeEN} onClick={(e) => that.setLang(e,'en')}>EN</a></li>
+                    <li><a href={'#pl'} className={this.state.activePL} onClick={(e) => that.setLang(e,'pl')}>PL</a></li>
+                    <li><a href={'#en'} className={this.state.activeEN} onClick={(e) => that.setLang(e,'en')}>EN</a></li>
                 </ul>
+                <button onClick={(e) => that.changeDirection(e,json)}>{this.state.direction}</button>
                 <ul>
-                    <li><a href='#close-exercise' onClick={that.clearExercise}>{this.state.langCloseExercise}</a></li>
                     {json.map(function (obj, i) {
                         return (
                             <li key={i}>
-                                <a href={'#flashcard' + i} onClick={(e) => that.callExercise(e,obj.data)}>{that.state.langNameExercise(obj.name)}</a>
+                                <a href={'#flashcard' + i} onClick={(e) => that.setExercise(e,obj.data,i,that.randomItem(obj))}>{that.state.langNameExercise(obj.name)}</a>
                             </li>
                         );
                     },that)}
                 </ul>
+                <button onClick={that.clearExercise}>{this.state.langButtonCloseExercise}</button>
                 <div className="call-obj">
-                    {this.state.callObj}
+                    <div>{this.state.callObj}</div>
+                    <br />
+
+                    <button>{this.state.langButtonCheckOut}</button><br />
+                    <button onClick={() => that.iKnow(json,idItem)}>{this.state.langButtonIKnow}</button>
+                    <button onClick={() => that.iDontKnow(json)}>{this.state.langButtonIDontKnow}</button>
                 </div>
             </div>
         )

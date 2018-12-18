@@ -29,7 +29,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <FlashCards title='Class JsonExample' json={jsonData} />
+                <FlashCards title='Class FlashCards' json={jsonData} />
                 {/*<Examples />*/}
             </div>
         );
