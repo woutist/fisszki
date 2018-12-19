@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './bootstrap.min.css';
 import './style.css';
 // import Examples from './components/c_examples'
 import FlashCards from './components/c_flashcard'
@@ -21,6 +22,13 @@ const jsonData = [
             '_en': 'Verbs'
         },
         'data':require('./components/c_flashcard/data_json/test2.json')
+    },
+    {
+        'name': {
+            '_pl': 'Dni tygodnia',
+            '_en': 'Days of the week'
+        },
+        'data':require('./components/c_flashcard/data_json/base-days-of-the-week.json')
     }
 ];
 

@@ -1,0 +1,30 @@
+[
+  {
+    "_pl": "Poniedziałek",
+    "_en": "Monday"
+  },
+  {
+    "_pl": "Wtorek",
+    "_en": "Tuesday"
+  },
+  {
+    "_pl": "Środa",
+    "_en": "Wednesday"
+  },
+  {
+    "_pl": "Czwartek",
+    "_en": "Thursday"
+  },
+  {
+    "_pl": "Piątek",
+    "_en": "Friday"
+  },
+  {
+    "_pl": "Sobota",
+    "_en": "Saturday"
+  },
+  {
+    "_pl": "Niedziela",
+    "_en": "Sunday"
+  }
+]

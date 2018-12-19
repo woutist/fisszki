@@ -1,4 +1,35 @@
-.json-example {
+.module-flash-cards {
   background-color: lime; }
+  .module-flash-cards .flash-cards-main .button-i-know,
+  .module-flash-cards .flash-cards-main .button-i-dont-know {
+    display: none; }
+  .module-flash-cards .flash-cards-main.check-out-card .button-check-out {
+    display: none; }
+  .module-flash-cards .flash-cards-main.check-out-card .button-i-know,
+  .module-flash-cards .flash-cards-main.check-out-card .button-i-dont-know {
+    display: inline-block; }
+  .module-flash-cards .flash-cards-main.check-out-card .flash-card .flip-container .flipper {
+    transform: rotateY(180deg); }
+  .module-flash-cards .flash-cards-main .flash-card .flip-container {
+    perspective: 1000px; }
+  .module-flash-cards .flash-cards-main .flash-card .flip-container, .module-flash-cards .flash-cards-main .flash-card .front, .module-flash-cards .flash-cards-main .flash-card .back {
+    width: 320px;
+    height: 120px; }
+  .module-flash-cards .flash-cards-main .flash-card .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative; }
+  .module-flash-cards .flash-cards-main .flash-card .front, .module-flash-cards .flash-cards-main .flash-card .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .module-flash-cards .flash-cards-main .flash-card .front {
+    z-index: 2;
+    background-color: green;
+    transform: rotateY(0deg); }
+  .module-flash-cards .flash-cards-main .flash-card .back {
+    transform: rotateY(180deg);
+    background-color: darkcyan; }
 
 /*# sourceMappingURL=component.css.map */

@@ -75,6 +75,7 @@ class FlashCards extends Component {
         langButtonIKnow: translate.buttonIKnow,
         langButtonIDontKnow: translate.buttonIDontKnow,
         langButtonCheckOut: translate.buttonCheckOut,
+        classCheckOut: '',
         langNameExercise: function (j) {
             switch (lang) {
                 case 'en': return j._en;
@@ -88,16 +89,29 @@ class FlashCards extends Component {
         idItem = idI;
         console.log(idItem);
         this.setState({
+            classCheckOut: '',
             // eslint-disable-next-line
             callObj: (typeof idItem === 'undefined')?this.state.langCongratulation:o.map(function (obj, i) {
                 if(i === idI) {
                     return (
-                        <div key={i}>
+                        <div className="flip-container" key={i}>
                             {
                                 flashCardDirection === 'left' ?
-                                    <div>{obj._pl} - {obj._en} <a target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl}>gt</a></div>
+                                    <div className="flipper">
+                                        <div className={'front'}>{obj._pl}</div>
+                                        <div className={'back'}>
+                                            {obj._en}
+                                            <a target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl}>gt</a>
+                                            </div>
+                                    </div>
                                     :
-                                    <div>{obj._en} - {obj._pl} <a target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en}>gt</a></div>
+                                    <div className="flipper">
+                                        <div className={'front'}>{obj._en}</div>
+                                        <div className={'back'}>
+                                            {obj._pl}
+                                            <a target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en}>gt</a>
+                                        </div>
+                                    </div>
                             }
                         </div>
                     );
@@ -222,14 +236,14 @@ class FlashCards extends Component {
         const { title, json } = this.props; // title = this.props.title, json = this.props.json
         const that = this;
         return (
-            <div className="json-example">
+            <div className="module-flash-cards">
                 <h3>{title}</h3>
-                <ul>
+                <ul className="list-unstyled">
                     <li><a href={'#pl'} className={this.state.activePL} onClick={(e) => that.setLang(e,'pl')}>PL</a></li>
                     <li><a href={'#en'} className={this.state.activeEN} onClick={(e) => that.setLang(e,'en')}>EN</a></li>
                 </ul>
                 <button onClick={(e) => that.changeDirection(e,json)}>{this.state.direction}</button>
-                <ul>
+                <ul className="list-unstyled">
                     {json.map(function (obj, i) {
                         return (
                             <li key={i}>
@@ -238,14 +252,13 @@ class FlashCards extends Component {
                         );
                     },that)}
                 </ul>
-                <button onClick={that.clearExercise}>{this.state.langButtonCloseExercise}</button>
-                <div className="call-obj">
-                    <div>{this.state.callObj}</div>
-                    <br />
+                <div className={'flash-cards-main ' + this.state.classCheckOut}>
+                    <button className="button-close-exercise" onClick={that.clearExercise}>{this.state.langButtonCloseExercise}</button>
+                    <div className={'flash-card'}>{this.state.callObj}</div>
 
-                    <button>{this.state.langButtonCheckOut}</button><br />
-                    <button onClick={() => that.iKnow(json,idItem)}>{this.state.langButtonIKnow}</button>
-                    <button onClick={() => that.iDontKnow(json)}>{this.state.langButtonIDontKnow}</button>
+                    <button className="button-check-out" onClick={() => this.setState({classCheckOut: 'check-out-card'})}>{this.state.langButtonCheckOut}</button>
+                    <button className="button-i-know" onClick={() => that.iKnow(json,idItem)}>{this.state.langButtonIKnow}</button>
+                    <button className="button-i-dont-know" onClick={() => that.iDontKnow(json)}>{this.state.langButtonIDontKnow}</button>
                 </div>
             </div>
         )
