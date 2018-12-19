@@ -11,6 +11,7 @@ let idExercise = -1, idItem;
 // COOKIES LANGUAGE
 const cookies = new Cookies();
 let lang, translate = {};
+const centerClass = 'd-flex align-items-center justify-content-center flex-column';
 const setLanguage = (x) => {
     switch (x) {
         case 'en':
@@ -67,7 +68,14 @@ if(typeof cookies.get('flashcards_cookie') === "undefined") {
 class FlashCards extends Component {
     state = {
         callObj: translate.placeholderFlashCards,
-        langCongratulation: translate.infoCongratulation,
+        langCongratulation: function (that) {
+            return (
+                <div className={'congratulation-info ' + centerClass}>
+                    <h3>{translate.infoCongratulation}</h3>
+                    <button onClick={() => {that.clearExercise(); that.setState({classHideNavButtons: ''})}}>Back to exercises menu</button>
+                </div>
+            )
+        },
         direction: (flashCardDirection === 'right')?'en => pl':'pl => en',
         activePL: (lang === 'pl')?'active-lang':'',
         activeEN: (lang === 'en')?'active-lang':'',
@@ -76,6 +84,8 @@ class FlashCards extends Component {
         langButtonIDontKnow: translate.buttonIDontKnow,
         langButtonCheckOut: translate.buttonCheckOut,
         classCheckOut: '',
+        classHideOrShowMainPartsPage: 'show-list-exercise-hide-flash-cards',
+        classHideNavButtons: '',
         langNameExercise: function (j) {
             switch (lang) {
                 case 'en': return j._en;
@@ -90,27 +100,33 @@ class FlashCards extends Component {
         console.log(idItem);
         this.setState({
             classCheckOut: '',
+            classHideOrShowMainPartsPage: 'hide-flash-cards-show-list-exercise',
             // eslint-disable-next-line
-            callObj: (typeof idItem === 'undefined')?this.state.langCongratulation:o.map(function (obj, i) {
-                const centerClass = 'd-flex align-items-center justify-content-center';
+            callObj: (typeof idItem === 'undefined')?this.state.langCongratulation(this):o.map(function (obj, i) {
                 if(i === idI) {
                     return (
                         <div className="flip-container" key={i}>
                             {
                                 flashCardDirection === 'left' ?
                                     <div className="flipper">
-                                        <div className={'front ' + centerClass}>{obj._pl}</div>
+                                        <div className={'front ' + centerClass}><p>{obj._pl}</p></div>
                                         <div className={'back ' + centerClass}>
-                                            {obj._en}
-                                            <a target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl}>gt</a>
+                                            <p>pl: {obj._pl}</p>
+                                            <p>
+                                                en: {obj._en}
+                                                <a target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl}>gt</a>
+                                            </p>
                                             </div>
                                     </div>
                                     :
                                     <div className="flipper">
-                                        <div className={'front ' + centerClass}>{obj._en}</div>
+                                        <div className={'front ' + centerClass}><p>{obj._en}</p></div>
                                         <div className={'back ' + centerClass}>
-                                            {obj._pl}
-                                            <a target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en}>gt</a>
+                                            <p>en: {obj._en}</p>
+                                            <p>
+                                                pl: {obj._pl}
+                                                <a target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en}>gt</a>
+                                            </p>
                                         </div>
                                     </div>
                             }
@@ -126,9 +142,11 @@ class FlashCards extends Component {
     clearExercise = event => {
         idExercise = -1;
         this.setState({
-            callObj: translate.placeholderFlashCards
+            callObj: translate.placeholderFlashCards,
+            classHideOrShowMainPartsPage: 'show-list-exercise-hide-flash-cards',
+            classHideNavButtons: ''
         });
-        event.preventDefault();
+        if(event) event.preventDefault();
     };
     setLang = (event,o) => {
         setLanguage(o);
@@ -153,7 +171,7 @@ class FlashCards extends Component {
         });
         if(idExercise < 0 || (typeof idItem === 'undefined') ) {
             this.setState({
-                callObj: (typeof idItem === 'undefined' && idExercise !== -1)?translate.infoCongratulation:translate.placeholderFlashCards
+                callObj: (typeof idItem === 'undefined' && idExercise !== -1)?this.state.langCongratulation(this):translate.placeholderFlashCards
             });
         }
 
@@ -175,7 +193,8 @@ class FlashCards extends Component {
                 direction: 'pl => en'
             });
         }
-        if(idExercise > -1) {
+        //console.log("!!!: " + o[idExercise].data.length + ' | ' + o[idExercise].excludeID.length);
+        if(idExercise > -1 && o[idExercise].excludeID.length !== 0) {
             //console.log('id inset changeDirection: ' + idExercise);
             this.setExercise(event,o[idExercise].data,idExercise,this.randomItem(o[idExercise],idItem));
         }
@@ -227,7 +246,12 @@ class FlashCards extends Component {
             console.log(o[idExercise].excludeID);
             this.setState({classCheckOut: ''});
             setTimeout(this.timeoutAnim,600,this,o);
-            //this.setExercise(null,o[idExercise].data,idExercise,this.randomItem(o[idExercise]));
+
+            if(o[idExercise].excludeID.length === o[idExercise].data.length){
+                this.setState({
+                    classHideNavButtons: 'd-none'
+                });
+            }
         }
     };
     iDontKnow = (o) => {
@@ -243,29 +267,33 @@ class FlashCards extends Component {
         const { title, json } = this.props; // title = this.props.title, json = this.props.json
         const that = this;
         return (
-            <div className="module-flash-cards">
+            <div className={'module-flash-cards ' + this.state.classHideOrShowMainPartsPage}>
                 <h3>{title}</h3>
                 <ul className="list-unstyled">
                     <li><a href={'#pl'} className={this.state.activePL} onClick={(e) => that.setLang(e,'pl')}>PL</a></li>
                     <li><a href={'#en'} className={this.state.activeEN} onClick={(e) => that.setLang(e,'en')}>EN</a></li>
                 </ul>
                 <button onClick={(e) => that.changeDirection(e,json)}>{this.state.direction}</button>
-                <ul className="list-unstyled">
+                <ul className={'main-list-exercise list-unstyled'}>
                     {json.map(function (obj, i) {
                         return (
                             <li key={i}>
-                                <a href={'#flashcard' + i} onClick={(e) => that.setExercise(e,obj.data,i,that.randomItem(obj))}>{that.state.langNameExercise(obj.name)}</a>
+                                <a href={'#flashcard' + i} onClick={(e) => that.setExercise(e,obj.data,i,that.randomItem(obj))}>
+                                    {that.state.langNameExercise(obj.name)} ({obj.data.length} / {(typeof obj.excludeID === 'undefined')?0:obj.excludeID.length})
+                                </a>
                             </li>
                         );
                     },that)}
                 </ul>
-                <div className={'flash-cards-main ' + this.state.classCheckOut}>
-                    <button className="button-close-exercise" onClick={that.clearExercise}>{this.state.langButtonCloseExercise}</button>
+                <div className={'main-flash-cards ' + this.state.classCheckOut}>
+                    <button className="button-close-exercise" onClick={this.clearExercise}>{this.state.langButtonCloseExercise}</button>
                     <div className={'flash-card'}>{this.state.callObj}</div>
 
-                    <button className="button-check-out" onClick={() => this.setState({classCheckOut: 'check-out-card'})}>{this.state.langButtonCheckOut}</button>
-                    <button className="button-i-know" onClick={() => that.iKnow(json,idItem)}>{this.state.langButtonIKnow}</button>
-                    <button className="button-i-dont-know" onClick={() => that.iDontKnow(json)}>{this.state.langButtonIDontKnow}</button>
+                    <nav className={'nav-buttons ' + this.state.classHideNavButtons}>
+                        <button className="button-check-out" onClick={() => this.setState({classCheckOut: 'check-out-card'})}>{this.state.langButtonCheckOut}</button>
+                        <button className="button-i-know" onClick={() => this.iKnow(json,idItem)}>{this.state.langButtonIKnow}</button>
+                        <button className="button-i-dont-know" onClick={() => this.iDontKnow(json)}>{this.state.langButtonIDontKnow}</button>
+                    </nav>
                 </div>
             </div>
         )

@@ -11,6 +11,13 @@ import FlashCards from './components/c_flashcard'
 const jsonData = [
     {
         'name': {
+            '_pl': 'test 3 pozycje',
+            '_en': 'test 3 items'
+        },
+        'data':require('./components/c_flashcard/data_json/test0.json')
+    },
+    {
+        'name': {
             '_pl': 'Rzeczowniki',
             '_en': 'Nouns'
         },

@@ -3,27 +3,64 @@
   padding: 15px;
   max-width: 600px;
   margin: 0 auto; }
-  .module-flash-cards .flash-cards-main .button-i-know,
-  .module-flash-cards .flash-cards-main .button-i-dont-know {
+  .module-flash-cards.show-list-exercise-hide-flash-cards .main-list-exercise {
+    display: block; }
+  .module-flash-cards.show-list-exercise-hide-flash-cards .main-flash-cards {
     display: none; }
-  .module-flash-cards .flash-cards-main.check-out-card .button-check-out {
+  .module-flash-cards.hide-flash-cards-show-list-exercise .main-list-exercise {
     display: none; }
-  .module-flash-cards .flash-cards-main.check-out-card .button-i-know,
-  .module-flash-cards .flash-cards-main.check-out-card .button-i-dont-know {
+  .module-flash-cards.hide-flash-cards-show-list-exercise .main-flash-cards {
+    display: block; }
+  .module-flash-cards .main-flash-cards .congratulation-info {
+    width: 100%;
+    height: 180px;
+    background-color: #c8c8c8;
+    margin: 15px 0;
+    animation-name: congrat-anim;
+    animation-duration: 1.5s; }
+    .module-flash-cards .main-flash-cards .congratulation-info h3 {
+      font-size: 40px;
+      animation-name: congrat-anim-h;
+      animation-duration: 2s; }
+@keyframes congrat-anim {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
+@keyframes congrat-anim-h {
+  0% {
+    font-size: 40px; }
+  70% {
+    font-size: 40px; }
+  75% {
+    font-size: 60px; }
+  90% {
+    font-size: 40px; }
+  95% {
+    font-size: 50px; }
+  100% {
+    font-size: 40px; } }
+  .module-flash-cards .main-flash-cards .button-i-know,
+  .module-flash-cards .main-flash-cards .button-i-dont-know {
+    display: none; }
+  .module-flash-cards .main-flash-cards.check-out-card .button-check-out {
+    display: none; }
+  .module-flash-cards .main-flash-cards.check-out-card .button-i-know,
+  .module-flash-cards .main-flash-cards.check-out-card .button-i-dont-know {
     display: inline-block; }
-  .module-flash-cards .flash-cards-main.check-out-card .flash-card .flip-container .flipper {
+  .module-flash-cards .main-flash-cards.check-out-card .flash-card .flip-container .flipper {
     transform: rotateY(180deg); }
-  .module-flash-cards .flash-cards-main .flash-card .flip-container {
+  .module-flash-cards .main-flash-cards .flash-card .flip-container {
     perspective: 1000px;
     margin: 15px 0; }
-  .module-flash-cards .flash-cards-main .flash-card .flip-container, .module-flash-cards .flash-cards-main .flash-card .front, .module-flash-cards .flash-cards-main .flash-card .back {
+  .module-flash-cards .main-flash-cards .flash-card .flip-container, .module-flash-cards .main-flash-cards .flash-card .front, .module-flash-cards .main-flash-cards .flash-card .back {
     width: 100%;
-    height: 160px; }
-  .module-flash-cards .flash-cards-main .flash-card .flipper {
+    height: 180px; }
+  .module-flash-cards .main-flash-cards .flash-card .flipper {
     transition: 0.6s;
     transform-style: preserve-3d;
     position: relative; }
-  .module-flash-cards .flash-cards-main .flash-card .front, .module-flash-cards .flash-cards-main .flash-card .back {
+  .module-flash-cards .main-flash-cards .flash-card .front, .module-flash-cards .main-flash-cards .flash-card .back {
     backface-visibility: hidden;
     padding: 15px;
     transition: all 600ms ease-in-out;
@@ -31,11 +68,11 @@
     position: absolute;
     top: 0;
     left: 0; }
-  .module-flash-cards .flash-cards-main .flash-card .front {
+  .module-flash-cards .main-flash-cards .flash-card .front {
     z-index: 2;
     background-color: #c8c8c8;
     transform: rotateY(0deg); }
-  .module-flash-cards .flash-cards-main .flash-card .back {
+  .module-flash-cards .main-flash-cards .flash-card .back {
     transform: rotateY(180deg);
     background-color: #0b2e13;
     color: #fff; }
