@@ -92,22 +92,23 @@ class FlashCards extends Component {
             classCheckOut: '',
             // eslint-disable-next-line
             callObj: (typeof idItem === 'undefined')?this.state.langCongratulation:o.map(function (obj, i) {
+                const centerClass = 'd-flex align-items-center justify-content-center';
                 if(i === idI) {
                     return (
                         <div className="flip-container" key={i}>
                             {
                                 flashCardDirection === 'left' ?
                                     <div className="flipper">
-                                        <div className={'front'}>{obj._pl}</div>
-                                        <div className={'back'}>
+                                        <div className={'front ' + centerClass}>{obj._pl}</div>
+                                        <div className={'back ' + centerClass}>
                                             {obj._en}
                                             <a target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl}>gt</a>
                                             </div>
                                     </div>
                                     :
                                     <div className="flipper">
-                                        <div className={'front'}>{obj._en}</div>
-                                        <div className={'back'}>
+                                        <div className={'front ' + centerClass}>{obj._en}</div>
+                                        <div className={'back ' + centerClass}>
                                             {obj._pl}
                                             <a target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en}>gt</a>
                                         </div>
@@ -210,6 +211,9 @@ class FlashCards extends Component {
         }
 
     };
+    timeoutAnim = (x,y) => {
+        x.setExercise(null,y[idExercise].data,idExercise,x.randomItem(y[idExercise]));
+    };
     iKnow = (o,idI) => {
         if(idExercise > -1) {
             if(typeof o[idExercise].excludeID !== 'object') {
@@ -221,7 +225,9 @@ class FlashCards extends Component {
                 o[idExercise].excludeID.push(idI);
             }
             console.log(o[idExercise].excludeID);
-            this.setExercise(null,o[idExercise].data,idExercise,this.randomItem(o[idExercise]));
+            this.setState({classCheckOut: ''});
+            setTimeout(this.timeoutAnim,600,this,o);
+            //this.setExercise(null,o[idExercise].data,idExercise,this.randomItem(o[idExercise]));
         }
     };
     iDontKnow = (o) => {
@@ -229,7 +235,8 @@ class FlashCards extends Component {
             if(typeof o[idExercise].excludeID !== 'object') {
                 o[idExercise].excludeID = [];
             }
-            this.setExercise(null,o[idExercise].data,idExercise,this.randomItem(o[idExercise]));
+            this.setState({classCheckOut: ''});
+            setTimeout(this.timeoutAnim,600,this,o);
         }
     };
     render() {
