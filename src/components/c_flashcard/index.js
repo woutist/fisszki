@@ -16,9 +16,10 @@ const setLanguage = (x) => {
     switch (x) {
         case 'en':
             translate = {
-                ButtonCloseExercise: 'Close exercise',
+                buttonCloseExercise: 'Close exercise',
                 placeholderFlashCards: 'English version',
                 infoCongratulation: 'Congratultaion!',
+                buttonInfoCongratulation: 'Back to exercises menu',
                 buttonIKnow: 'I know',
                 buttonIDontKnow: "I don't know",
                 buttonCheckOut: 'Check out'
@@ -26,9 +27,10 @@ const setLanguage = (x) => {
             break;
         default: //pl
             translate = {
-                ButtonCloseExercise: 'Zamknij ćwiczenie',
+                buttonCloseExercise: 'Zamknij ćwiczenie',
                 placeholderFlashCards: 'Polska wersja',
                 infoCongratulation: 'Gratulacje!',
+                buttonInfoCongratulation: 'Wróć do menu ćwiczeń',
                 buttonIKnow: 'Wiem',
                 buttonIDontKnow: "Nie wiem",
                 buttonCheckOut: 'Sprawdź'
@@ -72,14 +74,14 @@ class FlashCards extends Component {
             return (
                 <div className={'congratulation-info ' + centerClass}>
                     <h3>{translate.infoCongratulation}</h3>
-                    <button onClick={() => {that.clearExercise(); that.setState({classHideNavButtons: ''})}}>Back to exercises menu</button>
+                    <button onClick={() => {that.clearExercise(); that.setState({classHideNavButtons: ''})}}>{translate.buttonInfoCongratulation}</button>
                 </div>
             )
         },
         direction: (flashCardDirection === 'right')?'en => pl':'pl => en',
         activePL: (lang === 'pl')?'active-lang':'',
         activeEN: (lang === 'en')?'active-lang':'',
-        langButtonCloseExercise: translate.ButtonCloseExercise,
+        langButtonCloseExercise: translate.buttonCloseExercise,
         langButtonIKnow: translate.buttonIKnow,
         langButtonIDontKnow: translate.buttonIDontKnow,
         langButtonCheckOut: translate.buttonCheckOut,
@@ -164,7 +166,7 @@ class FlashCards extends Component {
             });
         }
         this.setState({
-            langButtonCloseExercise: translate.ButtonCloseExercise,
+            langButtonCloseExercise: translate.buttonCloseExercise,
             langButtonIKnow: translate.buttonIKnow,
             langButtonIDontKnow: translate.buttonIDontKnow,
             langButtonCheckOut: translate.buttonCheckOut
@@ -194,9 +196,17 @@ class FlashCards extends Component {
             });
         }
         //console.log("!!!: " + o[idExercise].data.length + ' | ' + o[idExercise].excludeID.length);
-        if(idExercise > -1 && o[idExercise].excludeID.length !== 0) {
+        //console.log(o[idExercise].excludeID);
+        if(idExercise > -1) {
             //console.log('id inset changeDirection: ' + idExercise);
-            this.setExercise(event,o[idExercise].data,idExercise,this.randomItem(o[idExercise],idItem));
+            const runSetExercise = () => this.setExercise(event,o[idExercise].data,idExercise,this.randomItem(o[idExercise],idItem));
+            if(typeof o[idExercise].excludeID !== 'undefined') {
+                if(o[idExercise].excludeID.length !== 0) {
+                    runSetExercise();
+                }
+            } else {
+                runSetExercise();
+            }
         }
 
         event.preventDefault();
