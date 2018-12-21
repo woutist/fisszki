@@ -78,7 +78,7 @@ class FlashCards extends Component {
             //console.log('langCongratulation:');
             //console.log(that.props.json[ide].excludeID);
             //console.log('that.props.json[ide].length:' + that.props.json[ide].data.length);
-            if(ide) that.props.json[ide].excludeID.length=that.props.json[ide].data.length;
+            that.props.json[ide].excludeID.length=that.props.json[ide].data.length;
             return (
                 <div className={'congratulation-info ' + centerClass}>
                     <h3>{translate.infoCongratulation}</h3>
@@ -87,14 +87,11 @@ class FlashCards extends Component {
                         that.setState({classHideNavButtons: ''})
                     }}>{translate.buttonInfoCongratulation}</button>
                     <button onClick={() => {
-
-                        if(ide) {
-                            that.props.json[ide].excludeID=[];
-                            cookies.remove('obj_exercise_cookie_'+ide, { path: '/' });
-                        }
+                        that.props.json[ide].excludeID=[];
+                        cookies.remove('obj_exercise_cookie_'+ide, { path: '/' });
                         that.clearExercise();
                         that.setState({classHideNavButtons: ''});
-                        if(ide) that.setExercise(null,that.props.json[ide].data,ide,that.randomItem(that.props.json[ide]));
+                        that.setExercise(null,that.props.json[ide].data,ide,that.randomItem(that.props.json[ide]));
                     }}>{translate.buttonInfoCongratulationRestart}</button>
                 </div>
             )
