@@ -3,19 +3,32 @@
   padding: 15px;
   max-width: 600px;
   margin: 0 auto; }
+  .module-flash-cards .main-list-exercise {
+    transition: all 300ms ease-in-out;
+    overflow-y: scroll; }
+    .module-flash-cards .main-list-exercise ul {
+      margin: 0; }
+  .module-flash-cards .main-flash-cards {
+    transition: all 300ms ease-in-out; }
   .module-flash-cards.show-list-exercise-hide-flash-cards .main-list-exercise {
-    display: block; }
+    max-height: 200px;
+    opacity: 1; }
   .module-flash-cards.show-list-exercise-hide-flash-cards .main-flash-cards {
-    display: none; }
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    max-height: 0; }
   .module-flash-cards.hide-flash-cards-show-list-exercise .main-list-exercise {
-    display: none; }
+    max-height: 0;
+    opacity: 0; }
   .module-flash-cards.hide-flash-cards-show-list-exercise .main-flash-cards {
-    display: block; }
+    opacity: 1;
+    visibility: visible; }
   .module-flash-cards .main-flash-cards .congratulation-info {
     width: 100%;
     height: 180px;
     background-color: #c8c8c8;
-    margin: 15px 0;
+    margin: 15px 0 0;
     animation-name: congrat-anim;
     animation-duration: 1.5s; }
     .module-flash-cards .main-flash-cards .congratulation-info h3 {
@@ -50,6 +63,8 @@
     display: inline-block; }
   .module-flash-cards .main-flash-cards.check-out-card .flash-card .flip-container .flipper {
     transform: rotateY(180deg); }
+  .module-flash-cards .main-flash-cards.check-out-card-more .flash-card .flip-container .flipper .front p {
+    opacity: 0; }
   .module-flash-cards .main-flash-cards .flash-card .flip-container {
     perspective: 1000px;
     margin: 15px 0; }
@@ -68,10 +83,23 @@
     position: absolute;
     top: 0;
     left: 0; }
+    .module-flash-cards .main-flash-cards .flash-card .front p, .module-flash-cards .main-flash-cards .flash-card .back p {
+      margin-bottom: 15px; }
+      .module-flash-cards .main-flash-cards .flash-card .front p:last-child, .module-flash-cards .main-flash-cards .flash-card .back p:last-child {
+        margin-bottom: 0; }
   .module-flash-cards .main-flash-cards .flash-card .front {
     z-index: 2;
     background-color: #c8c8c8;
     transform: rotateY(0deg); }
+    .module-flash-cards .main-flash-cards .flash-card .front p {
+      opacity: 1;
+      animation-name: text-flash-cards-anim;
+      animation-duration: 600ms; }
+@keyframes text-flash-cards-anim {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
   .module-flash-cards .main-flash-cards .flash-card .back {
     transform: rotateY(180deg);
     background-color: #0b2e13;

@@ -11,6 +11,13 @@ import FlashCards from './components/c_flashcard'
 const jsonData = [
     {
         'name': {
+            '_pl': '1000 popularnych słów',
+            '_en': '1000 popular words'
+        },
+        'data':require('./components/c_flashcard/data_json/base-1000-popular-words.json')
+    },
+    {
+        'name': {
             '_pl': 'test 3 pozycje',
             '_en': 'test 3 items'
         },

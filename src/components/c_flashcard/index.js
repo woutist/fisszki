@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 import './component.css';
 import Cookies from 'universal-cookie';
 
-let idExercise = -1, idItem;
+let idExercise = -1,
+    idItem,
+    firstLoadExerciseCookies = true;
 
 /**
  * COOKIES LANGUAGE
@@ -20,6 +22,7 @@ const setLanguage = (x) => {
                 placeholderFlashCards: 'English version',
                 infoCongratulation: 'Congratultaion!',
                 buttonInfoCongratulation: 'Back to exercises menu',
+                buttonInfoCongratulationRestart: 'Start this exercise all over again',
                 buttonIKnow: 'I know',
                 buttonIDontKnow: "I don't know",
                 buttonCheckOut: 'Check out'
@@ -31,6 +34,7 @@ const setLanguage = (x) => {
                 placeholderFlashCards: 'Polska wersja',
                 infoCongratulation: 'Gratulacje!',
                 buttonInfoCongratulation: 'Wróć do menu ćwiczeń',
+                buttonInfoCongratulationRestart: 'Zacznij to ćwiczenie od nowa',
                 buttonIKnow: 'Wiem',
                 buttonIDontKnow: "Nie wiem",
                 buttonCheckOut: 'Sprawdź'
@@ -70,11 +74,15 @@ if(typeof cookies.get('flashcards_cookie') === "undefined") {
 class FlashCards extends Component {
     state = {
         callObj: translate.placeholderFlashCards,
-        langCongratulation: function (that) {
+        langCongratulation: function (that,ide) {
+            console.log('langCongratulation:');
+            console.log(that.props.json[ide].excludeID);
+            console.log('that.props.json[ide].length:' + that.props.json[ide].data.length);
             return (
                 <div className={'congratulation-info ' + centerClass}>
                     <h3>{translate.infoCongratulation}</h3>
-                    <button onClick={() => {that.clearExercise(); that.setState({classHideNavButtons: ''})}}>{translate.buttonInfoCongratulation}</button>
+                    <button onClick={() => {that.props.json[ide].excludeID.length=that.props.json[ide].data.length; that.clearExercise(); that.setState({classHideNavButtons: ''})}}>{translate.buttonInfoCongratulation}</button>
+                    <button onClick={() => {that.props.json[ide].excludeID=[]; cookies.remove('obj_exercise_cookie_'+ide, { path: '/' }); that.clearExercise(); that.setState({classHideNavButtons: ''})}}>{translate.buttonInfoCongratulationRestart}</button>
                 </div>
             )
         },
@@ -86,8 +94,10 @@ class FlashCards extends Component {
         langButtonIDontKnow: translate.buttonIDontKnow,
         langButtonCheckOut: translate.buttonCheckOut,
         classCheckOut: '',
+        classCheckOutMore: '',
         classHideOrShowMainPartsPage: 'show-list-exercise-hide-flash-cards',
         classHideNavButtons: '',
+
         langNameExercise: function (j) {
             switch (lang) {
                 case 'en': return j._en;
@@ -95,16 +105,32 @@ class FlashCards extends Component {
             }
         }
     };
+    removeCookieExerciseId = (event,ide,o) => {
+        console.log("uswamy cookies");
+        cookies.remove('obj_exercise_cookie_'+ide, { path: '/' });
+        if(typeof o === 'object') {
+            o.excludeID =[];
+            this.setState({
+                excludeIdLength: o.excludeID.length
+            });
+        }
+        if(event) event.preventDefault();
+    };
     setExercise = (event,o,idE,idI) => {
         //console.log('setExercise: ' + id);
         idExercise = idE;
         idItem = idI;
+        if(typeof idItem === 'undefined') {
+            //idItem = 0;
+        }
         console.log(idItem);
         this.setState({
             classCheckOut: '',
+            classCheckOutMore: '',
+            classHideNavButtons: (typeof idItem === 'undefined')?'d-none':'',
             classHideOrShowMainPartsPage: 'hide-flash-cards-show-list-exercise',
             // eslint-disable-next-line
-            callObj: (typeof idItem === 'undefined')?this.state.langCongratulation(this):o.map(function (obj, i) {
+            callObj: (typeof idItem === 'undefined')?this.state.langCongratulation(this,idExercise,o[idExercise]):o.map(function (obj, i) {
                 if(i === idI) {
                     return (
                         <div className="flip-container" key={i}>
@@ -242,6 +268,7 @@ class FlashCards extends Component {
     };
     timeoutAnim = (x,y) => {
         x.setExercise(null,y[idExercise].data,idExercise,x.randomItem(y[idExercise]));
+        this.setState({classCheckOutMore: ''});
     };
     iKnow = (o,idI) => {
         if(idExercise > -1) {
@@ -252,16 +279,18 @@ class FlashCards extends Component {
             console.log('idI: ' + idI);
             if(o[idExercise].excludeID.length < o[idExercise].data.length && typeof idI !== 'undefined' ) {
                 o[idExercise].excludeID.push(idI);
+                cookies.set('obj_exercise_cookie_'+idExercise, JSON.stringify(o[idExercise].excludeID), { path: '/' });
             }
             console.log(o[idExercise].excludeID);
             this.setState({classCheckOut: ''});
-            setTimeout(this.timeoutAnim,600,this,o);
+            setTimeout(this.timeoutAnim,400,this,o);
 
             if(o[idExercise].excludeID.length === o[idExercise].data.length){
                 this.setState({
                     classHideNavButtons: 'd-none'
                 });
             }
+
         }
     };
     iDontKnow = (o) => {
@@ -270,12 +299,31 @@ class FlashCards extends Component {
                 o[idExercise].excludeID = [];
             }
             this.setState({classCheckOut: ''});
-            setTimeout(this.timeoutAnim,600,this,o);
+            setTimeout(this.timeoutAnim,400,this,o);
         }
     };
+    clearCookiesExercise = () => {
+        alert("clear cookies exercise");
+    };
     render() {
+
         const { title, json } = this.props; // title = this.props.title, json = this.props.json
         const that = this;
+        if(firstLoadExerciseCookies){
+            console.log('test cookies:');
+            // eslint-disable-next-line
+            json.map(function (obj, i) {
+                if(typeof obj.excludeID  === 'undefined') {
+                    obj.excludeID = [];
+                }
+                if(typeof cookies.get('obj_exercise_cookie_' + i) !== "undefined") {
+                    console.log(cookies.get('obj_exercise_cookie_' + i));
+                    obj.excludeID = cookies.get('obj_exercise_cookie_' + i);
+                }
+            });
+            console.log('koniec test cookies');
+            firstLoadExerciseCookies = false;
+        }
         return (
             <div className={'module-flash-cards ' + this.state.classHideOrShowMainPartsPage}>
                 <h3>{title}</h3>
@@ -284,23 +332,27 @@ class FlashCards extends Component {
                     <li><a href={'#en'} className={this.state.activeEN} onClick={(e) => that.setLang(e,'en')}>EN</a></li>
                 </ul>
                 <button onClick={(e) => that.changeDirection(e,json)}>{this.state.direction}</button>
-                <ul className={'main-list-exercise list-unstyled'}>
-                    {json.map(function (obj, i) {
-                        return (
-                            <li key={i}>
-                                <a href={'#flashcard' + i} onClick={(e) => that.setExercise(e,obj.data,i,that.randomItem(obj))}>
-                                    {that.state.langNameExercise(obj.name)} ({obj.data.length} / {(typeof obj.excludeID === 'undefined')?0:obj.excludeID.length})
-                                </a>
-                            </li>
-                        );
-                    },that)}
-                </ul>
-                <div className={'main-flash-cards ' + this.state.classCheckOut}>
+                <div className={'main-list-exercise'}>
+                    <button title={'Clear cookies exercise'} onClick={this.clearCookiesExercise}>Reset progress exercise</button>
+                    <ul className={'list-unstyled'}>
+                        {json.map(function (obj, i) {
+                            return (
+                                <li key={i}>
+                                    <a href={'#flashcard' + i} onClick={(e) => that.setExercise(e,obj.data,i,that.randomItem(obj))}>
+                                        {that.state.langNameExercise(obj.name)} ({obj.data.length} / {obj.excludeID.length})
+                                    </a>
+                                    <button className={(obj.excludeID.length !==0)?'':'d-none'} onClick={(e) => {that.removeCookieExerciseId(e,i,obj);}}>Reset</button>
+                                </li>
+                            );
+                        },that)}
+                    </ul>
+                </div>
+                <div className={'main-flash-cards ' + this.state.classCheckOut + ' ' + this.state.classCheckOutMore}>
                     <button className="button-close-exercise" onClick={this.clearExercise}>{this.state.langButtonCloseExercise}</button>
                     <div className={'flash-card'}>{this.state.callObj}</div>
 
                     <nav className={'nav-buttons ' + this.state.classHideNavButtons}>
-                        <button className="button-check-out" onClick={() => this.setState({classCheckOut: 'check-out-card'})}>{this.state.langButtonCheckOut}</button>
+                        <button className="button-check-out" onClick={() => this.setState({classCheckOut: 'check-out-card', classCheckOutMore: 'check-out-card-more'})}>{this.state.langButtonCheckOut}</button>
                         <button className="button-i-know" onClick={() => this.iKnow(json,idItem)}>{this.state.langButtonIKnow}</button>
                         <button className="button-i-dont-know" onClick={() => this.iDontKnow(json)}>{this.state.langButtonIDontKnow}</button>
                     </nav>

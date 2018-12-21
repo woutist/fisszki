@@ -1,0 +1,4002 @@
+[
+  {
+    "_en": "name",
+    "_pl": "nazwa"
+  },
+  {
+    "_en": "very",
+    "_pl": "bardzo"
+  },
+  {
+    "_en": "to",
+    "_pl": "do"
+  },
+  {
+    "_en": "through",
+    "_pl": "przez"
+  },
+  {
+    "_en": "and",
+    "_pl": "i"
+  },
+  {
+    "_en": "just",
+    "_pl": "tylko"
+  },
+  {
+    "_en": "a",
+    "_pl": "stawiane przed rzeczownikiem zaczynającym się spółgłoską"
+  },
+  {
+    "_en": "form",
+    "_pl": "forma"
+  },
+  {
+    "_en": "in",
+    "_pl": "w"
+  },
+  {
+    "_en": "sentence",
+    "_pl": "zdanie"
+  },
+  {
+    "_en": "is",
+    "_pl": "jest w 3 osobie liczby pojedynczej"
+  },
+  {
+    "_en": "it",
+    "_pl": "to"
+  },
+  {
+    "_en": "great",
+    "_pl": "świetnie"
+  },
+  {
+    "_en": "think",
+    "_pl": "myśleć"
+  },
+  {
+    "_en": "you",
+    "_pl": "ty"
+  },
+  {
+    "_en": "say",
+    "_pl": "mówić"
+  },
+  {
+    "_en": "that",
+    "_pl": "że"
+  },
+  {
+    "_en": "help",
+    "_pl": "pomoc"
+  },
+  {
+    "_en": "he",
+    "_pl": "on"
+  },
+  {
+    "_en": "low",
+    "_pl": "niski"
+  },
+  {
+    "_en": "was",
+    "_pl": "być w czasie przeszłym w 1. i 3. osobie liczby pojedynczej"
+  },
+  {
+    "_en": "line",
+    "_pl": "linia"
+  },
+  {
+    "_en": "for",
+    "_pl": "dla"
+  },
+  {
+    "_en": "differ",
+    "_pl": "różnic się"
+  },
+  {
+    "_en": "on",
+    "_pl": "na"
+  },
+  {
+    "_en": "turn",
+    "_pl": "skręcić"
+  },
+  {
+    "_en": "are",
+    "_pl": "są"
+  },
+  {
+    "_en": "cause",
+    "_pl": "przyczyna"
+  },
+  {
+    "_en": "with",
+    "_pl": "z"
+  },
+  {
+    "_en": "much",
+    "_pl": "dużo"
+  },
+  {
+    "_en": "as",
+    "_pl": "kiedy"
+  },
+  {
+    "_en": "mean",
+    "_pl": "znaczyć"
+  },
+  {
+    "_en": "i",
+    "_pl": "ja"
+  },
+  {
+    "_en": "before",
+    "_pl": "przed"
+  },
+  {
+    "_en": "his",
+    "_pl": "jego"
+  },
+  {
+    "_en": "move",
+    "_pl": "ruszać"
+  },
+  {
+    "_en": "they",
+    "_pl": "oni"
+  },
+  {
+    "_en": "right",
+    "_pl": "prawy"
+  },
+  {
+    "_en": "be",
+    "_pl": "być"
+  },
+  {
+    "_en": "boy",
+    "_pl": "chłopiec"
+  },
+  {
+    "_en": "at",
+    "_pl": "przy"
+  },
+  {
+    "_en": "old",
+    "_pl": "stary"
+  },
+  {
+    "_en": "one",
+    "_pl": "jeden"
+  },
+  {
+    "_en": "too",
+    "_pl": "także "
+  },
+  {
+    "_en": "have",
+    "_pl": "mieć"
+  },
+  {
+    "_en": "same",
+    "_pl": "ten sam"
+  },
+  {
+    "_en": "this",
+    "_pl": "ten"
+  },
+  {
+    "_en": "tell",
+    "_pl": "powiedzieć"
+  },
+  {
+    "_en": "from",
+    "_pl": "od"
+  },
+  {
+    "_en": "does",
+    "_pl": "robić w 3. osobie liczby pojedynczej"
+  },
+  {
+    "_en": "or",
+    "_pl": "albo"
+  },
+  {
+    "_en": "set",
+    "_pl": "komplet"
+  },
+  {
+    "_en": "had",
+    "_pl": "miał "
+  },
+  {
+    "_en": "three",
+    "_pl": "trzy"
+  },
+  {
+    "_en": "by",
+    "_pl": "przez"
+  },
+  {
+    "_en": "want",
+    "_pl": "chcieć"
+  },
+  {
+    "_en": "hot",
+    "_pl": "gorący"
+  },
+  {
+    "_en": "air",
+    "_pl": "powietrze"
+  },
+  {
+    "_en": "word",
+    "_pl": "słowo"
+  },
+  {
+    "_en": "well",
+    "_pl": "cóż"
+  },
+  {
+    "_en": "but",
+    "_pl": "ale"
+  },
+  {
+    "_en": "also",
+    "_pl": "także"
+  },
+  {
+    "_en": "what",
+    "_pl": "co"
+  },
+  {
+    "_en": "play",
+    "_pl": "grać"
+  },
+  {
+    "_en": "some",
+    "_pl": "kilka"
+  },
+  {
+    "_en": "small",
+    "_pl": "małe"
+  },
+  {
+    "_en": "we",
+    "_pl": "my"
+  },
+  {
+    "_en": "end",
+    "_pl": "koniec"
+  },
+  {
+    "_en": "can",
+    "_pl": "umieć"
+  },
+  {
+    "_en": "put",
+    "_pl": "położyć"
+  },
+  {
+    "_en": "out",
+    "_pl": "na zewnątrz"
+  },
+  {
+    "_en": "home",
+    "_pl": "dom"
+  },
+  {
+    "_en": "other",
+    "_pl": "inne"
+  },
+  {
+    "_en": "read",
+    "_pl": "czytać"
+  },
+  {
+    "_en": "were",
+    "_pl": "byli"
+  },
+  {
+    "_en": "hand",
+    "_pl": "dłoń"
+  },
+  {
+    "_en": "all",
+    "_pl": "wszystko"
+  },
+  {
+    "_en": "port",
+    "_pl": "port"
+  },
+  {
+    "_en": "there",
+    "_pl": "tam"
+  },
+  {
+    "_en": "large",
+    "_pl": "olbrzymi"
+  },
+  {
+    "_en": "when",
+    "_pl": "kiedy"
+  },
+  {
+    "_en": "spell",
+    "_pl": "zaklęcie"
+  },
+  {
+    "_en": "up",
+    "_pl": "na"
+  },
+  {
+    "_en": "add",
+    "_pl": "dodac"
+  },
+  {
+    "_en": "use",
+    "_pl": "używać"
+  },
+  {
+    "_en": "even",
+    "_pl": "nawet"
+  },
+  {
+    "_en": "your",
+    "_pl": "twój"
+  },
+  {
+    "_en": "land",
+    "_pl": "ziemia"
+  },
+  {
+    "_en": "how",
+    "_pl": "jak"
+  },
+  {
+    "_en": "here",
+    "_pl": "tutaj"
+  },
+  {
+    "_en": "said",
+    "_pl": "powiedział"
+  },
+  {
+    "_en": "must",
+    "_pl": "musieć"
+  },
+  {
+    "_en": "an",
+    "_pl": "stawiamy przed samogłoską lub przed niemym h"
+  },
+  {
+    "_en": "big",
+    "_pl": "duży"
+  },
+  {
+    "_en": "each",
+    "_pl": "każdy"
+  },
+  {
+    "_en": "high",
+    "_pl": "wysoki"
+  },
+  {
+    "_en": "she",
+    "_pl": "ona"
+  },
+  {
+    "_en": "such",
+    "_pl": "taki"
+  },
+  {
+    "_en": "which",
+    "_pl": "który"
+  },
+  {
+    "_en": "follow",
+    "_pl": "stosować sie do"
+  },
+  {
+    "_en": "do",
+    "_pl": "robić lub operator w present simple"
+  },
+  {
+    "_en": "act",
+    "_pl": "działać"
+  },
+  {
+    "_en": "their",
+    "_pl": "ich"
+  },
+  {
+    "_en": "why",
+    "_pl": "dlaczego"
+  },
+  {
+    "_en": "time",
+    "_pl": "czas"
+  },
+  {
+    "_en": "ask",
+    "_pl": "pytac"
+  },
+  {
+    "_en": "if",
+    "_pl": "jeśli"
+  },
+  {
+    "_en": "men",
+    "_pl": "mężczyzna"
+  },
+  {
+    "_en": "will",
+    "_pl": "będzie"
+  },
+  {
+    "_en": "change",
+    "_pl": "zmiana"
+  },
+  {
+    "_en": "way",
+    "_pl": "sposób"
+  },
+  {
+    "_en": "went",
+    "_pl": "poszedł"
+  },
+  {
+    "_en": "about",
+    "_pl": "o "
+  },
+  {
+    "_en": "light",
+    "_pl": "światło"
+  },
+  {
+    "_en": "many",
+    "_pl": "wiele"
+  },
+  {
+    "_en": "kind",
+    "_pl": "rodzaj"
+  },
+  {
+    "_en": "then",
+    "_pl": "potem"
+  },
+  {
+    "_en": "off",
+    "_pl": "zależy co jest przed ? np. i am off mam wolne w pracy !!!!"
+  },
+  {
+    "_en": "them",
+    "_pl": "ich"
+  },
+  {
+    "_en": "need",
+    "_pl": "potrzebować"
+  },
+  {
+    "_en": "write",
+    "_pl": "pisać"
+  },
+  {
+    "_en": "house",
+    "_pl": "dom"
+  },
+  {
+    "_en": "gould",
+    "_pl": "np"
+  },
+  {
+    "_en": "picture",
+    "_pl": "obraz"
+  },
+  {
+    "_en": "like",
+    "_pl": "lubić"
+  },
+  {
+    "_en": "try",
+    "_pl": "próbować"
+  },
+  {
+    "_en": "so",
+    "_pl": "więc"
+  },
+  {
+    "_en": "us",
+    "_pl": "nas"
+  },
+  {
+    "_en": "these",
+    "_pl": "te"
+  },
+  {
+    "_en": "again",
+    "_pl": "znowu"
+  },
+  {
+    "_en": "her",
+    "_pl": "jej"
+  },
+  {
+    "_en": "animal",
+    "_pl": "zwierze"
+  },
+  {
+    "_en": "long",
+    "_pl": "długi"
+  },
+  {
+    "_en": "point",
+    "_pl": "wskazywać"
+  },
+  {
+    "_en": "make",
+    "_pl": "robić"
+  },
+  {
+    "_en": "mother",
+    "_pl": "mama"
+  },
+  {
+    "_en": "thing",
+    "_pl": "rzecz"
+  },
+  {
+    "_en": "world",
+    "_pl": "świat"
+  },
+  {
+    "_en": "see",
+    "_pl": "widzieć"
+  },
+  {
+    "_en": "near",
+    "_pl": "blisko"
+  },
+  {
+    "_en": "him",
+    "_pl": "jego"
+  },
+  {
+    "_en": "build",
+    "_pl": "budować"
+  },
+  {
+    "_en": "two",
+    "_pl": "dwa"
+  },
+  {
+    "_en": "self",
+    "_pl": "swoje"
+  },
+  {
+    "_en": "has",
+    "_pl": "mieć w 3. osobie liczby pojedynczej"
+  },
+  {
+    "_en": "earth",
+    "_pl": "ziemia"
+  },
+  {
+    "_en": "look",
+    "_pl": "patrzeć"
+  },
+  {
+    "_en": "father",
+    "_pl": "ojciec"
+  },
+  {
+    "_en": "more",
+    "_pl": "więcej"
+  },
+  {
+    "_en": "head",
+    "_pl": "głowa. główny"
+  },
+  {
+    "_en": "day",
+    "_pl": "dzień"
+  },
+  {
+    "_en": "stand",
+    "_pl": "stać"
+  },
+  {
+    "_en": "could",
+    "_pl": "móc"
+  },
+  {
+    "_en": "own",
+    "_pl": "posiadać"
+  },
+  {
+    "_en": "go",
+    "_pl": "iść"
+  },
+  {
+    "_en": "page",
+    "_pl": "strona"
+  },
+  {
+    "_en": "come",
+    "_pl": "przychodzić przyjeżdżać"
+  },
+  {
+    "_en": "should",
+    "_pl": "powinien …"
+  },
+  {
+    "_en": "did",
+    "_pl": "robił lub operator w past simple"
+  },
+  {
+    "_en": "country",
+    "_pl": "państwo "
+  },
+  {
+    "_en": "number",
+    "_pl": "liczba"
+  },
+  {
+    "_en": "found",
+    "_pl": "znalezione"
+  },
+  {
+    "_en": "sound",
+    "_pl": "dźwięk "
+  },
+  {
+    "_en": "answer",
+    "_pl": "odpowiedz"
+  },
+  {
+    "_en": "no",
+    "_pl": "nie"
+  },
+  {
+    "_en": "school",
+    "_pl": "szkoła"
+  },
+  {
+    "_en": "most",
+    "_pl": "najwięcej"
+  },
+  {
+    "_en": "grow",
+    "_pl": "rosnąć"
+  },
+  {
+    "_en": "people",
+    "_pl": "ludzie"
+  },
+  {
+    "_en": "study",
+    "_pl": "studiować"
+  },
+  {
+    "_en": "my",
+    "_pl": "moje"
+  },
+  {
+    "_en": "still",
+    "_pl": "ciągle"
+  },
+  {
+    "_en": "over",
+    "_pl": "nad"
+  },
+  {
+    "_en": "learn",
+    "_pl": "uczyć sie"
+  },
+  {
+    "_en": "know",
+    "_pl": "wiedzieć"
+  },
+  {
+    "_en": "plant",
+    "_pl": "roślina"
+  },
+  {
+    "_en": "water",
+    "_pl": "woda"
+  },
+  {
+    "_en": "cover",
+    "_pl": "okładka"
+  },
+  {
+    "_en": "than",
+    "_pl": "niż"
+  },
+  {
+    "_en": "food",
+    "_pl": "jedzenia"
+  },
+  {
+    "_en": "call",
+    "_pl": "dzwonić"
+  },
+  {
+    "_en": "sun",
+    "_pl": "słońce"
+  },
+  {
+    "_en": "first",
+    "_pl": "pierwszy"
+  },
+  {
+    "_en": "four",
+    "_pl": "cztery"
+  },
+  {
+    "_en": "who",
+    "_pl": "kto"
+  },
+  {
+    "_en": "between",
+    "_pl": "pomiędzy"
+  },
+  {
+    "_en": "may",
+    "_pl": "móc"
+  },
+  {
+    "_en": "state",
+    "_pl": "stan"
+  },
+  {
+    "_en": "down",
+    "_pl": "w dół"
+  },
+  {
+    "_en": "keep",
+    "_pl": "trzymać"
+  },
+  {
+    "_en": "side",
+    "_pl": "strona"
+  },
+  {
+    "_en": "eye",
+    "_pl": "oko"
+  },
+  {
+    "_en": "been",
+    "_pl": "być używane w czasie perfect lub w stronie biernej"
+  },
+  {
+    "_en": "never",
+    "_pl": "nigdy"
+  },
+  {
+    "_en": "now",
+    "_pl": "teraz"
+  },
+  {
+    "_en": "last",
+    "_pl": "ostatni"
+  },
+  {
+    "_en": "find",
+    "_pl": "znaleźć"
+  },
+  {
+    "_en": "let",
+    "_pl": "pozwolić"
+  },
+  {
+    "_en": "any",
+    "_pl": "jakikolwiek"
+  },
+  {
+    "_en": "thought",
+    "_pl": "myśl"
+  },
+  {
+    "_en": "new",
+    "_pl": "nowy"
+  },
+  {
+    "_en": "city",
+    "_pl": "miasto"
+  },
+  {
+    "_en": "work",
+    "_pl": "praca"
+  },
+  {
+    "_en": "tree",
+    "_pl": "drzewo"
+  },
+  {
+    "_en": "part",
+    "_pl": "część"
+  },
+  {
+    "_en": "cross",
+    "_pl": "krzyż"
+  },
+  {
+    "_en": "take",
+    "_pl": "wziąć"
+  },
+  {
+    "_en": "farm",
+    "_pl": "gospodarstwo"
+  },
+  {
+    "_en": "get",
+    "_pl": "dostać"
+  },
+  {
+    "_en": "hard",
+    "_pl": "twardy"
+  },
+  {
+    "_en": "place",
+    "_pl": "miejsce"
+  },
+  {
+    "_en": "start",
+    "_pl": "zaczynać"
+  },
+  {
+    "_en": "made",
+    "_pl": "robić w czasie przeszłym i zrobione"
+  },
+  {
+    "_en": "might",
+    "_pl": "móc"
+  },
+  {
+    "_en": "live",
+    "_pl": "mieszkać"
+  },
+  {
+    "_en": "story",
+    "_pl": "opowiadanie"
+  },
+  {
+    "_en": "where",
+    "_pl": "gdzie"
+  },
+  {
+    "_en": "saw",
+    "_pl": "widzieć w czasie przeszłym"
+  },
+  {
+    "_en": "after",
+    "_pl": "po"
+  },
+  {
+    "_en": "far",
+    "_pl": "daleko"
+  },
+  {
+    "_en": "back",
+    "_pl": "z powrotem"
+  },
+  {
+    "_en": "sea",
+    "_pl": "morze"
+  },
+  {
+    "_en": "little",
+    "_pl": "mało. mały"
+  },
+  {
+    "_en": "draw",
+    "_pl": "rysować"
+  },
+  {
+    "_en": "only",
+    "_pl": "tylko"
+  },
+  {
+    "_en": "left",
+    "_pl": "lewy"
+  },
+  {
+    "_en": "round",
+    "_pl": "okrągły"
+  },
+  {
+    "_en": "late",
+    "_pl": "późno"
+  },
+  {
+    "_en": "man",
+    "_pl": "człowiek "
+  },
+  {
+    "_en": "run",
+    "_pl": "biegać"
+  },
+  {
+    "_en": "year",
+    "_pl": "rok"
+  },
+  {
+    "_en": "don't",
+    "_pl": "przeczenie do not nie rób lub operator w present simple w zdaniach przeczących"
+  },
+  {
+    "_en": "came",
+    "_pl": "przyjechał"
+  },
+  {
+    "_en": "while",
+    "_pl": "podczas gdy"
+  },
+  {
+    "_en": "show",
+    "_pl": "pokazywać"
+  },
+  {
+    "_en": "press",
+    "_pl": "nacisnąć"
+  },
+  {
+    "_en": "every",
+    "_pl": "każdy"
+  },
+  {
+    "_en": "close",
+    "_pl": "blisko"
+  },
+  {
+    "_en": "good",
+    "_pl": "dobry"
+  },
+  {
+    "_en": "night",
+    "_pl": "noc"
+  },
+  {
+    "_en": "me",
+    "_pl": "mi"
+  },
+  {
+    "_en": "real",
+    "_pl": "prawdziwy"
+  },
+  {
+    "_en": "give",
+    "_pl": "dawać"
+  },
+  {
+    "_en": "life",
+    "_pl": "życie"
+  },
+  {
+    "_en": "our",
+    "_pl": "nasze"
+  },
+  {
+    "_en": "few",
+    "_pl": "niewiele"
+  },
+  {
+    "_en": "under",
+    "_pl": "pod"
+  },
+  {
+    "_en": "north",
+    "_pl": "północ"
+  },
+  {
+    "_en": "open",
+    "_pl": "otwierać"
+  },
+  {
+    "_en": "ten",
+    "_pl": "dziesięć"
+  },
+  {
+    "_en": "seem",
+    "_pl": "wydawać się"
+  },
+  {
+    "_en": "simple",
+    "_pl": "proste"
+  },
+  {
+    "_en": "together",
+    "_pl": "razem"
+  },
+  {
+    "_en": "several",
+    "_pl": "kilka"
+  },
+  {
+    "_en": "next",
+    "_pl": "następny"
+  },
+  {
+    "_en": "vowel",
+    "_pl": "samogłoska"
+  },
+  {
+    "_en": "white",
+    "_pl": "biały"
+  },
+  {
+    "_en": "toward",
+    "_pl": "w kierunku"
+  },
+  {
+    "_en": "children",
+    "_pl": "dzieci"
+  },
+  {
+    "_en": "war",
+    "_pl": "wojna"
+  },
+  {
+    "_en": "begin",
+    "_pl": "zaczynać"
+  },
+  {
+    "_en": "lay",
+    "_pl": "leżeć w czasie przeszłym"
+  },
+  {
+    "_en": "got",
+    "_pl": "dostawać"
+  },
+  {
+    "_en": "against",
+    "_pl": "przeciwko"
+  },
+  {
+    "_en": "walk",
+    "_pl": "chodzić "
+  },
+  {
+    "_en": "pattern",
+    "_pl": "wzór"
+  },
+  {
+    "_en": "example",
+    "_pl": "przykład"
+  },
+  {
+    "_en": "slow",
+    "_pl": "wolny "
+  },
+  {
+    "_en": "ease",
+    "_pl": "łatwość"
+  },
+  {
+    "_en": "center",
+    "_pl": "centrum"
+  },
+  {
+    "_en": "paper",
+    "_pl": "papier"
+  },
+  {
+    "_en": "love",
+    "_pl": "miłość"
+  },
+  {
+    "_en": "group",
+    "_pl": "grupa"
+  },
+  {
+    "_en": "person",
+    "_pl": "osoba"
+  },
+  {
+    "_en": "always",
+    "_pl": "zawsze"
+  },
+  {
+    "_en": "money",
+    "_pl": "pieniądze"
+  },
+  {
+    "_en": "music",
+    "_pl": "muzyka"
+  },
+  {
+    "_en": "serve",
+    "_pl": "służyć"
+  },
+  {
+    "_en": "those",
+    "_pl": "tamte"
+  },
+  {
+    "_en": "appear",
+    "_pl": "pojawiać się"
+  },
+  {
+    "_en": "both",
+    "_pl": "razem"
+  },
+  {
+    "_en": "road",
+    "_pl": "droga"
+  },
+  {
+    "_en": "mark",
+    "_pl": "zaznaczać "
+  },
+  {
+    "_en": "map",
+    "_pl": "mapa"
+  },
+  {
+    "_en": "often",
+    "_pl": "często"
+  },
+  {
+    "_en": "rain",
+    "_pl": "deszcz"
+  },
+  {
+    "_en": "letter",
+    "_pl": "list"
+  },
+  {
+    "_en": "rule",
+    "_pl": "rządzić"
+  },
+  {
+    "_en": "until",
+    "_pl": "dopóki"
+  },
+  {
+    "_en": "govern",
+    "_pl": "rządzić"
+  },
+  {
+    "_en": "mile",
+    "_pl": "mila"
+  },
+  {
+    "_en": "pull",
+    "_pl": "ciagnąć"
+  },
+  {
+    "_en": "river",
+    "_pl": "rzeka"
+  },
+  {
+    "_en": "cold",
+    "_pl": "zimny"
+  },
+  {
+    "_en": "car",
+    "_pl": "samochód"
+  },
+  {
+    "_en": "notice",
+    "_pl": "zauważyć"
+  },
+  {
+    "_en": "feet",
+    "_pl": "stopy"
+  },
+  {
+    "_en": "voice",
+    "_pl": "głos"
+  },
+  {
+    "_en": "care",
+    "_pl": "opieka"
+  },
+  {
+    "_en": "unit",
+    "_pl": "rozdział"
+  },
+  {
+    "_en": "second",
+    "_pl": "drugi"
+  },
+  {
+    "_en": "power",
+    "_pl": "siła"
+  },
+  {
+    "_en": "book",
+    "_pl": "książka"
+  },
+  {
+    "_en": "town",
+    "_pl": "miasto"
+  },
+  {
+    "_en": "carry",
+    "_pl": "nosić"
+  },
+  {
+    "_en": "fine",
+    "_pl": "świetny"
+  },
+  {
+    "_en": "took",
+    "_pl": "zabrać w czasie przeszłym"
+  },
+  {
+    "_en": "certain",
+    "_pl": "pewny"
+  },
+  {
+    "_en": "science",
+    "_pl": "nauki ścisłe"
+  },
+  {
+    "_en": "fly",
+    "_pl": "latać"
+  },
+  {
+    "_en": "eat",
+    "_pl": "jeść"
+  },
+  {
+    "_en": "fall",
+    "_pl": "spadać"
+  },
+  {
+    "_en": "room",
+    "_pl": "pokój"
+  },
+  {
+    "_en": "lead",
+    "_pl": "prowadzić"
+  },
+  {
+    "_en": "friend",
+    "_pl": "przyjaciel"
+  },
+  {
+    "_en": "cry",
+    "_pl": "płakać"
+  },
+  {
+    "_en": "began",
+    "_pl": "zaczynać w czasie przeszłym"
+  },
+  {
+    "_en": "dark",
+    "_pl": "ciemny"
+  },
+  {
+    "_en": "idea",
+    "_pl": "pomysł"
+  },
+  {
+    "_en": "machine",
+    "_pl": "maszyna"
+  },
+  {
+    "_en": "fish",
+    "_pl": "ryba"
+  },
+  {
+    "_en": "note",
+    "_pl": "zanotować "
+  },
+  {
+    "_en": "mountain",
+    "_pl": "góra"
+  },
+  {
+    "_en": "wait",
+    "_pl": "czekać"
+  },
+  {
+    "_en": "stop",
+    "_pl": "zatrzymać się"
+  },
+  {
+    "_en": "plan",
+    "_pl": "plan"
+  },
+  {
+    "_en": "once",
+    "_pl": "jeden raz"
+  },
+  {
+    "_en": "figure",
+    "_pl": "liczba"
+  },
+  {
+    "_en": "base",
+    "_pl": "podstawa"
+  },
+  {
+    "_en": "star",
+    "_pl": "gwiazda"
+  },
+  {
+    "_en": "hear",
+    "_pl": "słyszeć"
+  },
+  {
+    "_en": "box",
+    "_pl": "pudełko"
+  },
+  {
+    "_en": "horse",
+    "_pl": "koń"
+  },
+  {
+    "_en": "noun",
+    "_pl": "rzeczownik"
+  },
+  {
+    "_en": "cut",
+    "_pl": "ciąć"
+  },
+  {
+    "_en": "field",
+    "_pl": "pole"
+  },
+  {
+    "_en": "sure",
+    "_pl": "pewny"
+  },
+  {
+    "_en": "rest",
+    "_pl": "odpoczynek"
+  },
+  {
+    "_en": "watch",
+    "_pl": "oglądać"
+  },
+  {
+    "_en": "correct",
+    "_pl": "poprawiać"
+  },
+  {
+    "_en": "color",
+    "_pl": "kolor"
+  },
+  {
+    "_en": "able",
+    "_pl": "być w stanie coś zrobić"
+  },
+  {
+    "_en": "face",
+    "_pl": "twarz"
+  },
+  {
+    "_en": "pound",
+    "_pl": "walić"
+  },
+  {
+    "_en": "wood",
+    "_pl": "drewno"
+  },
+  {
+    "_en": "done",
+    "_pl": "zrobione i do w czasie perfest"
+  },
+  {
+    "_en": "main",
+    "_pl": "główny"
+  },
+  {
+    "_en": "beauty",
+    "_pl": "piękno"
+  },
+  {
+    "_en": "enough",
+    "_pl": "wystarczająco"
+  },
+  {
+    "_en": "drive",
+    "_pl": "prowadzić samochód"
+  },
+  {
+    "_en": "plain",
+    "_pl": "zwykły"
+  },
+  {
+    "_en": "stood",
+    "_pl": "stać w czasie przeszłym"
+  },
+  {
+    "_en": "girl",
+    "_pl": "dziewczynka"
+  },
+  {
+    "_en": "contain",
+    "_pl": "zawierać"
+  },
+  {
+    "_en": "usual",
+    "_pl": "zwykły"
+  },
+  {
+    "_en": "front",
+    "_pl": "przód"
+  },
+  {
+    "_en": "young",
+    "_pl": "młody"
+  },
+  {
+    "_en": "teach",
+    "_pl": "uczyć kogoś"
+  },
+  {
+    "_en": "ready",
+    "_pl": "gotowy"
+  },
+  {
+    "_en": "week",
+    "_pl": "tydzień"
+  },
+  {
+    "_en": "above",
+    "_pl": "nad"
+  },
+  {
+    "_en": "final",
+    "_pl": "ostatni"
+  },
+  {
+    "_en": "ever",
+    "_pl": "zawsze"
+  },
+  {
+    "_en": "gave",
+    "_pl": "dawać w czasie przeszłym"
+  },
+  {
+    "_en": "red",
+    "_pl": "czerwony"
+  },
+  {
+    "_en": "green",
+    "_pl": "zielony"
+  },
+  {
+    "_en": "list",
+    "_pl": "lista"
+  },
+  {
+    "_en": "oh",
+    "_pl": "och ?"
+  },
+  {
+    "_en": "though",
+    "_pl": "chociaż"
+  },
+  {
+    "_en": "quick",
+    "_pl": "szybki"
+  },
+  {
+    "_en": "feel",
+    "_pl": "czuć"
+  },
+  {
+    "_en": "develop",
+    "_pl": "rozwijać"
+  },
+  {
+    "_en": "talk",
+    "_pl": "rozmawiać"
+  },
+  {
+    "_en": "ocean",
+    "_pl": "ocean"
+  },
+  {
+    "_en": "bird",
+    "_pl": "ptak"
+  },
+  {
+    "_en": "warm",
+    "_pl": "ciepły"
+  },
+  {
+    "_en": "soon",
+    "_pl": "wkrótce"
+  },
+  {
+    "_en": "free",
+    "_pl": "wolny"
+  },
+  {
+    "_en": "body",
+    "_pl": "ciało"
+  },
+  {
+    "_en": "minute",
+    "_pl": "minuta"
+  },
+  {
+    "_en": "dog",
+    "_pl": "pies"
+  },
+  {
+    "_en": "strong",
+    "_pl": "silny"
+  },
+  {
+    "_en": "family",
+    "_pl": "rodzina"
+  },
+  {
+    "_en": "special",
+    "_pl": "specjalny"
+  },
+  {
+    "_en": "direct",
+    "_pl": "bezpośredni"
+  },
+  {
+    "_en": "mind",
+    "_pl": "umysł"
+  },
+  {
+    "_en": "pose",
+    "_pl": "poza"
+  },
+  {
+    "_en": "behind",
+    "_pl": "za"
+  },
+  {
+    "_en": "leave",
+    "_pl": "opuścić. wychodzić "
+  },
+  {
+    "_en": "clear",
+    "_pl": "wyraźny"
+  },
+  {
+    "_en": "song",
+    "_pl": "piosenka"
+  },
+  {
+    "_en": "tail",
+    "_pl": "ogon"
+  },
+  {
+    "_en": "measure",
+    "_pl": "miara"
+  },
+  {
+    "_en": "produce",
+    "_pl": "produkować"
+  },
+  {
+    "_en": "door",
+    "_pl": "drzwi"
+  },
+  {
+    "_en": "fact",
+    "_pl": "fakt"
+  },
+  {
+    "_en": "product",
+    "_pl": "produkt"
+  },
+  {
+    "_en": "street",
+    "_pl": "ulica"
+  },
+  {
+    "_en": "black",
+    "_pl": "czarny"
+  },
+  {
+    "_en": "inch",
+    "_pl": "cal"
+  },
+  {
+    "_en": "short",
+    "_pl": "krótki"
+  },
+  {
+    "_en": "multiply",
+    "_pl": "pomnożyć"
+  },
+  {
+    "_en": "numeral",
+    "_pl": "liczebnik"
+  },
+  {
+    "_en": "nothing",
+    "_pl": "nic"
+  },
+  {
+    "_en": "class",
+    "_pl": "klasa"
+  },
+  {
+    "_en": "course",
+    "_pl": "kurs"
+  },
+  {
+    "_en": "wind",
+    "_pl": "wiatr"
+  },
+  {
+    "_en": "stay",
+    "_pl": "zostać"
+  },
+  {
+    "_en": "question",
+    "_pl": "pytanie"
+  },
+  {
+    "_en": "wheel",
+    "_pl": "koło"
+  },
+  {
+    "_en": "happen",
+    "_pl": "stać się "
+  },
+  {
+    "_en": "full",
+    "_pl": "pełny"
+  },
+  {
+    "_en": "complete",
+    "_pl": "całkowity"
+  },
+  {
+    "_en": "force",
+    "_pl": "siła"
+  },
+  {
+    "_en": "ship",
+    "_pl": "statek"
+  },
+  {
+    "_en": "blue",
+    "_pl": "niebieski"
+  },
+  {
+    "_en": "area",
+    "_pl": "teren"
+  },
+  {
+    "_en": "object",
+    "_pl": "przedmiot"
+  },
+  {
+    "_en": "half",
+    "_pl": "połowa"
+  },
+  {
+    "_en": "decide",
+    "_pl": "decydować"
+  },
+  {
+    "_en": "rock",
+    "_pl": "skała"
+  },
+  {
+    "_en": "surface",
+    "_pl": "powierzchnia"
+  },
+  {
+    "_en": "order",
+    "_pl": "porządek"
+  },
+  {
+    "_en": "deep",
+    "_pl": "głęboki"
+  },
+  {
+    "_en": "fire",
+    "_pl": "pożar"
+  },
+  {
+    "_en": "moon",
+    "_pl": "księżyc"
+  },
+  {
+    "_en": "south",
+    "_pl": "południe"
+  },
+  {
+    "_en": "island",
+    "_pl": "wyspa"
+  },
+  {
+    "_en": "problem",
+    "_pl": "problem"
+  },
+  {
+    "_en": "foot",
+    "_pl": "stopa"
+  },
+  {
+    "_en": "piece",
+    "_pl": "kawałek"
+  },
+  {
+    "_en": "system",
+    "_pl": "układ"
+  },
+  {
+    "_en": "told",
+    "_pl": "powiedzieć w czasie przeszłym"
+  },
+  {
+    "_en": "busy",
+    "_pl": "zajęty"
+  },
+  {
+    "_en": "knew",
+    "_pl": "widzieć"
+  },
+  {
+    "_en": "test",
+    "_pl": "testować"
+  },
+  {
+    "_en": "pass",
+    "_pl": "zdawać"
+  },
+  {
+    "_en": "record",
+    "_pl": "płyta"
+  },
+  {
+    "_en": "since",
+    "_pl": "od"
+  },
+  {
+    "_en": "boat",
+    "_pl": "łódź"
+  },
+  {
+    "_en": "top",
+    "_pl": "szczyt"
+  },
+  {
+    "_en": "common",
+    "_pl": "powszechny"
+  },
+  {
+    "_en": "whole",
+    "_pl": "cały"
+  },
+  {
+    "_en": "gold",
+    "_pl": "złoto"
+  },
+  {
+    "_en": "king",
+    "_pl": "król"
+  },
+  {
+    "_en": "possible",
+    "_pl": "możliwy"
+  },
+  {
+    "_en": "space",
+    "_pl": "przestrzeń"
+  },
+  {
+    "_en": "plane",
+    "_pl": "samolot"
+  },
+  {
+    "_en": "heard",
+    "_pl": "usłyszeć w czasie przeszłym"
+  },
+  {
+    "_en": "stead",
+    "_pl": "zamiast kogoś"
+  },
+  {
+    "_en": "best",
+    "_pl": "najlepszy"
+  },
+  {
+    "_en": "dry",
+    "_pl": "suchy"
+  },
+  {
+    "_en": "hour",
+    "_pl": "godzina"
+  },
+  {
+    "_en": "wonder",
+    "_pl": "cud"
+  },
+  {
+    "_en": "better",
+    "_pl": "lepszy"
+  },
+  {
+    "_en": "laugh",
+    "_pl": "śmiać się"
+  },
+  {
+    "_en": "true",
+    "_pl": "prawdziwy"
+  },
+  {
+    "_en": "thousand",
+    "_pl": "tysiąc"
+  },
+  {
+    "_en": "during",
+    "_pl": "podczas"
+  },
+  {
+    "_en": "ago",
+    "_pl": "temu np. 2 dni temu"
+  },
+  {
+    "_en": "hundred",
+    "_pl": "sto"
+  },
+  {
+    "_en": "ran",
+    "_pl": "biegać w czasie przeszłym"
+  },
+  {
+    "_en": "five",
+    "_pl": "pięć"
+  },
+  {
+    "_en": "check",
+    "_pl": "sprawdzić"
+  },
+  {
+    "_en": "remember",
+    "_pl": "pamiętać"
+  },
+  {
+    "_en": "game",
+    "_pl": "gra"
+  },
+  {
+    "_en": "step",
+    "_pl": "krok"
+  },
+  {
+    "_en": "shape",
+    "_pl": "kształt"
+  },
+  {
+    "_en": "early",
+    "_pl": "wczesny"
+  },
+  {
+    "_en": "equate",
+    "_pl": "przyrównywać"
+  },
+  {
+    "_en": "hold",
+    "_pl": "trzymac"
+  },
+  {
+    "_en": "hot",
+    "_pl": "gorący"
+  },
+  {
+    "_en": "west",
+    "_pl": "zachód"
+  },
+  {
+    "_en": "miss",
+    "_pl": "tracić"
+  },
+  {
+    "_en": "ground",
+    "_pl": "ziemia"
+  },
+  {
+    "_en": "brought",
+    "_pl": "przynosić w czasie przeszłym"
+  },
+  {
+    "_en": "interest",
+    "_pl": "zainteresowanie"
+  },
+  {
+    "_en": "heat",
+    "_pl": "upał"
+  },
+  {
+    "_en": "reach",
+    "_pl": "sięgać"
+  },
+  {
+    "_en": "snow",
+    "_pl": "śnieg"
+  },
+  {
+    "_en": "fast",
+    "_pl": "szybki"
+  },
+  {
+    "_en": "tire",
+    "_pl": "męczyć się"
+  },
+  {
+    "_en": "verb",
+    "_pl": "czasownik"
+  },
+  {
+    "_en": "bring",
+    "_pl": "przynosić"
+  },
+  {
+    "_en": "sing",
+    "_pl": "śpiewać"
+  },
+  {
+    "_en": "yes",
+    "_pl": "tak"
+  },
+  {
+    "_en": "listen",
+    "_pl": "słuchać"
+  },
+  {
+    "_en": "distant",
+    "_pl": "odległy"
+  },
+  {
+    "_en": "six",
+    "_pl": "sześć"
+  },
+  {
+    "_en": "fill",
+    "_pl": "wypełniać"
+  },
+  {
+    "_en": "table",
+    "_pl": "stół"
+  },
+  {
+    "_en": "east",
+    "_pl": "wschód"
+  },
+  {
+    "_en": "travel",
+    "_pl": "podróżować"
+  },
+  {
+    "_en": "paint",
+    "_pl": "malować"
+  },
+  {
+    "_en": "less",
+    "_pl": "mniej"
+  },
+  {
+    "_en": "language",
+    "_pl": "język"
+  },
+  {
+    "_en": "morning",
+    "_pl": "rano"
+  },
+  {
+    "_en": "among",
+    "_pl": "wśród"
+  },
+  {
+    "_en": "grand",
+    "_pl": "wielki"
+  },
+  {
+    "_en": "cat",
+    "_pl": "kot"
+  },
+  {
+    "_en": "ball",
+    "_pl": "piłka"
+  },
+  {
+    "_en": "century",
+    "_pl": "wiek"
+  },
+  {
+    "_en": "yet",
+    "_pl": "jeszcze"
+  },
+  {
+    "_en": "consider",
+    "_pl": "brać pod uwagę"
+  },
+  {
+    "_en": "wave",
+    "_pl": "fala"
+  },
+  {
+    "_en": "type",
+    "_pl": "typ"
+  },
+  {
+    "_en": "drop",
+    "_pl": "upuścić"
+  },
+  {
+    "_en": "law",
+    "_pl": "prawo"
+  },
+  {
+    "_en": "heart",
+    "_pl": "serce"
+  },
+  {
+    "_en": "bit",
+    "_pl": "kawałek"
+  },
+  {
+    "_en": "am",
+    "_pl": "jestem"
+  },
+  {
+    "_en": "coast",
+    "_pl": "wybrzeże"
+  },
+  {
+    "_en": "present",
+    "_pl": "teraźniejszy"
+  },
+  {
+    "_en": "copy",
+    "_pl": "kopia"
+  },
+  {
+    "_en": "heavy",
+    "_pl": "ciężki"
+  },
+  {
+    "_en": "phrase",
+    "_pl": "zwrot"
+  },
+  {
+    "_en": "dance",
+    "_pl": "taniec"
+  },
+  {
+    "_en": "silent",
+    "_pl": "cichy"
+  },
+  {
+    "_en": "engine",
+    "_pl": "silnik"
+  },
+  {
+    "_en": "tall",
+    "_pl": "wysoki"
+  },
+  {
+    "_en": "position",
+    "_pl": "pozycja"
+  },
+  {
+    "_en": "sand",
+    "_pl": "piasek"
+  },
+  {
+    "_en": "arm",
+    "_pl": "ręka"
+  },
+  {
+    "_en": "soil",
+    "_pl": "gleba"
+  },
+  {
+    "_en": "wide",
+    "_pl": "szeroki"
+  },
+  {
+    "_en": "roll",
+    "_pl": "toczyć "
+  },
+  {
+    "_en": "sail",
+    "_pl": "żeglować"
+  },
+  {
+    "_en": "temperature",
+    "_pl": "temperatura"
+  },
+  {
+    "_en": "material",
+    "_pl": "materiał"
+  },
+  {
+    "_en": "finger",
+    "_pl": "palec u ręki"
+  },
+  {
+    "_en": "size",
+    "_pl": "rozmiar"
+  },
+  {
+    "_en": "industry",
+    "_pl": "przemysł"
+  },
+  {
+    "_en": "vary",
+    "_pl": "urozmaicać"
+  },
+  {
+    "_en": "value",
+    "_pl": "wartość"
+  },
+  {
+    "_en": "settle",
+    "_pl": "roztrzygać"
+  },
+  {
+    "_en": "fight",
+    "_pl": "walka"
+  },
+  {
+    "_en": "speak",
+    "_pl": "mówić"
+  },
+  {
+    "_en": "lie",
+    "_pl": "leżeć"
+  },
+  {
+    "_en": "weight",
+    "_pl": "waga"
+  },
+  {
+    "_en": "beat",
+    "_pl": "bicie"
+  },
+  {
+    "_en": "general",
+    "_pl": "ogólny"
+  },
+  {
+    "_en": "excite",
+    "_pl": "ekscytować"
+  },
+  {
+    "_en": "ice",
+    "_pl": "lód"
+  },
+  {
+    "_en": "natural",
+    "_pl": "naturalny"
+  },
+  {
+    "_en": "matter",
+    "_pl": "sprawa"
+  },
+  {
+    "_en": "view",
+    "_pl": "widok"
+  },
+  {
+    "_en": "circle",
+    "_pl": "koło. okrąg"
+  },
+  {
+    "_en": "sense",
+    "_pl": "sens"
+  },
+  {
+    "_en": "pair",
+    "_pl": "para"
+  },
+  {
+    "_en": "ear",
+    "_pl": "ucho"
+  },
+  {
+    "_en": "include",
+    "_pl": "zawierać"
+  },
+  {
+    "_en": "else",
+    "_pl": "jeszcze"
+  },
+  {
+    "_en": "divide",
+    "_pl": "podzielić"
+  },
+  {
+    "_en": "quite",
+    "_pl": "całkiem"
+  },
+  {
+    "_en": "syllable",
+    "_pl": "sylaba"
+  },
+  {
+    "_en": "broke",
+    "_pl": "złamać w czasie przeszłym"
+  },
+  {
+    "_en": "felt",
+    "_pl": "czuć w czasie przeszłym"
+  },
+  {
+    "_en": "case",
+    "_pl": "sprawa"
+  },
+  {
+    "_en": "perhaps",
+    "_pl": "może"
+  },
+  {
+    "_en": "middle",
+    "_pl": "środkowy"
+  },
+  {
+    "_en": "pick",
+    "_pl": "podnosić"
+  },
+  {
+    "_en": "kill",
+    "_pl": "zabić"
+  },
+  {
+    "_en": "sudden",
+    "_pl": "nagły"
+  },
+  {
+    "_en": "son",
+    "_pl": "syn"
+  },
+  {
+    "_en": "count",
+    "_pl": "liczyć"
+  },
+  {
+    "_en": "lake",
+    "_pl": "jezioro"
+  },
+  {
+    "_en": "square",
+    "_pl": "kwadrat"
+  },
+  {
+    "_en": "moment",
+    "_pl": "chwila"
+  },
+  {
+    "_en": "reason",
+    "_pl": "powód"
+  },
+  {
+    "_en": "scale",
+    "_pl": "skala"
+  },
+  {
+    "_en": "length",
+    "_pl": "długość"
+  },
+  {
+    "_en": "loud",
+    "_pl": "głośny"
+  },
+  {
+    "_en": "represent",
+    "_pl": "reprezentować"
+  },
+  {
+    "_en": "spring",
+    "_pl": "wiosna"
+  },
+  {
+    "_en": "art",
+    "_pl": "sztuka"
+  },
+  {
+    "_en": "observe",
+    "_pl": "obserwować"
+  },
+  {
+    "_en": "subject",
+    "_pl": "podmiot"
+  },
+  {
+    "_en": "child",
+    "_pl": "dziecko"
+  },
+  {
+    "_en": "region",
+    "_pl": "okolica"
+  },
+  {
+    "_en": "straight",
+    "_pl": "prosty"
+  },
+  {
+    "_en": "energy",
+    "_pl": "energia"
+  },
+  {
+    "_en": "consonant",
+    "_pl": "spółgłoska"
+  },
+  {
+    "_en": "hunt",
+    "_pl": "polować"
+  },
+  {
+    "_en": "nation",
+    "_pl": "naród"
+  },
+  {
+    "_en": "probable",
+    "_pl": "prawdopodobny"
+  },
+  {
+    "_en": "dictionary",
+    "_pl": "słownik"
+  },
+  {
+    "_en": "bed",
+    "_pl": "łóżko"
+  },
+  {
+    "_en": "milk",
+    "_pl": "mleko"
+  },
+  {
+    "_en": "brother",
+    "_pl": "brat"
+  },
+  {
+    "_en": "speed",
+    "_pl": "prędkość"
+  },
+  {
+    "_en": "egg",
+    "_pl": "jajko"
+  },
+  {
+    "_en": "method",
+    "_pl": "metoda"
+  },
+  {
+    "_en": "ride",
+    "_pl": "jazda"
+  },
+  {
+    "_en": "organ",
+    "_pl": "narząd"
+  },
+  {
+    "_en": "cell",
+    "_pl": "komórka"
+  },
+  {
+    "_en": "pay",
+    "_pl": "płacić"
+  },
+  {
+    "_en": "believe",
+    "_pl": "wierzyć"
+  },
+  {
+    "_en": "age",
+    "_pl": "wiek"
+  },
+  {
+    "_en": "fraction",
+    "_pl": "odrobina"
+  },
+  {
+    "_en": "section",
+    "_pl": "sekcja"
+  },
+  {
+    "_en": "forest",
+    "_pl": "las"
+  },
+  {
+    "_en": "dress",
+    "_pl": "sukienka"
+  },
+  {
+    "_en": "sit",
+    "_pl": "siadać"
+  },
+  {
+    "_en": "cloud",
+    "_pl": "chmura"
+  },
+  {
+    "_en": "race",
+    "_pl": "rasa"
+  },
+  {
+    "_en": "surprise",
+    "_pl": "zaskoczyć"
+  },
+  {
+    "_en": "window",
+    "_pl": "okno"
+  },
+  {
+    "_en": "quiet",
+    "_pl": "cichy"
+  },
+  {
+    "_en": "store",
+    "_pl": "sklep"
+  },
+  {
+    "_en": "stone",
+    "_pl": "kamień"
+  },
+  {
+    "_en": "summer",
+    "_pl": "lato"
+  },
+  {
+    "_en": "tiny",
+    "_pl": "malutki"
+  },
+  {
+    "_en": "train",
+    "_pl": "pociąg"
+  },
+  {
+    "_en": "climb",
+    "_pl": "wspinać się"
+  },
+  {
+    "_en": "sleep",
+    "_pl": "spać"
+  },
+  {
+    "_en": "cool",
+    "_pl": "chłodny"
+  },
+  {
+    "_en": "prove",
+    "_pl": "udowadniać"
+  },
+  {
+    "_en": "design",
+    "_pl": "projekt"
+  },
+  {
+    "_en": "lone",
+    "_pl": "samotny"
+  },
+  {
+    "_en": "poor",
+    "_pl": "biedny"
+  },
+  {
+    "_en": "leg",
+    "_pl": "noga"
+  },
+  {
+    "_en": "lot",
+    "_pl": "wiele"
+  },
+  {
+    "_en": "exercise",
+    "_pl": "ćwiczenie"
+  },
+  {
+    "_en": "experiment",
+    "_pl": "doświadczenie"
+  },
+  {
+    "_en": "wall",
+    "_pl": "ściana"
+  },
+  {
+    "_en": "bottom",
+    "_pl": "dno"
+  },
+  {
+    "_en": "catch",
+    "_pl": "złapać"
+  },
+  {
+    "_en": "key",
+    "_pl": "klucz"
+  },
+  {
+    "_en": "mount",
+    "_pl": "wierzchowiec"
+  },
+  {
+    "_en": "iron",
+    "_pl": "żelazo"
+  },
+  {
+    "_en": "wish",
+    "_pl": "pragnienie"
+  },
+  {
+    "_en": "single",
+    "_pl": "pojedynczy"
+  },
+  {
+    "_en": "sky",
+    "_pl": "niebo"
+  },
+  {
+    "_en": "stick",
+    "_pl": "kij"
+  },
+  {
+    "_en": "board",
+    "_pl": "tablica"
+  },
+  {
+    "_en": "flat",
+    "_pl": "mieszkanie"
+  },
+  {
+    "_en": "joy",
+    "_pl": "radość"
+  },
+  {
+    "_en": "twenty",
+    "_pl": "dwadzieścia"
+  },
+  {
+    "_en": "winter",
+    "_pl": "zima"
+  },
+  {
+    "_en": "skin",
+    "_pl": "skóra"
+  },
+  {
+    "_en": "sat",
+    "_pl": "siedzieć w czasie przeszłym"
+  },
+  {
+    "_en": "smile",
+    "_pl": "uśmiech. uśmiechać się"
+  },
+  {
+    "_en": "written",
+    "_pl": "napisane lub pisać w czasie perfect"
+  },
+  {
+    "_en": "crease",
+    "_pl": "gnieść"
+  },
+  {
+    "_en": "wild",
+    "_pl": "dziki"
+  },
+  {
+    "_en": "hole",
+    "_pl": "dziura"
+  },
+  {
+    "_en": "instrument",
+    "_pl": "instrument"
+  },
+  {
+    "_en": "trade",
+    "_pl": "handel "
+  },
+  {
+    "_en": "kept",
+    "_pl": "trzymany lub trzymać w czasie perfect"
+  },
+  {
+    "_en": "melody",
+    "_pl": "melodia"
+  },
+  {
+    "_en": "glass",
+    "_pl": "szkło"
+  },
+  {
+    "_en": "trip",
+    "_pl": "wycieczka"
+  },
+  {
+    "_en": "grass",
+    "_pl": "trawa"
+  },
+  {
+    "_en": "office",
+    "_pl": "biuro"
+  },
+  {
+    "_en": "cow",
+    "_pl": "krowa"
+  },
+  {
+    "_en": "receive",
+    "_pl": "otrzymywać"
+  },
+  {
+    "_en": "job",
+    "_pl": "praca"
+  },
+  {
+    "_en": "row",
+    "_pl": "rząd"
+  },
+  {
+    "_en": "edge",
+    "_pl": "skraj"
+  },
+  {
+    "_en": "mouth",
+    "_pl": "buzia"
+  },
+  {
+    "_en": "sign",
+    "_pl": "znak"
+  },
+  {
+    "_en": "exact",
+    "_pl": "dokładny"
+  },
+  {
+    "_en": "visit",
+    "_pl": "odwiedzać"
+  },
+  {
+    "_en": "symbol",
+    "_pl": "symbol"
+  },
+  {
+    "_en": "past",
+    "_pl": "przeszły"
+  },
+  {
+    "_en": "die",
+    "_pl": "umierać"
+  },
+  {
+    "_en": "soft",
+    "_pl": "miękki"
+  },
+  {
+    "_en": "least",
+    "_pl": "najmniej"
+  },
+  {
+    "_en": "fun",
+    "_pl": "zabawa"
+  },
+  {
+    "_en": "trouble",
+    "_pl": "problem"
+  },
+  {
+    "_en": "bright",
+    "_pl": "jasny"
+  },
+  {
+    "_en": "shout",
+    "_pl": "krzyczeć"
+  },
+  {
+    "_en": "gas",
+    "_pl": "benzyna"
+  },
+  {
+    "_en": "except",
+    "_pl": "z wyjątkiem"
+  },
+  {
+    "_en": "weather",
+    "_pl": "pogoda"
+  },
+  {
+    "_en": "wrote",
+    "_pl": "pisać w czasie przeszłym"
+  },
+  {
+    "_en": "month",
+    "_pl": "miesiąc"
+  },
+  {
+    "_en": "seed",
+    "_pl": "nasienie"
+  },
+  {
+    "_en": "million",
+    "_pl": "milion"
+  },
+  {
+    "_en": "tone",
+    "_pl": "ton"
+  },
+  {
+    "_en": "bear",
+    "_pl": "niedźwiedź"
+  },
+  {
+    "_en": "join",
+    "_pl": "dołączyć"
+  },
+  {
+    "_en": "finish",
+    "_pl": "kończyć"
+  },
+  {
+    "_en": "suggest",
+    "_pl": "sugerować"
+  },
+  {
+    "_en": "happy",
+    "_pl": "szczęśliwy"
+  },
+  {
+    "_en": "clean",
+    "_pl": "czysty"
+  },
+  {
+    "_en": "hope",
+    "_pl": "nadzieja"
+  },
+  {
+    "_en": "break",
+    "_pl": "łamać"
+  },
+  {
+    "_en": "flower",
+    "_pl": "kwiat"
+  },
+  {
+    "_en": "lady",
+    "_pl": "kobieta"
+  },
+  {
+    "_en": "clothe",
+    "_pl": "ubierać"
+  },
+  {
+    "_en": "yard",
+    "_pl": "podwórko"
+  },
+  {
+    "_en": "strange",
+    "_pl": "dziwny"
+  },
+  {
+    "_en": "rise",
+    "_pl": "wzrost"
+  },
+  {
+    "_en": "gone",
+    "_pl": "miniony lub iść w czasie perfect"
+  },
+  {
+    "_en": "bad",
+    "_pl": "zły"
+  },
+  {
+    "_en": "jump",
+    "_pl": "skok"
+  },
+  {
+    "_en": "blow",
+    "_pl": "dmuchać"
+  },
+  {
+    "_en": "baby",
+    "_pl": "dziecko"
+  },
+  {
+    "_en": "oil",
+    "_pl": "olej"
+  },
+  {
+    "_en": "eight",
+    "_pl": "osiem"
+  },
+  {
+    "_en": "blood",
+    "_pl": "krew"
+  },
+  {
+    "_en": "village",
+    "_pl": "wioska"
+  },
+  {
+    "_en": "touch",
+    "_pl": "dotyk"
+  },
+  {
+    "_en": "meet",
+    "_pl": "poznawać"
+  },
+  {
+    "_en": "grew",
+    "_pl": "rosnąć w czasie przeszłym"
+  },
+  {
+    "_en": "root",
+    "_pl": "korzeń"
+  },
+  {
+    "_en": "cent",
+    "_pl": "cent"
+  },
+  {
+    "_en": "buy",
+    "_pl": "kupować"
+  },
+  {
+    "_en": "mix",
+    "_pl": "mieszać"
+  },
+  {
+    "_en": "raise",
+    "_pl": "podwyżać"
+  },
+  {
+    "_en": "team",
+    "_pl": "zespół"
+  },
+  {
+    "_en": "solve",
+    "_pl": "rozwiązać"
+  },
+  {
+    "_en": "wire",
+    "_pl": "drut"
+  },
+  {
+    "_en": "metal",
+    "_pl": "metal"
+  },
+  {
+    "_en": "cost",
+    "_pl": "kosztować"
+  },
+  {
+    "_en": "whether",
+    "_pl": "czy"
+  },
+  {
+    "_en": "lost",
+    "_pl": "zagubione"
+  },
+  {
+    "_en": "push",
+    "_pl": "pchać"
+  },
+  {
+    "_en": "brown",
+    "_pl": "brązowy"
+  },
+  {
+    "_en": "seven",
+    "_pl": "siedem"
+  },
+  {
+    "_en": "wear",
+    "_pl": "nosić"
+  },
+  {
+    "_en": "paragraph",
+    "_pl": "akapit"
+  },
+  {
+    "_en": "garden",
+    "_pl": "ogród"
+  },
+  {
+    "_en": "third",
+    "_pl": "trzeci"
+  },
+  {
+    "_en": "equal",
+    "_pl": "równy"
+  },
+  {
+    "_en": "shall",
+    "_pl": "zwrot grzecznościowy :shall i open"
+  },
+  {
+    "_en": "sent",
+    "_pl": "wysyłać w czasie przeszłym lub wysłane"
+  },
+  {
+    "_en": "held",
+    "_pl": "trzymać w czasie przeszłym"
+  },
+  {
+    "_en": "choose",
+    "_pl": "wybierać"
+  },
+  {
+    "_en": "hair",
+    "_pl": "włosy"
+  },
+  {
+    "_en": "fell",
+    "_pl": "spadać w czasie przeszłym lub ścinać w terażniejszym"
+  },
+  {
+    "_en": "describe",
+    "_pl": "opisywać"
+  },
+  {
+    "_en": "fit",
+    "_pl": "pasować"
+  },
+  {
+    "_en": "cook",
+    "_pl": "gotować"
+  },
+  {
+    "_en": "flow",
+    "_pl": "przepływ"
+  },
+  {
+    "_en": "floor",
+    "_pl": "podłoga"
+  },
+  {
+    "_en": "fair",
+    "_pl": "jasny"
+  },
+  {
+    "_en": "either",
+    "_pl": "obojętnie który"
+  },
+  {
+    "_en": "bank",
+    "_pl": "bank"
+  },
+  {
+    "_en": "result",
+    "_pl": "wynik"
+  },
+  {
+    "_en": "collect",
+    "_pl": "zbierać"
+  },
+  {
+    "_en": "burn",
+    "_pl": "palić"
+  },
+  {
+    "_en": "save",
+    "_pl": "oszczędzać"
+  },
+  {
+    "_en": "hill",
+    "_pl": "wzgórze"
+  },
+  {
+    "_en": "control",
+    "_pl": "kontrolować"
+  },
+  {
+    "_en": "safe",
+    "_pl": "bezpieczny"
+  },
+  {
+    "_en": "decimal",
+    "_pl": "dziesiętny"
+  },
+  {
+    "_en": "gentle",
+    "_pl": "delikatny"
+  },
+  {
+    "_en": "truck",
+    "_pl": "ciężarówka"
+  },
+  {
+    "_en": "woman",
+    "_pl": "kobieta"
+  },
+  {
+    "_en": "noise",
+    "_pl": "hałas"
+  },
+  {
+    "_en": "captain",
+    "_pl": "kapitan"
+  },
+  {
+    "_en": "level",
+    "_pl": "poziom"
+  },
+  {
+    "_en": "practice",
+    "_pl": "ćwiczyć"
+  },
+  {
+    "_en": "chance",
+    "_pl": "szansa"
+  },
+  {
+    "_en": "separate",
+    "_pl": "oddzielić"
+  },
+  {
+    "_en": "gather",
+    "_pl": "zbierać"
+  },
+  {
+    "_en": "difficult",
+    "_pl": "trudny"
+  },
+  {
+    "_en": "shop",
+    "_pl": "sklep"
+  },
+  {
+    "_en": "doctor",
+    "_pl": "lekarz"
+  },
+  {
+    "_en": "stretch",
+    "_pl": "rozciągać"
+  },
+  {
+    "_en": "please",
+    "_pl": "proszę"
+  },
+  {
+    "_en": "throw",
+    "_pl": "rzut"
+  },
+  {
+    "_en": "protect",
+    "_pl": "chronić"
+  },
+  {
+    "_en": "shine",
+    "_pl": "świecić"
+  },
+  {
+    "_en": "noon",
+    "_pl": "południe"
+  },
+  {
+    "_en": "property",
+    "_pl": "własność"
+  },
+  {
+    "_en": "whose",
+    "_pl": "czyje"
+  },
+  {
+    "_en": "column",
+    "_pl": "rubryka"
+  },
+  {
+    "_en": "locate",
+    "_pl": "lokalizować"
+  },
+  {
+    "_en": "molecule",
+    "_pl": "molekuła"
+  },
+  {
+    "_en": "ring",
+    "_pl": "pierścionek"
+  },
+  {
+    "_en": "select",
+    "_pl": "wybierać"
+  },
+  {
+    "_en": "character",
+    "_pl": "charakter"
+  },
+  {
+    "_en": "wrong",
+    "_pl": "błędny"
+  },
+  {
+    "_en": "insect",
+    "_pl": "owad"
+  },
+  {
+    "_en": "gray",
+    "_pl": "szary"
+  },
+  {
+    "_en": "caught",
+    "_pl": "łapać w czasie przeszłym lub złapany"
+  },
+  {
+    "_en": "repeat",
+    "_pl": "powtarzać"
+  },
+  {
+    "_en": "period",
+    "_pl": "okres"
+  },
+  {
+    "_en": "require",
+    "_pl": "wymagać"
+  },
+  {
+    "_en": "indicate",
+    "_pl": "wskazywać"
+  },
+  {
+    "_en": "broad",
+    "_pl": "szeroki"
+  },
+  {
+    "_en": "radio",
+    "_pl": "radio"
+  },
+  {
+    "_en": "prepare",
+    "_pl": "przygotowywać"
+  },
+  {
+    "_en": "spoke",
+    "_pl": "mówić w czasie przeszłym"
+  },
+  {
+    "_en": "salt",
+    "_pl": "sól"
+  },
+  {
+    "_en": "atom",
+    "_pl": "atom"
+  },
+  {
+    "_en": "nose",
+    "_pl": "nos"
+  },
+  {
+    "_en": "human",
+    "_pl": "człowiek"
+  },
+  {
+    "_en": "plural",
+    "_pl": "liczba mnoga"
+  },
+  {
+    "_en": "history",
+    "_pl": "historia"
+  },
+  {
+    "_en": "anger",
+    "_pl": "złość"
+  },
+  {
+    "_en": "effect",
+    "_pl": "skutek"
+  },
+  {
+    "_en": "claim",
+    "_pl": "twierdzić"
+  },
+  {
+    "_en": "electric",
+    "_pl": "elektryczny"
+  },
+  {
+    "_en": "continent",
+    "_pl": "kontynent"
+  },
+  {
+    "_en": "expect",
+    "_pl": "oczekiwać"
+  },
+  {
+    "_en": "oxygen",
+    "_pl": "tlen"
+  },
+  {
+    "_en": "crop",
+    "_pl": "plon"
+  },
+  {
+    "_en": "sugar",
+    "_pl": "cukier"
+  },
+  {
+    "_en": "modern",
+    "_pl": "nowoczesny"
+  },
+  {
+    "_en": "death",
+    "_pl": "śmierć"
+  },
+  {
+    "_en": "element",
+    "_pl": "element"
+  },
+  {
+    "_en": "pretty",
+    "_pl": "ładny"
+  },
+  {
+    "_en": "hit",
+    "_pl": "uderzać"
+  },
+  {
+    "_en": "skill",
+    "_pl": "umiejętność"
+  },
+  {
+    "_en": "student",
+    "_pl": "uczeń"
+  },
+  {
+    "_en": "women",
+    "_pl": "kobiety"
+  },
+  {
+    "_en": "corner",
+    "_pl": "róg"
+  },
+  {
+    "_en": "season",
+    "_pl": "pora roku"
+  },
+  {
+    "_en": "party",
+    "_pl": "przyjęcie"
+  },
+  {
+    "_en": "solution",
+    "_pl": "rozwiązanie"
+  },
+  {
+    "_en": "supply",
+    "_pl": "zapas"
+  },
+  {
+    "_en": "magnet",
+    "_pl": "magnes"
+  },
+  {
+    "_en": "bone",
+    "_pl": "kość"
+  },
+  {
+    "_en": "silver",
+    "_pl": "srebro "
+  },
+  {
+    "_en": "rail",
+    "_pl": "szyna"
+  },
+  {
+    "_en": "thank",
+    "_pl": "dziękować"
+  },
+  {
+    "_en": "imagine",
+    "_pl": "wyobrażać sobie"
+  },
+  {
+    "_en": "branch",
+    "_pl": "gałąź"
+  },
+  {
+    "_en": "provide",
+    "_pl": "dostarczać "
+  },
+  {
+    "_en": "match",
+    "_pl": "pasować"
+  },
+  {
+    "_en": "agree",
+    "_pl": "zgadzać się"
+  },
+  {
+    "_en": "suffix",
+    "_pl": "przyrostek"
+  },
+  {
+    "_en": "thus",
+    "_pl": "w ten sposób"
+  },
+  {
+    "_en": "especially",
+    "_pl": "zwłaszcza"
+  },
+  {
+    "_en": "capital",
+    "_pl": "stolica"
+  },
+  {
+    "_en": "fig",
+    "_pl": "figa"
+  },
+  {
+    "_en": "won't",
+    "_pl": "nie będzie"
+  },
+  {
+    "_en": "afraid",
+    "_pl": "bać się"
+  },
+  {
+    "_en": "chair",
+    "_pl": "krzesło"
+  },
+  {
+    "_en": "huge",
+    "_pl": "wielki"
+  },
+  {
+    "_en": "danger",
+    "_pl": "niebezpieczeństwo"
+  },
+  {
+    "_en": "sister",
+    "_pl": "siostra"
+  },
+  {
+    "_en": "fruit",
+    "_pl": "owoc"
+  },
+  {
+    "_en": "steel",
+    "_pl": "stal"
+  },
+  {
+    "_en": "rich",
+    "_pl": "bogaty"
+  },
+  {
+    "_en": "discuss",
+    "_pl": "rozmawiać"
+  },
+  {
+    "_en": "thick",
+    "_pl": "gruby"
+  },
+  {
+    "_en": "forward",
+    "_pl": "do przodu"
+  },
+  {
+    "_en": "soldier",
+    "_pl": "żołnierz"
+  },
+  {
+    "_en": "similar",
+    "_pl": "podobny"
+  },
+  {
+    "_en": "process",
+    "_pl": "proces"
+  },
+  {
+    "_en": "guide",
+    "_pl": "przewodnik"
+  },
+  {
+    "_en": "operate",
+    "_pl": "operować"
+  },
+  {
+    "_en": "experience",
+    "_pl": "doświadczenie"
+  },
+  {
+    "_en": "guess",
+    "_pl": "zgadywać"
+  },
+  {
+    "_en": "score",
+    "_pl": "wynik "
+  },
+  {
+    "_en": "necessary",
+    "_pl": "konieczny"
+  },
+  {
+    "_en": "apple",
+    "_pl": "jabłko"
+  },
+  {
+    "_en": "sharp",
+    "_pl": "ostry"
+  },
+  {
+    "_en": "bought",
+    "_pl": "kupować w czasie przeszłym"
+  },
+  {
+    "_en": "wing",
+    "_pl": "skrzydło"
+  },
+  {
+    "_en": "led",
+    "_pl": "prowadzić"
+  },
+  {
+    "_en": "create",
+    "_pl": "tworzyć"
+  },
+  {
+    "_en": "pitch",
+    "_pl": "boisko"
+  },
+  {
+    "_en": "neighbor",
+    "_pl": "sąsiad"
+  },
+  {
+    "_en": "coat",
+    "_pl": "płaszcz"
+  },
+  {
+    "_en": "wash",
+    "_pl": "myć"
+  },
+  {
+    "_en": "mass",
+    "_pl": "masa"
+  },
+  {
+    "_en": "bat",
+    "_pl": "nietoperz"
+  },
+  {
+    "_en": "card",
+    "_pl": "karta"
+  },
+  {
+    "_en": "rather",
+    "_pl": "raczej"
+  },
+  {
+    "_en": "band",
+    "_pl": "zespół"
+  },
+  {
+    "_en": "crowd",
+    "_pl": "tłum"
+  },
+  {
+    "_en": "rope",
+    "_pl": "lina"
+  },
+  {
+    "_en": "corn",
+    "_pl": "kukurydza"
+  },
+  {
+    "_en": "slip",
+    "_pl": "poślizgnąć się"
+  },
+  {
+    "_en": "compare",
+    "_pl": "porównywać"
+  },
+  {
+    "_en": "win",
+    "_pl": "zwyciężać"
+  },
+  {
+    "_en": "poem",
+    "_pl": "wiersz"
+  },
+  {
+    "_en": "dream",
+    "_pl": "sen"
+  },
+  {
+    "_en": "string",
+    "_pl": "sznurek"
+  },
+  {
+    "_en": "evening",
+    "_pl": "wieczór"
+  },
+  {
+    "_en": "bell",
+    "_pl": "dzwonek"
+  },
+  {
+    "_en": "condition",
+    "_pl": "warunek"
+  },
+  {
+    "_en": "depend",
+    "_pl": "zależeć od"
+  },
+  {
+    "_en": "feed",
+    "_pl": "karmić"
+  },
+  {
+    "_en": "meat",
+    "_pl": "mięso"
+  },
+  {
+    "_en": "tool",
+    "_pl": "narzędzie"
+  },
+  {
+    "_en": "rub",
+    "_pl": "pocierać"
+  },
+  {
+    "_en": "total",
+    "_pl": "całkowity"
+  },
+  {
+    "_en": "tube",
+    "_pl": "rura"
+  },
+  {
+    "_en": "basic",
+    "_pl": "podstawowy"
+  },
+  {
+    "_en": "famous",
+    "_pl": "sławny"
+  },
+  {
+    "_en": "smell",
+    "_pl": "pachnieć"
+  },
+  {
+    "_en": "dollar",
+    "_pl": "dolar"
+  },
+  {
+    "_en": "valley",
+    "_pl": "dolina"
+  },
+  {
+    "_en": "stream",
+    "_pl": "potok"
+  },
+  {
+    "_en": "nor",
+    "_pl": "ani"
+  },
+  {
+    "_en": "fear",
+    "_pl": "obawiać się"
+  },
+  {
+    "_en": "double",
+    "_pl": "podwójny"
+  },
+  {
+    "_en": "sight",
+    "_pl": "wzrok"
+  },
+  {
+    "_en": "seat",
+    "_pl": "miejsce"
+  },
+  {
+    "_en": "thin",
+    "_pl": "chudy"
+  },
+  {
+    "_en": "arrive",
+    "_pl": "przybywać"
+  },
+  {
+    "_en": "triangle",
+    "_pl": "trójkąt"
+  },
+  {
+    "_en": "master",
+    "_pl": "mistrz"
+  },
+  {
+    "_en": "planet",
+    "_pl": "planeta"
+  },
+  {
+    "_en": "track",
+    "_pl": "szlak"
+  },
+  {
+    "_en": "hurry",
+    "_pl": "śpieszyć sie"
+  },
+  {
+    "_en": "parent",
+    "_pl": "rodzic"
+  },
+  {
+    "_en": "chief",
+    "_pl": "wódz"
+  },
+  {
+    "_en": "shore",
+    "_pl": "brzeg"
+  },
+  {
+    "_en": "colony",
+    "_pl": "kolonia"
+  },
+  {
+    "_en": "division",
+    "_pl": "podział"
+  },
+  {
+    "_en": "clock",
+    "_pl": "zegar ścienny"
+  },
+  {
+    "_en": "sheet",
+    "_pl": "kartka papieru"
+  },
+  {
+    "_en": "mine",
+    "_pl": "moje"
+  },
+  {
+    "_en": "substance",
+    "_pl": "substancja"
+  },
+  {
+    "_en": "tie",
+    "_pl": "wiązać"
+  },
+  {
+    "_en": "favor",
+    "_pl": "przychylność"
+  },
+  {
+    "_en": "enter",
+    "_pl": "wejście"
+  },
+  {
+    "_en": "connect",
+    "_pl": "łączyć"
+  },
+  {
+    "_en": "major",
+    "_pl": "główny"
+  },
+  {
+    "_en": "post",
+    "_pl": "stanowisko"
+  },
+  {
+    "_en": "fresh",
+    "_pl": "świeży"
+  },
+  {
+    "_en": "spend",
+    "_pl": "spędzać"
+  },
+  {
+    "_en": "search",
+    "_pl": "szukać"
+  },
+  {
+    "_en": "chord",
+    "_pl": "akord"
+  },
+  {
+    "_en": "send",
+    "_pl": "wysyłać"
+  },
+  {
+    "_en": "fat",
+    "_pl": "gruby"
+  },
+  {
+    "_en": "yellow",
+    "_pl": "żółty"
+  },
+  {
+    "_en": "glad",
+    "_pl": "zadowolony"
+  },
+  {
+    "_en": "gun",
+    "_pl": "broń"
+  },
+  {
+    "_en": "original",
+    "_pl": "autentyczny"
+  },
+  {
+    "_en": "allow",
+    "_pl": "pozwolić"
+  },
+  {
+    "_en": "share",
+    "_pl": "dzielić"
+  },
+  {
+    "_en": "print",
+    "_pl": "drukować"
+  },
+  {
+    "_en": "station",
+    "_pl": "stacja"
+  },
+  {
+    "_en": "dead",
+    "_pl": "martwy"
+  },
+  {
+    "_en": "dad",
+    "_pl": "tata"
+  },
+  {
+    "_en": "spot",
+    "_pl": "miejsce"
+  },
+  {
+    "_en": "bread",
+    "_pl": "chleb"
+  },
+  {
+    "_en": "desert",
+    "_pl": "pustynia"
+  },
+  {
+    "_en": "charge",
+    "_pl": "opłata"
+  },
+  {
+    "_en": "suit",
+    "_pl": "garnitur"
+  },
+  {
+    "_en": "proper",
+    "_pl": "właściwy"
+  },
+  {
+    "_en": "current",
+    "_pl": "prąd"
+  },
+  {
+    "_en": "bar",
+    "_pl": "bar"
+  },
+  {
+    "_en": "lift",
+    "_pl": "podwozić "
+  },
+  {
+    "_en": "offer",
+    "_pl": "oferować"
+  },
+  {
+    "_en": "rose",
+    "_pl": "róża"
+  },
+  {
+    "_en": "segment",
+    "_pl": "część"
+  },
+  {
+    "_en": "continue",
+    "_pl": "kontynuować"
+  },
+  {
+    "_en": "slave",
+    "_pl": "niewolnik"
+  },
+  {
+    "_en": "block",
+    "_pl": "blok"
+  },
+  {
+    "_en": "duck",
+    "_pl": "kaczka"
+  },
+  {
+    "_en": "chart",
+    "_pl": "lista"
+  },
+  {
+    "_en": "instant",
+    "_pl": "nagły"
+  },
+  {
+    "_en": "hat",
+    "_pl": "kapelusz"
+  },
+  {
+    "_en": "market",
+    "_pl": "rynek"
+  },
+  {
+    "_en": "sell",
+    "_pl": "sprzedawać"
+  },
+  {
+    "_en": "degree",
+    "_pl": "stopień"
+  },
+  {
+    "_en": "success",
+    "_pl": "odnosić sukces"
+  },
+  {
+    "_en": "populate",
+    "_pl": "zaludniać"
+  },
+  {
+    "_en": "company",
+    "_pl": "firma"
+  },
+  {
+    "_en": "chick",
+    "_pl": "pisklę"
+  },
+  {
+    "_en": "subtract",
+    "_pl": "odejmować"
+  },
+  {
+    "_en": "dear",
+    "_pl": "drogi"
+  },
+  {
+    "_en": "event",
+    "_pl": "wydarzenie"
+  },
+  {
+    "_en": "enemy",
+    "_pl": "wróg"
+  },
+  {
+    "_en": "particular",
+    "_pl": "szczególny"
+  },
+  {
+    "_en": "reply",
+    "_pl": "odpowiedź"
+  },
+  {
+    "_en": "deal",
+    "_pl": "umowa"
+  },
+  {
+    "_en": "drink",
+    "_pl": "pic"
+  },
+  {
+    "_en": "swim",
+    "_pl": "pływać"
+  },
+  {
+    "_en": "occur",
+    "_pl": "zdarzać się "
+  },
+  {
+    "_en": "term",
+    "_pl": "termin"
+  },
+  {
+    "_en": "support",
+    "_pl": "wspierać"
+  },
+  {
+    "_en": "opposite",
+    "_pl": "naprzeciwko"
+  },
+  {
+    "_en": "speech",
+    "_pl": "mowa"
+  },
+  {
+    "_en": "wife",
+    "_pl": "żona"
+  },
+  {
+    "_en": "nature",
+    "_pl": "natura"
+  },
+  {
+    "_en": "shoe",
+    "_pl": "but"
+  },
+  {
+    "_en": "range",
+    "_pl": "łańcuch"
+  },
+  {
+    "_en": "shoulder",
+    "_pl": "ramię"
+  },
+  {
+    "_en": "steam",
+    "_pl": "para"
+  },
+  {
+    "_en": "spread",
+    "_pl": "rozprzestrzenianie się"
+  },
+  {
+    "_en": "motion",
+    "_pl": "ruch"
+  },
+  {
+    "_en": "arrange",
+    "_pl": "organizować"
+  },
+  {
+    "_en": "path",
+    "_pl": "ścieżka"
+  },
+  {
+    "_en": "camp",
+    "_pl": "obóz"
+  },
+  {
+    "_en": "liquid",
+    "_pl": "ciecz"
+  },
+  {
+    "_en": "invent",
+    "_pl": "wynaleźć"
+  },
+  {
+    "_en": "log",
+    "_pl": "kłoda"
+  },
+  {
+    "_en": "cotton",
+    "_pl": "wełna"
+  },
+  {
+    "_en": "meant",
+    "_pl": "znaczyć w czasie przeszłym"
+  },
+  {
+    "_en": "born",
+    "_pl": "rodzić się"
+  },
+  {
+    "_en": "quotient",
+    "_pl": "współczynnik"
+  },
+  {
+    "_en": "determine",
+    "_pl": "określać"
+  },
+  {
+    "_en": "teeth",
+    "_pl": "zęby"
+  },
+  {
+    "_en": "quart",
+    "_pl": "kwarta"
+  },
+  {
+    "_en": "shell",
+    "_pl": "muszla"
+  },
+  {
+    "_en": "nine",
+    "_pl": "dziewięć"
+  },
+  {
+    "_en": "neck",
+    "_pl": "szyja"
+  },
+  {
+    "_en": "supper",
+    "_pl": "kolacja"
+  },
+  {
+    "_en": "tongue",
+    "_pl": "język"
+  }
+]
