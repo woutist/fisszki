@@ -3,9 +3,25 @@ import React, { Component } from 'react';
 import './component.css';
 import Cookies from 'universal-cookie';
 
+// const script = document.createElement('script');
+// script.src = "http://code.responsivevoice.org/responsivevoice.js";
+// document.getElementsByTagName('body')[0].appendChild(script);
+// window.addEventListener('load',function(){
+//     if(typeof responsiveVoice === 'object') {
+//         responsiveVoice.setDefaultVoice("Polish Female");
+//         responsiveVoice.speak("Cześć");
+//     }
+// });
+
+
 let idExercise = -1,
     idItem,
     firstLoadExerciseCookies = true;
+
+//var voice = require('responsiveVoice');
+//responsiveVoice.speak("hello world");
+
+//rv.speak("hello world");
 
 /**
  * COOKIES LANGUAGE
@@ -126,6 +142,16 @@ class FlashCards extends Component {
         }
         if(event) event.preventDefault();
     };
+    translateVoice = (text,lang) => {
+        switch (lang) {
+            case 'pl': window.responsiveVoice.speak(text, "Polish Female");
+                break;
+            case 'en': window.responsiveVoice.speak(text, "UK English Male");
+                break;
+            default:
+                window.responsiveVoice.speak(text, "UK English Male");
+        }
+    };
     setExercise = (event,o,idE,idI) => {
         //console.log('setExercise: ' + id);
         idExercise = idE;
@@ -147,22 +173,24 @@ class FlashCards extends Component {
                             {
                                 flashCardDirection === 'left' ?
                                     <div className="flipper">
-                                        <div className={'front ' + centerClass}><p>{obj._pl}</p></div>
+                                        <div className={'front ' + centerClass}><p>{obj._pl} <button onClick={() => this.translateVoice(obj._pl, "pl")}>Voice</button></p></div>
                                         <div className={'back ' + centerClass}>
-                                            <p>pl: {obj._pl}</p>
+                                            <p>pl: {obj._pl} <button onClick={() => this.translateVoice(obj._pl, "pl") }>Voice</button></p>
                                             <p>
-                                                en: {obj._en}
+                                                en: {obj._en} <button onClick={() => this.translateVoice(obj._en, "en")}>Voice</button>
+
                                                 <a target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl}>gt</a>
                                             </p>
                                             </div>
                                     </div>
                                     :
                                     <div className="flipper">
-                                        <div className={'front ' + centerClass}><p>{obj._en}</p></div>
+                                        <div className={'front ' + centerClass}><p>{obj._en} <button onClick={() => this.translateVoice(obj._en, "en") }>Voice</button></p></div>
                                         <div className={'back ' + centerClass}>
-                                            <p>en: {obj._en}</p>
+                                            <p>en: {obj._en} <button onClick={() => this.translateVoice(obj._en, "en")}>Voice</button></p>
                                             <p>
-                                                pl: {obj._pl}
+                                                pl: {obj._pl} <button onClick={() => this.translateVoice(obj._pl, "pl") }>Voice</button>
+
                                                 <a target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en}>gt</a>
                                             </p>
                                         </div>
@@ -172,7 +200,7 @@ class FlashCards extends Component {
                     );
                 }
 
-            })
+            },this)
         });
         //congratulation = false;
         if(event) event.preventDefault();
