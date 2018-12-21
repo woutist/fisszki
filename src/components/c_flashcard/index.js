@@ -75,14 +75,27 @@ class FlashCards extends Component {
     state = {
         callObj: translate.placeholderFlashCards,
         langCongratulation: function (that,ide) {
-            console.log('langCongratulation:');
-            console.log(that.props.json[ide].excludeID);
-            console.log('that.props.json[ide].length:' + that.props.json[ide].data.length);
+            //console.log('langCongratulation:');
+            //console.log(that.props.json[ide].excludeID);
+            //console.log('that.props.json[ide].length:' + that.props.json[ide].data.length);
+            if(ide) that.props.json[ide].excludeID.length=that.props.json[ide].data.length;
             return (
                 <div className={'congratulation-info ' + centerClass}>
                     <h3>{translate.infoCongratulation}</h3>
-                    <button onClick={() => {that.props.json[ide].excludeID.length=that.props.json[ide].data.length; that.clearExercise(); that.setState({classHideNavButtons: ''})}}>{translate.buttonInfoCongratulation}</button>
-                    <button onClick={() => {that.props.json[ide].excludeID=[]; cookies.remove('obj_exercise_cookie_'+ide, { path: '/' }); that.clearExercise(); that.setState({classHideNavButtons: ''})}}>{translate.buttonInfoCongratulationRestart}</button>
+                    <button onClick={() => {
+                        that.clearExercise();
+                        that.setState({classHideNavButtons: ''})
+                    }}>{translate.buttonInfoCongratulation}</button>
+                    <button onClick={() => {
+
+                        if(ide) {
+                            that.props.json[ide].excludeID=[];
+                            cookies.remove('obj_exercise_cookie_'+ide, { path: '/' });
+                        }
+                        that.clearExercise();
+                        that.setState({classHideNavButtons: ''});
+                        if(ide) that.setExercise(null,that.props.json[ide].data,ide,that.randomItem(that.props.json[ide]));
+                    }}>{translate.buttonInfoCongratulationRestart}</button>
                 </div>
             )
         },
@@ -199,7 +212,7 @@ class FlashCards extends Component {
         });
         if(idExercise < 0 || (typeof idItem === 'undefined') ) {
             this.setState({
-                callObj: (typeof idItem === 'undefined' && idExercise !== -1)?this.state.langCongratulation(this):translate.placeholderFlashCards
+                callObj: (typeof idItem === 'undefined' && idExercise !== -1)?this.state.langCongratulation(this,idExercise):translate.placeholderFlashCards
             });
         }
 
@@ -208,6 +221,9 @@ class FlashCards extends Component {
         event.preventDefault();
     };
     changeDirection = (event,o) => {
+        //console.log("!!!: " + o[idExercise].data.length + ' | ' + o[idExercise].excludeID.length);
+        //console.log(o[idExercise].excludeID);
+        console.log('idExercise: ' + idExercise);
         if(flashCardDirection === 'left') {
             cookies.set('flashcards_cookie', 'right', { path: '/' });
             flashCardDirection = 'right';
@@ -221,20 +237,17 @@ class FlashCards extends Component {
                 direction: 'pl => en'
             });
         }
-        //console.log("!!!: " + o[idExercise].data.length + ' | ' + o[idExercise].excludeID.length);
-        //console.log(o[idExercise].excludeID);
         if(idExercise > -1) {
             //console.log('id inset changeDirection: ' + idExercise);
             const runSetExercise = () => this.setExercise(event,o[idExercise].data,idExercise,this.randomItem(o[idExercise],idItem));
             if(typeof o[idExercise].excludeID !== 'undefined') {
-                if(o[idExercise].excludeID.length !== 0) {
+                //if(o[idExercise].excludeID.length !== 0) {
                     runSetExercise();
-                }
+                //}
             } else {
                 runSetExercise();
             }
         }
-
         event.preventDefault();
     };
     randomItem = (ol,forceId) => {
@@ -302,8 +315,13 @@ class FlashCards extends Component {
             setTimeout(this.timeoutAnim,400,this,o);
         }
     };
-    clearCookiesExercise = () => {
-        alert("clear cookies exercise");
+    clearCookiesExercise = (that) => {
+        // eslint-disable-next-line
+        that.props.json.map(function (obj, i) {
+            cookies.remove('obj_exercise_cookie_'+i, { path: '/' });
+            obj.excludeID = [];
+        });
+        this.setState({});
     };
     render() {
 
@@ -333,13 +351,13 @@ class FlashCards extends Component {
                 </ul>
                 <button onClick={(e) => that.changeDirection(e,json)}>{this.state.direction}</button>
                 <div className={'main-list-exercise'}>
-                    <button title={'Clear cookies exercise'} onClick={this.clearCookiesExercise}>Reset progress exercise</button>
+                    <button title={'Clear cookies exercise'} onClick={() => this.clearCookiesExercise(this)}>Reset progress exercise</button>
                     <ul className={'list-unstyled'}>
                         {json.map(function (obj, i) {
                             return (
                                 <li key={i}>
                                     <a href={'#flashcard' + i} onClick={(e) => that.setExercise(e,obj.data,i,that.randomItem(obj))}>
-                                        {that.state.langNameExercise(obj.name)} ({obj.data.length} / {obj.excludeID.length})
+                                        {that.state.langNameExercise(obj.name)} ({obj.excludeID.length}/{obj.data.length} = {Math.ceil(obj.excludeID.length*100/obj.data.length)}%)
                                     </a>
                                     <button className={(obj.excludeID.length !==0)?'':'d-none'} onClick={(e) => {that.removeCookieExerciseId(e,i,obj);}}>Reset</button>
                                 </li>
