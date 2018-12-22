@@ -52,7 +52,6 @@ class App extends Component {
         return (
             <div>
                 <FlashCards title='Class FlashCards' json={jsonData} />
-                {/*<Examples />*/}
             </div>
         );
     }

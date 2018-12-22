@@ -3,25 +3,9 @@ import React, { Component } from 'react';
 import './component.css';
 import Cookies from 'universal-cookie';
 
-// const script = document.createElement('script');
-// script.src = "http://code.responsivevoice.org/responsivevoice.js";
-// document.getElementsByTagName('body')[0].appendChild(script);
-// window.addEventListener('load',function(){
-//     if(typeof responsiveVoice === 'object') {
-//         responsiveVoice.setDefaultVoice("Polish Female");
-//         responsiveVoice.speak("Cześć");
-//     }
-// });
-
-
 let idExercise = -1,
     idItem,
     firstLoadExerciseCookies = true;
-
-//var voice = require('responsiveVoice');
-//responsiveVoice.speak("hello world");
-
-//rv.speak("hello world");
 
 /**
  * COOKIES LANGUAGE
@@ -136,20 +120,6 @@ class FlashCards extends Component {
             }
         }
     };
-    removeCookieExerciseId = (event,ide,o) => {
-        console.log("uswamy cookies");
-        cookies.remove('obj_exercise_cookie_'+ide, { path: '/' });
-        cookies.remove('obj_exercise_cookie_dk_click_'+ide, { path: '/' });
-        if(typeof o === 'object') {
-            o.excludeID =[];
-            o.dontKnowClick = 0;
-
-            this.setState({
-                //excludeIdLength: o.excludeID.length
-            });
-        }
-        if(event) event.preventDefault();
-    };
     translateVoice = (text,lang) => {
         switch (lang) {
             case 'pl': window.responsiveVoice.speak(text, "Polish Female");
@@ -163,24 +133,23 @@ class FlashCards extends Component {
     generateExercise = () => {
 
     };
-    setExercise = (event,o,idE,that) => {
+    setExercise = (event,o,idE,that,idForce) => {
         //console.log('setExercise: ' + id);
         idExercise = idE;
-        idItem = that.randomItem(o.data);
-        // console.log("to:s");
-        // console.log(idItem);
+        if(idForce) idItem = idForce;
+        else idItem = that.randomItem(o);
+
+        console.log(o.excludeID.length + " --- " + o.data.length);
         this.setState({
             classCheckOut: '',
             classCheckOutMore: '',
             classHideNavButtons: (o.excludeID.length === o.data.length)?'d-none':'',
             classHideOrShowMainPartsPage: 'hide-flash-cards-show-list-exercise',
             // eslint-disable-next-line
-            callObj: (o.excludeID.length === o.data.length)?this.state.langCongratulation(this,idExercise,o.data[idExercise]):o.data.map(function (obj, i) {
+            callObj: (o.excludeID.length === o.data.length)?this.state.langCongratulation(this,idExercise):o.data.map(function (obj, i) {
                 if(i === idItem) {
                     return (
                         <div key={i}>
-                            {/*{objParent.excludeID.length}/{objParent.data.length} ~ {Math.ceil(objParent.excludeID.length*100/objParent.data.length)}% -*/}
-                            {/*{that.state.langNameExercise(obj.name)} ({obj.excludeID.length}/{obj.data.length} ~ {Math.ceil(obj.excludeID.length*100/obj.data.length)}% - {translate.textIDontKnow}: {obj.dontKnowClick})*/}
                             <h3>{that.state.langNameExercise(o.name)}</h3>
                             <p>{translate.textIDontKnow}: {o.dontKnowClick} | {o.excludeID.length}/{o.data.length} = {Math.ceil(o.excludeID.length*100/o.data.length)}%</p>
                             <div className="flip-container">
@@ -228,15 +197,15 @@ class FlashCards extends Component {
         });
         if(event) event.preventDefault();
     };
-    setLang = (event,o) => {
-        setLanguage(o);
-        if(o === 'pl') { // cookies.get('language_cookie') === 'pl'
+    setLang = (event,o,langName) => {
+        setLanguage(langName);
+        if(langName === 'pl') { // cookies.get('language_cookie') === 'pl'
             cookies.set('language_cookie', 'pl', { path: '/' });
             this.setState({
                 activePL: 'active-lang',
                 activeEN: ''
             });
-        } else if(o === 'en') {
+        } else if(langName === 'en') {
             cookies.set('language_cookie', 'en', { path: '/' });
             this.setState({
                 activePL: '',
@@ -247,12 +216,15 @@ class FlashCards extends Component {
         console.log("check:");
         console.log(idItem);
         console.log(idExercise);
-
         // after load page
         if(idExercise < 0 || (typeof idItem === 'undefined') ) {
             this.setState({
                 callObj: (typeof idItem === 'undefined' && idExercise !== -1)?this.state.langCongratulation(this,idExercise):translate.placeholderFlashCards
             });
+        } else {
+
+            this.setExercise(event,o[idExercise],idExercise,this,idItem);
+
         }
 
         lang = o;
@@ -276,20 +248,13 @@ class FlashCards extends Component {
             });
         }
         if(idExercise > -1) {
-            //console.log('id inset changeDirection: ' + idExercise);
-            const runSetExercise = () => this.setExercise(event,o[idExercise],idExercise,this,idItem);
-            if(typeof o[idExercise].excludeID !== 'undefined') {
-                //if(o[idExercise].excludeID.length !== 0) {
-                    runSetExercise();
-                //}
-            } else {
-                runSetExercise();
-            }
+            this.setExercise(event,o[idExercise],idExercise,this,idItem);
         }
         event.preventDefault();
     };
     randomItem = (ol,forceId) => {
         //ol.excludeID
+        console.log("t-o: ");
         console.log(ol);
         if(forceId) {
             return forceId;
@@ -302,24 +267,24 @@ class FlashCards extends Component {
                     console.log(ol.excludeID.length + '<' + ol.data.length)
                     do {
                         unique=true;
-                        randomNr=Math.floor((Math.random()*ol.length));
+                        randomNr=Math.floor((Math.random()*ol.data.length));
                         for(let i=0; i<ol.excludeID.length; i++) { if(ol.excludeID[i]===randomNr) unique=false; }
                     } while (!unique);
                 }
                 else {
-                    ol.excludeID = [];
+                    //ol.excludeID = [];
                 }
             }
             else {
-                randomNr=Math.floor((Math.random()*ol.length));
+                randomNr=Math.floor((Math.random()*ol.data.length));
             }
 
             return randomNr;
         }
 
     };
-    timeoutAnim = (o) => {
-        this.setExercise(null,o[idExercise],idExercise,this);
+    timeoutAnim = (x,y) => {
+        this.setExercise(null,x,y,this);
         this.setState({classCheckOutMore: ''});
     };
     iKnow = (o,idI) => {
@@ -335,7 +300,7 @@ class FlashCards extends Component {
             }
             console.log(o[idExercise].excludeID);
             this.setState({classCheckOut: ''});
-            setTimeout(this.timeoutAnim,400,o);
+            setTimeout(this.timeoutAnim,400,o[idExercise],idExercise);
 
             if(o[idExercise].excludeID.length === o[idExercise].data.length){
                 this.setState({
@@ -353,14 +318,28 @@ class FlashCards extends Component {
             o[idExercise].dontKnowClick += 1;
             cookies.set('obj_exercise_cookie_dk_click_'+idExercise, o[idExercise].dontKnowClick, { path: '/' });
             this.setState({classCheckOut: ''});
-            setTimeout(this.timeoutAnim,400,o);
+            setTimeout(this.timeoutAnim,400,o[idExercise],idExercise);
         }
     };
-    clearCookiesExercise = (that) => {
+    removeCookieExerciseId = (event,ide,o) => {
+        console.log("uswamy cookies");
+        cookies.remove('obj_exercise_cookie_'+ide, { path: '/' });
+        cookies.remove('obj_exercise_cookie_dk_click_'+ide, { path: '/' });
+        if(typeof o === 'object') {
+            o.excludeID =[];
+            o.dontKnowClick = 0;
+
+            this.setState({
+                //excludeIdLength: o.excludeID.length
+            });
+        }
+        if(event) event.preventDefault();
+    };
+    removeCookieExerciseAll = () => {
         // eslint-disable-next-line
-        that.props.json.map(function (obj, i) {
+        this.props.json.map(function (obj, i) {
             cookies.remove('obj_exercise_cookie_'+i, { path: '/' });
-            cookies.remove('obj_exercise_cookie_dk_click_'+idExercise, { path: '/' });
+            cookies.remove('obj_exercise_cookie_dk_click_'+i, { path: '/' });
             obj.excludeID = [];
             obj.dontKnowClick = 0;
         });
@@ -394,12 +373,12 @@ class FlashCards extends Component {
             <div className={'module-flash-cards ' + this.state.classHideOrShowMainPartsPage}>
                 <h2>{title}</h2>
                 <ul className="list-unstyled">
-                    <li><a href={'#pl'} className={this.state.activePL} onClick={(e) => that.setLang(e,'pl')}>PL</a></li>
-                    <li><a href={'#en'} className={this.state.activeEN} onClick={(e) => that.setLang(e,'en')}>EN</a></li>
+                    <li><a href={'#pl'} className={this.state.activePL} onClick={(e) => this.setLang(e,json,'pl')}>PL</a></li>
+                    <li><a href={'#en'} className={this.state.activeEN} onClick={(e) => this.setLang(e,json,'en')}>EN</a></li>
                 </ul>
-                <button onClick={(e) => that.changeDirection(e,json)}>{this.state.direction}</button>
+                <button onClick={(e) => this.changeDirection(e,json)}>{this.state.direction}</button>
                 <div className={'main-list-exercise'}>
-                    <button title={'Clear cookies exercise'} onClick={() => this.clearCookiesExercise(this)}>Reset progress exercise</button>
+                    <button title={'Clear cookies exercise'} onClick={() => this.removeCookieExerciseAll()}>Reset progress exercise</button>
                     <ul className={'list-unstyled'}>
                         {json.map(function (obj, i) {
                             return (
@@ -407,7 +386,7 @@ class FlashCards extends Component {
                                     <a href={'#flashcard' + i} onClick={(e) => that.setExercise(e,obj,i,that)}>
                                         {that.state.langNameExercise(obj.name)} ({obj.excludeID.length}/{obj.data.length} ~ {Math.ceil(obj.excludeID.length*100/obj.data.length)}% - {translate.textIDontKnow}: {obj.dontKnowClick})
                                     </a>
-                                    <button className={(obj.excludeID.length !==0)?'':'d-none'} onClick={(e) => {that.removeCookieExerciseId(e,i,obj);}}>Reset</button>
+                                    <button className={(obj.excludeID.length !== 0 || obj.dontKnowClick !== 0)?'':'d-none'} onClick={(e) => {that.removeCookieExerciseId(e,i,obj);}}>Reset</button>
                                 </li>
                             );
                         },that)}
