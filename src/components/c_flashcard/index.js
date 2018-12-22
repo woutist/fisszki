@@ -41,7 +41,9 @@ const setLanguage = (x) => {
                 buttonInfoCongratulationRestart: 'Start this exercise all over again',
                 buttonIKnow: 'I know',
                 buttonIDontKnow: "I don't know",
-                buttonCheckOut: 'Check out'
+                buttonCheckOut: 'Check out',
+                textIDontKnow: 'Wrong click',
+                textSummary: 'Summary'
             };
             break;
         default: //pl
@@ -53,7 +55,9 @@ const setLanguage = (x) => {
                 buttonInfoCongratulationRestart: 'Zacznij to ćwiczenie od nowa',
                 buttonIKnow: 'Wiem',
                 buttonIDontKnow: "Nie wiem",
-                buttonCheckOut: 'Sprawdź'
+                buttonCheckOut: 'Sprawdź',
+                textIDontKnow: 'Złe kliknięcia',
+                textSummary: 'Podsumowanie'
             };
     }
 };
@@ -94,20 +98,25 @@ class FlashCards extends Component {
             //console.log('langCongratulation:');
             //console.log(that.props.json[ide].excludeID);
             //console.log('that.props.json[ide].length:' + that.props.json[ide].data.length);
-            that.props.json[ide].excludeID.length=that.props.json[ide].data.length;
+            const obj = that.props.json[ide];
+            obj.excludeID.length=obj.data.length;
+
             return (
                 <div className={'congratulation-info ' + centerClass}>
                     <h3>{translate.infoCongratulation}</h3>
+                    <p className="text-center">{translate.textSummary}: {obj.excludeID.length}/{obj.data.length} ~ {Math.ceil(obj.excludeID.length*100/obj.data.length)}% - {translate.textIDontKnow}: {obj.dontKnowClick}</p>
                     <button onClick={() => {
                         that.clearExercise();
                         that.setState({classHideNavButtons: ''})
                     }}>{translate.buttonInfoCongratulation}</button>
                     <button onClick={() => {
-                        that.props.json[ide].excludeID=[];
+                        obj.excludeID=[];
+                        obj.dontKnowClick=0;
                         cookies.remove('obj_exercise_cookie_'+ide, { path: '/' });
+                        cookies.remove('obj_exercise_cookie_dk_click_'+ide, { path: '/' });
                         that.clearExercise();
                         that.setState({classHideNavButtons: ''});
-                        that.setExercise(null,that.props.json[ide].data,ide,that.randomItem(that.props.json[ide]));
+                        that.setExercise(null,obj,ide,that);
                     }}>{translate.buttonInfoCongratulationRestart}</button>
                 </div>
             )
@@ -115,10 +124,6 @@ class FlashCards extends Component {
         direction: (flashCardDirection === 'right')?'en => pl':'pl => en',
         activePL: (lang === 'pl')?'active-lang':'',
         activeEN: (lang === 'en')?'active-lang':'',
-        langButtonCloseExercise: translate.buttonCloseExercise,
-        langButtonIKnow: translate.buttonIKnow,
-        langButtonIDontKnow: translate.buttonIDontKnow,
-        langButtonCheckOut: translate.buttonCheckOut,
         classCheckOut: '',
         classCheckOutMore: '',
         classHideOrShowMainPartsPage: 'show-list-exercise-hide-flash-cards',
@@ -134,10 +139,13 @@ class FlashCards extends Component {
     removeCookieExerciseId = (event,ide,o) => {
         console.log("uswamy cookies");
         cookies.remove('obj_exercise_cookie_'+ide, { path: '/' });
+        cookies.remove('obj_exercise_cookie_dk_click_'+ide, { path: '/' });
         if(typeof o === 'object') {
             o.excludeID =[];
+            o.dontKnowClick = 0;
+
             this.setState({
-                excludeIdLength: o.excludeID.length
+                //excludeIdLength: o.excludeID.length
             });
         }
         if(event) event.preventDefault();
@@ -152,57 +160,63 @@ class FlashCards extends Component {
                 window.responsiveVoice.speak(text, "UK English Male");
         }
     };
-    setExercise = (event,o,idE,idI) => {
+    generateExercise = () => {
+
+    };
+    setExercise = (event,o,idE,that) => {
         //console.log('setExercise: ' + id);
         idExercise = idE;
-        idItem = idI;
-        if(typeof idItem === 'undefined') {
-            //idItem = 0;
-        }
-        console.log(idItem);
+        idItem = that.randomItem(o.data);
+        // console.log("to:s");
+        // console.log(idItem);
         this.setState({
             classCheckOut: '',
             classCheckOutMore: '',
-            classHideNavButtons: (typeof idItem === 'undefined')?'d-none':'',
+            classHideNavButtons: (o.excludeID.length === o.data.length)?'d-none':'',
             classHideOrShowMainPartsPage: 'hide-flash-cards-show-list-exercise',
             // eslint-disable-next-line
-            callObj: (typeof idItem === 'undefined')?this.state.langCongratulation(this,idExercise,o[idExercise]):o.map(function (obj, i) {
-                if(i === idI) {
+            callObj: (o.excludeID.length === o.data.length)?this.state.langCongratulation(this,idExercise,o.data[idExercise]):o.data.map(function (obj, i) {
+                if(i === idItem) {
                     return (
-                        <div className="flip-container" key={i}>
-                            {
-                                flashCardDirection === 'left' ?
-                                    <div className="flipper">
-                                        <div className={'front ' + centerClass}><p>{obj._pl} <button onClick={() => this.translateVoice(obj._pl, "pl")}>Voice</button></p></div>
-                                        <div className={'back ' + centerClass}>
-                                            <p>pl: {obj._pl} <button onClick={() => this.translateVoice(obj._pl, "pl") }>Voice</button></p>
-                                            <p>
-                                                en: {obj._en} <button onClick={() => this.translateVoice(obj._en, "en")}>Voice</button>
+                        <div key={i}>
+                            {/*{objParent.excludeID.length}/{objParent.data.length} ~ {Math.ceil(objParent.excludeID.length*100/objParent.data.length)}% -*/}
+                            {/*{that.state.langNameExercise(obj.name)} ({obj.excludeID.length}/{obj.data.length} ~ {Math.ceil(obj.excludeID.length*100/obj.data.length)}% - {translate.textIDontKnow}: {obj.dontKnowClick})*/}
+                            <h3>{that.state.langNameExercise(o.name)}</h3>
+                            <p>{translate.textIDontKnow}: {o.dontKnowClick} | {o.excludeID.length}/{o.data.length} = {Math.ceil(o.excludeID.length*100/o.data.length)}%</p>
+                            <div className="flip-container">
+                                {
+                                    flashCardDirection === 'left' ?
+                                        <div className="flipper">
+                                            <div className={'front ' + centerClass}><p>{obj._pl} <button onClick={() => this.translateVoice(obj._pl, "pl")}>Voice</button></p></div>
+                                            <div className={'back ' + centerClass}>
+                                                <p>pl: {obj._pl} <button onClick={() => this.translateVoice(obj._pl, "pl") }>Voice</button></p>
+                                                <p>
+                                                    en: {obj._en} <button onClick={() => this.translateVoice(obj._en, "en")}>Voice</button>
 
-                                                <a target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl}>gt</a>
-                                            </p>
-                                            </div>
-                                    </div>
-                                    :
-                                    <div className="flipper">
-                                        <div className={'front ' + centerClass}><p>{obj._en} <button onClick={() => this.translateVoice(obj._en, "en") }>Voice</button></p></div>
-                                        <div className={'back ' + centerClass}>
-                                            <p>en: {obj._en} <button onClick={() => this.translateVoice(obj._en, "en")}>Voice</button></p>
-                                            <p>
-                                                pl: {obj._pl} <button onClick={() => this.translateVoice(obj._pl, "pl") }>Voice</button>
-
-                                                <a target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en}>gt</a>
-                                            </p>
+                                                    <a target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl}>gt</a>
+                                                </p>
+                                                </div>
                                         </div>
-                                    </div>
-                            }
+                                        :
+                                        <div className="flipper">
+                                            <div className={'front ' + centerClass}><p>{obj._en} <button onClick={() => this.translateVoice(obj._en, "en") }>Voice</button></p></div>
+                                            <div className={'back ' + centerClass}>
+                                                <p>en: {obj._en} <button onClick={() => this.translateVoice(obj._en, "en")}>Voice</button></p>
+                                                <p>
+                                                    pl: {obj._pl} <button onClick={() => this.translateVoice(obj._pl, "pl") }>Voice</button>
+
+                                                    <a target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en}>gt</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                }
+                            </div>
                         </div>
                     );
                 }
 
             },this)
         });
-        //congratulation = false;
         if(event) event.preventDefault();
     };
     clearExercise = event => {
@@ -229,12 +243,12 @@ class FlashCards extends Component {
                 activeEN: 'active-lang'
             });
         }
-        this.setState({
-            langButtonCloseExercise: translate.buttonCloseExercise,
-            langButtonIKnow: translate.buttonIKnow,
-            langButtonIDontKnow: translate.buttonIDontKnow,
-            langButtonCheckOut: translate.buttonCheckOut
-        });
+        // this.setState();
+        console.log("check:");
+        console.log(idItem);
+        console.log(idExercise);
+
+        // after load page
         if(idExercise < 0 || (typeof idItem === 'undefined') ) {
             this.setState({
                 callObj: (typeof idItem === 'undefined' && idExercise !== -1)?this.state.langCongratulation(this,idExercise):translate.placeholderFlashCards
@@ -242,7 +256,6 @@ class FlashCards extends Component {
         }
 
         lang = o;
-        //this.clearExercise(event);
         event.preventDefault();
     };
     changeDirection = (event,o) => {
@@ -264,7 +277,7 @@ class FlashCards extends Component {
         }
         if(idExercise > -1) {
             //console.log('id inset changeDirection: ' + idExercise);
-            const runSetExercise = () => this.setExercise(event,o[idExercise].data,idExercise,this.randomItem(o[idExercise],idItem));
+            const runSetExercise = () => this.setExercise(event,o[idExercise],idExercise,this,idItem);
             if(typeof o[idExercise].excludeID !== 'undefined') {
                 //if(o[idExercise].excludeID.length !== 0) {
                     runSetExercise();
@@ -277,6 +290,7 @@ class FlashCards extends Component {
     };
     randomItem = (ol,forceId) => {
         //ol.excludeID
+        console.log(ol);
         if(forceId) {
             return forceId;
         }
@@ -288,7 +302,7 @@ class FlashCards extends Component {
                     console.log(ol.excludeID.length + '<' + ol.data.length)
                     do {
                         unique=true;
-                        randomNr=Math.floor((Math.random()*ol.data.length));
+                        randomNr=Math.floor((Math.random()*ol.length));
                         for(let i=0; i<ol.excludeID.length; i++) { if(ol.excludeID[i]===randomNr) unique=false; }
                     } while (!unique);
                 }
@@ -297,15 +311,15 @@ class FlashCards extends Component {
                 }
             }
             else {
-                randomNr=Math.floor((Math.random()*ol.data.length));
+                randomNr=Math.floor((Math.random()*ol.length));
             }
 
             return randomNr;
         }
 
     };
-    timeoutAnim = (x,y) => {
-        x.setExercise(null,y[idExercise].data,idExercise,x.randomItem(y[idExercise]));
+    timeoutAnim = (o) => {
+        this.setExercise(null,o[idExercise],idExercise,this);
         this.setState({classCheckOutMore: ''});
     };
     iKnow = (o,idI) => {
@@ -321,7 +335,7 @@ class FlashCards extends Component {
             }
             console.log(o[idExercise].excludeID);
             this.setState({classCheckOut: ''});
-            setTimeout(this.timeoutAnim,400,this,o);
+            setTimeout(this.timeoutAnim,400,o);
 
             if(o[idExercise].excludeID.length === o[idExercise].data.length){
                 this.setState({
@@ -333,18 +347,22 @@ class FlashCards extends Component {
     };
     iDontKnow = (o) => {
         if(idExercise > -1) {
-            if(typeof o[idExercise].excludeID !== 'object') {
-                o[idExercise].excludeID = [];
-            }
+            // if(typeof o[idExercise].excludeID !== 'object') {
+            //     o[idExercise].excludeID = [];
+            // }
+            o[idExercise].dontKnowClick += 1;
+            cookies.set('obj_exercise_cookie_dk_click_'+idExercise, o[idExercise].dontKnowClick, { path: '/' });
             this.setState({classCheckOut: ''});
-            setTimeout(this.timeoutAnim,400,this,o);
+            setTimeout(this.timeoutAnim,400,o);
         }
     };
     clearCookiesExercise = (that) => {
         // eslint-disable-next-line
         that.props.json.map(function (obj, i) {
             cookies.remove('obj_exercise_cookie_'+i, { path: '/' });
+            cookies.remove('obj_exercise_cookie_dk_click_'+idExercise, { path: '/' });
             obj.excludeID = [];
+            obj.dontKnowClick = 0;
         });
         this.setState({});
     };
@@ -358,10 +376,15 @@ class FlashCards extends Component {
             json.map(function (obj, i) {
                 if(typeof obj.excludeID  === 'undefined') {
                     obj.excludeID = [];
+                    obj.dontKnowClick = 0;
                 }
                 if(typeof cookies.get('obj_exercise_cookie_' + i) !== "undefined") {
                     console.log(cookies.get('obj_exercise_cookie_' + i));
                     obj.excludeID = cookies.get('obj_exercise_cookie_' + i);
+                }
+                if(typeof cookies.get('obj_exercise_cookie_dk_click_' + i) !== "undefined") {
+                    console.log('i dont know click: ' + cookies.get('obj_exercise_cookie_dk_click_' + i));
+                    obj.dontKnowClick = parseInt(cookies.get('obj_exercise_cookie_dk_click_' + i));
                 }
             });
             console.log('koniec test cookies');
@@ -369,7 +392,7 @@ class FlashCards extends Component {
         }
         return (
             <div className={'module-flash-cards ' + this.state.classHideOrShowMainPartsPage}>
-                <h3>{title}</h3>
+                <h2>{title}</h2>
                 <ul className="list-unstyled">
                     <li><a href={'#pl'} className={this.state.activePL} onClick={(e) => that.setLang(e,'pl')}>PL</a></li>
                     <li><a href={'#en'} className={this.state.activeEN} onClick={(e) => that.setLang(e,'en')}>EN</a></li>
@@ -381,8 +404,8 @@ class FlashCards extends Component {
                         {json.map(function (obj, i) {
                             return (
                                 <li key={i}>
-                                    <a href={'#flashcard' + i} onClick={(e) => that.setExercise(e,obj.data,i,that.randomItem(obj))}>
-                                        {that.state.langNameExercise(obj.name)} ({obj.excludeID.length}/{obj.data.length} = {Math.ceil(obj.excludeID.length*100/obj.data.length)}%)
+                                    <a href={'#flashcard' + i} onClick={(e) => that.setExercise(e,obj,i,that)}>
+                                        {that.state.langNameExercise(obj.name)} ({obj.excludeID.length}/{obj.data.length} ~ {Math.ceil(obj.excludeID.length*100/obj.data.length)}% - {translate.textIDontKnow}: {obj.dontKnowClick})
                                     </a>
                                     <button className={(obj.excludeID.length !==0)?'':'d-none'} onClick={(e) => {that.removeCookieExerciseId(e,i,obj);}}>Reset</button>
                                 </li>
@@ -391,13 +414,15 @@ class FlashCards extends Component {
                     </ul>
                 </div>
                 <div className={'main-flash-cards ' + this.state.classCheckOut + ' ' + this.state.classCheckOutMore}>
-                    <button className="button-close-exercise" onClick={this.clearExercise}>{this.state.langButtonCloseExercise}</button>
-                    <div className={'flash-card'}>{this.state.callObj}</div>
+                    <button className="button-close-exercise" onClick={this.clearExercise}>{translate.buttonCloseExercise}</button>
+                    <div className={'flash-card'}>
+                        {this.state.callObj}
+                    </div>
 
                     <nav className={'nav-buttons ' + this.state.classHideNavButtons}>
-                        <button className="button-check-out" onClick={() => this.setState({classCheckOut: 'check-out-card', classCheckOutMore: 'check-out-card-more'})}>{this.state.langButtonCheckOut}</button>
-                        <button className="button-i-know" onClick={() => this.iKnow(json,idItem)}>{this.state.langButtonIKnow}</button>
-                        <button className="button-i-dont-know" onClick={() => this.iDontKnow(json)}>{this.state.langButtonIDontKnow}</button>
+                        <button className="button-check-out" onClick={() => this.setState({classCheckOut: 'check-out-card', classCheckOutMore: 'check-out-card-more'})}>{translate.buttonCheckOut}</button>
+                        <button className="button-i-know" onClick={() => this.iKnow(json,idItem)}>{translate.buttonIKnow}</button>
+                        <button className="button-i-dont-know" onClick={() => this.iDontKnow(json)}>{translate.buttonIDontKnow}</button>
                     </nav>
                 </div>
             </div>
