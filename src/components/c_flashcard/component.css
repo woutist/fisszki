@@ -80,7 +80,8 @@ a {
       padding-bottom: 8px;
       padding-top: 8px; }
       .module-flash-cards .main-header h1 small {
-        font-size: 14px; }
+        font-size: 14px;
+        color: #2c8548; }
     .module-flash-cards .main-header .list-language {
       margin: 0;
       padding-bottom: 4px;
