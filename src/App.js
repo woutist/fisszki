@@ -50,8 +50,8 @@ class App extends Component {
 
     render() {
         return (
-            <div>
-                <FlashCards title='Class FlashCards' json={jsonData} />
+            <div className="main-conteiner">
+                <FlashCards title='FlashCards Language' json={jsonData} />
             </div>
         );
     }

@@ -3,22 +3,36 @@ import React, { Component } from 'react';
 import './component.css';
 import Cookies from 'universal-cookie';
 
+/**
+ * GLOBAL SETTINGS
+ */
 let idExercise = -1,
     idItem,
-    firstLoadExerciseCookies = true;
+    firstLoadExerciseCookies = true,
+    lang,
+    translate = {},
+    flashCardDirection;
+
+const cookies = new Cookies(),
+    cookiesMaxAge = 60*60*24*7*4*12,
+    centerClass = 'd-flex align-items-center justify-content-center flex-column';
+
+const setCookies = (name, value) => {
+    cookies.set(name, value, { path: '/', maxAge: cookiesMaxAge });
+};
+const removeCookies = (name) => {
+    cookies.remove(name, { path: '/', maxAge: cookiesMaxAge });
+};
 
 /**
  * COOKIES LANGUAGE
  */
 // COOKIES LANGUAGE
-const cookies = new Cookies();
-let lang, translate = {};
-const centerClass = 'd-flex align-items-center justify-content-center flex-column';
 const setLanguage = (x) => {
     switch (x) {
         case 'en':
             translate = {
-                buttonCloseExercise: 'Close exercise',
+                buttonCloseExercise: '\u00D7',
                 placeholderFlashCards: 'English version',
                 infoCongratulation: 'Congratultaion!',
                 buttonInfoCongratulation: 'Back to exercises menu',
@@ -32,7 +46,7 @@ const setLanguage = (x) => {
             break;
         default: //pl
             translate = {
-                buttonCloseExercise: 'Zamknij ćwiczenie',
+                buttonCloseExercise: '\u00D7',
                 placeholderFlashCards: 'Polska wersja',
                 infoCongratulation: 'Gratulacje!',
                 buttonInfoCongratulation: 'Wróć do menu ćwiczeń',
@@ -47,7 +61,7 @@ const setLanguage = (x) => {
 };
 if(typeof cookies.get('language_cookie') === "undefined") {
     //console.log("cookie nie ustawione");
-    cookies.set('language_cookie', 'pl', { path: '/' });
+    cookies.set('language_cookie', 'pl', { path: '/', maxAge: cookiesMaxAge });
     lang = 'pl';
 } else {
     if(cookies.get('language_cookie') === 'pl') {
@@ -59,10 +73,9 @@ if(typeof cookies.get('language_cookie') === "undefined") {
 setLanguage(lang);
 
 // COOKIES FLASHCARDS DIRECTION
-let flashCardDirection;
 if(typeof cookies.get('flashcards_cookie') === "undefined") {
     //console.log("cookie nie ustawione");
-    cookies.set('flashcards_cookie', 'left', { path: '/' });
+    cookies.set('flashcards_cookie', 'left', { path: '/', maxAge: cookiesMaxAge });
     flashCardDirection = 'left';
 } else {
     if(cookies.get('flashcards_cookie') === 'left') {
@@ -87,8 +100,9 @@ class FlashCards extends Component {
 
             return (
                 <div className={'congratulation-info ' + centerClass}>
-                    <h3>{translate.infoCongratulation}</h3>
-                    <p className="text-center">{translate.textSummary}: {obj.excludeID.length}/{obj.data.length} ~ {Math.ceil(obj.excludeID.length*100/obj.data.length)}% - {translate.textIDontKnow}: {obj.dontKnowClick}</p>
+                    <h2>{translate.infoCongratulation}</h2>
+                    <h3>"{that.state.langNameExercise(obj.name)}"</h3>
+                    <p className="text-center">{translate.textSummary}: {obj.excludeID.length}/{obj.data.length} {Math.ceil(obj.excludeID.length*100/obj.data.length)}% - {translate.textIDontKnow}: {obj.dontKnowClick}</p>
                     <button onClick={() => {
                         that.clearExercise();
                         that.setState({classHideNavButtons: ''})
@@ -105,7 +119,7 @@ class FlashCards extends Component {
                 </div>
             )
         },
-        direction: (flashCardDirection === 'right')?'en => pl':'pl => en',
+        direction: (flashCardDirection === 'right')?'English => Polish':'Polish => English',
         activePL: (lang === 'pl')?'active-lang':'',
         activeEN: (lang === 'en')?'active-lang':'',
         classCheckOut: '',
@@ -150,31 +164,33 @@ class FlashCards extends Component {
                 if(i === idItem) {
                     return (
                         <div key={i}>
-                            <h3>{that.state.langNameExercise(o.name)}</h3>
+                            <h2>{that.state.langNameExercise(o.name)}</h2>
                             <p>{translate.textIDontKnow}: {o.dontKnowClick} | {o.excludeID.length}/{o.data.length} = {Math.ceil(o.excludeID.length*100/o.data.length)}%</p>
                             <div className="flip-container">
                                 {
                                     flashCardDirection === 'left' ?
                                         <div className="flipper">
-                                            <div className={'front ' + centerClass}><p>{obj._pl} <button onClick={() => this.translateVoice(obj._pl, "pl")}>Voice</button></p></div>
+                                            <div className={'front ' + centerClass}><p><strong>pl:</strong> {obj._pl} <button className="icon-volume" onClick={() => this.translateVoice(obj._pl, "pl")}></button></p></div>
                                             <div className={'back ' + centerClass}>
-                                                <p>pl: {obj._pl} <button onClick={() => this.translateVoice(obj._pl, "pl") }>Voice</button></p>
+                                                <p><strong>pl:</strong> {obj._pl} <button className="icon-volume" onClick={() => this.translateVoice(obj._pl, "pl") }></button></p>
+                                                <hr />
                                                 <p>
-                                                    en: {obj._en} <button onClick={() => this.translateVoice(obj._en, "en")}>Voice</button>
+                                                    <strong>en:</strong> {obj._en} <button className="icon-volume" onClick={() => this.translateVoice(obj._en, "en")}></button>
 
-                                                    <a target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl}>gt</a>
+                                                    <a className="google-translator" target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl}>Check it in the Google translator<span className="icon-language"></span></a>
                                                 </p>
                                                 </div>
                                         </div>
                                         :
                                         <div className="flipper">
-                                            <div className={'front ' + centerClass}><p>{obj._en} <button onClick={() => this.translateVoice(obj._en, "en") }>Voice</button></p></div>
+                                            <div className={'front ' + centerClass}><p><strong>en:</strong> {obj._en} <button className="icon-volume" onClick={() => this.translateVoice(obj._en, "en") }></button></p></div>
                                             <div className={'back ' + centerClass}>
-                                                <p>en: {obj._en} <button onClick={() => this.translateVoice(obj._en, "en")}>Voice</button></p>
+                                                <p><strong>en:</strong> {obj._en} <button className="icon-volume" onClick={() => this.translateVoice(obj._en, "en")}></button></p>
+                                                <hr />
                                                 <p>
-                                                    pl: {obj._pl} <button onClick={() => this.translateVoice(obj._pl, "pl") }>Voice</button>
+                                                    <strong>pl:</strong> {obj._pl} <button className="icon-volume" onClick={() => this.translateVoice(obj._pl, "pl") }></button>
 
-                                                    <a target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en}>gt</a>
+                                                    <a className="google-translator" target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en}>Check it in the Google translator<span className="icon-language"></span></a>
                                                 </p>
                                             </div>
                                         </div>
@@ -200,13 +216,13 @@ class FlashCards extends Component {
     setLang = (event,o,langName) => {
         setLanguage(langName);
         if(langName === 'pl') { // cookies.get('language_cookie') === 'pl'
-            cookies.set('language_cookie', 'pl', { path: '/' });
+            setCookies('language_cookie', 'pl');
             this.setState({
                 activePL: 'active-lang',
                 activeEN: ''
             });
         } else if(langName === 'en') {
-            cookies.set('language_cookie', 'en', { path: '/' });
+            setCookies('language_cookie', 'en');
             this.setState({
                 activePL: '',
                 activeEN: 'active-lang'
@@ -235,16 +251,16 @@ class FlashCards extends Component {
         //console.log(o[idExercise].excludeID);
         console.log('idExercise: ' + idExercise);
         if(flashCardDirection === 'left') {
-            cookies.set('flashcards_cookie', 'right', { path: '/' });
+            setCookies('flashcards_cookie', 'right');
             flashCardDirection = 'right';
             this.setState({
-                direction: 'en => pl'
+                direction: 'English => Polish'
             });
         } else {
-            cookies.set('flashcards_cookie', 'left', { path: '/' });
+            setCookies('flashcards_cookie', 'left');
             flashCardDirection = 'left';
             this.setState({
-                direction: 'pl => en'
+                direction: 'Polish => English'
             });
         }
         if(idExercise > -1) {
@@ -296,7 +312,7 @@ class FlashCards extends Component {
             console.log('idI: ' + idI);
             if(o[idExercise].excludeID.length < o[idExercise].data.length && typeof idI !== 'undefined' ) {
                 o[idExercise].excludeID.push(idI);
-                cookies.set('obj_exercise_cookie_'+idExercise, JSON.stringify(o[idExercise].excludeID), { path: '/' });
+                setCookies('obj_exercise_cookie_'+idExercise, JSON.stringify(o[idExercise].excludeID));
             }
             console.log(o[idExercise].excludeID);
             this.setState({classCheckOut: ''});
@@ -316,15 +332,15 @@ class FlashCards extends Component {
             //     o[idExercise].excludeID = [];
             // }
             o[idExercise].dontKnowClick += 1;
-            cookies.set('obj_exercise_cookie_dk_click_'+idExercise, o[idExercise].dontKnowClick, { path: '/' });
+            setCookies('obj_exercise_cookie_dk_click_'+idExercise, o[idExercise].dontKnowClick);
             this.setState({classCheckOut: ''});
             setTimeout(this.timeoutAnim,400,o[idExercise],idExercise);
         }
     };
     removeCookieExerciseId = (event,ide,o) => {
         console.log("uswamy cookies");
-        cookies.remove('obj_exercise_cookie_'+ide, { path: '/' });
-        cookies.remove('obj_exercise_cookie_dk_click_'+ide, { path: '/' });
+        removeCookies('obj_exercise_cookie_'+ide);
+        removeCookies('obj_exercise_cookie_dk_click_'+ide);
         if(typeof o === 'object') {
             o.excludeID =[];
             o.dontKnowClick = 0;
@@ -338,8 +354,8 @@ class FlashCards extends Component {
     removeCookieExerciseAll = () => {
         // eslint-disable-next-line
         this.props.json.map(function (obj, i) {
-            cookies.remove('obj_exercise_cookie_'+i, { path: '/' });
-            cookies.remove('obj_exercise_cookie_dk_click_'+i, { path: '/' });
+            removeCookies('obj_exercise_cookie_'+i);
+            removeCookies('obj_exercise_cookie_dk_click_'+i);
             obj.excludeID = [];
             obj.dontKnowClick = 0;
         });
@@ -371,26 +387,34 @@ class FlashCards extends Component {
         }
         return (
             <div className={'module-flash-cards ' + this.state.classHideOrShowMainPartsPage}>
-                <h2>{title}</h2>
-                <ul className="list-unstyled">
-                    <li><a href={'#pl'} className={this.state.activePL} onClick={(e) => this.setLang(e,json,'pl')}>PL</a></li>
-                    <li><a href={'#en'} className={this.state.activeEN} onClick={(e) => this.setLang(e,json,'en')}>EN</a></li>
-                </ul>
+                <header className="main-header">
+                    <ul className="list-language d-flex flex-row list-unstyled">
+                        <li><a href={'#pl'} className={this.state.activePL} onClick={(e) => this.setLang(e,json,'pl')}>PL</a></li>
+                        <li><a href={'#en'} className={this.state.activeEN} onClick={(e) => this.setLang(e,json,'en')}>EN</a></li>
+                    </ul>
+                    <h1>{title} <small>pl-en/en-pl</small></h1>
+                </header>
                 <button onClick={(e) => this.changeDirection(e,json)}>{this.state.direction}</button>
+
                 <div className={'main-list-exercise'}>
-                    <button title={'Clear cookies exercise'} onClick={() => this.removeCookieExerciseAll()}>Reset progress exercise</button>
-                    <ul className={'list-unstyled'}>
+                    <ul className={'main-list-exercise-inset list-unstyled'}>
                         {json.map(function (obj, i) {
+                            let percent = Math.ceil(obj.excludeID.length*100/obj.data.length),
+                                stylePercent = {
+                                    background: 'linear-gradient(to right, #2c8548 0%,#2c8548 ' + percent + '%,rgba(133, 40, 36,.6) ' + percent + '%,rgba(133, 40, 36,.6) 100%)'
+                                };
                             return (
-                                <li key={i}>
+                                <li key={i} className="d-flex justify-content-between">
                                     <a href={'#flashcard' + i} onClick={(e) => that.setExercise(e,obj,i,that)}>
-                                        {that.state.langNameExercise(obj.name)} ({obj.excludeID.length}/{obj.data.length} ~ {Math.ceil(obj.excludeID.length*100/obj.data.length)}% - {translate.textIDontKnow}: {obj.dontKnowClick})
+                                        <span style={stylePercent}></span>
+                                        {that.state.langNameExercise(obj.name)} <i>({obj.excludeID.length}/{obj.data.length} ~ {percent}% - {translate.textIDontKnow}: {obj.dontKnowClick})</i>
                                     </a>
                                     <button className={(obj.excludeID.length !== 0 || obj.dontKnowClick !== 0)?'':'d-none'} onClick={(e) => {that.removeCookieExerciseId(e,i,obj);}}>Reset</button>
                                 </li>
                             );
                         },that)}
                     </ul>
+                    <button title={'Clear cookies exercise'} onClick={() => this.removeCookieExerciseAll()}>Reset progress exercise</button>
                 </div>
                 <div className={'main-flash-cards ' + this.state.classCheckOut + ' ' + this.state.classCheckOutMore}>
                     <button className="button-close-exercise" onClick={this.clearExercise}>{translate.buttonCloseExercise}</button>
@@ -404,6 +428,9 @@ class FlashCards extends Component {
                         <button className="button-i-dont-know" onClick={() => this.iDontKnow(json)}>{translate.buttonIDontKnow}</button>
                     </nav>
                 </div>
+                <footer className="main-footer">
+                    <p>Copyright &copy; 1518, FlashCards Language pl-en/en-pl v1.0.0</p>
+                </footer>
             </div>
         )
     }

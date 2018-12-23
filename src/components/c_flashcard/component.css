@@ -1,17 +1,191 @@
+@font-face {
+  font-family: 'fontello';
+  src: url("./fonts/fontello.eot");
+  src: url("./fonts/fontello.eot#iefix") format("embedded-opentype"), url("./fonts/fontello.woff2") format("woff2"), url("./fonts/fontello.woff") format("woff"), url("./fonts/fontello.ttf") format("truetype"), url("./fonts/fontello.svg#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-language:before {
+  content: '\e800'; }
+
+.icon-exchange:before {
+  content: '\e801'; }
+
+.icon-volume:before {
+  content: '\e802'; }
+
+body {
+  background-color: #d2cece; }
+
+h1 {
+  font-size: 28px; }
+
+h2 {
+  font-size: 24px; }
+
+h3 {
+  font-size: 20px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  font-size: 12px; }
+
+button {
+  border: none;
+  cursor: pointer;
+  padding: 8px 15px;
+  margin-bottom: 8px;
+  background-color: rgba(255, 255, 255, 0.4); }
+  button:hover {
+    opacity: .8; }
+  button:focus {
+    outline: 0; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    opacity: .6; }
+
 .module-flash-cards {
-  background-color: lightgray;
-  padding: 15px;
-  max-width: 600px;
+  padding: 0 15px;
+  max-width: 660px;
+  width: 100%;
   margin: 0 auto; }
+  .module-flash-cards .main-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px; }
+    .module-flash-cards .main-header h1 {
+      margin: 0;
+      padding-bottom: 8px;
+      padding-top: 8px; }
+      .module-flash-cards .main-header h1 small {
+        font-size: 14px; }
+    .module-flash-cards .main-header .list-language {
+      margin: 0;
+      padding-bottom: 4px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+      .module-flash-cards .main-header .list-language li {
+        margin-right: 8px; }
+        .module-flash-cards .main-header .list-language li a {
+          opacity: .4;
+          color: #338798; }
+          .module-flash-cards .main-header .list-language li a.active-lang {
+            opacity: 1;
+            text-decoration: underline; }
+          .module-flash-cards .main-header .list-language li a:hover {
+            text-decoration: none; }
+  .module-flash-cards footer {
+    margin: 15px 0;
+    padding: 15px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center; }
+    .module-flash-cards footer p {
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.6); }
   .module-flash-cards .main-list-exercise {
     transition: all 300ms ease-in-out;
-    overflow-y: scroll; }
-    .module-flash-cards .main-list-exercise ul {
+    overflow-y: hidden; }
+    .module-flash-cards .main-list-exercise .main-list-exercise-inset {
+      max-height: 500px;
+      overflow-y: auto;
       margin: 0; }
+      .module-flash-cards .main-list-exercise .main-list-exercise-inset li {
+        margin-bottom: 8px; }
+        .module-flash-cards .main-list-exercise .main-list-exercise-inset li a {
+          display: block;
+          width: 100%;
+          background-color: rgba(255, 255, 255, 0.3);
+          padding: 8px 15px;
+          color: #000;
+          position: relative;
+          font-weight: 600; }
+          .module-flash-cards .main-list-exercise .main-list-exercise-inset li a i {
+            font-size: 12px;
+            color: #191919;
+            font-weight: 400;
+            font-style: normal; }
+          .module-flash-cards .main-list-exercise .main-list-exercise-inset li a span {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            width: 100%;
+            overflow: hidden;
+            background-color: #2c8548; }
+          .module-flash-cards .main-list-exercise .main-list-exercise-inset li a:hover {
+            opacity: .8;
+            text-decoration: none; }
+        .module-flash-cards .main-list-exercise .main-list-exercise-inset li button {
+          margin: 0 0 0 8px;
+          background-color: #338798;
+          color: #fff; }
+  .module-flash-cards .nav-buttons button {
+    padding: 10px 15px;
+    color: #fff;
+    border-bottom: 8px solid rgba(255, 255, 255, 0.3);
+    opacity: .9;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+    font-size: 18px; }
+    .module-flash-cards .nav-buttons button:hover {
+      opacity: .8; }
+    .module-flash-cards .nav-buttons button.button-check-out {
+      width: 100%;
+      background-color: #338798;
+      border-radius: 8px; }
+    .module-flash-cards .nav-buttons button.button-i-know {
+      width: calc(50% - 7.5px);
+      margin-right: 7.5px;
+      background-color: #2c8548;
+      border-bottom-left-radius: 8px;
+      border-top-left-radius: 8px; }
+    .module-flash-cards .nav-buttons button.button-i-dont-know {
+      width: calc(50% - 7.5px);
+      margin-left: 7.5px;
+      background-color: #852824;
+      border-bottom-right-radius: 8px;
+      border-top-right-radius: 8px; }
   .module-flash-cards .main-flash-cards {
-    transition: all 300ms ease-in-out; }
+    transition: all 300ms ease-in-out;
+    padding: 0 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: relative; }
+    .module-flash-cards .main-flash-cards .button-close-exercise {
+      background-color: #852824;
+      position: absolute;
+      line-height: .8;
+      top: 0;
+      right: 0;
+      color: #fff;
+      font-size: 30px;
+      font-weight: 600;
+      z-index: 2;
+      padding: 5px 10px 10px; }
   .module-flash-cards.show-list-exercise-hide-flash-cards .main-list-exercise {
-    max-height: 200px;
+    max-height: 550px;
     opacity: 1; }
   .module-flash-cards.show-list-exercise-hide-flash-cards .main-flash-cards {
     opacity: 0;
@@ -23,18 +197,22 @@
     opacity: 0; }
   .module-flash-cards.hide-flash-cards-show-list-exercise .main-flash-cards {
     opacity: 1;
-    visibility: visible; }
+    visibility: visible;
+    padding: 15px;
+    border-top: 4px solid #2c8548; }
   .module-flash-cards .main-flash-cards .congratulation-info {
     width: 100%;
-    height: 180px;
-    background-color: #c8c8c8;
+    height: 250px;
     margin: 15px 0 0;
     animation-name: congrat-anim;
     animation-duration: 1.5s; }
-    .module-flash-cards .main-flash-cards .congratulation-info h3 {
-      font-size: 40px;
+    .module-flash-cards .main-flash-cards .congratulation-info h2 {
       animation-name: congrat-anim-h;
       animation-duration: 2s; }
+    .module-flash-cards .main-flash-cards .congratulation-info button {
+      margin-top: 15px; }
+    .module-flash-cards .main-flash-cards .congratulation-info p {
+      margin: 0; }
 @keyframes congrat-anim {
   0% {
     transform: scale(0); }
@@ -42,20 +220,23 @@
     transform: scale(1); } }
 @keyframes congrat-anim-h {
   0% {
+    font-size: 24px; }
+  40% {
+    font-size: 24px; }
+  55% {
     font-size: 40px; }
   70% {
-    font-size: 40px; }
-  75% {
+    font-size: 30px; }
+  85% {
     font-size: 60px; }
-  90% {
-    font-size: 40px; }
-  95% {
-    font-size: 50px; }
   100% {
-    font-size: 40px; } }
+    font-size: 24px; } }
   .module-flash-cards .main-flash-cards .button-i-know,
   .module-flash-cards .main-flash-cards .button-i-dont-know {
     display: none; }
+  .module-flash-cards .main-flash-cards .flash-card {
+    position: relative;
+    z-index: 1; }
   .module-flash-cards .main-flash-cards.check-out-card .button-check-out {
     display: none; }
   .module-flash-cards .main-flash-cards.check-out-card .button-i-know,
@@ -70,7 +251,7 @@
     margin: 15px 0; }
   .module-flash-cards .main-flash-cards .flash-card .flip-container, .module-flash-cards .main-flash-cards .flash-card .front, .module-flash-cards .main-flash-cards .flash-card .back {
     width: 100%;
-    height: 180px; }
+    height: 250px; }
   .module-flash-cards .main-flash-cards .flash-card .flipper {
     transition: 0.6s;
     transform-style: preserve-3d;
@@ -80,16 +261,32 @@
     padding: 15px;
     transition: all 600ms ease-in-out;
     border: 5px solid #fff;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     position: absolute;
     top: 0;
     left: 0; }
+    .module-flash-cards .main-flash-cards .flash-card .front .icon-volume, .module-flash-cards .main-flash-cards .flash-card .back .icon-volume {
+      color: #191919; }
     .module-flash-cards .main-flash-cards .flash-card .front p, .module-flash-cards .main-flash-cards .flash-card .back p {
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      width: 100%; }
       .module-flash-cards .main-flash-cards .flash-card .front p:last-child, .module-flash-cards .main-flash-cards .flash-card .back p:last-child {
         margin-bottom: 0; }
+    .module-flash-cards .main-flash-cards .flash-card .front strong, .module-flash-cards .main-flash-cards .flash-card .back strong {
+      color: #522d27;
+      display: inline-block;
+      margin-right: 4px; }
+    .module-flash-cards .main-flash-cards .flash-card .front .icon-volume, .module-flash-cards .main-flash-cards .flash-card .back .icon-volume {
+      background-color: transparent;
+      color: #522d27;
+      opacity: .7;
+      text-shadow: 0 0 1px rgba(255, 255, 255, 0.3); }
+      .module-flash-cards .main-flash-cards .flash-card .front .icon-volume:hover, .module-flash-cards .main-flash-cards .flash-card .back .icon-volume:hover {
+        opacity: .5; }
   .module-flash-cards .main-flash-cards .flash-card .front {
     z-index: 2;
-    background-color: #c8c8c8;
+    background-color: #dfdfdf;
     transform: rotateY(0deg); }
     .module-flash-cards .main-flash-cards .flash-card .front p {
       opacity: 1;
@@ -102,7 +299,18 @@
     opacity: 1; } }
   .module-flash-cards .main-flash-cards .flash-card .back {
     transform: rotateY(180deg);
-    background-color: #0b2e13;
+    background-color: #338798;
     color: #fff; }
+    .module-flash-cards .main-flash-cards .flash-card .back p {
+      margin: 0; }
+    .module-flash-cards .main-flash-cards .flash-card .back hr {
+      height: 1px;
+      background-color: #fff;
+      width: 100%; }
+    .module-flash-cards .main-flash-cards .flash-card .back .google-translator {
+      position: absolute;
+      top: 5px;
+      right: 15px;
+      color: #fff; }
 
 /*# sourceMappingURL=component.css.map */
