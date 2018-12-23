@@ -1,3 +1,24 @@
+.color-1 {
+  color: #fff; }
+
+.color-2 {
+  color: #000; }
+
+.color-3 {
+  color: #191919; }
+
+.color-4 {
+  color: #338798; }
+
+.color-5 {
+  color: #2c8548; }
+
+.color-6 {
+  color: #852824; }
+
+.color-7 {
+  color: #522d27; }
+
 @font-face {
   font-family: 'fontello';
   src: url("./fonts/fontello.eot");
@@ -30,32 +51,48 @@
 .icon-volume:before {
   content: '\e802'; }
 
+.icon-cancel:before {
+  content: '\e803'; }
+
+.icon-award:before {
+  content: '\e804'; }
+
+.icon-down:before {
+  content: '\f175'; }
+
+.icon-up:before {
+  content: '\f176'; }
+
+.icon-left:before {
+  content: '\f177'; }
+
+.icon-right:before {
+  content: '\f178'; }
+
 body {
   background-color: #d2cece; }
 
 h1 {
-  font-size: 28px; }
+  font-size: 22px; }
 
 h2 {
-  font-size: 24px; }
+  font-size: 18px; }
 
 h3 {
-  font-size: 20px; }
-
-h4 {
   font-size: 16px; }
 
-h5 {
+h4 {
   font-size: 14px; }
 
-h6 {
-  font-size: 12px; }
+p {
+  margin-bottom: 8px; }
 
 button {
   border: none;
   cursor: pointer;
-  padding: 8px 15px;
+  padding: 8px 10px;
   margin-bottom: 8px;
+  font-size: 14px;
   background-color: rgba(255, 255, 255, 0.4); }
   button:hover {
     opacity: .8; }
@@ -68,16 +105,26 @@ a {
     opacity: .6; }
 
 .module-flash-cards {
-  padding: 0 15px;
+  padding: 0 10px;
   max-width: 660px;
   width: 100%;
   margin: 0 auto; }
   .module-flash-cards .main-header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px; }
+    margin-bottom: 24px;
+    position: relative; }
+    .module-flash-cards .main-header .direction-lang {
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      text-align: center;
+      position: absolute;
+      padding: 4px 10px;
+      bottom: -23px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      background-color: #f1f1f1; }
     .module-flash-cards .main-header h1 {
       margin: 0;
-      padding-bottom: 8px;
+      padding-bottom: 24px;
       padding-top: 8px; }
       .module-flash-cards .main-header h1 small {
         font-size: 14px;
@@ -85,7 +132,10 @@ a {
     .module-flash-cards .main-header .list-language {
       margin: 0;
       padding-bottom: 4px;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+      padding-top: 4px;
+      position: absolute;
+      top: 5px;
+      right: 0; }
       .module-flash-cards .main-header .list-language li {
         margin-right: 8px; }
         .module-flash-cards .main-header .list-language li a {
@@ -97,16 +147,19 @@ a {
           .module-flash-cards .main-header .list-language li a:hover {
             text-decoration: none; }
   .module-flash-cards footer {
-    margin: 15px 0;
-    padding: 15px 0;
+    margin: 10px 0;
+    padding: 10px 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     text-align: center; }
     .module-flash-cards footer p {
-      font-size: 14px;
+      font-size: 12px;
       color: rgba(0, 0, 0, 0.6); }
   .module-flash-cards .main-list-exercise {
     transition: all 300ms ease-in-out;
     overflow-y: hidden; }
+    .module-flash-cards .main-list-exercise .rest-all {
+      background-color: #338798;
+      color: #fff; }
     .module-flash-cards .main-list-exercise .main-list-exercise-inset {
       max-height: 500px;
       overflow-y: auto;
@@ -117,7 +170,7 @@ a {
           display: block;
           width: 100%;
           background-color: rgba(255, 255, 255, 0.3);
-          padding: 8px 15px;
+          padding: 8px 10px;
           color: #000;
           position: relative;
           font-weight: 600; }
@@ -126,7 +179,7 @@ a {
             color: #191919;
             font-weight: 400;
             font-style: normal; }
-          .module-flash-cards .main-list-exercise .main-list-exercise-inset li a span {
+          .module-flash-cards .main-list-exercise .main-list-exercise-inset li a .percent-pro {
             display: block;
             position: absolute;
             bottom: 0;
@@ -144,7 +197,7 @@ a {
           background-color: #338798;
           color: #fff; }
   .module-flash-cards .nav-buttons button {
-    padding: 10px 15px;
+    padding: 10px;
     color: #fff;
     border-bottom: 8px solid rgba(255, 255, 255, 0.3);
     opacity: .9;
@@ -171,8 +224,8 @@ a {
       border-top-right-radius: 8px; }
   .module-flash-cards .main-flash-cards {
     transition: all 300ms ease-in-out;
-    padding: 0 15px;
-    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0 10px;
+    background-color: rgba(255, 255, 255, 0.3);
     position: relative; }
     .module-flash-cards .main-flash-cards .button-close-exercise {
       background-color: #852824;
@@ -181,10 +234,19 @@ a {
       top: 0;
       right: 0;
       color: #fff;
-      font-size: 30px;
+      font-size: 20px;
       font-weight: 600;
       z-index: 2;
-      padding: 5px 10px 10px; }
+      padding: 8px; }
+      .module-flash-cards .main-flash-cards .button-close-exercise span {
+        display: block;
+        width: 220px;
+        left: -225px;
+        top: 4px;
+        text-align: right;
+        position: absolute;
+        color: #191919;
+        font-size: 10px; }
   .module-flash-cards.show-list-exercise-hide-flash-cards .main-list-exercise {
     max-height: 550px;
     opacity: 1; }
@@ -199,21 +261,19 @@ a {
   .module-flash-cards.hide-flash-cards-show-list-exercise .main-flash-cards {
     opacity: 1;
     visibility: visible;
-    padding: 15px;
+    padding: 15px 10px 10px;
     border-top: 4px solid #2c8548; }
   .module-flash-cards .main-flash-cards .congratulation-info {
     width: 100%;
     height: 250px;
-    margin: 15px 0 0;
+    margin: 10px 0 0;
     animation-name: congrat-anim;
     animation-duration: 1.5s; }
     .module-flash-cards .main-flash-cards .congratulation-info h2 {
       animation-name: congrat-anim-h;
       animation-duration: 2s; }
-    .module-flash-cards .main-flash-cards .congratulation-info button {
-      margin-top: 15px; }
     .module-flash-cards .main-flash-cards .congratulation-info p {
-      margin: 0; }
+      margin: 0 0 8px; }
 @keyframes congrat-anim {
   0% {
     transform: scale(0); }
@@ -238,6 +298,10 @@ a {
   .module-flash-cards .main-flash-cards .flash-card {
     position: relative;
     z-index: 1; }
+    .module-flash-cards .main-flash-cards .flash-card .flash-card-inset > h2, .module-flash-cards .main-flash-cards .flash-card .flash-card-inset p {
+      padding-right: 50px; }
+    .module-flash-cards .main-flash-cards .flash-card .flash-card-inset > p {
+      font-size: 12px; }
   .module-flash-cards .main-flash-cards.check-out-card .button-check-out {
     display: none; }
   .module-flash-cards .main-flash-cards.check-out-card .button-i-know,
@@ -249,7 +313,7 @@ a {
     opacity: 0; }
   .module-flash-cards .main-flash-cards .flash-card .flip-container {
     perspective: 1000px;
-    margin: 15px 0; }
+    margin: 10px 0; }
   .module-flash-cards .main-flash-cards .flash-card .flip-container, .module-flash-cards .main-flash-cards .flash-card .front, .module-flash-cards .main-flash-cards .flash-card .back {
     width: 100%;
     height: 250px; }
@@ -259,7 +323,7 @@ a {
     position: relative; }
   .module-flash-cards .main-flash-cards .flash-card .front, .module-flash-cards .main-flash-cards .flash-card .back {
     backface-visibility: hidden;
-    padding: 15px;
+    padding: 10px;
     transition: all 600ms ease-in-out;
     border: 5px solid #fff;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
@@ -270,7 +334,7 @@ a {
     .module-flash-cards .main-flash-cards .flash-card .front .icon-volume, .module-flash-cards .main-flash-cards .flash-card .back .icon-volume {
       color: #191919; }
     .module-flash-cards .main-flash-cards .flash-card .front p, .module-flash-cards .main-flash-cards .flash-card .back p {
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       width: 100%; }
       .module-flash-cards .main-flash-cards .flash-card .front p:last-child, .module-flash-cards .main-flash-cards .flash-card .back p:last-child {
         margin-bottom: 0; }
@@ -310,8 +374,9 @@ a {
       width: 100%; }
     .module-flash-cards .main-flash-cards .flash-card .back .google-translator {
       position: absolute;
+      font-size: 12px;
       top: 5px;
-      right: 15px;
+      right: 10px;
       color: #fff; }
 
 /*# sourceMappingURL=component.css.map */
