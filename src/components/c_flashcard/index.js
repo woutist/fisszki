@@ -11,7 +11,8 @@ let idExercise = -1,
     firstLoadExerciseCookies = true,
     lang,
     translate = {},
-    flashCardDirection;
+    flashCardDirection,
+    isIE = /*@cc_on!@*/false || !!document.documentMode;
 
 const cookies = new Cookies(),
     cookiesMaxAge = 60*60*24*7*4*12,
@@ -90,22 +91,18 @@ class FlashCards extends Component {
     state = {
         callObj: translate.placeholderFlashCards,
         langCongratulation: function (that,ide) {
-            //console.log('langCongratulation:');
-            //console.log(that.props.json[ide].excludeID);
-            //console.log('that.props.json[ide].length:' + that.props.json[ide].data.length);
             const obj = that.props.json[ide];
             obj.excludeID.length=obj.data.length;
-
             return (
                 <div className={'congratulation-info ' + centerClass}>
                     <h2>{translate.infoCongratulation}</h2>
                     <h3>"{that.state.langNameExercise(obj.name)}"</h3>
                     <p className="text-center">{translate.textSummary}:  <span className="icon-up color-5">{obj.excludeID.length}/{obj.data.length} = {Math.ceil(obj.excludeID.length*100/obj.data.length)}%</span> - <span className="icon-down color-6">{obj.dontKnowClick}</span></p>
-                    <button onClick={() => {
+                    <button className="border-content-bottom" onClick={() => {
                         that.clearExercise();
                         that.setState({classHideNavButtons: ''})
                     }}>{translate.buttonInfoCongratulation}</button>
-                    <button onClick={() => {
+                    <button className="border-content-bottom" onClick={() => {
                         obj.excludeID=[];
                         obj.dontKnowClick=0;
                         cookies.remove('obj_exercise_cookie_'+ide, { path: '/' });
@@ -124,7 +121,6 @@ class FlashCards extends Component {
         classCheckOutMore: '',
         classHideOrShowMainPartsPage: 'show-list-exercise-hide-flash-cards',
         classHideNavButtons: '',
-
         langNameExercise: function (j) {
             switch (lang) {
                 case 'en': return j._en;
@@ -160,8 +156,13 @@ class FlashCards extends Component {
             // eslint-disable-next-line
             callObj: (o.excludeID.length === o.data.length)?this.state.langCongratulation(this,idExercise):o.data.map(function (obj, i) {
                 if(i === idItem) {
+                    let percent = Math.ceil(o.excludeID.length*100/o.data.length),
+                        stylePercent = {
+                            background: 'linear-gradient(to right, #2c8548 0%,#2c8548 ' + percent + '%,rgba(133, 40, 36,.6) ' + percent + '%,rgba(133, 40, 36,.6) 100%)'
+                        };
                     return (
-                        <div className="flash-card-inset" key={i}>
+                        <div className={'flash-card-inset' + (isIE?' ie-fix':'')} key={i}>
+                            <span className="percent-pro" style={stylePercent}></span>
                             <h2>{that.state.langNameExercise(o.name)}</h2>
                             <p><span className="icon-up color-5">{o.excludeID.length}/{o.data.length} = {Math.ceil(o.excludeID.length*100/o.data.length)}%</span> - <span className="icon-down color-6">{o.dontKnowClick}</span></p>
                             <div className="flip-container">
@@ -213,6 +214,7 @@ class FlashCards extends Component {
     };
     setLang = (event,o,langName) => {
         setLanguage(langName);
+        lang = langName;
         if(langName === 'pl') { // cookies.get('language_cookie') === 'pl'
             setCookies('language_cookie', 'pl');
             this.setState({
@@ -227,10 +229,7 @@ class FlashCards extends Component {
                 activeEN: 'active-lang'
             });
         }
-        // this.setState();
-        console.log("check:");
-        console.log(idItem);
-        console.log(idExercise);
+
         // after load page
         if(idExercise < 0 || (typeof idItem === 'undefined') ) {
             this.setState({
@@ -240,7 +239,7 @@ class FlashCards extends Component {
             this.setExercise(event,o[idExercise],idExercise,this,idItem);
         }
 
-        lang = o;
+        //lang = langName;
         event.preventDefault();
     };
     changeDirection = (event,o) => {
@@ -388,8 +387,8 @@ class FlashCards extends Component {
             <div className={'module-flash-cards ' + this.state.classHideOrShowMainPartsPage}>
                 <header className="main-header">
                     <ul className="list-language d-flex flex-row list-unstyled">
-                        <li><a href={'#pl'} className={this.state.activePL} onClick={(e) => this.setLang(e,json,'pl')}>PL</a></li>
-                        <li><a href={'#en'} className={this.state.activeEN} onClick={(e) => this.setLang(e,json,'en')}>EN</a></li>
+                        <li className="flag-pl"><a href={'#pl'} className={this.state.activePL} onClick={(e) => this.setLang(e,json,'pl')}>PL</a></li>
+                        <li className="flag-en"><a href={'#en'} className={this.state.activeEN} onClick={(e) => this.setLang(e,json,'en')}>EN</a></li>
                     </ul>
                     <h1>{title} <small>pl-en/en-pl</small></h1>
                     <button className="direction-lang" onClick={(e) => this.changeDirection(e,json)}>{directionState[0]} <span className="icon-exchange"></span> {directionState[1]}</button>
@@ -408,15 +407,16 @@ class FlashCards extends Component {
                                         <span className="percent-pro" style={stylePercent}></span>
                                         {that.state.langNameExercise(obj.name)} <i><span className="icon-up color-5">{obj.excludeID.length}/{obj.data.length} = {percent}%</span> - <span className="icon-down color-6">{obj.dontKnowClick}</span></i>
                                     </a>
-                                    <button className={(obj.excludeID.length !== 0 || obj.dontKnowClick !== 0)?'':'d-none'} onClick={(e) => {that.removeCookieExerciseId(e,i,obj);}}>Reset</button>
+                                    <button className={'border-content-bottom' +((obj.excludeID.length !== 0 || obj.dontKnowClick !== 0)?'':' d-none')} onClick={(e) => {that.removeCookieExerciseId(e,i,obj);}}>Reset</button>
                                 </li>
                             );
                         },that)}
                     </ul>
-                    <button className="rest-all" title={'Clear cookies exercise'} onClick={() => this.removeCookieExerciseAll()}>Reset All</button>
+                    <button className="rest-all border-content-bottom" title={'Clear cookies exercise'} onClick={() => this.removeCookieExerciseAll()}>Reset All</button>
                 </div>
                 <div className={'main-flash-cards ' + this.state.classCheckOut + ' ' + this.state.classCheckOutMore}>
                     <button className="button-close-exercise icon-cancel" onClick={this.clearExercise}><span>{translate.buttonCloseExercise} <i className="icon-right"></i></span></button>
+
                     <div className={'flash-card'}>
                         {this.state.callObj}
                     </div>
@@ -428,7 +428,7 @@ class FlashCards extends Component {
                     </nav>
                 </div>
                 <footer className="main-footer">
-                    <p>Copyright &copy; 1518, langFlashCards pl-en/en-pl v1.0.0</p>
+                    <p>Copyright &copy; 1518, {title} pl-en/en-pl v1.0.0</p>
                 </footer>
             </div>
         )

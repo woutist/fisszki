@@ -87,6 +87,19 @@ button {
     opacity: .8;
   }
   &:focus {outline:0;}
+
+  &.border-content-bottom {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background-color: rgba(0,0,0,.1);
+    }
+  }
 }
 
 a {
@@ -117,8 +130,8 @@ a {
     }
     h1 {
       margin: 0;
-      padding-bottom: 24px;
-      padding-top: 8px;
+      padding: 18px 10px;
+      background-color: rgba(255,255,255,.3);
       small {
         font-size: 14px;
         color: $color5;
@@ -126,11 +139,9 @@ a {
     }
     .list-language {
       margin: 0;
-      padding-bottom: 4px;
-      padding-top: 4px;
       //border-bottom: 1px solid rgba(0,0,0,.1);
       position: absolute;
-      top: 5px;
+      top: 0;
       right: 0;
       li {
         margin-right: 8px;
@@ -149,7 +160,6 @@ a {
     }
   }
   footer {
-    margin: 10px 0;
     padding: 10px 0;
     border-top: 1px solid rgba(0,0,0,.1);
     text-align: center;
@@ -160,6 +170,16 @@ a {
     }
   }
 
+  .percent-pro {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    overflow: hidden;
+    background-color: $color5;
+  }
   .main-list-exercise {
     transition: all 300ms ease-in-out;
     overflow-y: hidden;
@@ -186,17 +206,6 @@ a {
             color: $color3;
             font-weight: 400;
             font-style: normal;
-          }
-          .percent-pro {
-            display: block;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            width: 100%;
-            overflow: hidden;
-            background-color: $color5;
           }
           &:hover {
             opacity: .8;
@@ -247,35 +256,6 @@ a {
     }
   }
 
-  .main-flash-cards {
-    transition: all 300ms ease-in-out;
-    padding: 0 10px;
-    background-color: rgba(255,255,255,.3);
-    position: relative;
-    .button-close-exercise {
-      background-color: $color6;
-      position: absolute;
-      line-height: .8;
-      top: 0;
-      right: 0;
-      color: $color1;
-      font-size: 20px;
-      font-weight: 600;
-      z-index: 2;
-      padding: 8px;
-      span {
-        display: block;
-        width: 220px;
-        left: -225px;
-        top: 4px;
-        text-align: right;
-        position: absolute;
-        color: $color3;
-        font-size: 10px;
-      }
-    }
-  }
-
   &.show-list-exercise-hide-flash-cards {
     .main-list-exercise {
       //display: block;
@@ -305,6 +285,32 @@ a {
   }
 
   .main-flash-cards {
+    transition: all 300ms ease-in-out;
+    padding: 0 10px;
+    background-color: rgba(255,255,255,.3);
+    position: relative;
+    .button-close-exercise {
+      background-color: $color6;
+      position: absolute;
+      line-height: .8;
+      top: 0;
+      right: 0;
+      color: $color1;
+      font-size: 20px;
+      font-weight: 600;
+      z-index: 2;
+      padding: 8px;
+      span {
+        display: block;
+        width: 220px;
+        left: -225px;
+        top: 4px;
+        text-align: right;
+        position: absolute;
+        color: $color3;
+        font-size: 10px;
+      }
+    }
     .congratulation-info {
       width: 100%;
       height: $height;
@@ -326,12 +332,12 @@ a {
         100% {transform: scale(1);}
       }
       @keyframes congrat-anim-h {
-        0%   {font-size: 24px;}
+        0%   {font-size: 18px;}
         40%  {font-size: 24px;}
         55% {font-size: 40px;}
         70%  {font-size: 30px;}
-        85% {font-size: 60px;}
-        100% {font-size: 24px;}
+        85% {font-size: 50px;}
+        100% {font-size: 18px;}
       }
     }
     .button-i-know,
@@ -348,6 +354,11 @@ a {
         > p {
           font-size: 12px;
         }
+        .percent-pro {
+          top: -19px;
+          left: -10px;
+          right: -10px;
+        }
       }
     }
     &.check-out-card {
@@ -363,6 +374,17 @@ a {
           transform: rotateY(180deg);
         }
 
+      }
+      .flash-card {
+        .flash-card-inset {
+          &.ie-fix {
+            .back {
+              z-index: 2;
+              backface-visibility: visible;
+              transition: all 300ms ease-in-out;
+            }
+          }
+        }
       }
     }
     &.check-out-card-more {
@@ -407,14 +429,22 @@ a {
 
         .icon-volume {
           color: $color3;
+          margin: 0;
         }
 
         p {
           margin-bottom: 10px;
           width: 100%;
+          font-size: 18px;
           &:last-child {
             margin-bottom: 0;
           }
+        }
+        hr {
+          height: 1px;
+          background-color: $color1;
+          width: 100%;
+          margin: 5px 0;
         }
         strong {
           color: $color7;
@@ -451,11 +481,6 @@ a {
         color: $color1;
         p {
           margin: 0;
-        }
-        hr {
-          height: 1px;
-          background-color: $color1;
-          width: 100%;
         }
         .google-translator {
           position: absolute;
