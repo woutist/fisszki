@@ -19,6 +19,9 @@
 .color-7 {
   color: #522d27; }
 
+.color-8 {
+  color: #974c49; }
+
 @font-face {
   font-family: 'fontello';
   src: url("./fonts/fontello.eot");
@@ -56,6 +59,15 @@
 
 .icon-award:before {
   content: '\e804'; }
+
+.icon-ok:before {
+  content: '\e805'; }
+
+.icon-ok-circled:before {
+  content: '\e806'; }
+
+.icon-cancel-circled:before {
+  content: '\e807'; }
 
 .icon-down:before {
   content: '\f175'; }
@@ -152,6 +164,8 @@ a {
           .module-flash-cards .main-header .list-language li a.active-lang {
             opacity: 1;
             text-decoration: underline; }
+            .module-flash-cards .main-header .list-language li a.active-lang:hover {
+              text-decoration: underline; }
           .module-flash-cards .main-header .list-language li a:hover {
             text-decoration: none; }
   .module-flash-cards footer {
@@ -217,14 +231,14 @@ a {
       background-color: #338798;
       border-radius: 8px; }
     .module-flash-cards .nav-buttons button.button-i-know {
-      width: calc(50% - 7.5px);
-      margin-right: 7.5px;
+      width: calc(50% - 5px);
+      margin-right: 5px;
       background-color: #2c8548;
       border-bottom-left-radius: 8px;
       border-top-left-radius: 8px; }
     .module-flash-cards .nav-buttons button.button-i-dont-know {
-      width: calc(50% - 7.5px);
-      margin-left: 7.5px;
+      width: calc(50% - 5px);
+      margin-left: 5px;
       background-color: #852824;
       border-bottom-right-radius: 8px;
       border-top-right-radius: 8px; }
@@ -268,7 +282,8 @@ a {
         text-align: right;
         position: absolute;
         color: #191919;
-        font-size: 10px; }
+        font-size: 10px;
+        opacity: .6; }
     .module-flash-cards .main-flash-cards .congratulation-info {
       width: 100%;
       height: 250px;
@@ -394,6 +409,7 @@ a {
         font-size: 12px;
         top: 5px;
         right: 10px;
-        color: #fff; }
+        color: #fff;
+        opacity: .8; }
 
 /*# sourceMappingURL=component.css.map */

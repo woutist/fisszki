@@ -6,6 +6,7 @@ $color4: #338798;
 $color5: #2c8548;
 $color6: #852824;
 $color7: #522d27;
+$color8: #974c49;
 
 .color-1 {color: $color1}
 .color-2 {color: $color2}
@@ -14,6 +15,7 @@ $color7: #522d27;
 .color-5 {color: $color5}
 .color-6 {color: $color6}
 .color-7 {color: $color7}
+.color-8 {color: $color8}
 
 @font-face {
   font-family: 'fontello';
@@ -49,6 +51,9 @@ $color7: #522d27;
 .icon-volume:before { content: '\e802'; }
 .icon-cancel:before { content: '\e803'; }
 .icon-award:before { content: '\e804'; }
+.icon-ok:before { content: '\e805'; }
+.icon-ok-circled:before { content: '\e806'; }
+.icon-cancel-circled:before { content: '\e807'; }
 .icon-down:before { content: '\f175'; }
 .icon-up:before { content: '\f176'; }
 .icon-left:before { content: '\f177'; }
@@ -151,6 +156,9 @@ a {
           &.active-lang {
             opacity: 1;
             text-decoration: underline;
+            &:hover {
+              text-decoration: underline;
+            }
           }
           &:hover {
             text-decoration: none;
@@ -240,15 +248,15 @@ a {
         border-radius: 8px;
       }
       &.button-i-know {
-        width: calc(50% - 7.5px);
-        margin-right: 7.5px;
+        width: calc(50% - 5px);
+        margin-right: 5px;
         background-color: $color5;
         border-bottom-left-radius: 8px;
         border-top-left-radius: 8px;
       }
       &.button-i-dont-know {
-        width: calc(50% - 7.5px);
-        margin-left: 7.5px;
+        width: calc(50% - 5px);
+        margin-left: 5px;
         background-color: $color6;
         border-bottom-right-radius: 8px;
         border-top-right-radius: 8px;
@@ -309,6 +317,7 @@ a {
         position: absolute;
         color: $color3;
         font-size: 10px;
+        opacity: .6;
       }
     }
     .congratulation-info {
@@ -488,6 +497,7 @@ a {
           top: 5px;
           right: 10px;
           color: $color1;
+          opacity: .8;
         }
       }
     }

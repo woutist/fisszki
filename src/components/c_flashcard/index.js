@@ -38,8 +38,8 @@ const setLanguage = (x) => {
                 infoCongratulation: 'Congratultaion!',
                 buttonInfoCongratulation: 'Back to exercises menu',
                 buttonInfoCongratulationRestart: 'Start this exercise all over again',
-                buttonIKnow: 'I know',
-                buttonIDontKnow: "I don't know",
+                buttonIKnow: 'I knew',
+                buttonIDontKnow: "I don't knew",
                 buttonCheckOut: 'Check out',
                 textSummary: 'Summary'
             };
@@ -51,8 +51,8 @@ const setLanguage = (x) => {
                 infoCongratulation: 'Gratulacje!',
                 buttonInfoCongratulation: 'Wróć do menu ćwiczeń',
                 buttonInfoCongratulationRestart: 'Zacznij to ćwiczenie od nowa',
-                buttonIKnow: 'Wiem',
-                buttonIDontKnow: "Nie wiem",
+                buttonIKnow: 'Wiedziałem/am',
+                buttonIDontKnow: "Nie wiedziałem/am",
                 buttonCheckOut: 'Sprawdź',
                 textSummary: 'Podsumowanie'
             };
@@ -95,7 +95,7 @@ class FlashCards extends Component {
             obj.excludeID.length=obj.data.length;
             return (
                 <div className={'congratulation-info ' + centerClass}>
-                    <h2>{translate.infoCongratulation}</h2>
+                    <h2>{translate.infoCongratulation}<span className="icon-award"></span></h2>
                     <h3>"{that.state.langNameExercise(obj.name)}"</h3>
                     <p className="text-center">{translate.textSummary}:  <span className="icon-up color-5">{obj.excludeID.length}/{obj.data.length} = {Math.ceil(obj.excludeID.length*100/obj.data.length)}%</span> - <span className="icon-down color-6">{obj.dontKnowClick}</span></p>
                     <button className="border-content-bottom" onClick={() => {
@@ -158,7 +158,7 @@ class FlashCards extends Component {
                 if(i === idItem) {
                     let percent = Math.ceil(o.excludeID.length*100/o.data.length),
                         stylePercent = {
-                            background: 'linear-gradient(to right, #2c8548 0%,#2c8548 ' + percent + '%,rgba(133, 40, 36,.6) ' + percent + '%,rgba(133, 40, 36,.6) 100%)'
+                            background: 'linear-gradient(to right, #2c8548 0%,#2c8548 ' + percent + '%,#974c49 ' + percent + '%,#974c49 100%)'
                         };
                     return (
                         <div className={'flash-card-inset' + (isIE?' ie-fix':'')} key={i}>
@@ -399,7 +399,7 @@ class FlashCards extends Component {
                         {json.map(function (obj, i) {
                             let percent = Math.ceil(obj.excludeID.length*100/obj.data.length),
                                 stylePercent = {
-                                    background: 'linear-gradient(to right, #2c8548 0%,#2c8548 ' + percent + '%,rgba(133, 40, 36,.6) ' + percent + '%,rgba(133, 40, 36,.6) 100%)'
+                                    background: 'linear-gradient(to right, #2c8548 0%,#2c8548 ' + percent + '%,#974c49 ' + percent + '%,#974c49 100%)'
                                 };
                             return (
                                 <li key={i} className="d-flex justify-content-between">
@@ -423,8 +423,8 @@ class FlashCards extends Component {
 
                     <nav className={'nav-buttons ' + this.state.classHideNavButtons}>
                         <button className="button-check-out" onClick={() => this.setState({classCheckOut: 'check-out-card', classCheckOutMore: 'check-out-card-more'})}>{translate.buttonCheckOut}</button>
-                        <button className="button-i-know" onClick={() => this.iKnow(json,idItem)}>{translate.buttonIKnow}</button>
-                        <button className="button-i-dont-know" onClick={() => this.iDontKnow(json)}>{translate.buttonIDontKnow}</button>
+                        <button title={translate.buttonIKnow} className="button-i-know" onClick={() => this.iKnow(json,idItem)}><span className="icon-ok"></span></button>
+                        <button title={translate.buttonIDontKnow} className="button-i-dont-know" onClick={() => this.iDontKnow(json)}><span className="icon-cancel"></span></button>
                     </nav>
                 </div>
                 <footer className="main-footer">
