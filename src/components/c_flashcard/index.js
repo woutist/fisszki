@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import dataJson from './test1.json';
 import './component.css';
 import Cookies from 'universal-cookie';
 import dataJson from './data_json/data.json';
@@ -57,7 +56,6 @@ const setLanguage = (x) => {
     }
 };
 if(typeof cookies.get('language_cookie') === "undefined") {
-    //console.log("cookie nie ustawione");
     cookies.set('language_cookie', 'pl', { path: '/', maxAge: cookiesMaxAge });
     lang = 'pl';
 } else {
@@ -71,7 +69,6 @@ setLanguage(lang);
 
 // COOKIES FLASHCARDS DIRECTION
 if(typeof cookies.get('flashcards_cookie') === "undefined") {
-    //console.log("cookie nie ustawione");
     cookies.set('flashcards_cookie', 'left', { path: '/', maxAge: cookiesMaxAge });
     flashCardDirection = 'left';
 } else {
@@ -204,12 +201,10 @@ class FlashCards extends Component {
         }
     };
     setExercise = (event,o,idE,that,idForce) => {
-        //console.log('setExercise: ' + id);
         idExercise = idE;
         if(idForce) idItem = idForce;
         else idItem = that.randomItem(o);
 
-        console.log(o.excludeID.length + " --- " + o.data.length);
         this.setState({
             classCheckOut: '',
             classCheckOutMore: '',
@@ -231,7 +226,7 @@ class FlashCards extends Component {
     setLang = (event,o,langName) => {
         setLanguage(langName);
         lang = langName;
-        if(langName === 'pl') { // cookies.get('language_cookie') === 'pl'
+        if(langName === 'pl') {
             setCookies('language_cookie', 'pl');
             this.setState({
                 activePL: 'active-lang',
@@ -254,14 +249,9 @@ class FlashCards extends Component {
         } else {
             this.setExercise(event,o[idExercise],idExercise,this,idItem);
         }
-
-        //lang = langName;
         event.preventDefault();
     };
     changeDirection = (event,o) => {
-        //console.log("!!!: " + o[idExercise].data.length + ' | ' + o[idExercise].excludeID.length);
-        //console.log(o[idExercise].excludeID);
-        console.log('idExercise: ' + idExercise);
         if(flashCardDirection === 'left') {
             setCookies('flashcards_cookie', 'right');
             flashCardDirection = 'right';
@@ -281,26 +271,18 @@ class FlashCards extends Component {
         event.preventDefault();
     };
     randomItem = (ol,forceId) => {
-        //ol.excludeID
-        console.log("t-o: ");
-        console.log(ol);
         if(forceId) {
             return forceId;
         }
         else {
             let unique, randomNr;
-            //console.log(ol.data);
             if(typeof ol.excludeID === 'object' && ol.excludeID.length > 0){
                 if(ol.excludeID.length < ol.data.length) {
-                    console.log(ol.excludeID.length + '<' + ol.data.length)
                     do {
                         unique=true;
                         randomNr=Math.floor((Math.random()*ol.data.length));
                         for(let i=0; i<ol.excludeID.length; i++) { if(ol.excludeID[i]===randomNr) unique=false; }
                     } while (!unique);
-                }
-                else {
-                    //ol.excludeID = [];
                 }
             }
             else {
@@ -320,16 +302,12 @@ class FlashCards extends Component {
             if(typeof o[idExercise].excludeID !== 'object') {
                 o[idExercise].excludeID = [];
             }
-            console.log(idExercise);
-            console.log('idI: ' + idI);
             if(o[idExercise].excludeID.length < o[idExercise].data.length && typeof idI !== 'undefined' ) {
                 o[idExercise].excludeID.push(idI);
                 setCookies('obj_exercise_cookie_'+idExercise, JSON.stringify(o[idExercise].excludeID));
             }
-            console.log(o[idExercise].excludeID);
             this.setState({classCheckOut: ''});
             setTimeout(this.timeoutAnim,400,o[idExercise],idExercise);
-
             if(o[idExercise].excludeID.length === o[idExercise].data.length){
                 this.setState({
                     classHideNavButtons: 'd-none'
@@ -347,16 +325,12 @@ class FlashCards extends Component {
         }
     };
     removeCookieExerciseId = (event,ide,o) => {
-        console.log("uswamy cookies");
         removeCookies('obj_exercise_cookie_'+ide);
         removeCookies('obj_exercise_cookie_dk_click_'+ide);
         if(typeof o === 'object') {
             o.excludeID =[];
             o.dontKnowClick = 0;
-
-            this.setState({
-                //excludeIdLength: o.excludeID.length
-            });
+            this.setState({});
         }
         if(event) event.preventDefault();
     };
@@ -371,13 +345,10 @@ class FlashCards extends Component {
         this.setState({});
     };
     render() {
-        const { title } = this.props;
-        const json = dataJson;
-        console.log("xxx");
-        console.log(json);
-        const that = this;
+        const { title } = this.props,
+            json = dataJson,
+            that = this;
         if(firstLoadExerciseCookies){
-            console.log('test cookies:');
             // eslint-disable-next-line
             json.map(function (obj, i) {
                 if(typeof obj.excludeID  === 'undefined') {
@@ -385,15 +356,12 @@ class FlashCards extends Component {
                     obj.dontKnowClick = 0;
                 }
                 if(typeof cookies.get('obj_exercise_cookie_' + i) !== "undefined") {
-                    console.log(cookies.get('obj_exercise_cookie_' + i));
                     obj.excludeID = cookies.get('obj_exercise_cookie_' + i);
                 }
                 if(typeof cookies.get('obj_exercise_cookie_dk_click_' + i) !== "undefined") {
-                    console.log('i dont know click: ' + cookies.get('obj_exercise_cookie_dk_click_' + i));
                     obj.dontKnowClick = parseInt(cookies.get('obj_exercise_cookie_dk_click_' + i));
                 }
             });
-            console.log('koniec test cookies');
             firstLoadExerciseCookies = false;
         }
         let directionState = this.state.direction.split("|");
