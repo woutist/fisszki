@@ -29,7 +29,6 @@ const removeCookies = (name) => {
 /**
  * COOKIES LANGUAGE
  */
-// COOKIES LANGUAGE
 const setLanguage = (x) => {
     switch (x) {
         case 'en':
