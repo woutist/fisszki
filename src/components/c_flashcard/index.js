@@ -173,7 +173,7 @@ class Exercises extends Component {
 
 
 /**
- * Main component lashCards
+ * Main component FlashCards
  */
 class FlashCards extends Component {
     state = {
