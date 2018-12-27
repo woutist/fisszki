@@ -376,8 +376,9 @@ a {
         margin: 5px 0; }
       .module-flash-cards .main-flash-cards .flash-card .front strong, .module-flash-cards .main-flash-cards .flash-card .back strong {
         color: #522d27;
+        width: 26px;
         display: inline-block;
-        margin-right: 4px; }
+        opacity: .4; }
       .module-flash-cards .main-flash-cards .flash-card .front .icon-volume, .module-flash-cards .main-flash-cards .flash-card .back .icon-volume {
         background-color: transparent;
         color: #522d27;

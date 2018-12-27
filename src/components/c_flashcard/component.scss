@@ -457,8 +457,9 @@ a {
         }
         strong {
           color: $color7;
+          width: 26px;
           display: inline-block;
-          margin-right: 4px;
+          opacity: .4;
         }
         .icon-volume {
           background-color: transparent;
