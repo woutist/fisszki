@@ -1,5 +1,9 @@
 [
   {
+    "category": {
+      "_pl": "",
+      "_en": ""
+    },
     "name": {
       "_pl": "1000 popularnych słów",
       "_en": "1000 popular words"
@@ -4008,6 +4012,10 @@
     ]
   },
   {
+    "category": {
+      "_pl": "",
+      "_en": ""
+    },
     "name": {
       "_pl": "test 3 pozycje",
       "_en": "test 3 items"
@@ -4028,6 +4036,10 @@
     ]
   },
   {
+    "category": {
+      "_pl": "",
+      "_en": ""
+    },
     "name": {
       "_pl": "Dni tygodnia",
       "_en": "Days of the week"
@@ -4060,6 +4072,142 @@
       {
         "_pl": "Niedziela",
         "_en": "Sunday"
+      }
+    ]
+  },
+  {
+    "category": {
+      "_pl": "Kategoria 1",
+      "_en": "Category 1"
+    },
+    "name": {
+      "_pl": "test 4 pozycje",
+      "_en": "test 4 items"
+    },
+    "data": [
+      {
+        "_pl": "pl 1",
+        "_en": "en 1"
+      },
+      {
+        "_pl": "pl 2",
+        "_en": "en 2"
+      },
+      {
+        "_pl": "pl 3",
+        "_en": "en 3"
+      },
+      {
+        "_pl": "pl 4",
+        "_en": "en 4"
+      }
+    ]
+  },
+  {
+    "category": {
+      "_pl": "Kategoria 1",
+      "_en": "Category 1"
+    },
+    "name": {
+      "_pl": "test 5 pozycje",
+      "_en": "test 5 items"
+    },
+    "data": [
+      {
+        "_pl": "pl 1",
+        "_en": "en 1"
+      },
+      {
+        "_pl": "pl 2",
+        "_en": "en 2"
+      },
+      {
+        "_pl": "pl 3",
+        "_en": "en 3"
+      },
+      {
+        "_pl": "pl 4",
+        "_en": "en 4"
+      },
+      {
+        "_pl": "pl 5",
+        "_en": "en 5"
+      }
+    ]
+  },
+  {
+    "category": {
+      "_pl": "Kategoria 2",
+      "_en": "Category 2"
+    },
+    "name": {
+      "_pl": "test 6 pozycje",
+      "_en": "test 6 items"
+    },
+    "data": [
+      {
+        "_pl": "pl 1",
+        "_en": "en 1"
+      },
+      {
+        "_pl": "pl 2",
+        "_en": "en 2"
+      },
+      {
+        "_pl": "pl 3",
+        "_en": "en 3"
+      },
+      {
+        "_pl": "pl 4",
+        "_en": "en 4"
+      },
+      {
+        "_pl": "pl 5",
+        "_en": "en 5"
+      },
+      {
+        "_pl": "pl 6",
+        "_en": "en 6"
+      }
+    ]
+  },
+  {
+    "category": {
+      "_pl": "Kategoria 2",
+      "_en": "Category 2"
+    },
+    "name": {
+      "_pl": "test 7 pozycje",
+      "_en": "test 7 items"
+    },
+    "data": [
+      {
+        "_pl": "pl 1",
+        "_en": "en 1"
+      },
+      {
+        "_pl": "pl 2",
+        "_en": "en 2"
+      },
+      {
+        "_pl": "pl 3",
+        "_en": "en 3"
+      },
+      {
+        "_pl": "pl 4",
+        "_en": "en 4"
+      },
+      {
+        "_pl": "pl 5",
+        "_en": "en 5"
+      },
+      {
+        "_pl": "pl 6",
+        "_en": "en 6"
+      },
+      {
+        "_pl": "pl 7",
+        "_en": "en 7"
       }
     ]
   }
