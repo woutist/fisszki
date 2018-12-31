@@ -31,6 +31,12 @@
 .color-10 {
   color: rgba(208, 119, 35, 0.8); }
 
+:root {
+  font-size: 20px; }
+  @media (max-width: 991.98px) {
+    :root {
+      font-size: 16px; } }
+
 @font-face {
   font-family: 'fontello';
   src: url("./fonts/fontello.eot");
@@ -90,21 +96,36 @@
 .icon-right:before {
   content: '\f178'; }
 
+.icon-down-open:before {
+  content: '\e808'; }
+
+.icon-left-open-1:before {
+  content: '\e809'; }
+
+.icon-right-open-1:before {
+  content: '\e80a'; }
+
+.icon-up-open:before {
+  content: '\e80b'; }
+
 html {
-  display: table; }
-
-html, body {
-  height: 100%;
-  width: 100%;
-  background-color: #d2cece; }
-
-body {
+  display: table;
   background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
   background-image: url(./images/bg3.jpg);
+  background-color: #d2cece;
+  background-attachment: fixed; }
+
+html, body {
+  height: 100%;
+  width: 100%; }
+
+body {
   vertical-align: middle;
-  display: table-cell; }
+  display: table-cell;
+  transition: all 300ms ease-in-out;
+  background-color: transparent; }
   @media (max-width: 991.98px) {
     body {
       vertical-align: top; } }
@@ -116,26 +137,27 @@ h1, h2, h3, h4 {
   font-weight: 600; }
 
 h1 {
-  font-size: 24px; }
+  font-size: 1.5rem; }
 
 h2 {
-  font-size: 18px; }
+  font-size: 1.125rem; }
 
 h3 {
-  font-size: 16px; }
+  font-size: 1rem; }
 
 h4 {
-  font-size: 14px; }
+  font-size: 0.875rem; }
 
 p {
-  margin-bottom: 8px; }
+  margin-bottom: 8px;
+  font-size: 1rem; }
 
 button {
   border: none;
   cursor: pointer;
   padding: 8px 10px;
   margin-bottom: 8px;
-  font-size: 14px;
+  font-size: 0.875rem;
   background-color: rgba(255, 255, 255, 0.5); }
   button:hover {
     opacity: .8; }
@@ -159,38 +181,152 @@ a {
 
 .module-flash-cards {
   padding: 0 10px;
-  max-width: 660px;
+  max-width: 860px;
+  transition: all 300ms ease-in-out;
   width: 100%;
   margin: 0 auto; }
+  @media (max-width: 991.98px) {
+    .module-flash-cards {
+      max-width: 660px; } }
+  .module-flash-cards.enable-auto-voice .main-header .main-nav .main-nav-inset button.enable-auto-voice .icon-volume {
+    color: #2c8548; }
+  .module-flash-cards.rotate-disable .main-header .main-nav .main-nav-inset button.close-rotate .icon-ok {
+    color: #2c8548; }
+  .module-flash-cards.rotate-disable .flash-card .back {
+    opacity: 0; }
+  .module-flash-cards.rotate-disable .main-flash-cards.check-out-card .back {
+    opacity: 1; }
+  .module-flash-cards.rotate-disable .main-flash-cards .flash-card .flip-container,
+  .module-flash-cards.rotate-disable .main-flash-cards .flash-card .flipper,
+  .module-flash-cards.rotate-disable .main-flash-cards .flash-card .front,
+  .module-flash-cards.rotate-disable .main-flash-cards .flash-card .back {
+    transition: opacity 300ms ease-in-out; }
+  .module-flash-cards.nav-mobile-active .main-header .main-nav {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(0, 0, 0, 0); }
+    .module-flash-cards.nav-mobile-active .main-header .main-nav:after {
+      height: 90%;
+      transition: all 900ms ease-in-out; }
+    .module-flash-cards.nav-mobile-active .main-header .main-nav .main-nav-inset {
+      right: 0; }
+    .module-flash-cards.nav-mobile-active .main-header .main-nav .hamburger span:nth-child(2) {
+      opacity: 0; }
+    .module-flash-cards.nav-mobile-active .main-header .main-nav .hamburger span:nth-child(1) {
+      transform: rotate(45deg);
+      top: 20px; }
+    .module-flash-cards.nav-mobile-active .main-header .main-nav .hamburger span:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 20px; }
   .module-flash-cards .main-header {
     border-top: 1px solid rgba(0, 0, 0, 0.2);
-    margin-bottom: 24px;
-    position: relative; }
+    position: relative;
+    z-index: 8;
+    padding: 5px 10px 10px;
+    border-top-left-radius: 16px;
+    background: linear-gradient(to bottom, rgba(151, 135, 83, 0.7) 0%, rgba(151, 135, 83, 0) 60%);
+    text-align: center; }
+    .module-flash-cards .main-header .main-nav {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      height: 50%;
+      z-index: 9;
+      background: linear-gradient(to bottom, #2c8548 0%, rgba(0, 0, 0, 0) 100%); }
+      .module-flash-cards .main-header .main-nav:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        overflow: hidden;
+        height: 0;
+        width: 42px;
+        z-index: 9;
+        background: linear-gradient(to bottom, #2c8548 0%, rgba(0, 0, 0, 0) 100%); }
+      @media (max-width: 991.98px) {
+        .module-flash-cards .main-header .main-nav {
+          top: 0;
+          right: 0;
+          bottom: 0; } }
+      @media (max-width: 991.98px) {
+        .module-flash-cards .main-header .main-nav {
+          background: none;
+          position: absolute; } }
+      .module-flash-cards .main-header .main-nav .main-nav-inset {
+        width: 320px;
+        right: -320px;
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+        border-left: 1px solid #fff;
+        padding: 10px 62px 10px 10px;
+        transition: right 300ms ease-in-out;
+        max-width: 100%;
+        background-color: rgba(25, 25, 25, 0.98);
+        color: #fff;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        z-index: 9;
+        text-align: left; }
+        @media (max-width: 991.98px) {
+          .module-flash-cards .main-header .main-nav .main-nav-inset {
+            width: 262px;
+            right: -262px; } }
+        .module-flash-cards .main-header .main-nav .main-nav-inset button {
+          display: block;
+          width: 100%;
+          text-align: left;
+          background-color: rgba(255, 255, 255, 0.1);
+          color: #fff; }
+          .module-flash-cards .main-header .main-nav .main-nav-inset button.rest-all {
+            background-color: #852824;
+            color: #fff; }
+          .module-flash-cards .main-header .main-nav .main-nav-inset button.close-rotate .icon-ok {
+            color: rgba(255, 255, 255, 0.2); }
+          .module-flash-cards .main-header .main-nav .main-nav-inset button.enable-auto-voice .icon-volume {
+            color: rgba(255, 255, 255, 0.2); }
+      .module-flash-cards .main-header .main-nav .hamburger {
+        width: 42px;
+        height: 42px;
+        background-color: transparent;
+        position: relative;
+        z-index: 10; }
+        .module-flash-cards .main-header .main-nav .hamburger span {
+          width: 22px;
+          height: 4px;
+          display: block;
+          background-color: #fff;
+          position: absolute;
+          left: 10px;
+          transition: all 300ms ease-in-out; }
+          .module-flash-cards .main-header .main-nav .hamburger span:nth-child(1) {
+            top: 10px; }
+          .module-flash-cards .main-header .main-nav .hamburger span:nth-child(2) {
+            top: 18px; }
+          .module-flash-cards .main-header .main-nav .hamburger span:nth-child(3) {
+            top: 26px; }
+    .module-flash-cards .main-header h1 {
+      margin-bottom: 5px;
+      text-shadow: 0 0 1px #852824, 0 0 1px #000, 0 0 1px #000;
+      color: #fff;
+      text-align: left; }
     .module-flash-cards .main-header .direction-lang {
       border: 1px solid rgba(0, 0, 0, 0.2);
       text-align: center;
-      position: absolute;
       padding: 4px 10px;
-      bottom: -23px;
-      left: 50%;
-      transform: translate(-50%, 0);
+      margin-bottom: 0;
       background-color: rgba(208, 119, 35, 0.8);
       color: #fff; }
-    .module-flash-cards .main-header h1 {
-      margin: 0;
-      padding: 5px 10px 22px;
-      color: #fff;
-      text-shadow: 0 0 1px #852824, 0 0 1px #000, 0 0 1px #000;
-      background: linear-gradient(to bottom, rgba(151, 135, 83, 0.7) 0%, rgba(151, 135, 83, 0) 100%); }
-      .module-flash-cards .main-header h1 small {
-        font-size: 14px;
-        color: #2c8548;
-        text-shadow: none; }
     .module-flash-cards .main-header .list-language {
       margin: 0;
       position: absolute;
-      top: 2px;
+      top: 3px;
       right: 2px; }
+      @media (max-width: 991.98px) {
+        .module-flash-cards .main-header .list-language {
+          right: 40px; } }
       .module-flash-cards .main-header .list-language li {
         margin-right: 8px; }
         .module-flash-cards .main-header .list-language li a {
@@ -208,7 +344,7 @@ a {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     text-align: center; }
     .module-flash-cards footer p {
-      font-size: 12px;
+      font-size: 0.75rem;
       color: rgba(0, 0, 0, 0.6); }
   .module-flash-cards .percent-pro {
     display: block;
@@ -223,13 +359,36 @@ a {
     transition: all 300ms ease-in-out;
     overflow-y: hidden; }
     .module-flash-cards .main-list-exercise .category-box > h2 {
+      position: relative;
       padding: 8px 10px;
       color: #fff;
+      cursor: pointer;
       text-shadow: 0 0 1px #852824, 0 0 1px #000, 0 0 1px #000;
       background: linear-gradient(to bottom, rgba(151, 135, 83, 0.3) 0%, rgba(151, 135, 83, 0.35) 50%, rgba(151, 135, 83, 0.3) 100%); }
-    .module-flash-cards .main-list-exercise .rest-all {
-      background-color: #338798;
-      color: #fff; }
+      .module-flash-cards .main-list-exercise .category-box > h2 span {
+        position: absolute;
+        top: 9px;
+        right: 10px;
+        transition: all 300ms ease-in-out;
+        transform: rotate(180deg); }
+      .module-flash-cards .main-list-exercise .category-box > h2 + ul {
+        opacity: 1;
+        transition: all 300ms ease-in-out;
+        max-height: 500px; }
+      .module-flash-cards .main-list-exercise .category-box > h2:not(.category-active) span {
+        transform: rotate(0); }
+      .module-flash-cards .main-list-exercise .category-box > h2:not(.category-active) + ul {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden; }
+      .module-flash-cards .main-list-exercise .category-box > h2#category-1 {
+        background-color: #983932; }
+      .module-flash-cards .main-list-exercise .category-box > h2#category-2 {
+        background-color: #404398; }
+      .module-flash-cards .main-list-exercise .category-box > h2#category-3 {
+        background-color: #489865; }
+      .module-flash-cards .main-list-exercise .category-box > h2#category-4 {
+        background-color: #979847; }
     .module-flash-cards .main-list-exercise .main-list-exercise-inset {
       max-height: none;
       overflow-y: auto;
@@ -245,7 +404,7 @@ a {
           position: relative;
           font-weight: 600; }
           .module-flash-cards .main-list-exercise .main-list-exercise-inset li a i {
-            font-size: 12px;
+            font-size: 0.75rem;
             color: #191919;
             font-weight: 400;
             font-style: normal; }
@@ -253,7 +412,7 @@ a {
             opacity: .8;
             text-decoration: none; }
         .module-flash-cards .main-list-exercise .main-list-exercise-inset li button {
-          margin: 0 0 0 8px;
+          margin: 0 8px 0 0;
           background-color: #338798;
           color: #fff; }
   .module-flash-cards .nav-buttons button {
@@ -263,7 +422,7 @@ a {
     opacity: .9;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
     margin-bottom: 0;
-    font-size: 18px; }
+    font-size: 1.125rem; }
     .module-flash-cards .nav-buttons button:hover {
       opacity: .8; }
     .module-flash-cards .nav-buttons button.button-check-out {
@@ -310,26 +469,29 @@ a {
       top: 0;
       right: 0;
       color: #fff;
-      font-size: 20px;
+      font-size: 1.25rem;
       font-weight: 600;
       z-index: 2;
       padding: 8px; }
       .module-flash-cards .main-flash-cards .button-close-exercise span {
         display: block;
-        width: 220px;
-        left: -225px;
+        width: 280px;
+        left: -285px;
         top: 4px;
         text-align: right;
         position: absolute;
         color: #191919;
-        font-size: 10px;
+        font-size: 0.625rem;
         opacity: .6; }
     .module-flash-cards .main-flash-cards .congratulation-info {
       width: 100%;
-      height: 250px;
+      height: 340px;
       margin: 10px 0 0;
       animation-name: congrat-anim;
       animation-duration: 1.5s; }
+      @media (max-width: 991.98px) {
+        .module-flash-cards .main-flash-cards .congratulation-info {
+          height: 250px; } }
       .module-flash-cards .main-flash-cards .congratulation-info .icon-award {
         color: #978753; }
       .module-flash-cards .main-flash-cards .congratulation-info h2 {
@@ -344,17 +506,17 @@ a {
     transform: scale(1); } }
 @keyframes congrat-anim-h {
   0% {
-    font-size: 18px; }
+    font-size: 1.125rem; }
   40% {
-    font-size: 20px; }
+    font-size: 1.25rem; }
   55% {
-    font-size: 30px; }
+    font-size: 1.563rem; }
   70% {
-    font-size: 25px; }
+    font-size: 1.375rem; }
   85% {
-    font-size: 40px; }
+    font-size: 1.875rem; }
   100% {
-    font-size: 18px; } }
+    font-size: 1.125rem; } }
     .module-flash-cards .main-flash-cards .button-i-know,
     .module-flash-cards .main-flash-cards .button-i-dont-know {
       display: none; }
@@ -364,7 +526,7 @@ a {
       .module-flash-cards .main-flash-cards .flash-card .flash-card-inset > h2, .module-flash-cards .main-flash-cards .flash-card .flash-card-inset p {
         padding-right: 50px; }
       .module-flash-cards .main-flash-cards .flash-card .flash-card-inset > p {
-        font-size: 12px; }
+        font-size: 0.75rem; }
       .module-flash-cards .main-flash-cards .flash-card .flash-card-inset .percent-pro {
         top: -19px;
         left: -10px;
@@ -387,7 +549,11 @@ a {
       margin: 10px 0; }
     .module-flash-cards .main-flash-cards .flash-card .flip-container, .module-flash-cards .main-flash-cards .flash-card .front, .module-flash-cards .main-flash-cards .flash-card .back {
       width: 100%;
-      height: 250px; }
+      height: 340px;
+      transition: all 600ms ease-in-out; }
+      @media (max-width: 991.98px) {
+        .module-flash-cards .main-flash-cards .flash-card .flip-container, .module-flash-cards .main-flash-cards .flash-card .front, .module-flash-cards .main-flash-cards .flash-card .back {
+          height: 250px; } }
     .module-flash-cards .main-flash-cards .flash-card .flipper {
       transition: 0.6s;
       transform-style: preserve-3d;
@@ -395,7 +561,6 @@ a {
     .module-flash-cards .main-flash-cards .flash-card .front, .module-flash-cards .main-flash-cards .flash-card .back {
       backface-visibility: hidden;
       padding: 10px;
-      transition: all 600ms ease-in-out;
       border: 5px solid #fff;
       box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
@@ -408,7 +573,7 @@ a {
       .module-flash-cards .main-flash-cards .flash-card .front p, .module-flash-cards .main-flash-cards .flash-card .back p {
         margin-bottom: 10px;
         width: 100%;
-        font-size: 18px;
+        font-size: 1.125rem;
         cursor: pointer; }
         .module-flash-cards .main-flash-cards .flash-card .front p:last-child, .module-flash-cards .main-flash-cards .flash-card .back p:last-child {
           margin-bottom: 0; }
@@ -420,19 +585,22 @@ a {
           opacity: 1;
           margin-right: 5px;
           text-shadow: 0 0 0 #000, 0 0 0 #000; }
+        .module-flash-cards .main-flash-cards .flash-card .front p span, .module-flash-cards .main-flash-cards .flash-card .back p span {
+          display: inline-block;
+          vertical-align: middle; }
+        .module-flash-cards .main-flash-cards .flash-card .front p strong, .module-flash-cards .main-flash-cards .flash-card .back p strong {
+          color: #fff;
+          vertical-align: middle;
+          width: 26px;
+          font-size: 85%;
+          display: inline-block;
+          opacity: .8;
+          font-weight: 400; }
       .module-flash-cards .main-flash-cards .flash-card .front hr, .module-flash-cards .main-flash-cards .flash-card .back hr {
         height: 1px;
         background-color: #fff;
         width: 100%;
         margin: 10px 0; }
-      .module-flash-cards .main-flash-cards .flash-card .front strong, .module-flash-cards .main-flash-cards .flash-card .back strong {
-        color: #fff;
-        vertical-align: top;
-        width: 26px;
-        font-size: 16px;
-        display: inline-block;
-        opacity: .8;
-        font-weight: 400; }
     .module-flash-cards .main-flash-cards .flash-card .front {
       z-index: 2;
       background-color: rgba(223, 212, 200, 0.1);
@@ -454,7 +622,7 @@ a {
         margin: 0; }
       .module-flash-cards .main-flash-cards .flash-card .back .google-translator {
         position: absolute;
-        font-size: 12px;
+        font-size: 0.75rem;
         top: 5px;
         right: 10px;
         color: #fff;

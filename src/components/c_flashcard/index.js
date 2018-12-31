@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './component.css';
 import Cookies from 'universal-cookie';
+import Swipe from 'react-easy-swipe';
 import dataJson from './data_json/data.json';
 
 /**
@@ -32,9 +33,7 @@ let arrayUnique = function (arr) {
     });
 };
 
-/**
- * COOKIES LANGUAGE
- */
+// COOKIES LANGUAGE
 const setLanguage = (x) => {
     switch (x) {
         case 'en':
@@ -122,7 +121,7 @@ class Congratulation extends Component {
  */
 class Exercises extends Component {
     render() {
-        const { o, that } = this.props;
+        const { o, that, voice } = this.props;
         return (
             // eslint-disable-next-line
             o.data.map(function (obj, i) {
@@ -131,6 +130,15 @@ class Exercises extends Component {
                         stylePercent = {
                             background: 'linear-gradient(to right, #2c8548 0%,#2c8548 ' + percent + '%,#974c49 ' + percent + '%,#974c49 100%)'
                         };
+
+                    if(voice) {
+                        if(flashCardDirection === 'left') {
+                            that.translateVoice(obj._pl, "pl");
+                        } else {
+                            that.translateVoice(obj._en, "en");
+                        }
+                    }
+
                     return (
                         <div className={'flash-card-inset' + (isIE?' ie-fix':'')} key={i}>
                             <span className="percent-pro" style={stylePercent}></span>
@@ -140,24 +148,24 @@ class Exercises extends Component {
                                 {
                                     flashCardDirection === 'left' ?
                                         <div className="flipper">
-                                            <div className={'front ' + centerClass}><p onClick={() => that.translateVoice(obj._pl, "pl")}><strong>pl:</strong><span className="icon-volume"></span>{obj._pl}</p></div>
+                                            <div className={'front ' + centerClass}><p onClick={() => that.translateVoice(obj._pl, "pl")}><strong>pl:</strong><span className="icon-volume"></span><span>{obj._pl}</span></p></div>
                                             <div className={'back ' + centerClass}>
-                                                <p onClick={() => that.translateVoice(obj._pl, "pl") }><strong>pl:</strong><span className="icon-volume" onClick={() => that.translateVoice(obj._pl, "pl") }></span>{obj._pl}</p>
+                                                <p onClick={() => that.translateVoice(obj._pl, "pl") }><strong>pl:</strong><span className="icon-volume" onClick={() => that.translateVoice(obj._pl, "pl") }></span><span>{obj._pl}</span></p>
                                                 <hr />
-                                                <p>
-                                                    <strong>en:</strong><button className="icon-volume" onClick={() => that.translateVoice(obj._en, "en")}></button>{obj._en}
+                                                <p onClick={() => that.translateVoice(obj._en, "en")}>
+                                                    <strong>en:</strong><span className="icon-volume"></span><span>{obj._en}</span>
                                                 </p>
-                                                <a className="google-translator" target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl}>Check it in the Google translator<span className="icon-language"></span></a>
+                                                <a className="google-translator" target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl}>Check it in the Google Translator<span className="icon-language"></span></a>
                                             </div>
                                         </div>
                                         :
                                         <div className="flipper">
-                                            <div className={'front ' + centerClass}><p onClick={() => that.translateVoice(obj._en, "en")}><strong>en:</strong><span className="icon-volume"></span>{obj._en}</p></div>
+                                            <div className={'front ' + centerClass}><p onClick={() => that.translateVoice(obj._en, "en")}><strong>en:</strong><span className="icon-volume"></span><span>{obj._en}</span></p></div>
                                             <div className={'back ' + centerClass}>
-                                                <p onClick={() => that.translateVoice(obj._en, "en")}><strong>en:</strong><span className="icon-volume"></span>{obj._en}</p>
+                                                <p onClick={() => that.translateVoice(obj._en, "en")}><strong>en:</strong><span className="icon-volume"></span><span>{obj._en}</span></p>
                                                 <hr />
                                                 <p onClick={() => that.translateVoice(obj._pl, "pl") }>
-                                                    <strong>pl:</strong><span className="icon-volume"></span>{obj._pl}
+                                                    <strong>pl:</strong><span className="icon-volume"></span><span>{obj._pl}</span>
                                                 </p>
                                                 <a className="google-translator" target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en}>Check it in the Google translator<span className="icon-language"></span></a>
                                             </div>
@@ -188,6 +196,10 @@ class FlashCards extends Component {
         classCheckOutMore: '',
         classHideOrShowMainPartsPage: 'show-list-exercise-hide-flash-cards',
         classHideNavButtons: '',
+        categoryActive: [],
+        navMobileActive: '',
+        rotateDisable: (typeof cookies.get('disable_rotate_cookie') === "undefined")?'':'rotate-disable',
+        enableAutoVoice: '',
         langNameExercise: function (j) {
             switch (lang) {
                 case 'en': return j._en;
@@ -215,7 +227,7 @@ class FlashCards extends Component {
             classCheckOutMore: '',
             classHideNavButtons: (o.excludeID.length === o.data.length)?'d-none':'',
             classHideOrShowMainPartsPage: 'hide-flash-cards-show-list-exercise',
-            callObj: (o.excludeID.length === o.data.length)?<Congratulation that={that} ide={idExercise} />:<Exercises o={o} that={that} />
+            callObj: (o.excludeID.length === o.data.length)?<Congratulation that={that} ide={idExercise} />:<Exercises o={o} that={that} voice={this.state.enableAutoVoice} />
         });
         if(event) event.preventDefault();
     };
@@ -312,7 +324,7 @@ class FlashCards extends Component {
                 setCookies('obj_exercise_cookie_'+idExercise, JSON.stringify(o[idExercise].excludeID));
             }
             this.setState({classCheckOut: ''});
-            setTimeout(this.timeoutAnim,400,o[idExercise],idExercise);
+            setTimeout(this.timeoutAnim,(this.state.rotateDisable)?0:400,o[idExercise],idExercise);
             if(o[idExercise].excludeID.length === o[idExercise].data.length){
                 this.setState({
                     classHideNavButtons: 'd-none'
@@ -328,6 +340,23 @@ class FlashCards extends Component {
             this.setState({classCheckOut: ''});
             setTimeout(this.timeoutAnim,400,o[idExercise],idExercise);
         }
+    };
+    checkOut = () => {
+        //console.log(idExercise + ' / ' + idItem + ' / ' + flashCardDirection); // left = polish, right = english
+        //console.log(dataJson[idExercise].data[idItem]._en);
+        if(this.state.enableAutoVoice) {
+            setTimeout(function (that) {
+                if(flashCardDirection === 'left') {
+                    that.translateVoice(dataJson[idExercise].data[idItem]._en, "en");
+                } else {
+                    that.translateVoice(dataJson[idExercise].data[idItem]._pl, "pl");
+                }
+            }, 300,this);
+        }
+        this.setState({
+            classCheckOut: 'check-out-card',
+            classCheckOutMore: 'check-out-card-more'
+        })
     };
     removeCookieExerciseId = (event,ide,o) => {
         removeCookies('obj_exercise_cookie_'+ide);
@@ -349,6 +378,59 @@ class FlashCards extends Component {
         });
         this.setState({});
     };
+    uniqueCategory = (jo,that,ifFirstLoad) => {
+        uniqueCategory = [];
+        // eslint-disable-next-line
+        jo.map(function (obj, i) {
+            uniqueCategory.push(that.state.langNameExercise(obj.category))
+        });
+        uniqueCategory = arrayUnique(uniqueCategory);
+        let tmp = that.state.categoryActive;
+        that.state.categoryActive = [];
+        for(let i=0,iLength=uniqueCategory.length; i<iLength; i++){
+            that.state.categoryActive.push(ifFirstLoad?false:tmp[i]);
+
+        }
+    };
+    showCategory = (index) => {
+        let tmp = this.state.categoryActive;
+        // if(tmp[index]) {
+        //     tmp[index] = false;
+        // } else {
+        //     tmp[index] = true;
+        // }
+        tmp[index] = !tmp[index];
+        this.setState({categoryActive: tmp });
+        //console.log(tmp[index]);
+    };
+    navMobileActive = (ifSwipe) => {
+        if(ifSwipe){
+            this.setState({
+                navMobileActive: ''
+            });
+        } else {
+            this.setState({
+                navMobileActive: (this.state.navMobileActive)?'':'nav-mobile-active'
+            });
+        }
+    };
+    disableRotate = () => {
+        if(this.state.rotateDisable) {
+            removeCookies('disable_rotate_cookie');
+        } else {
+            setCookies('disable_rotate_cookie',true);
+        }
+        this.setState({
+            rotateDisable: (this.state.rotateDisable)?'':'rotate-disable'
+        })
+    };
+    enableAutoVoice = () => {
+        this.setState({
+            enableAutoVoice: (this.state.enableAutoVoice)?'':'enable-auto-voice'
+        })
+    };
+    globalVar = {
+    };
     render() {
         const { title } = this.props,
             json = dataJson,
@@ -367,40 +449,45 @@ class FlashCards extends Component {
                     obj.dontKnowClick = parseInt(cookies.get('obj_exercise_cookie_dk_click_' + i));
                 }
             });
+            this.uniqueCategory(json,this,true);
             firstLoadExerciseCookies = false;
 
         }
-
-        uniqueCategory = [];
-        // eslint-disable-next-line
-        json.map(function (obj, i) {
-            uniqueCategory.push(that.state.langNameExercise(obj.category))
-        });
-        uniqueCategory = arrayUnique(uniqueCategory);
-
+        this.uniqueCategory(json,this,false);
         let directionState = this.state.direction.split("|");
 
         return (
-            <div className={'module-flash-cards ' + this.state.classHideOrShowMainPartsPage}>
-                <header className="main-header">
-                    <ul className="list-language d-flex flex-row list-unstyled">
-                        <li className="flag-pl"><a href={'#pl'} className={this.state.activePL} onClick={(e) => this.setLang(e,json,'pl')}>PL</a></li>
-                        <li className="flag-en"><a href={'#en'} className={this.state.activeEN} onClick={(e) => this.setLang(e,json,'en')}>EN</a></li>
-                    </ul>
-                    <h1>{title}</h1>
-                    <button className="direction-lang" onClick={(e) => this.changeDirection(e,json)}>{directionState[0]} <span className="icon-exchange"></span> {directionState[1]}</button>
-                </header>
+            <Swipe onSwipeRight={() => this.navMobileActive(true)}>
+                <div className={'module-flash-cards ' + this.state.classHideOrShowMainPartsPage + ' ' + this.state.navMobileActive + ' ' + this.state.rotateDisable + ' ' + this.state.enableAutoVoice}>
 
-                <div className={'main-list-exercise'}>
-                    {uniqueCategory.map(function (obj_category, j) {
+                    <header className="main-header">
+                        <nav className="main-nav">
+                            <button onClick={() => this.navMobileActive()} className="hamburger"><span></span><span></span><span></span></button>
+                            <div className="main-nav-inset">
+                                <ul className="list-unstyled">
+                                    <li><button className="enable-auto-voice border-content-bottom" onClick={this.enableAutoVoice}><span className="icon-volume"></span> Enable auto voice</button></li>
+                                    <li><button className="close-rotate border-content-bottom" onClick={this.disableRotate}><span className="icon-ok"></span> Disable rotate</button></li>
+                                    <li><button className="rest-all border-content-bottom" title={'Clear cookies exercise'} onClick={() => {this.removeCookieExerciseAll(); this.clearExercise(); }}><span className="icon-cancel-circled"></span> Restart progress</button></li>
 
+                                </ul>
+                            </div>
+                        </nav>
+                        <ul className="list-language d-flex flex-row list-unstyled">
+                            <li className="flag-pl"><a href={'#pl'} className={this.state.activePL} onClick={(e) => this.setLang(e,json,'pl')}>PL</a></li>
+                            <li className="flag-en"><a href={'#en'} className={this.state.activeEN} onClick={(e) => this.setLang(e,json,'en')}>EN</a></li>
+                        </ul>
+                        <h1>{title}</h1>
+                        <button className="direction-lang" onClick={(e) => this.changeDirection(e,json)}>{directionState[0]} <span className="icon-exchange"></span> {directionState[1]}</button>
+                    </header>
+
+                    <div className={'main-list-exercise'}>
+                        {uniqueCategory.map(function (obj_category, j) {
                             return (
                                 <div className="category-box" key={j}>
-                                    {obj_category && <h2>{obj_category}</h2>}
+                                    {obj_category && <h2 onClick={() => that.showCategory(j)} id={'category-' + j} className={that.state.categoryActive[j]?'category-active':null}>{obj_category} <span className="icon-down-open"></span></h2>}
                                     <ul className={'main-list-exercise-inset list-unstyled'}>
                                         {/* eslint-disable-next-line */}
                                         {json.map(function (obj, i) {
-
                                             let percent = Math.ceil(obj.excludeID.length*100/obj.data.length),
                                                 stylePercent = {
                                                     background: 'linear-gradient(to right, #2c8548 0%,#2c8548 ' + percent + '%,#974c49 ' + percent + '%,#974c49 100%)'
@@ -408,11 +495,14 @@ class FlashCards extends Component {
                                             if(that.state.langNameExercise(obj.category) === obj_category) {
                                                 return (
                                                     <li key={i} className="d-flex justify-content-between">
+
+                                                        <button className={'border-content-bottom' +((obj.excludeID.length !== 0 || obj.dontKnowClick !== 0)?'':' d-none')} onClick={(e) => {that.removeCookieExerciseId(e,i,obj);}}>Reset</button>
+
                                                         <a href={'#flashcard' + i} onClick={(e) => that.setExercise(e,obj,i,that)}>
                                                             <span className="percent-pro" style={stylePercent}></span>
                                                             {that.state.langNameExercise(obj.name)} <i><span className="icon-up color-5">{obj.excludeID.length}/{obj.data.length} = {percent}%</span> - <span className="icon-down color-6">{obj.dontKnowClick}</span></i>
                                                         </a>
-                                                        <button className={'border-content-bottom' +((obj.excludeID.length !== 0 || obj.dontKnowClick !== 0)?'':' d-none')} onClick={(e) => {that.removeCookieExerciseId(e,i,obj);}}>Reset</button>
+
                                                     </li>
                                                 );
                                             }
@@ -420,31 +510,28 @@ class FlashCards extends Component {
                                         },that)}
                                     </ul>
                                 </div>
-                            )
-
-
-
-                    },that)}
-                    <button className="rest-all border-content-bottom" title={'Clear cookies exercise'} onClick={() => this.removeCookieExerciseAll()}>Reset All</button>
-                </div>
-                <div className={'main-flash-cards ' + this.state.classCheckOut + ' ' + this.state.classCheckOutMore}>
-                    <button className="button-close-exercise icon-cancel" onClick={this.clearExercise}><span>{translate.buttonCloseExercise} <i className="icon-right"></i></span></button>
-
-                    <div className={'flash-card'}>
-                        {this.state.callObj}
+                            );
+                        },that)}
                     </div>
+                    <div className={'main-flash-cards ' + this.state.classCheckOut + ' ' + this.state.classCheckOutMore}>
+                        <button className="button-close-exercise icon-cancel" onClick={this.clearExercise}><span>{translate.buttonCloseExercise} <i className="icon-right"></i></span></button>
 
-                    <nav className={'nav-buttons ' + this.state.classHideNavButtons}>
-                        <button className="button-check-out" onClick={() => this.setState({classCheckOut: 'check-out-card', classCheckOutMore: 'check-out-card-more'})}>{translate.buttonCheckOut}</button>
-                        <button title={translate.buttonIKnow} className="button-i-know" onClick={() => this.iKnow(json,idItem)}><span className="icon-ok"></span></button>
-                        <button title={translate.buttonIDontKnow} className="button-i-dont-know" onClick={() => this.iDontKnow(json)}><span className="icon-cancel"></span></button>
-                    </nav>
+                        <div className={'flash-card'}>
+                            {this.state.callObj}
+                        </div>
+
+                        <nav className={'nav-buttons ' + this.state.classHideNavButtons}>
+                            <button className="button-check-out" onClick={() => this.checkOut()}>{translate.buttonCheckOut}</button>
+                            <button title={translate.buttonIKnow} className="button-i-know" onClick={() => this.iKnow(json,idItem)}><span className="icon-ok"></span></button>
+                            <button title={translate.buttonIDontKnow} className="button-i-dont-know" onClick={() => this.iDontKnow(json)}><span className="icon-cancel"></span></button>
+                        </nav>
+                    </div>
+                    <footer className="main-footer">
+                        <p>Copyright &copy; 1518, {title} pl-en/en-pl v1.0.0</p>
+                    </footer>
                 </div>
-                <footer className="main-footer">
-                    <p>Copyright &copy; 1518, {title} pl-en/en-pl v1.0.0</p>
-                </footer>
-            </div>
-        )
+            </Swipe>
+        );
     }
 }
 
