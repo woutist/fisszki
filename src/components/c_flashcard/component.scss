@@ -82,14 +82,10 @@ $color10: rgba(208,119,35,.8);
 .icon-right-open-1:before { content: '\e80a'; }
 .icon-up-open:before { content: '\e80b'; }
 
+.icon-trash-empty:before { content: '\e80c'; }
+
 html {
   display: table;
-  background-size: cover;
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-image: url(./images/bg3.jpg);
-  background-color: #d2cece;
-  background-attachment: fixed;
 }
 html, body {
  height: 100%;
@@ -97,10 +93,16 @@ html, body {
 }
 body {
 
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-image: url(./images/bg3.jpg);
+  background-color: #d2cece;
+  background-attachment: fixed;
+
   vertical-align: middle;
   display: table-cell;
   transition: all 300ms ease-in-out;
-  background-color: transparent;
 
   @media (max-width: $md) {
     vertical-align: top;
@@ -218,7 +220,7 @@ a {
       .flipper,
       .front,
       .back {
-        transition: opacity 300ms ease-in-out;
+        transition: opacity 0ms ease-in-out;
       }
     }
   }
@@ -466,16 +468,16 @@ a {
             overflow: hidden;
           }
         }
-        &#category-1 {
-          background-color: #983932;
-        }
-        &#category-2 {
+        &.category-1 {
           background-color: #404398;
         }
-        &#category-3 {
+        &.category-2 {
+          background-color: #984432;
+        }
+        &.category-3 {
           background-color: #489865;
         }
-        &#category-4 {
+        &.category-4 {
           background-color: #979847;
         }
       }
@@ -495,7 +497,8 @@ a {
           position: relative;
           font-weight: 600;
           i {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
+            display: block;
             color: $color3;
             font-weight: 400;
             font-style: normal;
@@ -507,7 +510,7 @@ a {
         }
         button {
           margin: 0 8px 0 0;
-          background-color: $color4;
+          background-color: #9e4a2c;
           color: $color1;
         }
       }
@@ -595,23 +598,35 @@ a {
       padding: 8px;
       span {
         display: block;
-        width: 280px;
-        left: -285px;
+        width: 300px;
+        left: -305px;
+
+        @media (max-width: $md) {
+          width: 245px;
+          left: -250px;
+        }
+
         top: 4px;
         text-align: right;
         position: absolute;
         color: $color3;
-        font-size: 0.625rem;
+        font-size: .7rem;
         opacity: .6;
       }
     }
     .congratulation-info {
       width: 100%;
       height: $desktop-height;
+
+      padding: 10px;
+      border: 5px solid #fff;
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+
       @media (max-width: $md) {
         height: $mobile-height;
       }
-      margin: 10px 0 0;
+      margin: 36px 0 0;
       //transition: all 300ms ease-in-out;
       //transform: scale(0);
       animation-name: congrat-anim;
@@ -652,7 +667,7 @@ a {
           padding-right: 50px;
         }
         > p {
-          font-size: 0.75rem;
+          font-size: .7rem;
         }
         .percent-pro {
           top: -19px;
@@ -778,8 +793,9 @@ a {
       }
       .front {
         z-index: 2;
-        background-color: rgba(223, 212, 200,.1);
+        background-color: rgba(123, 152, 50, 0.5);
         transform: rotateY(0deg);
+        color: $color1;
         p {
           opacity: 1;
           animation-name: text-flash-cards-anim;
@@ -792,14 +808,14 @@ a {
       }
       .back {
         transform: rotateY(180deg);
-        background-color: rgba(51, 135, 152, 0.8);
+        background-color: rgba(51, 135, 152, 0.5);
         color: $color1;
         p {
           margin: 0;
         }
         .google-translator {
           position: absolute;
-          font-size: 0.75rem;
+          font-size: 0.7rem;
           top: 5px;
           right: 10px;
           color: $color1;

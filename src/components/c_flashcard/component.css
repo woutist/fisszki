@@ -108,24 +108,26 @@
 .icon-up-open:before {
   content: '\e80b'; }
 
+.icon-trash-empty:before {
+  content: '\e80c'; }
+
 html {
-  display: table;
-  background-size: cover;
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-image: url(./images/bg3.jpg);
-  background-color: #d2cece;
-  background-attachment: fixed; }
+  display: table; }
 
 html, body {
   height: 100%;
   width: 100%; }
 
 body {
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-image: url(./images/bg3.jpg);
+  background-color: #d2cece;
+  background-attachment: fixed;
   vertical-align: middle;
   display: table-cell;
-  transition: all 300ms ease-in-out;
-  background-color: transparent; }
+  transition: all 300ms ease-in-out; }
   @media (max-width: 991.98px) {
     body {
       vertical-align: top; } }
@@ -200,7 +202,7 @@ a {
   .module-flash-cards.rotate-disable .main-flash-cards .flash-card .flipper,
   .module-flash-cards.rotate-disable .main-flash-cards .flash-card .front,
   .module-flash-cards.rotate-disable .main-flash-cards .flash-card .back {
-    transition: opacity 300ms ease-in-out; }
+    transition: opacity 0ms ease-in-out; }
   .module-flash-cards.nav-mobile-active .main-header .main-nav {
     position: fixed;
     top: 10px;
@@ -381,13 +383,13 @@ a {
         max-height: 0;
         opacity: 0;
         overflow: hidden; }
-      .module-flash-cards .main-list-exercise .category-box > h2#category-1 {
-        background-color: #983932; }
-      .module-flash-cards .main-list-exercise .category-box > h2#category-2 {
+      .module-flash-cards .main-list-exercise .category-box > h2.category-1 {
         background-color: #404398; }
-      .module-flash-cards .main-list-exercise .category-box > h2#category-3 {
+      .module-flash-cards .main-list-exercise .category-box > h2.category-2 {
+        background-color: #984432; }
+      .module-flash-cards .main-list-exercise .category-box > h2.category-3 {
         background-color: #489865; }
-      .module-flash-cards .main-list-exercise .category-box > h2#category-4 {
+      .module-flash-cards .main-list-exercise .category-box > h2.category-4 {
         background-color: #979847; }
     .module-flash-cards .main-list-exercise .main-list-exercise-inset {
       max-height: none;
@@ -404,7 +406,8 @@ a {
           position: relative;
           font-weight: 600; }
           .module-flash-cards .main-list-exercise .main-list-exercise-inset li a i {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
+            display: block;
             color: #191919;
             font-weight: 400;
             font-style: normal; }
@@ -413,7 +416,7 @@ a {
             text-decoration: none; }
         .module-flash-cards .main-list-exercise .main-list-exercise-inset li button {
           margin: 0 8px 0 0;
-          background-color: #338798;
+          background-color: #9e4a2c;
           color: #fff; }
   .module-flash-cards .nav-buttons button {
     padding: 10px;
@@ -475,18 +478,26 @@ a {
       padding: 8px; }
       .module-flash-cards .main-flash-cards .button-close-exercise span {
         display: block;
-        width: 280px;
-        left: -285px;
+        width: 300px;
+        left: -305px;
         top: 4px;
         text-align: right;
         position: absolute;
         color: #191919;
-        font-size: 0.625rem;
+        font-size: .7rem;
         opacity: .6; }
+        @media (max-width: 991.98px) {
+          .module-flash-cards .main-flash-cards .button-close-exercise span {
+            width: 245px;
+            left: -250px; } }
     .module-flash-cards .main-flash-cards .congratulation-info {
       width: 100%;
       height: 340px;
-      margin: 10px 0 0;
+      padding: 10px;
+      border: 5px solid #fff;
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin: 36px 0 0;
       animation-name: congrat-anim;
       animation-duration: 1.5s; }
       @media (max-width: 991.98px) {
@@ -526,7 +537,7 @@ a {
       .module-flash-cards .main-flash-cards .flash-card .flash-card-inset > h2, .module-flash-cards .main-flash-cards .flash-card .flash-card-inset p {
         padding-right: 50px; }
       .module-flash-cards .main-flash-cards .flash-card .flash-card-inset > p {
-        font-size: 0.75rem; }
+        font-size: .7rem; }
       .module-flash-cards .main-flash-cards .flash-card .flash-card-inset .percent-pro {
         top: -19px;
         left: -10px;
@@ -603,8 +614,9 @@ a {
         margin: 10px 0; }
     .module-flash-cards .main-flash-cards .flash-card .front {
       z-index: 2;
-      background-color: rgba(223, 212, 200, 0.1);
-      transform: rotateY(0deg); }
+      background-color: rgba(123, 152, 50, 0.5);
+      transform: rotateY(0deg);
+      color: #fff; }
       .module-flash-cards .main-flash-cards .flash-card .front p {
         opacity: 1;
         animation-name: text-flash-cards-anim;
@@ -616,13 +628,13 @@ a {
     opacity: 1; } }
     .module-flash-cards .main-flash-cards .flash-card .back {
       transform: rotateY(180deg);
-      background-color: rgba(51, 135, 152, 0.8);
+      background-color: rgba(51, 135, 152, 0.5);
       color: #fff; }
       .module-flash-cards .main-flash-cards .flash-card .back p {
         margin: 0; }
       .module-flash-cards .main-flash-cards .flash-card .back .google-translator {
         position: absolute;
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         top: 5px;
         right: 10px;
         color: #fff;

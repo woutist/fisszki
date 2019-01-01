@@ -467,7 +467,7 @@ class FlashCards extends Component {
                                 <ul className="list-unstyled">
                                     <li><button className="enable-auto-voice border-content-bottom" onClick={this.enableAutoVoice}><span className="icon-volume"></span> Enable auto voice</button></li>
                                     <li><button className="close-rotate border-content-bottom" onClick={this.disableRotate}><span className="icon-ok"></span> Disable rotate</button></li>
-                                    <li><button className="rest-all border-content-bottom" title={'Clear cookies exercise'} onClick={() => {this.removeCookieExerciseAll(); this.clearExercise(); }}><span className="icon-cancel-circled"></span> Restart progress</button></li>
+                                    <li><button className="rest-all border-content-bottom" title={'Clear cookies exercise'} onClick={() => {this.removeCookieExerciseAll(); this.clearExercise(); }}><span className="icon-trash-empty"></span> Restart progress</button></li>
 
                                 </ul>
                             </div>
@@ -484,7 +484,7 @@ class FlashCards extends Component {
                         {uniqueCategory.map(function (obj_category, j) {
                             return (
                                 <div className="category-box" key={j}>
-                                    {obj_category && <h2 onClick={() => that.showCategory(j)} id={'category-' + j} className={that.state.categoryActive[j]?'category-active':null}>{obj_category} <span className="icon-down-open"></span></h2>}
+                                    {obj_category && <h2 onClick={() => that.showCategory(j)}  className={'category-' + j + ' ' + (that.state.categoryActive[j]?'category-active':null)}>{obj_category} <span className="icon-down-open"></span></h2>}
                                     <ul className={'main-list-exercise-inset list-unstyled'}>
                                         {/* eslint-disable-next-line */}
                                         {json.map(function (obj, i) {
@@ -496,7 +496,9 @@ class FlashCards extends Component {
                                                 return (
                                                     <li key={i} className="d-flex justify-content-between">
 
-                                                        <button className={'border-content-bottom' +((obj.excludeID.length !== 0 || obj.dontKnowClick !== 0)?'':' d-none')} onClick={(e) => {that.removeCookieExerciseId(e,i,obj);}}>Reset</button>
+                                                        {(obj.excludeID.length !== 0 || obj.dontKnowClick !== 0) &&
+                                                            <button className={'border-content-bottom'} title="Reset" onClick={(e) => {that.removeCookieExerciseId(e,i,obj);}}><span className="icon-trash-empty"></span></button>
+                                                        }
 
                                                         <a href={'#flashcard' + i} onClick={(e) => that.setExercise(e,obj,i,that)}>
                                                             <span className="percent-pro" style={stylePercent}></span>
