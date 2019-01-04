@@ -142,7 +142,7 @@ h1, h2, h3, h4 {
   font-weight: 600; }
 
 h1 {
-  font-size: 1.5rem; }
+  font-size: 1.2rem; }
 
 h2 {
   font-size: 1.125rem; }
@@ -332,11 +332,19 @@ a {
             top: 26px; }
     .module-flash-cards .main-header h1 {
       margin-bottom: 5px;
+      position: relative;
       text-shadow: 0 0 1px #852824, 0 0 1px #000, 0 0 1px #000;
       color: #fff;
-      text-align: left; }
+      text-align: left;
+      text-indent: -10000px; }
       .module-flash-cards .main-header h1:before {
-        margin-left: 0; }
+        margin-left: 0;
+        font-size: 2.5rem;
+        position: absolute;
+        display: block;
+        left: 2px;
+        top: 5px;
+        text-indent: 0; }
     .module-flash-cards .main-header .direction-lang {
       border: 1px solid rgba(0, 0, 0, 0.2);
       text-align: center;
