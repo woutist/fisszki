@@ -83,6 +83,7 @@ $color10: rgba(208,119,35,.8);
 .icon-up-open:before { content: '\e80b'; }
 
 .icon-trash-empty:before { content: '\e80c'; }
+.icon-new-logo:before { content: '\e80e'; }
 
 html {
   display: table;
@@ -171,6 +172,25 @@ a {
 }
 
 .module-flash-cards {
+  .preloader {
+    background-color: $color3;
+    color: $color1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    opacity: 1;
+    transition: all 600ms ease-in-out;
+    span {
+      font-size: 100px;
+    }
+    &.animate-hide {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
   padding: 0 10px;
   max-width: 860px;
   transition: all 300ms ease-in-out;
@@ -272,6 +292,9 @@ a {
       top: 10px;
       right: 10px;
       height: 50%;
+      p {
+        font-size: 0.7rem;
+      }
       &:after {
         content: '';
         display: block;
@@ -370,6 +393,9 @@ a {
       text-shadow: 0 0 1px $color6, 0 0 1px $color2, 0 0 1px $color2;
       color: $color1;
       text-align: left;
+      &:before {
+        margin-left: 0;
+      }
     }
     .direction-lang {
       border: 1px solid rgba(0, 0, 0, .2);

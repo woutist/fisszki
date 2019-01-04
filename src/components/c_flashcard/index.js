@@ -20,11 +20,51 @@ const cookies = new Cookies(),
     cookiesMaxAge = 60*60*24*7*4*12,
     centerClass = 'd-flex align-items-center justify-content-center flex-column';
 
+// localStorage.setItem("key", "value");
+// localStorage.getItem("key");
+// localStorage.removeItem("key");
+// localStorage.clear();
+
+let detctionDevice = false;
+if(typeof cordova === "object") {
+    if(window.cordova.platformId === "android") {
+        detctionDevice = true;
+    } else {
+        detctionDevice = false;
+    }
+}
+//detctionDevice = true;
+
+
+
 const setCookies = (name, value) => {
-    cookies.set(name, value, { path: '/', maxAge: cookiesMaxAge });
+    if(detctionDevice){
+        localStorage.setItem(name, value);
+    } else {
+        cookies.set(name, value, { path: '/', maxAge: cookiesMaxAge });
+    }
 };
 const removeCookies = (name) => {
-    cookies.remove(name, { path: '/', maxAge: cookiesMaxAge });
+    if(detctionDevice){
+        localStorage.removeItem(name);
+    } else {
+        cookies.remove(name, { path: '/', maxAge: cookiesMaxAge });
+    }
+};
+const getCookies = (name,array) => {
+    if(detctionDevice) {
+        if(array) {
+            return JSON.parse(localStorage.getItem(name));
+        } else {
+            return localStorage.getItem(name);
+        }
+    } else {
+        if(typeof cookies.get(name) === "undefined") {
+            return null;
+        } else {
+            return cookies.get(name);
+        }
+    }
 };
 
 let arrayUnique = function (arr) {
@@ -45,7 +85,13 @@ const setLanguage = (x) => {
                 buttonIKnow: 'I knew',
                 buttonIDontKnow: "I don't knew",
                 buttonCheckOut: 'Check out',
-                textSummary: 'Summary'
+                textSummary: 'Summary',
+                buttonEnableAutoVoice: 'Enable auto-voice',
+                buttonDisableRotate: 'Disable rotate',
+                buttonRestartProgress: 'Restart progress',
+                yourPlatform: 'Your platform',
+                polish: 'Polish',
+                english: 'English'
             };
             break;
         default: //pl
@@ -57,15 +103,23 @@ const setLanguage = (x) => {
                 buttonIKnow: 'Wiedziałem/am',
                 buttonIDontKnow: "Nie wiedziałem/am",
                 buttonCheckOut: 'Sprawdź',
-                textSummary: 'Podsumowanie'
+                textSummary: 'Podsumowanie',
+                buttonEnableAutoVoice: 'Włącz auto-głos',
+                buttonDisableRotate: 'Wyłącz obracanie',
+                buttonRestartProgress: 'Restartuj postęp',
+                yourPlatform: 'Twoja platforma',
+                polish: 'Polski',
+                english: 'Angielski'
             };
     }
 };
-if(typeof cookies.get('language_cookie') === "undefined") {
-    cookies.set('language_cookie', 'pl', { path: '/', maxAge: cookiesMaxAge });
+
+if(getCookies('language_cookie') == null) {
+    setCookies('language_cookie', 'pl');
+    //cookies.set('language_cookie', 'pl', { path: '/', maxAge: cookiesMaxAge });
     lang = 'pl';
 } else {
-    if(cookies.get('language_cookie') === 'pl') {
+    if(getCookies('language_cookie') === 'pl') {
         lang = 'pl';
     } else {
         lang = 'en';
@@ -74,11 +128,11 @@ if(typeof cookies.get('language_cookie') === "undefined") {
 setLanguage(lang);
 
 // COOKIES FLASHCARDS DIRECTION
-if(typeof cookies.get('flashcards_cookie') === "undefined") {
-    cookies.set('flashcards_cookie', 'left', { path: '/', maxAge: cookiesMaxAge });
+if(getCookies('flashcards_cookie') == null) {
+    setCookies('flashcards_cookie', 'left');
     flashCardDirection = 'left';
 } else {
-    if(cookies.get('flashcards_cookie') === 'left') {
+    if(getCookies('flashcards_cookie') === 'left') {
         flashCardDirection = 'left';
     } else {
         flashCardDirection = 'right';
@@ -105,8 +159,10 @@ class Congratulation extends Component {
                 <button className="border-content-bottom" onClick={() => {
                     obj.excludeID=[];
                     obj.dontKnowClick=0;
-                    cookies.remove('obj_exercise_cookie_'+ide, { path: '/' });
-                    cookies.remove('obj_exercise_cookie_dk_click_'+ide, { path: '/' });
+                    removeCookies('obj_exercise_cookie_'+ide);
+                    removeCookies('obj_exercise_cookie_dk_click_'+ide);
+                    // cookies.remove('obj_exercise_cookie_'+ide, { path: '/' });
+                    // cookies.remove('obj_exercise_cookie_dk_click_'+ide, { path: '/' });
                     that.clearExercise();
                     that.setState({classHideNavButtons: ''});
                     that.setExercise(null,obj,ide,that);
@@ -186,10 +242,12 @@ class Exercises extends Component {
  * Main component FlashCards
  */
 class FlashCards extends Component {
+    directionText = () => {return (flashCardDirection === 'right')?translate.english + ' | ' + translate.polish:translate.polish + ' | ' + translate.english};
     state = {
         callObj: '',
         langCongratulation: false,
-        direction: (flashCardDirection === 'right')?'English | Polish':'Polish | English',
+        //direction: (flashCardDirection === 'right')?'English | Polish':'Polish | English',
+        direction: this.directionText(),
         activePL: (lang === 'pl')?'active-lang':'',
         activeEN: (lang === 'en')?'active-lang':'',
         classCheckOut: '',
@@ -198,8 +256,9 @@ class FlashCards extends Component {
         classHideNavButtons: '',
         categoryActive: [],
         navMobileActive: '',
-        rotateDisable: (typeof cookies.get('disable_rotate_cookie') === "undefined")?'':'rotate-disable',
-        enableAutoVoice: '',
+        rotateDisable: (getCookies('disable_rotate_cookie') == null)?'':'rotate-disable',
+        enableAutoVoice: (getCookies('enable_auto_voice_cookie') == null)?'':'enable-auto-voice',
+        preloader: "",
         langNameExercise: function (j) {
             switch (lang) {
                 case 'en': return j._en;
@@ -258,6 +317,10 @@ class FlashCards extends Component {
             });
         }
 
+        this.setState({
+            direction: this.directionText()
+        });
+
         // after load page
         if(idExercise < 0 || (typeof idItem === 'undefined') ) {
             this.setState({
@@ -272,16 +335,15 @@ class FlashCards extends Component {
         if(flashCardDirection === 'left') {
             setCookies('flashcards_cookie', 'right');
             flashCardDirection = 'right';
-            this.setState({
-                direction: 'English | Polish'
-            });
+
         } else {
             setCookies('flashcards_cookie', 'left');
             flashCardDirection = 'left';
-            this.setState({
-                direction: 'Polish | English'
-            });
+
         }
+        this.setState({
+            direction: this.directionText()
+        });
         if(idExercise > -1) {
             this.setExercise(event,o[idExercise],idExercise,this,idItem);
         }
@@ -425,9 +487,26 @@ class FlashCards extends Component {
         })
     };
     enableAutoVoice = () => {
+        if(this.state.enableAutoVoice) {
+            removeCookies('enable_auto_voice_cookie');
+        } else {
+            setCookies('enable_auto_voice_cookie',true);
+        }
         this.setState({
             enableAutoVoice: (this.state.enableAutoVoice)?'':'enable-auto-voice'
         })
+    };
+    preloaderFun = () => {
+        setTimeout(function (that) {
+            that.setState({
+                preloader: 'animate-hide'
+            });
+            setTimeout(function (that) {
+                that.setState({
+                    preloader: 'delete'
+                });
+            },800,that);
+        },2000,this);
     };
     globalVar = {
     };
@@ -442,16 +521,18 @@ class FlashCards extends Component {
                     obj.excludeID = [];
                     obj.dontKnowClick = 0;
                 }
-                if(typeof cookies.get('obj_exercise_cookie_' + i) !== "undefined") {
-                    obj.excludeID = cookies.get('obj_exercise_cookie_' + i);
+
+                if(getCookies('obj_exercise_cookie_' + i,'array') != null ) {
+                    //alert(getCookies('obj_exercise_cookie_' + i,'array'));
+                    obj.excludeID = getCookies('obj_exercise_cookie_' + i,'array');
                 }
-                if(typeof cookies.get('obj_exercise_cookie_dk_click_' + i) !== "undefined") {
-                    obj.dontKnowClick = parseInt(cookies.get('obj_exercise_cookie_dk_click_' + i));
+                if(getCookies('obj_exercise_cookie_dk_click_' + i) != null) {
+                    obj.dontKnowClick = parseInt(getCookies('obj_exercise_cookie_dk_click_' + i));
                 }
             });
             this.uniqueCategory(json,this,true);
+            this.preloaderFun();
             firstLoadExerciseCookies = false;
-
         }
         this.uniqueCategory(json,this,false);
         let directionState = this.state.direction.split("|");
@@ -459,24 +540,25 @@ class FlashCards extends Component {
         return (
             <Swipe onSwipeRight={() => this.navMobileActive(true)}>
                 <div className={'module-flash-cards ' + this.state.classHideOrShowMainPartsPage + ' ' + this.state.navMobileActive + ' ' + this.state.rotateDisable + ' ' + this.state.enableAutoVoice}>
-
+                    {this.state.preloader!=='delete' && <div className={this.state.preloader + " preloader d-flex justify-content-center align-items-center"}><span className="icon-new-logo"></span></div>}
                     <header className="main-header">
                         <nav className="main-nav">
                             <button onClick={() => this.navMobileActive()} className="hamburger"><span></span><span></span><span></span></button>
                             <div className="main-nav-inset">
                                 <ul className="list-unstyled">
-                                    <li><button className="enable-auto-voice border-content-bottom" onClick={this.enableAutoVoice}><span className="icon-volume"></span> Enable auto voice</button></li>
-                                    <li><button className="close-rotate border-content-bottom" onClick={this.disableRotate}><span className="icon-ok"></span> Disable rotate</button></li>
-                                    <li><button className="rest-all border-content-bottom" title={'Clear cookies exercise'} onClick={() => {this.removeCookieExerciseAll(); this.clearExercise(); }}><span className="icon-trash-empty"></span> Restart progress</button></li>
+                                    <li><button className="enable-auto-voice border-content-bottom" onClick={this.enableAutoVoice}><span className="icon-volume"></span> {translate.buttonEnableAutoVoice}</button></li>
+                                    <li><button className="close-rotate border-content-bottom" onClick={this.disableRotate}><span className="icon-ok"></span> {translate.buttonDisableRotate}</button></li>
+                                    <li><button className="rest-all border-content-bottom" title={'Clear cookies exercise'} onClick={() => {this.removeCookieExerciseAll(); this.clearExercise(); }}><span className="icon-trash-empty"></span>{translate.buttonRestartProgress}</button></li>
 
                                 </ul>
+                                <p>{translate.yourPlatform}: {detctionDevice?'Android/iOS':'Browser'}</p>
                             </div>
                         </nav>
                         <ul className="list-language d-flex flex-row list-unstyled">
                             <li className="flag-pl"><a href={'#pl'} className={this.state.activePL} onClick={(e) => this.setLang(e,json,'pl')}>PL</a></li>
                             <li className="flag-en"><a href={'#en'} className={this.state.activeEN} onClick={(e) => this.setLang(e,json,'en')}>EN</a></li>
                         </ul>
-                        <h1>{title}</h1>
+                        <h1 className="icon-new-logo"><span className="d-none">F</span>lashCrads</h1>
                         <button className="direction-lang" onClick={(e) => this.changeDirection(e,json)}>{directionState[0]} <span className="icon-exchange"></span> {directionState[1]}</button>
                     </header>
 
