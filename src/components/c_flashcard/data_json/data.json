@@ -5,8 +5,8 @@
       "_en": ""
     },
     "name": {
-      "_pl": "1000 popularnych słów",
-      "_en": "1000 popular words"
+      "_pl": "1000 popularnych słów (całość)",
+      "_en": "1000 popular words (all)"
     },
     "data": [
       {
@@ -35,7 +35,7 @@
       },
       {
         "_en": "a",
-        "_pl": "stawiane przed rzeczownikiem zaczynającym się spółgłoską"
+        "_pl": "(stawiane przed rzeczownikiem zaczynającym się spółgłoską)"
       },
       {
         "_en": "form",
@@ -51,7 +51,7 @@
       },
       {
         "_en": "is",
-        "_pl": "jest w 3 osobie liczby pojedynczej"
+        "_pl": "jest (w 3 osobie liczby pojedynczej)"
       },
       {
         "_en": "it",
@@ -59,7 +59,7 @@
       },
       {
         "_en": "great",
-        "_pl": "świetnie"
+        "_pl": "świetnie, wspaniale"
       },
       {
         "_en": "think",
@@ -91,7 +91,7 @@
       },
       {
         "_en": "was",
-        "_pl": "być w czasie przeszłym w 1. i 3. osobie liczby pojedynczej"
+        "_pl": "być (w czasie przeszłym w 1 i 3 osobie liczby pojedynczej)"
       },
       {
         "_en": "line",
@@ -111,7 +111,7 @@
       },
       {
         "_en": "turn",
-        "_pl": "skręcić"
+        "_pl": "skręcać"
       },
       {
         "_en": "are",
@@ -131,14 +131,14 @@
       },
       {
         "_en": "as",
-        "_pl": "kiedy"
+        "_pl": "tak jak, kiedy "
       },
       {
         "_en": "mean",
-        "_pl": "znaczyć"
+        "_pl": "oznaczać, znaczyć"
       },
       {
-        "_en": "i",
+        "_en": "I",
         "_pl": "ja"
       },
       {
@@ -159,7 +159,7 @@
       },
       {
         "_en": "right",
-        "_pl": "prawy"
+        "_pl": "prawy, racja"
       },
       {
         "_en": "be",
@@ -169,6 +169,7 @@
         "_en": "boy",
         "_pl": "chłopiec"
       },
+
       {
         "_en": "at",
         "_pl": "przy"
@@ -4013,6 +4014,258 @@
   },
   {
     "category": {
+      "_pl":"",
+      "_en":""
+    },
+    "name": {
+      "_pl": "Idiomy",
+      "_en": "Idioms"
+    },
+    "data": [
+      {
+        "_en": "keep sth under one's hat",
+        "_pl": "trzymać coś w tajemnicy"
+      },
+      {
+        "_en": "the other side of the coin",
+        "_pl": "druga strona medalu"
+      },
+      {
+        "_en": "make up one's mind",
+        "_pl": "postanowić, zdecydować się"
+      },
+      {
+        "_en": "change a fly into an elephant",
+        "_pl": "robić z igły widły"
+      },
+      {
+        "_en": "easier said than done",
+        "_pl": "łatwiej powiedzieć, niż zrobić"
+      },
+      {
+        "_en": "on thin ice",
+        "_pl": "na niepewnym gruncie"
+      },
+      {
+        "_en": "hit the nail on the head",
+        "_pl": "trafić w sedno"
+      },
+      {
+        "_en": "it goes without saying",
+        "_pl": "to oczywiste, nie ma dwóch zdań"
+      },
+      {
+        "_en": "leave no stone unturned",
+        "_pl": "poruszyć niebo i ziemię, zastosować wszystkie środki"
+      },
+      {
+        "_en": "put in jeopardy",
+        "_pl": "narazić na niebiezpieczeństwo"
+      },
+      {
+        "_en": "cry for the moon",
+        "_pl": "chcieć gwiazdki z nieba"
+      },
+      {
+        "_en": "promise wonders",
+        "_pl": "obiecywać złote góry"
+      },
+      {
+        "_en": "self-made man",
+        "_pl": "człowiek, który sam się dorobił, zrobił karierę"
+      },
+      {
+        "_en": "read sb's hand",
+        "_pl": "wróżyć z ręki"
+      },
+      {
+        "_en": "shed blood",
+        "_pl": "przelewać krew"
+      },
+      {
+        "_en": "ups and downs",
+        "_pl": "radości i smutki, zmienne koleje losu"
+      },
+      {
+        "_en": "take sth for granted",
+        "_pl": "przyjmować coś za rzecz oczywistą, naturalną"
+      },
+      {
+        "_en": "be at a disadvantage",
+        "_pl": "być w niekorzystnej sytuacji"
+      },
+      {
+        "_en": "on the market",
+        "_pl": "w sprzedaży, na rynku"
+      },
+      {
+        "_en": "little by little",
+        "_pl": "stopniowo"
+      },
+      {
+        "_en": "at sb's expense",
+        "_pl": "czyimś kosztem"
+      },
+      {
+        "_en": "if you like",
+        "_pl": "jeśli masz na to ochotę"
+      },
+      {
+        "_en": "at all costs",
+        "_pl": "za wszelką cenę"
+      },
+      {
+        "_en": "at the top of your voice",
+        "_pl": "na całe gardło"
+      },
+      {
+        "_en": "burst out laughing",
+        "_pl": "wybuchać śmiechem"
+      },
+      {
+        "_en": "catch sb red-handed",
+        "_pl": "złapać kogoś na gorącym uczynku"
+      },
+      {
+        "_en": "high and low",
+        "_pl": "wszędzie"
+      },
+      {
+        "_en": "without fail",
+        "_pl": "niezawodnie"
+      },
+      {
+        "_en": "the naked eye",
+        "_pl": "gołym okiem"
+      },
+      {
+        "_en": "with a vengeance",
+        "_pl": "z podwójną siłą"
+      },
+      {
+        "_en": "gnash your teeth",
+        "_pl": "zgrzytać zębami"
+      },
+      {
+        "_en": "be in the red",
+        "_pl": "mieć debet (w banku)"
+      },
+      {
+        "_en": "a bad patch",
+        "_pl": "zła passa"
+      },
+      {
+        "_en": "after your own heart",
+        "_pl": "bratnia dusza"
+      },
+      {
+        "_en": "in haste",
+        "_pl": "w pośpiechu"
+      },
+      {
+        "_en": "inside out",
+        "_pl": "1. na lewą stronę, 2. (znać) na wylot"
+      },
+      {
+        "_en": "make amends",
+        "_pl": "wynagradzać szkodę,szkody"
+      },
+      {
+        "_en": "ease sb's mind",
+        "_pl": "uspokajać kogoś"
+      },
+      {
+        "_en": "a ray of hope",
+        "_pl": "promyk nadziei"
+      },
+      {
+        "_en": "out of print",
+        "_pl": "wyczerpany nakład książki"
+      },
+      {
+        "_en": "get on sb's nerves",
+        "_pl": "działać (komuś) na nerwy"
+      },
+      {
+        "_en": "have something on the brain",
+        "_pl": "chodzić komuś po głowie"
+      },
+      {
+        "_en": "rat race",
+        "_pl": "wyścig szczurów"
+      },
+      {
+        "_en": "get the message",
+        "_pl": "załapać, zrozumieć coś"
+      },
+      {
+        "_en": "ask for trouble",
+        "_pl": "prosić się o kłopoty"
+      },
+      {
+        "_en": "pay tribute to sb,sth",
+        "_pl": "wyrażać (komuś) swoje uznanie, oddawać hołd"
+      },
+      {
+        "_en": "in bulk",
+        "_pl": "hurtowo"
+      },
+      {
+        "_en": "give somebody a ring",
+        "_pl": "zadzwonić do kogoś"
+      },
+      {
+        "_en": "all year round",
+        "_pl": "przez cały rok"
+      },
+      {
+        "_en": "all of a sudden",
+        "_pl": "nagle"
+      },
+      {
+        "_en": "as a matter of fact",
+        "_pl": "prawdę mówiąc, w rzeczywistości"
+      },
+      {
+        "_en": "be quits (with somebody)",
+        "_pl": "być kwita"
+      },
+      {
+        "_en": "by courtesy of",
+        "_pl": "dzięki uprzejmości, za zgodą"
+      },
+      {
+        "_en": "on location",
+        "_pl": "(o programie, filmie) w plenerze"
+      },
+      {
+        "_en": "go to waste",
+        "_pl": "marnować się"
+      },
+      {
+        "_en": "on impulse",
+        "_pl": "spontanicznie"
+      },
+      {
+        "_en": "trial and error",
+        "_pl": "metoda prób i błędów"
+      },
+      {
+        "_en": "snap one's fingers",
+        "_pl": "pstrykać palcami"
+      },
+      {
+        "_en": "let something slip",
+        "_pl": "wygadać się"
+      },
+      {
+        "_en": "heave a sigh",
+        "_pl": "wzdychać (głęboko)"
+      }
+    ]
+  },
+  {
+    "category": {
       "_pl": "",
       "_en": ""
     },
@@ -4644,6 +4897,190 @@
       {
         "_pl": "pisać ",
         "_en": " write / wrote / written"
+      }
+    ]
+  },
+  {
+    "category": {
+      "_pl": "Ćwiczenia - 1000 popularnych słów",
+      "_en": "Exercises - 1000 popular words"
+    },
+    "name": {
+      "_pl": "Ćwiczenie 1",
+      "_en": "Exercise 1"
+    },
+    "data": [
+      {
+        "_en": "name",
+        "_pl": "nazwa"
+      },
+      {
+        "_en": "very",
+        "_pl": "bardzo"
+      },
+      {
+        "_en": "to",
+        "_pl": "do"
+      },
+      {
+        "_en": "through",
+        "_pl": "przez"
+      },
+      {
+        "_en": "and",
+        "_pl": "i"
+      },
+      {
+        "_en": "just",
+        "_pl": "tylko"
+      },
+      {
+        "_en": "a",
+        "_pl": "(stawiane przed rzeczownikiem zaczynającym się spółgłoską)"
+      },
+      {
+        "_en": "form",
+        "_pl": "forma"
+      },
+      {
+        "_en": "in",
+        "_pl": "w"
+      },
+      {
+        "_en": "sentence",
+        "_pl": "zdanie"
+      },
+      {
+        "_en": "is",
+        "_pl": "jest (w 3 osobie liczby pojedynczej)"
+      },
+      {
+        "_en": "it",
+        "_pl": "to"
+      },
+      {
+        "_en": "great",
+        "_pl": "świetnie, wspaniale"
+      },
+      {
+        "_en": "think",
+        "_pl": "myśleć"
+      },
+      {
+        "_en": "you",
+        "_pl": "ty"
+      },
+      {
+        "_en": "say",
+        "_pl": "mówić"
+      },
+      {
+        "_en": "that",
+        "_pl": "że"
+      },
+      {
+        "_en": "help",
+        "_pl": "pomoc"
+      },
+      {
+        "_en": "he",
+        "_pl": "on"
+      },
+      {
+        "_en": "low",
+        "_pl": "niski"
+      }
+    ]
+  },
+  {
+    "category": {
+      "_pl": "Ćwiczenia - 1000 popularnych słów",
+      "_en": "Exercises - 1000 popular words"
+    },
+    "name": {
+      "_pl": "Ćwiczenie 2",
+      "_en": "Exercise 2"
+    },
+    "data": [
+      {
+        "_en": "was",
+        "_pl": "być (w czasie przeszłym w 1 i 3 osobie liczby pojedynczej)"
+      },
+      {
+        "_en": "line",
+        "_pl": "linia"
+      },
+      {
+        "_en": "for",
+        "_pl": "dla"
+      },
+      {
+        "_en": "differ",
+        "_pl": "różnic się"
+      },
+      {
+        "_en": "on",
+        "_pl": "na"
+      },
+      {
+        "_en": "turn",
+        "_pl": "skręcać"
+      },
+      {
+        "_en": "are",
+        "_pl": "są"
+      },
+      {
+        "_en": "cause",
+        "_pl": "przyczyna"
+      },
+      {
+        "_en": "with",
+        "_pl": "z"
+      },
+      {
+        "_en": "much",
+        "_pl": "dużo"
+      },
+      {
+        "_en": "as",
+        "_pl": "tak jak, kiedy "
+      },
+      {
+        "_en": "mean",
+        "_pl": "oznaczać, znaczyć"
+      },
+      {
+        "_en": "I",
+        "_pl": "ja"
+      },
+      {
+        "_en": "before",
+        "_pl": "przed"
+      },
+      {
+        "_en": "his",
+        "_pl": "jego"
+      },
+      {
+        "_en": "move",
+        "_pl": "ruszać"
+      },
+      {
+        "_en": "they",
+        "_pl": "oni"
+      },
+      {
+        "_en": "right",
+        "_pl": "prawy, racja"
+      },
+      {
+        "_en": "be",
+        "_pl": "być"
+      },
+      {
+        "_en": "boy",
+        "_pl": "chłopiec"
       }
     ]
   },

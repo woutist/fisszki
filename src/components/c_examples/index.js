@@ -117,7 +117,7 @@ class ExampleForm extends React.Component {
 
     handleChange = (event) => {
         this.setState({draft: event.target.value});
-    }
+    };
 
     handleSubmit = (event) => {
         this.setState({
@@ -130,7 +130,7 @@ class ExampleForm extends React.Component {
         //     draft: ''
         // }));
         event.preventDefault();
-    }
+    };
 
     render() {
         return (

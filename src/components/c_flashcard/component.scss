@@ -83,8 +83,17 @@ $color10: rgba(208,119,35,.8);
 .icon-up-open:before { content: '\e80b'; }
 
 .icon-trash-empty:before { content: '\e80c'; }
-.icon-new-logo:before { content: '\e80e'; }
+.icon-new-logo:before { content: '\e80f'; }
+.icon-globe:before { content: '\e80d'; }
 
+.icon-globe {
+  color: $color1;
+  opacity: .8;
+  transition: opacity 300ms ease-in-out;
+  &.icon-globe-disable {
+    opacity: .2;
+  }
+}
 html {
   display: table;
 }
@@ -97,17 +106,25 @@ body {
   background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
-  background-image: url(./images/bg3.jpg);
-  background-color: #d2cece;
+  //background-image: url(./images/bg2.jpg);
+  background-color: $color3;
   background-attachment: fixed;
+  //animation: bganim 30s infinite ease-in-out;
 
   vertical-align: middle;
   display: table-cell;
-  transition: all 300ms ease-in-out;
+  //transition: all 300ms ease-in-out;
 
   @media (max-width: $md) {
     vertical-align: top;
   }
+
+  //@keyframes bganim {
+  //  0%   {background-image: url(./images/bg2.jpg);}
+  //  48% {background-image: url(./images/bg2.jpg);}
+  //  52% {background-image: url(./images/bg3.jpg);}
+  //  96% {background-image: url(./images/bg3.jpg);}
+  //}
 
   #root {
     width: 100%;
@@ -121,7 +138,7 @@ h1, h2, h3, h4 {
   font-weight: 600;
 }
 h1 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 h2 {
   font-size: 1.125rem
@@ -182,7 +199,7 @@ a {
     bottom: 0;
     z-index: 100;
     opacity: 1;
-    transition: all 600ms ease-in-out;
+    transition: all 300ms ease-in-out;
     span {
       font-size: 100px;
     }
@@ -253,6 +270,9 @@ a {
         right: 10px;
         bottom: 10px;
         background: rgba(0,0,0,0);
+        @media (max-width: $md) {
+          height: 200px;
+        }
         &:after {
           height: 90%;
           transition: all 900ms ease-in-out;
@@ -291,7 +311,11 @@ a {
       position: fixed;
       top: 10px;
       right: 10px;
-      height: 50%;
+      height: 200px;
+      @media (max-width: $md) {
+        height: 42px;
+      }
+
       p {
         font-size: 0.7rem;
       }
@@ -313,7 +337,8 @@ a {
         bottom: 0;
       }
       z-index: 9;
-      background: linear-gradient(to bottom, $color5 0%, rgba(0,0,0,0) 100%);
+      //background: linear-gradient(to bottom, $color5 0%, rgba(0,0,0,0) 100%);
+      background: linear-gradient(-110deg, rgba(151, 135, 83, 0.7) 0%, rgba(151, 135, 83, 0) 41%);
       //background: linear-gradient(to bottom, rgba(151,135,83,0.7) 0%, rgba(151,135,83,0) 60%);
       @media (max-width: $md) {
         background: none;
@@ -346,7 +371,7 @@ a {
           background-color: rgba(255,255,255,.1);
           color: $color1;
           &.rest-all {
-            background-color: $color6;
+            background-color: #9e4a2c;
             color: $color1;
           }
           &.close-rotate {
@@ -391,9 +416,11 @@ a {
     h1 {
       margin-bottom: 5px;
       position: relative;
-      text-shadow: 0 0 1px $color6, 0 0 1px $color2, 0 0 1px $color2;
-      color: $color1;
+      //text-shadow: 0 0 1px $color6, 0 0 1px $color2, 0 0 1px $color2;
+      text-shadow: 0 0 1px rgba(0,0,0,.4);
+      color: rgba(255,255,255,.95);
       text-align: left;
+      width: 60px;
       //overflow: hidden;
       text-indent: -10000px;
       &:before {
@@ -467,6 +494,14 @@ a {
     overflow: hidden;
     background-color: $color5;
   }
+  .percent-border-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: $color3;
+  }
   .main-list-exercise {
     transition: all 300ms ease-in-out;
     overflow-y: hidden;
@@ -482,7 +517,7 @@ a {
         //background: linear-gradient(to bottom, rgba(151,135,83,0.5) 0%,rgba(151,135,83,0.6) 30%,rgba(151,135,83,0.6) 70%,rgba(151,135,83,0.5) 100%);
         span {
           position: absolute;
-          top: 9px;
+          top: 10px;
           right:10px;
           transition: all 300ms ease-in-out;
           transform: rotate(180deg);
@@ -495,6 +530,7 @@ a {
         }
         &:not(.category-active) {
           span {
+            top: 7px;
             transform: rotate(0);
           }
           + ul {
@@ -507,10 +543,10 @@ a {
           background-color: #404398;
         }
         &.category-2 {
-          background-color: #984432;
+          background-color: #489865;
         }
         &.category-3 {
-          background-color: #489865;
+          background-color: #986a43;
         }
         &.category-4 {
           background-color: #979847;
@@ -600,6 +636,42 @@ a {
       max-height: 0;
     }
   }
+
+  .bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-attachment: fixed;
+    background-position: 50%;
+    background-size: cover;
+    background-color: #e4d8cc;
+    z-index: -1;
+  }
+  .bg-1 {
+    background-image: url(./images/bg2.jpg);
+    animation: bganim1 30s infinite ease-in-out;
+    opacity: 1;
+  }
+  .bg-2 {
+    background-image: url(./images/bg3.jpg);
+    animation: bganim2 30s infinite ease-in-out;
+    opacity: 0;
+  }
+  @keyframes bganim1 {
+    0%   {opacity: 1}
+    48% {opacity: 1}
+    52% {opacity: 0}
+    96% {opacity: 0}
+  }
+  @keyframes bganim2 {
+    0%   {opacity: 0}
+    48% {opacity: 0}
+    52% {opacity: 1}
+    96% {opacity: 1}
+  }
+
 
   &.hide-flash-cards-show-list-exercise {
     .main-list-exercise {
@@ -698,7 +770,7 @@ a {
       position: relative;
       z-index: 1;
       .flash-card-inset {
-        > h2, p {
+        > h2, > p {
           padding-right: 50px;
         }
         > p {
@@ -781,8 +853,31 @@ a {
         left: 0;
 
         .icon-volume {
-          color: $color3;
           margin: 0;
+          display: inline-block;
+          transition: all 300ms ease-in-out;
+
+          background-color: transparent;
+          color: rgba(196, 133, 0, 1);
+          opacity: 1;
+          margin-right: 5px;
+          text-shadow: 0 0 0 $color2, 0 0 0 $color2;
+
+          &.line-disable {
+            opacity: .2;
+            position: relative;
+            &:after {
+              content: '';
+              position: absolute;
+              left: 50%;
+              top: 3px;
+              bottom: 3px;
+              display: block;
+              width: 2px;
+              background-color: $color6;
+              transform: rotate(45deg);
+            }
+          }
         }
 
         p {
@@ -796,21 +891,17 @@ a {
           &:hover {
             .icon-volume {
               opacity: .8;
+              &.line-disable {
+                opacity: .2;
+              }
             }
           }
-          .icon-volume {
-            background-color: transparent;
-            color: rgba(196, 133, 0, 1);
-            opacity: 1;
-            margin-right: 5px;
-            text-shadow: 0 0 0 $color2, 0 0 0 $color2;
-          }
           span {
-            display: inline-block;
+            display: inline;
             vertical-align:middle;
           }
           strong {
-            color: $color1;
+            color: $color3;
             vertical-align: middle;
             width: 26px;
             font-size: 85%;

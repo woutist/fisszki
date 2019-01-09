@@ -112,7 +112,17 @@
   content: '\e80c'; }
 
 .icon-new-logo:before {
-  content: '\e80e'; }
+  content: '\e80f'; }
+
+.icon-globe:before {
+  content: '\e80d'; }
+
+.icon-globe {
+  color: #fff;
+  opacity: .8;
+  transition: opacity 300ms ease-in-out; }
+  .icon-globe.icon-globe-disable {
+    opacity: .2; }
 
 html {
   display: table; }
@@ -125,12 +135,10 @@ body {
   background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
-  background-image: url(./images/bg3.jpg);
-  background-color: #d2cece;
+  background-color: #191919;
   background-attachment: fixed;
   vertical-align: middle;
-  display: table-cell;
-  transition: all 300ms ease-in-out; }
+  display: table-cell; }
   @media (max-width: 991.98px) {
     body {
       vertical-align: top; } }
@@ -142,7 +150,7 @@ h1, h2, h3, h4 {
   font-weight: 600; }
 
 h1 {
-  font-size: 1.2rem; }
+  font-size: 1.1rem; }
 
 h2 {
   font-size: 1.125rem; }
@@ -200,7 +208,7 @@ a {
     bottom: 0;
     z-index: 100;
     opacity: 1;
-    transition: all 600ms ease-in-out; }
+    transition: all 300ms ease-in-out; }
     .module-flash-cards .preloader span {
       font-size: 100px; }
     .module-flash-cards .preloader.animate-hide {
@@ -228,6 +236,9 @@ a {
     right: 10px;
     bottom: 10px;
     background: rgba(0, 0, 0, 0); }
+    @media (max-width: 991.98px) {
+      .module-flash-cards.nav-mobile-active .main-header .main-nav {
+        height: 200px; } }
     .module-flash-cards.nav-mobile-active .main-header .main-nav:after {
       height: 90%;
       transition: all 900ms ease-in-out; }
@@ -253,9 +264,12 @@ a {
       position: fixed;
       top: 10px;
       right: 10px;
-      height: 50%;
+      height: 200px;
       z-index: 9;
-      background: linear-gradient(to bottom, #2c8548 0%, rgba(0, 0, 0, 0) 100%); }
+      background: linear-gradient(-110deg, rgba(151, 135, 83, 0.7) 0%, rgba(151, 135, 83, 0) 41%); }
+      @media (max-width: 991.98px) {
+        .module-flash-cards .main-header .main-nav {
+          height: 42px; } }
       .module-flash-cards .main-header .main-nav p {
         font-size: 0.7rem; }
       .module-flash-cards .main-header .main-nav:after {
@@ -304,7 +318,7 @@ a {
           background-color: rgba(255, 255, 255, 0.1);
           color: #fff; }
           .module-flash-cards .main-header .main-nav .main-nav-inset button.rest-all {
-            background-color: #852824;
+            background-color: #9e4a2c;
             color: #fff; }
           .module-flash-cards .main-header .main-nav .main-nav-inset button.close-rotate .icon-ok {
             color: rgba(255, 255, 255, 0.2); }
@@ -333,9 +347,10 @@ a {
     .module-flash-cards .main-header h1 {
       margin-bottom: 5px;
       position: relative;
-      text-shadow: 0 0 1px #852824, 0 0 1px #000, 0 0 1px #000;
-      color: #fff;
+      text-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+      color: rgba(255, 255, 255, 0.95);
       text-align: left;
+      width: 60px;
       text-indent: -10000px; }
       .module-flash-cards .main-header h1:before {
         margin-left: 0;
@@ -388,6 +403,13 @@ a {
     height: 4px;
     overflow: hidden;
     background-color: #2c8548; }
+  .module-flash-cards .percent-border-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #191919; }
   .module-flash-cards .main-list-exercise {
     transition: all 300ms ease-in-out;
     overflow-y: hidden; }
@@ -400,7 +422,7 @@ a {
       background: linear-gradient(to bottom, rgba(151, 135, 83, 0.3) 0%, rgba(151, 135, 83, 0.35) 50%, rgba(151, 135, 83, 0.3) 100%); }
       .module-flash-cards .main-list-exercise .category-box > h2 span {
         position: absolute;
-        top: 9px;
+        top: 10px;
         right: 10px;
         transition: all 300ms ease-in-out;
         transform: rotate(180deg); }
@@ -409,6 +431,7 @@ a {
         transition: all 300ms ease-in-out;
         max-height: 500px; }
       .module-flash-cards .main-list-exercise .category-box > h2:not(.category-active) span {
+        top: 7px;
         transform: rotate(0); }
       .module-flash-cards .main-list-exercise .category-box > h2:not(.category-active) + ul {
         max-height: 0;
@@ -417,9 +440,9 @@ a {
       .module-flash-cards .main-list-exercise .category-box > h2.category-1 {
         background-color: #404398; }
       .module-flash-cards .main-list-exercise .category-box > h2.category-2 {
-        background-color: #984432; }
-      .module-flash-cards .main-list-exercise .category-box > h2.category-3 {
         background-color: #489865; }
+      .module-flash-cards .main-list-exercise .category-box > h2.category-3 {
+        background-color: #986a43; }
       .module-flash-cards .main-list-exercise .category-box > h2.category-4 {
         background-color: #979847; }
     .module-flash-cards .main-list-exercise .main-list-exercise-inset {
@@ -483,6 +506,43 @@ a {
     visibility: hidden;
     overflow: hidden;
     max-height: 0; }
+  .module-flash-cards .bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-attachment: fixed;
+    background-position: 50%;
+    background-size: cover;
+    background-color: #e4d8cc;
+    z-index: -1; }
+  .module-flash-cards .bg-1 {
+    background-image: url(./images/bg2.jpg);
+    animation: bganim1 30s infinite ease-in-out;
+    opacity: 1; }
+  .module-flash-cards .bg-2 {
+    background-image: url(./images/bg3.jpg);
+    animation: bganim2 30s infinite ease-in-out;
+    opacity: 0; }
+@keyframes bganim1 {
+  0% {
+    opacity: 1; }
+  48% {
+    opacity: 1; }
+  52% {
+    opacity: 0; }
+  96% {
+    opacity: 0; } }
+@keyframes bganim2 {
+  0% {
+    opacity: 0; }
+  48% {
+    opacity: 0; }
+  52% {
+    opacity: 1; }
+  96% {
+    opacity: 1; } }
   .module-flash-cards.hide-flash-cards-show-list-exercise .main-list-exercise {
     max-height: 0;
     opacity: 0; }
@@ -565,7 +625,7 @@ a {
     .module-flash-cards .main-flash-cards .flash-card {
       position: relative;
       z-index: 1; }
-      .module-flash-cards .main-flash-cards .flash-card .flash-card-inset > h2, .module-flash-cards .main-flash-cards .flash-card .flash-card-inset p {
+      .module-flash-cards .main-flash-cards .flash-card .flash-card-inset > h2, .module-flash-cards .main-flash-cards .flash-card .flash-card-inset > p {
         padding-right: 50px; }
       .module-flash-cards .main-flash-cards .flash-card .flash-card-inset > p {
         font-size: .7rem; }
@@ -610,8 +670,27 @@ a {
       top: 0;
       left: 0; }
       .module-flash-cards .main-flash-cards .flash-card .front .icon-volume, .module-flash-cards .main-flash-cards .flash-card .back .icon-volume {
-        color: #191919;
-        margin: 0; }
+        margin: 0;
+        display: inline-block;
+        transition: all 300ms ease-in-out;
+        background-color: transparent;
+        color: #c48500;
+        opacity: 1;
+        margin-right: 5px;
+        text-shadow: 0 0 0 #000, 0 0 0 #000; }
+        .module-flash-cards .main-flash-cards .flash-card .front .icon-volume.line-disable, .module-flash-cards .main-flash-cards .flash-card .back .icon-volume.line-disable {
+          opacity: .2;
+          position: relative; }
+          .module-flash-cards .main-flash-cards .flash-card .front .icon-volume.line-disable:after, .module-flash-cards .main-flash-cards .flash-card .back .icon-volume.line-disable:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 3px;
+            bottom: 3px;
+            display: block;
+            width: 2px;
+            background-color: #852824;
+            transform: rotate(45deg); }
       .module-flash-cards .main-flash-cards .flash-card .front p, .module-flash-cards .main-flash-cards .flash-card .back p {
         margin-bottom: 10px;
         width: 100%;
@@ -621,17 +700,13 @@ a {
           margin-bottom: 0; }
         .module-flash-cards .main-flash-cards .flash-card .front p:hover .icon-volume, .module-flash-cards .main-flash-cards .flash-card .back p:hover .icon-volume {
           opacity: .8; }
-        .module-flash-cards .main-flash-cards .flash-card .front p .icon-volume, .module-flash-cards .main-flash-cards .flash-card .back p .icon-volume {
-          background-color: transparent;
-          color: #c48500;
-          opacity: 1;
-          margin-right: 5px;
-          text-shadow: 0 0 0 #000, 0 0 0 #000; }
+          .module-flash-cards .main-flash-cards .flash-card .front p:hover .icon-volume.line-disable, .module-flash-cards .main-flash-cards .flash-card .back p:hover .icon-volume.line-disable {
+            opacity: .2; }
         .module-flash-cards .main-flash-cards .flash-card .front p span, .module-flash-cards .main-flash-cards .flash-card .back p span {
-          display: inline-block;
+          display: inline;
           vertical-align: middle; }
         .module-flash-cards .main-flash-cards .flash-card .front p strong, .module-flash-cards .main-flash-cards .flash-card .back p strong {
-          color: #fff;
+          color: #191919;
           vertical-align: middle;
           width: 26px;
           font-size: 85%;
