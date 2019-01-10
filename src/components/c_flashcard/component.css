@@ -298,7 +298,7 @@ a {
         box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
         border-left: 1px solid #fff;
         padding: 10px 62px 10px 10px;
-        transition: right 300ms ease-in-out;
+        transition: right 200ms ease-in-out;
         max-width: 100%;
         background-color: rgba(25, 25, 25, 0.98);
         color: #fff;
@@ -311,6 +311,8 @@ a {
           .module-flash-cards .main-header .main-nav .main-nav-inset {
             width: 262px;
             right: -262px; } }
+        .module-flash-cards .main-header .main-nav .main-nav-inset.main-nav-inset-transition-stop {
+          transition: none; }
         .module-flash-cards .main-header .main-nav .main-nav-inset button {
           display: block;
           width: 100%;

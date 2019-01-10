@@ -5,6 +5,7 @@ import Swipe from 'react-easy-swipe';
 import dataJson from './data_json/data.json';
 import { detectionDevice, isIE, centerClass } from './varibles';
 import { translate, setLanguage } from './language';
+import ReactResizeDetector from 'react-resize-detector';
 
 const Detector = !isIE && require('react-detect-offline').Detector;
 
@@ -171,30 +172,38 @@ class FlashCards extends Component {
             return (this.global.flashCardDirection === 'right') ? translate.english + ' | ' + translate.polish : translate.polish + ' | ' + translate.english
         }
     };
-    state = {
-        callObj: '',
-        idExercise: -1,
-        idItem: false,
-        langCongratulation: false,
-        direction: this.global.directionText(),
-        activePL: (this.global.lang === 'pl')?'active-lang':'',
-        activeEN: (this.global.lang === 'en')?'active-lang':'',
-        classCheckOut: '',
-        classCheckOutMore: '',
-        classHideOrShowMainPartsPage: 'show-list-exercise-hide-flash-cards',
-        classHideNavButtons: '',
-        navMobileActive: '',
-        rotateDisable: (getCookies('disable_rotate_cookie') == null)?'':'rotate-disable',
-        enableAutoVoice: (getCookies('enable_auto_voice_cookie') == null)?'':'enable-auto-voice',
-        preloader: "",
-        online: true,
-        //moveMenu: 0,
-        langNameExercise: (j,l=this.global.lang) => {
-            switch (l) {
-                case 'en': return j._en;
-                default: return j._pl; // pl
+    style = {
+        left: 0,
+    };
+    constructor(props){
+        super(props);
+        this.widthMenu = React.createRef();
+        this.state = {
+            callObj: '',
+            idExercise: -1,
+            idItem: false,
+            langCongratulation: false,
+            direction: this.global.directionText(),
+            activePL: (this.global.lang === 'pl')?'active-lang':'',
+            activeEN: (this.global.lang === 'en')?'active-lang':'',
+            classCheckOut: '',
+            classCheckOutMore: '',
+            classHideOrShowMainPartsPage: 'show-list-exercise-hide-flash-cards',
+            classHideNavButtons: '',
+            navMobileActive: '',
+            rotateDisable: (getCookies('disable_rotate_cookie') == null)?'':'rotate-disable',
+            enableAutoVoice: (getCookies('enable_auto_voice_cookie') == null)?'':'enable-auto-voice',
+            preloader: "",
+            online: true,
+            moveMenu: '',
+            mainNavInsetTransitionStop: '',
+            langNameExercise: (j,l=this.global.lang) => {
+                switch (l) {
+                    case 'en': return j._en;
+                    default: return j._pl; // pl
+                }
             }
-        }
+        };
     };
     openHref = (e,href) => {
         if(detectionDevice){
@@ -411,17 +420,6 @@ class FlashCards extends Component {
         this.setState({categoryActive: tmp });
         //console.log(tmp[index]);
     };
-    navMobileActive = (ifSwipe) => {
-        if(ifSwipe){
-            this.setState({
-                navMobileActive: ''
-            });
-        } else {
-            this.setState({
-                navMobileActive: (this.state.navMobileActive)?'':'nav-mobile-active'
-            });
-        }
-    };
     disableRotate = () => {
         if(this.state.rotateDisable) {
             removeCookies('disable_rotate_cookie');
@@ -468,26 +466,57 @@ class FlashCards extends Component {
         }
     };
 
-    // onSwipeStart(event) {
-    //     console.log('Start swiping...', event);
-    // };
-    // ppp = (type,x) => {
-    //     if(type==='move') {
-    //         this.setState({moveMenu: x});
-    //     } else {
-    //         this.setState({moveMenu: 262});
-    //         this.navMobileActive(true)
-    //         //this.navMobileActive(true);
-    //     }
-    // };
-    // onSwipeMove = (position) => {
-    //     this.ppp('move',position.x);
-    // };
-    //
-    // onSwipeEnd = () => {
-    //     this.ppp('end');
+    navMobileActive = () => {
+        this.setState({
+            navMobileActive: (this.state.navMobileActive)?'':'nav-mobile-active',
+            moveMenu: (this.state.navMobileActive)?-this.widthMenu.current.offsetWidth:0,
+        });
+    };
+
+    moveMenu = (type,x) => {
+        if(type==='move') {
+            if(x>=0) {
+                if(x<100) {
+                    this.setState({
+                        moveMenu: -x,
+                        mainNavInsetTransitionStop: 'main-nav-inset-transition-stop'
+                    });
+                } else {
+                    this.setState({
+                        moveMenu: -this.widthMenu.current.offsetWidth,
+                        mainNavInsetTransitionStop:'',
+                        navMobileActive: '',
+                    });
+                }
+            }
+        } else {
+            if(this.state.navMobileActive !== '') {
+                this.setState({
+                    moveMenu: 0,
+                    mainNavInsetTransitionStop: ''
+                });
+            }
+        }
+    };
+
+    // onSwipeStart = () => {
+    //     this.moveMenu('start');
     // };
 
+    onSwipeMove = (position) => {
+        //console.log(position.x);
+        this.moveMenu('move',position.x);
+    };
+
+    onSwipeEnd = () => {
+        this.moveMenu();
+    };
+
+    onResize = () => {
+        this.setState({
+            moveMenu: (!this.state.navMobileActive)?-this.widthMenu.current.offsetWidth:0,
+        });
+    };
     componentWillMount(){
         dataJson.map(function (obj, i) {
             console.log('x');
@@ -510,9 +539,8 @@ class FlashCards extends Component {
         this.setLang(false,this.global.lang);
         this.preloaderFun();
     };
-    componentDidMount(){
-
-    };
+    componentDidMount () {
+    }
     render() {
         const { title } = this.props;
 
@@ -520,13 +548,7 @@ class FlashCards extends Component {
         let directionState = this.state.direction.split("|");
 
         return (
-            <Swipe
-                // onSwipeStart={this.onSwipeStart}
-                // onSwipeMove={this.onSwipeMove}
-                // onSwipeEnd={this.onSwipeEnd}
 
-                onSwipeRight={() => this.navMobileActive(true)}
-            >
                 <div className={'module-flash-cards ' + this.state.classHideOrShowMainPartsPage + ' ' + this.state.navMobileActive + ' ' + this.state.rotateDisable + ' ' + this.state.enableAutoVoice}>
                     <div className="bg"></div>
                     <div className="bg bg-1"></div>
@@ -536,17 +558,24 @@ class FlashCards extends Component {
                     <header className="main-header">
                         <nav className="main-nav">
                             <button onClick={() => this.navMobileActive()} className="hamburger"><span></span><span></span><span></span></button>
+                            <Swipe
+                                //onSwipeStart={this.onSwipeStart}
+                                onSwipeMove={this.onSwipeMove}
+                                onSwipeEnd={this.onSwipeEnd}
 
-                            <div className="main-nav-inset" style={{right:-this.state.moveMenu + 'px'}}>
-                                <ul className="list-unstyled">
-                                    <li><button className="enable-auto-voice border-content-bottom" onClick={this.enableAutoVoice}><span className="icon-volume"></span> {translate.buttonEnableAutoVoice}</button></li>
-                                    <li><button className="close-rotate border-content-bottom" onClick={this.disableRotate}><span className="icon-ok"></span> {translate.buttonDisableRotate}</button></li>
-                                    <li><button className="rest-all border-content-bottom" onClick={() => {this.removeCookieExerciseAll(); this.clearExercise(); }}><span className="icon-trash-empty"></span>{translate.buttonRestartProgress}</button></li>
-                                    {detectionDevice && <li><button className="close-application" onClick={() => this.closeApplication}><span className="icon-cancel-circled"></span>{translate.buttonCloseApplication}</button></li>}
-                                </ul>
-                                <p>- {translate.yourPlatform}: {detectionDevice?'Android/iOS':'Browser'}</p>
-                            </div>
-
+                                // onSwipeRight={() => this.navMobileActive(true)}
+                            >
+                                <div ref={this.widthMenu} className={"main-nav-inset " + this.state.mainNavInsetTransitionStop} style={{right: this.state.moveMenu + 'px'}}>
+                                    <ReactResizeDetector handleWidth handleHeight onResize={this.onResize} />
+                                    <ul className="list-unstyled">
+                                        <li><button className="enable-auto-voice border-content-bottom" onClick={this.enableAutoVoice}><span className="icon-volume"></span> {translate.buttonEnableAutoVoice}</button></li>
+                                        <li><button className="close-rotate border-content-bottom" onClick={this.disableRotate}><span className="icon-ok"></span> {translate.buttonDisableRotate}</button></li>
+                                        <li><button className="rest-all border-content-bottom" onClick={() => {this.removeCookieExerciseAll(); this.clearExercise(); }}><span className="icon-trash-empty"></span>{translate.buttonRestartProgress}</button></li>
+                                        {detectionDevice && <li><button className="close-application" onClick={() => this.closeApplication}><span className="icon-cancel-circled"></span>{translate.buttonCloseApplication}</button></li>}
+                                    </ul>
+                                    <p>- {translate.yourPlatform}: {detectionDevice?'Android/iOS':'Browser'}</p>
+                                </div>
+                            </Swipe>
                         </nav>
                         <ul className="list-language d-flex flex-row list-unstyled">
                             <li>{!isIE && <Detector
@@ -616,7 +645,6 @@ class FlashCards extends Component {
                         <p>Copyright &copy; 1518, {title} pl-en/en-pl v1.0.0</p>
                     </footer>
                 </div>
-            </Swipe>
 
         );
     }

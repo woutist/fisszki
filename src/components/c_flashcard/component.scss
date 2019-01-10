@@ -355,7 +355,10 @@ a {
         border-left: 1px solid #fff;
 
         padding: 10px 62px 10px 10px;
-        transition: right 300ms ease-in-out;
+        transition: right 200ms ease-in-out;
+        &.main-nav-inset-transition-stop {
+          transition: none;
+        }
         max-width: 100%;
         background-color: rgba(25,25,25,.98);
         color: $color1;
