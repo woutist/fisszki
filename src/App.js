@@ -13,7 +13,7 @@ class App extends Component {
     render() {
         return (
             <div className="main-conteiner">
-                <FlashCards title="FlashCards" />
+                <FlashCards title="Lang'FC" />
             </div>
         );
     }

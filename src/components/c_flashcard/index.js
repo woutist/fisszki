@@ -15,7 +15,7 @@ const Detector = !isIE && require('react-detect-offline').Detector;
  */
 class Congratulation extends Component {
     render() {
-        const {that, ide} = this.props;
+        const {that, ide, idC} = this.props;
         const obj = dataJson[ide];
         obj.excludeID.length=obj.data.length;
         return (
@@ -36,7 +36,7 @@ class Congratulation extends Component {
                     // cookies.remove('obj_exercise_cookie_dk_click_'+ide, { path: '/' });
                     that.clearExercise();
                     that.setState({classHideNavButtons: ''});
-                    that.setExercise(null,ide);
+                    that.setExercise(null,ide,false,false,idC);
                 }}>{translate.buttonInfoCongratulationRestart}</button>
             </div>
         )
@@ -48,7 +48,7 @@ class Congratulation extends Component {
  */
 class Exercises extends Component {
     render() {
-        const { o, that, voice, idItem, checkvoice, flashCardDirection } = this.props;
+        const { o, that, voice, idItem, checkvoice, flashCardDirection, idC } = this.props;
         return (
             // eslint-disable-next-line
             o.data.map(function (obj, i) {
@@ -69,7 +69,7 @@ class Exercises extends Component {
                     return (
                         <div className={'flash-card-inset' + (isIE?' ie-fix':'')} key={i}>
                             <span className="percent-pro" style={stylePercent}></span>
-                            <h2>{that.state.langNameExercise(o.category) && that.state.langNameExercise(o.category) + ' / '}{that.state.langNameExercise(o.name)}</h2>
+                            <h2><span className={"icon-random-card icon-random-card-" + idC}></span>{that.state.langNameExercise(o.category) && that.state.langNameExercise(o.category) + ' / '}{that.state.langNameExercise(o.name)}</h2>
                             <p>
                                 {that.state.online?'online':'offline'} | <span className="icon-up color-5">{o.excludeID.length}/{o.data.length} = {Math.ceil(o.excludeID.length*100/o.data.length)}%</span> - <span className="icon-down color-6">{o.dontKnowClick}</span>
 
@@ -97,7 +97,9 @@ class Exercises extends Component {
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
                                                     <span>{obj._en}</span>
                                                 </p>
-                                                <a onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl)} className="google-translator" target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl}>Check it in the Google Translator<span className="icon-language"></span></a>
+                                                <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl)} className="google-translator" target='blank_'>
+                                                    Google Translator<span className="icon-language"></span>
+                                                </button>
                                             </div>
                                         </div>
                                         :
@@ -114,12 +116,15 @@ class Exercises extends Component {
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
                                                     <span>{obj._en}</span></p>
                                                 <hr />
+
                                                 <p onClick={() => that.translateVoice(obj._pl, "pl",that.state.online) }>
                                                     <strong>pl:</strong>
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
                                                     <span>{obj._pl}</span>
                                                 </p>
-                                                <a onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en)} className="google-translator" target='blank_' href={"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en}>Check it in the Google translator<span className="icon-language"></span></a>
+                                                <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en)} className="google-translator" target='blank_'>
+                                                    Google Translator<span className="icon-language"></span>
+                                                </button>
                                             </div>
                                         </div>
                                 }
@@ -168,6 +173,9 @@ class FlashCards extends Component {
         categoryActive: [],
         flashCardDirection: this.startCookiesFlashCardDirection(),
         lang: this.startCookiesLang(),
+        idC: false,
+        fSwipe: false,
+        timeOutCloseCloud: true, 
         directionText: () => {
             return (this.global.flashCardDirection === 'right') ? translate.english + ' | ' + translate.polish : translate.polish + ' | ' + translate.english
         }
@@ -197,6 +205,7 @@ class FlashCards extends Component {
             online: true,
             moveMenu: '',
             mainNavInsetTransitionStop: '',
+            closeCloude: '',
             langNameExercise: (j,l=this.global.lang) => {
                 switch (l) {
                     case 'en': return j._en;
@@ -206,11 +215,15 @@ class FlashCards extends Component {
         };
     };
     openHref = (e,href) => {
-        if(detectionDevice){
-            navigator.app.loadUrl(href, { openExternal:true });
-        } else {
-            window.open(href, '_system');
-        }
+
+        window.open(href, '_system');
+        //navigator.app.loadUrl(href, { openExternal:true });
+
+        // if(detectionDevice){
+        //     navigator.app.loadUrl(href, { openExternal:true });
+        // } else {
+        //     window.open(href, '_system');
+        // }
         e.preventDefault();
     };
     arrayUnique = (arr) => {
@@ -230,8 +243,9 @@ class FlashCards extends Component {
             }
         }
     };
-    setExercise = (event,idE,idForce,voiceOff) => {
+    setExercise = (event,idE,idForce,voiceOff,idC,closeCloude) => {
         let temp_idE, o = dataJson[idE];
+        this.global.idC = idC;
         if(idForce) {
             temp_idE = idForce;
         }
@@ -245,8 +259,18 @@ class FlashCards extends Component {
             classCheckOutMore: '',
             classHideNavButtons: (o.excludeID.length === o.data.length)?'d-none':'',
             classHideOrShowMainPartsPage: 'hide-flash-cards-show-list-exercise',
-            callObj: (o.excludeID.length === o.data.length)?<Congratulation that={this} ide={idE} />:<Exercises o={o} that={this} idItem={temp_idE} flashCardDirection={this.global.flashCardDirection} checkvoice={voiceOff} voice={this.state.enableAutoVoice} />
+            callObj: (o.excludeID.length === o.data.length)?<Congratulation that={this} idC={idC} ide={idE} />:<Exercises o={o} that={this} idC={idC} idItem={temp_idE} flashCardDirection={this.global.flashCardDirection} checkvoice={voiceOff} voice={this.state.enableAutoVoice} />
         });
+        if(closeCloude) {
+            this.setState({
+                closeCloude: 'show-cloude'
+            });
+            this.global.timeOutCloseCloud = setTimeout(function (that) {
+                that.setState({
+                    closeCloude: ''
+                });
+            },5000,this);
+        }
         if(event) event.preventDefault();
     };
     clearExercise = event => {
@@ -256,6 +280,7 @@ class FlashCards extends Component {
             classHideOrShowMainPartsPage: 'show-list-exercise-hide-flash-cards',
             classHideNavButtons: ''
         });
+        clearTimeout(this.global.timeOutCloseCloud);
         if(event) event.preventDefault();
     };
 
@@ -287,7 +312,7 @@ class FlashCards extends Component {
                 callObj: (this.state.idItem === false && this.state.idExercise !== -1)?<Congratulation that={this} ide={this.state.idExercise} />:''
             });
         } else {
-            this.setExercise(event,this.state.idExercise,this.state.idItem,'no-voice');
+            this.setExercise(event,this.state.idExercise,this.state.idItem,'no-voice',this.global.idC);
         }
         if(event) event.preventDefault();
     };
@@ -305,7 +330,7 @@ class FlashCards extends Component {
             direction: this.global.directionText()
         });
         if(this.state.idExercise > -1) {
-            this.setExercise(event,this.state.idExercise,this.state.idItem);
+            this.setExercise(event,this.state.idExercise,this.state.idItem,false,this.global.idC);
         }
         if(event) event.preventDefault();
     };
@@ -326,7 +351,7 @@ class FlashCards extends Component {
         return randomNr;
     };
     timeoutAnim = (y) => {
-        this.setExercise(null,y);
+        this.setExercise(null,y,false,false,this.global.idC);
         this.setState({classCheckOutMore: ''});
     };
     iKnow = (idI) => {
@@ -450,7 +475,7 @@ class FlashCards extends Component {
                     preloader: 'delete'
                 });
             },800,that);
-        },2000,this);
+        },4000,this);
     };
     closeApplication = () => {
         if(detectionDevice) {
@@ -462,7 +487,7 @@ class FlashCards extends Component {
             online: checkOnline
         });
         if(this.state.idExercise > -1) {
-            this.setExercise(event, this.state.idExercise, this.state.idItem,'no-voice');
+            this.setExercise(event, this.state.idExercise, this.state.idItem,'no-voice',this.global.idC);
         }
     };
 
@@ -473,7 +498,7 @@ class FlashCards extends Component {
         });
     };
 
-    moveMenu = (type,x) => {
+    moveMenu = (type,x,e) => {
         if(type==='move') {
             if(x>=0) {
                 if(x<100) {
@@ -482,11 +507,13 @@ class FlashCards extends Component {
                         mainNavInsetTransitionStop: 'main-nav-inset-transition-stop'
                     });
                 } else {
+
                     this.setState({
                         moveMenu: -this.widthMenu.current.offsetWidth,
                         mainNavInsetTransitionStop:'',
                         navMobileActive: '',
                     });
+                    this.global.fSwipe = false;
                 }
             }
         } else {
@@ -499,13 +526,16 @@ class FlashCards extends Component {
         }
     };
 
-    // onSwipeStart = () => {
-    //     this.moveMenu('start');
-    // };
+    onSwipeStart = () => {
+        this.global.fSwipe = true;
+    };
 
-    onSwipeMove = (position) => {
+    onSwipeMove = (position,e) => {
         //console.log(position.x);
-        this.moveMenu('move',position.x);
+        if(this.global.fSwipe) {
+            this.moveMenu('move',position.x,e);
+        }
+
     };
 
     onSwipeEnd = () => {
@@ -553,13 +583,14 @@ class FlashCards extends Component {
                     <div className="bg"></div>
                     <div className="bg bg-1"></div>
                     <div className="bg bg-2"></div>
+                    <div className="bg bg-3"></div>
 
                     {this.state.preloader!=='delete' && <div className={this.state.preloader + " preloader d-flex justify-content-center align-items-center"}><span className="icon-new-logo"></span></div>}
                     <header className="main-header">
                         <nav className="main-nav">
                             <button onClick={() => this.navMobileActive()} className="hamburger"><span></span><span></span><span></span></button>
                             <Swipe
-                                //onSwipeStart={this.onSwipeStart}
+                                onSwipeStart={this.onSwipeStart}
                                 onSwipeMove={this.onSwipeMove}
                                 onSwipeEnd={this.onSwipeEnd}
 
@@ -570,10 +601,11 @@ class FlashCards extends Component {
                                     <ul className="list-unstyled">
                                         <li><button className="enable-auto-voice border-content-bottom" onClick={this.enableAutoVoice}><span className="icon-volume"></span> {translate.buttonEnableAutoVoice}</button></li>
                                         <li><button className="close-rotate border-content-bottom" onClick={this.disableRotate}><span className="icon-ok"></span> {translate.buttonDisableRotate}</button></li>
-                                        <li><button className="rest-all border-content-bottom" onClick={() => {this.removeCookieExerciseAll(); this.clearExercise(); }}><span className="icon-trash-empty"></span>{translate.buttonRestartProgress}</button></li>
-                                        {detectionDevice && <li><button className="close-application" onClick={() => this.closeApplication}><span className="icon-cancel-circled"></span>{translate.buttonCloseApplication}</button></li>}
+                                        <li><button className="rest-all border-content-bottom" onClick={() => {this.removeCookieExerciseAll(); this.clearExercise(); }}><span className="icon-trash-empty"></span> {translate.buttonRestartProgress}</button></li>
+                                        {detectionDevice && <li><button className="close-application" onClick={() => this.closeApplication()}><span className="icon-cancel-circled"></span> {translate.buttonCloseApplication}</button></li>}
+                                        <span className="logo-menu icon-only-l"></span>
                                     </ul>
-                                    <p>- {translate.yourPlatform}: {detectionDevice?'Android/iOS':'Browser'}</p>
+                                    <p>{title}: Lang'FlashCards pl-en/en-pl <br />{translate.yourPlatform}: {detectionDevice?'Android/iOS':'Browser'}</p>
                                 </div>
                             </Swipe>
                         </nav>
@@ -601,22 +633,27 @@ class FlashCards extends Component {
                                         {dataJson.map(function (obj, i) {
                                             //console.log(obj);
                                             let percent = Math.ceil(obj.excludeID.length*100/obj.data.length),
-                                                stylePercent = {
+                                                stylePercent1 = {
                                                     background: 'linear-gradient(to right, #2c8548 0%,#2c8548 ' + percent + '%,#974c49 ' + percent + '%,#974c49 100%)'
-                                                };
+                                                },
+                                                stylePercent2 = {
+                                                    background: 'linear-gradient(to right, rgba(44,133,72,.2) 0%,rgba(44,133,72,.2) ' + percent + '%,rgba(255,255,255,0) ' + percent + '%,rgba(255,255,255,0) 100%), rgba(255,255,255,.4)',
+                                            };
                                             if(this.state.langNameExercise(obj.category) === obj_category) {
                                                 return (
                                                     <li key={i} className="d-flex justify-content-between">
 
-                                                        {(obj.excludeID.length !== 0 || obj.dontKnowClick !== 0) &&
-                                                            <button className={'border-content-bottom'} title="Reset" onClick={(e) => {this.removeCookieExerciseId(e,i,obj);}}><span className="icon-trash-empty"></span></button>
-                                                        }
-
-                                                        <a href={'#flashcard' + i} onClick={(e) => this.setExercise(e,i)}>
+                                                        <a href={'#flashcard' + i} style={stylePercent2} onClick={(e) => this.setExercise(e,i,false,false,j,true)}>
                                                             {/*<span className="percent-border-top"></span>*/}
-                                                            <span className="percent-pro" style={stylePercent}></span>
+                                                            <span className="percent-pro" style={stylePercent1}></span>
+                                                            <span className={"icon-random-card icon-random-card-" + j}></span>
+                                                            {obj.excludeID.length === obj.data.length && <span className="icon-ok"></span>}
                                                             {this.state.langNameExercise(obj.name)} <i><span className="icon-up color-5">{obj.excludeID.length}/{obj.data.length} = {percent}%</span> - <span className="icon-down color-6">{obj.dontKnowClick}</span></i>
                                                         </a>
+
+                                                        {(obj.excludeID.length !== 0 || obj.dontKnowClick !== 0) &&
+                                                        <button className={'border-content-bottom'} title="Reset" onClick={(e) => {this.removeCookieExerciseId(e,i,obj);}}><span className="icon-trash-empty"></span></button>
+                                                        }
 
                                                     </li>
                                                 );
@@ -629,7 +666,7 @@ class FlashCards extends Component {
                         },this)}
                     </div>
                     <div className={'main-flash-cards ' + this.state.classCheckOut + ' ' + this.state.classCheckOutMore}>
-                        <button className="button-close-exercise icon-cancel" onClick={this.clearExercise}><span>{translate.buttonCloseExercise} <i className="icon-right"></i></span></button>
+                        <button className="button-close-exercise icon-cancel" onClick={this.clearExercise}><span className={this.state.closeCloude}>{translate.buttonCloseExercise}</span></button>
 
                         <div className={'flash-card'}>
                             {this.state.callObj}
