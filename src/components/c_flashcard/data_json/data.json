@@ -4062,266 +4062,12 @@
   },
   {
     "category": {
-      "_pl":"",
-      "_en":""
-    },
-    "name": {
-      "_pl": "Idiomy",
-      "_en": "Idioms"
-    },
-    "data": [
-      {
-        "_en": "keep sth under one's hat",
-        "_pl": "trzymać coś w tajemnicy"
-      },
-      {
-        "_en": "the other side of the coin",
-        "_pl": "druga strona medalu"
-      },
-      {
-        "_en": "make up one's mind",
-        "_pl": "postanowić, zdecydować się"
-      },
-      {
-        "_en": "change a fly into an elephant",
-        "_pl": "robić z igły widły"
-      },
-      {
-        "_en": "easier said than done",
-        "_pl": "łatwiej powiedzieć, niż zrobić"
-      },
-      {
-        "_en": "on thin ice",
-        "_pl": "na niepewnym gruncie"
-      },
-      {
-        "_en": "hit the nail on the head",
-        "_pl": "trafić w sedno"
-      },
-      {
-        "_en": "it goes without saying",
-        "_pl": "to oczywiste, nie ma dwóch zdań"
-      },
-      {
-        "_en": "leave no stone unturned",
-        "_pl": "poruszyć niebo i ziemię, zastosować wszystkie środki"
-      },
-      {
-        "_en": "put in jeopardy",
-        "_pl": "narazić na niebiezpieczeństwo"
-      },
-      {
-        "_en": "cry for the moon",
-        "_pl": "chcieć gwiazdki z nieba"
-      },
-      {
-        "_en": "promise wonders",
-        "_pl": "obiecywać złote góry"
-      },
-      {
-        "_en": "self-made man",
-        "_pl": "człowiek, który sam się dorobił, zrobił karierę"
-      },
-      {
-        "_en": "read sb's hand",
-        "_pl": "wróżyć z ręki"
-      },
-      {
-        "_en": "shed blood",
-        "_pl": "przelewać krew"
-      },
-      {
-        "_en": "ups and downs",
-        "_pl": "radości i smutki, zmienne koleje losu"
-      },
-      {
-        "_en": "take sth for granted",
-        "_pl": "przyjmować coś za rzecz oczywistą, naturalną"
-      },
-      {
-        "_en": "be at a disadvantage",
-        "_pl": "być w niekorzystnej sytuacji"
-      },
-      {
-        "_en": "on the market",
-        "_pl": "w sprzedaży, na rynku"
-      },
-      {
-        "_en": "little by little",
-        "_pl": "stopniowo"
-      },
-
-
-      {
-        "_en": "at sb's expense",
-        "_pl": "czyimś kosztem"
-      },
-      {
-        "_en": "if you like",
-        "_pl": "jeśli masz na to ochotę"
-      },
-      {
-        "_en": "at all costs",
-        "_pl": "za wszelką cenę"
-      },
-      {
-        "_en": "at the top of your voice",
-        "_pl": "na całe gardło"
-      },
-      {
-        "_en": "burst out laughing",
-        "_pl": "wybuchać śmiechem"
-      },
-      {
-        "_en": "catch sb red-handed",
-        "_pl": "złapać kogoś na gorącym uczynku"
-      },
-      {
-        "_en": "high and low",
-        "_pl": "wszędzie"
-      },
-      {
-        "_en": "without fail",
-        "_pl": "niezawodnie"
-      },
-      {
-        "_en": "the naked eye",
-        "_pl": "gołym okiem"
-      },
-      {
-        "_en": "with a vengeance",
-        "_pl": "z podwójną siłą"
-      },
-      {
-        "_en": "gnash your teeth",
-        "_pl": "zgrzytać zębami"
-      },
-      {
-        "_en": "be in the red",
-        "_pl": "mieć debet (w banku)"
-      },
-      {
-        "_en": "a bad patch",
-        "_pl": "zła passa"
-      },
-      {
-        "_en": "after your own heart",
-        "_pl": "bratnia dusza"
-      },
-      {
-        "_en": "in haste",
-        "_pl": "w pośpiechu"
-      },
-      {
-        "_en": "inside out",
-        "_pl": "1. na lewą stronę, 2. (znać) na wylot"
-      },
-      {
-        "_en": "make amends",
-        "_pl": "wynagradzać szkodę,szkody"
-      },
-      {
-        "_en": "ease sb's mind",
-        "_pl": "uspokajać kogoś"
-      },
-      {
-        "_en": "a ray of hope",
-        "_pl": "promyk nadziei"
-      },
-      {
-        "_en": "out of print",
-        "_pl": "wyczerpany nakład książki"
-      },
-      {
-        "_en": "get on sb's nerves",
-        "_pl": "działać (komuś) na nerwy"
-      },
-      {
-        "_en": "have something on the brain",
-        "_pl": "chodzić komuś po głowie"
-      },
-      {
-        "_en": "rat race",
-        "_pl": "wyścig szczurów"
-      },
-      {
-        "_en": "get the message",
-        "_pl": "załapać, zrozumieć coś"
-      },
-      {
-        "_en": "ask for trouble",
-        "_pl": "prosić się o kłopoty"
-      },
-      {
-        "_en": "pay tribute to sb,sth",
-        "_pl": "wyrażać (komuś) swoje uznanie, oddawać hołd"
-      },
-      {
-        "_en": "in bulk",
-        "_pl": "hurtowo"
-      },
-      {
-        "_en": "give somebody a ring",
-        "_pl": "zadzwonić do kogoś"
-      },
-      {
-        "_en": "all year round",
-        "_pl": "przez cały rok"
-      },
-      {
-        "_en": "all of a sudden",
-        "_pl": "nagle"
-      },
-      {
-        "_en": "as a matter of fact",
-        "_pl": "prawdę mówiąc, w rzeczywistości"
-      },
-      {
-        "_en": "be quits (with somebody)",
-        "_pl": "być kwita"
-      },
-      {
-        "_en": "by courtesy of",
-        "_pl": "dzięki uprzejmości, za zgodą"
-      },
-      {
-        "_en": "on location",
-        "_pl": "(o programie, filmie) w plenerze"
-      },
-      {
-        "_en": "go to waste",
-        "_pl": "marnować się"
-      },
-      {
-        "_en": "on impulse",
-        "_pl": "spontanicznie"
-      },
-      {
-        "_en": "trial and error",
-        "_pl": "metoda prób i błędów"
-      },
-      {
-        "_en": "snap one's fingers",
-        "_pl": "pstrykać palcami"
-      },
-      {
-        "_en": "let something slip",
-        "_pl": "wygadać się"
-      },
-      {
-        "_en": "heave a sigh",
-        "_pl": "wzdychać (głęboko)"
-      }
-    ]
-  },
-  {
-    "category": {
       "_pl": "",
       "_en": ""
     },
     "name": {
-      "_pl": "Czasowniki nieregularne",
-      "_en": "Irregular verbs"
+      "_pl": "Czasowniki nieregularne (całość)",
+      "_en": "Irregular verbs (all)"
     },
     "data": [
       {
@@ -4524,6 +4270,9 @@
         "_pl": "porzucać ",
         "_en": " forsake / forsook / forsaken"
       },
+
+
+
       {
         "_pl": "mrozić ",
         "_en": " freeze / froze / frozen"
@@ -4724,6 +4473,9 @@
         "_pl": "szyć ",
         "_en": " sew / sewed / sewn"
       },
+
+
+
       {
         "_pl": "trząść / wstrząsnąć ",
         "_en": " shake / shook / shaken"
@@ -9074,13 +8826,675 @@
         "_pl": "język"
       }]
   },
+
+
   {
     "category": {
-      "_pl": "Podstawowe słowa",
-      "_en": "Basic words"
+      "_pl": "Czasowniki nieregularne - ćwiczenia",
+      "_en": "Irregular verbs - exercises"
     },
     "name": {
-      "_pl": "Dni tygodnia",
+      "_pl": "Ćwiczenie 1",
+      "_en": "Exercise 1"
+    },
+    "data":[
+      {
+        "_pl": "powstawać / pojawiać się ",
+        "_en": " arise / arose / arisen"
+      },
+      {
+        "_pl": "budzić się ",
+        "_en": " awake / awoke / awoken"
+      },
+      {
+        "_pl": "być ",
+        "_en": " be / was / been"
+      },
+      {
+        "_pl": "nosić / rodzić ",
+        "_en": " bear / bore / borne"
+      },
+      {
+        "_pl": "bić ",
+        "_en": " beat / beat / beaten"
+      },
+      {
+        "_pl": "zostawać ",
+        "_en": " become / became / become"
+      },
+      {
+        "_pl": "przytrafić się / spotykać ",
+        "_en": " befall / befell / befallen"
+      },
+      {
+        "_pl": "zaczynać / zacząć ",
+        "_en": " begin / began / begun"
+      },
+      {
+        "_pl": "ujrzeć ",
+        "_en": " behold / beheld / beheld"
+      },
+      {
+        "_pl": "pochylić się ",
+        "_en": " bend / bent / bent"
+      },
+      {
+        "_pl": "dreczyć / prześladować ",
+        "_en": " beset / beset / beset"
+      },
+      {
+        "_pl": "zakładać się ",
+        "_en": " bet / bet / bet"
+      },
+      {
+        "_pl": "przywiązywać ",
+        "_en": " bind / bound / bound"
+      },
+      {
+        "_pl": "gryźć / kąsać ",
+        "_en": " bite / bit / bitten"
+      },
+      {
+        "_pl": "krwawić ",
+        "_en": " bleed / bled / bled"
+      },
+      {
+        "_pl": "dmuchać ",
+        "_en": " blow / blew / blown"
+      },
+      {
+        "_pl": "tłuc / połamać ",
+        "_en": " break / broke / broken"
+      },
+      {
+        "_pl": "hodować ",
+        "_en": " breed / bred / bred"
+      },
+      {
+        "_pl": "przynosić ",
+        "_en": " bring / brought / brought"
+      },
+      {
+        "_pl": "budować ",
+        "_en": " build / built / built"
+      },
+      {
+        "_pl": "palić / spalać się ",
+        "_en": " burn / burnt / burnt"
+      },
+      {
+        "_pl": "rozrywać ",
+        "_en": " burst / burst / burst"
+      },
+      {
+        "_pl": "kupować ",
+        "_en": " buy / bought / bought"
+      },
+      {
+        "_pl": "móc ",
+        "_en": " can / could / been able"
+      },
+      {
+        "_pl": "rzucać ",
+        "_en": " cast / cast / cast"
+      },
+      {
+        "_pl": "łapać ",
+        "_en": " catch / caught / caught"
+      },
+      {
+        "_pl": "wybierać ",
+        "_en": " choose / chose / chosen"
+      },
+      {
+        "_pl": "przychodzić ",
+        "_en": " come / came / come"
+      },
+      {
+        "_pl": "kosztować ",
+        "_en": " cost / cost / cost"
+      },
+      {
+        "_pl": "skradać się ",
+        "_en": " creep / crept / crept"
+      },
+      {
+        "_pl": "kroić ",
+        "_en": " cut / cut / cut"
+      },
+      {
+        "_pl": "kopać ",
+        "_en": " dig / dug / dug"
+      },
+      {
+        "_pl": "robić ",
+        "_en": " do / did / done"
+      },
+      {
+        "_pl": "rysować ",
+        "_en": " draw / drew / drawn"
+      },
+      {
+        "_pl": "snić ",
+        "_en": " dream / dreamt / dreamt"
+      },
+      {
+        "_pl": "pić ",
+        "_en": " drink / drank / drunk"
+      },
+      {
+        "_pl": "jechać ",
+        "_en": " drive / drove / driven"
+      },
+      {
+        "_pl": "mieszkać ",
+        "_en": " dwell / dwelt / dwelt"
+      },
+      {
+        "_pl": "jeść ",
+        "_en": " eat / ate / eaten"
+      },
+      {
+        "_pl": "upaść ",
+        "_en": " fall / fell / fallen"
+      },
+      {
+        "_pl": "karmić ",
+        "_en": " feed / fed / fed"
+      },
+      {
+        "_pl": "czuć ",
+        "_en": " feel / felt / felt"
+      },
+      {
+        "_pl": "uciekać ",
+        "_en": " flee / fled / fled"
+      },
+      {
+        "_pl": "rzucać ",
+        "_en": " fling / flung / flung"
+      },
+      {
+        "_pl": "lecieć ",
+        "_en": " fly / flew / flown"
+      },
+      {
+        "_pl": "zakazywać ",
+        "_en": " forbid / forbade / forbidden"
+      },
+      {
+        "_pl": "przewidywać ",
+        "_en": " forecast / forecast / forecast"
+      },
+      {
+        "_pl": "zapominać ",
+        "_en": " forget / forgot / forgotten"
+      },
+      {
+        "_pl": "wybaczać ",
+        "_en": " forgive / forgave / forgiven"
+      },
+      {
+        "_pl": "porzucać ",
+        "_en": " forsake / forsook / forsaken"
+      }]
+  },
+  {
+    "category": {
+      "_pl": "Czasowniki nieregularne - ćwiczenia",
+      "_en": "Irregular verbs - exercises"
+    },
+    "name": {
+      "_pl": "Ćwiczenie 2",
+      "_en": "Exercise 2"
+    },
+    "data":[
+      {
+        "_pl": "mrozić ",
+        "_en": " freeze / froze / frozen"
+      },
+      {
+        "_pl": "dostać ",
+        "_en": " get / got / got"
+      },
+      {
+        "_pl": "dawać ",
+        "_en": " give / gave / given"
+      },
+      {
+        "_pl": "iść ",
+        "_en": " go / went / gone"
+      },
+      {
+        "_pl": "kruszyć ",
+        "_en": " grind / ground / ground"
+      },
+      {
+        "_pl": "wisieć ",
+        "_en": " hang / hung / hung"
+      },
+      {
+        "_pl": "zawieszać ",
+        "_en": " hang / hanged / hanged"
+      },
+      {
+        "_pl": "mieć ",
+        "_en": " have / had / had"
+      },
+      {
+        "_pl": "słyszeć ",
+        "_en": " hear / heard / heard"
+      },
+      {
+        "_pl": "skrywać ",
+        "_en": " hide / hid / hidden"
+      },
+      {
+        "_pl": "uderzać ",
+        "_en": " hit / hit / hit"
+      },
+      {
+        "_pl": "trzymać ",
+        "_en": " hold / held / held"
+      },
+      {
+        "_pl": "skrzywdzić / zranić / sprawiać ",
+        "_en": " hurt / hurt / hurt"
+      },
+      {
+        "_pl": "trzymać / zachowywać ",
+        "_en": " keep / kept / kept"
+      },
+      {
+        "_pl": "klękać ",
+        "_en": " kneel / knelt / knelt"
+      },
+      {
+        "_pl": "wiedzieć / znać ",
+        "_en": " know / knew / known"
+      },
+      {
+        "_pl": "kłaść / położyć ",
+        "_en": " lay / laid / laid"
+      },
+      {
+        "_pl": "prowadzić ",
+        "_en": " lead / led / led"
+      },
+      {
+        "_pl": "skłonić się / opierać / przechylić ",
+        "_en": " lean / leant / leant"
+      },
+      {
+        "_pl": "wychodzić ",
+        "_en": " leave / left / left"
+      },
+      {
+        "_pl": "pożyczać (komuś) ",
+        "_en": " lend / lent / lent"
+      },
+      {
+        "_pl": "pozwalać ",
+        "_en": " let / let / let"
+      },
+      {
+        "_pl": "leżeć ",
+        "_en": " lie / lay / lain"
+      },
+      {
+        "_pl": "kłamać ",
+        "_en": " lie / lied / lied"
+      },
+      {
+        "_pl": "zapalać ",
+        "_en": " light / lit lighted / lit lighted"
+      },
+      {
+        "_pl": "gubić ",
+        "_en": " lose / lost / lost"
+      },
+      {
+        "_pl": "robić ",
+        "_en": " make / made / made"
+      },
+      {
+        "_pl": "móc ",
+        "_en": " may / might / -"
+      },
+      {
+        "_pl": "oznaczać / mieć na myśli ",
+        "_en": " mean / meant / meant"
+      },
+      {
+        "_pl": "spotkać się ",
+        "_en": " meet / met / met"
+      },
+      {
+        "_pl": "pomylić ",
+        "_en": " mistake / mistook / mistaken"
+      },
+      {
+        "_pl": "kosić ",
+        "_en": " mow / mowed / mown"
+      },
+      {
+        "_pl": "musieć ",
+        "_en": " must / had to / had to"
+      },
+      {
+        "_pl": "płacić ",
+        "_en": " pay / paid / paid"
+      },
+      {
+        "_pl": "klaść / wsadzić ",
+        "_en": " put / put / put"
+      },
+      {
+        "_pl": "zrezygnować ",
+        "_en": " quit / quit / quit"
+      },
+      {
+        "_pl": "czytać ",
+        "_en": " read / read / read"
+      },
+      {
+        "_pl": "uwalniać / oczyścić ",
+        "_en": " rid / rid / rid"
+      },
+      {
+        "_pl": "jeździć konno ",
+        "_en": " ride / rode / ridden"
+      },
+      {
+        "_pl": "dzwonić ",
+        "_en": " ring / rang / rung"
+      },
+      {
+        "_pl": "rosnąć ",
+        "_en": " rise / rose / risen"
+      },
+      {
+        "_pl": "biec ",
+        "_en": " run / ran / run"
+      },
+      {
+        "_pl": "piłować / rżnąć ",
+        "_en": " saw / sawed / sawn"
+      },
+      {
+        "_pl": "mówić ",
+        "_en": " say / said / said"
+      },
+      {
+        "_pl": "widzieć ",
+        "_en": " see / saw / seen"
+      },
+      {
+        "_pl": "szukać / aportować ",
+        "_en": " seek / sought / sought"
+      },
+      {
+        "_pl": "sprzedawać ",
+        "_en": " sell / sold / sold"
+      },
+      {
+        "_pl": "wysyłać ",
+        "_en": " send / sent / sent"
+      },
+      {
+        "_pl": "przygotowywać / ustawić ",
+        "_en": " set / set / set"
+      },
+      {
+        "_pl": "szyć ",
+        "_en": " sew / sewed / sewn"
+      }]
+  },
+  {
+    "category": {
+      "_pl": "Czasowniki nieregularne - ćwiczenia",
+      "_en": "Irregular verbs - exercises"
+    },
+    "name": {
+      "_pl": "Ćwiczenie 3",
+      "_en": "Exercise 3"
+    },
+    "data":[
+      {
+      "_pl": "trząść / wstrząsnąć ",
+      "_en": " shake / shook / shaken"
+      },
+      {
+        "_pl": "strzyc ",
+        "_en": " shear / sheared / shorn"
+      },
+      {
+        "_pl": "rozsiewać / lać / rozlać ",
+        "_en": " shed / shed / shed"
+      },
+      {
+        "_pl": "świecić / zabłysnąć ",
+        "_en": " shine / shone / shone"
+      },
+      {
+        "_pl": "wystrzelić / strzelać ",
+        "_en": " shoot / shot / shot"
+      },
+      {
+        "_pl": "pokazywać ",
+        "_en": " show / showed / shown"
+      },
+      {
+        "_pl": "kurczyć się ",
+        "_en": " shrink / shrank / shrunk"
+      },
+      {
+        "_pl": "zamykać ",
+        "_en": " shut / shut / shut"
+      },
+      {
+        "_pl": "śpiewać ",
+        "_en": " sing / sang / sung"
+      },
+      {
+        "_pl": "siadać ",
+        "_en": " sit / sat / sat"
+      },
+      {
+        "_pl": "spać ",
+        "_en": " sleep / slept / slept"
+      },
+      {
+        "_pl": "pośliznąć się ",
+        "_en": " slide / slid / slid"
+      },
+      {
+        "_pl": "zawieszać / podwieszać ",
+        "_en": " sling / slung / slung"
+      },
+      {
+        "_pl": "rozciąć / poderżnąć ",
+        "_en": " slit / slit / slit"
+      },
+      {
+        "_pl": "pachnieć ",
+        "_en": " smell / smelt / smelt"
+      },
+      {
+        "_pl": "siać / zasiać ",
+        "_en": " sow / sowed / sown sowed"
+      },
+      {
+        "_pl": "mówić ",
+        "_en": " speak / spoke / spoken"
+      },
+      {
+        "_pl": "pędzić / jeździć (z dużą prędkością) ",
+        "_en": " speed / sped / sped"
+      },
+      {
+        "_pl": "przeliterować ",
+        "_en": " spell / spelt / spelt"
+      },
+      {
+        "_pl": "wydawać (pieniądze) / spędzać czas ",
+        "_en": " spend / spent / spent"
+      },
+      {
+        "_pl": "rozlewać ",
+        "_en": " spill / spilt / spilt"
+      },
+      {
+        "_pl": "snuć / wirować / obracać ",
+        "_en": " spin / spun / spun"
+      },
+      {
+        "_pl": "pluć / napluć ",
+        "_en": " spit / spat / spat"
+      },
+      {
+        "_pl": "uszkadzać / psuć / zepsuć ",
+        "_en": " spoil / spoilt / spoilt"
+      },
+      {
+        "_pl": "rozkladać / rozsmarować / rozszerzyć ",
+        "_en": " spread / spread / spread"
+      },
+      {
+        "_pl": "sprężynować ",
+        "_en": " spring / sprang / sprung"
+      },
+      {
+        "_pl": "stać ",
+        "_en": " stand / stood / stood"
+      },
+      {
+        "_pl": "kraść ",
+        "_en": " steal / stole / stolen"
+      },
+      {
+        "_pl": "przyklejać(się) ",
+        "_en": " stick / stuck / stuck"
+      },
+      {
+        "_pl": "kłuć ",
+        "_en": " sting / stung / stung"
+      },
+      {
+        "_pl": "śmierdzieć ",
+        "_en": " stink / stank / stunk"
+      },
+      {
+        "_pl": "kroczyć ",
+        "_en": " stride / strode / stridden"
+      },
+      {
+        "_pl": "strajkować / walić / uderzać ",
+        "_en": " strike / struck / struck"
+      },
+      {
+        "_pl": "dążyć do czegoś / usiłować / krzątać ",
+        "_en": " strive / strove / striven"
+      },
+      {
+        "_pl": "klnąć ",
+        "_en": " swear / swore / sworn"
+      },
+      {
+        "_pl": "zamiatać ",
+        "_en": " sweep / swept / swept"
+      },
+      {
+        "_pl": "spuchnąć / obrzęknąć ",
+        "_en": " swell / swelled / swollen"
+      },
+      {
+        "_pl": "pływać ",
+        "_en": " swim / swam / swum"
+      },
+      {
+        "_pl": "huśtać się / machać czymś ",
+        "_en": " swing / swung / swung"
+      },
+      {
+        "_pl": "brać ",
+        "_en": " take / took / taken"
+      },
+      {
+        "_pl": "uczyć (kogoś) ",
+        "_en": " teach / taught / taught"
+      },
+      {
+        "_pl": "drzeć ",
+        "_en": " tear / tore / torn"
+      },
+      {
+        "_pl": "mówić / powiedzieć ",
+        "_en": " tell / told / told"
+      },
+      {
+        "_pl": "myśleć ",
+        "_en": " think / thought / thought"
+      },
+      {
+        "_pl": "rzucać ",
+        "_en": " throw / threw / thrown"
+      },
+      {
+        "_pl": "pchać / atakować / napierać ",
+        "_en": " thrust / thrust / thrust"
+      },
+      {
+        "_pl": "stąpać / chodzić po czymś ",
+        "_en": " tread / trod / trodden"
+      },
+      {
+        "_pl": "budzić się ",
+        "_en": " wake / woke / woken"
+      },
+      {
+        "_pl": "mieć na sobie / ubierać ",
+        "_en": " wear / wore / worn"
+      },
+      {
+        "_pl": "przemykać ",
+        "_en": " weave / wove / woven"
+      },
+      {
+        "_pl": "tkać / wplatać ",
+        "_en": " weave / wove / woven"
+      },
+      {
+        "_pl": "płakać ",
+        "_en": " weep / wept / wept"
+      },
+      {
+        "_pl": "wygrać ",
+        "_en": " win / won / won"
+      },
+      {
+        "_pl": "owijać / nawijać ",
+        "_en": " wind / wound / wound"
+      },
+      {
+        "_pl": "wyciskać / ściskać czyjeś ręce ",
+        "_en": " wring / wrung / wrung"
+      },
+      {
+        "_pl": "pisać ",
+        "_en": " write / wrote / written"
+      }]
+  },
+
+
+
+  {
+    "category": {
+      "_pl": "Podstawowe słowa i frazy",
+      "_en": "Basic words and phrases"
+    },
+    "name": {
+      "_pl": "Dni tygodnia i frazy",
       "_en": "Days of the week"
     },
     "data": [
@@ -9116,8 +9530,8 @@
   },
   {
     "category": {
-      "_pl": "Podstawowe słowa",
-      "_en": "Basic words"
+      "_pl": "Podstawowe słowa i frazy",
+      "_en": "Basic words and phrases"
     },
     "name": {
       "_pl": "Miesiące",
