@@ -98,7 +98,7 @@ class Exercises extends Component {
                                                     <span>{obj._en}</span>
                                                 </p>
                                                 <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl)} className="google-translator" target='blank_'>
-                                                    Google Translator<span className="icon-language"></span>
+                                                    Google Translate<span className="icon-language"></span>
                                                 </button>
                                             </div>
                                         </div>
@@ -123,7 +123,7 @@ class Exercises extends Component {
                                                     <span>{obj._pl}</span>
                                                 </p>
                                                 <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en)} className="google-translator" target='blank_'>
-                                                    Google Translator<span className="icon-language"></span>
+                                                    Google Translate<span className="icon-language"></span>
                                                 </button>
                                             </div>
                                         </div>
@@ -206,6 +206,7 @@ class FlashCards extends Component {
             moveMenu: '',
             mainNavInsetTransitionStop: '',
             closeCloude: '',
+            showAbouts: '',
             langNameExercise: (j,l=this.global.lang) => {
                 switch (l) {
                     case 'en': return j._en;
@@ -494,8 +495,13 @@ class FlashCards extends Component {
     navMobileActive = () => {
         this.setState({
             navMobileActive: (this.state.navMobileActive)?'':'nav-mobile-active',
-            moveMenu: (this.state.navMobileActive)?-this.widthMenu.current.offsetWidth:0,
+            moveMenu: (this.state.navMobileActive)?this.widthMenu.current.offsetWidth:0,
         });
+    };
+
+    // flTemporary = false;
+    onSwipeStart = () => {
+        this.global.fSwipe = true;
     };
 
     moveMenu = (type,x,e) => {
@@ -503,13 +509,20 @@ class FlashCards extends Component {
             if(x>=0) {
                 if(x<100) {
                     this.setState({
-                        moveMenu: -x,
+                        moveMenu: x,
                         mainNavInsetTransitionStop: 'main-nav-inset-transition-stop'
                     });
+                    // if(!this.flTemporary) {
+                    //     this.flTemporary = true;
+                    //     setTimeout(function (that) {
+                    //         that.flTemporary = false;
+                    //     },100,this);
+                    // }
+
                 } else {
 
                     this.setState({
-                        moveMenu: -this.widthMenu.current.offsetWidth,
+                        moveMenu: this.widthMenu.current.offsetWidth,
                         mainNavInsetTransitionStop:'',
                         navMobileActive: '',
                     });
@@ -517,6 +530,14 @@ class FlashCards extends Component {
                 }
             }
         } else {
+            // if(this.flTemporary) {
+            //     this.setState({
+            //         moveMenu: this.widthMenu.current.offsetWidth,
+            //         mainNavInsetTransitionStop:'',
+            //         navMobileActive: '',
+            //     });
+            //     this.global.fSwipe = false;
+            // }
             if(this.state.navMobileActive !== '') {
                 this.setState({
                     moveMenu: 0,
@@ -524,10 +545,6 @@ class FlashCards extends Component {
                 });
             }
         }
-    };
-
-    onSwipeStart = () => {
-        this.global.fSwipe = true;
     };
 
     onSwipeMove = (position,e) => {
@@ -540,11 +557,18 @@ class FlashCards extends Component {
 
     onSwipeEnd = () => {
         this.moveMenu();
+
     };
 
     onResize = () => {
         this.setState({
-            moveMenu: (!this.state.navMobileActive)?-this.widthMenu.current.offsetWidth:0,
+            moveMenu: (!this.state.navMobileActive)?this.widthMenu.current.offsetWidth:0,
+        });
+    };
+
+    showAbouts = () => {
+        this.setState({
+            showAbouts: this.state.showAbouts?'':'abouts-l-active'
         });
     };
     componentWillMount(){
@@ -588,6 +612,7 @@ class FlashCards extends Component {
                     {this.state.preloader!=='delete' && <div className={this.state.preloader + " preloader d-flex justify-content-center align-items-center"}><span className="icon-new-logo"></span></div>}
                     <header className="main-header">
                         <nav className="main-nav">
+                            <button className={"bg-close d-block d-xl-none" + (this.state.navMobileActive && ' bg-close-show')}  onClick={() => this.navMobileActive()}></button>
                             <button onClick={() => this.navMobileActive()} className="hamburger"><span></span><span></span><span></span></button>
                             <Swipe
                                 onSwipeStart={this.onSwipeStart}
@@ -596,16 +621,25 @@ class FlashCards extends Component {
 
                                 // onSwipeRight={() => this.navMobileActive(true)}
                             >
-                                <div ref={this.widthMenu} className={"main-nav-inset " + this.state.mainNavInsetTransitionStop} style={{right: this.state.moveMenu + 'px'}}>
+
+                                <div ref={this.widthMenu} className={"main-nav-inset " + this.state.mainNavInsetTransitionStop} style={{transform: 'translate3d(' + this.state.moveMenu + 'px, 0, 0)'}}>
                                     <ReactResizeDetector handleWidth handleHeight onResize={this.onResize} />
                                     <ul className="list-unstyled">
+                                        <li><button className="rest-all border-content-bottom" onClick={() => {this.removeCookieExerciseAll(); this.clearExercise(); }}><span className="icon-trash-empty"></span> {translate.buttonRestartProgress}</button></li>
+
                                         <li><button className="enable-auto-voice border-content-bottom" onClick={this.enableAutoVoice}><span className="icon-volume"></span> {translate.buttonEnableAutoVoice}</button></li>
                                         <li><button className="close-rotate border-content-bottom" onClick={this.disableRotate}><span className="icon-ok"></span> {translate.buttonDisableRotate}</button></li>
-                                        <li><button className="rest-all border-content-bottom" onClick={() => {this.removeCookieExerciseAll(); this.clearExercise(); }}><span className="icon-trash-empty"></span> {translate.buttonRestartProgress}</button></li>
                                         {detectionDevice && <li><button className="close-application" onClick={() => this.closeApplication()}><span className="icon-cancel-circled"></span> {translate.buttonCloseApplication}</button></li>}
-                                        <span className="logo-menu icon-only-l"></span>
+
+                                        <li>
+                                            <button className={"abouts-l border-content-bottom " + this.state.showAbouts} onClick={() => this.showAbouts()}><span className="icon-new-logo"></span> Abouts {title}</button>
+                                            <div className="abouts-box">
+                                                <p>Autor: semDesign,<br />Technology: js, react, cordova<br />Contact: aleksandernyczyk@tlen.pl</p>
+                                            </div>
+                                        </li>
                                     </ul>
                                     <p>{title}: Lang'FlashCards pl-en/en-pl <br />{translate.yourPlatform}: {detectionDevice?'Android/iOS':'Browser'}</p>
+                                    <span className="logo-menu icon-only-l"></span>
                                 </div>
                             </Swipe>
                         </nav>
