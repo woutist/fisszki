@@ -501,7 +501,9 @@ class FlashCards extends Component {
 
     // flTemporary = false;
     onSwipeStart = () => {
-        this.global.fSwipe = true;
+        if(this.state.navMobileActive) {
+            this.global.fSwipe = true;
+        }
     };
 
     moveMenu = (type,x,e) => {
@@ -549,15 +551,16 @@ class FlashCards extends Component {
 
     onSwipeMove = (position,e) => {
         //console.log(position.x);
-        if(this.global.fSwipe) {
+        if(this.state.navMobileActive && this.global.fSwipe) {
             this.moveMenu('move',position.x,e);
         }
 
     };
 
     onSwipeEnd = () => {
-        this.moveMenu();
-
+        if(this.state.navMobileActive) {
+            this.moveMenu();
+        }
     };
 
     onResize = () => {
@@ -602,7 +605,13 @@ class FlashCards extends Component {
         let directionState = this.state.direction.split("|");
 
         return (
+            <Swipe
+                onSwipeStart={this.onSwipeStart}
+                onSwipeMove={this.onSwipeMove}
+                onSwipeEnd={this.onSwipeEnd}
 
+                // onSwipeRight={() => this.navMobileActive(true)}
+            >
                 <div className={'module-flash-cards ' + this.state.classHideOrShowMainPartsPage + ' ' + this.state.navMobileActive + ' ' + this.state.rotateDisable + ' ' + this.state.enableAutoVoice}>
                     <div className="bg"></div>
                     <div className="bg bg-1"></div>
@@ -610,53 +619,58 @@ class FlashCards extends Component {
                     <div className="bg bg-3"></div>
 
                     {this.state.preloader!=='delete' && <div className={this.state.preloader + " preloader d-flex justify-content-center align-items-center"}><span className="icon-new-logo"></span></div>}
-                    <header className="main-header">
-                        <nav className="main-nav">
-                            <button className={"bg-close d-block d-xl-none" + (this.state.navMobileActive && ' bg-close-show')}  onClick={() => this.navMobileActive()}></button>
-                            <button onClick={() => this.navMobileActive()} className="hamburger"><span></span><span></span><span></span></button>
-                            <Swipe
-                                onSwipeStart={this.onSwipeStart}
-                                onSwipeMove={this.onSwipeMove}
-                                onSwipeEnd={this.onSwipeEnd}
 
-                                // onSwipeRight={() => this.navMobileActive(true)}
-                            >
+                    <div class="main-header-wrap">
+                        <header className="main-header">
+                            <nav className="main-nav">
+                                <button className={"bg-close d-block d-xl-none" + (this.state.navMobileActive && ' bg-close-show')}  onClick={() => this.navMobileActive()}><span className="icon-right-open"></span></button>
+                                <button onClick={() => this.navMobileActive()} className="hamburger"><span></span><span></span><span></span></button>
 
-                                <div ref={this.widthMenu} className={"main-nav-inset " + this.state.mainNavInsetTransitionStop} style={{transform: 'translate3d(' + this.state.moveMenu + 'px, 0, 0)'}}>
-                                    <ReactResizeDetector handleWidth handleHeight onResize={this.onResize} />
-                                    <ul className="list-unstyled">
-                                        <li><button className="rest-all border-content-bottom" onClick={() => {this.removeCookieExerciseAll(); this.clearExercise(); }}><span className="icon-trash-empty"></span> {translate.buttonRestartProgress}</button></li>
 
-                                        <li><button className="enable-auto-voice border-content-bottom" onClick={this.enableAutoVoice}><span className="icon-volume"></span> {translate.buttonEnableAutoVoice}</button></li>
-                                        <li><button className="close-rotate border-content-bottom" onClick={this.disableRotate}><span className="icon-ok"></span> {translate.buttonDisableRotate}</button></li>
-                                        {detectionDevice && <li><button className="close-application" onClick={() => this.closeApplication()}><span className="icon-cancel-circled"></span> {translate.buttonCloseApplication}</button></li>}
+                                    <div ref={this.widthMenu} className={"main-nav-inset " + this.state.mainNavInsetTransitionStop} style={{transform: 'translate3d(' + this.state.moveMenu + 'px, 0, 0)'}}>
+                                        <ReactResizeDetector handleWidth handleHeight onResize={this.onResize} />
+                                        <div className="main-nav-inset-box">
+                                            <ul className="list-unstyled main-nav-inset-list">
+                                                <li class="d-flex buttons-language">
+                                                    <button className={"border-content-bottom " + this.state.activePL} onClick={(e) => this.setLang(e,'pl')}><span className="icon-ok"></span> PL</button>
+                                                    <button className={"border-content-bottom " + this.state.activeEN} onClick={(e) => this.setLang(e,'en')}><span className="icon-ok"></span> EN</button>
+                                                </li>
+                                                <li><button className="border-content-bottom exchange-direction-language" onClick={(e) => this.changeDirection(e)}><span className="icon-exchange"></span> {directionState[0]} <span className="icon-right"></span> {directionState[1]}</button></li>
 
-                                        <li>
-                                            <button className={"abouts-l border-content-bottom " + this.state.showAbouts} onClick={() => this.showAbouts()}><span className="icon-new-logo"></span> Abouts {title}</button>
-                                            <div className="abouts-box">
-                                                <p>Autor: semDesign,<br />Technology: js, react, cordova<br />Contact: aleksandernyczyk@tlen.pl</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <p>{title}: Lang'FlashCards pl-en/en-pl <br />{translate.yourPlatform}: {detectionDevice?'Android/iOS':'Browser'}</p>
-                                    <span className="logo-menu icon-only-l"></span>
-                                </div>
-                            </Swipe>
-                        </nav>
-                        <ul className="list-language d-flex flex-row list-unstyled">
-                            <li>{!isIE && <Detector
-                                onChange={(online,event) => this.checkOnline(event,online)}
-                                render={({ online }) => (
-                                    <span title={online?'online':'offline'} className={'icon-globe ' + (online?'':'icon-globe-disable')}></span>
-                                )}
-                            />}</li>
-                            <li className="flag-pl"><a href={'#pl'} className={this.state.activePL} onClick={(e) => this.setLang(e,'pl')}>PL</a></li>
-                            <li className="flag-en"><a href={'#en'} className={this.state.activeEN} onClick={(e) => this.setLang(e,'en')}>EN</a></li>
-                        </ul>
-                        <h1 className="icon-new-logo"><span className="d-none">F</span>lashCrads</h1>
-                        <button className="direction-lang" onClick={(e) => this.changeDirection(e)}>{directionState[0]} <span className="icon-exchange"></span> {directionState[1]}</button>
-                    </header>
+                                                <li><button className="enable-auto-voice border-content-bottom" onClick={this.enableAutoVoice}><span className="icon-volume"></span> {translate.buttonEnableAutoVoice}</button></li>
+                                                <li><button className="close-rotate border-content-bottom" onClick={this.disableRotate}><span className="icon-ok"></span> {translate.buttonDisableRotate}</button></li>
 
+                                                <li><button className="rest-all border-content-bottom" onClick={() => {this.removeCookieExerciseAll(); this.clearExercise(); }}><span className="icon-trash-empty"></span> {translate.buttonRestartProgress}</button></li>
+
+                                                {detectionDevice && <li><button className="close-application" onClick={() => this.closeApplication()}><span className="icon-cancel-circled"></span> {translate.buttonCloseApplication}</button></li>}
+
+                                                <li>
+                                                    <button className={"abouts-l border-content-bottom " + this.state.showAbouts} onClick={() => this.showAbouts()}><span className="icon-new-logo"></span> Abouts {title}</button>
+                                                    <div className="abouts-box">
+                                                        <p>Autor: semDesign,<br />Technology: js, react, cordova<br />Contact: aleksandernyczyk@tlen.pl</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <p>{title}: Lang'FlashCards pl-en/en-pl <br />{translate.yourPlatform}: {detectionDevice?'Android/iOS':'Browser'}</p>
+                                            <span className="logo-menu icon-only-l"></span>
+                                        </div>
+                                    </div>
+
+                            </nav>
+                            <ul className="list-language d-flex flex-row list-unstyled">
+                                <li>{!isIE && <Detector
+                                    onChange={(online,event) => this.checkOnline(event,online)}
+                                    render={({ online }) => (
+                                        <span title={online?'online':'offline'} className={'icon-globe ' + (online?'':'icon-globe-disable')}></span>
+                                    )}
+                                />}</li>
+                                <li className="flag-pl"><a href={'#pl'} className={this.state.activePL} onClick={(e) => this.setLang(e,'pl')}>PL</a></li>
+                                <li className="flag-en"><a href={'#en'} className={this.state.activeEN} onClick={(e) => this.setLang(e,'en')}>EN</a></li>
+                            </ul>
+                            <h1 className="icon-new-logo"><span className="d-none">F</span>lashCrads</h1>
+                            <button className="direction-lang" onClick={(e) => this.changeDirection(e)}>{directionState[0]} <span className="icon-exchange"></span> {directionState[1]}</button>
+                        </header>
+                    </div>
                     <div className={'main-list-exercise'}>
                         {this.global.uniqueCategoryArray.map(function (obj_category, j) {
                             return (
@@ -716,6 +730,7 @@ class FlashCards extends Component {
                         <p>Copyright &copy; 1518, {title} pl-en/en-pl v1.0.0</p>
                     </footer>
                 </div>
+            </Swipe>
 
         );
     }
