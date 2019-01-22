@@ -10,6 +10,406 @@
     },
     "data": [
       {
+        "_en": "planet",
+        "_pl": "planeta"
+      },
+      {
+        "_en": "track",
+        "_pl": "szlak"
+      },
+      {
+        "_en": "hurry",
+        "_pl": "śpieszyć sie"
+      },
+      {
+        "_en": "parent",
+        "_pl": "rodzic"
+      },
+      {
+        "_en": "chief",
+        "_pl": "wódz"
+      },
+      {
+        "_en": "shore",
+        "_pl": "wybrzeże, brzeg"
+      },
+      {
+        "_en": "colony",
+        "_pl": "kolonia"
+      },
+      {
+        "_en": "division",
+        "_pl": "podział"
+      },
+      {
+        "_en": "clock",
+        "_pl": "zegar ścienny"
+      },
+      {
+        "_en": "sheet",
+        "_pl": "kartka papieru"
+      },
+      {
+        "_en": "mine",
+        "_pl": "moje"
+      },
+      {
+        "_en": "substance",
+        "_pl": "substancja"
+      },
+      {
+        "_en": "tie",
+        "_pl": "wiązać, krawat"
+      },
+      {
+        "_en": "favor",
+        "_pl": "przychylność"
+      },
+      {
+        "_en": "enter",
+        "_pl": "wejście"
+      },
+      {
+        "_en": "connect",
+        "_pl": "łączyć"
+      },
+      {
+        "_en": "major",
+        "_pl": "poważny, główny"
+      },
+      {
+        "_en": "post",
+        "_pl": "stanowisko, wysyłać pocztą"
+      },
+      {
+        "_en": "fresh",
+        "_pl": "świeży"
+      },
+      {
+        "_en": "spend",
+        "_pl": "spędzać"
+      },
+      {
+        "_en": "search",
+        "_pl": "szukać"
+      },
+      {
+        "_en": "chord",
+        "_pl": "akord"
+      },
+      {
+        "_en": "send",
+        "_pl": "wysyłać"
+      },
+      {
+        "_en": "fat",
+        "_pl": "gruby"
+      },
+      {
+        "_en": "yellow",
+        "_pl": "żółty"
+      },
+      {
+        "_en": "glad",
+        "_pl": "zadowolony"
+      },
+      {
+        "_en": "gun",
+        "_pl": "broń"
+      },
+      {
+        "_en": "original",
+        "_pl": "autentyczny"
+      },
+      {
+        "_en": "allow",
+        "_pl": "dopuszczać, pozwolić"
+      },
+      {
+        "_en": "share",
+        "_pl": "dzielić"
+      },
+      {
+        "_en": "print",
+        "_pl": "drukować"
+      },
+      {
+        "_en": "station",
+        "_pl": "stacja"
+      },
+      {
+        "_en": "dead",
+        "_pl": "martwy"
+      },
+      {
+        "_en": "dad",
+        "_pl": "tata"
+      },
+      {
+        "_en": "spot",
+        "_pl": "miejsce"
+      },
+      {
+        "_en": "bread",
+        "_pl": "chleb"
+      },
+      {
+        "_en": "desert",
+        "_pl": "pustynia"
+      },
+      {
+        "_en": "charge",
+        "_pl": "opłata"
+      },
+      {
+        "_en": "suit",
+        "_pl": "garnitur"
+      },
+      {
+        "_en": "proper",
+        "_pl": "właściwy"
+      },
+      {
+        "_en": "current",
+        "_pl": "obecny, prąd"
+      },
+      {
+        "_en": "bar",
+        "_pl": "bar"
+      },
+      {
+        "_en": "lift",
+        "_pl": "winda, wyciąg "
+      },
+      {
+        "_en": "offer",
+        "_pl": "oferować"
+      },
+      {
+        "_en": "rose",
+        "_pl": "róża"
+      },
+      {
+        "_en": "segment",
+        "_pl": "człon"
+      },
+      {
+        "_en": "continue",
+        "_pl": "kontynuować"
+      },
+      {
+        "_en": "slave",
+        "_pl": "niewolnik"
+      },
+      {
+        "_en": "block",
+        "_pl": "blok"
+      },
+      {
+        "_en": "duck",
+        "_pl": "kaczka"
+      },
+      {
+        "_en": "chart",
+        "_pl": "wykres"
+      },
+      {
+        "_en": "instant",
+        "_pl": "natychmiastowy, nagły"
+      },
+      {
+        "_en": "hat",
+        "_pl": "kapelusz"
+      },
+      {
+        "_en": "market",
+        "_pl": "rynek"
+      },
+      {
+        "_en": "sell",
+        "_pl": "sprzedawać"
+      },
+      {
+        "_en": "degree",
+        "_pl": "stopień"
+      },
+      {
+        "_en": "success",
+        "_pl": "sukces"
+      },
+      {
+        "_en": "populate",
+        "_pl": "zaludniać"
+      },
+      {
+        "_en": "company",
+        "_pl": "firma"
+      },
+      {
+        "_en": "chick",
+        "_pl": "pisklę"
+      },
+      {
+        "_en": "subtract",
+        "_pl": "odejmować"
+      },
+      {
+        "_en": "dear",
+        "_pl": "drogi"
+      },
+      {
+        "_en": "event",
+        "_pl": "wydarzenie"
+      },
+      {
+        "_en": "enemy",
+        "_pl": "wróg"
+      },
+      {
+        "_en": "particular",
+        "_pl": "szczególny"
+      },
+      {
+        "_en": "reply",
+        "_pl": "odpowiedź"
+      },
+      {
+        "_en": "deal",
+        "_pl": "umowa"
+      },
+      {
+        "_en": "drink",
+        "_pl": "pic"
+      },
+      {
+        "_en": "swim",
+        "_pl": "pływać"
+      },
+      {
+        "_en": "occur",
+        "_pl": "zdarzać się "
+      },
+      {
+        "_en": "term",
+        "_pl": "termin"
+      },
+      {
+        "_en": "support",
+        "_pl": "wspierać"
+      },
+      {
+        "_en": "opposite",
+        "_pl": "naprzeciwko"
+      },
+      {
+        "_en": "speech",
+        "_pl": "mowa, przemówienie"
+      },
+      {
+        "_en": "wife",
+        "_pl": "żona"
+      },
+      {
+        "_en": "nature",
+        "_pl": "natura"
+      },
+      {
+        "_en": "shoe",
+        "_pl": "but"
+      },
+      {
+        "_en": "range",
+        "_pl": "łańcuch"
+      },
+      {
+        "_en": "shoulder",
+        "_pl": "ramię"
+      },
+      {
+        "_en": "steam",
+        "_pl": "para"
+      },
+      {
+        "_en": "spread",
+        "_pl": "rozprzestrzenianie się"
+      },
+      {
+        "_en": "motion",
+        "_pl": "ruch"
+      },
+      {
+        "_en": "arrange",
+        "_pl": "organizować"
+      },
+      {
+        "_en": "path",
+        "_pl": "ścieżka"
+      },
+      {
+        "_en": "camp",
+        "_pl": "obóz"
+      },
+      {
+        "_en": "liquid",
+        "_pl": "ciecz"
+      },
+      {
+        "_en": "invent",
+        "_pl": "wynaleźć"
+      },
+      {
+        "_en": "log",
+        "_pl": "kłoda"
+      },
+      {
+        "_en": "cotton",
+        "_pl": "wełna"
+      },
+      {
+        "_en": "meant",
+        "_pl": "znaczył - znaczyć (w czasie przeszłym)"
+      },
+      {
+        "_en": "born",
+        "_pl": "rodzić się"
+      },
+      {
+        "_en": "quotient",
+        "_pl": "współczynnik"
+      },
+      {
+        "_en": "determine",
+        "_pl": "określać"
+      },
+      {
+        "_en": "teeth",
+        "_pl": "zęby"
+      },
+      {
+        "_en": "quart",
+        "_pl": "kwarta"
+      },
+      {
+        "_en": "shell",
+        "_pl": "muszla"
+      },
+      {
+        "_en": "nine",
+        "_pl": "dziewięć"
+      },
+      {
+        "_en": "neck",
+        "_pl": "szyja"
+      },
+      {
+        "_en": "supper",
+        "_pl": "kolacja"
+      },
+      {
+        "_en": "tongue",
+        "_pl": "język"
+      },
+      {
         "_en": "name",
         "_pl": "nazwa"
       },
@@ -31,14 +431,14 @@
       },
       {
         "_en": "just",
-        "_pl": "tylko"
+        "_pl": "właśnie, tylko"
       },
       {
         "_en": "a",
         "_pl": "(stawiane przed rzeczownikiem zaczynającym się spółgłoską)"
       },
       {
-        "_en": "form",
+        "_en": "form, shape",
         "_pl": "forma"
       },
       {
@@ -75,7 +475,7 @@
       },
       {
         "_en": "that",
-        "_pl": "że"
+        "_pl": "że, ten, to"
       },
       {
         "_en": "help",
@@ -95,7 +495,7 @@
       },
       {
         "_en": "line",
-        "_pl": "linia"
+        "_pl": "linia, kolejka (np. w sklepie)"
       },
       {
         "_en": "for",
@@ -172,7 +572,7 @@
 
       {
         "_en": "at",
-        "_pl": "przy"
+        "_pl": "w, przy"
       },
       {
         "_en": "old",
@@ -204,19 +604,19 @@
       },
       {
         "_en": "from",
-        "_pl": "od"
+        "_pl": "od, z"
       },
       {
         "_en": "does",
-        "_pl": "robić w 3. osobie liczby pojedynczej"
+        "_pl": "robić (w 3 osobie liczby pojedynczej)"
       },
       {
         "_en": "or",
-        "_pl": "albo"
+        "_pl": "lub, albo"
       },
       {
         "_en": "set",
-        "_pl": "komplet"
+        "_pl": "zestaw, komplet, osadzony"
       },
       {
         "_en": "had",
@@ -270,7 +670,7 @@
       },
       {
         "_en": "some",
-        "_pl": "kilka"
+        "_pl": "kilka, trochę"
       },
       {
         "_en": "small",
@@ -298,7 +698,7 @@
       },
       {
         "_en": "home",
-        "_pl": "dom"
+        "_pl": "dom, ojczyzna"
       },
       {
         "_en": "other",
@@ -343,7 +743,7 @@
       },
       {
         "_en": "spell",
-        "_pl": "zaklęcie"
+        "_pl": "zaklęcie, literować"
       },
       {
         "_en": "up",
@@ -359,7 +759,7 @@
       },
       {
         "_en": "even",
-        "_pl": "nawet"
+        "_pl": "nawet, parzysty"
       },
       {
         "_en": "your",
@@ -387,15 +787,15 @@
       },
       {
         "_en": "an",
-        "_pl": "stawiamy przed samogłoską lub przed niemym h"
+        "_pl": "(stawiane przed samogłoską lub przed niemym h)"
       },
       {
         "_en": "big",
-        "_pl": "duży"
+        "_pl": "duży, wielki"
       },
       {
         "_en": "each",
-        "_pl": "każdy"
+        "_pl": "każdy, poszczególny"
       },
       {
         "_en": "high",
@@ -423,11 +823,11 @@
 
       {
         "_en": "do",
-        "_pl": "robić lub operator w present simple"
+        "_pl": "(robić lub operator w present simple)"
       },
       {
         "_en": "act",
-        "_pl": "działać"
+        "_pl": "działać, akt"
       },
       {
         "_en": "their",
@@ -443,7 +843,7 @@
       },
       {
         "_en": "ask",
-        "_pl": "pytac"
+        "_pl": "pytać"
       },
       {
         "_en": "if",
@@ -463,7 +863,7 @@
       },
       {
         "_en": "way",
-        "_pl": "sposób"
+        "_pl": "sposób, droga"
       },
       {
         "_en": "went",
@@ -471,7 +871,7 @@
       },
       {
         "_en": "about",
-        "_pl": "o "
+        "_pl": "o"
       },
       {
         "_en": "light",
@@ -483,19 +883,19 @@
       },
       {
         "_en": "kind",
-        "_pl": "rodzaj"
+        "_pl": "rodzaj, uprzejmy"
       },
       {
         "_en": "then",
-        "_pl": "potem"
+        "_pl": "następnie, potem"
       },
       {
-        "_en": "off - eg: i am off",
-        "_pl": "mam wolne w pracy"
+        "_en": "off, I am off",
+        "_pl": "poza, mam wolne w pracy"
       },
       {
         "_en": "them",
-        "_pl": "ich"
+        "_pl": "ich, im"
       },
       {
         "_en": "need",
@@ -511,11 +911,11 @@
       },
       {
         "_en": "house",
-        "_pl": "dom"
+        "_pl": "dom, budynek"
       },
       {
-        "_en": "gould",
-        "_pl": "np"
+        "_en": "wardrobe",
+        "_pl": "szafa, garderoba"
       },
       {
         "_en": "picture",
@@ -602,15 +1002,15 @@
       },
       {
         "_en": "self",
-        "_pl": "swoje"
+        "_pl": "swoje, samego siebie"
       },
       {
         "_en": "has",
-        "_pl": "mieć w 3. osobie liczby pojedynczej"
+        "_pl": "mieć (w 3 osobie liczby pojedynczej)"
       },
       {
-        "_en": "earth",
-        "_pl": "ziemia"
+        "_en": "Earth",
+        "_pl": "Ziemia"
       },
       {
         "_en": "look",
@@ -626,7 +1026,7 @@
       },
       {
         "_en": "head",
-        "_pl": "głowa. główny"
+        "_pl": "głowa, główny"
       },
       {
         "_en": "day",
@@ -638,7 +1038,7 @@
       },
       {
         "_en": "could",
-        "_pl": "móc"
+        "_pl": "móc, mógłbyś"
       },
       {
         "_en": "own",
@@ -654,19 +1054,19 @@
       },
       {
         "_en": "come",
-        "_pl": "przychodzić przyjeżdżać"
+        "_pl": "przychodzić, przyjeżdżać"
       },
       {
         "_en": "should",
-        "_pl": "powinien …"
+        "_pl": "powinien"
       },
       {
         "_en": "did",
-        "_pl": "robił lub operator w past simple"
+        "_pl": "(robił i operator w past simple)"
       },
       {
         "_en": "country",
-        "_pl": "państwo "
+        "_pl": "kraj, państwo, wieś"
       },
       {
         "_en": "number",
@@ -722,7 +1122,7 @@
       },
       {
         "_en": "learn",
-        "_pl": "uczyć sie"
+        "_pl": "uczyć się"
       },
       {
         "_en": "know",
@@ -778,7 +1178,7 @@
       },
       {
         "_en": "state",
-        "_pl": "stan"
+        "_pl": "stan, państwo"
       },
       {
         "_en": "down",
@@ -790,7 +1190,7 @@
       },
       {
         "_en": "side",
-        "_pl": "strona"
+        "_pl": "strona, bok"
       },
       {
         "_en": "eye",
@@ -798,7 +1198,7 @@
       },
       {
         "_en": "been",
-        "_pl": "być używane w czasie perfect lub w stronie biernej"
+        "_pl": "być (w czasie perfect i w stronie biernej)"
       },
       {
         "_en": "never",
@@ -876,7 +1276,7 @@
       },
       {
         "_en": "start",
-        "_pl": "zaczynać"
+        "_pl": "początek, zaczynać"
       },
       {
         "_en": "made",
@@ -888,7 +1288,7 @@
       },
       {
         "_en": "live",
-        "_pl": "mieszkać"
+        "_pl": "na żywo, żyć, mieszkać"
       },
       {
         "_en": "story",
@@ -900,7 +1300,7 @@
       },
       {
         "_en": "saw",
-        "_pl": "widzieć w czasie przeszłym"
+        "_pl": "widzieć (w czasie przeszłym), piła"
       },
       {
         "_en": "after",
@@ -920,7 +1320,7 @@
       },
       {
         "_en": "little",
-        "_pl": "mało. mały"
+        "_pl": "mało"
       },
       {
         "_en": "draw",
@@ -956,15 +1356,15 @@
       },
       {
         "_en": "don't",
-        "_pl": "przeczenie do not nie rób lub operator w present simple w zdaniach przeczących"
+        "_pl": "(przeczenie do not nie rób i operator w present simple w zdaniach przeczących)"
       },
       {
-        "_en": "came",
-        "_pl": "przyjechał"
+        "_en": "(he) came",
+        "_pl": "przyjechał, przybył"
       },
       {
         "_en": "while",
-        "_pl": "podczas gdy"
+        "_pl": "podczas"
       },
       {
         "_en": "show",
@@ -1032,7 +1432,7 @@
       },
       {
         "_en": "seem",
-        "_pl": "wydawać się"
+        "_pl": "wydawać się, wyglądać na"
       },
       {
         "_en": "simple",
@@ -1076,7 +1476,7 @@
       },
       {
         "_en": "lay",
-        "_pl": "leżeć w czasie przeszłym"
+        "_pl": "leżeć (w czasie przeszłym)"
       },
       {
         "_en": "got",
@@ -1212,7 +1612,7 @@
       },
       {
         "_en": "notice",
-        "_pl": "zauważyć"
+        "_pl": "ogłoszenie, zauważyć"
       },
       {
         "_en": "feet",
@@ -1228,7 +1628,7 @@
       },
       {
         "_en": "unit",
-        "_pl": "rozdział"
+        "_pl": "jednostka, rozdział"
       },
 
 
@@ -1255,11 +1655,11 @@
       },
       {
         "_en": "fine",
-        "_pl": "świetny"
+        "_pl": "w porządku"
       },
       {
         "_en": "took",
-        "_pl": "zabrać w czasie przeszłym"
+        "_pl": "wiął, zabrać (w czasie przeszłym)"
       },
       {
         "_en": "certain",
@@ -1299,7 +1699,7 @@
       },
       {
         "_en": "began",
-        "_pl": "zaczynać w czasie przeszłym"
+        "_pl": "zaczynać (w czasie przeszłym)"
       },
       {
         "_en": "dark",
@@ -1339,15 +1739,15 @@
       },
       {
         "_en": "once",
-        "_pl": "jeden raz"
+        "_pl": "pewnego razu, jeden raz"
       },
       {
         "_en": "figure",
-        "_pl": "liczba"
+        "_pl": "postać, figura, cyfra"
       },
       {
         "_en": "base",
-        "_pl": "podstawa"
+        "_pl": "baza, podstawa"
       },
       {
         "_en": "star",
@@ -1399,7 +1799,7 @@
       },
       {
         "_en": "able",
-        "_pl": "być w stanie coś zrobić"
+        "_pl": "zdolny (zdolny do czegoś)"
       },
       {
         "_en": "face",
@@ -1407,15 +1807,15 @@
       },
       {
         "_en": "pound",
-        "_pl": "walić"
+        "_pl": "walić, funt"
       },
       {
         "_en": "wood",
-        "_pl": "drewno"
+        "_pl": "drewno, las"
       },
       {
         "_en": "done",
-        "_pl": "zrobione i do w czasie perfest"
+        "_pl": "(zrobione i do w czasie perfect)"
       },
       {
         "_en": "main",
@@ -1431,15 +1831,15 @@
       },
       {
         "_en": "drive",
-        "_pl": "prowadzić samochód"
+        "_pl": "prowadzić, przejażdżka"
       },
       {
         "_en": "plain",
-        "_pl": "zwykły"
+        "_pl": "zwykły, równina"
       },
       {
         "_en": "stood",
-        "_pl": "stać w czasie przeszłym"
+        "_pl": "stał - stać (w czasie przeszłym)"
       },
       {
         "_en": "girl",
@@ -1463,7 +1863,7 @@
       },
       {
         "_en": "teach",
-        "_pl": "uczyć kogoś"
+        "_pl": "uczyć"
       },
       {
         "_en": "ready",
@@ -1479,7 +1879,7 @@
       },
       {
         "_en": "final",
-        "_pl": "ostatni"
+        "_pl": "finał, ostatni"
       },
       {
         "_en": "ever",
@@ -1487,7 +1887,7 @@
       },
       {
         "_en": "gave",
-        "_pl": "dawać w czasie przeszłym"
+        "_pl": "dał - dawać (w czasie przeszłym)"
       },
       {
         "_en": "red",
@@ -1503,7 +1903,7 @@
       },
       {
         "_en": "oh",
-        "_pl": "och ?"
+        "_pl": "och"
       },
       {
         "_en": "though",
@@ -1587,11 +1987,11 @@
       },
       {
         "_en": "leave",
-        "_pl": "opuścić. wychodzić "
+        "_pl": "opuścić, wychodzić "
       },
       {
         "_en": "clear",
-        "_pl": "wyraźny"
+        "_pl": "jasny, wyraźny, oczyścić"
       },
       {
         "_en": "song",
@@ -1707,7 +2107,7 @@
       },
       {
         "_en": "object",
-        "_pl": "przedmiot"
+        "_pl": "obiekt, przedmiot"
       },
       {
         "_en": "half",
@@ -1727,7 +2127,7 @@
       },
       {
         "_en": "order",
-        "_pl": "porządek"
+        "_pl": "porządek, zamówienie"
       },
       {
         "_en": "deep",
@@ -1763,11 +2163,11 @@
       },
       {
         "_en": "system",
-        "_pl": "układ"
+        "_pl": "system, układ"
       },
       {
         "_en": "told",
-        "_pl": "powiedzieć w czasie przeszłym"
+        "_pl": "powedział - powiedzieć (w czasie przeszłym)"
       },
       {
         "_en": "busy",
@@ -1787,7 +2187,7 @@
       },
       {
         "_en": "record",
-        "_pl": "płyta"
+        "_pl": "zapis, nagrać, płyta"
       },
       {
         "_en": "since",
@@ -1831,11 +2231,11 @@
       },
       {
         "_en": "heard",
-        "_pl": "usłyszeć w czasie przeszłym"
+        "_pl": "słyszał - usłyszeć (w czasie przeszłym)"
       },
       {
         "_en": "stead",
-        "_pl": "zamiast kogoś"
+        "_pl": "zamiast"
       },
       {
         "_en": "best",
@@ -1875,7 +2275,7 @@
       },
       {
         "_en": "ago",
-        "_pl": "temu np. 2 dni temu"
+        "_pl": "temu (np. kilka dni temu)"
       },
       {
         "_en": "hundred",
@@ -1883,7 +2283,7 @@
       },
       {
         "_en": "ran",
-        "_pl": "biegać w czasie przeszłym"
+        "_pl": "biegł - biegać (w czasie przeszłym)"
       },
       {
         "_en": "five",
@@ -1919,7 +2319,7 @@
       },
       {
         "_en": "hold",
-        "_pl": "trzymac"
+        "_pl": "trzymać"
       },
       {
         "_en": "hot",
@@ -1931,15 +2331,15 @@
       },
       {
         "_en": "miss",
-        "_pl": "tracić"
+        "_pl": "tęsknić, chybić, tracić"
       },
       {
         "_en": "ground",
-        "_pl": "ziemia"
+        "_pl": "ziemia, grunt"
       },
       {
         "_en": "brought",
-        "_pl": "przynosić w czasie przeszłym"
+        "_pl": "przyniósł, przynosić (w czasie przeszłym)"
       },
       {
         "_en": "interest",
@@ -1947,11 +2347,11 @@
       },
       {
         "_en": "heat",
-        "_pl": "upał"
+        "_pl": "ciepło, gorąco"
       },
       {
         "_en": "reach",
-        "_pl": "sięgać"
+        "_pl": "dosięgnąć"
       },
       {
         "_en": "snow",
@@ -1963,7 +2363,7 @@
       },
       {
         "_en": "tire",
-        "_pl": "męczyć się"
+        "_pl": "zmęczyć, opona"
       },
       {
         "_en": "verb",
@@ -2027,7 +2427,7 @@
       },
       {
         "_en": "among",
-        "_pl": "wśród"
+        "_pl": "pośród"
       },
       {
         "_en": "grand",
@@ -2037,8 +2437,6 @@
         "_en": "cat",
         "_pl": "kot"
       },
-
-
 
 
       {
@@ -2055,7 +2453,7 @@
       },
       {
         "_en": "consider",
-        "_pl": "brać pod uwagę"
+        "_pl": "rozważać"
       },
       {
         "_en": "wave",
@@ -2082,7 +2480,7 @@
         "_pl": "kawałek"
       },
       {
-        "_en": "am",
+        "_en": "I am",
         "_pl": "jestem"
       },
       {
@@ -2103,7 +2501,7 @@
       },
       {
         "_en": "phrase",
-        "_pl": "zwrot"
+        "_pl": "wyrażenie, zwrot"
       },
       {
         "_en": "dance",
@@ -2179,7 +2577,7 @@
       },
       {
         "_en": "settle",
-        "_pl": "roztrzygać"
+        "_pl": "roztrzygać, osiadać"
       },
       {
         "_en": "fight",
@@ -2191,7 +2589,7 @@
       },
       {
         "_en": "lie",
-        "_pl": "leżeć"
+        "_pl": "leżeć, kłamstwo"
       },
       {
         "_en": "weight",
@@ -2219,7 +2617,7 @@
       },
       {
         "_en": "matter",
-        "_pl": "sprawa"
+        "_pl": "sprawa, znaczenie, materia"
       },
       {
         "_en": "view",
@@ -2227,7 +2625,7 @@
       },
       {
         "_en": "circle",
-        "_pl": "koło. okrąg"
+        "_pl": "koło, okrąg"
       },
       {
         "_en": "sense",
@@ -2263,11 +2661,11 @@
       },
       {
         "_en": "broke",
-        "_pl": "złamać w czasie przeszłym"
+        "_pl": "złamałem, złamać (w czasie przeszłym)"
       },
       {
         "_en": "felt",
-        "_pl": "czuć w czasie przeszłym"
+        "_pl": "czułem, czuć (w czasie przeszłym)"
       },
       {
         "_en": "case",
@@ -2275,7 +2673,7 @@
       },
       {
         "_en": "perhaps",
-        "_pl": "może"
+        "_pl": "być może"
       },
       {
         "_en": "middle",
@@ -2435,7 +2833,7 @@
       },
       {
         "_en": "fraction",
-        "_pl": "odrobina"
+        "_pl": "frakcja, odrobina"
       },
       {
         "_en": "section",
@@ -2464,7 +2862,7 @@
       },
       {
         "_en": "race",
-        "_pl": "rasa"
+        "_pl": "wyścig, rasa"
       },
       {
         "_en": "surprise",
@@ -2480,7 +2878,7 @@
       },
       {
         "_en": "store",
-        "_pl": "sklep"
+        "_pl": "zapas, sklep"
       },
       {
         "_en": "stone",
@@ -2560,7 +2958,7 @@
       },
       {
         "_en": "mount",
-        "_pl": "wierzchowiec"
+        "_pl": "góra, wierzchowiec"
       },
       {
         "_en": "iron",
@@ -2568,7 +2966,7 @@
       },
       {
         "_en": "wish",
-        "_pl": "pragnienie"
+        "_pl": "życzenie, pragnienie"
       },
       {
         "_en": "single",
@@ -2620,7 +3018,7 @@
       },
       {
         "_en": "crease",
-        "_pl": "gnieść"
+        "_pl": "marszczyć, gnieść"
       },
       {
         "_en": "wild",
@@ -2640,7 +3038,7 @@
       },
       {
         "_en": "kept",
-        "_pl": "trzymany lub trzymać w czasie perfect"
+        "_pl": "(trzymany i trzymać w czasie perfect)"
       },
       {
         "_en": "melody",
@@ -2668,7 +3066,7 @@
       },
       {
         "_en": "receive",
-        "_pl": "otrzymywać"
+        "_pl": "otrzymać"
       },
       {
         "_en": "job",
@@ -2736,7 +3134,7 @@
       },
       {
         "_en": "gas",
-        "_pl": "benzyna"
+        "_pl": "benzyna, gaz"
       },
       {
         "_en": "except",
@@ -2748,7 +3146,7 @@
       },
       {
         "_en": "wrote",
-        "_pl": "pisać w czasie przeszłym"
+        "_pl": "pisałem - pisać (w czasie przeszłym)"
       },
       {
         "_en": "month",
@@ -2824,7 +3222,7 @@
       },
       {
         "_en": "gone",
-        "_pl": "miniony lub iść w czasie perfect"
+        "_pl": "poszedł, odszedł, miniony"
       },
       {
         "_en": "bad",
@@ -2868,11 +3266,11 @@
       },
       {
         "_en": "meet",
-        "_pl": "poznawać"
+        "_pl": "spotykać, poznawać"
       },
       {
         "_en": "grew",
-        "_pl": "rosnąć w czasie przeszłym"
+        "_pl": "rósł - rosnąć (w czasie przeszłym)"
       },
       {
         "_en": "root",
@@ -2892,7 +3290,7 @@
       },
       {
         "_en": "raise",
-        "_pl": "podwyżać"
+        "_pl": "podnieść, przesadzić, podwyżać"
       },
       {
         "_en": "team",
@@ -2956,15 +3354,15 @@
       },
       {
         "_en": "shall",
-        "_pl": "zwrot grzecznościowy :shall i open"
+        "_pl": "powinien i zwrot grzecznościowy"
       },
       {
         "_en": "sent",
-        "_pl": "wysyłać w czasie przeszłym lub wysłane"
+        "_pl": "wysłane - wysyłać (w czasie przeszłym)"
       },
       {
         "_en": "held",
-        "_pl": "trzymać w czasie przeszłym"
+        "_pl": "trzymam - trzymać (w czasie przeszłym)"
       },
       {
         "_en": "choose",
@@ -2976,7 +3374,7 @@
       },
       {
         "_en": "fell",
-        "_pl": "spadać w czasie przeszłym lub ścinać w terażniejszym"
+        "_pl": "spadłem, spadać (w czasie przeszłym), ścinać (w czasie terażniejszym)"
       },
       {
         "_en": "describe",
@@ -2984,7 +3382,7 @@
       },
       {
         "_en": "fit",
-        "_pl": "pasować"
+        "_pl": "dopasowanie, pasować"
       },
       {
         "_en": "cook",
@@ -2992,7 +3390,7 @@
       },
       {
         "_en": "flow",
-        "_pl": "przepływ"
+        "_pl": "pływ, przepływ"
       },
       {
         "_en": "floor",
@@ -3004,7 +3402,7 @@
       },
       {
         "_en": "either",
-        "_pl": "obojętnie który"
+        "_pl": "zarówno, którykolwiek, obojętnie który"
       },
       {
         "_en": "bank",
@@ -3024,7 +3422,7 @@
       },
       {
         "_en": "save",
-        "_pl": "oszczędzać"
+        "_pl": "zapisać, zaoszczędzać"
       },
       {
         "_en": "hill",
@@ -3112,7 +3510,7 @@
       },
       {
         "_en": "shine",
-        "_pl": "świecić"
+        "_pl": "świecić, blask"
       },
       {
         "_en": "noon",
@@ -3164,7 +3562,7 @@
       },
       {
         "_en": "caught",
-        "_pl": "łapać w czasie przeszłym lub złapany"
+        "_pl": "łapałem, złapany, łapać (w czasie przeszłym)"
       },
       {
         "_en": "repeat",
@@ -3224,7 +3622,7 @@
       },
       {
         "_en": "anger",
-        "_pl": "złość"
+        "_pl": "gniew, złość"
       },
       {
         "_en": "effect",
@@ -3420,7 +3818,7 @@
       },
       {
         "_en": "forward",
-        "_pl": "do przodu"
+        "_pl": "Naprzód, do przodu"
       },
       {
         "_en": "soldier",
@@ -3468,7 +3866,7 @@
       },
       {
         "_en": "bought",
-        "_pl": "kupować w czasie przeszłym"
+        "_pl": "kupiony, kupować (w czasie przeszłym)"
       },
       {
         "_en": "wing",
@@ -3653,410 +4051,6 @@
       {
         "_en": "master",
         "_pl": "mistrz"
-      },
-
-
-
-
-      {
-        "_en": "planet",
-        "_pl": "planeta"
-      },
-      {
-        "_en": "track",
-        "_pl": "szlak"
-      },
-      {
-        "_en": "hurry",
-        "_pl": "śpieszyć sie"
-      },
-      {
-        "_en": "parent",
-        "_pl": "rodzic"
-      },
-      {
-        "_en": "chief",
-        "_pl": "wódz"
-      },
-      {
-        "_en": "shore",
-        "_pl": "brzeg"
-      },
-      {
-        "_en": "colony",
-        "_pl": "kolonia"
-      },
-      {
-        "_en": "division",
-        "_pl": "podział"
-      },
-      {
-        "_en": "clock",
-        "_pl": "zegar ścienny"
-      },
-      {
-        "_en": "sheet",
-        "_pl": "kartka papieru"
-      },
-      {
-        "_en": "mine",
-        "_pl": "moje"
-      },
-      {
-        "_en": "substance",
-        "_pl": "substancja"
-      },
-      {
-        "_en": "tie",
-        "_pl": "wiązać"
-      },
-      {
-        "_en": "favor",
-        "_pl": "przychylność"
-      },
-      {
-        "_en": "enter",
-        "_pl": "wejście"
-      },
-      {
-        "_en": "connect",
-        "_pl": "łączyć"
-      },
-      {
-        "_en": "major",
-        "_pl": "główny"
-      },
-      {
-        "_en": "post",
-        "_pl": "stanowisko"
-      },
-      {
-        "_en": "fresh",
-        "_pl": "świeży"
-      },
-      {
-        "_en": "spend",
-        "_pl": "spędzać"
-      },
-      {
-        "_en": "search",
-        "_pl": "szukać"
-      },
-      {
-        "_en": "chord",
-        "_pl": "akord"
-      },
-      {
-        "_en": "send",
-        "_pl": "wysyłać"
-      },
-      {
-        "_en": "fat",
-        "_pl": "gruby"
-      },
-      {
-        "_en": "yellow",
-        "_pl": "żółty"
-      },
-      {
-        "_en": "glad",
-        "_pl": "zadowolony"
-      },
-      {
-        "_en": "gun",
-        "_pl": "broń"
-      },
-      {
-        "_en": "original",
-        "_pl": "autentyczny"
-      },
-      {
-        "_en": "allow",
-        "_pl": "pozwolić"
-      },
-      {
-        "_en": "share",
-        "_pl": "dzielić"
-      },
-      {
-        "_en": "print",
-        "_pl": "drukować"
-      },
-      {
-        "_en": "station",
-        "_pl": "stacja"
-      },
-      {
-        "_en": "dead",
-        "_pl": "martwy"
-      },
-      {
-        "_en": "dad",
-        "_pl": "tata"
-      },
-      {
-        "_en": "spot",
-        "_pl": "miejsce"
-      },
-      {
-        "_en": "bread",
-        "_pl": "chleb"
-      },
-      {
-        "_en": "desert",
-        "_pl": "pustynia"
-      },
-      {
-        "_en": "charge",
-        "_pl": "opłata"
-      },
-      {
-        "_en": "suit",
-        "_pl": "garnitur"
-      },
-      {
-        "_en": "proper",
-        "_pl": "właściwy"
-      },
-      {
-        "_en": "current",
-        "_pl": "prąd"
-      },
-      {
-        "_en": "bar",
-        "_pl": "bar"
-      },
-      {
-        "_en": "lift",
-        "_pl": "podwozić "
-      },
-      {
-        "_en": "offer",
-        "_pl": "oferować"
-      },
-      {
-        "_en": "rose",
-        "_pl": "róża"
-      },
-      {
-        "_en": "segment",
-        "_pl": "część"
-      },
-      {
-        "_en": "continue",
-        "_pl": "kontynuować"
-      },
-      {
-        "_en": "slave",
-        "_pl": "niewolnik"
-      },
-      {
-        "_en": "block",
-        "_pl": "blok"
-      },
-      {
-        "_en": "duck",
-        "_pl": "kaczka"
-      },
-      {
-        "_en": "chart",
-        "_pl": "lista"
-      },
-      {
-        "_en": "instant",
-        "_pl": "nagły"
-      },
-      {
-        "_en": "hat",
-        "_pl": "kapelusz"
-      },
-      {
-        "_en": "market",
-        "_pl": "rynek"
-      },
-      {
-        "_en": "sell",
-        "_pl": "sprzedawać"
-      },
-      {
-        "_en": "degree",
-        "_pl": "stopień"
-      },
-      {
-        "_en": "success",
-        "_pl": "odnosić sukces"
-      },
-      {
-        "_en": "populate",
-        "_pl": "zaludniać"
-      },
-      {
-        "_en": "company",
-        "_pl": "firma"
-      },
-      {
-        "_en": "chick",
-        "_pl": "pisklę"
-      },
-      {
-        "_en": "subtract",
-        "_pl": "odejmować"
-      },
-      {
-        "_en": "dear",
-        "_pl": "drogi"
-      },
-      {
-        "_en": "event",
-        "_pl": "wydarzenie"
-      },
-      {
-        "_en": "enemy",
-        "_pl": "wróg"
-      },
-      {
-        "_en": "particular",
-        "_pl": "szczególny"
-      },
-      {
-        "_en": "reply",
-        "_pl": "odpowiedź"
-      },
-      {
-        "_en": "deal",
-        "_pl": "umowa"
-      },
-      {
-        "_en": "drink",
-        "_pl": "pic"
-      },
-      {
-        "_en": "swim",
-        "_pl": "pływać"
-      },
-      {
-        "_en": "occur",
-        "_pl": "zdarzać się "
-      },
-      {
-        "_en": "term",
-        "_pl": "termin"
-      },
-      {
-        "_en": "support",
-        "_pl": "wspierać"
-      },
-      {
-        "_en": "opposite",
-        "_pl": "naprzeciwko"
-      },
-      {
-        "_en": "speech",
-        "_pl": "mowa"
-      },
-      {
-        "_en": "wife",
-        "_pl": "żona"
-      },
-      {
-        "_en": "nature",
-        "_pl": "natura"
-      },
-      {
-        "_en": "shoe",
-        "_pl": "but"
-      },
-      {
-        "_en": "range",
-        "_pl": "łańcuch"
-      },
-      {
-        "_en": "shoulder",
-        "_pl": "ramię"
-      },
-      {
-        "_en": "steam",
-        "_pl": "para"
-      },
-      {
-        "_en": "spread",
-        "_pl": "rozprzestrzenianie się"
-      },
-      {
-        "_en": "motion",
-        "_pl": "ruch"
-      },
-      {
-        "_en": "arrange",
-        "_pl": "organizować"
-      },
-      {
-        "_en": "path",
-        "_pl": "ścieżka"
-      },
-      {
-        "_en": "camp",
-        "_pl": "obóz"
-      },
-      {
-        "_en": "liquid",
-        "_pl": "ciecz"
-      },
-      {
-        "_en": "invent",
-        "_pl": "wynaleźć"
-      },
-      {
-        "_en": "log",
-        "_pl": "kłoda"
-      },
-      {
-        "_en": "cotton",
-        "_pl": "wełna"
-      },
-      {
-        "_en": "meant",
-        "_pl": "znaczyć w czasie przeszłym"
-      },
-      {
-        "_en": "born",
-        "_pl": "rodzić się"
-      },
-      {
-        "_en": "quotient",
-        "_pl": "współczynnik"
-      },
-      {
-        "_en": "determine",
-        "_pl": "określać"
-      },
-      {
-        "_en": "teeth",
-        "_pl": "zęby"
-      },
-      {
-        "_en": "quart",
-        "_pl": "kwarta"
-      },
-      {
-        "_en": "shell",
-        "_pl": "muszla"
-      },
-      {
-        "_en": "nine",
-        "_pl": "dziewięć"
-      },
-      {
-        "_en": "neck",
-        "_pl": "szyja"
-      },
-      {
-        "_en": "supper",
-        "_pl": "kolacja"
-      },
-      {
-        "_en": "tongue",
-        "_pl": "język"
       }
     ]
   },
@@ -4095,7 +4089,7 @@
         "_en": " become / became / become"
       },
       {
-        "_pl": "przytrafić się / spotykać ",
+        "_pl": "przytrafić się ",
         "_en": " befall / befell / befallen"
       },
       {
@@ -4702,6 +4696,1061 @@
       }
     ]
   },
+
+  {
+    "category": {
+      "_pl": "",
+      "_en": ""
+    },
+    "name": {
+      "_pl": "Czasowniki regularne (całość)",
+      "_en": "Regular verbs (all)"
+    },
+    "data": [
+      {
+        "_pl": " Akceptować ",
+        "_en": " Accept / Accepted / Accepted "
+      },
+      {
+        "_pl": " Osiągać ",
+        "_en": " Achieve / Achieved / Achieved "
+      },
+      {
+        "_pl": " Dodać ",
+        "_en": " Add / Added / Added "
+      },
+      {
+        "_pl": " Podziwiać ",
+        "_en": " Admire / Admired / Admirer "
+      },
+      {
+        "_pl": " Przyznać ",
+        "_en": " Admit / Admitted / Admitted "
+      },
+      {
+        "_pl": " Przyjąć ",
+        "_en": " Adopt / Adopted / Adopted "
+      },
+      {
+        "_pl": " Doradzać ",
+        "_en": " Advise / Advised / Advised "
+      },
+      {
+        "_pl": " Zgadzać się ",
+        "_en": " Agree / Agreed / Agreed "
+      },
+      {
+        "_pl": " Dopuszczać ",
+        "_en": " Allow / Allowed / Allowed "
+      },
+      {
+        "_pl": " Ogłosić ",
+        "_en": " Announce / Announced / Announced "
+      },
+      {
+        "_pl": " Doceniać ",
+        "_en": " Appreciate / Appreciated / Appreciated "
+      },
+      {
+        "_pl": " Zatwierdzać ",
+        "_en": " Approve / Approved / Approved "
+      },
+      {
+        "_pl": " Kłócić się ",
+        "_en": " Argue / Argued / Argued "
+      },
+      {
+        "_pl": " Przyjechać ",
+        "_en": " Arrive / Arrived / Arrived "
+      },
+      {
+        "_pl": " Zadać / Pytać ",
+        "_en": " Ask / Asked / Asked "
+      },
+      {
+        "_pl": " Pomagać ",
+        "_en": " Assist / Assisted / Assisted "
+      },
+      {
+        "_pl": " Atakować ",
+        "_en": " Attack / Attacked / Attacked "
+      },
+      {
+        "_pl": " Piec ",
+        "_en": " Bake / Baked / Baked "
+      },
+      {
+        "_pl": " Żebrać/ Błagać ",
+        "_en": " Beg / Begged / Begged "
+      },
+      {
+        "_pl": " Zachowywać się ",
+        "_en": " Behave / Behaved / Behaved "
+      },
+      {
+        "_pl": " Gotować ",
+        "_en": " Boil / Boiled / Boiled "
+      },
+      {
+        "_pl": " Pożyczać ",
+        "_en": " Borrow / Borrowed / Borrowed "
+      },
+      {
+        "_pl": " Czyścić ",
+        "_en": " Brush / Brushed / Brushed "
+      },
+      {
+        "_pl": " Pochować ",
+        "_en": " Bury / Buried / Buried "
+      },
+      {
+        "_pl": " Zadzwonić/Wezwać ",
+        "_en": " Call / Called / Called "
+      },
+      {
+        "_pl": " Wyzwanie ",
+        "_en": " Challenge / Challenged / Challenged "
+      },
+      {
+        "_pl": " Zmiana ",
+        "_en": " Change / Changed / Changed "
+      },
+      {
+        "_pl": " Ścigać ",
+        "_en": " Chase / Chased / Chased "
+      },
+      {
+        "_pl": " Oszukać ",
+        "_en": " Cheat / Cheated / Cheated "
+      },
+      {
+        "_pl": " Dopingować ",
+        "_en": " Cheer / Cheered / Cheered "
+      },
+      {
+        "_pl": " Żuć ",
+        "_en": " Chew / Chewed / Chewed "
+      },
+      {
+        "_pl": " Klaskać ",
+        "_en": " Clap / Clapped / Clapped "
+      },
+      {
+        "_pl": " Czyścić ",
+        "_en": " Clean / Cleaned / Cleaned "
+      },
+      {
+        "_pl": " Zbierać ",
+        "_en": " Collect / Collected / Collected "
+      },
+      {
+        "_pl": " Porównać ",
+        "_en": " Compare / Compared / Compared "
+      },
+      {
+        "_pl": " Skarżyć się ",
+        "_en": " Complain / Complained / Complained "
+      },
+      {
+        "_pl": " Wyznać ",
+        "_en": " Confess / Confessed / Confessed "
+      },
+      {
+        "_pl": " Konstruować ",
+        "_en": " Construct / Constructed / Constructed "
+      },
+      {
+        "_pl": " Kontrolować ",
+        "_en": " Control / Controlled / Controlled "
+      },
+      {
+        "_pl": " Kopiować ",
+        "_en": " Copy / Copied / Copied "
+      },
+      {
+        "_pl": " Liczyć ",
+        "_en": " Count / Counted / Counted "
+      },
+      {
+        "_pl": " Tworzyć ",
+        "_en": " Create / Created / Created "
+      },
+      {
+        "_pl": " Płakać ",
+        "_en": " Cry / Cried / Cried "
+      },
+      {
+        "_pl": " Jeździć na rowerze ",
+        "_en": " Cycle / Cycled / Cycled "
+      },
+      {
+        "_pl": " Uszkodzić ",
+        "_en": " Damage / Damaged / Damaged "
+      },
+      {
+        "_pl": " Tańczyć ",
+        "_en": " Dance / Danced / Danced "
+      },
+      {
+        "_pl": " Dostarczać ",
+        "_en": " Deliver / Delivered / Delivered "
+      },
+      {
+        "_pl": " Niszczyć ",
+        "_en": " Destroy / Destroyed / Destroyed "
+      },
+      {
+        "_pl": " Podzielić ",
+        "_en": " Divide / Divided / Divided "
+      },
+      {
+        "_pl": " Ciągnąć ",
+        "_en": " Drag / Dragged / Dragged "
+      },
+      {
+        "_pl": " Zarobić ",
+        "_en": " Earn / Earned / Earned "
+      },
+      {
+        "_pl": " Zatrudnić ",
+        "_en": " Employ / Employed / Employed "
+      },
+      {
+        "_pl": " Popierać ",
+        "_en": " Encourage / Encouraged / Encouraged "
+      },
+      {
+        "_pl": " Cieszyć się ",
+        "_en": " Enjoy / Enjoyed / Enjoyed "
+      },
+      {
+        "_pl": " Założyć ",
+        "_en": " Establish / Established / Established "
+      },
+      {
+        "_pl": " Oszacować ",
+        "_en": " Estimate / Estimated / Estimated "
+      },
+      {
+        "_pl": " Wykonywać ",
+        "_en": " Exercise / Exercised / Exercised "
+      },
+      {
+        "_pl": " Rozszerzać ",
+        "_en": " Expand / Expanded / Expanded "
+      },
+      {
+        "_pl": " Wyjaśniać ",
+        "_en": " Explain / Explained / Explained "
+      },
+      {
+        "_pl": " Smażyć ",
+        "_en": " Fry / Fried / Fried "
+      },
+      {
+        "_pl": " Zbierać ",
+        "_en": " Gather / Gathered / Gathered "
+      },
+      {
+        "_pl": " Powitać ",
+        "_en": " Greet / Greeted / Greeted "
+      },
+      {
+        "_pl": " Odgadnąć ",
+        "_en": " Guess / Guessed / Guessed "
+      },
+      {
+        "_pl": " Nękać ",
+        "_en": " Harass / Harassed / Harassed "
+      },
+      {
+        "_pl": " Nienawidzić ",
+        "_en": " Hate / Hated / Hated "
+      },
+      {
+        "_pl": " Pomóc ",
+        "_en": " Help / Helped / Helped "
+      },
+      {
+        "_pl": " Mieć nadzieję ",
+        "_en": " Hope / Hoped / Hoped "
+      },
+      {
+        "_pl": " Identyfikować ",
+        "_en": " Identify / Identified / Identified "
+      },
+      {
+        "_pl": " Przerwać ",
+        "_en": " Interrupt / Interrupted / Interrupted "
+      },
+      {
+        "_pl": " Wprowadzać ",
+        "_en": " Introduce / Introduced / Introduced "
+      },
+      {
+        "_pl": " Drażnić ",
+        "_en": " Irritate / Irritated / Irritated "
+      },
+      {
+        "_pl": " Żartować ",
+        "_en": " Joke / Joked / Joked "
+      },
+      {
+        "_pl": " Skakać ",
+        "_en": " Jump / Jumped / Jumped "
+      },
+      {
+        "_pl": " Kopać ",
+        "_en": " Kick / Kicked / Kicked "
+      },
+      {
+        "_pl": " Zabić ",
+        "_en": " Kill / Killed / Killed "
+      },
+      {
+        "_pl": " Całować ",
+        "_en": " Kiss / Kissed / Kissed "
+      },
+      {
+        "_pl": " Śmiać się ",
+        "_en": " Laugh / Laughed / Laughed "
+      },
+      {
+        "_pl": " Kłamać ",
+        "_en": " Lie / Lied / Lied "
+      },
+      {
+        "_pl": " Lubić ",
+        "_en": " Like / Liked / Liked "
+      },
+      {
+        "_pl": " Słuchać ",
+        "_en": " Listen / Listened / Listened "
+      },
+      {
+        "_pl": " Kochać ",
+        "_en": " Love / Loved / Loved "
+      },
+      {
+        "_pl": " Poślubić ",
+        "_en": " Marry / Married / Married "
+      },
+      {
+        "_pl": " Zmierzyć ",
+        "_en": " Measure / Measured / Measured "
+      },
+      {
+        "_pl": " Przesunąć ",
+        "_en": " Move / Moved / Moved "
+      },
+      {
+        "_pl": " Zamordować ",
+        "_en": " Murder / Murdered / Murdered "
+      },
+      {
+        "_pl": " Potrzebować ",
+        "_en": " Need / Needed / Needed "
+      },
+      {
+        "_pl": " Schłuchać się ",
+        "_en": " Obey / Obeyed / Obeyed "
+      },
+      {
+        "_pl": " Obrazić ",
+        "_en": " Offend / Offended / Offended "
+      },
+      {
+        "_pl": " Oferować ",
+        "_en": " Offer / Offered / Offered "
+      },
+      {
+        "_pl": " Otwierać ",
+        "_en": " Open / Opened / Opened "
+      },
+      {
+        "_pl": " Malować ",
+        "_en": " Paint / Painted / Painted "
+      },
+      {
+        "_pl": " Parkować/Umieścić ",
+        "_en": " Park / Parked / Parked "
+      },
+      {
+        "_pl": " Dzwonić ",
+        "_en": " Phone / Phoned / Phoned "
+      },
+      {
+        "_pl": " Podnośić/Zbierać ",
+        "_en": " Pick / Picked / Picked "
+      },
+      {
+        "_pl": " Grać ",
+        "_en": " Play / Played / Played "
+      },
+      {
+        "_pl": " Modlić się ",
+        "_en": " Pray / Prayed / Prayed "
+      },
+      {
+        "_pl": " Wydrukować ",
+        "_en": " Print / Printed / Printed "
+      },
+      {
+        "_pl": " Ciągnąć ",
+        "_en": " Pull / Pulled / Puled "
+      },
+      {
+        "_pl": " Uderzać Pięścią ",
+        "_en": " Punch / Punched / Punched "
+      },
+      {
+        "_pl": " Karać ",
+        "_en": " Punish / Punished / Punished "
+      },
+      {
+        "_pl": " Kupować ",
+        "_en": " Purchase / Purchased / Purchased "
+      },
+      {
+        "_pl": " Naciskać ",
+        "_en": " Push / Pushed / Pushed "
+      },
+      {
+        "_pl": " Pytać ",
+        "_en": " Question / Questioned / Questioned "
+      },
+      {
+        "_pl": " Scigać się ",
+        "_en": " Race / Raced / Raced "
+      },
+      {
+        "_pl": " Relaksować się ",
+        "_en": " Relax / Relaxed / Relaxed "
+      },
+      {
+        "_pl": " Zapamiętać ",
+        "_en": " Remember / Remembered / Remembered "
+      },
+      {
+        "_pl": " Odpowiadać ",
+        "_en": " Reply / Replied / Replied "
+      },
+      {
+        "_pl": " Przejść na Emeryturę ",
+        "_en": " Retire / Retired / Retired "
+      },
+      {
+        "_pl": " Zwrócić/Wrócić ",
+        "_en": " Return / Returned / Returned "
+      },
+      {
+        "_pl": " Trzeć ",
+        "_en": " Rub / Rubbed / Rubbed "
+      },
+      {
+        "_pl": " Skarcić ",
+        "_en": " Scold / Scolded / Scolded "
+      },
+      {
+        "_pl": " Wybierać ",
+        "_en": " Select / Selected / Selected "
+      },
+      {
+        "_pl": " Palić ",
+        "_en": " Smoke / Smoked / Smoked "
+      },
+      {
+        "_pl": " Chrapać ",
+        "_en": " Snore / Snored / Snored "
+      },
+      {
+        "_pl": " Gapić się ",
+        "_en": " Stare / Stared / Stared "
+      },
+      {
+        "_pl": " Zaczynać ",
+        "_en": " Start / Started / Started "
+      },
+      {
+        "_pl": " Studiować ",
+        "_en": " Study / Studied / Studied "
+      },
+      {
+        "_pl": " Mówić ",
+        "_en": " Talk / Talked / Talked "
+      },
+      {
+        "_pl": " Dziękować ",
+        "_en": " Thank / Thanked / Thanked "
+      },
+      {
+        "_pl": " Podróżować ",
+        "_en": " Travel / Travelled / Travelled "
+      },
+      {
+        "_pl": " Dokuczać ",
+        "_en": " Trouble / Troubled / Troubled "
+      },
+      {
+        "_pl": " Pisać ",
+        "_en": " Type / Typed / Typed "
+      },
+      {
+        "_pl": " Używać ",
+        "_en": " Use / Used / Used "
+      },
+      {
+        "_pl": " Odwiedzać ",
+        "_en": " Visit / Visited / Visited "
+      },
+      {
+        "_pl": " Czekać ",
+        "_en": " Wait / Waited / Waited "
+      },
+      {
+        "_pl": " Iść ",
+        "_en": " Walk / Walked / Walked "
+      },
+      {
+        "_pl": " Chcieć ",
+        "_en": " Want / Wanted / Wanted "
+      },
+      {
+        "_pl": " Ostrzegać ",
+        "_en": " Warn / Warned / Warned "
+      },
+      {
+        "_pl": " Mrugać ",
+        "_en": " Wink / Winked / Winked "
+      },
+      {
+        "_pl": " Martwić się ",
+        "_en": " Worry / Worried / Worried "
+      },
+      {
+        "_pl": " Krzyczeć ",
+        "_en": " Yell / Yelled / YelledAkceptować "
+      },
+      {
+        "_pl": " Osiągać ",
+        "_en": " Achieve / Achieved / Achieved "
+      },
+      {
+        "_pl": " Dodać ",
+        "_en": " Add / Added / Added "
+      },
+      {
+        "_pl": " Podziwiać ",
+        "_en": " Admire / Admired / Admirer "
+      },
+      {
+        "_pl": " Przyznać ",
+        "_en": " Admit / Admitted / Admitted "
+      },
+      {
+        "_pl": " Przyjąć ",
+        "_en": " Adopt / Adopted / Adopted "
+      },
+      {
+        "_pl": " Doradzać ",
+        "_en": " Advise / Advised / Advised "
+      },
+      {
+        "_pl": " Zgadzać się ",
+        "_en": " Agree / Agreed / Agreed "
+      },
+      {
+        "_pl": " Dopuszczać ",
+        "_en": " Allow / Allowed / Allowed "
+      },
+      {
+        "_pl": " Ogłosić ",
+        "_en": " Announce / Announced / Announced "
+      },
+      {
+        "_pl": " Doceniać ",
+        "_en": " Appreciate / Appreciated / Appreciated "
+      },
+      {
+        "_pl": " Zatwierdzać ",
+        "_en": " Approve / Approved / Approved "
+      },
+      {
+        "_pl": " Kłócić się ",
+        "_en": " Argue / Argued / Argued "
+      },
+      {
+        "_pl": " Przyjechać ",
+        "_en": " Arrive / Arrived / Arrived "
+      },
+      {
+        "_pl": " Pytać ",
+        "_en": " Ask / Asked / Asked "
+      },
+      {
+        "_pl": " Pomagać ",
+        "_en": " Assist / Assisted / Assisted "
+      },
+      {
+        "_pl": " Atakować ",
+        "_en": " Attack / Attacked / Attacked "
+      },
+      {
+        "_pl": " Piec ",
+        "_en": " Bake / Baked / Baked "
+      },
+      {
+        "_pl": " Żebrać/ Błagać ",
+        "_en": " Beg / Begged / Begged "
+      },
+      {
+        "_pl": " Zachowywać się ",
+        "_en": " Behave / Behaved / Behaved "
+      },
+      {
+        "_pl": " Gotować ",
+        "_en": " Boil / Boiled / Boiled "
+      },
+      {
+        "_pl": " Pożyczać ",
+        "_en": " Borrow / Borrowed / Borrowed "
+      },
+      {
+        "_pl": " Czyścić ",
+        "_en": " Brush / Brushed / Brushed "
+      },
+      {
+        "_pl": " Pochować ",
+        "_en": " Bury / Buried / Buried "
+      },
+      {
+        "_pl": " Zadzwonić/Wezwać ",
+        "_en": " Call / Called / Called "
+      },
+      {
+        "_pl": " Wyzwanie ",
+        "_en": " Challenge / Challenged / Challenged "
+      },
+      {
+        "_pl": " Zmiana ",
+        "_en": " Change / Changed / Changed "
+      },
+      {
+        "_pl": " Ścigać ",
+        "_en": " Chase / Chased / Chased "
+      },
+      {
+        "_pl": " Oszukać ",
+        "_en": " Cheat / Cheated / Cheated "
+      },
+      {
+        "_pl": " Dopingować ",
+        "_en": " Cheer / Cheered / Cheered "
+      },
+      {
+        "_pl": " Żuć ",
+        "_en": " Chew / Chewed / Chewed "
+      },
+      {
+        "_pl": " Klaskać ",
+        "_en": " Clap / Clapped / Clapped "
+      },
+      {
+        "_pl": " Czyścić ",
+        "_en": " Clean / Cleaned / Cleaned "
+      },
+      {
+        "_pl": " Zbierać ",
+        "_en": " Collect / Collected / Collected "
+      },
+      {
+        "_pl": " Porównać ",
+        "_en": " Compare / Compared / Compared "
+      },
+      {
+        "_pl": " Skarżyć się ",
+        "_en": " Complain / Complained / Complained "
+      },
+      {
+        "_pl": " Wyznać ",
+        "_en": " Confess / Confessed / Confessed "
+      },
+      {
+        "_pl": " Konstruować ",
+        "_en": " Construct / Constructed / Constructed "
+      },
+      {
+        "_pl": " Kontrolować ",
+        "_en": " Control / Controlled / Controlled "
+      },
+      {
+        "_pl": " Kopiować ",
+        "_en": " Copy / Copied / Copied "
+      },
+      {
+        "_pl": " Liczyć ",
+        "_en": " Count / Counted / Counted "
+      },
+      {
+        "_pl": " Tworzyć ",
+        "_en": " Create / Created / Created "
+      },
+      {
+        "_pl": " Płakać ",
+        "_en": " Cry / Cried / Cried "
+      },
+      {
+        "_pl": " Jeździć na rowerze ",
+        "_en": " Cycle / Cycled / Cycled "
+      },
+      {
+        "_pl": " Uszkodzić ",
+        "_en": " Damage / Damaged / Damaged "
+      },
+      {
+        "_pl": " Tańczyć ",
+        "_en": " Dance / Danced / Danced "
+      },
+      {
+        "_pl": " Dostarczać ",
+        "_en": " Deliver / Delivered / Delivered "
+      },
+      {
+        "_pl": " Niszczyć ",
+        "_en": " Destroy / Destroyed / Destroyed "
+      },
+      {
+        "_pl": " Podzielić ",
+        "_en": " Divide / Divided / Divided "
+      },
+      {
+        "_pl": " Ciągnąć ",
+        "_en": " Drag / Dragged / Dragged "
+      },
+      {
+        "_pl": " Zarobić ",
+        "_en": " Earn / Earned / Earned "
+      },
+      {
+        "_pl": " Zatrudnić ",
+        "_en": " Employ / Employed / Employed "
+      },
+      {
+        "_pl": " Popierać ",
+        "_en": " Encourage / Encouraged / Encouraged "
+      },
+      {
+        "_pl": " Cieszyć się ",
+        "_en": " Enjoy / Enjoyed / Enjoyed "
+      },
+      {
+        "_pl": " Założyć ",
+        "_en": " Establish / Established / Established "
+      },
+      {
+        "_pl": " Oszacować ",
+        "_en": " Estimate / Estimated / Estimated "
+      },
+      {
+        "_pl": " Wykonywać ",
+        "_en": " Exercise / Exercised / Exercised "
+      },
+      {
+        "_pl": " Rozszerzać ",
+        "_en": " Expand / Expanded / Expanded "
+      },
+      {
+        "_pl": " Wyjaśniać ",
+        "_en": " Explain / Explained / Explained "
+      },
+      {
+        "_pl": " Smażyć ",
+        "_en": " Fry / Fried / Fried "
+      },
+      {
+        "_pl": " Zbierać ",
+        "_en": " Gather / Gathered / Gathered "
+      },
+      {
+        "_pl": " Powitać ",
+        "_en": " Greet / Greeted / Greeted "
+      },
+      {
+        "_pl": " Odgadnąć ",
+        "_en": " Guess / Guessed / Guessed "
+      },
+      {
+        "_pl": " Nękać ",
+        "_en": " Harass / Harassed / Harassed "
+      },
+      {
+        "_pl": " Nienawidzić ",
+        "_en": " Hate / Hated / Hated "
+      },
+      {
+        "_pl": " Pomóc ",
+        "_en": " Help / Helped / Helped "
+      },
+      {
+        "_pl": " Mieć nadzieję ",
+        "_en": " Hope / Hoped / Hoped "
+      },
+      {
+        "_pl": " Identyfikować ",
+        "_en": " Identify / Identified / Identified "
+      },
+      {
+        "_pl": " Przerwać ",
+        "_en": " Interrupt / Interrupted / Interrupted "
+      },
+      {
+        "_pl": " Wprowadzać ",
+        "_en": " Introduce / Introduced / Introduced "
+      },
+      {
+        "_pl": " Drażnić ",
+        "_en": " Irritate / Irritated / Irritated "
+      },
+      {
+        "_pl": " Żartować ",
+        "_en": " Joke / Joked / Joked "
+      },
+      {
+        "_pl": " Skakać ",
+        "_en": " Jump / Jumped / Jumped "
+      },
+      {
+        "_pl": " Kopać ",
+        "_en": " Kick / Kicked / Kicked "
+      },
+      {
+        "_pl": " Zabić ",
+        "_en": " Kill / Killed / Killed "
+      },
+      {
+        "_pl": " Całować ",
+        "_en": " Kiss / Kissed / Kissed "
+      },
+      {
+        "_pl": " Śmiać się ",
+        "_en": " Laugh / Laughed / Laughed "
+      },
+      {
+        "_pl": " Kłamać ",
+        "_en": " Lie / Lied / Lied "
+      },
+      {
+        "_pl": " Lubić ",
+        "_en": " Like / Liked / Liked "
+      },
+      {
+        "_pl": " Słuchać ",
+        "_en": " Listen / Listened / Listened "
+      },
+      {
+        "_pl": " Kochać ",
+        "_en": " Love / Loved / Loved "
+      },
+      {
+        "_pl": " Poślubić ",
+        "_en": " Marry / Married / Married "
+      },
+      {
+        "_pl": " Zmierzyć ",
+        "_en": " Measure / Measured / Measured "
+      },
+      {
+        "_pl": " Przesunąć ",
+        "_en": " Move / Moved / Moved "
+      },
+      {
+        "_pl": " Zamordować ",
+        "_en": " Murder / Murdered / Murdered "
+      },
+      {
+        "_pl": " Potrzebować ",
+        "_en": " Need / Needed / Needed "
+      },
+      {
+        "_pl": " Schłuchać się ",
+        "_en": " Obey / Obeyed / Obeyed "
+      },
+      {
+        "_pl": " Obrazić ",
+        "_en": " Offend / Offended / Offended "
+      },
+      {
+        "_pl": " Oferować ",
+        "_en": " Offer / Offered / Offered "
+      },
+      {
+        "_pl": " Otwierać ",
+        "_en": " Open / Opened / Opened "
+      },
+      {
+        "_pl": " Malować ",
+        "_en": " Paint / Painted / Painted "
+      },
+      {
+        "_pl": " Parkować/Umieścić ",
+        "_en": " Park / Parked / Parked "
+      },
+      {
+        "_pl": " Dzwonić ",
+        "_en": " Phone / Phoned / Phoned "
+      },
+      {
+        "_pl": " Podnośić/Zbierać ",
+        "_en": " Pick / Picked / Picked "
+      },
+      {
+        "_pl": " Grać ",
+        "_en": " Play / Played / Played "
+      },
+      {
+        "_pl": " Modlić się ",
+        "_en": " Pray / Prayed / Prayed "
+      },
+      {
+        "_pl": " Wydrukować ",
+        "_en": " Print / Printed / Printed "
+      },
+      {
+        "_pl": " Ciągnąć ",
+        "_en": " Pull / Pulled / Puled "
+      },
+      {
+        "_pl": " Karać ",
+        "_en": " Punish / Punished / Punished "
+      },
+      {
+        "_pl": " Kupować ",
+        "_en": " Purchase / Purchased / Purchased "
+      },
+      {
+        "_pl": " Naciskać ",
+        "_en": " Push / Pushed / Pushed "
+      },
+      {
+        "_pl": " Pytać ",
+        "_en": " Question / Questioned / Questioned "
+      },
+      {
+        "_pl": " Scigać się ",
+        "_en": " Race / Raced / Raced "
+      },
+      {
+        "_pl": " Relaksować się ",
+        "_en": " Relax / Relaxed / Relaxed "
+      },
+      {
+        "_pl": " Zapamiętać ",
+        "_en": " Remember / Remembered / Remembered "
+      },
+      {
+        "_pl": " Odpowiadać ",
+        "_en": " Reply / Replied / Replied "
+      },
+      {
+        "_pl": " Przejść na Emeryturę ",
+        "_en": " Retire / Retired / Retired "
+      },
+      {
+        "_pl": " Zwrócić/Wrócić ",
+        "_en": " Return / Returned / Returned "
+      },
+      {
+        "_pl": " Trzeć ",
+        "_en": " Rub / Rubbed / Rubbed "
+      },
+      {
+        "_pl": " Skarcić ",
+        "_en": " Scold / Scolded / Scolded "
+      },
+      {
+        "_pl": " Wybierać ",
+        "_en": " Select / Selected / Selected "
+      },
+      {
+        "_pl": " Palić ",
+        "_en": " Smoke / Smoked / Smoked "
+      },
+      {
+        "_pl": " Chrapać ",
+        "_en": " Snore / Snored / Snored "
+      },
+      {
+        "_pl": " Gapić się ",
+        "_en": " Stare / Stared / Stared "
+      },
+      {
+        "_pl": " Zaczynać ",
+        "_en": " Start / Started / Started "
+      },
+      {
+        "_pl": " Studiować ",
+        "_en": " Study / Studied / Studied "
+      },
+      {
+        "_pl": " Mówić ",
+        "_en": " Talk / Talked / Talked "
+      },
+      {
+        "_pl": " Dziękować ",
+        "_en": " Thank / Thanked / Thanked "
+      },
+      {
+        "_pl": " Podróżować ",
+        "_en": " Travel / Travelled / Travelled "
+      },
+      {
+        "_pl": " Dokuczać ",
+        "_en": " Trouble / Troubled / Troubled "
+      },
+      {
+        "_pl": " Pisać ",
+        "_en": " Type / Typed / Typed "
+      },
+      {
+        "_pl": " Używać ",
+        "_en": " Use / Used / Used "
+      },
+      {
+        "_pl": " Odwiedzać ",
+        "_en": " Visit / Visited / Visited "
+      },
+      {
+        "_pl": " Czekać ",
+        "_en": " Wait / Waited / Waited "
+      },
+      {
+        "_pl": " Iść ",
+        "_en": " Walk / Walked / Walked "
+      },
+      {
+        "_pl": " Chcieć ",
+        "_en": " Want / Wanted / Wanted "
+      },
+      {
+        "_pl": " Ostrzegać ",
+        "_en": " Warn / Warned / Warned "
+      },
+      {
+        "_pl": " Mrugać ",
+        "_en": " Wink / Winked / Winked "
+      },
+      {
+        "_pl": " Martwić się ",
+        "_en": " Worry / Worried / Worried "
+      },
+      {
+        "_pl": " Krzyczeć ",
+        "_en": " Yell / Yelled / Yelled"
+      }
+    ]
+  },
+
+
   {
     "category": {
       "_pl": "1000 popularnych słów - ćwiczenia",
@@ -4710,6 +5759,418 @@
     "name": {
       "_pl": "Ćwiczenie 1",
       "_en": "Exercise 1"
+    },
+    "data": [
+      {
+        "_en": "planet",
+        "_pl": "planeta"
+      },
+      {
+        "_en": "track",
+        "_pl": "szlak"
+      },
+      {
+        "_en": "hurry",
+        "_pl": "śpieszyć sie"
+      },
+      {
+        "_en": "parent",
+        "_pl": "rodzic"
+      },
+      {
+        "_en": "chief",
+        "_pl": "wódz"
+      },
+      {
+        "_en": "shore",
+        "_pl": "wybrzeże, brzeg"
+      },
+      {
+        "_en": "colony",
+        "_pl": "kolonia"
+      },
+      {
+        "_en": "division",
+        "_pl": "podział"
+      },
+      {
+        "_en": "clock",
+        "_pl": "zegar"
+      },
+      {
+        "_en": "sheet",
+        "_pl": "kartka papieru"
+      },
+      {
+        "_en": "mine",
+        "_pl": "moje"
+      },
+      {
+        "_en": "substance",
+        "_pl": "substancja"
+      },
+      {
+        "_en": "tie",
+        "_pl": "wiązać, krawat"
+      },
+      {
+        "_en": "favor",
+        "_pl": "przychylność"
+      },
+      {
+        "_en": "enter",
+        "_pl": "wejście"
+      },
+      {
+        "_en": "connect",
+        "_pl": "łączyć"
+      },
+      {
+        "_en": "major",
+        "_pl": "poważny, główny"
+      },
+      {
+        "_en": "post",
+        "_pl": "stanowisko, wysyłać pocztą"
+      },
+      {
+        "_en": "fresh",
+        "_pl": "świeży"
+      },
+      {
+        "_en": "spend",
+        "_pl": "spędzać"
+      },
+      {
+        "_en": "search",
+        "_pl": "szukać"
+      },
+      {
+        "_en": "chord",
+        "_pl": "akord"
+      },
+      {
+        "_en": "send",
+        "_pl": "wysyłać"
+      },
+      {
+        "_en": "fat",
+        "_pl": "gruby"
+      },
+      {
+        "_en": "yellow",
+        "_pl": "żółty"
+      },
+      {
+        "_en": "glad",
+        "_pl": "zadowolony"
+      },
+      {
+        "_en": "gun",
+        "_pl": "broń"
+      },
+      {
+        "_en": "original",
+        "_pl": "autentyczny"
+      },
+      {
+        "_en": "allow",
+        "_pl": "dopuszczać, pozwolić"
+      },
+      {
+        "_en": "share",
+        "_pl": "dzielić"
+      },
+      {
+        "_en": "print",
+        "_pl": "drukować"
+      },
+      {
+        "_en": "station",
+        "_pl": "stacja"
+      },
+      {
+        "_en": "dead",
+        "_pl": "martwy"
+      },
+      {
+        "_en": "dad",
+        "_pl": "tata"
+      },
+      {
+        "_en": "spot",
+        "_pl": "miejsce"
+      },
+      {
+        "_en": "bread",
+        "_pl": "chleb"
+      },
+      {
+        "_en": "desert",
+        "_pl": "pustynia"
+      },
+      {
+        "_en": "charge",
+        "_pl": "opłata"
+      },
+      {
+        "_en": "suit",
+        "_pl": "garnitur"
+      },
+      {
+        "_en": "proper",
+        "_pl": "właściwy"
+      },
+      {
+        "_en": "current",
+        "_pl": "obecny, prąd"
+      },
+      {
+        "_en": "bar",
+        "_pl": "bar"
+      },
+      {
+        "_en": "lift",
+        "_pl": "winda, wyciąg "
+      },
+      {
+        "_en": "offer",
+        "_pl": "oferować"
+      },
+      {
+        "_en": "rose",
+        "_pl": "róża"
+      },
+      {
+        "_en": "segment",
+        "_pl": "człon"
+      },
+      {
+        "_en": "continue",
+        "_pl": "kontynuować"
+      },
+      {
+        "_en": "slave",
+        "_pl": "niewolnik"
+      },
+      {
+        "_en": "block",
+        "_pl": "blok"
+      },
+      {
+        "_en": "duck",
+        "_pl": "kaczka"
+      },
+      {
+        "_en": "chart",
+        "_pl": "wykres"
+      },
+      {
+        "_en": "instant",
+        "_pl": "natychmiastowy, nagły"
+      },
+      {
+        "_en": "hat",
+        "_pl": "kapelusz"
+      },
+      {
+        "_en": "market",
+        "_pl": "rynek"
+      },
+      {
+        "_en": "sell",
+        "_pl": "sprzedawać"
+      },
+      {
+        "_en": "degree",
+        "_pl": "stopień"
+      },
+      {
+        "_en": "success",
+        "_pl": "sukces"
+      },
+      {
+        "_en": "populate",
+        "_pl": "zaludniać"
+      },
+      {
+        "_en": "company",
+        "_pl": "firma"
+      },
+      {
+        "_en": "chick",
+        "_pl": "pisklę"
+      },
+      {
+        "_en": "subtract",
+        "_pl": "odejmować"
+      },
+      {
+        "_en": "dear",
+        "_pl": "drogi"
+      },
+      {
+        "_en": "event",
+        "_pl": "wydarzenie"
+      },
+      {
+        "_en": "enemy",
+        "_pl": "wróg"
+      },
+      {
+        "_en": "particular",
+        "_pl": "szczególny"
+      },
+      {
+        "_en": "reply",
+        "_pl": "odpowiedź"
+      },
+      {
+        "_en": "deal",
+        "_pl": "umowa"
+      },
+      {
+        "_en": "drink",
+        "_pl": "pic"
+      },
+      {
+        "_en": "swim",
+        "_pl": "pływać"
+      },
+      {
+        "_en": "occur",
+        "_pl": "zdarzać się "
+      },
+      {
+        "_en": "term",
+        "_pl": "termin"
+      },
+      {
+        "_en": "support",
+        "_pl": "wspierać"
+      },
+      {
+        "_en": "opposite",
+        "_pl": "naprzeciwko"
+      },
+      {
+        "_en": "speech",
+        "_pl": "przemówienie, mowa"
+      },
+      {
+        "_en": "wife",
+        "_pl": "żona"
+      },
+      {
+        "_en": "nature",
+        "_pl": "natura"
+      },
+      {
+        "_en": "shoe",
+        "_pl": "but"
+      },
+      {
+        "_en": "range",
+        "_pl": "łańcuch"
+      },
+      {
+        "_en": "shoulder",
+        "_pl": "ramię"
+      },
+      {
+        "_en": "steam",
+        "_pl": "para"
+      },
+      {
+        "_en": "spread",
+        "_pl": "rozprzestrzenianie się"
+      },
+      {
+        "_en": "motion",
+        "_pl": "ruch"
+      },
+      {
+        "_en": "arrange",
+        "_pl": "organizować"
+      },
+      {
+        "_en": "path",
+        "_pl": "ścieżka"
+      },
+      {
+        "_en": "camp",
+        "_pl": "obóz"
+      },
+      {
+        "_en": "liquid",
+        "_pl": "ciecz"
+      },
+      {
+        "_en": "invent",
+        "_pl": "wynaleźć"
+      },
+      {
+        "_en": "log",
+        "_pl": "kłoda"
+      },
+      {
+        "_en": "cotton",
+        "_pl": "wełna"
+      },
+      {
+        "_en": "meant",
+        "_pl": "znaczyć w czasie przeszłym"
+      },
+      {
+        "_en": "born",
+        "_pl": "rodzić się"
+      },
+      {
+        "_en": "quotient",
+        "_pl": "współczynnik"
+      },
+      {
+        "_en": "determine",
+        "_pl": "określać"
+      },
+      {
+        "_en": "teeth",
+        "_pl": "zęby"
+      },
+      {
+        "_en": "quart",
+        "_pl": "kwarta"
+      },
+      {
+        "_en": "shell",
+        "_pl": "muszla"
+      },
+      {
+        "_en": "nine",
+        "_pl": "dziewięć"
+      },
+      {
+        "_en": "neck",
+        "_pl": "szyja"
+      },
+      {
+        "_en": "supper",
+        "_pl": "kolacja"
+      },
+      {
+        "_en": "tongue",
+        "_pl": "język"
+      }]
+  },
+
+  {
+    "category": {
+      "_pl": "1000 popularnych słów - ćwiczenia",
+      "_en": "1000 popular words - exercises"
+    },
+    "name": {
+      "_pl": "Ćwiczenie 2",
+      "_en": "Exercise 2"
     },
     "data": [
       {
@@ -4734,14 +6195,14 @@
       },
       {
         "_en": "just",
-        "_pl": "tylko"
+        "_pl": "właśnie, tylko"
       },
       {
         "_en": "a",
         "_pl": "(stawiane przed rzeczownikiem zaczynającym się spółgłoską)"
       },
       {
-        "_en": "form",
+        "_en": "form, shape",
         "_pl": "forma"
       },
       {
@@ -4778,7 +6239,7 @@
       },
       {
         "_en": "that",
-        "_pl": "że"
+        "_pl": "że, ten, to"
       },
       {
         "_en": "help",
@@ -4798,7 +6259,7 @@
       },
       {
         "_en": "line",
-        "_pl": "linia"
+        "_pl": "linia, kolejka (np. w sklepie)"
       },
       {
         "_en": "for",
@@ -4874,7 +6335,7 @@
       },
       {
         "_en": "at",
-        "_pl": "przy"
+        "_pl": "w, przy"
       },
       {
         "_en": "old",
@@ -4906,19 +6367,19 @@
       },
       {
         "_en": "from",
-        "_pl": "od"
+        "_pl": "od, z"
       },
       {
         "_en": "does",
-        "_pl": "robić w 3. osobie liczby pojedynczej"
+        "_pl": "robić (w 3 osobie liczby pojedynczej)"
       },
       {
         "_en": "or",
-        "_pl": "albo"
+        "_pl": "lub, albo"
       },
       {
         "_en": "set",
-        "_pl": "komplet"
+        "_pl": "zestaw, komplet, osadzony"
       },
       {
         "_en": "had",
@@ -4970,7 +6431,7 @@
       },
       {
         "_en": "some",
-        "_pl": "kilka"
+        "_pl": "kilka, trochę"
       },
       {
         "_en": "small",
@@ -4998,7 +6459,7 @@
       },
       {
         "_en": "home",
-        "_pl": "dom"
+        "_pl": "dom, ojczyzna"
       },
       {
         "_en": "other",
@@ -5038,7 +6499,7 @@
       },
       {
         "_en": "spell",
-        "_pl": "zaklęcie"
+        "_pl": "zaklęcie, literować"
       },
       {
         "_en": "up",
@@ -5054,7 +6515,7 @@
       },
       {
         "_en": "even",
-        "_pl": "nawet"
+        "_pl": "nawet, parzysty"
       },
       {
         "_en": "your",
@@ -5086,11 +6547,11 @@
       },
       {
         "_en": "big",
-        "_pl": "duży"
+        "_pl": "duży, wielki"
       },
       {
         "_en": "each",
-        "_pl": "każdy"
+        "_pl": "każdy, poszczególny"
       },
       {
         "_en": "high",
@@ -5120,8 +6581,8 @@
       "_en": "1000 popular words - exercises"
     },
     "name": {
-      "_pl": "Ćwiczenie 2",
-      "_en": "Exercise 2"
+      "_pl": "Ćwiczenie 3",
+      "_en": "Exercise 3"
     },
     "data": [
       {
@@ -5166,7 +6627,7 @@
       },
       {
         "_en": "way",
-        "_pl": "sposób"
+        "_pl": "sposób, droga"
       },
       {
         "_en": "went",
@@ -5186,11 +6647,11 @@
       },
       {
         "_en": "kind",
-        "_pl": "rodzaj"
+        "_pl": "rodzaj, uprzejmy"
       },
       {
         "_en": "then",
-        "_pl": "potem"
+        "_pl": "następnie, potem"
       },
       {
         "_en": "off - eg: i am off",
@@ -5198,7 +6659,7 @@
       },
       {
         "_en": "them",
-        "_pl": "ich"
+        "_pl": "ich, im"
       },
       {
         "_en": "need",
@@ -5210,11 +6671,11 @@
       },
       {
         "_en": "house",
-        "_pl": "dom"
+        "_pl": "dom, budynek"
       },
       {
-        "_en": "gould",
-        "_pl": "np"
+        "_en": "wardrobe",
+        "_pl": "szafa, garderoba"
       },
       {
         "_en": "picture",
@@ -5298,15 +6759,15 @@
       },
       {
         "_en": "self",
-        "_pl": "swoje"
+        "_pl": "swoje, samego siebie"
       },
       {
         "_en": "has",
         "_pl": "mieć w 3. osobie liczby pojedynczej"
       },
       {
-        "_en": "earth",
-        "_pl": "ziemia"
+        "_en": "Earth",
+        "_pl": "Ziemia"
       },
       {
         "_en": "look",
@@ -5322,7 +6783,7 @@
       },
       {
         "_en": "head",
-        "_pl": "głowa. główny"
+        "_pl": "głowa, główny"
       },
       {
         "_en": "day",
@@ -5334,7 +6795,7 @@
       },
       {
         "_en": "could",
-        "_pl": "móc"
+        "_pl": "móc, mógłbyś"
       },
       {
         "_en": "own",
@@ -5350,11 +6811,11 @@
       },
       {
         "_en": "come",
-        "_pl": "przychodzić przyjeżdżać"
+        "_pl": "przychodzić, przyjeżdżać"
       },
       {
         "_en": "should",
-        "_pl": "powinien …"
+        "_pl": "powinien"
       },
       {
         "_en": "did",
@@ -5362,7 +6823,7 @@
       },
       {
         "_en": "country",
-        "_pl": "państwo "
+        "_pl": "kraj, państwo, wieś"
       },
       {
         "_en": "number",
@@ -5418,7 +6879,7 @@
       },
       {
         "_en": "learn",
-        "_pl": "uczyć sie"
+        "_pl": "uczyć się"
       },
       {
         "_en": "know",
@@ -5474,7 +6935,7 @@
       },
       {
         "_en": "state",
-        "_pl": "stan"
+        "_pl": "stan, państwo"
       },
       {
         "_en": "down",
@@ -5486,7 +6947,7 @@
       },
       {
         "_en": "side",
-        "_pl": "strona"
+        "_pl": "strona, bok"
       },
       {
         "_en": "eye",
@@ -5535,8 +6996,8 @@
       "_en": "1000 popular words - exercises"
     },
     "name": {
-      "_pl": "Ćwiczenie 3",
-      "_en": "Exercise 3"
+      "_pl": "Ćwiczenie 4",
+      "_en": "Exercise 4"
     },
     "data": [
       {
@@ -5585,7 +7046,7 @@
       },
       {
         "_en": "start",
-        "_pl": "zaczynać"
+        "_pl": "początek, zaczynać"
       },
       {
         "_en": "made",
@@ -5597,7 +7058,7 @@
       },
       {
         "_en": "live",
-        "_pl": "mieszkać"
+        "_pl": "na żywo, żyć, mieszkać"
       },
       {
         "_en": "story",
@@ -5629,7 +7090,7 @@
       },
       {
         "_en": "little",
-        "_pl": "mało. mały"
+        "_pl": "mało"
       },
       {
         "_en": "draw",
@@ -5668,12 +7129,12 @@
         "_pl": "przeczenie do not nie rób lub operator w present simple w zdaniach przeczących"
       },
       {
-        "_en": "came",
-        "_pl": "przyjechał"
+        "_en": "(he) came",
+        "_pl": "przyjechał, przybył"
       },
       {
         "_en": "while",
-        "_pl": "podczas gdy"
+        "_pl": "podczas"
       },
       {
         "_en": "show",
@@ -5741,7 +7202,7 @@
       },
       {
         "_en": "seem",
-        "_pl": "wydawać się"
+        "_pl": "wydawać się, wyglądać na"
       },
       {
         "_en": "simple",
@@ -5921,7 +7382,7 @@
       },
       {
         "_en": "notice",
-        "_pl": "zauważyć"
+        "_pl": "ogłoszenie, zauważyć"
       },
       {
         "_en": "feet",
@@ -5937,7 +7398,7 @@
       },
       {
         "_en": "unit",
-        "_pl": "rozdział"
+        "_pl": "jednostka, rozdział"
       }]
   },
 
@@ -5947,8 +7408,8 @@
       "_en": "1000 popular words - exercises"
     },
     "name": {
-      "_pl": "Ćwiczenie 4",
-      "_en": "Exercise 4"
+      "_pl": "Ćwiczenie 5",
+      "_en": "Exercise 5"
     },
     "data": [
       {
@@ -5977,7 +7438,7 @@
       },
       {
         "_en": "took",
-        "_pl": "zabrać w czasie przeszłym"
+        "_pl": "wziął, zabrać w czasie przeszłym"
       },
       {
         "_en": "certain",
@@ -6057,15 +7518,15 @@
       },
       {
         "_en": "once",
-        "_pl": "jeden raz"
+        "_pl": "pewnego razu, jeden raz"
       },
       {
         "_en": "figure",
-        "_pl": "liczba"
+        "_pl": "postać, figura, cyfra"
       },
       {
         "_en": "base",
-        "_pl": "podstawa"
+        "_pl": "baza, podstawa"
       },
       {
         "_en": "star",
@@ -6117,7 +7578,7 @@
       },
       {
         "_en": "able",
-        "_pl": "być w stanie coś zrobić"
+        "_pl": "zdolny (zdolny do czegoś)"
       },
       {
         "_en": "face",
@@ -6125,15 +7586,15 @@
       },
       {
         "_en": "pound",
-        "_pl": "walić"
+        "_pl": "walić, funt"
       },
       {
         "_en": "wood",
-        "_pl": "drewno"
+        "_pl": "drewno, las"
       },
       {
         "_en": "done",
-        "_pl": "zrobione i do w czasie perfest"
+        "_pl": "(zrobione i do w czasie perfect)"
       },
       {
         "_en": "main",
@@ -6149,15 +7610,15 @@
       },
       {
         "_en": "drive",
-        "_pl": "prowadzić samochód"
+        "_pl": "prowadzić, przejażdżka"
       },
       {
         "_en": "plain",
-        "_pl": "zwykły"
+        "_pl": "zwykły, równina"
       },
       {
         "_en": "stood",
-        "_pl": "stać w czasie przeszłym"
+        "_pl": "stał - stać (w czasie przeszłym)"
       },
       {
         "_en": "girl",
@@ -6181,7 +7642,7 @@
       },
       {
         "_en": "teach",
-        "_pl": "uczyć kogoś"
+        "_pl": "uczyć"
       },
       {
         "_en": "ready",
@@ -6197,7 +7658,7 @@
       },
       {
         "_en": "final",
-        "_pl": "ostatni"
+        "_pl": "finał, ostatni"
       },
       {
         "_en": "ever",
@@ -6205,7 +7666,7 @@
       },
       {
         "_en": "gave",
-        "_pl": "dawać w czasie przeszłym"
+        "_pl": "dał - dawać (w czasie przeszłym)"
       },
       {
         "_en": "red",
@@ -6221,7 +7682,7 @@
       },
       {
         "_en": "oh",
-        "_pl": "och ?"
+        "_pl": "och"
       },
       {
         "_en": "though",
@@ -6305,11 +7766,11 @@
       },
       {
         "_en": "leave",
-        "_pl": "opuścić. wychodzić "
+        "_pl": "opuścić, wychodzić "
       },
       {
         "_en": "clear",
-        "_pl": "wyraźny"
+        "_pl": "jasny, wyraźny, oczyścić"
       },
       {
         "_en": "song",
@@ -6359,8 +7820,8 @@
       "_en": "1000 popular words - exercises"
     },
     "name": {
-      "_pl": "Ćwiczenie 5",
-      "_en": "Exercise 5"
+      "_pl": "Ćwiczenie 6",
+      "_en": "Exercise 6"
     },
     "data": [
       {
@@ -6433,7 +7894,7 @@
       },
       {
         "_en": "object",
-        "_pl": "przedmiot"
+        "_pl": "obiekt, przedmiot"
       },
       {
         "_en": "half",
@@ -6453,7 +7914,7 @@
       },
       {
         "_en": "order",
-        "_pl": "porządek"
+        "_pl": "porządek, zamówienie"
       },
       {
         "_en": "deep",
@@ -6489,11 +7950,11 @@
       },
       {
         "_en": "system",
-        "_pl": "układ"
+        "_pl": "system, układ"
       },
       {
         "_en": "told",
-        "_pl": "powiedzieć w czasie przeszłym"
+        "_pl": "powiedział - powiedzieć (w czasie przeszłym)"
       },
       {
         "_en": "busy",
@@ -6513,7 +7974,7 @@
       },
       {
         "_en": "record",
-        "_pl": "płyta"
+        "_pl": "zapis, nagrać, płyta"
       },
       {
         "_en": "since",
@@ -6561,7 +8022,7 @@
       },
       {
         "_en": "stead",
-        "_pl": "zamiast kogoś"
+        "_pl": "zamiast"
       },
       {
         "_en": "best",
@@ -6645,7 +8106,7 @@
       },
       {
         "_en": "hold",
-        "_pl": "trzymac"
+        "_pl": "trzymać"
       },
       {
         "_en": "hot",
@@ -6657,15 +8118,15 @@
       },
       {
         "_en": "miss",
-        "_pl": "tracić"
+        "_pl": "tęsknić, chybić, tracić"
       },
       {
         "_en": "ground",
-        "_pl": "ziemia"
+        "_pl": "ziemia, grunt"
       },
       {
         "_en": "brought",
-        "_pl": "przynosić w czasie przeszłym"
+        "_pl": "przyniósł, przynosić (w czasie przeszłym)"
       },
       {
         "_en": "interest",
@@ -6673,11 +8134,11 @@
       },
       {
         "_en": "heat",
-        "_pl": "upał"
+        "_pl": "ciepło, gorąco"
       },
       {
         "_en": "reach",
-        "_pl": "sięgać"
+        "_pl": "dosięgnąć"
       },
       {
         "_en": "snow",
@@ -6689,7 +8150,7 @@
       },
       {
         "_en": "tire",
-        "_pl": "męczyć się"
+        "_pl": "zmęczyć, opona"
       },
       {
         "_en": "verb",
@@ -6753,7 +8214,7 @@
       },
       {
         "_en": "among",
-        "_pl": "wśród"
+        "_pl": "pośród"
       },
       {
         "_en": "grand",
@@ -6771,8 +8232,8 @@
       "_en": "1000 popular words - exercises"
     },
     "name": {
-      "_pl": "Ćwiczenie 6",
-      "_en": "Exercise 6"
+      "_pl": "Ćwiczenie 7",
+      "_en": "Exercise 7"
     },
     "data": [
       {
@@ -6789,7 +8250,7 @@
       },
       {
         "_en": "consider",
-        "_pl": "brać pod uwagę"
+        "_pl": "rozważać"
       },
       {
         "_en": "wave",
@@ -6816,7 +8277,7 @@
         "_pl": "kawałek"
       },
       {
-        "_en": "am",
+        "_en": "I am",
         "_pl": "jestem"
       },
       {
@@ -6837,7 +8298,7 @@
       },
       {
         "_en": "phrase",
-        "_pl": "zwrot"
+        "_pl": "wyrażenie, zwrot"
       },
       {
         "_en": "dance",
@@ -6913,7 +8374,7 @@
       },
       {
         "_en": "settle",
-        "_pl": "roztrzygać"
+        "_pl": "roztrzygać, osiadać"
       },
       {
         "_en": "fight",
@@ -6925,7 +8386,7 @@
       },
       {
         "_en": "lie",
-        "_pl": "leżeć"
+        "_pl": "leżeć, kłamstwo"
       },
       {
         "_en": "weight",
@@ -6953,7 +8414,7 @@
       },
       {
         "_en": "matter",
-        "_pl": "sprawa"
+        "_pl": "sprawa, znaczenie, materia"
       },
       {
         "_en": "view",
@@ -6961,7 +8422,7 @@
       },
       {
         "_en": "circle",
-        "_pl": "koło. okrąg"
+        "_pl": "koło, okrąg"
       },
       {
         "_en": "sense",
@@ -6997,11 +8458,11 @@
       },
       {
         "_en": "broke",
-        "_pl": "złamać w czasie przeszłym"
+        "_pl": "złamałem, złamać (w czasie przeszłym)"
       },
       {
         "_en": "felt",
-        "_pl": "czuć w czasie przeszłym"
+        "_pl": "czułem, czuć (w czasie przeszłym)"
       },
       {
         "_en": "case",
@@ -7009,7 +8470,7 @@
       },
       {
         "_en": "perhaps",
-        "_pl": "może"
+        "_pl": "być może"
       },
       {
         "_en": "middle",
@@ -7169,7 +8630,7 @@
       },
       {
         "_en": "fraction",
-        "_pl": "odrobina"
+        "_pl": "frakcja, odrobina"
       },
       {
         "_en": "section",
@@ -7184,8 +8645,8 @@
       "_en": "1000 popular words - exercises"
     },
     "name": {
-      "_pl": "Ćwiczenie 7",
-      "_en": "Exercise 7"
+      "_pl": "Ćwiczenie 8",
+      "_en": "Exercise 8"
     },
     "data": [
       {
@@ -7206,7 +8667,7 @@
       },
       {
         "_en": "race",
-        "_pl": "rasa"
+        "_pl": "wyścig, rasa"
       },
       {
         "_en": "surprise",
@@ -7222,7 +8683,7 @@
       },
       {
         "_en": "store",
-        "_pl": "sklep"
+        "_pl": "zapas, sklep"
       },
       {
         "_en": "stone",
@@ -7302,7 +8763,7 @@
       },
       {
         "_en": "mount",
-        "_pl": "wierzchowiec"
+        "_pl": "góra, wierzchowiec"
       },
       {
         "_en": "iron",
@@ -7310,7 +8771,7 @@
       },
       {
         "_en": "wish",
-        "_pl": "pragnienie"
+        "_pl": "życzenie, pragnienie"
       },
       {
         "_en": "single",
@@ -7362,7 +8823,7 @@
       },
       {
         "_en": "crease",
-        "_pl": "gnieść"
+        "_pl": "marszczyć, gnieść"
       },
       {
         "_en": "wild",
@@ -7382,7 +8843,7 @@
       },
       {
         "_en": "kept",
-        "_pl": "trzymany lub trzymać w czasie perfect"
+        "_pl": "(trzymany i trzymać w czasie perfect)"
       },
       {
         "_en": "melody",
@@ -7410,7 +8871,7 @@
       },
       {
         "_en": "receive",
-        "_pl": "otrzymywać"
+        "_pl": "otrzymać"
       },
       {
         "_en": "job",
@@ -7478,7 +8939,7 @@
       },
       {
         "_en": "gas",
-        "_pl": "benzyna"
+        "_pl": "benzyna, gaz"
       },
       {
         "_en": "except",
@@ -7490,7 +8951,7 @@
       },
       {
         "_en": "wrote",
-        "_pl": "pisać w czasie przeszłym"
+        "_pl": "pisałem - pisać (w czasie przeszłym)"
       },
       {
         "_en": "month",
@@ -7566,7 +9027,7 @@
       },
       {
         "_en": "gone",
-        "_pl": "miniony lub iść w czasie perfect"
+        "_pl": "poszedł, odszedł, miniony"
       },
       {
         "_en": "bad",
@@ -7596,8 +9057,8 @@
       "_en": "1000 popular words - exercises"
     },
     "name": {
-      "_pl": "Ćwiczenie 8",
-      "_en": "Exercise 8"
+      "_pl": "Ćwiczenie 9",
+      "_en": "Exercise 9"
     },
     "data": [
       {
@@ -7618,11 +9079,11 @@
       },
       {
         "_en": "meet",
-        "_pl": "poznawać"
+        "_pl": "spotykać, poznawać"
       },
       {
         "_en": "grew",
-        "_pl": "rosnąć w czasie przeszłym"
+        "_pl": "rósł - rosnąć (w czasie przeszłym)"
       },
       {
         "_en": "root",
@@ -7642,7 +9103,7 @@
       },
       {
         "_en": "raise",
-        "_pl": "podwyżać"
+        "_pl": "podnieść, przesadzić, podwyżać"
       },
       {
         "_en": "team",
@@ -7734,7 +9195,7 @@
       },
       {
         "_en": "fit",
-        "_pl": "pasować"
+        "_pl": "dopasowanie, pasować"
       },
       {
         "_en": "cook",
@@ -7742,7 +9203,7 @@
       },
       {
         "_en": "flow",
-        "_pl": "przepływ"
+        "_pl": "pływ, przepływ"
       },
       {
         "_en": "floor",
@@ -7754,7 +9215,7 @@
       },
       {
         "_en": "either",
-        "_pl": "obojętnie który"
+        "_pl": "zarówno, którykolwiek, obojętnie który"
       },
       {
         "_en": "bank",
@@ -7774,7 +9235,7 @@
       },
       {
         "_en": "save",
-        "_pl": "oszczędzać"
+        "_pl": "zapisać, zaoszczędzać"
       },
       {
         "_en": "hill",
@@ -7862,7 +9323,7 @@
       },
       {
         "_en": "shine",
-        "_pl": "świecić"
+        "_pl": "świecić, blask"
       },
       {
         "_en": "noon",
@@ -7914,7 +9375,7 @@
       },
       {
         "_en": "caught",
-        "_pl": "łapać w czasie przeszłym lub złapany"
+        "_pl": "łapałem, złapany, łapać (w czasie przeszłym)"
       },
       {
         "_en": "repeat",
@@ -7974,7 +9435,7 @@
       },
       {
         "_en": "anger",
-        "_pl": "złość"
+        "_pl": "gniew, złość"
       },
       {
         "_en": "effect",
@@ -8009,8 +9470,8 @@
       "_en": "1000 popular words - exercises"
     },
     "name": {
-      "_pl": "Ćwiczenie 9",
-      "_en": "Exercise 9"
+      "_pl": "Ćwiczenie 10",
+      "_en": "Exercise 10"
     },
     "data": [
       {
@@ -8179,7 +9640,7 @@
       },
       {
         "_en": "forward",
-        "_pl": "do przodu"
+        "_pl": "Naprzód, do przodu"
       },
       {
         "_en": "soldier",
@@ -8415,418 +9876,6 @@
       }]
   },
 
-  {
-    "category": {
-      "_pl": "1000 popularnych słów - ćwiczenia",
-      "_en": "1000 popular words - exercises"
-    },
-    "name": {
-      "_pl": "Ćwiczenie 10",
-      "_en": "Exercise 10"
-    },
-    "data": [
-      {
-      "_en": "planet",
-      "_pl": "planeta"
-      },
-      {
-        "_en": "track",
-        "_pl": "szlak"
-      },
-      {
-        "_en": "hurry",
-        "_pl": "śpieszyć sie"
-      },
-      {
-        "_en": "parent",
-        "_pl": "rodzic"
-      },
-      {
-        "_en": "chief",
-        "_pl": "wódz"
-      },
-      {
-        "_en": "shore",
-        "_pl": "brzeg"
-      },
-      {
-        "_en": "colony",
-        "_pl": "kolonia"
-      },
-      {
-        "_en": "division",
-        "_pl": "podział"
-      },
-      {
-        "_en": "clock",
-        "_pl": "zegar ścienny"
-      },
-      {
-        "_en": "sheet",
-        "_pl": "kartka papieru"
-      },
-      {
-        "_en": "mine",
-        "_pl": "moje"
-      },
-      {
-        "_en": "substance",
-        "_pl": "substancja"
-      },
-      {
-        "_en": "tie",
-        "_pl": "wiązać"
-      },
-      {
-        "_en": "favor",
-        "_pl": "przychylność"
-      },
-      {
-        "_en": "enter",
-        "_pl": "wejście"
-      },
-      {
-        "_en": "connect",
-        "_pl": "łączyć"
-      },
-      {
-        "_en": "major",
-        "_pl": "główny"
-      },
-      {
-        "_en": "post",
-        "_pl": "stanowisko"
-      },
-      {
-        "_en": "fresh",
-        "_pl": "świeży"
-      },
-      {
-        "_en": "spend",
-        "_pl": "spędzać"
-      },
-      {
-        "_en": "search",
-        "_pl": "szukać"
-      },
-      {
-        "_en": "chord",
-        "_pl": "akord"
-      },
-      {
-        "_en": "send",
-        "_pl": "wysyłać"
-      },
-      {
-        "_en": "fat",
-        "_pl": "gruby"
-      },
-      {
-        "_en": "yellow",
-        "_pl": "żółty"
-      },
-      {
-        "_en": "glad",
-        "_pl": "zadowolony"
-      },
-      {
-        "_en": "gun",
-        "_pl": "broń"
-      },
-      {
-        "_en": "original",
-        "_pl": "autentyczny"
-      },
-      {
-        "_en": "allow",
-        "_pl": "pozwolić"
-      },
-      {
-        "_en": "share",
-        "_pl": "dzielić"
-      },
-      {
-        "_en": "print",
-        "_pl": "drukować"
-      },
-      {
-        "_en": "station",
-        "_pl": "stacja"
-      },
-      {
-        "_en": "dead",
-        "_pl": "martwy"
-      },
-      {
-        "_en": "dad",
-        "_pl": "tata"
-      },
-      {
-        "_en": "spot",
-        "_pl": "miejsce"
-      },
-      {
-        "_en": "bread",
-        "_pl": "chleb"
-      },
-      {
-        "_en": "desert",
-        "_pl": "pustynia"
-      },
-      {
-        "_en": "charge",
-        "_pl": "opłata"
-      },
-      {
-        "_en": "suit",
-        "_pl": "garnitur"
-      },
-      {
-        "_en": "proper",
-        "_pl": "właściwy"
-      },
-      {
-        "_en": "current",
-        "_pl": "prąd"
-      },
-      {
-        "_en": "bar",
-        "_pl": "bar"
-      },
-      {
-        "_en": "lift",
-        "_pl": "podwozić "
-      },
-      {
-        "_en": "offer",
-        "_pl": "oferować"
-      },
-      {
-        "_en": "rose",
-        "_pl": "róża"
-      },
-      {
-        "_en": "segment",
-        "_pl": "część"
-      },
-      {
-        "_en": "continue",
-        "_pl": "kontynuować"
-      },
-      {
-        "_en": "slave",
-        "_pl": "niewolnik"
-      },
-      {
-        "_en": "block",
-        "_pl": "blok"
-      },
-      {
-        "_en": "duck",
-        "_pl": "kaczka"
-      },
-      {
-        "_en": "chart",
-        "_pl": "lista"
-      },
-      {
-        "_en": "instant",
-        "_pl": "nagły"
-      },
-      {
-        "_en": "hat",
-        "_pl": "kapelusz"
-      },
-      {
-        "_en": "market",
-        "_pl": "rynek"
-      },
-      {
-        "_en": "sell",
-        "_pl": "sprzedawać"
-      },
-      {
-        "_en": "degree",
-        "_pl": "stopień"
-      },
-      {
-        "_en": "success",
-        "_pl": "odnosić sukces"
-      },
-      {
-        "_en": "populate",
-        "_pl": "zaludniać"
-      },
-      {
-        "_en": "company",
-        "_pl": "firma"
-      },
-      {
-        "_en": "chick",
-        "_pl": "pisklę"
-      },
-      {
-        "_en": "subtract",
-        "_pl": "odejmować"
-      },
-      {
-        "_en": "dear",
-        "_pl": "drogi"
-      },
-      {
-        "_en": "event",
-        "_pl": "wydarzenie"
-      },
-      {
-        "_en": "enemy",
-        "_pl": "wróg"
-      },
-      {
-        "_en": "particular",
-        "_pl": "szczególny"
-      },
-      {
-        "_en": "reply",
-        "_pl": "odpowiedź"
-      },
-      {
-        "_en": "deal",
-        "_pl": "umowa"
-      },
-      {
-        "_en": "drink",
-        "_pl": "pic"
-      },
-      {
-        "_en": "swim",
-        "_pl": "pływać"
-      },
-      {
-        "_en": "occur",
-        "_pl": "zdarzać się "
-      },
-      {
-        "_en": "term",
-        "_pl": "termin"
-      },
-      {
-        "_en": "support",
-        "_pl": "wspierać"
-      },
-      {
-        "_en": "opposite",
-        "_pl": "naprzeciwko"
-      },
-      {
-        "_en": "speech",
-        "_pl": "mowa"
-      },
-      {
-        "_en": "wife",
-        "_pl": "żona"
-      },
-      {
-        "_en": "nature",
-        "_pl": "natura"
-      },
-      {
-        "_en": "shoe",
-        "_pl": "but"
-      },
-      {
-        "_en": "range",
-        "_pl": "łańcuch"
-      },
-      {
-        "_en": "shoulder",
-        "_pl": "ramię"
-      },
-      {
-        "_en": "steam",
-        "_pl": "para"
-      },
-      {
-        "_en": "spread",
-        "_pl": "rozprzestrzenianie się"
-      },
-      {
-        "_en": "motion",
-        "_pl": "ruch"
-      },
-      {
-        "_en": "arrange",
-        "_pl": "organizować"
-      },
-      {
-        "_en": "path",
-        "_pl": "ścieżka"
-      },
-      {
-        "_en": "camp",
-        "_pl": "obóz"
-      },
-      {
-        "_en": "liquid",
-        "_pl": "ciecz"
-      },
-      {
-        "_en": "invent",
-        "_pl": "wynaleźć"
-      },
-      {
-        "_en": "log",
-        "_pl": "kłoda"
-      },
-      {
-        "_en": "cotton",
-        "_pl": "wełna"
-      },
-      {
-        "_en": "meant",
-        "_pl": "znaczyć w czasie przeszłym"
-      },
-      {
-        "_en": "born",
-        "_pl": "rodzić się"
-      },
-      {
-        "_en": "quotient",
-        "_pl": "współczynnik"
-      },
-      {
-        "_en": "determine",
-        "_pl": "określać"
-      },
-      {
-        "_en": "teeth",
-        "_pl": "zęby"
-      },
-      {
-        "_en": "quart",
-        "_pl": "kwarta"
-      },
-      {
-        "_en": "shell",
-        "_pl": "muszla"
-      },
-      {
-        "_en": "nine",
-        "_pl": "dziewięć"
-      },
-      {
-        "_en": "neck",
-        "_pl": "szyja"
-      },
-      {
-        "_en": "supper",
-        "_pl": "kolacja"
-      },
-      {
-        "_en": "tongue",
-        "_pl": "język"
-      }]
-  },
-
 
   {
     "category": {
@@ -8863,7 +9912,7 @@
         "_en": " become / became / become"
       },
       {
-        "_pl": "przytrafić się / spotykać ",
+        "_pl": "przytrafić się",
         "_en": " befall / befell / befallen"
       },
       {
@@ -9488,6 +10537,1097 @@
 
 
 
+
+
+
+
+  {
+    "category": {
+      "_pl": "Czasowniki regularne - ćwiczenia",
+      "_en": "Regular verbs - exercises"
+    },
+    "name": {
+      "_pl": "Ćwiczenie 1",
+      "_en": "Exercise 1"
+    },
+    "data": [
+      {
+        "_pl": " Akceptować ",
+        "_en": " Accept / Accepted / Accepted "
+      },
+      {
+        "_pl": " Osiągać ",
+        "_en": " Achieve / Achieved / Achieved "
+      },
+      {
+        "_pl": " Dodać ",
+        "_en": " Add / Added / Added "
+      },
+      {
+        "_pl": " Podziwiać ",
+        "_en": " Admire / Admired / Admirer "
+      },
+      {
+        "_pl": " Przyznać ",
+        "_en": " Admit / Admitted / Admitted "
+      },
+      {
+        "_pl": " Przyjąć ",
+        "_en": " Adopt / Adopted / Adopted "
+      },
+      {
+        "_pl": " Doradzać ",
+        "_en": " Advise / Advised / Advised "
+      },
+      {
+        "_pl": " Zgadzać się ",
+        "_en": " Agree / Agreed / Agreed "
+      },
+      {
+        "_pl": " Dopuszczać ",
+        "_en": " Allow / Allowed / Allowed "
+      },
+      {
+        "_pl": " Ogłosić ",
+        "_en": " Announce / Announced / Announced "
+      },
+      {
+        "_pl": " Doceniać ",
+        "_en": " Appreciate / Appreciated / Appreciated "
+      },
+      {
+        "_pl": " Zatwierdzać ",
+        "_en": " Approve / Approved / Approved "
+      },
+      {
+        "_pl": " Kłócić się ",
+        "_en": " Argue / Argued / Argued "
+      },
+      {
+        "_pl": " Przyjechać ",
+        "_en": " Arrive / Arrived / Arrived "
+      },
+      {
+        "_pl": " Zadać / Pytać ",
+        "_en": " Ask / Asked / Asked "
+      },
+      {
+        "_pl": " Pomagać ",
+        "_en": " Assist / Assisted / Assisted "
+      },
+      {
+        "_pl": " Atakować ",
+        "_en": " Attack / Attacked / Attacked "
+      },
+      {
+        "_pl": " Piec ",
+        "_en": " Bake / Baked / Baked "
+      },
+      {
+        "_pl": " Żebrać/ Błagać ",
+        "_en": " Beg / Begged / Begged "
+      },
+      {
+        "_pl": " Zachowywać się ",
+        "_en": " Behave / Behaved / Behaved "
+      },
+      {
+        "_pl": " Gotować ",
+        "_en": " Boil / Boiled / Boiled "
+      },
+      {
+        "_pl": " Pożyczać ",
+        "_en": " Borrow / Borrowed / Borrowed "
+      },
+      {
+        "_pl": " Czyścić ",
+        "_en": " Brush / Brushed / Brushed "
+      },
+      {
+        "_pl": " Pochować ",
+        "_en": " Bury / Buried / Buried "
+      },
+      {
+        "_pl": " Zadzwonić/Wezwać ",
+        "_en": " Call / Called / Called "
+      },
+      {
+        "_pl": " Wyzwanie ",
+        "_en": " Challenge / Challenged / Challenged "
+      },
+      {
+        "_pl": " Zmiana ",
+        "_en": " Change / Changed / Changed "
+      },
+      {
+        "_pl": " Ścigać ",
+        "_en": " Chase / Chased / Chased "
+      },
+      {
+        "_pl": " Oszukać ",
+        "_en": " Cheat / Cheated / Cheated "
+      },
+      {
+        "_pl": " Dopingować ",
+        "_en": " Cheer / Cheered / Cheered "
+      },
+      {
+        "_pl": " Żuć ",
+        "_en": " Chew / Chewed / Chewed "
+      },
+      {
+        "_pl": " Klaskać ",
+        "_en": " Clap / Clapped / Clapped "
+      },
+      {
+        "_pl": " Czyścić ",
+        "_en": " Clean / Cleaned / Cleaned "
+      },
+      {
+        "_pl": " Zbierać ",
+        "_en": " Collect / Collected / Collected "
+      },
+      {
+        "_pl": " Porównać ",
+        "_en": " Compare / Compared / Compared "
+      },
+      {
+        "_pl": " Skarżyć się ",
+        "_en": " Complain / Complained / Complained "
+      },
+      {
+        "_pl": " Wyznać ",
+        "_en": " Confess / Confessed / Confessed "
+      },
+      {
+        "_pl": " Konstruować ",
+        "_en": " Construct / Constructed / Constructed "
+      },
+      {
+        "_pl": " Kontrolować ",
+        "_en": " Control / Controlled / Controlled "
+      },
+      {
+        "_pl": " Kopiować ",
+        "_en": " Copy / Copied / Copied "
+      },
+      {
+        "_pl": " Liczyć ",
+        "_en": " Count / Counted / Counted "
+      },
+      {
+        "_pl": " Tworzyć ",
+        "_en": " Create / Created / Created "
+      },
+      {
+        "_pl": " Płakać ",
+        "_en": " Cry / Cried / Cried "
+      },
+      {
+        "_pl": " Jeździć na rowerze ",
+        "_en": " Cycle / Cycled / Cycled "
+      },
+      {
+        "_pl": " Uszkodzić ",
+        "_en": " Damage / Damaged / Damaged "
+      },
+      {
+        "_pl": " Tańczyć ",
+        "_en": " Dance / Danced / Danced "
+      },
+      {
+        "_pl": " Dostarczać ",
+        "_en": " Deliver / Delivered / Delivered "
+      },
+      {
+        "_pl": " Niszczyć ",
+        "_en": " Destroy / Destroyed / Destroyed "
+      },
+      {
+        "_pl": " Podzielić ",
+        "_en": " Divide / Divided / Divided "
+      },
+      {
+        "_pl": " Ciągnąć ",
+        "_en": " Drag / Dragged / Dragged "
+      },
+      {
+        "_pl": " Zarobić ",
+        "_en": " Earn / Earned / Earned "
+      },
+      {
+        "_pl": " Zatrudnić ",
+        "_en": " Employ / Employed / Employed "
+      },
+      {
+        "_pl": " Popierać ",
+        "_en": " Encourage / Encouraged / Encouraged "
+      },
+      {
+        "_pl": " Cieszyć się ",
+        "_en": " Enjoy / Enjoyed / Enjoyed "
+      },
+      {
+        "_pl": " Założyć ",
+        "_en": " Establish / Established / Established "
+      },
+      {
+        "_pl": " Oszacować ",
+        "_en": " Estimate / Estimated / Estimated "
+      },
+      {
+        "_pl": " Wykonywać ",
+        "_en": " Exercise / Exercised / Exercised "
+      },
+      {
+        "_pl": " Rozszerzać ",
+        "_en": " Expand / Expanded / Expanded "
+      },
+      {
+        "_pl": " Wyjaśniać ",
+        "_en": " Explain / Explained / Explained "
+      },
+      {
+        "_pl": " Smażyć ",
+        "_en": " Fry / Fried / Fried "
+      },
+      {
+        "_pl": " Zbierać ",
+        "_en": " Gather / Gathered / Gathered "
+      },
+      {
+        "_pl": " Powitać ",
+        "_en": " Greet / Greeted / Greeted "
+      },
+      {
+        "_pl": " Odgadnąć ",
+        "_en": " Guess / Guessed / Guessed "
+      },
+      {
+        "_pl": " Nękać ",
+        "_en": " Harass / Harassed / Harassed "
+      },
+      {
+        "_pl": " Nienawidzić ",
+        "_en": " Hate / Hated / Hated "
+      },
+      {
+        "_pl": " Pomóc ",
+        "_en": " Help / Helped / Helped "
+      },
+      {
+        "_pl": " Mieć nadzieję ",
+        "_en": " Hope / Hoped / Hoped "
+      },
+      {
+        "_pl": " Identyfikować ",
+        "_en": " Identify / Identified / Identified "
+      },
+      {
+        "_pl": " Przerwać ",
+        "_en": " Interrupt / Interrupted / Interrupted "
+      },
+      {
+        "_pl": " Wprowadzać ",
+        "_en": " Introduce / Introduced / Introduced "
+      },
+      {
+        "_pl": " Drażnić ",
+        "_en": " Irritate / Irritated / Irritated "
+      },
+      {
+        "_pl": " Żartować ",
+        "_en": " Joke / Joked / Joked "
+      },
+      {
+        "_pl": " Skakać ",
+        "_en": " Jump / Jumped / Jumped "
+      },
+      {
+        "_pl": " Kopać ",
+        "_en": " Kick / Kicked / Kicked "
+      },
+      {
+        "_pl": " Zabić ",
+        "_en": " Kill / Killed / Killed "
+      },
+      {
+        "_pl": " Całować ",
+        "_en": " Kiss / Kissed / Kissed "
+      },
+      {
+        "_pl": " Śmiać się ",
+        "_en": " Laugh / Laughed / Laughed "
+      },
+      {
+        "_pl": " Kłamać ",
+        "_en": " Lie / Lied / Lied "
+      },
+      {
+        "_pl": " Lubić ",
+        "_en": " Like / Liked / Liked "
+      },
+      {
+        "_pl": " Słuchać ",
+        "_en": " Listen / Listened / Listened "
+      },
+      {
+        "_pl": " Kochać ",
+        "_en": " Love / Loved / Loved "
+      },
+      {
+        "_pl": " Poślubić ",
+        "_en": " Marry / Married / Married "
+      },
+      {
+        "_pl": " Zmierzyć ",
+        "_en": " Measure / Measured / Measured "
+      },
+      {
+        "_pl": " Przesunąć ",
+        "_en": " Move / Moved / Moved "
+      },
+      {
+        "_pl": " Zamordować ",
+        "_en": " Murder / Murdered / Murdered "
+      },
+      {
+        "_pl": " Potrzebować ",
+        "_en": " Need / Needed / Needed "
+      },
+      {
+        "_pl": " Schłuchać się ",
+        "_en": " Obey / Obeyed / Obeyed "
+      },
+      {
+        "_pl": " Obrazić ",
+        "_en": " Offend / Offended / Offended "
+      },
+      {
+        "_pl": " Oferować ",
+        "_en": " Offer / Offered / Offered "
+      },
+      {
+        "_pl": " Otwierać ",
+        "_en": " Open / Opened / Opened "
+      },
+      {
+        "_pl": " Malować ",
+        "_en": " Paint / Painted / Painted "
+      },
+      {
+        "_pl": " Parkować/Umieścić ",
+        "_en": " Park / Parked / Parked "
+      },
+      {
+        "_pl": " Dzwonić ",
+        "_en": " Phone / Phoned / Phoned "
+      },
+      {
+        "_pl": " Podnośić/Zbierać ",
+        "_en": " Pick / Picked / Picked "
+      },
+      {
+        "_pl": " Grać ",
+        "_en": " Play / Played / Played "
+      },
+      {
+        "_pl": " Modlić się ",
+        "_en": " Pray / Prayed / Prayed "
+      },
+      {
+        "_pl": " Wydrukować ",
+        "_en": " Print / Printed / Printed "
+      },
+      {
+        "_pl": " Ciągnąć ",
+        "_en": " Pull / Pulled / Puled "
+      },
+      {
+        "_pl": " Uderzać Pięścią ",
+        "_en": " Punch / Punched / Punched "
+      },
+      {
+        "_pl": " Karać ",
+        "_en": " Punish / Punished / Punished "
+      }
+
+    ]
+  },
+
+  {
+    "category": {
+      "_pl": "Czasowniki regularne - ćwiczenia",
+      "_en": "Regular verbs - exercises"
+    },
+    "name": {
+      "_pl": "Ćwiczenie 2",
+      "_en": "Exercise 2"
+    },
+    "data": [
+
+      {
+        "_pl": " Kupować ",
+        "_en": " Purchase / Purchased / Purchased "
+      },
+      {
+        "_pl": " Naciskać ",
+        "_en": " Push / Pushed / Pushed "
+      },
+      {
+        "_pl": " Pytać ",
+        "_en": " Question / Questioned / Questioned "
+      },
+      {
+        "_pl": " Scigać się ",
+        "_en": " Race / Raced / Raced "
+      },
+      {
+        "_pl": " Relaksować się ",
+        "_en": " Relax / Relaxed / Relaxed "
+      },
+      {
+        "_pl": " Zapamiętać ",
+        "_en": " Remember / Remembered / Remembered "
+      },
+      {
+        "_pl": " Odpowiadać ",
+        "_en": " Reply / Replied / Replied "
+      },
+      {
+        "_pl": " Przejść na Emeryturę ",
+        "_en": " Retire / Retired / Retired "
+      },
+      {
+        "_pl": " Zwrócić/Wrócić ",
+        "_en": " Return / Returned / Returned "
+      },
+      {
+        "_pl": " Trzeć ",
+        "_en": " Rub / Rubbed / Rubbed "
+      },
+      {
+        "_pl": " Skarcić ",
+        "_en": " Scold / Scolded / Scolded "
+      },
+      {
+        "_pl": " Wybierać ",
+        "_en": " Select / Selected / Selected "
+      },
+      {
+        "_pl": " Palić ",
+        "_en": " Smoke / Smoked / Smoked "
+      },
+      {
+        "_pl": " Chrapać ",
+        "_en": " Snore / Snored / Snored "
+      },
+      {
+        "_pl": " Gapić się ",
+        "_en": " Stare / Stared / Stared "
+      },
+      {
+        "_pl": " Zaczynać ",
+        "_en": " Start / Started / Started "
+      },
+      {
+        "_pl": " Studiować ",
+        "_en": " Study / Studied / Studied "
+      },
+      {
+        "_pl": " Mówić ",
+        "_en": " Talk / Talked / Talked "
+      },
+      {
+        "_pl": " Dziękować ",
+        "_en": " Thank / Thanked / Thanked "
+      },
+      {
+        "_pl": " Podróżować ",
+        "_en": " Travel / Travelled / Travelled "
+      },
+      {
+        "_pl": " Dokuczać ",
+        "_en": " Trouble / Troubled / Troubled "
+      },
+      {
+        "_pl": " Pisać ",
+        "_en": " Type / Typed / Typed "
+      },
+      {
+        "_pl": " Używać ",
+        "_en": " Use / Used / Used "
+      },
+      {
+        "_pl": " Odwiedzać ",
+        "_en": " Visit / Visited / Visited "
+      },
+      {
+        "_pl": " Czekać ",
+        "_en": " Wait / Waited / Waited "
+      },
+      {
+        "_pl": " Iść ",
+        "_en": " Walk / Walked / Walked "
+      },
+      {
+        "_pl": " Chcieć ",
+        "_en": " Want / Wanted / Wanted "
+      },
+      {
+        "_pl": " Ostrzegać ",
+        "_en": " Warn / Warned / Warned "
+      },
+      {
+        "_pl": " Mrugać ",
+        "_en": " Wink / Winked / Winked "
+      },
+      {
+        "_pl": " Martwić się ",
+        "_en": " Worry / Worried / Worried "
+      },
+      {
+        "_pl": " Krzyczeć ",
+        "_en": " Yell / Yelled / YelledAkceptować "
+      },
+      {
+        "_pl": " Osiągać ",
+        "_en": " Achieve / Achieved / Achieved "
+      },
+      {
+        "_pl": " Dodać ",
+        "_en": " Add / Added / Added "
+      },
+      {
+        "_pl": " Podziwiać ",
+        "_en": " Admire / Admired / Admirer "
+      },
+      {
+        "_pl": " Przyznać ",
+        "_en": " Admit / Admitted / Admitted "
+      },
+      {
+        "_pl": " Przyjąć ",
+        "_en": " Adopt / Adopted / Adopted "
+      },
+      {
+        "_pl": " Doradzać ",
+        "_en": " Advise / Advised / Advised "
+      },
+      {
+        "_pl": " Zgadzać się ",
+        "_en": " Agree / Agreed / Agreed "
+      },
+      {
+        "_pl": " Dopuszczać ",
+        "_en": " Allow / Allowed / Allowed "
+      },
+      {
+        "_pl": " Ogłosić ",
+        "_en": " Announce / Announced / Announced "
+      },
+      {
+        "_pl": " Doceniać ",
+        "_en": " Appreciate / Appreciated / Appreciated "
+      },
+      {
+        "_pl": " Zatwierdzać ",
+        "_en": " Approve / Approved / Approved "
+      },
+      {
+        "_pl": " Kłócić się ",
+        "_en": " Argue / Argued / Argued "
+      },
+      {
+        "_pl": " Przyjechać ",
+        "_en": " Arrive / Arrived / Arrived "
+      },
+      {
+        "_pl": " Pytać ",
+        "_en": " Ask / Asked / Asked "
+      },
+      {
+        "_pl": " Pomagać ",
+        "_en": " Assist / Assisted / Assisted "
+      },
+      {
+        "_pl": " Atakować ",
+        "_en": " Attack / Attacked / Attacked "
+      },
+      {
+        "_pl": " Piec ",
+        "_en": " Bake / Baked / Baked "
+      },
+      {
+        "_pl": " Żebrać/ Błagać ",
+        "_en": " Beg / Begged / Begged "
+      },
+      {
+        "_pl": " Zachowywać się ",
+        "_en": " Behave / Behaved / Behaved "
+      },
+      {
+        "_pl": " Gotować ",
+        "_en": " Boil / Boiled / Boiled "
+      },
+      {
+        "_pl": " Pożyczać ",
+        "_en": " Borrow / Borrowed / Borrowed "
+      },
+      {
+        "_pl": " Czyścić ",
+        "_en": " Brush / Brushed / Brushed "
+      },
+      {
+        "_pl": " Pochować ",
+        "_en": " Bury / Buried / Buried "
+      },
+      {
+        "_pl": " Zadzwonić/Wezwać ",
+        "_en": " Call / Called / Called "
+      },
+      {
+        "_pl": " Wyzwanie ",
+        "_en": " Challenge / Challenged / Challenged "
+      },
+      {
+        "_pl": " Zmiana ",
+        "_en": " Change / Changed / Changed "
+      },
+      {
+        "_pl": " Ścigać ",
+        "_en": " Chase / Chased / Chased "
+      },
+      {
+        "_pl": " Oszukać ",
+        "_en": " Cheat / Cheated / Cheated "
+      },
+      {
+        "_pl": " Dopingować ",
+        "_en": " Cheer / Cheered / Cheered "
+      },
+      {
+        "_pl": " Żuć ",
+        "_en": " Chew / Chewed / Chewed "
+      },
+      {
+        "_pl": " Klaskać ",
+        "_en": " Clap / Clapped / Clapped "
+      },
+      {
+        "_pl": " Czyścić ",
+        "_en": " Clean / Cleaned / Cleaned "
+      },
+      {
+        "_pl": " Zbierać ",
+        "_en": " Collect / Collected / Collected "
+      },
+      {
+        "_pl": " Porównać ",
+        "_en": " Compare / Compared / Compared "
+      },
+      {
+        "_pl": " Skarżyć się ",
+        "_en": " Complain / Complained / Complained "
+      },
+      {
+        "_pl": " Wyznać ",
+        "_en": " Confess / Confessed / Confessed "
+      },
+      {
+        "_pl": " Konstruować ",
+        "_en": " Construct / Constructed / Constructed "
+      },
+      {
+        "_pl": " Kontrolować ",
+        "_en": " Control / Controlled / Controlled "
+      },
+      {
+        "_pl": " Kopiować ",
+        "_en": " Copy / Copied / Copied "
+      },
+      {
+        "_pl": " Liczyć ",
+        "_en": " Count / Counted / Counted "
+      },
+      {
+        "_pl": " Tworzyć ",
+        "_en": " Create / Created / Created "
+      },
+      {
+        "_pl": " Płakać ",
+        "_en": " Cry / Cried / Cried "
+      },
+      {
+        "_pl": " Jeździć na rowerze ",
+        "_en": " Cycle / Cycled / Cycled "
+      },
+      {
+        "_pl": " Uszkodzić ",
+        "_en": " Damage / Damaged / Damaged "
+      },
+      {
+        "_pl": " Tańczyć ",
+        "_en": " Dance / Danced / Danced "
+      },
+      {
+        "_pl": " Dostarczać ",
+        "_en": " Deliver / Delivered / Delivered "
+      },
+      {
+        "_pl": " Niszczyć ",
+        "_en": " Destroy / Destroyed / Destroyed "
+      },
+      {
+        "_pl": " Podzielić ",
+        "_en": " Divide / Divided / Divided "
+      },
+      {
+        "_pl": " Ciągnąć ",
+        "_en": " Drag / Dragged / Dragged "
+      },
+      {
+        "_pl": " Zarobić ",
+        "_en": " Earn / Earned / Earned "
+      },
+      {
+        "_pl": " Zatrudnić ",
+        "_en": " Employ / Employed / Employed "
+      },
+      {
+        "_pl": " Popierać ",
+        "_en": " Encourage / Encouraged / Encouraged "
+      },
+      {
+        "_pl": " Cieszyć się ",
+        "_en": " Enjoy / Enjoyed / Enjoyed "
+      },
+      {
+        "_pl": " Założyć ",
+        "_en": " Establish / Established / Established "
+      },
+      {
+        "_pl": " Oszacować ",
+        "_en": " Estimate / Estimated / Estimated "
+      },
+      {
+        "_pl": " Wykonywać ",
+        "_en": " Exercise / Exercised / Exercised "
+      },
+      {
+        "_pl": " Rozszerzać ",
+        "_en": " Expand / Expanded / Expanded "
+      },
+      {
+        "_pl": " Wyjaśniać ",
+        "_en": " Explain / Explained / Explained "
+      },
+      {
+        "_pl": " Smażyć ",
+        "_en": " Fry / Fried / Fried "
+      },
+      {
+        "_pl": " Zbierać ",
+        "_en": " Gather / Gathered / Gathered "
+      },
+      {
+        "_pl": " Powitać ",
+        "_en": " Greet / Greeted / Greeted "
+      },
+      {
+        "_pl": " Odgadnąć ",
+        "_en": " Guess / Guessed / Guessed "
+      },
+      {
+        "_pl": " Nękać ",
+        "_en": " Harass / Harassed / Harassed "
+      },
+      {
+        "_pl": " Nienawidzić ",
+        "_en": " Hate / Hated / Hated "
+      },
+      {
+        "_pl": " Pomóc ",
+        "_en": " Help / Helped / Helped "
+      },
+      {
+        "_pl": " Mieć nadzieję ",
+        "_en": " Hope / Hoped / Hoped "
+      },
+      {
+        "_pl": " Identyfikować ",
+        "_en": " Identify / Identified / Identified "
+      },
+      {
+        "_pl": " Przerwać ",
+        "_en": " Interrupt / Interrupted / Interrupted "
+      },
+      {
+        "_pl": " Wprowadzać ",
+        "_en": " Introduce / Introduced / Introduced "
+      }
+
+    ]
+  },
+
+  {
+    "category": {
+      "_pl": "Czasowniki regularne - ćwiczenia",
+      "_en": "Regular verbs - exercises"
+    },
+    "name": {
+      "_pl": "Ćwiczenie 3",
+      "_en": "Exercise 3"
+    },
+    "data": [
+
+      {
+        "_pl": " Drażnić ",
+        "_en": " Irritate / Irritated / Irritated "
+      },
+      {
+        "_pl": " Żartować ",
+        "_en": " Joke / Joked / Joked "
+      },
+      {
+        "_pl": " Skakać ",
+        "_en": " Jump / Jumped / Jumped "
+      },
+      {
+        "_pl": " Kopać ",
+        "_en": " Kick / Kicked / Kicked "
+      },
+      {
+        "_pl": " Zabić ",
+        "_en": " Kill / Killed / Killed "
+      },
+      {
+        "_pl": " Całować ",
+        "_en": " Kiss / Kissed / Kissed "
+      },
+      {
+        "_pl": " Śmiać się ",
+        "_en": " Laugh / Laughed / Laughed "
+      },
+      {
+        "_pl": " Kłamać ",
+        "_en": " Lie / Lied / Lied "
+      },
+      {
+        "_pl": " Lubić ",
+        "_en": " Like / Liked / Liked "
+      },
+      {
+        "_pl": " Słuchać ",
+        "_en": " Listen / Listened / Listened "
+      },
+      {
+        "_pl": " Kochać ",
+        "_en": " Love / Loved / Loved "
+      },
+      {
+        "_pl": " Poślubić ",
+        "_en": " Marry / Married / Married "
+      },
+      {
+        "_pl": " Zmierzyć ",
+        "_en": " Measure / Measured / Measured "
+      },
+      {
+        "_pl": " Przesunąć ",
+        "_en": " Move / Moved / Moved "
+      },
+      {
+        "_pl": " Zamordować ",
+        "_en": " Murder / Murdered / Murdered "
+      },
+      {
+        "_pl": " Potrzebować ",
+        "_en": " Need / Needed / Needed "
+      },
+      {
+        "_pl": " Schłuchać się ",
+        "_en": " Obey / Obeyed / Obeyed "
+      },
+      {
+        "_pl": " Obrazić ",
+        "_en": " Offend / Offended / Offended "
+      },
+      {
+        "_pl": " Oferować ",
+        "_en": " Offer / Offered / Offered "
+      },
+      {
+        "_pl": " Otwierać ",
+        "_en": " Open / Opened / Opened "
+      },
+      {
+        "_pl": " Malować ",
+        "_en": " Paint / Painted / Painted "
+      },
+      {
+        "_pl": " Parkować/Umieścić ",
+        "_en": " Park / Parked / Parked "
+      },
+      {
+        "_pl": " Dzwonić ",
+        "_en": " Phone / Phoned / Phoned "
+      },
+      {
+        "_pl": " Podnośić/Zbierać ",
+        "_en": " Pick / Picked / Picked "
+      },
+      {
+        "_pl": " Grać ",
+        "_en": " Play / Played / Played "
+      },
+      {
+        "_pl": " Modlić się ",
+        "_en": " Pray / Prayed / Prayed "
+      },
+      {
+        "_pl": " Wydrukować ",
+        "_en": " Print / Printed / Printed "
+      },
+      {
+        "_pl": " Ciągnąć ",
+        "_en": " Pull / Pulled / Puled "
+      },
+      {
+        "_pl": " Karać ",
+        "_en": " Punish / Punished / Punished "
+      },
+      {
+        "_pl": " Kupować ",
+        "_en": " Purchase / Purchased / Purchased "
+      },
+      {
+        "_pl": " Naciskać ",
+        "_en": " Push / Pushed / Pushed "
+      },
+      {
+        "_pl": " Pytać ",
+        "_en": " Question / Questioned / Questioned "
+      },
+      {
+        "_pl": " Scigać się ",
+        "_en": " Race / Raced / Raced "
+      },
+      {
+        "_pl": " Relaksować się ",
+        "_en": " Relax / Relaxed / Relaxed "
+      },
+      {
+        "_pl": " Zapamiętać ",
+        "_en": " Remember / Remembered / Remembered "
+      },
+      {
+        "_pl": " Odpowiadać ",
+        "_en": " Reply / Replied / Replied "
+      },
+      {
+        "_pl": " Przejść na Emeryturę ",
+        "_en": " Retire / Retired / Retired "
+      },
+      {
+        "_pl": " Zwrócić/Wrócić ",
+        "_en": " Return / Returned / Returned "
+      },
+      {
+        "_pl": " Trzeć ",
+        "_en": " Rub / Rubbed / Rubbed "
+      },
+      {
+        "_pl": " Skarcić ",
+        "_en": " Scold / Scolded / Scolded "
+      },
+      {
+        "_pl": " Wybierać ",
+        "_en": " Select / Selected / Selected "
+      },
+      {
+        "_pl": " Palić ",
+        "_en": " Smoke / Smoked / Smoked "
+      },
+      {
+        "_pl": " Chrapać ",
+        "_en": " Snore / Snored / Snored "
+      },
+      {
+        "_pl": " Gapić się ",
+        "_en": " Stare / Stared / Stared "
+      },
+      {
+        "_pl": " Zaczynać ",
+        "_en": " Start / Started / Started "
+      },
+      {
+        "_pl": " Studiować ",
+        "_en": " Study / Studied / Studied "
+      },
+      {
+        "_pl": " Mówić ",
+        "_en": " Talk / Talked / Talked "
+      },
+      {
+        "_pl": " Dziękować ",
+        "_en": " Thank / Thanked / Thanked "
+      },
+      {
+        "_pl": " Podróżować ",
+        "_en": " Travel / Travelled / Travelled "
+      },
+      {
+        "_pl": " Dokuczać ",
+        "_en": " Trouble / Troubled / Troubled "
+      },
+      {
+        "_pl": " Pisać ",
+        "_en": " Type / Typed / Typed "
+      },
+      {
+        "_pl": " Używać ",
+        "_en": " Use / Used / Used "
+      },
+      {
+        "_pl": " Odwiedzać ",
+        "_en": " Visit / Visited / Visited "
+      },
+      {
+        "_pl": " Czekać ",
+        "_en": " Wait / Waited / Waited "
+      },
+      {
+        "_pl": " Iść ",
+        "_en": " Walk / Walked / Walked "
+      },
+      {
+        "_pl": " Chcieć ",
+        "_en": " Want / Wanted / Wanted "
+      },
+      {
+        "_pl": " Ostrzegać ",
+        "_en": " Warn / Warned / Warned "
+      },
+      {
+        "_pl": " Mrugać ",
+        "_en": " Wink / Winked / Winked "
+      },
+      {
+        "_pl": " Martwić się ",
+        "_en": " Worry / Worried / Worried "
+      },
+      {
+        "_pl": " Krzyczeć ",
+        "_en": " Yell / Yelled / Yelled"
+      }
+    ]
+  },
+
+
+
+
+
   {
     "category": {
       "_pl": "Podstawowe słowa i frazy",
@@ -9585,6 +11725,250 @@
       {
         "_pl": "Grudzień",
         "_en": "December"
+      }
+    ]
+  },
+  {
+    "category": {
+      "_pl": "Podstawowe słowa i frazy",
+      "_en": "Basic words and phrases"
+    },
+    "name": {
+      "_pl": "Kolory",
+      "_en": "Colors"
+    },
+    "data": [
+      {
+        "_pl": "czarny",
+        "_en": "black"
+      },
+      {
+        "_pl": "biały",
+        "_en": "white"
+      },
+      {
+        "_pl": "czerwony",
+        "_en": "red"
+      },
+      {
+        "_pl": "niebieski",
+        "_en": "blue"
+      },
+      {
+        "_pl": "zielony",
+        "_en": "green"
+      },
+      {
+        "_pl": "żółty",
+        "_en": "yellow"
+      },
+      {
+        "_pl": "granatowy",
+        "_en": "navy blue"
+      },
+      {
+        "_pl": "różowy",
+        "_en": "pink"
+      },
+      {
+        "_pl": "brązowy",
+        "_en": "brown"
+      },
+      {
+        "_pl": "szary",
+        "_en": "grey"
+      },
+      {
+        "_pl": "żółty",
+        "_en": "yellow"
+      },
+      {
+        "_pl": "purpurowy, fioletowy",
+        "_en": "purple"
+      },
+      {
+        "_pl": "pomarańczowy",
+        "_en": "orange"
+      },
+      {
+        "_pl": "oliwkowy",
+        "_en": "olive"
+      },
+      {
+        "_pl": "złoty",
+        "_en": "golden"
+      },
+      {
+        "_pl": "srebrny",
+        "_en": "silver"
+      },
+      {
+        "_pl": "jasny",
+        "_en": "light"
+      },
+      {
+        "_pl": "ciemny",
+        "_en": "dark"
+      },
+      {
+        "_pl": "kremowy",
+        "_en": "cream"
+      },
+      {
+        "_pl": "beżowy",
+        "_en": "beige"
+      },
+      {
+        "_pl": "koralowy",
+        "_en": "coral"
+      },
+      {
+        "_pl": "fioletowy",
+        "_en": "violet"
+      },
+      {
+        "_pl": "turkusowy",
+        "_en": "turquoise"
+      }
+    ]
+  },
+  {
+    "category": {
+      "_pl": "Podstawowe słowa i frazy",
+      "_en": "Basic words and phrases"
+    },
+    "name": {
+      "_pl": "Liczby",
+      "_en": "Numbers"
+    },
+    "data": [
+      {
+        "_pl": "zero",
+        "_en": "zero"
+      },
+      {
+        "_pl": "jeden",
+        "_en": "one"
+      },
+      {
+        "_pl": "dwa",
+        "_en": "two"
+      },
+      {
+        "_pl": "trzy",
+        "_en": "three"
+      },
+      {
+        "_pl": "cztery",
+        "_en": "four"
+      },
+      {
+        "_pl": "pięć",
+        "_en": "five"
+      },
+      {
+        "_pl": "sześć",
+        "_en": "six"
+      },
+      {
+        "_pl": "siedem",
+        "_en": "seven"
+      },
+      {
+        "_pl": "osiem",
+        "_en": "eight"
+      },
+      {
+        "_pl": "dziewięć",
+        "_en": "nine"
+      },
+      {
+        "_pl": "dziesięć",
+        "_en": "ten"
+      },
+      {
+        "_pl": "jedynaście",
+        "_en": "eleven"
+      },
+      {
+        "_pl": "dwanaście",
+        "_en": "twelve"
+      },
+      {
+        "_pl": "trzynaście",
+        "_en": "thirteen"
+      },
+      {
+        "_pl": "czterynaście",
+        "_en": "fourteen"
+      },
+      {
+        "_pl": "piętnaście",
+        "_en": "fifteen"
+      },
+      {
+        "_pl": "szesnaście",
+        "_en": "sixteen"
+      },
+      {
+        "_pl": "siedemnaście",
+        "_en": "seventeen"
+      },
+      {
+        "_pl": "osiemnaście",
+        "_en": "eighteen"
+      },
+      {
+        "_pl": "dziewiętnaście",
+        "_en": "nineteen"
+      },
+      {
+        "_pl": "dwadzieścia",
+        "_en": "twenty"
+      },
+      {
+        "_pl": "trzydzieści",
+        "_en": "thirty"
+      },
+      {
+        "_pl": "czterdzieści",
+        "_en": "forty"
+      },
+      {
+        "_pl": "pięćdziesiąt",
+        "_en": "fifty"
+      },
+      {
+        "_pl": "sześćdziesiąt",
+        "_en": "sixty"
+      },
+      {
+        "_pl": "siedemdziesiąt",
+        "_en": "seventy"
+      },
+      {
+        "_pl": "osiemdziesiąt",
+        "_en": "eighty"
+      },
+      {
+        "_pl": "dziewięćdziesiąt",
+        "_en": "ninety"
+      },
+      {
+        "_pl": "sto",
+        "_en": "handred"
+      },
+      {
+        "_pl": "tysiąc",
+        "_en": "thousand"
+      },
+      {
+        "_pl": "milion",
+        "_en": "million"
+      },
+      {
+        "_pl": "miliard",
+        "_en": "billion"
       }
     ]
   }

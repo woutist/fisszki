@@ -7,6 +7,7 @@
     "brfs": "^2.0.1",
     "es6-promise": "^4.2.5",
     "fs-extra": "^7.0.1",
+    "html-react-parser": "^0.6.1",
     "list-react-files": "^0.2.0",
     "npx": "^10.2.0",
     "postcss": "^7.0.7",

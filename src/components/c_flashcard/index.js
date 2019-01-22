@@ -6,6 +6,7 @@ import dataJson from './data_json/data.json';
 import { detectionDevice, isIE, centerClass } from './varibles';
 import { translate, setLanguage } from './language';
 import ReactResizeDetector from 'react-resize-detector';
+import Parser from 'html-react-parser';
 
 const Detector = !isIE && require('react-detect-offline').Detector;
 
@@ -98,7 +99,7 @@ class Exercises extends Component {
                                                     <span>{obj._en}</span>
                                                 </p>
                                                 <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl)} className="google-translator" target='blank_'>
-                                                    Google Translate<span className="icon-language"></span>
+                                                    {translate.gt}<span className="icon-gt"></span>
                                                 </button>
                                             </div>
                                         </div>
@@ -123,7 +124,7 @@ class Exercises extends Component {
                                                     <span>{obj._pl}</span>
                                                 </p>
                                                 <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en)} className="google-translator" target='blank_'>
-                                                    Google Translate<span className="icon-language"></span>
+                                                    {translate.gt}<span className="icon-gt"></span>
                                                 </button>
                                             </div>
                                         </div>
@@ -175,7 +176,8 @@ class FlashCards extends Component {
         lang: this.startCookiesLang(),
         idC: false,
         fSwipe: false,
-        timeOutCloseCloud: true, 
+        timeOutCloseCloud: true,
+        version: '1.0.02',
         directionText: () => {
             return (this.global.flashCardDirection === 'right') ? translate.english + ' | ' + translate.polish : translate.polish + ' | ' + translate.english
         }
@@ -207,6 +209,7 @@ class FlashCards extends Component {
             mainNavInsetTransitionStop: '',
             closeCloude: '',
             showAbouts: '',
+            headerOnTop: '',
             langNameExercise: (j,l=this.global.lang) => {
                 switch (l) {
                     case 'en': return j._en;
@@ -279,7 +282,8 @@ class FlashCards extends Component {
             idExercise: -1,
             callObj: '',
             classHideOrShowMainPartsPage: 'show-list-exercise-hide-flash-cards',
-            classHideNavButtons: ''
+            classHideNavButtons: '',
+            closeCloude: ''
         });
         clearTimeout(this.global.timeOutCloseCloud);
         if(event) event.preventDefault();
@@ -456,7 +460,7 @@ class FlashCards extends Component {
             rotateDisable: (this.state.rotateDisable)?'':'rotate-disable'
         })
     };
-    enableAutoVoice = () => {
+    enableAutoVoice = (event) => {
         if(this.state.enableAutoVoice) {
             removeCookies('enable_auto_voice_cookie');
         } else {
@@ -464,7 +468,8 @@ class FlashCards extends Component {
         }
         this.setState({
             enableAutoVoice: (this.state.enableAutoVoice)?'':'enable-auto-voice'
-        })
+        });
+        if(event) event.preventDefault();
     };
     preloaderFun = () => {
         setTimeout(function (that) {
@@ -596,8 +601,26 @@ class FlashCards extends Component {
         this.setLang(false,this.global.lang);
         this.preloaderFun();
     };
-    componentDidMount () {
-    }
+    componentDidMount = () => {
+        const that = this;
+        window.onscroll = function() {
+            if(window.pageYOffset === 0) {
+                if(that.state.headerOnTop) {
+                    that.setState({
+                        headerOnTop: ''
+                    });
+                    console.log('I AM AT THE TOP');
+                }
+            } else {
+                if(!that.state.headerOnTop) {
+                    that.setState({
+                        headerOnTop: 'header-on-none-top'
+                    });
+                    console.log("xcx");
+                }
+            }
+        };
+    };
     render() {
         const { title } = this.props;
 
@@ -620,7 +643,7 @@ class FlashCards extends Component {
 
                     {this.state.preloader!=='delete' && <div className={this.state.preloader + " preloader d-flex justify-content-center align-items-center"}><span className="icon-new-logo"></span></div>}
 
-                    <div class="main-header-wrap">
+                    <div className={"main-header-wrap " + this.state.headerOnTop}>
                         <header className="main-header">
                             <nav className="main-nav">
                                 <button className={"bg-close d-block d-xl-none" + (this.state.navMobileActive && ' bg-close-show')}  onClick={() => this.navMobileActive()}><span className="icon-right-open"></span></button>
@@ -631,7 +654,7 @@ class FlashCards extends Component {
                                         <ReactResizeDetector handleWidth handleHeight onResize={this.onResize} />
                                         <div className="main-nav-inset-box">
                                             <ul className="list-unstyled main-nav-inset-list">
-                                                <li class="d-flex buttons-language">
+                                                <li className="d-flex buttons-language">
                                                     <button className={"border-content-bottom " + this.state.activePL} onClick={(e) => this.setLang(e,'pl')}><span className="icon-ok"></span> PL</button>
                                                     <button className={"border-content-bottom " + this.state.activeEN} onClick={(e) => this.setLang(e,'en')}><span className="icon-ok"></span> EN</button>
                                                 </li>
@@ -647,11 +670,11 @@ class FlashCards extends Component {
                                                 <li>
                                                     <button className={"abouts-l border-content-bottom " + this.state.showAbouts} onClick={() => this.showAbouts()}><span className="icon-new-logo"></span> Abouts {title}</button>
                                                     <div className="abouts-box">
-                                                        <p>Autor: semDesign,<br />Technology: js, react, cordova<br />Contact: aleksandernyczyk@tlen.pl</p>
+                                                        <p>{Parser(translate.abouts)} {title} {this.global.version}</p>
                                                     </div>
                                                 </li>
                                             </ul>
-                                            <p>{title}: Lang'FlashCards pl-en/en-pl <br />{translate.yourPlatform}: {detectionDevice?'Android/iOS':'Browser'}</p>
+                                            <p>{translate.yourPlatform}: {detectionDevice?'Android/iOS':'Browser'}</p>
                                             <span className="logo-menu icon-only-l"></span>
                                         </div>
                                     </div>
@@ -664,6 +687,7 @@ class FlashCards extends Component {
                                         <span title={online?'online':'offline'} className={'icon-globe ' + (online?'':'icon-globe-disable')}></span>
                                     )}
                                 />}</li>
+                                <li className="link-voice"><a href={'#voice'} onClick={(e) => this.enableAutoVoice(e)}><span className="icon-volume"></span></a></li>
                                 <li className="flag-pl"><a href={'#pl'} className={this.state.activePL} onClick={(e) => this.setLang(e,'pl')}>PL</a></li>
                                 <li className="flag-en"><a href={'#en'} className={this.state.activeEN} onClick={(e) => this.setLang(e,'en')}>EN</a></li>
                             </ul>
@@ -685,18 +709,21 @@ class FlashCards extends Component {
                                                     background: 'linear-gradient(to right, #2c8548 0%,#2c8548 ' + percent + '%,#974c49 ' + percent + '%,#974c49 100%)'
                                                 },
                                                 stylePercent2 = {
-                                                    background: 'linear-gradient(to right, rgba(44,133,72,.2) 0%,rgba(44,133,72,.2) ' + percent + '%,rgba(255,255,255,0) ' + percent + '%,rgba(255,255,255,0) 100%), rgba(255,255,255,.4)',
-                                            };
+                                                    background: 'linear-gradient(to right, rgba(44,133,72,.2) 0%,rgba(44,133,72,.2) ' + percent + '%,rgba(255,255,255,0) ' + percent + '%,rgba(255,255,255,0) 100%), rgba(255,255,255,.6)',
+                                                };
+
+                                            percent = isNaN(percent)?'blank':percent+'%';
+
                                             if(this.state.langNameExercise(obj.category) === obj_category) {
                                                 return (
                                                     <li key={i} className="d-flex justify-content-between">
 
-                                                        <a href={'#flashcard' + i} style={stylePercent2} onClick={(e) => this.setExercise(e,i,false,false,j,true)}>
+                                                        <a href={'#flashcard' + i} style={stylePercent2} onClick={(e) => this.setExercise(e,i,false,false,j,(obj.excludeID.length!==obj.data.length))}>
                                                             {/*<span className="percent-border-top"></span>*/}
                                                             <span className="percent-pro" style={stylePercent1}></span>
                                                             <span className={"icon-random-card icon-random-card-" + j}></span>
                                                             {obj.excludeID.length === obj.data.length && <span className="icon-ok"></span>}
-                                                            {this.state.langNameExercise(obj.name)} <i><span className="icon-up color-5">{obj.excludeID.length}/{obj.data.length} = {percent}%</span> - <span className="icon-down color-6">{obj.dontKnowClick}</span></i>
+                                                            {this.state.langNameExercise(obj.name)} <i><span className="icon-up color-5">{obj.excludeID.length}/{obj.data.length} = {percent}</span> - <span className="icon-down color-6">{obj.dontKnowClick}</span></i>
                                                         </a>
 
                                                         {(obj.excludeID.length !== 0 || obj.dontKnowClick !== 0) &&
@@ -714,7 +741,9 @@ class FlashCards extends Component {
                         },this)}
                     </div>
                     <div className={'main-flash-cards ' + this.state.classCheckOut + ' ' + this.state.classCheckOutMore}>
-                        <button className="button-close-exercise icon-cancel" onClick={this.clearExercise}><span className={this.state.closeCloude}>{translate.buttonCloseExercise}</span></button>
+                        <button className="button-close-exercise icon-cancel" onClick={this.clearExercise}>
+                            <span className={this.state.closeCloude}>{translate.buttonCloseExercise}</span>
+                        </button>
 
                         <div className={'flash-card'}>
                             {this.state.callObj}
@@ -727,7 +756,7 @@ class FlashCards extends Component {
                         </nav>
                     </div>
                     <footer className="main-footer">
-                        <p>Copyright &copy; 1518, {title} pl-en/en-pl v1.0.0</p>
+                        <p>Copyright &copy; 1518, {title} pl-en/en-pl v{this.global.version}</p>
                     </footer>
                 </div>
             </Swipe>

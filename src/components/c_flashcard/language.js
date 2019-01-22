@@ -17,7 +17,9 @@ export const setLanguage = (x) => {
                 buttonCloseApplication: 'Close application',
                 yourPlatform: 'Your platform',
                 polish: 'Polish',
-                english: 'English'
+                english: 'English',
+                abouts: 'Autor: semDesign<br />Contact: aleksander.nyczyk@gmail.com<br />Version: ',
+                gt: 'Google Translate'
             };
             break;
         default: //pl
@@ -36,7 +38,9 @@ export const setLanguage = (x) => {
                 buttonCloseApplication: 'Zamknij aplikacje',
                 yourPlatform: 'Twoja platforma',
                 polish: 'Polski',
-                english: 'Angielski'
+                english: 'Angielski',
+                abouts: 'Autor: semDesign<br />Kontakt: aleksander.nyczyk@gmail.com<br />Wersja: ',
+                gt: 'Google Translator'
             };
     }
 };
