@@ -48,6 +48,10 @@ $color-google-transaltor: #4f8bf5;
   }
 }
 
+a {
+  color: inherit;
+}
+
 @font-face {
   font-family: 'fontello';
   src: url('./fonts/fontello.eot');
@@ -313,12 +317,12 @@ a {
   }
   &.icon-random-card-2 {
     &:after {
-      background-color: $color12;
+      background-color: $color13;
     }
   }
   &.icon-random-card-3 {
     &:after {
-      background-color: $color13;
+      background-color: $color12;
     }
   }
   &.icon-random-card-4 {
@@ -732,24 +736,40 @@ a {
         }
       }
       h1 {
-        margin-bottom: 5px;
-        position: relative;
-        //text-shadow: 0 0 1px $color6, 0 0 1px $color2, 0 0 1px $color2;
-        text-shadow: 0 0 1px rgba(0,0,0,.4);
-        color: rgba(255,255,255,.95);
-        text-align: left;
-        width: 60px;
-        //overflow: hidden;
         text-indent: -10000px;
-        &:before {
-          margin-left: 0;
-          font-size: 2.5rem;
-          position: absolute;
+        &:after {
+          content: '';
           display: block;
-          left: 2px;
-          top: 5px;
-          text-indent: 0;
+          position: absolute;
+          top: 3px;
+          left: 5px;
+          overflow: hidden;
+          background-image: url(./images/logo_3.png);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: 50%;
+          width: 3.6rem;
+          height: 3.6rem;
         }
+
+        //margin-bottom: 5px;
+        //position: relative;
+        //
+        //text-shadow: 0 0 1px rgba(0,0,0,.4);
+        //color: rgba(255,255,255,.95);
+        //text-align: left;
+        //width: 60px;
+        //
+        //text-indent: -10000px;
+        //&:before {
+        //  margin-left: 0;
+        //  font-size: 2.5rem;
+        //  position: absolute;
+        //  display: block;
+        //  left: 2px;
+        //  top: 5px;
+        //  text-indent: 0;
+        //}
       }
       .direction-lang {
         border: 1px solid rgba(0, 0, 0, .2);
@@ -851,7 +871,7 @@ a {
     .category-box {
       > h2 {
         position: relative;
-        padding: 8px 10px;
+        padding: 8px 40px 8px 10px;
         color: $color1;
         cursor: pointer;
         text-shadow: 0 0 1px $color6, 0 0 1px $color2, 0 0 1px $color2;
@@ -885,10 +905,10 @@ a {
           background-color: $color11;
         }
         &.category-2 {
-          background-color: $color12;
+          background-color: $color13;
         }
         &.category-3 {
-          background-color: $color13;
+          background-color: $color12;
         }
         &.category-4 {
           background-color: $color14;
@@ -1109,7 +1129,7 @@ a {
           width: 0;
           height: 0;
           border-style: solid;
-          border-width: 0 8px 12px 8px;
+          border-width: 0 12px 18px 12px;
           border-color: transparent transparent #ffffff transparent;
 
           @media (max-width: $md) {

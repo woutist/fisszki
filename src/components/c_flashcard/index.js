@@ -756,7 +756,7 @@ class FlashCards extends Component {
                         </nav>
                     </div>
                     <footer className="main-footer">
-                        <p>Copyright &copy; 1518, {title} pl-en/en-pl v{this.global.version}</p>
+                        <p>Copyright &copy; 1518, {title} pl-en/en-pl v{this.global.version} | <a href="http://langfc.semjs.pl/polityka/" onClick={(e) => this.openHref(e,"http://langfc.semjs.pl/polityka/?lang="+translate.lang)} >{translate.privacy}</a></p>
                     </footer>
                 </div>
             </Swipe>

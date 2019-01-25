@@ -3,6 +3,7 @@ export const setLanguage = (x) => {
     switch (x) {
         case 'en':
             translate = {
+                lang: 'en',
                 buttonCloseExercise: 'Your state will be automatically saved',
                 infoCongratulation: 'Congratultaion!',
                 buttonInfoCongratulation: 'Back to exercises menu',
@@ -19,11 +20,13 @@ export const setLanguage = (x) => {
                 polish: 'Polish',
                 english: 'English',
                 abouts: 'Autor: semDesign<br />Contact: aleksander.nyczyk@gmail.com<br />Version: ',
-                gt: 'Google Translate'
+                gt: 'Google Translate',
+                privacy: 'Privacy'
             };
             break;
         default: //pl
             translate = {
+                lang: 'pl',
                 buttonCloseExercise: 'Twój stan zostanie automatycznie zapisany',
                 infoCongratulation: 'Gratulacje!',
                 buttonInfoCongratulation: 'Wróć do menu ćwiczeń',
@@ -40,7 +43,8 @@ export const setLanguage = (x) => {
                 polish: 'Polski',
                 english: 'Angielski',
                 abouts: 'Autor: semDesign<br />Kontakt: aleksander.nyczyk@gmail.com<br />Wersja: ',
-                gt: 'Google Translator'
+                gt: 'Google Translator',
+                privacy: 'Prywatność'
             };
     }
 };
