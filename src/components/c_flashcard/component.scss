@@ -111,6 +111,13 @@ a {
 
 .icon-gt:before { content: '\e814'; }
 
+.icon-pause:before { content: '\f00e'; }
+.icon-play:before { content: '\f00f'; }
+.icon-stop:before { content: '\f080'; }
+
+.icon-lock:before { content: '\f512'; }
+.icon-lock-open:before { content: '\f513'; }
+
 .icon-globe {
   color: $color1;
   opacity: .8;
@@ -285,7 +292,26 @@ a {
 
 .disable-opacity {
   pointer-events: none;
-  opacity: .2;
+  opacity: .6;
+  > span {
+    font-size: 1.125rem;
+    background-color: #1f6d59;
+    color: $color1;
+    border-radius: 8px;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    border-bottom: 8px solid rgba(255, 255, 255, 0.5);
+  }
+  button {
+    display: none !important;
+  }
+}
+
+.autoplay-loop-nav {
+  button {
+    margin: 0;
+  }
 }
 
 .icon-random-card {
@@ -1202,6 +1228,9 @@ a {
         }
         > h2, > p {
           padding-right: 50px;
+        }
+        h2 {
+          font-size: 1rem;
         }
         > p {
           font-size: .7rem;

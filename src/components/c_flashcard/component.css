@@ -135,6 +135,21 @@ a {
 .icon-gt:before {
   content: '\e814'; }
 
+.icon-pause:before {
+  content: '\f00e'; }
+
+.icon-play:before {
+  content: '\f00f'; }
+
+.icon-stop:before {
+  content: '\f080'; }
+
+.icon-lock:before {
+  content: '\f512'; }
+
+.icon-lock-open:before {
+  content: '\f513'; }
+
 .icon-globe {
   color: #fff;
   opacity: .8;
@@ -256,7 +271,21 @@ a {
 
 .disable-opacity {
   pointer-events: none;
-  opacity: .2; }
+  opacity: .6; }
+  .disable-opacity > span {
+    font-size: 1.125rem;
+    background-color: #1f6d59;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    border-bottom: 8px solid rgba(255, 255, 255, 0.5); }
+  .disable-opacity button {
+    display: none !important; }
+
+.autoplay-loop-nav button {
+  margin: 0; }
 
 .icon-random-card {
   display: inline-block;
@@ -919,6 +948,8 @@ a {
         height: 1.7rem; }
       .module-flash-cards .main-flash-cards .flash-card .flash-card-inset > h2, .module-flash-cards .main-flash-cards .flash-card .flash-card-inset > p {
         padding-right: 50px; }
+      .module-flash-cards .main-flash-cards .flash-card .flash-card-inset h2 {
+        font-size: 1rem; }
       .module-flash-cards .main-flash-cards .flash-card .flash-card-inset > p {
         font-size: .7rem; }
       .module-flash-cards .main-flash-cards .flash-card .flash-card-inset .percent-pro {

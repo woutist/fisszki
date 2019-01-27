@@ -8,8 +8,9 @@ import { translate, setLanguage } from './language';
 import ReactResizeDetector from 'react-resize-detector';
 import Parser from 'html-react-parser';
 
-const Detector = !isIE && require('react-detect-offline').Detector;
+//import { Detector, Online, Offline } from 'react-detect-offline';
 
+const Detector = !isIE && require('react-detect-offline').Detector;
 
 /**
  * Sub component Congratulation
@@ -80,12 +81,10 @@ class Exercises extends Component {
                             <h2><span className={"icon-random-card icon-random-card-" + idC}></span>{that.state.langNameExercise(o.category) && that.state.langNameExercise(o.category) + ' / '}{that.state.langNameExercise(o.name)}</h2>
                             <p>
                                 {that.state.online?'online':'offline'} | <span className="icon-up color-5">{o.excludeID.length}/{o.data.length} = {Math.ceil(o.excludeID.length*100/o.data.length)}%</span> - <span className="icon-down color-6">{o.dontKnowClick}</span>
-
                             </p>
                             <div className={"autoplay-loop-nav"}>
-                                <button className={"icon-right-open " + (thisComponent.state.autoPlayExercise2?' d-none':'')} onClick={() => {thisComponent.setState({autoPlayExercise2: true}); that.autoplayLoopNav('play')}}></button>
-                                <button className={(thisComponent.state.autoPlayExercise2?'':' d-none')} onClick={() => {thisComponent.setState({autoPlayExercise2: false}); that.autoplayLoopNav('stop')}}>Stop</button>
-
+                                <button className={"w-50" + (thisComponent.state.autoPlayExercise2?' d-none':'')} onClick={() => {thisComponent.setState({autoPlayExercise2: true}); that.autoplayLoopNav('play')}}>Play <span className="icon-play"></span></button>
+                                <button className={"w-50" + (thisComponent.state.autoPlayExercise2?'':' d-none')} onClick={() => {thisComponent.setState({autoPlayExercise2: false}); that.autoplayLoopNav('stop')}}>Stop <span className="icon-stop"></span></button>
                             </div>
                             <div className="flip-container">
                                 {
@@ -189,7 +188,7 @@ class FlashCards extends Component {
         idC: false,
         fSwipe: false,
         timeOutCloseCloud: true,
-        version: '1.0.02',
+        version: '1.0.07',
         autoplayLoop: {},
         directionText: () => {
             return (this.global.flashCardDirection === 'right') ? translate.english + ' | ' + translate.polish : translate.polish + ' | ' + translate.english
@@ -790,13 +789,14 @@ class FlashCards extends Component {
                         </div>
 
                         <nav className={'nav-buttons ' + this.state.classHideNavButtons + (this.state.autoPlayExercise?' disable-opacity':'')}>
+                            <span className={"icon-lock" + (this.state.autoPlayExercise?'':' d-none')}></span>
                             <button className="button-check-out" onClick={() => this.checkOut()}>{translate.buttonCheckOut}</button>
                             <button title={translate.buttonIKnow} className="button-i-know" onClick={() => this.iKnow(this.state.idItem)}><span className="icon-ok"></span></button>
                             <button title={translate.buttonIDontKnow} className="button-i-dont-know" onClick={() => this.iDontKnow()}><span className="icon-cancel"></span></button>
                         </nav>
                     </div>
                     <footer className="main-footer">
-                        <p>Copyright &copy; 1518, {title} pl-en/en-pl v{this.global.version} | <a href="http://langfc.semjs.pl/polityka/" onClick={(e) => this.openHref(e,"http://langfc.semjs.pl/polityka/?lang="+translate.lang)} >{translate.privacy}</a></p>
+                        <p>Copyright &copy; {title} | <a href="http://langfc.semjs.pl/polityka/" onClick={(e) => this.openHref(e,"http://langfc.semjs.pl/polityka/?lang="+translate.lang)} >{translate.privacy}</a></p>
                     </footer>
                 </div>
             </Swipe>
