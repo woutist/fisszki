@@ -254,6 +254,10 @@ a {
   a:hover {
     opacity: .6; }
 
+.disable-opacity {
+  pointer-events: none;
+  opacity: .2; }
+
 .icon-random-card {
   display: inline-block;
   position: relative;

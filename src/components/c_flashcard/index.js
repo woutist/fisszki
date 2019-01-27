@@ -48,8 +48,15 @@ class Congratulation extends Component {
  * Sub component Exercises
  */
 class Exercises extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            autoPlayExercise2: false
+        };
+    };
     render() {
         const { o, that, voice, idItem, checkvoice, flashCardDirection, idC } = this.props;
+        const thisComponent = this;
         return (
             // eslint-disable-next-line
             o.data.map(function (obj, i) {
@@ -75,6 +82,11 @@ class Exercises extends Component {
                                 {that.state.online?'online':'offline'} | <span className="icon-up color-5">{o.excludeID.length}/{o.data.length} = {Math.ceil(o.excludeID.length*100/o.data.length)}%</span> - <span className="icon-down color-6">{o.dontKnowClick}</span>
 
                             </p>
+                            <div className={"autoplay-loop-nav"}>
+                                <button className={"icon-right-open " + (thisComponent.state.autoPlayExercise2?' d-none':'')} onClick={() => {thisComponent.setState({autoPlayExercise2: true}); that.autoplayLoopNav('play')}}></button>
+                                <button className={(thisComponent.state.autoPlayExercise2?'':' d-none')} onClick={() => {thisComponent.setState({autoPlayExercise2: false}); that.autoplayLoopNav('stop')}}>Stop</button>
+
+                            </div>
                             <div className="flip-container">
                                 {
                                     flashCardDirection === 'left' ?
@@ -178,6 +190,7 @@ class FlashCards extends Component {
         fSwipe: false,
         timeOutCloseCloud: true,
         version: '1.0.02',
+        autoplayLoop: {},
         directionText: () => {
             return (this.global.flashCardDirection === 'right') ? translate.english + ' | ' + translate.polish : translate.polish + ' | ' + translate.english
         }
@@ -210,6 +223,7 @@ class FlashCards extends Component {
             closeCloude: '',
             showAbouts: '',
             headerOnTop: '',
+            autoPlayExercise: false,
             langNameExercise: (j,l=this.global.lang) => {
                 switch (l) {
                     case 'en': return j._en;
@@ -286,6 +300,7 @@ class FlashCards extends Component {
             closeCloude: ''
         });
         clearTimeout(this.global.timeOutCloseCloud);
+        this.autoplayLoopNav("stop");
         if(event) event.preventDefault();
     };
 
@@ -404,6 +419,31 @@ class FlashCards extends Component {
             classCheckOut: 'check-out-card',
             classCheckOutMore: 'check-out-card-more'
         })
+    };
+    autoplayLoopNav = (prop) => {
+        let that = this;
+        if(prop==="play") {
+            let play = () => {
+                that.checkOut();
+                that.global.autoplayLoop.second = setTimeout(function () {
+                    that.global.autoplayLoop.third = setTimeout(that.timeoutAnim,400,that.state.idExercise);
+                }, 3000);
+            };
+            play();
+            that.global.autoplayLoop.first = setInterval(function () {
+                play();
+            },6000);
+            this.setState({
+                autoPlayExercise: true
+            })
+        } else if(prop==="stop") {
+            clearInterval(that.global.autoplayLoop.first);
+            clearInterval(that.global.autoplayLoop.second);
+            clearInterval(that.global.autoplayLoop.third);
+            this.setState({
+                autoPlayExercise: false
+            })
+        }
     };
     removeCookieExerciseId = (event,ide,o) => {
         removeCookies('obj_exercise_cookie_'+ide);
@@ -749,7 +789,7 @@ class FlashCards extends Component {
                             {this.state.callObj}
                         </div>
 
-                        <nav className={'nav-buttons ' + this.state.classHideNavButtons}>
+                        <nav className={'nav-buttons ' + this.state.classHideNavButtons + (this.state.autoPlayExercise?' disable-opacity':'')}>
                             <button className="button-check-out" onClick={() => this.checkOut()}>{translate.buttonCheckOut}</button>
                             <button title={translate.buttonIKnow} className="button-i-know" onClick={() => this.iKnow(this.state.idItem)}><span className="icon-ok"></span></button>
                             <button title={translate.buttonIDontKnow} className="button-i-dont-know" onClick={() => this.iDontKnow()}><span className="icon-cancel"></span></button>
