@@ -7,6 +7,7 @@ import { detectionDevice, isIE, centerClass } from './varibles';
 import { translate, setLanguage } from './language';
 import ReactResizeDetector from 'react-resize-detector';
 import Parser from 'html-react-parser';
+import SoundSeparator from './sounds/pi-pum.mp3';
 
 //import { Detector, Online, Offline } from 'react-detect-offline';
 
@@ -68,7 +69,7 @@ class Exercises extends Component {
                         };
 
                     if(voice && checkvoice !== 'no-voice') {
-                        if(flashCardDirection === 'left') {
+                        if(flashCardDirection === 'p->e') {
                             that.translateVoice(obj._pl, "pl",that.state.online);
                         } else {
                             that.translateVoice(obj._en, "en",that.state.online);
@@ -83,12 +84,12 @@ class Exercises extends Component {
                                 {that.state.online?'online':'offline'} | <span className="icon-up color-5">{o.excludeID.length}/{o.data.length} = {Math.ceil(o.excludeID.length*100/o.data.length)}%</span> - <span className="icon-down color-6">{o.dontKnowClick}</span>
                             </p>
                             <div className={"autoplay-loop-nav"}>
-                                <button className={"w-50" + (thisComponent.state.autoPlayExercise2?' d-none':'')} onClick={() => {thisComponent.setState({autoPlayExercise2: true}); that.autoplayLoopNav('play')}}>Play <span className="icon-play"></span></button>
-                                <button className={"w-50" + (thisComponent.state.autoPlayExercise2?'':' d-none')} onClick={() => {thisComponent.setState({autoPlayExercise2: false}); that.autoplayLoopNav('stop')}}>Stop <span className="icon-stop"></span></button>
+                                <button className={"w-100" + (thisComponent.state.autoPlayExercise2?' d-none':'')} onClick={() => {thisComponent.setState({autoPlayExercise2: true}); that.autoplayLoopNav('play')}}>Play <span className="icon-play"></span></button>
+                                <button className={"w-100" + (thisComponent.state.autoPlayExercise2?'':' d-none')} onClick={() => {thisComponent.setState({autoPlayExercise2: false}); that.autoplayLoopNav('stop')}}>Stop <span className="icon-stop"></span></button>
                             </div>
                             <div className="flip-container">
                                 {
-                                    flashCardDirection === 'left' ?
+                                    flashCardDirection === 'p->e' ?
                                         <div className="flipper">
                                             <div className={'front ' + centerClass}>
                                                 <p onClick={() => that.translateVoice(obj._pl, "pl",that.state.online)}>
@@ -157,13 +158,13 @@ class Exercises extends Component {
 class FlashCards extends Component {
     startCookiesFlashCardDirection = () => {
         if(getCookies('flashcards_cookie') == null) {
-            setCookies('flashcards_cookie', 'left');
-            return 'left';
+            setCookies('flashcards_cookie', 'p->e');
+            return 'p->e';
         } else {
-            if(getCookies('flashcards_cookie') === 'left') {
-                return 'left';
+            if(getCookies('flashcards_cookie') === 'p->e') {
+                return 'p->e';
             } else {
-                return 'right';
+                return 'e->p';
             }
         }
     };
@@ -188,14 +189,14 @@ class FlashCards extends Component {
         idC: false,
         fSwipe: false,
         timeOutCloseCloud: true,
-        version: '1.0.07',
+        version: '1.0.1',
         autoplayLoop: {},
         directionText: () => {
-            return (this.global.flashCardDirection === 'right') ? translate.english + ' | ' + translate.polish : translate.polish + ' | ' + translate.english
+            return (this.global.flashCardDirection === 'e->p') ? translate.english + ' | ' + translate.polish : translate.polish + ' | ' + translate.english
         }
     };
-    style = {
-        left: 0,
+    sounds = {
+        separator: new Audio(SoundSeparator)
     };
     constructor(props){
         super(props);
@@ -251,12 +252,14 @@ class FlashCards extends Component {
     translateVoice = (text,lang,active) => {
         if(active && typeof window.responsiveVoice === 'object') {
             switch (lang) {
-                case 'pl': window.responsiveVoice.speak(text, "Polish Female");
+                case 'pl':
+                    window.responsiveVoice.speak(text, "Polish Female",{onend: console.log("end speak"), onstart: console.log("start speak")});
                     break;
-                case 'en': window.responsiveVoice.speak(text, "UK English Male");
+                case 'en':
+                    window.responsiveVoice.speak(text, "UK English Male",{onend: console.log("end speak"), onstart: console.log("start speak")});
                     break;
                 default:
-                    window.responsiveVoice.speak(text, "UK English Male");
+                    window.responsiveVoice.speak(text, "UK English Male",{onend: console.log("end speak"), onstart: console.log("start speak")});
             }
         }
     };
@@ -336,13 +339,13 @@ class FlashCards extends Component {
         if(event) event.preventDefault();
     };
     changeDirection = (event) => {
-        if(this.global.flashCardDirection === 'left') {
-            setCookies('flashcards_cookie', 'right');
-            this.global.flashCardDirection = 'right';
+        if(this.global.flashCardDirection === 'p->e') {
+            setCookies('flashcards_cookie', 'e->p');
+            this.global.flashCardDirection = 'e->p';
 
         } else {
-            setCookies('flashcards_cookie', 'left');
-            this.global.flashCardDirection = 'left';
+            setCookies('flashcards_cookie', 'p->e');
+            this.global.flashCardDirection = 'p->e';
 
         }
         this.setState({
@@ -370,8 +373,14 @@ class FlashCards extends Component {
         return randomNr;
     };
     timeoutAnim = (y) => {
-        this.setExercise(null,y,false,false,this.global.idC);
-        this.setState({classCheckOutMore: ''});
+        if(this.state.enableAutoVoice) {
+            this.sounds.separator.play();
+        }
+        const timeOut = this.state.enableAutoVoice?500:300;
+        setTimeout(function (that) {
+            that.setExercise(null,y,false,false,that.global.idC);
+            that.setState({classCheckOutMore: ''});
+        },timeOut,this);
     };
     iKnow = (idI) => {
         if(this.state.idExercise > -1) {
@@ -407,8 +416,9 @@ class FlashCards extends Component {
         //console.log(dataJson[idExercise].data[idItem]._en);
         if(this.state.enableAutoVoice) {
             setTimeout(function (that) {
-                if(that.global.flashCardDirection === 'left') {
+                if(that.global.flashCardDirection === 'p->e') {
                     that.translateVoice(dataJson[that.state.idExercise].data[that.state.idItem]._en, "en",that.state.online);
+
                 } else {
                     that.translateVoice(dataJson[that.state.idExercise].data[that.state.idItem]._pl, "pl",that.state.online);
                 }
@@ -426,12 +436,12 @@ class FlashCards extends Component {
                 that.checkOut();
                 that.global.autoplayLoop.second = setTimeout(function () {
                     that.global.autoplayLoop.third = setTimeout(that.timeoutAnim,400,that.state.idExercise);
-                }, 3000);
+                }, 3200);
             };
             play();
             that.global.autoplayLoop.first = setInterval(function () {
                 play();
-            },6000);
+            },6400);
             this.setState({
                 autoPlayExercise: true
             })

@@ -2167,7 +2167,7 @@
       },
       {
         "_en": "told",
-        "_pl": "powedział - powiedzieć (w czasie przeszłym)"
+        "_pl": "powiedział - powiedzieć (w czasie przeszłym)"
       },
       {
         "_en": "busy",
@@ -5750,6 +5750,33 @@
     ]
   },
 
+  {
+    "category": {
+      "_pl": "",
+      "_en": ""
+    },
+    "name": {
+      "_pl": "Idiomy (całość)",
+      "_en": "Idioms (all)"
+    },
+    "data": [
+      {
+        "_en": "leave no stone unturned",
+        "_pl": "poruszyć niebo i ziemię, zastosować wszystkie środki"
+      },
+      {
+        "_en": "change a fly into an elephant",
+        "_pl": "robić z igły widły"
+      },      {
+        "_en": "hit the nail on the head",
+        "_pl": "trafić w sedno"
+      },
+      {
+        "_en": "beat somebody black and blue",
+        "_pl": "zbić kogoś na kwaśne jabłko"
+      }
+    ]
+  },
 
   {
     "category": {

@@ -167,7 +167,7 @@ body {
 
   @media (max-width: $md) {
     vertical-align: top;
-    padding-top: 73px;
+    padding-top: 76px;
   }
 
   //@keyframes bganim {
@@ -241,7 +241,7 @@ h1 {
   font-size: 1.1rem;
 }
 h2 {
-  font-size: 1.125rem
+  font-size: 1rem
 }
 h3 {
   font-size: 1rem;
@@ -903,6 +903,7 @@ a {
       > h2 {
         position: relative;
         padding: 8px 40px 8px 10px;
+        opacity: .9;
         color: $color1;
         cursor: pointer;
         text-shadow: 0 0 1px $color6, 0 0 1px $color2, 0 0 1px $color2;
