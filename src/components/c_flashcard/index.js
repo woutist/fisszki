@@ -57,7 +57,7 @@ class Exercises extends Component {
         };
     };
     render() {
-        const { o, that, voice, idItem, checkvoice, flashCardDirection, idC } = this.props;
+        const { o, that, voice, idItem, checkvoice, flashCardDirection, idC, autoplay } = this.props;
         const thisComponent = this;
         return (
             // eslint-disable-next-line
@@ -70,9 +70,9 @@ class Exercises extends Component {
 
                     if(voice && checkvoice !== 'no-voice') {
                         if(flashCardDirection === 'p->e') {
-                            that.translateVoice(obj._pl, "pl",that.state.online);
+                            that.translateVoice(obj._pl, "pl",that.state.online,autoplay);
                         } else {
-                            that.translateVoice(obj._en, "en",that.state.online);
+                            that.translateVoice(obj._en, "en",that.state.online,autoplay);
                         }
                     }
 
@@ -84,7 +84,7 @@ class Exercises extends Component {
                                 {that.state.online?'online':'offline'} | <span className="icon-up color-5">{o.excludeID.length}/{o.data.length} = {Math.ceil(o.excludeID.length*100/o.data.length)}%</span> - <span className="icon-down color-6">{o.dontKnowClick}</span>
                             </p>
                             <div className={"autoplay-loop-nav"}>
-                                <button className={"w-100" + (thisComponent.state.autoPlayExercise2?' d-none':'')} onClick={() => {thisComponent.setState({autoPlayExercise2: true}); that.autoplayLoopNav('play')}}>Play <span className="icon-play"></span></button>
+                                <button className={"w-100" + (thisComponent.state.autoPlayExercise2?' d-none':'')} onClick={() => {thisComponent.setState({autoPlayExercise2: true}); that.global.autoplayLoop.first = true; that.autoplayLoopNav('play')}}>Play <span className="icon-play"></span></button>
                                 <button className={"w-100" + (thisComponent.state.autoPlayExercise2?'':' d-none')} onClick={() => {thisComponent.setState({autoPlayExercise2: false}); that.autoplayLoopNav('stop')}}>Stop <span className="icon-stop"></span></button>
                             </div>
                             <div className="flip-container">
@@ -249,21 +249,59 @@ class FlashCards extends Component {
             return arr.indexOf(item) >= index;
         });
     };
-    translateVoice = (text,lang,active) => {
+    translateVoice = (text,lang,active,autoplay) => {
+        console.log('autoplay: ' + autoplay);
         if(active && typeof window.responsiveVoice === 'object') {
+            const timeoutSeparator = 1200;
             switch (lang) {
                 case 'pl':
-                    window.responsiveVoice.speak(text, "Polish Female",{onend: console.log("end speak"), onstart: console.log("start speak")});
+                    window.responsiveVoice.speak(text, "Polish Female",{onend: () => {
+                        if(this.global.autoplayLoop.first) {
+                            if(autoplay==='autoplay'){
+                                setTimeout(function (that) {
+                                    that.autoplayLoopNav('play-next');
+                                },timeoutSeparator,this);
+                            } else if(autoplay==='autoplay-check'){
+                                setTimeout(function (that) {
+                                    that.autoplayLoopNav('play');
+                                },timeoutSeparator,this);
+                            }
+                        }
+                        }, onstart: console.log("start speak")});
                     break;
                 case 'en':
-                    window.responsiveVoice.speak(text, "UK English Male",{onend: console.log("end speak"), onstart: console.log("start speak")});
+                    window.responsiveVoice.speak(text, "UK English Male",{onend: () => {
+                            if(this.global.autoplayLoop.first) {
+                                if(autoplay==='autoplay'){
+                                    setTimeout(function (that) {
+                                        that.autoplayLoopNav('play-next');
+                                    },timeoutSeparator,this);
+                                } else if(autoplay==='autoplay-check'){
+                                    setTimeout(function (that) {
+                                        that.autoplayLoopNav('play');
+                                    },timeoutSeparator,this);
+                                }
+                            }
+                        }, onstart: console.log("start speak")});
                     break;
                 default:
-                    window.responsiveVoice.speak(text, "UK English Male",{onend: console.log("end speak"), onstart: console.log("start speak")});
+                    window.responsiveVoice.speak(text, "UK English Male",{onend: () => {
+                            if(this.global.autoplayLoop.first) {
+                                if(autoplay==='autoplay'){
+                                    setTimeout(function (that) {
+                                        that.autoplayLoopNav('play-next');
+                                    },timeoutSeparator,this);
+                                } else if(autoplay==='autoplay-check'){
+                                    setTimeout(function (that) {
+                                        that.autoplayLoopNav('play');
+                                    },timeoutSeparator,this);
+                                }
+                            }
+                        }, onstart: console.log("start speak")});
             }
         }
     };
-    setExercise = (event,idE,idForce,voiceOff,idC,closeCloude) => {
+    setExercise = (event,idE,idForce,voiceOff,idC,closeCloude,ap) => {
         let temp_idE, o = dataJson[idE];
         this.global.idC = idC;
         if(idForce) {
@@ -279,7 +317,7 @@ class FlashCards extends Component {
             classCheckOutMore: '',
             classHideNavButtons: (o.excludeID.length === o.data.length)?'d-none':'',
             classHideOrShowMainPartsPage: 'hide-flash-cards-show-list-exercise',
-            callObj: (o.excludeID.length === o.data.length)?<Congratulation that={this} idC={idC} ide={idE} />:<Exercises o={o} that={this} idC={idC} idItem={temp_idE} flashCardDirection={this.global.flashCardDirection} checkvoice={voiceOff} voice={this.state.enableAutoVoice} />
+            callObj: (o.excludeID.length === o.data.length)?<Congratulation that={this} idC={idC} ide={idE} />:<Exercises autoplay={ap} o={o} that={this} idC={idC} idItem={temp_idE} flashCardDirection={this.global.flashCardDirection} checkvoice={voiceOff} voice={this.state.enableAutoVoice} />
         });
         if(closeCloude) {
             this.setState({
@@ -372,14 +410,15 @@ class FlashCards extends Component {
         }
         return randomNr;
     };
-    timeoutAnim = (y) => {
+    timeoutAnim = (y,ap) => { // ap = autoplay
         if(this.state.enableAutoVoice) {
             this.sounds.separator.play();
         }
-        const timeOut = this.state.enableAutoVoice?500:300;
+        const timeOut = this.global.autoplayLoop.first?1400:300;
         setTimeout(function (that) {
-            that.setExercise(null,y,false,false,that.global.idC);
+            that.setExercise(null,y,false,false,that.global.idC,false,ap);
             that.setState({classCheckOutMore: ''});
+            //alert(x);
         },timeOut,this);
     };
     iKnow = (idI) => {
@@ -411,16 +450,16 @@ class FlashCards extends Component {
             setTimeout(this.timeoutAnim,400,this.state.idExercise);
         }
     };
-    checkOut = () => {
+    checkOut = (autoplay) => {
         //console.log(idExercise + ' / ' + idItem + ' / ' + flashCardDirection); // left = polish, right = english
         //console.log(dataJson[idExercise].data[idItem]._en);
         if(this.state.enableAutoVoice) {
             setTimeout(function (that) {
                 if(that.global.flashCardDirection === 'p->e') {
-                    that.translateVoice(dataJson[that.state.idExercise].data[that.state.idItem]._en, "en",that.state.online);
+                    that.translateVoice(dataJson[that.state.idExercise].data[that.state.idItem]._en, "en",that.state.online,autoplay);
 
                 } else {
-                    that.translateVoice(dataJson[that.state.idExercise].data[that.state.idItem]._pl, "pl",that.state.online);
+                    that.translateVoice(dataJson[that.state.idExercise].data[that.state.idItem]._pl, "pl",that.state.online,autoplay);
                 }
             }, 300,this);
         }
@@ -432,23 +471,31 @@ class FlashCards extends Component {
     autoplayLoopNav = (prop) => {
         let that = this;
         if(prop==="play") {
-            let play = () => {
-                that.checkOut();
-                that.global.autoplayLoop.second = setTimeout(function () {
-                    that.global.autoplayLoop.third = setTimeout(that.timeoutAnim,400,that.state.idExercise);
-                }, 3200);
-            };
-            play();
-            that.global.autoplayLoop.first = setInterval(function () {
-                play();
-            },6400);
+            that.checkOut('autoplay');
+            // let play = () => {
+            //     that.checkOut();
+            //     that.global.autoplayLoop.second = setTimeout(function () {
+            //         that.global.autoplayLoop.third = setTimeout(that.timeoutAnim,400,that.state.idExercise);
+            //     }, 3200);
+            // };
+            // play();
+            // let tgaf = () => {
+            //     that.global.autoplayLoop.first = setTimeout(function () {
+            //         play();
+            //         tgaf();
+            //     },6400);
+            // };
+            // tgaf();
             this.setState({
                 autoPlayExercise: true
             })
-        } else if(prop==="stop") {
-            clearInterval(that.global.autoplayLoop.first);
-            clearInterval(that.global.autoplayLoop.second);
-            clearInterval(that.global.autoplayLoop.third);
+        } else if(prop==='play-next') {
+            that.global.autoplayLoop.second = setTimeout(that.timeoutAnim,400,that.state.idExercise,(that.global.autoplayLoop.first?'autoplay-check':false));
+        }else if(prop==="stop") {
+            // clearTimeout(that.global.autoplayLoop.first);
+            // clearTimeout(that.global.autoplayLoop.second);
+            that.global.autoplayLoop.first = false;
+            clearTimeout(that.global.autoplayLoop.second);
             this.setState({
                 autoPlayExercise: false
             })
