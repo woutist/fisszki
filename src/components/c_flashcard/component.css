@@ -315,6 +315,8 @@ a {
     background-color: #26984b; }
   .icon-random-card.icon-random-card-4:after {
     background-color: #d0ad2f; }
+  .icon-random-card.icon-random-card-5:after {
+    background-color: #983990; }
 
 .module-flash-cards {
   padding: 0 10px;
@@ -626,6 +628,7 @@ a {
           position: relative; }
           .module-flash-cards .main-header-wrap .main-header .list-language li.link-voice:before {
             content: '';
+            pointer-events: none;
             position: absolute;
             left: 50%;
             top: 4px;
@@ -706,6 +709,8 @@ a {
         background-color: #26984b; }
       .module-flash-cards .main-list-exercise .category-box > h2.category-4 {
         background-color: #d0ad2f; }
+      .module-flash-cards .main-list-exercise .category-box > h2.category-5 {
+        background-color: #983990; }
     .module-flash-cards .main-list-exercise .main-list-exercise-inset {
       max-height: none;
       overflow-y: auto;
@@ -972,7 +977,7 @@ a {
       opacity: 0; }
     .module-flash-cards .main-flash-cards .flash-card .flip-container {
       perspective: 1000px;
-      margin: 10px 0; }
+      margin: 0 0 10px; }
     .module-flash-cards .main-flash-cards .flash-card .flip-container, .module-flash-cards .main-flash-cards .flash-card .front, .module-flash-cards .main-flash-cards .flash-card .back {
       width: 100%;
       height: 340px;

@@ -25,6 +25,7 @@ $color11: #273898;
 $color12: #26984b;
 $color13: #aa2929;
 $color14: #d0ad2f;
+$color15: #983990;
 
 $color-google-transaltor: #4f8bf5;
 
@@ -359,6 +360,11 @@ a {
   &.icon-random-card-4 {
     &:after {
       background-color: $color14;
+    }
+  }
+  &.icon-random-card-5 {
+    &:after {
+      background-color: $color15;
     }
   }
 }
@@ -835,6 +841,7 @@ a {
             position: relative;
             &:before {
               content: '';
+              pointer-events: none;
               position: absolute;
               left: 50%;
               top: 4px;
@@ -944,6 +951,9 @@ a {
         }
         &.category-4 {
           background-color: $color14;
+        }
+        &.category-5 {
+          background-color: $color15;
         }
       }
     }
@@ -1285,7 +1295,7 @@ a {
     .flash-card {
       .flip-container {
         perspective: 1000px;
-        margin: 10px 0;
+        margin: 0 0 10px;
       }
       .flip-container, .front, .back {
         width: 100%;
