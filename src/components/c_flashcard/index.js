@@ -116,9 +116,14 @@ class Exercises extends Component {
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
                                                     <span>{obj._en}</span>
                                                 </p>
-                                                <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl)} className="google-translator" target='blank_'>
-                                                    {translate.gt}<span className="icon-gt"></span>
-                                                </button>
+                                                <div className="list-extends-links">
+                                                    <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl)} className="google-translator" target='blank_'>
+                                                        {translate.gt}<span className="icon-gt"></span>
+                                                    </button>
+                                                    <button onClick={(e) => that.openHref(e,"https://context.reverso.net/tłumaczenie/polski-angielski/" + obj._pl)} className="reverso-context" target='blank_'>
+                                                        Reverso context<span className="icon-arrows-cw"></span>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                         :
@@ -141,9 +146,14 @@ class Exercises extends Component {
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
                                                     <span>{obj._pl}</span>
                                                 </p>
-                                                <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en)} className="google-translator" target='blank_'>
-                                                    {translate.gt}<span className="icon-gt"></span>
-                                                </button>
+                                                <div className="list-extends-links">
+                                                    <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en)} className="google-translator" target='blank_'>
+                                                        {translate.gt}<span className="icon-gt"></span>
+                                                    </button>
+                                                    <button onClick={(e) => that.openHref(e,"https://context.reverso.net/tłumaczenie/angielski-polski/" + obj._en)} className="reverso-context" target='blank_'>
+                                                        Reverso context<span className="icon-arrows-cw"></span>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                 }
@@ -816,7 +826,7 @@ class FlashCards extends Component {
 
                                             percent = isNaN(percent)?'blank':percent+'%';
 
-                                            if(this.state.langNameExercise(obj.category) === obj_category) {
+                                            if(this.state.langNameExercise(obj.category) === obj_category && obj.data.length) {
                                                 return (
                                                     <li key={i} className="d-flex justify-content-between">
 

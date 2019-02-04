@@ -119,6 +119,8 @@ a {
 .icon-lock:before { content: '\f512'; }
 .icon-lock-open:before { content: '\f513'; }
 
+.icon-arrows-cw:before { content: '\e80e'; }
+
 .icon-globe {
   color: $color1;
   opacity: .8;
@@ -1409,27 +1411,29 @@ a {
         p {
           margin: 0;
         }
-        .google-translator {
+        .list-extends-links {
           position: absolute;
-          font-size: 0.7rem;
           bottom: 8px;
           right: 10px;
-          padding: 0;
-          margin: 0;
-          background-color: transparent;
-          color: rgba(255,255,255,.8);
-          &:hover {
-            opacity: 1;
-          }
-          .icon-gt {
-            display: inline-block;
-            padding: 1px;
-            margin-left: 5px;
-            //text-shadow: 2px -2px 0 $color1;
-            font-size: 26px;
-            //color: $color-google-transaltor;
+          button {
+            font-size: .6rem;
+            background-color: transparent;
+            padding: 0;
+            margin: 0 0 0 5px;
+            color: rgba(255,255,255,.8);
+            &:hover {
+              opacity: 1;
+            }
+            .icon-gt, .icon-arrows-cw {
+              display: inline-block;
+              padding: 1px;
+              //text-shadow: 2px -2px 0 $color1;
+              font-size: 26px;
+              //color: $color-google-transaltor;
+            }
           }
         }
+
       }
     }
   }

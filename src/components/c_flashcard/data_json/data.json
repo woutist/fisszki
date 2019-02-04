@@ -4074,7 +4074,7 @@
       },
       {
         "_pl": "być ",
-        "_en": "be / was / been"
+        "_en": "be / (I, he, she, is) was, (we, you, they) were / been"
       },
       {
         "_pl": "znosić",
@@ -4085,7 +4085,7 @@
         "_en": "beat / beat / beaten"
       },
       {
-        "_pl": "zostawać ",
+        "_pl": "stać się, zostawać ",
         "_en": "become / became / become"
       },
       {
@@ -4097,7 +4097,7 @@
         "_en": "begin / began / begun"
       },
       {
-        "_pl": "ujrzeć ",
+        "_pl": "ujrzeć",
         "_en": "behold / beheld / beheld"
       },
       {
@@ -4249,8 +4249,12 @@
         "_en": "forbid / forbade / forbidden"
       },
       {
-        "_pl": "przewidywać ",
+        "_pl": "prognozować, przewidywać",
         "_en": "forecast / forecast / forecast"
+      },
+      {
+        "_pl": "przewidywać",
+        "_en": "foretell / foretold / foretold"
       },
       {
         "_pl": "zapominać ",
@@ -4261,8 +4265,12 @@
         "_en": "forgive / forgave / forgiven"
       },
       {
-        "_pl": "porzucać ",
+        "_pl": "porzucać, opuszczać",
         "_en": "forsake / forsook / forsaken"
+      },
+      {
+        "_pl": "skakać",
+        "_en": "leap / leapt (or: leaped) / leapt (or: leaped)"
       },
 
 
@@ -4288,7 +4296,7 @@
         "_en": "grind / ground / ground"
       },
       {
-        "_pl": "wisięć ",
+        "_pl": "wisieć ",
         "_en": "hang / hung / hung"
       },
       {
@@ -4358,10 +4366,6 @@
       {
         "_pl": "leżeć ",
         "_en": "lie / lay / lain"
-      },
-      {
-        "_pl": "kłamać ",
-        "_en": "lie / lied / lied"
       },
       {
         "_pl": "zapalać ",
@@ -4479,7 +4483,7 @@
         "_en": "shear / sheared / shorn"
       },
       {
-        "_pl": "rozsięwać / lać / rozlać ",
+        "_pl": "zrzucać, pozbywać się",
         "_en": "shed / shed / shed"
       },
       {
@@ -4515,11 +4519,15 @@
         "_en": "sleep / slept / slept"
       },
       {
+        "_pl": "zabijać",
+        "_en": "slay / slew / slain"
+      },
+      {
         "_pl": "pośliznąć się ",
         "_en": "slide / slid / slid"
       },
       {
-        "_pl": "zawieszać / podwieszać ",
+        "_pl": "zawieszać, podwieszać, cisnąć, miotać",
         "_en": "sling / slung / slung"
       },
       {
@@ -4571,7 +4579,7 @@
         "_en": "spread / spread / spread"
       },
       {
-        "_pl": "sprężynować ",
+        "_pl": "sprężynować, przeskakiwać, wyskakiwać, skakać",
         "_en": "spring / sprang / sprung"
       },
       {
@@ -4587,7 +4595,7 @@
         "_en": "stick / stuck / stuck"
       },
       {
-        "_pl": "kłuć ",
+        "_pl": "kłuć, żądlić",
         "_en": "sting / stung / stung"
       },
       {
@@ -4599,11 +4607,11 @@
         "_en": "stride / strode / stridden"
       },
       {
-        "_pl": "strajkować / walić / uderzać ",
+        "_pl": "strajkować, walić, uderzać ",
         "_en": "strike / struck / struck"
       },
       {
-        "_pl": "dążyć do czegoś / usiłować / krzątać ",
+        "_pl": "dążyć do czegoś, usiłować, starać się",
         "_en": "strive / strove / striven"
       },
       {
@@ -4655,7 +4663,7 @@
         "_en": "thrust / thrust / thrust"
       },
       {
-        "_pl": "stąpać / chodzić po czymś ",
+        "_pl": "stąpać, chodzić po czymś, dreptać",
         "_en": "tread / trod / trodden"
       },
       {
@@ -4675,7 +4683,7 @@
         "_en": "weave / wove / woven"
       },
       {
-        "_pl": "płakać ",
+        "_pl": "płakać, szlochać",
         "_en": "weep / wept / wept"
       },
       {
@@ -4683,11 +4691,11 @@
         "_en": "win / won / won"
       },
       {
-        "_pl": "owijać / nawijać ",
+        "_pl": "owijać, nawijać, wić się",
         "_en": "wind / wound / wound"
       },
       {
-        "_pl": "wyciskać / ściskać czyjeś ręce ",
+        "_pl": "wykręcić, wyciskać",
         "_en": "wring / wrung / wrung"
       },
       {
@@ -6954,7 +6962,7 @@
       },
       {
         "_en": "been",
-        "_pl": "być używane w czasię perfect lub w stronie biernej"
+        "_pl": "być używane w czasie perfect lub w stronie biernej"
       },
       {
         "_en": "never",
@@ -9896,7 +9904,7 @@
       },
       {
         "_pl": "być ",
-        "_en": "be / was / been"
+        "_en": "be / (I, he, she, is) was, (we, you, they) were / been"
       },
       {
         "_pl": "znosić",
@@ -9907,7 +9915,7 @@
         "_en": "beat / beat / beaten"
       },
       {
-        "_pl": "zostawać ",
+        "_pl": "stać się, zostawać ",
         "_en": "become / became / become"
       },
       {
@@ -10071,8 +10079,12 @@
         "_en": "forbid / forbade / forbidden"
       },
       {
-        "_pl": "przewidywać ",
+        "_pl": "prognozować, przewidywać",
         "_en": "forecast / forecast / forecast"
+      },
+      {
+        "_pl": "przewidywać",
+        "_en": "foretell / foretold / foretold"
       },
       {
         "_pl": "zapominać ",
@@ -10083,8 +10095,12 @@
         "_en": "forgive / forgave / forgiven"
       },
       {
-        "_pl": "porzucać ",
+        "_pl": "porzucać, opuszczać",
         "_en": "forsake / forsook / forsaken"
+      },
+      {
+        "_pl": "skakać",
+        "_en": "leap / leapt (or: leaped) / leapt (or: leaped)"
       }]
   },
   {
@@ -10118,7 +10134,7 @@
         "_en": "grind / ground / ground"
       },
       {
-        "_pl": "wisięć ",
+        "_pl": "wisieć ",
         "_en": "hang / hung / hung"
       },
       {
@@ -10188,10 +10204,6 @@
       {
         "_pl": "leżeć ",
         "_en": "lie / lay / lain"
-      },
-      {
-        "_pl": "kłamać ",
-        "_en": "lie / lied / lied"
       },
       {
         "_pl": "zapalać ",
@@ -10294,6 +10306,10 @@
         "_en": "set / set / set"
       },
       {
+        "_pl": "trząść / wstrząsnąć ",
+        "_en": "shake / shook / shaken"
+      },
+      {
         "_pl": "szyć ",
         "_en": "sew / sewed / sewn"
       }]
@@ -10309,15 +10325,11 @@
     },
     "data":[
       {
-      "_pl": "trząść / wstrząsnąć ",
-      "_en": "shake / shook / shaken"
-      },
-      {
         "_pl": "strzyc ",
         "_en": "shear / sheared / shorn"
       },
       {
-        "_pl": "rozsięwać / lać / rozlać ",
+        "_pl": "zrzucać, pozbywać się",
         "_en": "shed / shed / shed"
       },
       {
@@ -10353,11 +10365,15 @@
         "_en": "sleep / slept / slept"
       },
       {
+        "_pl": "zabijać",
+        "_en": "slay / slew / slain"
+      },
+      {
         "_pl": "pośliznąć się ",
         "_en": "slide / slid / slid"
       },
       {
-        "_pl": "zawieszać / podwieszać ",
+        "_pl": "zawieszać, podwieszać, cisnąć, miotać",
         "_en": "sling / slung / slung"
       },
       {
@@ -10409,7 +10425,7 @@
         "_en": "spread / spread / spread"
       },
       {
-        "_pl": "sprężynować ",
+        "_pl": "sprężynować, przeskakiwać, wyskakiwać, skakać",
         "_en": "spring / sprang / sprung"
       },
       {
@@ -10425,7 +10441,7 @@
         "_en": "stick / stuck / stuck"
       },
       {
-        "_pl": "kłuć ",
+        "_pl": "kłuć, żądlić",
         "_en": "sting / stung / stung"
       },
       {
@@ -10437,11 +10453,11 @@
         "_en": "stride / strode / stridden"
       },
       {
-        "_pl": "strajkować / walić / uderzać ",
+        "_pl": "strajkować, walić, uderzać",
         "_en": "strike / struck / struck"
       },
       {
-        "_pl": "dążyć do czegoś / usiłować / krzątać ",
+        "_pl": "dążyć do czegoś, usiłować, starać się",
         "_en": "strive / strove / striven"
       },
       {
@@ -10493,7 +10509,7 @@
         "_en": "thrust / thrust / thrust"
       },
       {
-        "_pl": "stąpać / chodzić po czymś ",
+        "_pl": "stąpać, chodzić po czymś, dreptać",
         "_en": "tread / trod / trodden"
       },
       {
@@ -10513,7 +10529,7 @@
         "_en": "weave / wove / woven"
       },
       {
-        "_pl": "płakać ",
+        "_pl": "płakać, szlochać",
         "_en": "weep / wept / wept"
       },
       {
@@ -10521,11 +10537,11 @@
         "_en": "win / won / won"
       },
       {
-        "_pl": "owijać / nawijać ",
+        "_pl": "owijać, nawijać, wić się",
         "_en": "wind / wound / wound"
       },
       {
-        "_pl": "wyciskać / ściskać czyjeś ręce ",
+        "_pl": "wykręcić, wyciskać",
         "_en": "wring / wrung / wrung"
       },
       {
@@ -11978,8 +11994,8 @@
 
   {
     "category": {
-      "_pl": "Czasy",
-      "_en": "Tenses"
+      "_pl": "Czasy (w trakcie budowy)",
+      "_en": "Tenses (under construction)"
     },
     "name": {
       "_pl": "Teraźniejszy ciągły - Present Continuous",
@@ -12002,8 +12018,8 @@
   },
   {
     "category": {
-      "_pl": "Czasy",
-      "_en": "Tenses"
+      "_pl": "Czasy (w trakcie budowy)",
+      "_en": "Tenses (under construction)"
     },
     "name": {
       "_pl": "Teraźniejszy prosty - Present Simple",
@@ -12026,8 +12042,8 @@
   },
   {
     "category": {
-      "_pl": "Czasy",
-      "_en": "Tenses"
+      "_pl": "Czasy (w trakcie budowy)",
+      "_en": "Tenses (under construction)"
     },
     "name": {
       "_pl": "Przeszły - Present Perfect",
@@ -12039,91 +12055,83 @@
     },
     "data": [
       {
-        "_pl": "",
-        "_en": ""
+        "_pl": "On kupił książkę.",
+        "_en": "He has bought the book."
       },
       {
-        "_pl": "",
-        "_en": ""
+        "_pl": "Oni zjedli obiad.",
+        "_en": "They have eaten dinner."
       },
       {
-        "_pl": "",
-        "_en": ""
+        "_pl": "Zrobiłem krzesło.",
+        "_en": "I have made a chair."
       },
       {
-        "_pl": "",
-        "_en": ""
+        "_pl": "Czy oni kiedykolwiek byli w górach?",
+        "_en": "Have they ever been in the mountains?"
       },
       {
-        "_pl": "",
-        "_en": ""
+        "_pl": "Co on zrobił z moim samochodem?",
+        "_en": "What has he done with my car?"
       },
       {
-        "_pl": "",
-        "_en": ""
+        "_pl": "Czy kidykolwiek grałeś w krykieta?",
+        "_en": "Have you ever played cricket?"
       },
       {
-        "_pl": "",
-        "_en": ""
-      },
-      {
-        "_pl": "",
-        "_en": ""
+        "_pl": "Nigdy nie byliśmy we francji",
+        "_en": "We have never been to Spain."
       }
     ]
   },
   {
     "category": {
-      "_pl": "Czasy",
-      "_en": "Tenses"
+      "_pl": "Czasy (w trakcie budowy)",
+      "_en": "Tenses (under construction)"
     },
     "name": {
       "_pl": "Przeszły prosty - Past Simple",
       "_en": "Past Simple - Przeszły prosty"
     },
     "description": {
-      "_pl": "<strong>konstrukcja</strong>: podmiot + 2 forma czasownika",
+      "_pl": "<strong>konstrukcja twierdząca</strong>: podmiot + 2 forma czasownika<br><strong>konstrukcja pytająca</strong>: did + podmit + 1 forma czasownika",
       "_en": "-"
     },
     "data": [
       {
-        "_pl": "",
-        "_en": ""
+        "_pl": "Wczoraj pojechałem do sklepu.",
+        "_en": "Yesterday I drove to shop."
       },
       {
-        "_pl": "",
-        "_en": ""
+        "_pl": "Rok temu zaczeli naukę angielskiego.",
+        "_en": "A year ago, they began/started to learn english."
       },
       {
-        "_pl": "",
-        "_en": ""
+        "_pl": "Wczoraj cały dzień byliśmy w szkole.",
+        "_en": "We were at school all day yesterday."
       },
       {
-        "_pl": "",
-        "_en": ""
+        "_pl": "Chodziliśmy przez całe lato po górach.",
+        "_en": "We walked all summer in the mountains."
       },
       {
-        "_pl": "",
-        "_en": ""
+        "_pl": "- Czy powiedziałeś to? - Tak, powiedziałem.",
+        "_en": "- Did you said that? - Yes, I said that."
       },
       {
-        "_pl": "",
-        "_en": ""
+        "_pl": "- Czy widziałeś to? - Nie, nie widziałem tego.",
+        "_en": "- Did you see that? - No, I did not (didn't) see."
       },
       {
-        "_pl": "",
-        "_en": ""
-      },
-      {
-        "_pl": "",
-        "_en": ""
+        "_pl": "- Czy rozmawaiałaś wczoraj z mamą? - Nie, nie zrobiłam tego.",
+        "_en": "- Did you speak to mom yesterday? - No, I didn't (did not)."
       }
     ]
   },
   {
     "category": {
-      "_pl": "Czasy",
-      "_en": "Tenses"
+      "_pl": "Czasy (w trakcie budowy)",
+      "_en": "Tenses (under construction)"
     },
     "name": {
       "_pl": "Przeszły ciągły - Past Continuous",
@@ -12134,44 +12142,12 @@
       "_en": "-"
     },
     "data": [
-      {
-        "_pl": "",
-        "_en": ""
-      },
-      {
-        "_pl": "",
-        "_en": ""
-      },
-      {
-        "_pl": "",
-        "_en": ""
-      },
-      {
-        "_pl": "",
-        "_en": ""
-      },
-      {
-        "_pl": "",
-        "_en": ""
-      },
-      {
-        "_pl": "",
-        "_en": ""
-      },
-      {
-        "_pl": "",
-        "_en": ""
-      },
-      {
-        "_pl": "",
-        "_en": ""
-      }
     ]
   },
   {
     "category": {
-      "_pl": "Czasy",
-      "_en": "Tenses"
+      "_pl": "Czasy (w trakcie budowy)",
+      "_en": "Tenses (under construction)"
     },
     "name": {
       "_pl": "Przyszły prosty - Future Simple",
@@ -12182,44 +12158,12 @@
       "_en": "-"
     },
     "data": [
-      {
-        "_pl": "",
-        "_en": ""
-      },
-      {
-        "_pl": "",
-        "_en": ""
-      },
-      {
-        "_pl": "",
-        "_en": ""
-      },
-      {
-        "_pl": "",
-        "_en": ""
-      },
-      {
-        "_pl": "",
-        "_en": ""
-      },
-      {
-        "_pl": "",
-        "_en": ""
-      },
-      {
-        "_pl": "",
-        "_en": ""
-      },
-      {
-        "_pl": "",
-        "_en": ""
-      }
     ]
   },
   {
     "category": {
-      "_pl": "Czasy",
-      "_en": "Tenses"
+      "_pl": "Czasy (w trakcie budowy)",
+      "_en": "Tenses (under construction)"
     },
     "name": {
       "_pl": "Przyszły ciągły - Future Continuous",
@@ -12230,38 +12174,6 @@
       "_en": "-"
     },
     "data": [
-      {
-        "_pl": "",
-        "_en": ""
-      },
-      {
-        "_pl": "",
-        "_en": ""
-      },
-      {
-        "_pl": "",
-        "_en": ""
-      },
-      {
-        "_pl": "",
-        "_en": ""
-      },
-      {
-        "_pl": "",
-        "_en": ""
-      },
-      {
-        "_pl": "",
-        "_en": ""
-      },
-      {
-        "_pl": "",
-        "_en": ""
-      },
-      {
-        "_pl": "",
-        "_en": ""
-      }
     ]
   }
 ]
