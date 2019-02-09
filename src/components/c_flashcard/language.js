@@ -21,7 +21,10 @@ export const setLanguage = (x) => {
                 english: 'English',
                 abouts: 'Autor: semDesign<br />Contact: aleksander.nyczyk@gmail.com<br />Version: ',
                 gt: 'Google Translate',
-                privacy: 'Privacy'
+                privacy: 'Privacy',
+                fullItemsList: 'Full items list',
+                flashcards: 'Flashcards',
+                lottery: 'Lottery'
             };
             break;
         default: //pl
@@ -44,7 +47,10 @@ export const setLanguage = (x) => {
                 english: 'Angielski',
                 abouts: 'Autor: semDesign<br />Kontakt: aleksander.nyczyk@gmail.com<br />Wersja: ',
                 gt: 'Google Translator',
-                privacy: 'Prywatność'
+                privacy: 'Prywatność',
+                fullItemsList: 'Pełna lista',
+                flashcards: 'Fiszki',
+                lottery: 'Losowanie'
             };
     }
 };

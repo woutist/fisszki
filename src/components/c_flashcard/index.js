@@ -56,9 +56,13 @@ class Exercises extends Component {
             autoPlayExercise2: false
         };
     };
+    fullItemsList = (e,that,idC) => {
+        that.setState({showListActice:true});
+        that.setExercise(e,that.state.idExercise,false,false,idC,false,false,true);
+    }
     render() {
         const { o, that, voice, idItem, checkvoice, flashCardDirection, idC, autoplay } = this.props;
-        // const thisComponent = this;
+        const thisComponent = this;
         return (
             // eslint-disable-next-line
             o.data.map(function (obj, i) {
@@ -83,7 +87,10 @@ class Exercises extends Component {
                     return (
                         <div className={'flash-card-inset' + (isIE?' ie-fix':'')} key={i}>
                             <span className="percent-pro" style={stylePercent}></span>
-                            <h2><span className={"icon-random-card icon-random-card-" + idC}></span>{that.state.langNameExercise(o.category) && that.state.langNameExercise(o.category) + ' / '}{that.state.langNameExercise(o.name)}</h2>
+                            <h2>
+                                <span className={"icon-random-card icon-random-card-" + idC}></span>
+                                {that.state.langNameExercise(o.category) && that.state.langNameExercise(o.category) + ' / '}{that.state.langNameExercise(o.name)} <span className="icon-right"></span>&nbsp;<a href="#full-items-list" onClick={(e) => thisComponent.fullItemsList(e,that,idC)}>{translate.fullItemsList}</a>
+                            </h2>
                             <p>
                                 {that.state.online?'online':'offline'} | <span className="icon-up color-5">{o.excludeID.length}/{o.data.length} = {Math.ceil(o.excludeID.length*100/o.data.length)}%</span> - <span className="icon-down color-6">{o.dontKnowClick}</span>
                             </p>
@@ -167,6 +174,92 @@ class Exercises extends Component {
     }
 }
 
+/**
+ * Sub component Exercises List
+ */
+class ExercisesList extends Component {
+    // constructor(props){
+    //     super(props);
+    //     this.state = {
+    //     };
+    // };
+    flashcards = (e,that,idC) => {
+        that.setState({showListActice:false});
+        that.setExercise(e,that.state.idExercise,false,false,idC);
+    };
+    items = (i,o,that,obj,checkOk,flashCardDirection) => {
+      return (
+          <tr key={i} className={"list-container " + checkOk}>
+              <th>
+                  {i + 1}
+              </th>
+              <td onClick={() => that.translateVoice((flashCardDirection === 'p->e')?obj._pl:obj._en, (flashCardDirection === 'p->e')?"pl":"en", that.state.online)}>
+                  <span className={'icon-volume ' + (that.state.online ? '' : 'line-disable')}></span>
+                  <span>{(flashCardDirection === 'p->e')?obj._pl:obj._en}</span>
+                  {checkOk && <span className="icon-ok"></span>}
+              </td>
+              <td onClick = {() => that.translateVoice((flashCardDirection === 'p->e')?obj._en:obj._pl, (flashCardDirection === 'p->e')?"en":"pl", that.state.online)}>
+                  <span className={'icon-volume ' + (that.state.online ? '' : 'line-disable')}></span>
+                  <span>{(flashCardDirection === 'p->e')?obj._en:obj._pl}</span>
+                  {checkOk && <span className="icon-ok"></span>}
+              </td>
+          </tr>
+      )
+    };
+    render() {
+        const { o, that, idC, flashCardDirection } = this.props;
+        const thisComponent = this;
+        // const Aux = props => props.children;
+        //console.log(o.excludeID);
+        let percent = Math.ceil(o.excludeID.length*100/o.data.length),
+            stylePercent = {
+                background: 'linear-gradient(to right, #2c8548 0%,#2c8548 ' + percent + '%,#974c49 ' + percent + '%,#974c49 100%)'
+            },
+            description;
+        if(typeof dataJson[that.state.idExercise].description === 'object') {
+            description = (that.global.lang === 'pl')?dataJson[that.state.idExercise].description._pl:dataJson[that.state.idExercise].description._en;
+        }
+        //o.data.push(o.excludeID);
+        if(typeof o.excludeID.includes !== 'function') {
+            o.excludeID.includes = function () {};
+        }
+        return (
+            // eslint-disable-next-line
+            <div className={"flash-card-inset"}>
+                <span className="percent-pro" style={stylePercent}></span>
+                <h2>
+                    <span className={"icon-random-card icon-random-card-" + idC}></span>
+                    {that.state.langNameExercise(o.category) && that.state.langNameExercise(o.category) + ' / '}{that.state.langNameExercise(o.name)} <span className="icon-right"></span> <a href="#flashcards" onClick={(e) => this.flashcards(e,that,idC)}>{translate.flashcards}</a>
+                </h2>
+                <p>
+                    {that.state.online?'online':'offline'} | <span className="icon-up color-5">{o.excludeID.length}/{o.data.length} = {Math.ceil(o.excludeID.length*100/o.data.length)}%</span> - <span className="icon-down color-6">{o.dontKnowClick}</span>
+                </p>
+                {description?<p>{Parser(description)}</p>:''}
+                <div className={"table-wrap"}>
+                    <table className={"table-list"}>
+                        <thead>
+                            <tr><th>id</th><th>{(flashCardDirection === 'p->e')?'pl':'en'}</th><th>{(flashCardDirection === 'p->e')?'en':'pl'}</th></tr>
+                        </thead>
+                        <tbody>
+                        {
+                            o.data.map(function (obj, i) {
+                                return !o.excludeID.includes(i)?thisComponent.items(i,o,that,obj,'',flashCardDirection):null;
+                            }, that,thisComponent)
+                        }
+                        {
+                            o.data.map(function (obj, i) {
+                                return o.excludeID.includes(i)?thisComponent.items(i,o,that,obj,'check-ok',flashCardDirection):null;
+                            }, that,thisComponent)
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        )
+    }
+}
+
+
 
 /**
  * Main component FlashCards
@@ -205,7 +298,7 @@ class FlashCards extends Component {
         idC: false,
         fSwipe: false,
         timeOutCloseCloud: true,
-        version: '1.0.1',
+        version: '1.0.2',
         autoplayLoop: {},
         directionText: () => {
             return (this.global.flashCardDirection === 'e->p') ? translate.english + ' | ' + translate.polish : translate.polish + ' | ' + translate.english
@@ -240,6 +333,9 @@ class FlashCards extends Component {
             showAbouts: '',
             headerOnTop: '',
             autoPlayExercise: false,
+            showListActice: false,
+            searchBrowser: false,
+            searchWorlds: '',
             langNameExercise: (j,l=this.global.lang) => {
                 switch (l) {
                     case 'en': return j._en;
@@ -279,7 +375,7 @@ class FlashCards extends Component {
         }
     };
     translateVoice = (text,lang,active,autoplay) => {
-        console.log('autoplay: ' + autoplay);
+        //console.log('autoplay: ' + autoplay);
         if(active && typeof window.responsiveVoice === 'object') {
             const timeoutSeparator = 600;
             switch (lang) {
@@ -300,7 +396,22 @@ class FlashCards extends Component {
             }
         } 
     };
-    setExercise = (event,idE,idForce,voiceOff,idC,closeCloude,ap) => {
+    layer = (o,that,idC, idE, ap, temp_idE, voiceOff, showList) => {
+        if(showList) {
+            this.setState({
+               showListActice: true
+            });
+            return <ExercisesList autoplay={ap} o={o} that={that} idC={idC} idItem={temp_idE} flashCardDirection={that.global.flashCardDirection} checkvoice={voiceOff} voice={that.state.enableAutoVoice} />;
+
+        } else {
+            if(o.excludeID.length === o.data.length) {
+                return <Congratulation that={that} idC={idC} ide={idE} />;
+            } else {
+                return <Exercises autoplay={ap} o={o} that={that} idC={idC} idItem={temp_idE} flashCardDirection={that.global.flashCardDirection} checkvoice={voiceOff} voice={that.state.enableAutoVoice} />;
+            }
+        }
+    };
+    setExercise = (event,idE,idForce,voiceOff,idC,closeCloude,ap,showList) => {
         let temp_idE, o = dataJson[idE];
         this.global.idC = idC;
         if(idForce) {
@@ -314,9 +425,10 @@ class FlashCards extends Component {
             idItem: temp_idE,
             classCheckOut: '',
             classCheckOutMore: '',
-            classHideNavButtons: (o.excludeID.length === o.data.length)?'d-none':'',
+            classHideNavButtons: (o.excludeID.length === o.data.length || showList)?'d-none':'',
             classHideOrShowMainPartsPage: 'hide-flash-cards-show-list-exercise',
-            callObj: (o.excludeID.length === o.data.length)?<Congratulation that={this} idC={idC} ide={idE} />:<Exercises autoplay={ap} o={o} that={this} idC={idC} idItem={temp_idE} flashCardDirection={this.global.flashCardDirection} checkvoice={voiceOff} voice={this.state.enableAutoVoice} />
+            callObj: this.layer(o, this, idC, idE, ap, temp_idE, voiceOff, showList),
+            //callObj: (o.excludeID.length === o.data.length)?<Congratulation that={this} idC={idC} ide={idE} />:<Exercises autoplay={ap} o={o} that={this} idC={idC} idItem={temp_idE} flashCardDirection={this.global.flashCardDirection} checkvoice={voiceOff} voice={this.state.enableAutoVoice} />
         });
         if(closeCloude) {
             this.setState({
@@ -336,7 +448,8 @@ class FlashCards extends Component {
             callObj: '',
             classHideOrShowMainPartsPage: 'show-list-exercise-hide-flash-cards',
             classHideNavButtons: '',
-            closeCloude: ''
+            closeCloude: '',
+            showListActice: false
         });
         clearTimeout(this.global.timeOutCloseCloud);
         //this.autoplayLoopNav("stop");
@@ -371,7 +484,7 @@ class FlashCards extends Component {
                 callObj: (this.state.idItem === false && this.state.idExercise !== -1)?<Congratulation that={this} ide={this.state.idExercise} />:''
             });
         } else {
-            this.setExercise(event,this.state.idExercise,this.state.idItem,'no-voice',this.global.idC);
+            this.setExercise(event,this.state.idExercise,this.state.idItem,'no-voice',this.global.idC,false,false,this.state.showListActice);
         }
         if(event) event.preventDefault();
     };
@@ -390,9 +503,10 @@ class FlashCards extends Component {
         });
 
         if(this.state.idExercise > -1) {
-            this.setExercise(event,this.state.idExercise,this.state.idItem,false,this.global.idC);
+            this.setExercise(event,this.state.idExercise,this.state.idItem,false,this.global.idC,false,false,this.state.showListActice);
         }
         if(event) event.preventDefault();
+
     };
     randomItem = (ol) => {
 
@@ -488,29 +602,6 @@ class FlashCards extends Component {
                     autoPlayExercise: false
                 })
             }
-        } else {
-            // if(prop==="play") {
-            //     let play = () => {
-            //         that.checkOut();
-            //         that.global.autoplayLoop.second = setTimeout(function () {
-            //             that.global.autoplayLoop.third = setTimeout(that.timeoutAnim,400,that.state.idExercise);
-            //         }, 2000);
-            //     };
-            //     play();
-            //     that.global.autoplayLoop.first = setInterval(function () {
-            //         play();
-            //     },4000);
-            //     this.setState({
-            //         autoPlayExercise: true
-            //     })
-            // } else if(prop==="stop") {
-            //     clearInterval(that.global.autoplayLoop.first);
-            //     clearInterval(that.global.autoplayLoop.second);
-            //     clearInterval(that.global.autoplayLoop.third);
-            //     this.setState({
-            //         autoPlayExercise: false
-            //     })
-            // }
         }
 
 
@@ -605,7 +696,9 @@ class FlashCards extends Component {
             online: checkOnline
         });
         if(this.state.idExercise > -1) {
-            this.setExercise(event, this.state.idExercise, this.state.idItem,'no-voice',this.global.idC);
+            // this.state.showListActice
+            this.setExercise(event, this.state.idExercise, this.state.idItem,'no-voice',this.global.idC,false,false,this.state.showListActice);
+            //this.setExercise(e,i,false,false,j,false,false,'show-list')
         }
     };
 
@@ -691,9 +784,20 @@ class FlashCards extends Component {
             showAbouts: this.state.showAbouts?'':'abouts-l-active'
         });
     };
+
+    searchBrowser = () => {
+        this.setState({
+            searchBrowser: !this.state.searchBrowser && true
+        });
+    };
+
+    searchChange = (event) => {
+        this.setState({searchWorlds: event.target.value});
+    };
+
     componentWillMount(){
         dataJson.map(function (obj, i) {
-            console.log('x');
+            //console.log('x');
             if(typeof obj.excludeID  === 'undefined') {
                 obj.excludeID = [];
                 obj.dontKnowClick = 0;
@@ -712,6 +816,15 @@ class FlashCards extends Component {
         //setLanguage(this.global.lang);
         this.setLang(false,this.global.lang);
         this.preloaderFun();
+        window.document.addEventListener("backbutton", () => {
+            if(detectionDevice) {
+                if(this.state.idExercise > -1) {
+                    this.clearExercise();
+                } else {
+                    navigator.app.backHistory();
+                }
+            }
+        }, false);
     };
     componentDidMount = () => {
         const that = this;
@@ -721,14 +834,14 @@ class FlashCards extends Component {
                     that.setState({
                         headerOnTop: ''
                     });
-                    console.log('I AM AT THE TOP');
+                    //console.log('I AM AT THE TOP');
                 }
             } else {
                 if(!that.state.headerOnTop) {
                     that.setState({
                         headerOnTop: 'header-on-none-top'
                     });
-                    console.log("xcx");
+                    //console.log("xcx");
                 }
             }
         };
@@ -792,13 +905,23 @@ class FlashCards extends Component {
                                     </div>
 
                             </nav>
-                            <ul className="list-language d-flex flex-row list-unstyled">
-                                <li>{!isIE && <Detector
-                                    onChange={(online,event) => this.checkOnline(event,online)}
-                                    render={({ online }) => (
-                                        <span title={online?'online':'offline'} className={'icon-globe ' + (online?'':'icon-globe-disable')}></span>
-                                    )}
-                                />}</li>
+                            <ul className="top-menu d-flex flex-row list-unstyled">
+                                {this.state.showListActice && (typeof window.find === 'function') &&
+                                <li className={"link-search d-flex " + (!this.state.searchBrowser || 'link-search-active')}>
+                                    <div className="search-on-page d-flex">
+                                        <button onClick={() => window.find(this.state.searchWorlds)}>Search
+                                        </button>
+                                        <input type="search" onChange={this.searchChange}
+                                               value={this.state.searchWorlds}
+                                               onKeyPress={(e) => {
+                                                   if (e.key === 'Enter') {
+                                                       window.find(this.state.searchWorlds)
+                                                   }
+                                               }}/>
+                                    </div>
+                                    <a href={'#search'} onClick={(e) => this.searchBrowser(e)}><span className="icon-search"></span></a>
+                                </li>
+                                }
                                 <li className="link-voice"><a href={'#voice'} onClick={(e) => this.enableAutoVoice(e)}><span className="icon-volume"></span></a></li>
                                 <li className="flag-pl"><a href={'#pl'} className={this.state.activePL} onClick={(e) => this.setLang(e,'pl')}>PL</a></li>
                                 <li className="flag-en"><a href={'#en'} className={this.state.activeEN} onClick={(e) => this.setLang(e,'en')}>EN</a></li>
@@ -828,8 +951,7 @@ class FlashCards extends Component {
 
                                             if(this.state.langNameExercise(obj.category) === obj_category && obj.data.length) {
                                                 return (
-                                                    <li key={i} className="d-flex justify-content-between">
-
+                                                    <li key={i} className={"d-flex justify-content-between exercise-item-" + i}>
                                                         <a href={'#flashcard' + i} style={stylePercent2} onClick={(e) => this.setExercise(e,i,false,false,j,(obj.excludeID.length!==obj.data.length))}>
                                                             {/*<span className="percent-border-top"></span>*/}
                                                             <span className="percent-pro" style={stylePercent1}></span>
@@ -837,10 +959,12 @@ class FlashCards extends Component {
                                                             {obj.excludeID.length === obj.data.length && <span className="icon-ok"></span>}
                                                             {this.state.langNameExercise(obj.name)} <i><span className="icon-up color-5">{obj.excludeID.length}/{obj.data.length} = {percent}</span> - <span className="icon-down color-6">{obj.dontKnowClick}</span></i>
                                                         </a>
-
-                                                        {(obj.excludeID.length !== 0 || obj.dontKnowClick !== 0) &&
-                                                        <button className={'border-content-bottom'} title="Reset" onClick={(e) => {this.removeCookieExerciseId(e,i,obj);}}><span className="icon-trash-empty"></span></button>
-                                                        }
+                                                        <div className="buttons-option d-flex flex-column">
+                                                            {(obj.excludeID.length !== 0 || obj.dontKnowClick !== 0) &&
+                                                                <button className={'border-content-bottom button-reset '} title="Reset"><span className="reset-confirm" onClick={() => this.removeCookieExerciseId(false,i,obj)}>Reset</span><span className="icon-trash-empty" ></span></button>
+                                                            }
+                                                            <button className={'border-content-bottom button-list'} title="Show list" onClick={(e) => this.setExercise(e,i,false,false,j,false,false,'show-list')}><span className="icon-clipboard"></span></button>
+                                                        </div>
 
                                                     </li>
                                                 );
@@ -854,7 +978,7 @@ class FlashCards extends Component {
                     </div>
                     <div className={'main-flash-cards ' + this.state.classCheckOut + ' ' + this.state.classCheckOutMore}>
                         <button className="button-close-exercise icon-cancel" onClick={this.clearExercise}>
-                            <span className={this.state.closeCloude}>{translate.buttonCloseExercise}</span>
+                            {!this.state.showListActice && <span className={this.state.closeCloude}>{translate.buttonCloseExercise}</span>}
                         </button>
 
                         <div className={'flash-card'}>
@@ -863,13 +987,18 @@ class FlashCards extends Component {
 
                         <nav className={'nav-buttons ' + this.state.classHideNavButtons + (this.state.autoPlayExercise?' disable-opacity':'')}>
                             <span className={"icon-lock" + (this.state.autoPlayExercise?'':' d-none')}></span>
-                            <button className="button-check-out" onClick={() => this.checkOut()}>{translate.buttonCheckOut}</button>
+                            {!this.state.classCheckOutMore?<button className="button-check-out" onClick={() => this.checkOut()}>{translate.buttonCheckOut}</button>:<button className="button-check-out">{translate.lottery}...</button>}
                             <button title={translate.buttonIKnow} className="button-i-know" onClick={() => this.iKnow(this.state.idItem)}><span className="icon-ok"></span></button>
                             <button title={translate.buttonIDontKnow} className="button-i-dont-know" onClick={() => this.iDontKnow()}><span className="icon-cancel"></span></button>
                         </nav>
                     </div>
                     <footer className="main-footer">
-                        <p>Copyright &copy; {title} | <a href="http://langfc.semjs.pl/polityka/" onClick={(e) => this.openHref(e,"http://langfc.semjs.pl/polityka/?lang="+translate.lang)} >{translate.privacy}</a></p>
+                        <p>Copyright &copy; {title} | <a href="http://langfc.semjs.pl/polityka/" onClick={(e) => this.openHref(e,"http://langfc.semjs.pl/polityka/?lang="+translate.lang)} >{translate.privacy}</a> | {!isIE && <Detector
+                            onChange={(online,event) => this.checkOnline(event,online)}
+                            render={({ online }) => (
+                                <span title={online?'online':'offline'} className={'icon-globe ' + (online?'':'icon-globe-disable')}></span>
+                            )}
+                        />}</p>
                     </footer>
                 </div>
             </Swipe>
