@@ -25,7 +25,8 @@ export const setLanguage = (x) => {
                 fullItemsList: 'Full items list',
                 flashcards: 'Flashcards',
                 lottery: 'Lottery',
-                noResultSearch: 'No result, check in: '
+                noResultSearch: 'No result, check in: ',
+                searchOnThisPage: 'Search on this page'
             };
             break;
         default: //pl
@@ -52,7 +53,8 @@ export const setLanguage = (x) => {
                 fullItemsList: 'Pełna lista',
                 flashcards: 'Fiszki',
                 lottery: 'Losowanie',
-                noResultSearch: 'Bez rezulatatu, sprawdź w: '
+                noResultSearch: 'Bez rezulatatu, sprawdź w: ',
+                searchOnThisPage: 'Szukaj na tej stronie'
             };
     }
 };

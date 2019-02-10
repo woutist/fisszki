@@ -968,7 +968,7 @@ class FlashCards extends Component {
                                     <div className="search-on-page d-flex">
                                         <button onClick={() => window.find(this.state.searchWords)}>Search
                                         </button>
-                                        <input type="search" onChange={this.searchChange}
+                                        <input type="search" placeholder={translate.searchOnThisPage + "..."} onChange={this.searchChange}
                                                value={this.state.searchWords}
                                                onKeyPress={(e) => {
                                                    if (e.key === 'Enter') {
