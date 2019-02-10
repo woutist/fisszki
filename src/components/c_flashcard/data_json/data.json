@@ -3005,6 +3005,10 @@
         "_pl": "zima"
       },
       {
+        "_en": "autumn",
+        "_pl": "jesień"
+      },
+      {
         "_en": "skin",
         "_pl": "skóra"
       },
@@ -5241,7 +5245,7 @@
       },
       {
         "_pl": "Krzyczeć ",
-        "_en": "Yell / Yelled / YelledAkceptować "
+        "_en": "Yell / Yelled / Yelled "
       }
     ]
   },
@@ -8303,6 +8307,10 @@
       {
         "_en": "winter",
         "_pl": "zima"
+      },
+      {
+        "_en": "autumn",
+        "_pl": "jesień"
       },
       {
         "_en": "skin",

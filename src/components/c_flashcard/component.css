@@ -454,6 +454,16 @@ a {
       .module-flash-cards .main-header-wrap .main-header {
         max-width: 640px;
         margin: 0 auto; } }
+  .module-flash-cards .main-header-wrap.active-search-words-main .main-header .direction-lang-and-search input {
+    width: 100%; }
+  .module-flash-cards .main-header-wrap.active-search-words-main .main-header h1:after {
+    width: 2.1rem;
+    height: 2.1rem; }
+  .module-flash-cards .main-header-wrap.active-search-words-main .main-header .direction-lang-and-search .results-search {
+    overflow: visible;
+    width: 100%;
+    opacity: 1;
+    visibility: visible; }
   .module-flash-cards .main-header-wrap .main-header {
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     position: relative;
@@ -598,11 +608,13 @@ a {
           .module-flash-cards .main-header-wrap .main-header .main-nav .hamburger span:nth-child(3) {
             top: 26px; }
     .module-flash-cards .main-header-wrap .main-header h1 {
-      text-indent: -10000px; }
+      text-indent: -10000px;
+      margin-bottom: 12px; }
       .module-flash-cards .main-header-wrap .main-header h1:after {
         content: '';
         display: block;
         position: absolute;
+        transition: all 300ms ease-in-out;
         top: 3px;
         left: 5px;
         overflow: hidden;
@@ -612,17 +624,78 @@ a {
         background-position: 50%;
         width: 3.6rem;
         height: 3.6rem; }
-    .module-flash-cards .main-header-wrap .main-header .direction-lang {
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      text-align: center;
-      padding: 4px 10px;
-      margin-bottom: 0;
-      background-color: rgba(208, 119, 35, 0.8);
-      color: #fff; }
-      .module-flash-cards .main-header-wrap .main-header .direction-lang:hover {
-        opacity: 1; }
-      .module-flash-cards .main-header-wrap .main-header .direction-lang:active {
-        opacity: .8; }
+    .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search {
+      position: relative; }
+      .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search input, .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search button {
+        padding: 4px 10px;
+        margin: 0;
+        font-size: .8rem; }
+      .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search input {
+        width: 71px;
+        transition: all 300ms ease-in-out;
+        border: 1px solid #c85f23;
+        border-left: 0; }
+        .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search input::-webkit-input-placeholder {
+          font-family: fontello; }
+        .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search input::-moz-placeholder {
+          font-family: fontello; }
+        .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search input:-ms-input-placeholder {
+          font-family: fontello; }
+        .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search input:-moz-placeholder {
+          font-family: fontello; }
+      .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .direction-lang, .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .submit-search {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        text-align: center;
+        padding: 4px 10px;
+        white-space: nowrap;
+        margin-bottom: 0;
+        background-color: rgba(208, 119, 35, 0.8);
+        color: #fff; }
+        .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .direction-lang:hover, .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .submit-search:hover {
+          opacity: 1; }
+        .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .direction-lang:active, .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .submit-search:active {
+          opacity: .8; }
+      .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        width: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 200ms ease-in-out; }
+        .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside {
+          text-align: left;
+          max-height: 200px;
+          overflow: hidden;
+          overflow-y: auto;
+          border-bottom: 1px solid rgba(200, 95, 35, 0.6);
+          border-top: none; }
+          .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside > ul, .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside > div {
+            padding: 0 10px; }
+          .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside h3, .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside p {
+            margin-top: 0;
+            margin-bottom: 0; }
+          .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside a {
+            color: #338798;
+            font-weight: 600;
+            text-decoration: underline; }
+          .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside h3 {
+            font-size: .55rem;
+            background-color: rgba(0, 0, 0, 0.1);
+            padding-top: 5px;
+            padding-bottom: 5px;
+            color: rgba(0, 0, 0, 0.4); }
+          .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside p {
+            font-size: .7rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+            .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside p > span {
+              padding-top: 5px;
+              padding-bottom: 5px; }
+              .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside p > span:first-child {
+                border-right: 1px solid rgba(0, 0, 0, 0.1); }
     .module-flash-cards .main-header-wrap .main-header .top-menu {
       margin: 0;
       position: absolute;

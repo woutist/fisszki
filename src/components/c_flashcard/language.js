@@ -17,14 +17,15 @@ export const setLanguage = (x) => {
                 buttonRestartProgress: 'Restart progress',
                 buttonCloseApplication: 'Close application',
                 yourPlatform: 'Your platform',
-                polish: 'Polish',
-                english: 'English',
+                polish: 'Pl',
+                english: 'En',
                 abouts: 'Autor: semDesign<br />Contact: aleksander.nyczyk@gmail.com<br />Version: ',
                 gt: 'Google Translate',
                 privacy: 'Privacy',
                 fullItemsList: 'Full items list',
                 flashcards: 'Flashcards',
-                lottery: 'Lottery'
+                lottery: 'Lottery',
+                noResultSearch: 'No result, check in: '
             };
             break;
         default: //pl
@@ -43,14 +44,15 @@ export const setLanguage = (x) => {
                 buttonRestartProgress: 'Restartuj postęp',
                 buttonCloseApplication: 'Zamknij aplikacje',
                 yourPlatform: 'Twoja platforma',
-                polish: 'Polski',
-                english: 'Angielski',
+                polish: 'Pl',
+                english: 'En',
                 abouts: 'Autor: semDesign<br />Kontakt: aleksander.nyczyk@gmail.com<br />Wersja: ',
                 gt: 'Google Translator',
                 privacy: 'Prywatność',
                 fullItemsList: 'Pełna lista',
                 flashcards: 'Fiszki',
-                lottery: 'Losowanie'
+                lottery: 'Losowanie',
+                noResultSearch: 'Bez rezulatatu, sprawdź w: '
             };
     }
 };

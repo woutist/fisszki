@@ -300,6 +300,7 @@ class FlashCards extends Component {
         timeOutCloseCloud: true,
         version: '1.0.2',
         autoplayLoop: {},
+        searchTime: {},
         directionText: () => {
             return (this.global.flashCardDirection === 'e->p') ? translate.english + ' | ' + translate.polish : translate.polish + ' | ' + translate.english
         }
@@ -335,7 +336,9 @@ class FlashCards extends Component {
             autoPlayExercise: false,
             showListActice: false,
             searchBrowser: false,
-            searchWorlds: '',
+            searchWords: '',
+            searchWordsMain: '',
+            resultsSearch: null,
             langNameExercise: (j,l=this.global.lang) => {
                 switch (l) {
                     case 'en': return j._en;
@@ -486,6 +489,9 @@ class FlashCards extends Component {
         } else {
             this.setExercise(event,this.state.idExercise,this.state.idItem,'no-voice',this.global.idC,false,false,this.state.showListActice);
         }
+        if(this.state.resultsSearch !== null) {
+            this.searchChangeMain();
+        }
         if(event) event.preventDefault();
     };
     changeDirection = (event) => {
@@ -504,6 +510,9 @@ class FlashCards extends Component {
 
         if(this.state.idExercise > -1) {
             this.setExercise(event,this.state.idExercise,this.state.idItem,false,this.global.idC,false,false,this.state.showListActice);
+        }
+        if(this.state.resultsSearch !== null) {
+            this.searchChangeMain();
         }
         if(event) event.preventDefault();
 
@@ -792,7 +801,55 @@ class FlashCards extends Component {
     };
 
     searchChange = (event) => {
-        this.setState({searchWorlds: event.target.value});
+        this.setState({searchWords: event.target.value});
+    };
+
+    searchChangeMain = (event) => {
+        console.log(this.state.direction);
+        console.log(this.global.flashCardDirection);
+        if(event) this.setState({searchWordsMain: event.target.value});
+        clearTimeout(this.global.searchTime.first);
+        let idSearch = 1;
+        //if(this.state.searchWordsMain.length>0) {
+            this.global.searchTime.first = setTimeout(function (that) {
+                if(that.state.searchWordsMain.length === 0) {
+                    that.setState({
+                        resultsSearch: null
+                    });
+                } else {
+                    if(that.global.flashCardDirection === 'p->e') {
+                        that.setState({
+                            resultsSearch: dataJson.map(function (obj1) {
+                                let idResultSearchCat = 0;
+                                return obj1.data.map(function (obj2, i) {
+                                    //console.log(obj2._pl);
+                                    const obj2_pl = obj2._pl.toLowerCase(),
+                                        tssw = that.state.searchWordsMain.toLowerCase();
+                                    return ((obj2_pl.indexOf(tssw) > -1)?<li key={i}><span className={"d-none"}>{idResultSearchCat ++}</span>{(idResultSearchCat === 1) && <h3 className="row"><span className="col">{(that.global.lang==='pl')?(obj1.category._pl || 'Bez kategorii'):(obj1.category._en || 'No category')} - {(that.global.lang==='pl')?obj1.name._pl:obj1.name._en}</span></h3>}<p className="row" title={idSearch ++}><span className="col-6">{obj2._pl}</span><span className="col-6">{obj2._en}</span></p></li>:'')
+                                }, that)
+                            }, that)
+                        });
+                    } else {
+                        that.setState({
+                            resultsSearch: dataJson.map(function (obj1) {
+                                let idResultSearchCat = 0;
+                                return obj1.data.map(function (obj2, i) {
+                                    //console.log(obj2._pl);
+                                    const obj2_en = obj2._en.toLowerCase(),
+                                        tssw = that.state.searchWordsMain.toLowerCase();
+                                    return ((obj2_en.indexOf(tssw) > -1)?<li key={i}><span className={"d-none"}>{idResultSearchCat ++}</span>{(idResultSearchCat === 1) && <h3 className="row"><span className="col">{(that.global.lang==='pl')?(obj1.category._pl || 'Bez kategorii'):(obj1.category._en || 'No category')} - {(that.global.lang==='pl')?obj1.name._pl:obj1.name._en}</span></h3>}<p className="row" title={idSearch ++}><span className="col-6">{obj2._en}</span><span className="col-6">{obj2._pl}</span></p></li>:'')
+                                }, that)
+                            }, that)
+                        });
+                    }
+                    if(idSearch === 1) {
+                        that.setState({
+                            resultsSearch: ''
+                        });
+                    }
+                }
+            },600,this);
+        //}
     };
 
     componentWillMount(){
@@ -868,7 +925,7 @@ class FlashCards extends Component {
 
                     {this.state.preloader!=='delete' && <div className={this.state.preloader + " preloader d-flex justify-content-center align-items-center"}><span className="icon-new-logo"></span></div>}
 
-                    <div className={"main-header-wrap " + this.state.headerOnTop}>
+                    <div className={"main-header-wrap " + this.state.headerOnTop + (this.state.searchWordsMain && ' active-search-words-main')}>
                         <header className="main-header">
                             <nav className="main-nav">
                                 <button className={"bg-close d-block d-xl-none" + (this.state.navMobileActive && ' bg-close-show')}  onClick={() => this.navMobileActive()}><span className="icon-right-open"></span></button>
@@ -909,13 +966,13 @@ class FlashCards extends Component {
                                 {this.state.showListActice && (typeof window.find === 'function') &&
                                 <li className={"link-search d-flex " + (!this.state.searchBrowser || 'link-search-active')}>
                                     <div className="search-on-page d-flex">
-                                        <button onClick={() => window.find(this.state.searchWorlds)}>Search
+                                        <button onClick={() => window.find(this.state.searchWords)}>Search
                                         </button>
                                         <input type="search" onChange={this.searchChange}
-                                               value={this.state.searchWorlds}
+                                               value={this.state.searchWords}
                                                onKeyPress={(e) => {
                                                    if (e.key === 'Enter') {
-                                                       window.find(this.state.searchWorlds)
+                                                       window.find(this.state.searchWords)
                                                    }
                                                }}/>
                                     </div>
@@ -927,7 +984,24 @@ class FlashCards extends Component {
                                 <li className="flag-en"><a href={'#en'} className={this.state.activeEN} onClick={(e) => this.setLang(e,'en')}>EN</a></li>
                             </ul>
                             <h1 className="icon-new-logo"><span className="d-none">F</span>lashCrads</h1>
-                            <button className="direction-lang" onClick={(e) => this.changeDirection(e)}>{directionState[0]} <span className="icon-exchange"></span> {directionState[1]}</button>
+                            <div className={"direction-lang-and-search"}>
+                                <div className={"d-flex justify-content-center"}>
+                                    <button className="direction-lang" onClick={(e) => this.changeDirection(e)}>{directionState[0]} <span className="icon-exchange"></span> {directionState[1]}</button>
+                                    <input type="search" value={this.state.searchWordsMain} onChange={this.searchChangeMain} placeholder='&#xE816; ...' />
+                                </div>
+                                {(this.state.resultsSearch !== null) &&
+                                    <div className={"results-search"}>
+                                        <div className={"results-search-inside"}>
+                                        {
+                                            (this.state.resultsSearch) ?
+                                            <ul className="list-unstyled m-0">{this.state.resultsSearch}</ul>
+                                            :
+                                                <div className={"no-result-search"}><p className="row"><span className="col"><strong>{this.state.searchWordsMain}</strong> - {translate.noResultSearch} <a href={"#change-direction"} onClick={(e) => this.changeDirection(e)}>{directionState[1]} -> {directionState[0]}</a></span></p></div>
+                                        }
+                                        </div>
+                                    </div>
+                                }
+                            </div>
                         </header>
                     </div>
                     <div className={'main-list-exercise'}>
