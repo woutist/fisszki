@@ -816,11 +816,11 @@ class FlashCards extends Component {
                             <p className={"d-flex id-" + (idSearch ++)}>
                                 <span className={"col-6 d-flex"}>
                                     <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=" + ((lang==='p->e')?('pl&tl=en&text=' + obj2._pl):('en&tl=pl&text=' + obj2._en)))} className="icon-gt"></button>
-                                    <i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(lang==='p->e'?obj2._pl:obj2._en,"pl",that.state.online)}>{lang==='p->e'?obj2._pl:obj2._en}</i>
+                                    <i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(lang==='p->e'?obj2._pl:obj2._en,(lang==='p->e'?"pl":"en"),that.state.online)}>{lang==='p->e'?obj2._pl:obj2._en}</i>
                                 </span>
                                 <span className={"col-6 d-flex"}>
                                     <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=" + ((lang==='p->e')?('en&tl=pl&text=' + obj2._en):('pl&tl=en&text=' + obj2._pl)))} className="icon-gt"></button>
-                                    <i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(lang==='p->e'?obj2._en:obj2._pl,"en",that.state.online)}>{lang==='p->e'?obj2._en:obj2._pl}</i>
+                                    <i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(lang==='p->e'?obj2._en:obj2._pl,(lang==='p->e'?"en":"pl"),that.state.online)}>{lang==='p->e'?obj2._en:obj2._pl}</i>
                                 </span>
                             </p>
                         </li>:'')
