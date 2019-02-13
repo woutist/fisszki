@@ -297,12 +297,10 @@ class FlashCards extends Component {
         version: '1.0.2',
         autoplayLoop: {},
         searchTime: {},
+        soundSeparator: new Audio(SoundSeparator),
         directionText: () => {
             return (this.global.flashCardDirection === 'e->p') ? translate.english + ' | ' + translate.polish : translate.polish + ' | ' + translate.english
         }
-    };
-    sounds = {
-        separator: new Audio(SoundSeparator)
     };
     constructor(props){
         super(props);
@@ -346,15 +344,7 @@ class FlashCards extends Component {
         };
     };
     openHref = (e,href) => {
-
         window.open(href, '_system');
-        //navigator.app.loadUrl(href, { openExternal:true });
-
-        // if(detectionDevice){
-        //     navigator.app.loadUrl(href, { openExternal:true });
-        // } else {
-        //     window.open(href, '_system');
-        // }
         e.preventDefault();
     };
     arrayUnique = (arr) => {
@@ -536,7 +526,7 @@ class FlashCards extends Component {
     };
     timeoutAnim = (y,ap) => { // ap = autoplay
         if(this.state.enableAutoVoice) {
-            this.sounds.separator.play();
+            this.global.soundSeparator.play();
         }
         const timeOut = this.global.autoplayLoop.first?1400:300;
         setTimeout(function (that) {
