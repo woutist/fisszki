@@ -10,7 +10,7 @@ $color2: #000;
 $color3: #191919;
 $color4: #338798;
 $color5: #2c8548;
-$color6: #852824;
+$color6: transparent; //#7b4442; // #852824;
 $color7: #522d27;
 $color8: #974c49;
 $color9: #978753;
@@ -24,8 +24,11 @@ $color10: rgba(208,119,35,.8);
 $color11: #273898;
 $color12: #26984b;
 $color13: #aa2929;
-$color14: #d0ad2f;
+$color14: #bb9c2b;
 $color15: #983990;
+$color16: #298eaa;
+
+$color17: #852824;
 
 $color-google-transaltor: #4f8bf5;
 
@@ -40,6 +43,7 @@ $color-google-transaltor: #4f8bf5;
 .color-8 {color: $color8}
 .color-9 {color: $color9}
 .color-10 {color: $color10}
+.color-17 {color: $color17}
 
 
 :root {
@@ -355,7 +359,7 @@ a {
   }
   &.icon-random-card-2 {
     &:after {
-      background-color: $color13;
+      background-color: $color16;
     }
   }
   &.icon-random-card-3 {
@@ -594,6 +598,16 @@ a {
         visibility: visible;
       }
     }
+    &.search-words-main-slide-toggle {
+      .main-header .direction-lang-and-search .results-search .results-search-inside {
+        max-height: 0;
+      }
+      .main-header .direction-lang-and-search .submit-slide-toggle {
+        &:before {
+          transform: rotate(180deg);
+        }
+      }
+    }
 
     .main-header {
       //border-bottom: 1px solid rgba(0,0,0,.1);
@@ -748,7 +762,7 @@ a {
               opacity: .6;
             }
             &.rest-all {
-              background-color: #9e4a2c;
+              background-color: #aa0200; // #9e4a2c;
               color: $color1;
             }
             &.close-rotate {
@@ -860,7 +874,12 @@ a {
             font-family: fontello;
           }
         }
-        .direction-lang, .submit-search {
+        .submit-slide-toggle {
+          &:before {
+            transition: all 200ms ease-in-out;
+          }
+        }
+        .direction-lang, .submit-search, .submit-slide-toggle {
           border: 1px solid rgba(0, 0, 0, .2);
           text-align: center;
           //position: absolute;
@@ -897,10 +916,16 @@ a {
           .results-search-inside {
             text-align: left;
             max-height: 200px;
+            transition: all 300ms ease-in-out;
             overflow: hidden;
             overflow-y: auto;
             border-bottom: 1px solid rgba(200, 95, 35, 0.6);
             border-top: none;
+            .no-result-search {
+              p {
+                padding: 5px 10px;
+              }
+            }
             > ul, > div {
               padding: 0 10px;
             }
@@ -923,11 +948,34 @@ a {
             p {
               font-size: .7rem;
               border-bottom: 1px solid rgba(0,0,0,.1);
+              margin: 0 -10px;
               > span {
-                padding-top: 5px;
-                padding-bottom: 5px;
+                padding: 0;
+                i {
+                  cursor: pointer;
+                  font-style: normal;
+                  display: flex;
+                  align-items: center;
+                  width: 100%;
+                  padding: 0 5px 0 2.5px;
+                  &:active,
+                  &:hover {
+                    background-color: $color10;
+                    color: $color1;
+                  }
+                  &:before {
+                    opacity: .6;
+                  }
+                }
                 &:first-child {
                   border-right: 1px solid rgba(0,0,0,.1);
+                }
+                > button {
+                  padding-right: 2.5px;
+                  &:active,
+                  &:hover {
+                    color: $color10;
+                  }
                 }
               }
             }
@@ -957,7 +1005,7 @@ a {
               bottom: 3px;
               display: block;
               width: 2px;
-              background-color: $color6;
+              background-color: $color17;
               opacity: .5;
               transform: rotate(45deg);
               z-index: 1;
@@ -1100,6 +1148,17 @@ a {
             overflow: hidden;
           }
         }
+
+        &.category-0 {
+          background-color: $color6;
+          &+ul {
+            .button-list {
+              color: $color1;
+              background-color: $color6;
+            }
+          }
+        }
+
         &.category-1 {
           background-color: $color11;
           &+ul {
@@ -1110,11 +1169,11 @@ a {
           }
         }
         &.category-2 {
-          background-color: $color13;
+          background-color: $color16;
           &+ul {
             .button-list {
               color: $color1;
-              background-color: $color13;
+              background-color: $color16;
             }
           }
         }
@@ -1164,6 +1223,10 @@ a {
           font-weight: 600;
           opacity: .7;
           line-height: 1.6;
+          min-height: 76px;
+          @media (max-width: $md) {
+            min-height: 66px;
+          }
           i {
             font-size: 0.85rem;
             display: block;
@@ -1188,15 +1251,16 @@ a {
             padding: 4px;
           }
           .button-reset {
-            background-color: rgba(158, 74, 44, .8);
+            background-color: #aa0200; //rgba(158, 74, 44, .8);
             color: $color1;
             margin-bottom: 4px;
             position: relative;
             .reset-confirm {
               position: absolute;
-              background-color: rgba(158, 74, 44, .8);
+              background-color: #aa0200; //rgba(158, 74, 44, .8);
               width: 100px;
               padding: 4px;
+              overflow: hidden;
               visibility: hidden;
               opacity: 0;
               top: 0;
@@ -1215,7 +1279,7 @@ a {
                 background-color: rgba(0, 0, 0, 0.1);
               }
             }
-            &:hover {
+            &:focus {
               opacity: 1;
               .reset-confirm {
                 opacity: 1;
@@ -1267,7 +1331,7 @@ a {
       &.button-i-dont-know {
         width: calc(50% - 5px);
         margin-left: 5px;
-        background-color: $color6;
+        background-color: $color17;
         border-bottom-right-radius: 8px;
         border-top-right-radius: 8px;
       }
@@ -1362,7 +1426,7 @@ a {
     background-color: rgba(255,255,255,.5);
     position: relative;
     .button-close-exercise {
-      background-color: $color6;
+      background-color: $color17;
       position: absolute;
       line-height: .8;
       top: 0;
@@ -1646,7 +1710,7 @@ a {
             bottom: 3px;
             display: block;
             width: 2px;
-            background-color: $color6;
+            background-color: $color17;
             transform: rotate(45deg);
           }
         }

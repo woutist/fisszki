@@ -25,7 +25,7 @@ class Congratulation extends Component {
             <div className={'congratulation-info ' + centerClass}>
                 <h2>{translate.infoCongratulation}<span className="icon-award"></span></h2>
                 <h3>"{that.state.langNameExercise(obj.name)}"</h3>
-                <p className="text-center">{translate.textSummary}:  <span className="icon-up color-5">{obj.excludeID.length}/{obj.data.length} = {Math.ceil(obj.excludeID.length*100/obj.data.length)}%</span> - <span className="icon-down color-6">{obj.dontKnowClick}</span></p>
+                <p className="text-center">{translate.textSummary}:  <span className="icon-up color-5">{obj.excludeID.length}/{obj.data.length} = {Math.ceil(obj.excludeID.length*100/obj.data.length)}%</span> - <span className="icon-down color-17">{obj.dontKnowClick}</span></p>
                 <button className="border-content-bottom" onClick={() => {
                     that.clearExercise();
                     that.setState({classHideNavButtons: ''})
@@ -92,7 +92,7 @@ class Exercises extends Component {
                                 {that.state.langNameExercise(o.category) && that.state.langNameExercise(o.category) + ' / '}{that.state.langNameExercise(o.name)} <span className="icon-right"></span>&nbsp;<a href="#full-items-list" onClick={(e) => thisComponent.fullItemsList(e,that,idC)}>{translate.fullItemsList}</a>
                             </h2>
                             <p>
-                                {that.state.online?'online':'offline'} | <span className="icon-up color-5">{o.excludeID.length}/{o.data.length} = {Math.ceil(o.excludeID.length*100/o.data.length)}%</span> - <span className="icon-down color-6">{o.dontKnowClick}</span>
+                                {that.state.online?'online':'offline'} | <span className="icon-up color-5">{o.excludeID.length}/{o.data.length} = {Math.ceil(o.excludeID.length*100/o.data.length)}%</span> - <span className="icon-down color-17">{o.dontKnowClick}</span>
                             </p>
                             {description?<p>{Parser(description)}</p>:''}
 
@@ -232,7 +232,7 @@ class ExercisesList extends Component {
                     {that.state.langNameExercise(o.category) && that.state.langNameExercise(o.category) + ' / '}{that.state.langNameExercise(o.name)} <span className="icon-right"></span> <a href="#flashcards" onClick={(e) => this.flashcards(e,that,idC)}>{translate.flashcards}</a>
                 </h2>
                 <p>
-                    {that.state.online?'online':'offline'} | <span className="icon-up color-5">{o.excludeID.length}/{o.data.length} = {Math.ceil(o.excludeID.length*100/o.data.length)}%</span> - <span className="icon-down color-6">{o.dontKnowClick}</span>
+                    {that.state.online?'online':'offline'} | <span className="icon-up color-5">{o.excludeID.length}/{o.data.length} = {Math.ceil(o.excludeID.length*100/o.data.length)}%</span> - <span className="icon-down color-17">{o.dontKnowClick}</span>
                 </p>
                 {description?<p>{Parser(description)}</p>:''}
                 <div className={"table-wrap"}>
@@ -338,7 +338,9 @@ class FlashCards extends Component {
             searchBrowser: false,
             searchWords: '',
             searchWordsMain: '',
+            searchWordsMainActive: false,
             resultsSearch: null,
+            searchWordsMainSlideToggle: '',
             langNameExercise: (j,l=this.global.lang) => {
                 switch (l) {
                     case 'en': return j._en;
@@ -414,6 +416,7 @@ class FlashCards extends Component {
             }
         }
     };
+
     setExercise = (event,idE,idForce,voiceOff,idC,closeCloude,ap,showList) => {
         let temp_idE, o = dataJson[idE];
         this.global.idC = idC;
@@ -443,6 +446,8 @@ class FlashCards extends Component {
                 });
             },5000,this);
         }
+
+        window.scrollTo(0,0);
         if(event) event.preventDefault();
     };
     clearExercise = event => {
@@ -701,6 +706,7 @@ class FlashCards extends Component {
         }
     };
     checkOnline = (event,checkOnline) => {
+        this.searchChangeMain();
         this.setState({
             online: checkOnline
         });
@@ -804,6 +810,129 @@ class FlashCards extends Component {
         this.setState({searchWords: event.target.value});
     };
 
+    searchWordsMainSlideToggle = (event) => {
+        this.setState({searchWordsMainSlideToggle: this.state.searchWordsMainSlideToggle?'':'search-words-main-slide-toggle'})
+    };
+
+    getClosest = (el, nameClass) => {
+        while (el.parentElement) {
+            el = el.parentElement;
+            //console.log(el.parentElement.className);
+            if (el.parentElement.className === nameClass) {
+                return true;
+            } else {
+                if(el.parentElement.getAttribute("id")==="root") {
+                    return false;
+                }
+            }
+        }
+        return false;
+    };
+
+    searchWordsMainLayoutSlideToggle = (event) => {
+        const falseOrTrue = this.getClosest(event.target,'direction-lang-and-search');
+        //console.log(event.target);
+        //console.log(this.getClosest(event.target,'direction-lang-and-search'));
+        if(!falseOrTrue){
+            this.setState({searchWordsMainSlideToggle: 'search-words-main-slide-toggle'});
+        }
+    };
+
+    // searchResult = (lang,that,idSearch) => {
+    //     console.log('lang: ' + lang + ' | that: ' + that + ' | idSearch: ' + idSearch );
+    //     that.setState({
+    //         resultsSearch: dataJson.map(function (obj1) {
+    //             let idResultSearchCat = 0;
+    //             return obj1.data.map(function (obj2, i) {
+    //                 let obj2_lang_original_1, obj2_lang_original_2, obj1_name_lang_1, obj1_name_lang_2 ,obj1_category_lang_1, obj1_category_lang_2;
+    //                 if(lang==='pl') {
+    //                     obj2_lang_original_1 = obj2._pl;
+    //                     obj2_lang_original_2 = obj2._en;
+    //                     obj1_name_lang_1 = obj1.name._pl;
+    //                     obj1_name_lang_2 = obj1.name._en;
+    //                     obj1_category_lang_1 = obj1.category._pl;
+    //                     obj1_category_lang_2 = obj1.category._en;
+    //                 } else {
+    //                     obj2_lang_original_1 = obj2._en;
+    //                     obj2_lang_original_2 = obj2._pl;
+    //                     obj1_name_lang_1 = obj1.name._en;
+    //                     obj1_name_lang_2 = obj1.name._pl;
+    //                     obj1_category_lang_1 = obj1.category._en;
+    //                     obj1_category_lang_2 = obj1.category._pl;
+    //                 }
+    //                 const obj2_lang = obj2_lang_original_1.toLowerCase(),
+    //                     tssw = that.state.searchWordsMain.toLowerCase();
+    //                 if(obj2_lang.indexOf(tssw) > -1) {
+    //                     if(lang==='pl') {
+    //                         obj2_lang_original_1 = obj2._pl;
+    //                         obj2_lang_original_2 = obj2._en;
+    //                         obj1_name_lang_1 = obj1.name._pl;
+    //                         obj1_name_lang_2 = obj1.name._en;
+    //                         obj1_category_lang_1 = obj1.category._pl;
+    //                         obj1_category_lang_2 = obj1.category._en;
+    //                     } else {
+    //                         obj2_lang_original_1 = obj2._en;
+    //                         obj2_lang_original_2 = obj2._pl;
+    //                         obj1_name_lang_1 = obj1.name._en;
+    //                         obj1_name_lang_2 = obj1.name._pl;
+    //                         obj1_category_lang_1 = obj1.category._en;
+    //                         obj1_category_lang_2 = obj1.category._pl;
+    //                     }
+    //                 }
+    //                 return ((obj2_lang.indexOf(tssw) > -1)?
+    //                     <li key={i}>
+    //                         <span className={"d-none"}>{idResultSearchCat ++}</span>
+    //                         {(idResultSearchCat === 1) && <h3 className="row"><span className="col">{(that.global.lang==='pl')?(obj1_category_lang_1 || 'Bez kategorii'):(obj1_category_lang_2 || 'No category')} - {(that.global.lang==='pl')?obj1_name_lang_1:obj1_name_lang_2}</span></h3>}
+    //                         <p className={"d-flex id-" + (idSearch ++)}>
+    //                             <span className={"col-6 d-flex"}><button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj2_lang_original_1)} className="icon-gt"></button><i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(obj2_lang_original_1,"pl",that.state.online)}>{obj2_lang_original_1}</i></span>
+    //                             <span className={"col-6 d-flex"}><button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj2_lang_original_2)} className="icon-gt"></button><i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(obj2_lang_original_2,"en",that.state.online)}>{obj2_lang_original_2}</i></span>
+    //                         </p>
+    //                     </li>:'')
+    //             }, that)
+    //         }, that)
+    //     });
+    //     if(idSearch === 1) {
+    //         that.setState({
+    //             resultsSearch: ''
+    //         });
+    //     }
+    // };
+
+    searchResult = (lang,that,idSearch) => {
+        console.log('lang: ' + lang + ' | that: ' + that + ' | idSearch: ' + idSearch );
+        that.setState({
+            resultsSearch: dataJson.map(function (obj1) {
+                let idResultSearchCat = 0;
+                return obj1.data.map(function (obj2, i) {
+                    //console.log(obj2._pl);
+                    const obj2_lang = (lang==='p->e')?obj2._pl.toLowerCase():obj2._en.toLowerCase(),
+                        tssw = that.state.searchWordsMain.toLowerCase();
+                    return ((obj2_lang.indexOf(tssw) > -1)?
+                        <li key={i}>
+                            <span className={"d-none"}>{idResultSearchCat ++}</span>
+                            {(idResultSearchCat === 1) && <h3 className="row"><span className="col">No category - {lang==='p->e'?obj1.name._pl:obj1.name._en}</span></h3>}
+                            <p className={"d-flex id-" + (idSearch ++)}>
+                                <span className={"col-6 d-flex"}>
+                                    <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=" + ((lang==='p->e')?('pl&tl=en&text=' + obj2._pl):('en&tl=pl&text=' + obj2._en)))} className="icon-gt"></button>
+                                    <i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(lang==='p->e'?obj2._pl:obj2._en,"pl",that.state.online)}>{lang==='p->e'?obj2._pl:obj2._en}</i>
+                                </span>
+                                <span className={"col-6 d-flex"}>
+                                    <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=" + ((lang==='p->e')?('en&tl=pl&text=' + obj2._en):('pl&tl=en&text=' + obj2._pl)))} className="icon-gt"></button>
+                                    <i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(lang==='p->e'?obj2._en:obj2._pl,"en",that.state.online)}>{lang==='p->e'?obj2._en:obj2._pl}</i>
+                                </span>
+                            </p>
+                        </li>:'')
+                }, that)
+            }, that)
+        });
+        if(idSearch === 1) {
+            that.setState({
+                resultsSearch: ''
+            });
+        }
+    };
+
+
     searchChangeMain = (event) => {
         console.log(this.state.direction);
         console.log(this.global.flashCardDirection);
@@ -817,38 +946,58 @@ class FlashCards extends Component {
                         resultsSearch: null
                     });
                 } else {
-                    if(that.global.flashCardDirection === 'p->e') {
-                        that.setState({
-                            resultsSearch: dataJson.map(function (obj1) {
-                                let idResultSearchCat = 0;
-                                return obj1.data.map(function (obj2, i) {
-                                    //console.log(obj2._pl);
-                                    const obj2_pl = obj2._pl.toLowerCase(),
-                                        tssw = that.state.searchWordsMain.toLowerCase();
-                                    return ((obj2_pl.indexOf(tssw) > -1)?<li key={i}><span className={"d-none"}>{idResultSearchCat ++}</span>{(idResultSearchCat === 1) && <h3 className="row"><span className="col">{(that.global.lang==='pl')?(obj1.category._pl || 'Bez kategorii'):(obj1.category._en || 'No category')} - {(that.global.lang==='pl')?obj1.name._pl:obj1.name._en}</span></h3>}<p className="row" title={idSearch ++}><span className="col-6">{obj2._pl}</span><span className="col-6">{obj2._en}</span></p></li>:'')
-                                }, that)
-                            }, that)
-                        });
-                    } else {
-                        that.setState({
-                            resultsSearch: dataJson.map(function (obj1) {
-                                let idResultSearchCat = 0;
-                                return obj1.data.map(function (obj2, i) {
-                                    //console.log(obj2._pl);
-                                    const obj2_en = obj2._en.toLowerCase(),
-                                        tssw = that.state.searchWordsMain.toLowerCase();
-                                    return ((obj2_en.indexOf(tssw) > -1)?<li key={i}><span className={"d-none"}>{idResultSearchCat ++}</span>{(idResultSearchCat === 1) && <h3 className="row"><span className="col">{(that.global.lang==='pl')?(obj1.category._pl || 'Bez kategorii'):(obj1.category._en || 'No category')} - {(that.global.lang==='pl')?obj1.name._pl:obj1.name._en}</span></h3>}<p className="row" title={idSearch ++}><span className="col-6">{obj2._en}</span><span className="col-6">{obj2._pl}</span></p></li>:'')
-                                }, that)
-                            }, that)
-                        });
-                    }
-                    if(idSearch === 1) {
-                        that.setState({
-                            resultsSearch: ''
-                        });
-                    }
+                    that.searchResult(that.global.flashCardDirection,that,idSearch);
+                    // if(that.global.flashCardDirection === 'p->e') {
+                    //     that.searchResult(that.global.flashCardDirection,that,idSearch);
+                    //     // that.setState({
+                    //     //     resultsSearch: dataJson.map(function (obj1) {
+                    //     //         let idResultSearchCat = 0;
+                    //     //         return obj1.data.map(function (obj2, i) {
+                    //     //             //console.log(obj2._pl);
+                    //     //             const obj2_lang = obj2._pl.toLowerCase(),
+                    //     //                 tssw = that.state.searchWordsMain.toLowerCase();
+                    //     //             return ((obj2_lang.indexOf(tssw) > -1)?
+                    //     //                 <li key={i}>
+                    //     //                     <span className={"d-none"}>{idResultSearchCat ++}</span>
+                    //     //                     {(idResultSearchCat === 1) && <h3 className="row"><span className="col">{(that.global.lang==='pl')?(obj1.category._pl || 'Bez kategorii'):(obj1.category._en || 'No category')} - {(that.global.lang==='pl')?obj1.name._pl:obj1.name._en}</span></h3>}
+                    //     //                     <p className={"d-flex id-" + (idSearch ++)}>
+                    //     //                         <span className={"col-6 d-flex"}><button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj2._pl)} className="icon-gt"></button><i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(obj2._pl,"pl",that.state.online)}>{obj2._pl}</i></span>
+                    //     //                         <span className={"col-6 d-flex"}><button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj2._en)} className="icon-gt"></button><i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(obj2._en,"en",that.state.online)}>{obj2._en}</i></span>
+                    //     //                     </p>
+                    //     //                 </li>:'')
+                    //     //         }, that)
+                    //     //     }, that)
+                    //     // });
+                    // } else {
+                    //     that.searchResult('en',that,idSearch);
+                    //     // that.setState({
+                    //     //     resultsSearch: dataJson.map(function (obj1) {
+                    //     //         let idResultSearchCat = 0;
+                    //     //         return obj1.data.map(function (obj2, i) {
+                    //     //             //console.log(obj2._pl);
+                    //     //             const obj2_lang = obj2._en.toLowerCase(),
+                    //     //                 tssw = that.state.searchWordsMain.toLowerCase();
+                    //     //             return ((obj2_lang.indexOf(tssw) > -1)?
+                    //     //                 <li key={i}>
+                    //     //                     <span className={"d-none"}>{idResultSearchCat ++}</span>
+                    //     //                     {(idResultSearchCat === 1) && <h3 className="row"><span className="col">{(that.global.lang==='pl')?(obj1.category._pl || 'Bez kategorii'):(obj1.category._en || 'No category')} - {(that.global.lang==='pl')?obj1.name._pl:obj1.name._en}</span></h3>}
+                    //     //                     <p className={"d-flex id-" + (idSearch ++)}>
+                    //     //                         <span className={"col-6 d-flex"}><button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj2._en)} className="icon-gt"></button><i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(obj2._en,"en",that.state.online)}>{obj2._en}</i></span>
+                    //     //                         <span className={"col-6 d-flex"}><button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj2._pl)} className="icon-gt"></button><i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(obj2._pl,"pl",that.state.online)}>{obj2._pl}</i></span>
+                    //     //                     </p>
+                    //     //                 </li>
+                    //     //                 :'')
+                    //     //         }, that)
+                    //     //     }, that)
+                    //     // });
+                    // }
+                    // // if(idSearch === 1) {
+                    // //     that.setState({
+                    // //         resultsSearch: ''
+                    // //     });
+                    // // }
                 }
-            },600,this);
+            },400,this);
         //}
     };
 
@@ -883,6 +1032,7 @@ class FlashCards extends Component {
             }
         }, false);
     };
+
     componentDidMount = () => {
         const that = this;
         window.onscroll = function() {
@@ -902,9 +1052,14 @@ class FlashCards extends Component {
                 }
             }
         };
+
+        // first category active
+        this.global.categoryActive[0] = true;
     };
+
     render() {
         const { title } = this.props;
+        //const Aux = props => props.children;
 
         this.uniqueCategory(dataJson,false);
         let directionState = this.state.direction.split("|");
@@ -915,9 +1070,15 @@ class FlashCards extends Component {
                 onSwipeMove={this.onSwipeMove}
                 onSwipeEnd={this.onSwipeEnd}
 
+                ref={ e => this.container = e }
+
                 // onSwipeRight={() => this.navMobileActive(true)}
             >
-                <div className={'module-flash-cards ' + this.state.classHideOrShowMainPartsPage + ' ' + this.state.navMobileActive + ' ' + this.state.rotateDisable + ' ' + this.state.enableAutoVoice}>
+                <div
+                    onClick={(e) => this.searchWordsMainLayoutSlideToggle(e)}
+                    className={'module-flash-cards ' + this.state.classHideOrShowMainPartsPage + ' ' + this.state.navMobileActive + ' ' + this.state.rotateDisable + ' ' + this.state.enableAutoVoice}
+
+                >
                     <div className="bg"></div>
                     <div className="bg bg-1"></div>
                     <div className="bg bg-2"></div>
@@ -925,7 +1086,7 @@ class FlashCards extends Component {
 
                     {this.state.preloader!=='delete' && <div className={this.state.preloader + " preloader d-flex justify-content-center align-items-center"}><span className="icon-new-logo"></span></div>}
 
-                    <div className={"main-header-wrap " + this.state.headerOnTop + (this.state.searchWordsMain && ' active-search-words-main')}>
+                    <div className={"main-header-wrap " + this.state.headerOnTop + " " + this.state.searchWordsMainSlideToggle + ((this.state.searchWordsMain || this.state.searchWordsMainActive)?' active-search-words-main':'')}>
                         <header className="main-header">
                             <nav className="main-nav">
                                 <button className={"bg-close d-block d-xl-none" + (this.state.navMobileActive && ' bg-close-show')}  onClick={() => this.navMobileActive()}><span className="icon-right-open"></span></button>
@@ -987,20 +1148,36 @@ class FlashCards extends Component {
                             <div className={"direction-lang-and-search"}>
                                 <div className={"d-flex justify-content-center"}>
                                     <button className="direction-lang" onClick={(e) => this.changeDirection(e)}>{directionState[0]} <span className="icon-exchange"></span> {directionState[1]}</button>
-                                    <input type="search" value={this.state.searchWordsMain} onChange={this.searchChangeMain} placeholder='&#xE816; ...' />
-                                </div>
-                                {(this.state.resultsSearch !== null) &&
-                                    <div className={"results-search"}>
-                                        <div className={"results-search-inside"}>
-                                        {
-                                            (this.state.resultsSearch) ?
-                                            <ul className="list-unstyled m-0">{this.state.resultsSearch}</ul>
-                                            :
-                                                <div className={"no-result-search"}><p className="row"><span className="col"><strong>{this.state.searchWordsMain}</strong> - {translate.noResultSearch} <a href={"#change-direction"} onClick={(e) => this.changeDirection(e)}>{directionState[1]} -> {directionState[0]}</a></span></p></div>
+                                    <input
+                                        type="search"
+                                        value={this.state.searchWordsMain}
+                                        onChange={this.searchChangeMain}
+                                        placeholder='&#xE816; ...'
+
+                                        onFocus={() => {
+                                                if(this.state.searchWordsMainSlideToggle){this.setState({searchWordsMainSlideToggle: ''});};
+                                                this.setState({searchWordsMainActive:true});
+                                            }
                                         }
+                                        onBlur={() => this.setState({searchWordsMainActive:false})}
+                                    />
+                                    {(this.state.resultsSearch !== null) && <button onClick={(e) => this.searchWordsMainSlideToggle(e)} className={"submit-slide-toggle icon-up-open"}></button>}
+                                </div>
+                                <div className={"results-search"}>
+                                {(this.state.resultsSearch !== null) &&
+
+                                        <div className={"results-search-inside"}>
+                                            <div className={"no-result-search"}>
+                                                <p><span><strong>{this.state.searchWordsMain}</strong> - {(!this.state.resultsSearch)?translate.noResultSearch:translate.changeDirectionLanguage}<a href={"#change-direction"} onClick={(e) => this.changeDirection(e)}>{directionState[1]} -> {directionState[0]}</a></span></p></div>
+                                                {
+                                                    (this.state.resultsSearch) ?
+                                                        <ul className="list-unstyled m-0">{this.state.resultsSearch}</ul>
+                                                    :''
+                                                }
                                         </div>
-                                    </div>
+
                                 }
+                                </div>
                             </div>
                         </header>
                     </div>
@@ -1018,7 +1195,7 @@ class FlashCards extends Component {
                                                     background: 'linear-gradient(to right, #2c8548 0%,#2c8548 ' + percent + '%,#974c49 ' + percent + '%,#974c49 100%)'
                                                 },
                                                 stylePercent2 = {
-                                                    background: 'linear-gradient(to right, rgba(44,133,72,.2) 0%,rgba(44,133,72,.2) ' + percent + '%,rgba(255,255,255,0) ' + percent + '%,rgba(255,255,255,0) 100%), rgba(255,255,255,.6)',
+                                                    background: 'linear-gradient(to right, rgba(44,133,72,.2) 0%,rgba(44,133,72,.2) ' + percent + '%,rgba(255,255,255,0) ' + percent + '%,rgba(255,255,255,0) 100%), rgba(255,255,255,.8)',
                                                 };
 
                                             percent = isNaN(percent)?'blank':percent+'%';
@@ -1031,7 +1208,7 @@ class FlashCards extends Component {
                                                             <span className="percent-pro" style={stylePercent1}></span>
                                                             <span className={"icon-random-card icon-random-card-" + j}></span>
                                                             {obj.excludeID.length === obj.data.length && <span className="icon-ok"></span>}
-                                                            {this.state.langNameExercise(obj.name)} <i><span className="icon-up color-5">{obj.excludeID.length}/{obj.data.length} = {percent}</span> - <span className="icon-down color-6">{obj.dontKnowClick}</span></i>
+                                                            {this.state.langNameExercise(obj.name)} <i><span className="icon-up color-5">{obj.excludeID.length}/{obj.data.length} = {percent}</span> - <span className="icon-down color-17">{obj.dontKnowClick}</span></i>
                                                         </a>
                                                         <div className="buttons-option d-flex flex-column">
                                                             {(obj.excludeID.length !== 0 || obj.dontKnowClick !== 0) &&

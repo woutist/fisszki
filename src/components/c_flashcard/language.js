@@ -25,8 +25,9 @@ export const setLanguage = (x) => {
                 fullItemsList: 'Full items list',
                 flashcards: 'Flashcards',
                 lottery: 'Lottery',
-                noResultSearch: 'No result, check in: ',
-                searchOnThisPage: 'Search on this page'
+                noResultSearch: 'no result, check in: ',
+                searchOnThisPage: 'Search on this page',
+                changeDirectionLanguage: 'you can change the direction of translation: '
             };
             break;
         default: //pl
@@ -53,8 +54,9 @@ export const setLanguage = (x) => {
                 fullItemsList: 'Pełna lista',
                 flashcards: 'Fiszki',
                 lottery: 'Losowanie',
-                noResultSearch: 'Bez rezulatatu, sprawdź w: ',
-                searchOnThisPage: 'Szukaj na tej stronie'
+                noResultSearch: 'bez rezulatatu, sprawdź w: ',
+                searchOnThisPage: 'Szukaj na tej stronie',
+                changeDirectionLanguage: 'możesz zmienić kierunek tłumaczenia: '
             };
     }
 };

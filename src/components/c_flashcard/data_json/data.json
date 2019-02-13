@@ -1,12 +1,12 @@
 [
   {
     "category": {
-      "_pl": "",
-      "_en": ""
+      "_pl": "Popularne",
+      "_en": "Popular"
     },
     "name": {
-      "_pl": "1001 popularnych słów (całość)",
-      "_en": "1001 popular words (all)"
+      "_pl": "1000 popularnych słów",
+      "_en": "1000 popular words"
     },
     "data": [
       {
@@ -127,7 +127,7 @@
       },
       {
         "_en": "share",
-        "_pl": "dzielić"
+        "_pl": "dzielić, udostępniać"
       },
       {
         "_en": "print",
@@ -363,7 +363,7 @@
       },
       {
         "_en": "cotton",
-        "_pl": "wełna"
+        "_pl": "bawełna"
       },
       {
         "_en": "meant",
@@ -2569,7 +2569,7 @@
       },
       {
         "_en": "industry",
-        "_pl": "przemysł"
+        "_pl": "przemysł, branża"
       },
       {
         "_en": "vary",
@@ -3086,7 +3086,7 @@
       },
       {
         "_en": "edge",
-        "_pl": "skraj"
+        "_pl": "krawędź, skraj"
       },
       {
         "_en": "mouth",
@@ -3750,7 +3750,7 @@
       },
       {
         "_en": "provide",
-        "_pl": "dostarczać "
+        "_pl": "dostarczać, zapewniać"
       },
       {
         "_en": "match",
@@ -4051,6 +4051,30 @@
       {
         "_en": "arrive",
         "_pl": "przybywać"
+      }
+    ]
+  },
+  {
+    "category": {
+      "_pl": "Popularne",
+      "_en": "Popular"
+    },
+    "name": {
+      "_pl": "Inne popularne słowa",
+      "_en": "Other popular words"
+    },
+    "data": [
+      {
+        "_en": "neither",
+        "_pl": "ani, 'ani jeden, ani drugi', żaden"
+      },
+      {
+        "_en": "fortunately",
+        "_pl": "na szczęście"
+      },
+      {
+        "_en": "unfortunately",
+        "_pl": "niestety"
       },
       {
         "_en": "triangle",
@@ -4059,17 +4083,131 @@
       {
         "_en": "master",
         "_pl": "mistrz"
+      },
+
+      {
+        "_en": "loop",
+        "_pl": "pętla"
+      },
+
+      {
+        "_en": "maintain",
+        "_pl": "utrzymywać"
+      },
+      {
+        "_en": "responsible",
+        "_pl": "odpowiedzialny"
+      },
+      {
+        "_en": "responsive",
+        "_pl": "czuły"
+      },
+      {
+        "_en": "goal",
+        "_pl": "cel, gol"
+      },
+      {
+        "_en": "adequate",
+        "_pl": "odpowiedni"
+      },
+      {
+        "_en": "performance",
+        "_pl": "wydajność"
+      },
+      {
+        "_en": "performer",
+        "_pl": "wykonawca"
+      },
+      {
+        "_en": "review",
+        "_pl": "przejrzeć, recenzja"
+      },
+      {
+        "_en": "extensively",
+        "_pl": "rozlegle, obszernie, ekstensywnie"
+      },
+      {
+        "_en": "deliver",
+        "_pl": "dostarczyć, przekazać, wygłaszać"
+      },
+      {
+        "_en": "analysis",
+        "_pl": "analiza"
+      },
+      {
+        "_en": "tutorial",
+        "_pl": "seminarium, instruktaż, samouczek"
+      },
+      {
+        "_en": "impact",
+        "_pl": "wpływ, uderzenie"
+      },
+      {
+        "_en": "focus",
+        "_pl": "skupiać"
+      },
+      {
+        "_en": "tight",
+        "_pl": "mocno, szczelnie"
+      },
+      {
+        "_en": "excellent",
+        "_pl": "doskonały"
+      },
+      {
+        "_en": "customer",
+        "_pl": "klient"
+      },
+      {
+        "_en": "custom",
+        "_pl": "zwyczaj"
+      },
+      {
+        "_en": "exceptional",
+        "_pl": "wyjątkowy"
+      },
+      {
+        "_en": "opportunity",
+        "_pl": "okazja, możliwość, sposobność"
+      },
+      {
+        "_en": "brand",
+        "_pl": "marka"
       }
     ]
   },
   {
     "category": {
-      "_pl": "",
-      "_en": ""
+      "_pl": "Popularne",
+      "_en": "Popular"
     },
     "name": {
-      "_pl": "Czasowniki nieregularne (całość)",
-      "_en": "Irregular verbs (all)"
+      "_pl": "Popularne frazy",
+      "_en": "Popular phrases"
+    },
+    "data": [
+      {
+        "_pl": "Być na bieżąco",
+        "_en": "Keep up to date"
+      },
+      {
+        "_pl": "(Mocno) Zgrany zespół",
+        "_en": "A Tight knit team"
+      },
+      {
+        "_pl": "Wzajemnie",
+        "_en": "Each other"
+      }
+    ]
+  },
+  {
+    "category": {
+      "_pl": "Popularne",
+      "_en": "Popular"
+    },
+    "name": {
+      "_pl": "Czasowniki nieregularne",
+      "_en": "Irregular verbs"
     },
     "data": [
       {
@@ -4711,12 +4849,12 @@
 
   {
     "category": {
-      "_pl": "",
-      "_en": ""
+      "_pl": "Popularne",
+      "_en": "Popular"
     },
     "name": {
-      "_pl": "Czasowniki regularne (całość)",
-      "_en": "Regular verbs (all)"
+      "_pl": "Czasowniki regularne",
+      "_en": "Regular verbs"
     },
     "data": [
       {
@@ -5252,8 +5390,8 @@
 
   {
     "category": {
-      "_pl": "1001 popularnych słów - ćwiczenia",
-      "_en": "1001 popular words - exercises"
+      "_pl": "Popularne słowa - ćwiczenia",
+      "_en": "Popular words - exercises"
     },
     "name": {
       "_pl": "Ćwiczenie 1",
@@ -5378,7 +5516,7 @@
       },
       {
         "_en": "share",
-        "_pl": "dzielić"
+        "_pl": "dzielić, udostępniać"
       },
       {
         "_en": "print",
@@ -5614,7 +5752,7 @@
       },
       {
         "_en": "cotton",
-        "_pl": "wełna"
+        "_pl": "bawełna"
       },
       {
         "_en": "meant",
@@ -5664,8 +5802,8 @@
 
   {
     "category": {
-      "_pl": "1001 popularnych słów - ćwiczenia",
-      "_en": "1001 popular words - exercises"
+      "_pl": "Popularne słowa - ćwiczenia",
+      "_en": "Popular words - exercises"
     },
     "name": {
       "_pl": "Ćwiczenie 2",
@@ -6076,8 +6214,8 @@
 
   {
     "category": {
-      "_pl": "1001 popularnych słów - ćwiczenia",
-      "_en": "1001 popular words - exercises"
+      "_pl": "Popularne słowa - ćwiczenia",
+      "_en": "Popular words - exercises"
     },
     "name": {
       "_pl": "Ćwiczenie 3",
@@ -6491,8 +6629,8 @@
 
   {
     "category": {
-      "_pl": "1001 popularnych słów - ćwiczenia",
-      "_en": "1001 popular words - exercises"
+      "_pl": "Popularne słowa - ćwiczenia",
+      "_en": "Popular words - exercises"
     },
     "name": {
       "_pl": "Ćwiczenie 4",
@@ -6903,8 +7041,8 @@
 
   {
     "category": {
-      "_pl": "1001 popularnych słów - ćwiczenia",
-      "_en": "1001 popular words - exercises"
+      "_pl": "Popularne słowa - ćwiczenia",
+      "_en": "Popular words - exercises"
     },
     "name": {
       "_pl": "Ćwiczenie 5",
@@ -7319,8 +7457,8 @@
 
   {
     "category": {
-      "_pl": "1001 popularnych słów - ćwiczenia",
-      "_en": "1001 popular words - exercises"
+      "_pl": "Popularne słowa - ćwiczenia",
+      "_en": "Popular words - exercises"
     },
     "name": {
       "_pl": "Ćwiczenie 6",
@@ -7731,8 +7869,8 @@
 
   {
     "category": {
-      "_pl": "1001 popularnych słów - ćwiczenia",
-      "_en": "1001 popular words - exercises"
+      "_pl": "Popularne słowa - ćwiczenia",
+      "_en": "Popular words - exercises"
     },
     "name": {
       "_pl": "Ćwiczenie 7",
@@ -7865,7 +8003,7 @@
       },
       {
         "_en": "industry",
-        "_pl": "przemysł"
+        "_pl": "przemysł, branża"
       },
       {
         "_en": "vary",
@@ -8144,8 +8282,8 @@
 
   {
     "category": {
-      "_pl": "1001 popularnych słów - ćwiczenia",
-      "_en": "1001 popular words - exercises"
+      "_pl": "Popularne słowa - ćwiczenia",
+      "_en": "Popular words - exercises"
     },
     "name": {
       "_pl": "Ćwiczenie 8",
@@ -8390,7 +8528,7 @@
       },
       {
         "_en": "edge",
-        "_pl": "skraj"
+        "_pl": "krawędź, skraj"
       },
       {
         "_en": "mouth",
@@ -8560,8 +8698,8 @@
 
   {
     "category": {
-      "_pl": "1001 popularnych słów - ćwiczenia",
-      "_en": "1001 popular words - exercises"
+      "_pl": "Popularne słowa - ćwiczenia",
+      "_en": "Popular words - exercises"
     },
     "name": {
       "_pl": "Ćwiczenie 9",
@@ -8973,8 +9111,8 @@
 
   {
     "category": {
-      "_pl": "1001 popularnych słów - ćwiczenia",
-      "_en": "1001 popular words - exercises"
+      "_pl": "Popularne słowa - ćwiczenia",
+      "_en": "Popular words - exercises"
     },
     "name": {
       "_pl": "Ćwiczenie 10",
@@ -9071,7 +9209,7 @@
       },
       {
         "_en": "provide",
-        "_pl": "dostarczać "
+        "_pl": "dostarczać, zapewniać "
       },
       {
         "_en": "match",
@@ -10620,7 +10758,6 @@
       }
     ]
   },
-
 
   {
     "category": {

@@ -131,15 +131,29 @@ class ExampleForm extends React.Component {
         // }));
         event.preventDefault();
     };
-
+    nameInput = () => {
+        console.log("text focus");
+    };
+    componentDidMount = () => {
+        this.nameInput.focus();
+    };
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <h2>{this.props.title}</h2>
-                <div className="show">{this.state.val}</div>
-                <input placeholder={this.state.placeholder} onChange={this.handleChange} value={this.state.draft} />
-                <input type="submit" value="Submit" />
-            </form>
+            <div>
+                <input
+                    defaultValue="Won't focus"
+                />
+                <input
+                    ref={(input) => { this.nameInput = input; }}
+                    defaultValue="will focus"
+                />
+                <form onSubmit={this.handleSubmit}>
+                    <h2>{this.props.title}</h2>
+                    <div className="show">{this.state.val}</div>
+                    <input placeholder={this.state.placeholder} onChange={this.handleChange} value={this.state.draft} />
+                    <input type="submit" value="Submit" />
+                </form>
+            </div>
         );
     }
 }
@@ -153,6 +167,7 @@ class Examples extends Component {
                 <OneToDo title='Class OneToDo' val="placeholder..." />
                 <ExampleForm title='Class ExampleForm' />
                 <ArraryExample title='Class ArraryExample' />
+
             </div>
         );
     }
