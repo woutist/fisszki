@@ -96,10 +96,6 @@ class Exercises extends Component {
                             </p>
                             {description?<p>{Parser(description)}</p>:''}
 
-                            {/*<div className={"autoplay-loop-nav"}>*/}
-                                {/*<button className={"w-100" + (thisComponent.state.autoPlayExercise2?' d-none':'')} onClick={() => {thisComponent.setState({autoPlayExercise2: true}); that.global.autoplayLoop.first = true; that.autoplayLoopNav('play')}}>Play <span className="icon-play"></span></button>*/}
-                                {/*<button className={"w-100" + (thisComponent.state.autoPlayExercise2?'':' d-none')} onClick={() => {thisComponent.setState({autoPlayExercise2: false}); that.autoplayLoopNav('stop')}}>Stop <span className="icon-stop"></span></button>*/}
-                            {/*</div>*/}
                             <div className="flip-container">
                                 {
                                     flashCardDirection === 'p->e' ?
@@ -433,8 +429,7 @@ class FlashCards extends Component {
             classCheckOutMore: '',
             classHideNavButtons: (o.excludeID.length === o.data.length || showList)?'d-none':'',
             classHideOrShowMainPartsPage: 'hide-flash-cards-show-list-exercise',
-            callObj: this.layer(o, this, idC, idE, ap, temp_idE, voiceOff, showList),
-            //callObj: (o.excludeID.length === o.data.length)?<Congratulation that={this} idC={idC} ide={idE} />:<Exercises autoplay={ap} o={o} that={this} idC={idC} idItem={temp_idE} flashCardDirection={this.global.flashCardDirection} checkvoice={voiceOff} voice={this.state.enableAutoVoice} />
+            callObj: this.layer(o, this, idC, idE, ap, temp_idE, voiceOff, showList)
         });
         if(closeCloude) {
             this.setState({
@@ -460,7 +455,6 @@ class FlashCards extends Component {
             showListActice: false
         });
         clearTimeout(this.global.timeOutCloseCloud);
-        //this.autoplayLoopNav("stop");
         if(event) event.preventDefault();
     };
 
@@ -656,11 +650,6 @@ class FlashCards extends Component {
     };
     showCategory = (index) => {
         let tmp = this.global.categoryActive;
-        // if(tmp[index]) {
-        //     tmp[index] = false;
-        // } else {
-        //     tmp[index] = true;
-        // }
         tmp[index] = !tmp[index];
         this.setState({categoryActive: tmp });
         //console.log(tmp[index]);
@@ -676,8 +665,6 @@ class FlashCards extends Component {
         })
     };
     enableAutoVoice = (event) => {
-        // this.autoplayLoopNav("stop");
-        // this.setExercise(event,this.state.idExercise,this.state.idItem,'no-voice',this.global.idC,false,false,true);
         if(this.state.enableAutoVoice) {
             removeCookies('enable_auto_voice_cookie');
         } else {
@@ -739,13 +726,6 @@ class FlashCards extends Component {
                         moveMenu: x,
                         mainNavInsetTransitionStop: 'main-nav-inset-transition-stop'
                     });
-                    // if(!this.flTemporary) {
-                    //     this.flTemporary = true;
-                    //     setTimeout(function (that) {
-                    //         that.flTemporary = false;
-                    //     },100,this);
-                    // }
-
                 } else {
 
                     this.setState({
@@ -757,14 +737,6 @@ class FlashCards extends Component {
                 }
             }
         } else {
-            // if(this.flTemporary) {
-            //     this.setState({
-            //         moveMenu: this.widthMenu.current.offsetWidth,
-            //         mainNavInsetTransitionStop:'',
-            //         navMobileActive: '',
-            //     });
-            //     this.global.fSwipe = false;
-            // }
             if(this.state.navMobileActive !== '') {
                 this.setState({
                     moveMenu: 0,
@@ -838,66 +810,6 @@ class FlashCards extends Component {
         }
     };
 
-    // searchResult = (lang,that,idSearch) => {
-    //     console.log('lang: ' + lang + ' | that: ' + that + ' | idSearch: ' + idSearch );
-    //     that.setState({
-    //         resultsSearch: dataJson.map(function (obj1) {
-    //             let idResultSearchCat = 0;
-    //             return obj1.data.map(function (obj2, i) {
-    //                 let obj2_lang_original_1, obj2_lang_original_2, obj1_name_lang_1, obj1_name_lang_2 ,obj1_category_lang_1, obj1_category_lang_2;
-    //                 if(lang==='pl') {
-    //                     obj2_lang_original_1 = obj2._pl;
-    //                     obj2_lang_original_2 = obj2._en;
-    //                     obj1_name_lang_1 = obj1.name._pl;
-    //                     obj1_name_lang_2 = obj1.name._en;
-    //                     obj1_category_lang_1 = obj1.category._pl;
-    //                     obj1_category_lang_2 = obj1.category._en;
-    //                 } else {
-    //                     obj2_lang_original_1 = obj2._en;
-    //                     obj2_lang_original_2 = obj2._pl;
-    //                     obj1_name_lang_1 = obj1.name._en;
-    //                     obj1_name_lang_2 = obj1.name._pl;
-    //                     obj1_category_lang_1 = obj1.category._en;
-    //                     obj1_category_lang_2 = obj1.category._pl;
-    //                 }
-    //                 const obj2_lang = obj2_lang_original_1.toLowerCase(),
-    //                     tssw = that.state.searchWordsMain.toLowerCase();
-    //                 if(obj2_lang.indexOf(tssw) > -1) {
-    //                     if(lang==='pl') {
-    //                         obj2_lang_original_1 = obj2._pl;
-    //                         obj2_lang_original_2 = obj2._en;
-    //                         obj1_name_lang_1 = obj1.name._pl;
-    //                         obj1_name_lang_2 = obj1.name._en;
-    //                         obj1_category_lang_1 = obj1.category._pl;
-    //                         obj1_category_lang_2 = obj1.category._en;
-    //                     } else {
-    //                         obj2_lang_original_1 = obj2._en;
-    //                         obj2_lang_original_2 = obj2._pl;
-    //                         obj1_name_lang_1 = obj1.name._en;
-    //                         obj1_name_lang_2 = obj1.name._pl;
-    //                         obj1_category_lang_1 = obj1.category._en;
-    //                         obj1_category_lang_2 = obj1.category._pl;
-    //                     }
-    //                 }
-    //                 return ((obj2_lang.indexOf(tssw) > -1)?
-    //                     <li key={i}>
-    //                         <span className={"d-none"}>{idResultSearchCat ++}</span>
-    //                         {(idResultSearchCat === 1) && <h3 className="row"><span className="col">{(that.global.lang==='pl')?(obj1_category_lang_1 || 'Bez kategorii'):(obj1_category_lang_2 || 'No category')} - {(that.global.lang==='pl')?obj1_name_lang_1:obj1_name_lang_2}</span></h3>}
-    //                         <p className={"d-flex id-" + (idSearch ++)}>
-    //                             <span className={"col-6 d-flex"}><button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj2_lang_original_1)} className="icon-gt"></button><i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(obj2_lang_original_1,"pl",that.state.online)}>{obj2_lang_original_1}</i></span>
-    //                             <span className={"col-6 d-flex"}><button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj2_lang_original_2)} className="icon-gt"></button><i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(obj2_lang_original_2,"en",that.state.online)}>{obj2_lang_original_2}</i></span>
-    //                         </p>
-    //                     </li>:'')
-    //             }, that)
-    //         }, that)
-    //     });
-    //     if(idSearch === 1) {
-    //         that.setState({
-    //             resultsSearch: ''
-    //         });
-    //     }
-    // };
-
     searchResult = (lang,that,idSearch) => {
         console.log('lang: ' + lang + ' | that: ' + that + ' | idSearch: ' + idSearch );
         that.setState({
@@ -932,7 +844,6 @@ class FlashCards extends Component {
         }
     };
 
-
     searchChangeMain = (event) => {
         console.log(this.state.direction);
         console.log(this.global.flashCardDirection);
@@ -947,55 +858,6 @@ class FlashCards extends Component {
                     });
                 } else {
                     that.searchResult(that.global.flashCardDirection,that,idSearch);
-                    // if(that.global.flashCardDirection === 'p->e') {
-                    //     that.searchResult(that.global.flashCardDirection,that,idSearch);
-                    //     // that.setState({
-                    //     //     resultsSearch: dataJson.map(function (obj1) {
-                    //     //         let idResultSearchCat = 0;
-                    //     //         return obj1.data.map(function (obj2, i) {
-                    //     //             //console.log(obj2._pl);
-                    //     //             const obj2_lang = obj2._pl.toLowerCase(),
-                    //     //                 tssw = that.state.searchWordsMain.toLowerCase();
-                    //     //             return ((obj2_lang.indexOf(tssw) > -1)?
-                    //     //                 <li key={i}>
-                    //     //                     <span className={"d-none"}>{idResultSearchCat ++}</span>
-                    //     //                     {(idResultSearchCat === 1) && <h3 className="row"><span className="col">{(that.global.lang==='pl')?(obj1.category._pl || 'Bez kategorii'):(obj1.category._en || 'No category')} - {(that.global.lang==='pl')?obj1.name._pl:obj1.name._en}</span></h3>}
-                    //     //                     <p className={"d-flex id-" + (idSearch ++)}>
-                    //     //                         <span className={"col-6 d-flex"}><button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj2._pl)} className="icon-gt"></button><i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(obj2._pl,"pl",that.state.online)}>{obj2._pl}</i></span>
-                    //     //                         <span className={"col-6 d-flex"}><button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj2._en)} className="icon-gt"></button><i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(obj2._en,"en",that.state.online)}>{obj2._en}</i></span>
-                    //     //                     </p>
-                    //     //                 </li>:'')
-                    //     //         }, that)
-                    //     //     }, that)
-                    //     // });
-                    // } else {
-                    //     that.searchResult('en',that,idSearch);
-                    //     // that.setState({
-                    //     //     resultsSearch: dataJson.map(function (obj1) {
-                    //     //         let idResultSearchCat = 0;
-                    //     //         return obj1.data.map(function (obj2, i) {
-                    //     //             //console.log(obj2._pl);
-                    //     //             const obj2_lang = obj2._en.toLowerCase(),
-                    //     //                 tssw = that.state.searchWordsMain.toLowerCase();
-                    //     //             return ((obj2_lang.indexOf(tssw) > -1)?
-                    //     //                 <li key={i}>
-                    //     //                     <span className={"d-none"}>{idResultSearchCat ++}</span>
-                    //     //                     {(idResultSearchCat === 1) && <h3 className="row"><span className="col">{(that.global.lang==='pl')?(obj1.category._pl || 'Bez kategorii'):(obj1.category._en || 'No category')} - {(that.global.lang==='pl')?obj1.name._pl:obj1.name._en}</span></h3>}
-                    //     //                     <p className={"d-flex id-" + (idSearch ++)}>
-                    //     //                         <span className={"col-6 d-flex"}><button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj2._en)} className="icon-gt"></button><i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(obj2._en,"en",that.state.online)}>{obj2._en}</i></span>
-                    //     //                         <span className={"col-6 d-flex"}><button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj2._pl)} className="icon-gt"></button><i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(obj2._pl,"pl",that.state.online)}>{obj2._pl}</i></span>
-                    //     //                     </p>
-                    //     //                 </li>
-                    //     //                 :'')
-                    //     //         }, that)
-                    //     //     }, that)
-                    //     // });
-                    // }
-                    // // if(idSearch === 1) {
-                    // //     that.setState({
-                    // //         resultsSearch: ''
-                    // //     });
-                    // // }
                 }
             },400,this);
         //}
