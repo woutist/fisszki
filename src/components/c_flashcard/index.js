@@ -50,18 +50,17 @@ class Congratulation extends Component {
  * Sub component Exercises
  */
 class Exercises extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            autoPlayExercise2: false
-        };
-    };
+    // constructor(props){
+    //     super(props);
+    //     this.state = {
+    //     };
+    // };
     fullItemsList = (e,that,idC) => {
         that.setState({showListActice:true});
-        that.setExercise(e,that.state.idExercise,false,false,idC,false,false,true);
+        that.setExercise(e,that.state.idExercise,false,false,idC,false,true);
     }
     render() {
-        const { o, that, voice, idItem, checkvoice, flashCardDirection, idC, autoplay } = this.props;
+        const { o, that, voice, idItem, checkvoice, flashCardDirection, idC} = this.props;
         const thisComponent = this;
         return (
             // eslint-disable-next-line
@@ -74,9 +73,9 @@ class Exercises extends Component {
 
                     if(voice && checkvoice !== 'no-voice') {
                         if(flashCardDirection === 'p->e') {
-                            that.translateVoice(obj._pl, "pl",that.state.online,autoplay);
+                            that.translateVoice(obj._pl, "pl",that.state.online);
                         } else {
-                            that.translateVoice(obj._en, "en",that.state.online,autoplay);
+                            that.translateVoice(obj._en, "en",that.state.online);
                         }
                     }
 
@@ -255,56 +254,28 @@ class ExercisesList extends Component {
     }
 }
 
-
-
 /**
  * Main component FlashCards
  */
 class FlashCards extends Component {
-    startCookiesFlashCardDirection = () => {
-        if(getCookies('flashcards_cookie') == null) {
-            setCookies('flashcards_cookie', 'p->e');
-            return 'p->e';
-        } else {
-            if(getCookies('flashcards_cookie') === 'p->e') {
-                return 'p->e';
-            } else {
-                return 'e->p';
-            }
-        }
-    };
-    startCookiesLang = () => {
-        if(getCookies('language_cookie') == null) {
-            setCookies('language_cookie', 'pl');
-            //cookies.set('language_cookie', 'pl', { path: '/', maxAge: cookiesMaxAge });
-            return 'pl';
-        } else {
-            if(getCookies('language_cookie') === 'pl') {
-                return 'pl';
-            } else {
-                return 'en';
-            }
-        }
-    };
-    global = {
-        uniqueCategoryArray: [],
-        categoryActive: [],
-        flashCardDirection: this.startCookiesFlashCardDirection(),
-        lang: this.startCookiesLang(),
-        idC: false,
-        fSwipe: false,
-        timeOutCloseCloud: true,
-        version: '1.0.2',
-        autoplayLoop: {},
-        searchTime: {},
-        soundSeparator: new Audio(SoundSeparator),
-        directionText: () => {
-            return (this.global.flashCardDirection === 'e->p') ? translate.english + ' | ' + translate.polish : translate.polish + ' | ' + translate.english
-        }
-    };
     constructor(props){
         super(props);
         this.widthMenu = React.createRef();
+        this.global = {
+            uniqueCategoryArray: [],
+            categoryActive: [],
+            flashCardDirection: this.startCookiesFlashCardDirection(),
+            lang: this.startCookiesLang(),
+            idC: false,
+            fSwipe: false,
+            timeOutCloseCloud: true,
+            version: '1.0.2',
+            searchTime: {},
+            soundSeparator: new Audio(SoundSeparator),
+            directionText: () => {
+                return (this.global.flashCardDirection === 'e->p') ? translate.english + ' | ' + translate.polish : translate.polish + ' | ' + translate.english
+            }
+        };
         this.state = {
             callObj: '',
             idExercise: -1,
@@ -327,7 +298,6 @@ class FlashCards extends Component {
             closeCloude: '',
             showAbouts: '',
             headerOnTop: '',
-            autoPlayExercise: false,
             showListActice: false,
             searchBrowser: false,
             searchWords: '',
@@ -343,67 +313,76 @@ class FlashCards extends Component {
             }
         };
     };
+
+    startCookiesFlashCardDirection = () => {
+        if(getCookies('flashcards_cookie') == null) {
+            setCookies('flashcards_cookie', 'p->e');
+            return 'p->e';
+        } else {
+            if(getCookies('flashcards_cookie') === 'p->e') {
+                return 'p->e';
+            } else {
+                return 'e->p';
+            }
+        }
+    };
+
+    startCookiesLang = () => {
+        if(getCookies('language_cookie') == null) {
+            setCookies('language_cookie', 'pl');
+            return 'pl';
+        } else {
+            if(getCookies('language_cookie') === 'pl') {
+                return 'pl';
+            } else {
+                return 'en';
+            }
+        }
+    };
+
     openHref = (e,href) => {
         window.open(href, '_system');
         e.preventDefault();
     };
+
     arrayUnique = (arr) => {
         return arr.filter(function(item, index){
             return arr.indexOf(item) >= index;
         });
     };
-    translateVoiceOption = (autoplay, timeoutSeparator) => {
-        if(this.global.autoplayLoop.first) {
-            if(autoplay==='autoplay'){
-                this.global.autoplayLoop.third = setTimeout(function (that) {
-                    that.autoplayLoopNav('play-next');
-                },timeoutSeparator,this);
-            } else if(autoplay==='autoplay-check'){
-                this.global.autoplayLoop.third = setTimeout(function (that) {
-                    that.autoplayLoopNav('play');
-                },timeoutSeparator,this);
-            }
-        }
-    };
-    translateVoice = (text,lang,active,autoplay) => {
-        //console.log('autoplay: ' + autoplay);
+
+    translateVoice = (text,lang,active) => {
         if(active && typeof window.responsiveVoice === 'object') {
-            const timeoutSeparator = 600;
             switch (lang) {
                 case 'pl':
-                    window.responsiveVoice.speak(text, "Polish Female",{onend: () => {
-                            this.translateVoiceOption(autoplay, timeoutSeparator);
-                        }});
+                    window.responsiveVoice.speak(text, "Polish Female");
                     break;
                 case 'en':
-                    window.responsiveVoice.speak(text, "UK English Male",{onend: () => {
-                            this.translateVoiceOption(autoplay, timeoutSeparator);
-                        }});
+                    window.responsiveVoice.speak(text, "UK English Male");
                     break;
                 default:
-                    window.responsiveVoice.speak(text, "UK English Male",{onend: () => {
-                            this.translateVoiceOption(autoplay, timeoutSeparator);
-                        }});
+                    window.responsiveVoice.speak(text, "UK English Male");
             }
         } 
     };
-    layer = (o,that,idC, idE, ap, temp_idE, voiceOff, showList) => {
+
+    layer = (o,that,idC, idE, temp_idE, voiceOff, showList) => {
         if(showList) {
             this.setState({
                showListActice: true
             });
-            return <ExercisesList autoplay={ap} o={o} that={that} idC={idC} idItem={temp_idE} flashCardDirection={that.global.flashCardDirection} checkvoice={voiceOff} voice={that.state.enableAutoVoice} />;
+            return <ExercisesList o={o} that={that} idC={idC} idItem={temp_idE} flashCardDirection={that.global.flashCardDirection} checkvoice={voiceOff} voice={that.state.enableAutoVoice} />;
 
         } else {
             if(o.excludeID.length === o.data.length) {
                 return <Congratulation that={that} idC={idC} ide={idE} />;
             } else {
-                return <Exercises autoplay={ap} o={o} that={that} idC={idC} idItem={temp_idE} flashCardDirection={that.global.flashCardDirection} checkvoice={voiceOff} voice={that.state.enableAutoVoice} />;
+                return <Exercises o={o} that={that} idC={idC} idItem={temp_idE} flashCardDirection={that.global.flashCardDirection} checkvoice={voiceOff} voice={that.state.enableAutoVoice} />;
             }
         }
     };
 
-    setExercise = (event,idE,idForce,voiceOff,idC,closeCloude,ap,showList) => {
+    setExercise = (event,idE,idForce,voiceOff,idC,closeCloude,showList) => {
         let temp_idE, o = dataJson[idE];
         this.global.idC = idC;
         if(idForce) {
@@ -419,7 +398,7 @@ class FlashCards extends Component {
             classCheckOutMore: '',
             classHideNavButtons: (o.excludeID.length === o.data.length || showList)?'d-none':'',
             classHideOrShowMainPartsPage: 'hide-flash-cards-show-list-exercise',
-            callObj: this.layer(o, this, idC, idE, ap, temp_idE, voiceOff, showList)
+            callObj: this.layer(o, this, idC, idE, temp_idE, voiceOff, showList)
         });
         if(closeCloude) {
             this.setState({
@@ -435,6 +414,7 @@ class FlashCards extends Component {
         window.scrollTo(0,0);
         if(event) event.preventDefault();
     };
+
     clearExercise = event => {
         this.setState({
             idExercise: -1,
@@ -476,13 +456,14 @@ class FlashCards extends Component {
                 callObj: (this.state.idItem === false && this.state.idExercise !== -1)?<Congratulation that={this} ide={this.state.idExercise} />:''
             });
         } else {
-            this.setExercise(event,this.state.idExercise,this.state.idItem,'no-voice',this.global.idC,false,false,this.state.showListActice);
+            this.setExercise(event,this.state.idExercise,this.state.idItem,'no-voice',this.global.idC,false,this.state.showListActice);
         }
         if(this.state.resultsSearch !== null) {
             this.searchChangeMain();
         }
         if(event) event.preventDefault();
     };
+
     changeDirection = (event) => {
         if(this.global.flashCardDirection === 'p->e') {
             setCookies('flashcards_cookie', 'e->p');
@@ -498,7 +479,7 @@ class FlashCards extends Component {
         });
 
         if(this.state.idExercise > -1) {
-            this.setExercise(event,this.state.idExercise,this.state.idItem,false,this.global.idC,false,false,this.state.showListActice);
+            this.setExercise(event,this.state.idExercise,this.state.idItem,false,this.global.idC,false,this.state.showListActice);
         }
         if(this.state.resultsSearch !== null) {
             this.searchChangeMain();
@@ -506,8 +487,8 @@ class FlashCards extends Component {
         if(event) event.preventDefault();
 
     };
-    randomItem = (ol) => {
 
+    randomItem = (ol) => {
         let unique, randomNr;
         if(typeof ol.excludeID === 'object' && ol.excludeID.length > 0){
             if(ol.excludeID.length < ol.data.length) {
@@ -524,17 +505,17 @@ class FlashCards extends Component {
         return randomNr;
 
     };
-    timeoutAnim = (y,ap) => { // ap = autoplay
+
+    timeoutAnim = (y) => {
         if(this.state.enableAutoVoice) {
             this.global.soundSeparator.play();
         }
-        const timeOut = this.global.autoplayLoop.first?1400:300;
         setTimeout(function (that) {
-            that.setExercise(null,y,false,false,that.global.idC,false,ap);
+            that.setExercise(null,y,false,false,that.global.idC,false);
             that.setState({classCheckOutMore: ''});
-            //alert(x);
-        },timeOut,this);
+        },300,this);
     };
+
     iKnow = (idI) => {
         if(this.state.idExercise > -1) {
             const o = dataJson;
@@ -555,6 +536,7 @@ class FlashCards extends Component {
 
         }
     };
+
     iDontKnow = () => {
         if(this.state.idExercise > -1) {
             const o = dataJson;
@@ -564,16 +546,17 @@ class FlashCards extends Component {
             setTimeout(this.timeoutAnim,400,this.state.idExercise);
         }
     };
-    checkOut = (autoplay) => {
+
+    checkOut = () => {
         //console.log(idExercise + ' / ' + idItem + ' / ' + flashCardDirection); // left = polish, right = english
         //console.log(dataJson[idExercise].data[idItem]._en);
         if(this.state.enableAutoVoice) {
             setTimeout(function (that) {
                 if(that.global.flashCardDirection === 'p->e') {
-                    that.translateVoice(dataJson[that.state.idExercise].data[that.state.idItem]._en, "en",that.state.online,autoplay);
+                    that.translateVoice(dataJson[that.state.idExercise].data[that.state.idItem]._en, "en",that.state.online);
 
                 } else {
-                    that.translateVoice(dataJson[that.state.idExercise].data[that.state.idItem]._pl, "pl",that.state.online,autoplay);
+                    that.translateVoice(dataJson[that.state.idExercise].data[that.state.idItem]._pl, "pl",that.state.online);
                 }
             }, 300,this);
         }
@@ -582,28 +565,7 @@ class FlashCards extends Component {
             classCheckOutMore: 'check-out-card-more'
         })
     };
-    autoplayLoopNav = (prop) => {
-        let that = this;
-        if(this.state.enableAutoVoice) {
-            if(prop==="play") {
-                that.checkOut('autoplay');
-                this.setState({
-                    autoPlayExercise: true
-                })
-            } else if(prop==='play-next') {
-                that.global.autoplayLoop.second = setTimeout(that.timeoutAnim,400,that.state.idExercise,(that.global.autoplayLoop.first?'autoplay-check':false));
-            }else if(prop==="stop") {
-                that.global.autoplayLoop.first = false;
-                clearTimeout(that.global.autoplayLoop.second);
-                clearTimeout(that.global.autoplayLoop.third);
-                this.setState({
-                    autoPlayExercise: false
-                })
-            }
-        }
 
-
-    };
     removeCookieExerciseId = (event,ide,o) => {
         removeCookies('obj_exercise_cookie_'+ide);
         removeCookies('obj_exercise_cookie_dk_click_'+ide);
@@ -614,6 +576,7 @@ class FlashCards extends Component {
         }
         if(event) event.preventDefault();
     };
+
     removeCookieExerciseAll = () => {
         // eslint-disable-next-line
         dataJson.map(function (obj, i) {
@@ -624,6 +587,7 @@ class FlashCards extends Component {
         });
         this.setState({});
     };
+
     uniqueCategory = (jo,ifFirstLoad) => {
         this.global.uniqueCategoryArray = [];
 
@@ -638,12 +602,14 @@ class FlashCards extends Component {
             this.global.categoryActive.push(ifFirstLoad?false:tmp[i]);
         }
     };
+
     showCategory = (index) => {
         let tmp = this.global.categoryActive;
         tmp[index] = !tmp[index];
         this.setState({categoryActive: tmp });
         //console.log(tmp[index]);
     };
+
     disableRotate = () => {
         if(this.state.rotateDisable) {
             removeCookies('disable_rotate_cookie');
@@ -654,6 +620,7 @@ class FlashCards extends Component {
             rotateDisable: (this.state.rotateDisable)?'':'rotate-disable'
         })
     };
+
     enableAutoVoice = (event) => {
         if(this.state.enableAutoVoice) {
             removeCookies('enable_auto_voice_cookie');
@@ -665,6 +632,7 @@ class FlashCards extends Component {
         });
         if(event) event.preventDefault();
     };
+
     preloaderFun = () => {
         setTimeout(function (that) {
             that.setState({
@@ -682,6 +650,7 @@ class FlashCards extends Component {
             navigator.app.exitApp();
         }
     };
+
     checkOnline = (event,checkOnline) => {
         this.searchChangeMain();
         this.setState({
@@ -689,7 +658,7 @@ class FlashCards extends Component {
         });
         if(this.state.idExercise > -1) {
             // this.state.showListActice
-            this.setExercise(event, this.state.idExercise, this.state.idItem,'no-voice',this.global.idC,false,false,this.state.showListActice);
+            this.setExercise(event, this.state.idExercise, this.state.idItem,'no-voice',this.global.idC,false,this.state.showListActice);
             //this.setExercise(e,i,false,false,j,false,false,'show-list')
         }
     };
@@ -701,7 +670,6 @@ class FlashCards extends Component {
         });
     };
 
-    // flTemporary = false;
     onSwipeStart = () => {
         if(this.state.navMobileActive) {
             this.global.fSwipe = true;
@@ -1066,7 +1034,7 @@ class FlashCards extends Component {
                                                             {(obj.excludeID.length !== 0 || obj.dontKnowClick !== 0) &&
                                                                 <button className={'border-content-bottom button-reset '} title="Reset"><span className="reset-confirm" onClick={() => this.removeCookieExerciseId(false,i,obj)}>Reset</span><span className="icon-trash-empty" ></span></button>
                                                             }
-                                                            <button className={'border-content-bottom button-list'} title="Show list" onClick={(e) => this.setExercise(e,i,false,false,j,false,false,'show-list')}><span className="icon-clipboard"></span></button>
+                                                            <button className={'border-content-bottom button-list'} title="Show list" onClick={(e) => this.setExercise(e,i,false,false,j,false,'show-list')}><span className="icon-clipboard"></span></button>
                                                         </div>
 
                                                     </li>
@@ -1088,8 +1056,7 @@ class FlashCards extends Component {
                             {this.state.callObj}
                         </div>
 
-                        <nav className={'nav-buttons ' + this.state.classHideNavButtons + (this.state.autoPlayExercise?' disable-opacity':'')}>
-                            <span className={"icon-lock" + (this.state.autoPlayExercise?'':' d-none')}></span>
+                        <nav className={'nav-buttons ' + this.state.classHideNavButtons}>
                             {!this.state.classCheckOutMore?<button className="button-check-out" onClick={() => this.checkOut()}>{translate.buttonCheckOut}</button>:<button className="button-check-out">{translate.lottery}...</button>}
                             <button title={translate.buttonIKnow} className="button-i-know" onClick={() => this.iKnow(this.state.idItem)}><span className="icon-ok"></span></button>
                             <button title={translate.buttonIDontKnow} className="button-i-dont-know" onClick={() => this.iDontKnow()}><span className="icon-cancel"></span></button>
@@ -1105,7 +1072,6 @@ class FlashCards extends Component {
                     </footer>
                 </div>
             </Swipe>
-
         );
     }
 }
