@@ -910,13 +910,13 @@ a {
           width: 0;
           opacity: 0;
           visibility: hidden;
-          transition: all 200ms ease-in-out;
+          //transition: all 100ms ease-in-out;
 
 
           .results-search-inside {
             text-align: left;
             max-height: 200px;
-            transition: all 300ms ease-in-out;
+            transition: all 200ms ease-in-out;
             overflow: hidden;
             overflow-y: auto;
             border-bottom: 1px solid rgba(200, 95, 35, 0.6);
@@ -936,7 +936,7 @@ a {
             a {
               color: $color4;
               font-weight: 600;
-              text-decoration: underline;
+              //text-decoration: underline;
             }
             h3 {
               font-size: .55rem;
@@ -958,10 +958,15 @@ a {
                   align-items: center;
                   width: 100%;
                   padding: 0 5px 0 2.5px;
-                  &:active,
-                  &:hover {
+                  &:active {
                     background-color: $color10;
                     color: $color1;
+                  }
+                  @media (min-width: $md) {
+                    &:hover {
+                      background-color: $color10;
+                      color: $color1;
+                    }
                   }
                   &:before {
                     opacity: .6;
@@ -972,9 +977,14 @@ a {
                 }
                 > button {
                   padding-right: 2.5px;
-                  &:active,
-                  &:hover {
+
+                  &:active {
                     color: $color10;
+                  }
+                  @media (min-width: $md) {
+                    &:hover {
+                      color: $color10;
+                    }
                   }
                 }
               }
@@ -1083,6 +1093,7 @@ a {
     padding: 10px 0 0;
     border-top: 1px solid rgba(0,0,0,.1);
     text-align: center;
+    position: relative;
 
     p {
       font-size: 0.75rem;
@@ -1362,7 +1373,7 @@ a {
     background-position: 50%;
     background-size: cover;
     background-color: #e4d8cc;
-    z-index: -1;
+    z-index: 0;
   }
   $timeAnimation: 134s;
   .bg-1 {
@@ -1747,8 +1758,11 @@ a {
           span {
             display: inline;
             vertical-align:middle;
+            &.large-size {
+              font-size: 1.4rem;
+            }
           }
-          strong {
+          > strong {
             color: $color3;
             vertical-align: middle;
             width: 26px;

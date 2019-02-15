@@ -83,6 +83,7 @@ class Exercises extends Component {
                     if(typeof dataJson[that.state.idExercise].description === 'object') {
                         description = (that.global.lang === 'pl')?dataJson[that.state.idExercise].description._pl:dataJson[that.state.idExercise].description._en;
                     }
+                    const sizeText = 30;
                     return (
                         <div className={'flash-card-inset' + (isIE?' ie-fix':'')} key={i}>
                             <span className="percent-pro" style={stylePercent}></span>
@@ -103,20 +104,20 @@ class Exercises extends Component {
                                                 <p onClick={() => that.translateVoice(obj._pl, "pl",that.state.online)}>
                                                     <strong>pl:</strong>
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
-                                                    <span>{obj._pl}</span>
+                                                    <span className={obj._pl.length>sizeText?'normal-size':'large-size'}>{obj._pl}</span>
                                                 </p>
                                             </div>
                                             <div className={'back ' + centerClass}>
                                                 <p onClick={() => that.translateVoice(obj._pl, "pl",that.state.online) }>
                                                     <strong>pl:</strong>
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
-                                                    <span>{obj._pl}</span>
+                                                    <span className={obj._pl.length>sizeText?'normal-size':'large-size'}>{obj._pl}</span>
                                                 </p>
                                                 <hr />
                                                 <p onClick={() => that.translateVoice(obj._en, "en",that.state.online)}>
                                                     <strong>en:</strong>
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
-                                                    <span>{obj._en}</span>
+                                                    <span className={obj._en.length>sizeText?'normal-size':'large-size'}><strong>{obj._en}</strong></span>
                                                 </p>
                                                 <div className="list-extends-links">
                                                     <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl)} className="google-translator" target='blank_'>
@@ -134,19 +135,19 @@ class Exercises extends Component {
                                                 <p onClick={() => that.translateVoice(obj._en, "en", that.state.online)}>
                                                     <strong>en:</strong>
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
-                                                    <span>{obj._en}</span></p>
+                                                    <span className={obj._en.length>sizeText?'normal-size':'large-size'} >{obj._en}</span></p>
                                             </div>
                                             <div className={'back ' + centerClass}>
                                                 <p onClick={() => that.translateVoice(obj._en, "en",that.state.online)}>
                                                     <strong>en:</strong>
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
-                                                    <span>{obj._en}</span></p>
+                                                    <span className={obj._en.length>sizeText?'normal-size':'large-size'}>{obj._en}</span></p>
                                                 <hr />
 
                                                 <p onClick={() => that.translateVoice(obj._pl, "pl",that.state.online) }>
                                                     <strong>pl:</strong>
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
-                                                    <span>{obj._pl}</span>
+                                                    <span className={obj._pl.length>sizeText?'normal-size':'large-size'}><strong>{obj._pl}</strong></span>
                                                 </p>
                                                 <div className="list-extends-links">
                                                     <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en)} className="google-translator" target='blank_'>
@@ -304,6 +305,7 @@ class FlashCards extends Component {
             searchWordsMain: '',
             searchWordsMainActive: false,
             resultsSearch: null,
+            resultsSearchCount: 0,
             searchWordsMainSlideToggle: '',
             langNameExercise: (j,l=this.global.lang) => {
                 switch (l) {
@@ -411,7 +413,7 @@ class FlashCards extends Component {
             },5000,this);
         }
 
-        window.scrollTo(0,0);
+        if(showList) window.scrollTo(0,0);
         if(event) event.preventDefault();
     };
 
@@ -780,7 +782,7 @@ class FlashCards extends Component {
                     return ((obj2_lang.indexOf(tssw) > -1)?
                         <li key={i}>
                             <span className={"d-none"}>{idResultSearchCat ++}</span>
-                            {(idResultSearchCat === 1) && <h3 className="row"><span className="col">No category - {lang==='p->e'?obj1.name._pl:obj1.name._en}</span></h3>}
+                            {(idResultSearchCat === 1) && <h3 className="row"><span className="col">{lang==='p->e'?obj1.category._pl:obj1.category._en} - {lang==='p->e'?obj1.name._pl:obj1.name._en}</span></h3>}
                             <p className={"d-flex id-" + (idSearch ++)}>
                                 <span className={"col-6 d-flex"}>
                                     <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=" + ((lang==='p->e')?('pl&tl=en&text=' + obj2._pl):('en&tl=pl&text=' + obj2._en)))} className="icon-gt"></button>
@@ -795,9 +797,13 @@ class FlashCards extends Component {
                 }, that)
             }, that)
         });
+        that.setState({
+            resultsSearchCount: idSearch-1
+        });
         if(idSearch === 1) {
             that.setState({
-                resultsSearch: ''
+                resultsSearch: '',
+                resultsSearchCount: 0
             });
         }
     };
@@ -807,18 +813,26 @@ class FlashCards extends Component {
         console.log(this.global.flashCardDirection);
         if(event) this.setState({searchWordsMain: event.target.value});
         clearTimeout(this.global.searchTime.first);
+        clearTimeout(this.global.searchTime.second);
         let idSearch = 1;
-        //if(this.state.searchWordsMain.length>0) {
-            this.global.searchTime.first = setTimeout(function (that) {
-                if(that.state.searchWordsMain.length === 0) {
-                    that.setState({
-                        resultsSearch: null
-                    });
-                } else {
-                    that.searchResult(that.global.flashCardDirection,that,idSearch);
-                }
-            },400,this);
-        //}
+        this.global.searchTime.second = setTimeout(function (that) {
+            if(that.state.searchWordsMain.length>1) {
+                that.global.searchTime.first = setTimeout(function (that) {
+                    if(that.state.searchWordsMain.length === 0) {
+                        that.setState({
+                            resultsSearch: null
+                        });
+                    } else {
+                        that.searchResult(that.global.flashCardDirection,that,idSearch);
+                    }
+                },400,that);
+            } else {
+                that.setState({
+                    resultsSearch: null,
+                    resultsSearchCount: 0
+                });
+            }
+        },400,this);
     };
 
     componentWillMount(){
@@ -974,6 +988,12 @@ class FlashCards extends Component {
                                         onChange={this.searchChangeMain}
                                         placeholder='&#xE816; ...'
 
+                                        // onKeyPress={(e) => {
+                                        //     if (e.key === 'Enter') {
+                                        //         window.find(this.state.searchWordsMain)
+                                        //     }
+                                        // }}
+
                                         onFocus={() => {
                                                 if(this.state.searchWordsMainSlideToggle){this.setState({searchWordsMainSlideToggle: ''});};
                                                 this.setState({searchWordsMainActive:true});
@@ -988,12 +1008,20 @@ class FlashCards extends Component {
 
                                         <div className={"results-search-inside"}>
                                             <div className={"no-result-search"}>
-                                                <p><span><strong>{this.state.searchWordsMain}</strong> - {(!this.state.resultsSearch)?translate.noResultSearch:translate.changeDirectionLanguage}<a href={"#change-direction"} onClick={(e) => this.changeDirection(e)}>{directionState[1]} -> {directionState[0]}</a></span></p></div>
-                                                {
-                                                    (this.state.resultsSearch) ?
-                                                        <ul className="list-unstyled m-0">{this.state.resultsSearch}</ul>
-                                                    :''
-                                                }
+                                                <p>
+                                                    <span>
+                                                        <strong>{this.state.searchWordsMain}</strong>
+                                                        - {translate.found}: {this.state.resultsSearchCount} | {(!this.state.resultsSearch)?translate.noResultSearch:translate.changeDirectionLanguage}
+                                                        <a href={"#change-direction"} onClick={(e) => this.changeDirection(e)}>{directionState[1]} -> {directionState[0]}</a>
+                                                        {translate.or} <a className="icon-gt" href="#gt" onClick={(e) => this.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=" + (this.global.flashCardDirection==='p->e'?'pl&tl=en&text=':'en&tl=pl&text=') + this.state.searchWordsMain)}>Google Translate</a>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                            {
+                                                (this.state.resultsSearch) ?
+                                                    <ul className="list-unstyled m-0">{this.state.resultsSearch}</ul>
+                                                :''
+                                            }
                                         </div>
 
                                 }

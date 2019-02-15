@@ -423,7 +423,7 @@
       },
       {
         "_en": "through",
-        "_pl": "przez"
+        "_pl": "przez, poprzez, dzięki (czemuś)"
       },
       {
         "_en": "and",
@@ -1552,7 +1552,7 @@
       },
       {
         "_en": "both",
-        "_pl": "razem"
+        "_pl": "obie, zarówno"
       },
       {
         "_en": "road",
@@ -2784,7 +2784,7 @@
         "_pl": "prawdopodobny"
       },
       {
-        "_en": "dictionary",
+        "_en": "dictionary, glossary, vocabulary",
         "_pl": "słownik"
       },
       {
@@ -3146,7 +3146,7 @@
       },
       {
         "_en": "except",
-        "_pl": "z wyjątkiem"
+        "_pl": "z wyjątkiem, oprócz"
       },
       {
         "_en": "weather",
@@ -4064,6 +4064,22 @@
       "_en": "Other popular words"
     },
     "data": [
+      {
+        "_en": "valuable",
+        "_pl": "wartościowy"
+      },
+      {
+        "_en": "justice",
+        "_pl": "sprawiedliwość"
+      },
+      {
+        "_en": "previously",
+        "_pl": "poprzednio"
+      },
+      {
+        "_en": "unless",
+        "_pl": "chyba że"
+      },
       {
         "_en": "neither",
         "_pl": "ani, 'ani jeden, ani drugi', żaden"
@@ -5824,7 +5840,7 @@
       },
       {
         "_en": "through",
-        "_pl": "przez"
+        "_pl": "przez, poprzez, dzięki (czemuś)"
       },
       {
         "_en": "and",
@@ -6959,7 +6975,7 @@
       },
       {
         "_en": "both",
-        "_pl": "razem"
+        "_pl": "obie, zarówno"
       },
       {
         "_en": "road",
@@ -8218,7 +8234,7 @@
         "_pl": "prawdopodobny"
       },
       {
-        "_en": "dictionary",
+        "_en": "dictionary, glossary, vocabulary",
         "_pl": "słownik"
       },
       {
@@ -8588,7 +8604,7 @@
       },
       {
         "_en": "except",
-        "_pl": "z wyjątkiem"
+        "_pl": "z wyjątkiem, oprócz"
       },
       {
         "_en": "weather",

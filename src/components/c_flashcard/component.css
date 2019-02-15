@@ -673,12 +673,11 @@ a {
         overflow: hidden;
         width: 0;
         opacity: 0;
-        visibility: hidden;
-        transition: all 200ms ease-in-out; }
+        visibility: hidden; }
         .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside {
           text-align: left;
           max-height: 200px;
-          transition: all 300ms ease-in-out;
+          transition: all 200ms ease-in-out;
           overflow: hidden;
           overflow-y: auto;
           border-bottom: 1px solid rgba(200, 95, 35, 0.6);
@@ -692,8 +691,7 @@ a {
             margin-bottom: 0; }
           .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside a {
             color: #338798;
-            font-weight: 600;
-            text-decoration: underline; }
+            font-weight: 600; }
           .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside h3 {
             font-size: .55rem;
             background-color: rgba(0, 0, 0, 0.1);
@@ -713,17 +711,24 @@ a {
                 align-items: center;
                 width: 100%;
                 padding: 0 5px 0 2.5px; }
-                .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside p > span i:active, .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside p > span i:hover {
+                .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside p > span i:active {
                   background-color: rgba(208, 119, 35, 0.8);
                   color: #fff; }
+                @media (min-width: 991.98px) {
+                  .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside p > span i:hover {
+                    background-color: rgba(208, 119, 35, 0.8);
+                    color: #fff; } }
                 .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside p > span i:before {
                   opacity: .6; }
               .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside p > span:first-child {
                 border-right: 1px solid rgba(0, 0, 0, 0.1); }
               .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside p > span > button {
                 padding-right: 2.5px; }
-                .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside p > span > button:active, .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside p > span > button:hover {
+                .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside p > span > button:active {
                   color: rgba(208, 119, 35, 0.8); }
+                @media (min-width: 991.98px) {
+                  .module-flash-cards .main-header-wrap .main-header .direction-lang-and-search .results-search .results-search-inside p > span > button:hover {
+                    color: rgba(208, 119, 35, 0.8); } }
     .module-flash-cards .main-header-wrap .main-header .top-menu {
       margin: 0;
       position: absolute;
@@ -793,7 +798,8 @@ a {
   .module-flash-cards footer {
     padding: 10px 0 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
-    text-align: center; }
+    text-align: center;
+    position: relative; }
     .module-flash-cards footer p {
       font-size: 0.75rem;
       color: rgba(0, 0, 0, 0.6); }
@@ -997,7 +1003,7 @@ a {
     background-position: 50%;
     background-size: cover;
     background-color: #e4d8cc;
-    z-index: -1; }
+    z-index: 0; }
   .module-flash-cards .bg-1 {
     background-image: url(./images/bg3.jpg);
     animation: bganim1 134s infinite ease-in-out;
@@ -1291,7 +1297,9 @@ a {
         .module-flash-cards .main-flash-cards .flash-card .front p span, .module-flash-cards .main-flash-cards .flash-card .back p span {
           display: inline;
           vertical-align: middle; }
-        .module-flash-cards .main-flash-cards .flash-card .front p strong, .module-flash-cards .main-flash-cards .flash-card .back p strong {
+          .module-flash-cards .main-flash-cards .flash-card .front p span.large-size, .module-flash-cards .main-flash-cards .flash-card .back p span.large-size {
+            font-size: 1.4rem; }
+        .module-flash-cards .main-flash-cards .flash-card .front p > strong, .module-flash-cards .main-flash-cards .flash-card .back p > strong {
           color: #191919;
           vertical-align: middle;
           width: 26px;
