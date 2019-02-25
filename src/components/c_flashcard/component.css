@@ -365,7 +365,7 @@ a {
   .module-flash-cards .preloader {
     background-color: #191919;
     color: #fff;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
@@ -821,7 +821,8 @@ a {
     background-color: #191919; }
   .module-flash-cards .main-list-exercise {
     transition: all 300ms ease-in-out;
-    overflow-y: hidden; }
+    overflow-y: hidden;
+    position: relative; }
     .module-flash-cards .main-list-exercise .category-box > h2 {
       position: relative;
       padding: 8px 40px 8px 10px;
@@ -959,32 +960,37 @@ a {
             .module-flash-cards .main-list-exercise .main-list-exercise-inset li .buttons-option .button-list:before {
               background-color: #191919;
               opacity: .4; }
-  .module-flash-cards .nav-buttons button {
-    padding: 10px;
-    color: #fff;
-    border-bottom: 8px solid rgba(255, 255, 255, 0.5);
-    opacity: .9;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
-    margin-bottom: 0;
-    font-size: 1.125rem; }
-    .module-flash-cards .nav-buttons button:hover {
-      opacity: .8; }
-    .module-flash-cards .nav-buttons button.button-check-out {
-      width: 100%;
-      background-color: #338798;
-      border-radius: 8px; }
-    .module-flash-cards .nav-buttons button.button-i-know {
-      width: calc(50% - 5px);
-      margin-right: 5px;
-      background-color: #2c8548;
-      border-bottom-left-radius: 8px;
-      border-top-left-radius: 8px; }
-    .module-flash-cards .nav-buttons button.button-i-dont-know {
-      width: calc(50% - 5px);
-      margin-left: 5px;
-      background-color: #852824;
-      border-bottom-right-radius: 8px;
-      border-top-right-radius: 8px; }
+  .module-flash-cards .nav-buttons {
+    display: flex; }
+    .module-flash-cards .nav-buttons button {
+      padding: 10px;
+      color: #fff;
+      border-bottom: 8px solid rgba(255, 255, 255, 0.5);
+      opacity: .9;
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+      margin-bottom: 0;
+      font-size: 1.125rem;
+      width: 100%; }
+      .module-flash-cards .nav-buttons button:hover {
+        opacity: .8; }
+      .module-flash-cards .nav-buttons button.button-check-out {
+        background-color: #338798;
+        border-radius: 8px; }
+      .module-flash-cards .nav-buttons button.button-i-know {
+        margin-right: 5px;
+        background-color: #2c8548;
+        border-bottom-left-radius: 8px;
+        border-top-left-radius: 8px; }
+      .module-flash-cards .nav-buttons button.button-simple-lottery {
+        margin-right: 5px;
+        margin-left: 5px;
+        width: auto;
+        background-color: #338798; }
+      .module-flash-cards .nav-buttons button.button-i-dont-know {
+        margin-left: 5px;
+        background-color: #852824;
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px; }
   .module-flash-cards.show-list-exercise-hide-flash-cards .main-list-exercise {
     max-height: none;
     opacity: 1; }
@@ -1131,6 +1137,9 @@ a {
       margin: 36px 0 0;
       animation-name: congrat-anim;
       animation-duration: 1.5s; }
+      .module-flash-cards .main-flash-cards .congratulation-info button {
+        width: 100%;
+        max-width: 340px; }
       @media (max-width: 991.98px) {
         .module-flash-cards .main-flash-cards .congratulation-info {
           min-height: 250px;
@@ -1161,7 +1170,8 @@ a {
   100% {
     font-size: 1.125rem; } }
     .module-flash-cards .main-flash-cards .button-i-know,
-    .module-flash-cards .main-flash-cards .button-i-dont-know {
+    .module-flash-cards .main-flash-cards .button-i-dont-know,
+    .module-flash-cards .main-flash-cards .button-simple-lottery {
       display: none; }
     .module-flash-cards .main-flash-cards .flash-card {
       position: relative;
@@ -1213,8 +1223,20 @@ a {
           .module-flash-cards .main-flash-cards .flash-card .flash-card-inset .table-wrap .table-list tbody th {
             border-left: none;
             font-size: .6rem; }
+          .module-flash-cards .main-flash-cards .flash-card .flash-card-inset .table-wrap .table-list tbody tr.tr-header {
+            background-color: rgba(0, 0, 0, 0.1);
+            color: #191919; }
+            .module-flash-cards .main-flash-cards .flash-card .flash-card-inset .table-wrap .table-list tbody tr.tr-header th {
+              font-size: .9rem;
+              font-weight: 700; }
+          .module-flash-cards .main-flash-cards .flash-card .flash-card-inset .table-wrap .table-list tbody tr.check-no {
+            background-color: rgba(78, 135, 200, 0.6);
+            color: #fff; }
           .module-flash-cards .main-flash-cards .flash-card .flash-card-inset .table-wrap .table-list tbody tr.check-ok {
-            background-color: rgba(44, 133, 72, 0.4);
+            background-color: rgba(44, 133, 72, 0.6);
+            color: #fff; }
+          .module-flash-cards .main-flash-cards .flash-card .flash-card-inset .table-wrap .table-list tbody tr.check-you-dont-know {
+            background-color: rgba(133, 47, 40, 0.6);
             color: #fff; }
           .module-flash-cards .main-flash-cards .flash-card .flash-card-inset .table-wrap .table-list tbody tr td {
             cursor: pointer; }
@@ -1228,8 +1250,9 @@ a {
     .module-flash-cards .main-flash-cards.check-out-card .button-check-out {
       display: none; }
     .module-flash-cards .main-flash-cards.check-out-card .button-i-know,
-    .module-flash-cards .main-flash-cards.check-out-card .button-i-dont-know {
-      display: inline-block; }
+    .module-flash-cards .main-flash-cards.check-out-card .button-i-dont-know,
+    .module-flash-cards .main-flash-cards.check-out-card .button-simple-lottery {
+      display: block; }
     .module-flash-cards .main-flash-cards.check-out-card .flash-card .flip-container .flipper {
       transform: rotateY(180deg); }
     .module-flash-cards .main-flash-cards.check-out-card .flash-card .flash-card-inset.ie-fix .back {
@@ -1255,12 +1278,13 @@ a {
     .module-flash-cards .main-flash-cards .flash-card .icon-volume {
       margin: 0;
       display: inline-block;
-      transition: all 300ms ease-in-out;
       background-color: transparent;
-      color: #c48500;
-      opacity: 1;
+      color: #fff;
+      opacity: .8;
       margin-right: 5px;
       text-shadow: 0 0 0 #000, 0 0 0 #000; }
+      .module-flash-cards .main-flash-cards .flash-card .icon-volume:before {
+        margin: 0; }
       .module-flash-cards .main-flash-cards .flash-card .icon-volume.line-disable {
         opacity: .2;
         position: relative; }
@@ -1287,26 +1311,34 @@ a {
         margin-bottom: 10px;
         width: 100%;
         font-size: 1.125rem;
-        cursor: pointer; }
+        cursor: pointer;
+        text-align: center; }
         .module-flash-cards .main-flash-cards .flash-card .front p:last-child, .module-flash-cards .main-flash-cards .flash-card .back p:last-child {
           margin-bottom: 0; }
-        .module-flash-cards .main-flash-cards .flash-card .front p:hover .icon-volume, .module-flash-cards .main-flash-cards .flash-card .back p:hover .icon-volume {
-          opacity: .8; }
-          .module-flash-cards .main-flash-cards .flash-card .front p:hover .icon-volume.line-disable, .module-flash-cards .main-flash-cards .flash-card .back p:hover .icon-volume.line-disable {
-            opacity: .2; }
+        .module-flash-cards .main-flash-cards .flash-card .front p:hover .icon-volume.line-disable, .module-flash-cards .main-flash-cards .flash-card .back p:hover .icon-volume.line-disable {
+          opacity: .2; }
+        .module-flash-cards .main-flash-cards .flash-card .front p:active .icon-volume, .module-flash-cards .main-flash-cards .flash-card .back p:active .icon-volume {
+          opacity: 1;
+          color: #c48500; }
         .module-flash-cards .main-flash-cards .flash-card .front p span, .module-flash-cards .main-flash-cards .flash-card .back p span {
           display: inline;
           vertical-align: middle; }
           .module-flash-cards .main-flash-cards .flash-card .front p span.large-size, .module-flash-cards .main-flash-cards .flash-card .back p span.large-size {
             font-size: 1.4rem; }
         .module-flash-cards .main-flash-cards .flash-card .front p > strong, .module-flash-cards .main-flash-cards .flash-card .back p > strong {
-          color: #191919;
+          color: #fff;
+          position: absolute;
+          left: 10px;
           vertical-align: middle;
           width: 26px;
           font-size: 85%;
           display: inline-block;
           opacity: .8;
           font-weight: 400; }
+        .module-flash-cards .main-flash-cards .flash-card .front p.paragraph-top strong, .module-flash-cards .main-flash-cards .flash-card .back p.paragraph-top strong {
+          top: 5px; }
+        .module-flash-cards .main-flash-cards .flash-card .front p.paragraph-bottom strong, .module-flash-cards .main-flash-cards .flash-card .back p.paragraph-bottom strong {
+          bottom: 8px; }
       .module-flash-cards .main-flash-cards .flash-card .front hr, .module-flash-cards .main-flash-cards .flash-card .back hr {
         height: 1px;
         background-color: #fff;
@@ -1334,8 +1366,8 @@ a {
         margin: 0; }
       .module-flash-cards .main-flash-cards .flash-card .back .list-extends-links {
         position: absolute;
-        bottom: 8px;
-        right: 10px; }
+        bottom: 2px;
+        right: 4px; }
         .module-flash-cards .main-flash-cards .flash-card .back .list-extends-links button {
           font-size: .6rem;
           background-color: transparent;

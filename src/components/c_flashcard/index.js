@@ -13,6 +13,122 @@ import SoundSeparator from './sounds/pi-pum.mp3';
 
 const Detector = !isIE && require('react-detect-offline').Detector;
 
+
+
+/**
+ * Sub component To Repeat
+ */
+class ToRepeat extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            categoryActive: false,
+            idRand: 0
+        };
+    };
+
+    createArrayRandom = () => {
+        this.newArrayId = [];
+        this.newId = 0;
+        dataJson.map(function (obj1) {
+            obj1.data.map(function (obj2, i2) {
+                if(obj1.youDontKnowID.includes(i2)) {
+                    this.newArrayId.push(this.newId++);
+                }
+            },this)
+        },this);
+        console.log(this.newArrayId);
+    };
+
+    showCategory = () => {
+        this.setState({
+            categoryActive: this.state.categoryActive?false:true
+        });
+    };
+
+    randomItem = () => {
+        this.createArrayRandom();
+        // if(typeof this.lastNumber !== 'undefined') console.log("last number is: " + this.lastNumber);
+        // else console.log("Last number not exist");
+
+        const min = 0, max=this.newArrayId.length;
+        let randomNumber;
+
+        let unique=false;
+        do {
+            unique=true;
+            randomNumber = Math.floor(Math.random() * (max - min)) + min;
+            if(randomNumber === this.lastNumber && max>1) {
+                unique=false;
+            }
+        } while (!unique);
+
+        this.setState({
+            idRand: randomNumber
+        });
+        this.lastNumber = randomNumber;
+        //console.log('x: ' + randomNumber);
+    };
+
+    justIKnow = (idE,idI) => {
+        console.log(dataJson[idE].youDontKnowID);
+        const { that } = this.props;
+        const o = dataJson[idE].youDontKnowID;
+        o.splice( o.indexOf(idI), 1 );
+        dataJson[idE].dontKnowClick--;
+        // dataJson[idE].youDontKnowID.push(idI);
+        setCookies('obj_exercise_cookie_you_dont_know_'+idE, JSON.stringify(dataJson[idE].youDontKnowID));
+        setCookies('obj_exercise_cookie_dk_click_'+idE, dataJson[idE].dontKnowClick);
+
+        this.randomItem();
+        that.setState({});
+        console.log(dataJson[idE].youDontKnowID);
+    };
+
+    componentWillMount = () => {
+        this.createArrayRandom();
+        this.randomItem();
+    };
+
+    render() {
+        //const { that } = this.props;
+        const Aux = props => props.children;
+        console.log("render");
+        return (
+            <div className="category-box">
+                {/*<h2 onClick={() => this.showCategory()}  className={'category-tr ' + (this.state.categoryActive?'category-active':'')}>{translate.toRepeat} <span className="icon-down-open"></span></h2>*/}
+                <ul className="main-list-exercise-inset list-unstyled">
+                    {dataJson.map(function (obj1, i1) {
+                        return (
+                            <Aux key={i1}>
+                                {/*{obj1.youDontKnowID.length}*/}
+                                {obj1.data.map(function (obj2, i2) {
+                                    this.t++;
+                                    // console.log(obj1.youDontKnowID);
+                                    if(obj1.youDontKnowID.includes(i2) ) {
+                                        this.ti++;
+                                        return (
+                                            (this.ti === this.state.idRand) && //this.randomItem()
+                                            <li id={"xc-" + i2} key={i2}>
+                                                <button onClick={() => this.randomItem()}>Lottery</button>
+                                                <h4>{obj1.category._pl} / {obj1.name._pl}</h4>
+                                                {(this.ti) + ' | ' +this.t + ' | ' + i1 + ' | ' + i2} | {obj2._en} => {obj2._pl} - count id: {obj1.youDontKnowID.length}
+                                                <button onClick={() => this.justIKnow(i1,i2)}>Just I know</button>
+                                            </li>
+                                        )
+                                    }
+
+                                },this)}
+                            </Aux>
+                        )
+                    },this,this.t = -1,this.ti = -1)}
+                </ul>
+            </div>
+        )
+    }
+}
+
+
 /**
  * Sub component Congratulation
  */
@@ -20,20 +136,23 @@ class Congratulation extends Component {
     render() {
         const {that, ide, idC} = this.props;
         const obj = dataJson[ide];
-        obj.excludeID.length=obj.data.length;
+        obj.youKnowID.length=obj.data.length;
         return (
             <div className={'congratulation-info ' + centerClass}>
                 <h2>{translate.infoCongratulation}<span className="icon-award"></span></h2>
                 <h3>"{that.state.langNameExercise(obj.name)}"</h3>
-                <p className="text-center">{translate.textSummary}:  <span className="icon-up color-5">{obj.excludeID.length}/{obj.data.length} = {Math.ceil(obj.excludeID.length*100/obj.data.length)}%</span> - <span className="icon-down color-17">{obj.dontKnowClick}</span></p>
+                <p className="text-center">{translate.textSummary}:  <span className="icon-up color-5">{obj.youKnowID.length}/{obj.data.length} = {Math.ceil(obj.youKnowID.length*100/obj.data.length)}%</span> - <span className="icon-down color-17">{obj.youDontKnowID.length} ({obj.dontKnowClick})</span></p>
                 <button className="border-content-bottom" onClick={() => {
                     that.clearExercise();
                     that.setState({classHideNavButtons: ''})
                 }}>{translate.buttonInfoCongratulation}</button>
+                <button className="border-content-bottom" onClick={(e) => that.setExercise(e,ide,false,false,idC,false,'show-list')}>{translate.summary}</button>
                 <button className="border-content-bottom" onClick={() => {
-                    obj.excludeID=[];
+                    obj.youKnowID=[];
+                    obj.youDontKnowID=[];
                     obj.dontKnowClick=0;
                     removeCookies('obj_exercise_cookie_'+ide);
+                    removeCookies('obj_exercise_cookie_you_dont_know_'+ide);
                     removeCookies('obj_exercise_cookie_dk_click_'+ide);
                     // cookies.remove('obj_exercise_cookie_'+ide, { path: '/' });
                     // cookies.remove('obj_exercise_cookie_dk_click_'+ide, { path: '/' });
@@ -66,7 +185,7 @@ class Exercises extends Component {
             // eslint-disable-next-line
             o.data.map(function (obj, i) {
                 if(i === idItem) {
-                    let percent = Math.ceil(o.excludeID.length*100/o.data.length),
+                    let percent = Math.ceil(o.youKnowID.length*100/o.data.length),
                         stylePercent = {
                             background: 'linear-gradient(to right, #2c8548 0%,#2c8548 ' + percent + '%,#974c49 ' + percent + '%,#974c49 100%)'
                         };
@@ -92,7 +211,7 @@ class Exercises extends Component {
                                 {that.state.langNameExercise(o.category) && that.state.langNameExercise(o.category) + ' / '}{that.state.langNameExercise(o.name)} <span className="icon-right"></span>&nbsp;<a href="#full-items-list" onClick={(e) => thisComponent.fullItemsList(e,that,idC)}>{translate.fullItemsList}</a>
                             </h2>
                             <p>
-                                {that.state.online?'online':'offline'} | <span className="icon-up color-5">{o.excludeID.length}/{o.data.length} = {Math.ceil(o.excludeID.length*100/o.data.length)}%</span> - <span className="icon-down color-17">{o.dontKnowClick}</span>
+                                {that.state.online?'online':'offline'} | <span className="icon-up color-5">{o.youKnowID.length}/{o.data.length} = {Math.ceil(o.youKnowID.length*100/o.data.length)}%</span> - <span className="icon-down color-17">{o.youDontKnowID.length} ({o.dontKnowClick})</span>
                             </p>
                             {description?<p>{Parser(description)}</p>:''}
 
@@ -101,61 +220,63 @@ class Exercises extends Component {
                                     flashCardDirection === 'p->e' ?
                                         <div className="flipper">
                                             <div className={'front ' + centerClass}>
-                                                <p onClick={() => that.translateVoice(obj._pl, "pl",that.state.online)}>
-                                                    <strong>pl:</strong>
+                                                <p className="paragraph-top"  onClick={() => that.translateVoice(obj._pl, "pl",that.state.online)}>
+                                                    <strong>{translate.polish}</strong>
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
                                                     <span className={obj._pl.length>sizeText?'normal-size':'large-size'}>{obj._pl}</span>
                                                 </p>
                                             </div>
                                             <div className={'back ' + centerClass}>
-                                                <p onClick={() => that.translateVoice(obj._pl, "pl",that.state.online) }>
-                                                    <strong>pl:</strong>
+                                                <p className="paragraph-top" onClick={() => that.translateVoice(obj._pl, "pl",that.state.online) }>
+                                                    <strong>{translate.polish}</strong>
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
                                                     <span className={obj._pl.length>sizeText?'normal-size':'large-size'}>{obj._pl}</span>
                                                 </p>
                                                 <hr />
-                                                <p onClick={() => that.translateVoice(obj._en, "en",that.state.online)}>
-                                                    <strong>en:</strong>
+                                                <p className="paragraph-bottom" onClick={() => that.translateVoice(obj._en, "en",that.state.online)}>
+                                                    <strong>{translate.english}</strong>
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
                                                     <span className={obj._en.length>sizeText?'normal-size':'large-size'}><strong>{obj._en}</strong></span>
                                                 </p>
                                                 <div className="list-extends-links">
                                                     <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl)} className="google-translator" target='blank_'>
-                                                        {translate.gt}<span className="icon-gt"></span>
+                                                        {/*{translate.gt}*/}
+                                                        <span className="icon-gt"></span>
                                                     </button>
-                                                    <button onClick={(e) => that.openHref(e,"https://context.reverso.net/tłumaczenie/polski-angielski/" + obj._pl)} className="reverso-context" target='blank_'>
-                                                        Reverso context<span className="icon-arrows-cw"></span>
-                                                    </button>
+                                                    {/*<button onClick={(e) => that.openHref(e,"https://context.reverso.net/tłumaczenie/polski-angielski/" + obj._pl)} className="reverso-context" target='blank_'>*/}
+                                                        {/*Reverso context<span className="icon-arrows-cw"></span>*/}
+                                                    {/*</button>*/}
                                                 </div>
                                             </div>
                                         </div>
                                         :
                                         <div className="flipper">
                                             <div className={'front ' + centerClass}>
-                                                <p onClick={() => that.translateVoice(obj._en, "en", that.state.online)}>
-                                                    <strong>en:</strong>
+                                                <p className="paragraph-top"  onClick={() => that.translateVoice(obj._en, "en", that.state.online)}>
+                                                    <strong>{translate.english}</strong>
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
                                                     <span className={obj._en.length>sizeText?'normal-size':'large-size'} >{obj._en}</span></p>
                                             </div>
                                             <div className={'back ' + centerClass}>
-                                                <p onClick={() => that.translateVoice(obj._en, "en",that.state.online)}>
-                                                    <strong>en:</strong>
+                                                <p className="paragraph-top"  onClick={() => that.translateVoice(obj._en, "en",that.state.online)}>
+                                                    <strong>{translate.english}</strong>
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
                                                     <span className={obj._en.length>sizeText?'normal-size':'large-size'}>{obj._en}</span></p>
                                                 <hr />
 
-                                                <p onClick={() => that.translateVoice(obj._pl, "pl",that.state.online) }>
-                                                    <strong>pl:</strong>
+                                                <p className="paragraph-bottom"  onClick={() => that.translateVoice(obj._pl, "pl",that.state.online) }>
+                                                    <strong>{translate.polish}</strong>
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
                                                     <span className={obj._pl.length>sizeText?'normal-size':'large-size'}><strong>{obj._pl}</strong></span>
                                                 </p>
                                                 <div className="list-extends-links">
                                                     <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en)} className="google-translator" target='blank_'>
-                                                        {translate.gt}<span className="icon-gt"></span>
+                                                        {/*{translate.gt}*/}
+                                                        <span className="icon-gt"></span>
                                                     </button>
-                                                    <button onClick={(e) => that.openHref(e,"https://context.reverso.net/tłumaczenie/angielski-polski/" + obj._en)} className="reverso-context" target='blank_'>
-                                                        Reverso context<span className="icon-arrows-cw"></span>
-                                                    </button>
+                                                    {/*<button onClick={(e) => that.openHref(e,"https://context.reverso.net/tłumaczenie/angielski-polski/" + obj._en)} className="reverso-context" target='blank_'>*/}
+                                                        {/*Reverso context<span className="icon-arrows-cw"></span>*/}
+                                                    {/*</button>*/}
                                                 </div>
                                             </div>
                                         </div>
@@ -183,31 +304,34 @@ class ExercisesList extends Component {
         that.setState({showListActice:false});
         that.setExercise(e,that.state.idExercise,false,false,idC);
     };
-    items = (i,o,that,obj,checkOk,flashCardDirection) => {
-      return (
-          <tr key={i} className={"list-container " + checkOk}>
-              <th>
-                  {i + 1}
-              </th>
-              <td onClick={() => that.translateVoice((flashCardDirection === 'p->e')?obj._pl:obj._en, (flashCardDirection === 'p->e')?"pl":"en", that.state.online)}>
-                  <span className={'icon-volume ' + (that.state.online ? '' : 'line-disable')}></span>
-                  <span>{(flashCardDirection === 'p->e')?obj._pl:obj._en}</span>
-                  {checkOk && <span className="icon-ok"></span>}
-              </td>
-              <td onClick = {() => that.translateVoice((flashCardDirection === 'p->e')?obj._en:obj._pl, (flashCardDirection === 'p->e')?"en":"pl", that.state.online)}>
-                  <span className={'icon-volume ' + (that.state.online ? '' : 'line-disable')}></span>
-                  <span>{(flashCardDirection === 'p->e')?obj._en:obj._pl}</span>
-                  {checkOk && <span className="icon-ok"></span>}
-              </td>
-          </tr>
-      )
+    items = (i,o,that,obj,check,flashCardDirection) => {
+        // const Aux = props => props.children;
+        return (
+
+            <tr key={i} className={"list-container " + check}>
+                <th>
+                    {i + 1}
+                </th>
+                <td onClick={() => that.translateVoice((flashCardDirection === 'p->e')?obj._pl:obj._en, (flashCardDirection === 'p->e')?"pl":"en", that.state.online)}>
+                    <span className={'icon-volume ' + (that.state.online ? '' : 'line-disable')}></span>
+                    <span>{(flashCardDirection === 'p->e')?obj._pl:obj._en}</span>
+                    {check==='check-ok' && <span className="icon-ok"></span>}
+                </td>
+                <td onClick = {() => that.translateVoice((flashCardDirection === 'p->e')?obj._en:obj._pl, (flashCardDirection === 'p->e')?"en":"pl", that.state.online)}>
+                    <span className={'icon-volume ' + (that.state.online ? '' : 'line-disable')}></span>
+                    <span>{(flashCardDirection === 'p->e')?obj._en:obj._pl}</span>
+                    {check==='check-ok' && <span className="icon-ok"></span>}
+                </td>
+            </tr>
+
+        )
     };
     render() {
         const { o, that, idC, flashCardDirection } = this.props;
         const thisComponent = this;
         // const Aux = props => props.children;
-        //console.log(o.excludeID);
-        let percent = Math.ceil(o.excludeID.length*100/o.data.length),
+        //console.log(o.youKnowID);
+        let percent = Math.ceil(o.youKnowID.length*100/o.data.length),
             stylePercent = {
                 background: 'linear-gradient(to right, #2c8548 0%,#2c8548 ' + percent + '%,#974c49 ' + percent + '%,#974c49 100%)'
             },
@@ -215,10 +339,14 @@ class ExercisesList extends Component {
         if(typeof dataJson[that.state.idExercise].description === 'object') {
             description = (that.global.lang === 'pl')?dataJson[that.state.idExercise].description._pl:dataJson[that.state.idExercise].description._en;
         }
-        //o.data.push(o.excludeID);
-        if(typeof o.excludeID.includes !== 'function') {
-            o.excludeID.includes = function () {};
+        //o.data.push(o.youKnowID);
+        if(typeof o.youKnowID.includes !== 'function') {
+            o.youKnowID.includes = function () {};
         }
+        if(typeof o.youDontKnowID.includes !== 'function') {
+            o.youDontKnowID.includes = function () {};
+        }
+        console.log(o.youDontKnowID);
         return (
             // eslint-disable-next-line
             <div className={"flash-card-inset"}>
@@ -228,7 +356,7 @@ class ExercisesList extends Component {
                     {that.state.langNameExercise(o.category) && that.state.langNameExercise(o.category) + ' / '}{that.state.langNameExercise(o.name)} <span className="icon-right"></span> <a href="#flashcards" onClick={(e) => this.flashcards(e,that,idC)}>{translate.flashcards}</a>
                 </h2>
                 <p>
-                    {that.state.online?'online':'offline'} | <span className="icon-up color-5">{o.excludeID.length}/{o.data.length} = {Math.ceil(o.excludeID.length*100/o.data.length)}%</span> - <span className="icon-down color-17">{o.dontKnowClick}</span>
+                    {that.state.online?'online':'offline'} | <span className="icon-up color-5">{o.youKnowID.length}/{o.data.length} = {Math.ceil(o.youKnowID.length*100/o.data.length)}%</span> - <span className="icon-down color-17">{o.youDontKnowID.length} ({o.dontKnowClick})</span>
                 </p>
                 {description?<p>{Parser(description)}</p>:''}
                 <div className={"table-wrap"}>
@@ -237,14 +365,25 @@ class ExercisesList extends Component {
                             <tr><th>id</th><th>{(flashCardDirection === 'p->e')?'pl':'en'}</th><th>{(flashCardDirection === 'p->e')?'en':'pl'}</th></tr>
                         </thead>
                         <tbody>
+                        {o.youDontKnowID.length?<tr className="tr-header"><th colSpan="3">{translate.sentenceYouDidntKnow}</th></tr>:null}
                         {
                             o.data.map(function (obj, i) {
-                                return !o.excludeID.includes(i)?thisComponent.items(i,o,that,obj,'',flashCardDirection):null;
+                                return o.youDontKnowID.includes(i)?thisComponent.items(i,o,that,obj,'check-you-dont-know',flashCardDirection):null;
                             }, that,thisComponent)
                         }
+
+                        {/*this need fixed*/}
+                        {!( (o.youKnowID.length === o.data.length) || (o.youDontKnowID.length === o.data.length) || (o.data.length <= o.youDontKnowID.length+o.youKnowID.length) )?<tr className="tr-header"><th colSpan="3">{translate.sentenceNotAnswered}</th></tr>:null}
                         {
                             o.data.map(function (obj, i) {
-                                return o.excludeID.includes(i)?thisComponent.items(i,o,that,obj,'check-ok',flashCardDirection):null;
+                                return !(o.youKnowID.includes(i) || o.youDontKnowID.includes(i))?thisComponent.items(i,o,that,obj,'check-no',flashCardDirection):null;
+                            }, that,thisComponent)
+                        }
+
+                        {o.youKnowID.length?<tr className="tr-header"><th colSpan="3">{translate.sentenceYouKnew}</th></tr>:null}
+                        {
+                            o.data.map(function (obj, i) {
+                                return o.youKnowID.includes(i)?thisComponent.items(i,o,that,obj,'check-ok',flashCardDirection):null;
                             }, that,thisComponent)
                         }
                         </tbody>
@@ -274,7 +413,7 @@ class FlashCards extends Component {
             searchTime: {},
             soundSeparator: new Audio(SoundSeparator),
             directionText: () => {
-                return (this.global.flashCardDirection === 'e->p') ? translate.english + ' | ' + translate.polish : translate.polish + ' | ' + translate.english
+                return (this.global.flashCardDirection === 'e->p') ? translate.en + ' | ' + translate.pl : translate.pl + ' | ' + translate.en
             }
         };
         this.state = {
@@ -376,7 +515,7 @@ class FlashCards extends Component {
             return <ExercisesList o={o} that={that} idC={idC} idItem={temp_idE} flashCardDirection={that.global.flashCardDirection} checkvoice={voiceOff} voice={that.state.enableAutoVoice} />;
 
         } else {
-            if(o.excludeID.length === o.data.length) {
+            if(o.youKnowID.length === o.data.length) {
                 return <Congratulation that={that} idC={idC} ide={idE} />;
             } else {
                 return <Exercises o={o} that={that} idC={idC} idItem={temp_idE} flashCardDirection={that.global.flashCardDirection} checkvoice={voiceOff} voice={that.state.enableAutoVoice} />;
@@ -398,7 +537,7 @@ class FlashCards extends Component {
             idItem: temp_idE,
             classCheckOut: '',
             classCheckOutMore: '',
-            classHideNavButtons: (o.excludeID.length === o.data.length || showList)?'d-none':'',
+            classHideNavButtons: (o.youKnowID.length === o.data.length || showList)?'d-none':'',
             classHideOrShowMainPartsPage: 'hide-flash-cards-show-list-exercise',
             callObj: this.layer(o, this, idC, idE, temp_idE, voiceOff, showList)
         });
@@ -427,6 +566,8 @@ class FlashCards extends Component {
             showListActice: false
         });
         clearTimeout(this.global.timeOutCloseCloud);
+        this.child.randomItem();
+        delete this.lastNumberRandom;
         if(event) event.preventDefault();
     };
 
@@ -490,20 +631,50 @@ class FlashCards extends Component {
 
     };
 
+
+
+    // randomItem = () => {
+    //     this.createArrayRandom();
+    //     // if(typeof this.lastNumber !== 'undefined') console.log("last number is: " + this.lastNumber);
+    //     // else console.log("Last number not exist");
+    //
+    //     const min = 0, max=this.newArrayId.length;
+    //     let randomNumber;
+    //
+    //     let unique=false;
+    //     do {
+    //         unique=true;
+    //         randomNumber = Math.floor(Math.random() * (max - min)) + min;
+    //         if(randomNumber === this.lastNumber && max>1) {
+    //             unique=false;
+    //         }
+    //     } while (!unique);
+    //
+    //     this.setState({
+    //         idRand: randomNumber
+    //     });
+    //     this.lastNumber = randomNumber;
+    //     //console.log('x: ' + randomNumber);
+    // };
+
     randomItem = (ol) => {
+        if(typeof this.lastNumberRandom !== 'undefined') console.log("last number is: " + this.lastNumberRandom);
+        else console.log("Last number not exist");
+
+        console.log("count number in random: " + (ol.data.length-ol.youKnowID.length));
         let unique, randomNr;
-        if(typeof ol.excludeID === 'object' && ol.excludeID.length > 0){
-            if(ol.excludeID.length < ol.data.length) {
-                do {
-                    unique=true;
-                    randomNr=Math.floor((Math.random()*ol.data.length));
-                    for(let i=0; i<ol.excludeID.length; i++) { if(ol.excludeID[i]===randomNr) unique=false; }
-                } while (!unique);
-            }
-        }
-        else {
+
+        do {
+            unique=true;
             randomNr=Math.floor((Math.random()*ol.data.length));
-        }
+            if(typeof ol.youKnowID === 'object' && ol.youKnowID.length > 0 && ol.youKnowID.length < ol.data.length) {
+                for(let i=0; i<ol.youKnowID.length; i++) { if(ol.youKnowID[i]===randomNr) unique=false; }
+            }
+            if(randomNr === this.lastNumberRandom && (ol.data.length-ol.youKnowID.length)>1) unique=false;
+        } while (!unique);
+
+        this.lastNumberRandom = randomNr;
+        console.log("current random: " + randomNr);
         return randomNr;
 
     };
@@ -521,16 +692,16 @@ class FlashCards extends Component {
     iKnow = (idI) => {
         if(this.state.idExercise > -1) {
             const o = dataJson;
-            if(typeof o[this.state.idExercise].excludeID !== 'object') {
-                o[this.state.idExercise].excludeID = [];
+            if(typeof o[this.state.idExercise].youKnowID !== 'object') {
+                o[this.state.idExercise].youKnowID = [];
             }
-            if(o[this.state.idExercise].excludeID.length < o[this.state.idExercise].data.length && idI !== false ) {
-                o[this.state.idExercise].excludeID.push(idI);
-                setCookies('obj_exercise_cookie_'+this.state.idExercise, JSON.stringify(o[this.state.idExercise].excludeID));
+            if(o[this.state.idExercise].youKnowID.length < o[this.state.idExercise].data.length && idI !== false ) {
+                o[this.state.idExercise].youKnowID.push(idI);
+                setCookies('obj_exercise_cookie_'+this.state.idExercise, JSON.stringify(o[this.state.idExercise].youKnowID));
             }
             this.setState({classCheckOut: ''});
             setTimeout(this.timeoutAnim,(this.state.rotateDisable)?0:400,this.state.idExercise);
-            if(o[this.state.idExercise].excludeID.length === o[this.state.idExercise].data.length){
+            if(o[this.state.idExercise].youKnowID.length === o[this.state.idExercise].data.length){
                 this.setState({
                     classHideNavButtons: 'd-none'
                 });
@@ -539,13 +710,41 @@ class FlashCards extends Component {
         }
     };
 
-    iDontKnow = () => {
+    iDontKnow = (idI) => {
         if(this.state.idExercise > -1) {
             const o = dataJson;
+
+            //\\
+            if(typeof o[this.state.idExercise].youDontKnowID !== 'object') {
+                o[this.state.idExercise].youDontKnowID = [];
+            }
+            if(o[this.state.idExercise].youDontKnowID.length < o[this.state.idExercise].data.length && idI !== false ) {
+                //IE11 not support includes
+                if(typeof o[this.state.idExercise].youDontKnowID.includes === 'function') {
+                    if(!o[this.state.idExercise].youDontKnowID.includes(idI)) {
+                        o[this.state.idExercise].youDontKnowID.push(idI);
+                        setCookies('obj_exercise_cookie_you_dont_know_'+this.state.idExercise, JSON.stringify(o[this.state.idExercise].youDontKnowID));
+                    }
+                }
+            }
+
             o[this.state.idExercise].dontKnowClick += 1;
             setCookies('obj_exercise_cookie_dk_click_'+this.state.idExercise, o[this.state.idExercise].dontKnowClick);
             this.setState({classCheckOut: ''});
             setTimeout(this.timeoutAnim,400,this.state.idExercise);
+        }
+    };
+
+    simpleLottery = () => {
+        if(this.state.idExercise > -1) {
+            const o = dataJson;
+            this.setState({classCheckOut: ''});
+            setTimeout(this.timeoutAnim,(this.state.rotateDisable)?0:400,this.state.idExercise);
+            if(o[this.state.idExercise].youKnowID.length === o[this.state.idExercise].data.length){
+                this.setState({
+                    classHideNavButtons: 'd-none'
+                });
+            }
         }
     };
 
@@ -570,12 +769,15 @@ class FlashCards extends Component {
 
     removeCookieExerciseId = (event,ide,o) => {
         removeCookies('obj_exercise_cookie_'+ide);
+        removeCookies('obj_exercise_cookie_you_dont_know_'+ide);
         removeCookies('obj_exercise_cookie_dk_click_'+ide);
         if(typeof o === 'object') {
-            o.excludeID =[];
+            o.youKnowID = [];
+            o.youDontKnowID = [];
             o.dontKnowClick = 0;
             this.setState({});
         }
+        this.child.randomItem();
         if(event) event.preventDefault();
     };
 
@@ -583,10 +785,13 @@ class FlashCards extends Component {
         // eslint-disable-next-line
         dataJson.map(function (obj, i) {
             removeCookies('obj_exercise_cookie_'+i);
+            removeCookies('obj_exercise_cookie_you_dont_know_'+i);
             removeCookies('obj_exercise_cookie_dk_click_'+i);
-            obj.excludeID = [];
+            obj.youKnowID = [];
+            obj.youDontKnowID = [];
             obj.dontKnowClick = 0;
         });
+        this.child.randomItem();
         this.setState({});
     };
 
@@ -762,11 +967,13 @@ class FlashCards extends Component {
     };
 
     searchWordsMainLayoutSlideToggle = (event) => {
-        const falseOrTrue = this.getClosest(event.target,'direction-lang-and-search');
-        //console.log(event.target);
-        //console.log(this.getClosest(event.target,'direction-lang-and-search'));
-        if(!falseOrTrue){
-            this.setState({searchWordsMainSlideToggle: 'search-words-main-slide-toggle'});
+        if(!this.state.searchWordsMainSlideToggle) {
+            const falseOrTrue = this.getClosest(event.target,'direction-lang-and-search');
+            //console.log(event.target);
+            //console.log(this.getClosest(event.target,'direction-lang-and-search'));
+            if(!falseOrTrue){
+                this.setState({searchWordsMainSlideToggle: 'search-words-main-slide-toggle'});
+            }
         }
     };
 
@@ -838,14 +1045,19 @@ class FlashCards extends Component {
     componentWillMount(){
         dataJson.map(function (obj, i) {
             //console.log('x');
-            if(typeof obj.excludeID  === 'undefined') {
-                obj.excludeID = [];
+            if(typeof obj.youKnowID  === 'undefined') {
+                obj.youKnowID = [];
+                obj.youDontKnowID = [];
                 obj.dontKnowClick = 0;
             }
 
             if(getCookies('obj_exercise_cookie_' + i,'array') != null ) {
                 //alert(getCookies('obj_exercise_cookie_' + i,'array'));
-                obj.excludeID = getCookies('obj_exercise_cookie_' + i,'array');
+                obj.youKnowID = getCookies('obj_exercise_cookie_' + i,'array');
+            }
+            if(getCookies('obj_exercise_cookie_you_dont_know_' + i,'array') != null ) {
+                //alert(getCookies('obj_exercise_cookie_you_dont_know_' + i,'array'));
+                obj.youDontKnowID = getCookies('obj_exercise_cookie_you_dont_know_' + i,'array');
             }
             if(getCookies('obj_exercise_cookie_dk_click_' + i) != null) {
                 obj.dontKnowClick = parseInt(getCookies('obj_exercise_cookie_dk_click_' + i));
@@ -898,6 +1110,7 @@ class FlashCards extends Component {
         this.uniqueCategory(dataJson,false);
         let directionState = this.state.direction.split("|");
 
+        //console.log(dataJson);
         return (
             <Swipe
                 onSwipeStart={this.onSwipeStart}
@@ -1030,15 +1243,17 @@ class FlashCards extends Component {
                         </header>
                     </div>
                     <div className={'main-list-exercise'}>
+                        <ToRepeat that={this} ref={instance => { this.child = instance; }}  />
                         {this.global.uniqueCategoryArray.map(function (obj_category, j) {
                             return (
                                 <div className="category-box" key={j}>
+
                                     {obj_category && <h2 onClick={() => this.showCategory(j)}  className={'category-' + j + ' ' + (this.global.categoryActive[j]?'category-active':'')}>{obj_category} <span className="icon-down-open"></span></h2>}
                                     <ul className={'main-list-exercise-inset list-unstyled'}>
                                         {/* eslint-disable-next-line */}
                                         {dataJson.map(function (obj, i) {
                                             //console.log(obj);
-                                            let percent = Math.ceil(obj.excludeID.length*100/obj.data.length),
+                                            let percent = Math.ceil(obj.youKnowID.length*100/obj.data.length),
                                                 stylePercent1 = {
                                                     background: 'linear-gradient(to right, #2c8548 0%,#2c8548 ' + percent + '%,#974c49 ' + percent + '%,#974c49 100%)'
                                                 },
@@ -1051,15 +1266,15 @@ class FlashCards extends Component {
                                             if(this.state.langNameExercise(obj.category) === obj_category && obj.data.length) {
                                                 return (
                                                     <li key={i} className={"d-flex justify-content-between exercise-item-" + i}>
-                                                        <a href={'#flashcard' + i} style={stylePercent2} onClick={(e) => this.setExercise(e,i,false,false,j,(obj.excludeID.length!==obj.data.length))}>
+                                                        <a href={'#flashcard' + i} style={stylePercent2} onClick={(e) => this.setExercise(e,i,false,false,j,(obj.youKnowID.length!==obj.data.length))}>
                                                             {/*<span className="percent-border-top"></span>*/}
                                                             <span className="percent-pro" style={stylePercent1}></span>
                                                             <span className={"icon-random-card icon-random-card-" + j}></span>
-                                                            {obj.excludeID.length === obj.data.length && <span className="icon-ok"></span>}
-                                                            {this.state.langNameExercise(obj.name)} <i><span className="icon-up color-5">{obj.excludeID.length}/{obj.data.length} = {percent}</span> - <span className="icon-down color-17">{obj.dontKnowClick}</span></i>
+                                                            {obj.youKnowID.length === obj.data.length && <span className="icon-ok"></span>}
+                                                            {this.state.langNameExercise(obj.name)} <i><span className="icon-up color-5">{obj.youKnowID.length}/{obj.data.length} = {percent}</span> - <span className="icon-down color-17">{obj.youDontKnowID.length} ({obj.dontKnowClick})</span></i>
                                                         </a>
                                                         <div className="buttons-option d-flex flex-column">
-                                                            {(obj.excludeID.length !== 0 || obj.dontKnowClick !== 0) &&
+                                                            {(obj.youKnowID.length !== 0 || obj.dontKnowClick !== 0 || obj.youDontKnowID.length !== 0) &&
                                                                 <button className={'border-content-bottom button-reset '} title="Reset"><span className="reset-confirm" onClick={() => this.removeCookieExerciseId(false,i,obj)}>Reset</span><span className="icon-trash-empty" ></span></button>
                                                             }
                                                             <button className={'border-content-bottom button-list'} title="Show list" onClick={(e) => this.setExercise(e,i,false,false,j,false,'show-list')}><span className="icon-clipboard"></span></button>
@@ -1087,7 +1302,8 @@ class FlashCards extends Component {
                         <nav className={'nav-buttons ' + this.state.classHideNavButtons}>
                             {!this.state.classCheckOutMore?<button className="button-check-out" onClick={() => this.checkOut()}>{translate.buttonCheckOut}</button>:<button className="button-check-out">{translate.lottery}...</button>}
                             <button title={translate.buttonIKnow} className="button-i-know" onClick={() => this.iKnow(this.state.idItem)}><span className="icon-ok"></span></button>
-                            <button title={translate.buttonIDontKnow} className="button-i-dont-know" onClick={() => this.iDontKnow()}><span className="icon-cancel"></span></button>
+                            <button title={translate.buttonSimpleLotter} className="button-simple-lottery" onClick={() => this.simpleLottery()}><span className="icon-arrows-cw"></span></button>
+                            <button title={translate.buttonIDontKnow} className="button-i-dont-know" onClick={() => this.iDontKnow(this.state.idItem)}><span className="icon-cancel"></span></button>
                         </nav>
                     </div>
                     <footer className="main-footer">

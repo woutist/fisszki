@@ -10,6 +10,7 @@ export const setLanguage = (x) => {
                 buttonInfoCongratulationRestart: 'Start this exercise all over again',
                 buttonIKnow: 'I knew',
                 buttonIDontKnow: "I don't knew",
+                buttonSimpleLotter: 'Simple Lottery',
                 buttonCheckOut: 'Check out',
                 textSummary: 'Summary',
                 buttonEnableAutoVoice: 'Enable automatically voice',
@@ -17,8 +18,10 @@ export const setLanguage = (x) => {
                 buttonRestartProgress: 'Restart progress',
                 buttonCloseApplication: 'Close application',
                 yourPlatform: 'Your platform',
-                polish: 'Pl',
-                english: 'En',
+                polish: 'Polish',
+                english: 'English',
+                pl: 'Pl',
+                en: 'En',
                 abouts: 'Autor: semDesign<br />Contact: aleksander.nyczyk@gmail.com<br />Version: ',
                 gt: 'Google Translate',
                 privacy: 'Privacy',
@@ -29,7 +32,12 @@ export const setLanguage = (x) => {
                 searchOnThisPage: 'Search on this page',
                 changeDirectionLanguage: 'you can change the direction of translation: ',
                 found: 'found',
-                or: 'or'
+                or: 'or',
+                summary: 'Summary',
+                sentenceYouDidntKnow: 'You didn\'t know (at least once)',
+                sentenceNotAnswered: 'You have not answered yet',
+                sentenceYouKnew: 'You knew (or you learned)',
+                toRepeat: 'To repeat'
             };
             break;
         default: //pl
@@ -41,6 +49,7 @@ export const setLanguage = (x) => {
                 buttonInfoCongratulationRestart: 'Zacznij to ćwiczenie od nowa',
                 buttonIKnow: 'Wiedziałem/am',
                 buttonIDontKnow: "Nie wiedziałem/am",
+                buttonSimpleLotter: 'Zwykłe losowanie',
                 buttonCheckOut: 'Sprawdź',
                 textSummary: 'Podsumowanie',
                 buttonEnableAutoVoice: 'Włączaj automatycznie głos',
@@ -48,8 +57,10 @@ export const setLanguage = (x) => {
                 buttonRestartProgress: 'Restartuj postęp',
                 buttonCloseApplication: 'Zamknij aplikacje',
                 yourPlatform: 'Twoja platforma',
-                polish: 'Pl',
-                english: 'En',
+                polish: 'Polski',
+                english: 'Angielski',
+                pl: 'Pl',
+                en: 'En',
                 abouts: 'Autor: semDesign<br />Kontakt: aleksander.nyczyk@gmail.com<br />Wersja: ',
                 gt: 'Google Translator',
                 privacy: 'Prywatność',
@@ -60,7 +71,12 @@ export const setLanguage = (x) => {
                 searchOnThisPage: 'Szukaj na tej stronie',
                 changeDirectionLanguage: 'możesz zmienić kierunek tłumaczenia: ',
                 found: 'znaleziono',
-                or: 'albo'
+                or: 'albo',
+                summary: 'Podsumowanie',
+                sentenceYouDidntKnow: 'Nie wiedziałeś (przynajmniej raz)',
+                sentenceNotAnswered: 'Jeszcze nie odpowiadałeś',
+                sentenceYouKnew: 'Wiedziałeś (lub się nauczyłeś)',
+                toRepeat: 'Do powtórki'
             };
     }
 };

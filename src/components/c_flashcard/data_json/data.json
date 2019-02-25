@@ -287,7 +287,7 @@
       },
       {
         "_en": "occur",
-        "_pl": "zdarzać się "
+        "_pl": "zdarzać się, pojawiać"
       },
       {
         "_en": "term",
@@ -359,7 +359,7 @@
       },
       {
         "_en": "log",
-        "_pl": "kłoda"
+        "_pl": "kłoda, bela"
       },
       {
         "_en": "cotton",
@@ -519,7 +519,7 @@
       },
       {
         "_en": "cause",
-        "_pl": "przyczyna"
+        "_pl": "przyczyna, powód"
       },
       {
         "_en": "with",
@@ -4038,7 +4038,7 @@
       },
       {
         "_en": "sight",
-        "_pl": "wzrok"
+        "_pl": "wzrok, zobaczyć"
       },
       {
         "_en": "seat",
@@ -4064,6 +4064,102 @@
       "_en": "Other popular words"
     },
     "data": [
+      {
+        "_en": "apart",
+        "_pl": "niezależnie"
+      },
+      {
+        "_en": "independent",
+        "_pl": "niepodległy, niezależny"
+      },
+      {
+        "_en": "lock",
+        "_pl": "zamek (do drzwi)"
+      },
+      {
+        "_en": "ubearable",
+        "_pl": "nie do zniesienia"
+      },
+      {
+        "_en": "discard",
+        "_pl": "odzrucić"
+      },
+      {
+        "_en": "rookie",
+        "_pl": "debiutant, rekrut"
+      },
+      {
+        "_en": "deer",
+        "_pl": "jeleń"
+      },
+      {
+        "_en": "increas",
+        "_pl": "wzrasta"
+      },
+      {
+        "_en": "improve",
+        "_pl": "poprawiać"
+      },
+      {
+        "_en": "lazy",
+        "_pl": "leniwy"
+      },
+      {
+        "_en": "apologise",
+        "_pl": "przepraszać"
+      },
+      {
+        "_en": "promise",
+        "_pl": "obiecywać"
+      },
+      {
+        "_en": "advise",
+        "_pl": "doradzać"
+      },
+      {
+        "_en": "insist",
+        "_pl": "upierać, domagać"
+      },
+      {
+        "_en": "disagree",
+        "_pl": "nie zgadzać się"
+      },
+      {
+        "_en": "agree",
+        "_pl": "zgadzać się"
+      },
+      {
+        "_en": "refuse",
+        "_pl": "odrzucać, odpadki"
+      },
+      {
+        "_en": "whisper",
+        "_pl": "szeptać"
+      },
+      {
+        "_en": "reproduce",
+        "_pl": "odtworzyć"
+      },
+      {
+        "_en": "introduce",
+        "_pl": "przedstawiać, wprowadzać"
+      },
+      {
+        "_en": "imstead",
+        "_pl": "zamiast"
+      },
+      {
+        "_en": "couple",
+        "_pl": "para, kilka"
+      },
+      {
+        "_en": "divorce",
+        "_pl": "rozwód"
+      },
+      {
+        "_en": "roof",
+        "_pl": "dach"
+      },
       {
         "_en": "valuable",
         "_pl": "wartościowy"
@@ -4202,6 +4298,26 @@
       "_en": "Popular phrases"
     },
     "data": [
+      {
+        "_en": "Look after someone",
+        "_pl": "Opiekować się kimś"
+      },
+      {
+        "_en": "You go away",
+        "_pl": "Wyjdź / Odejdź"
+      },
+      {
+        "_en": "He goes away",
+        "_pl": "On wychodzi / Wyjeżdża"
+      },
+      {
+        "_en": "Take place",
+        "_pl": "Odbyć się / Mieć miejsce"
+      },
+      {
+        "_en": "Couple of minutes",
+        "_pl": "Kilka minut"
+      },
       {
         "_pl": "Być na bieżąco",
         "_en": "Keep up to date"
@@ -4891,7 +5007,7 @@
       },
       {
         "_pl": "Podziwiać ",
-        "_en": "Admire / Admired / Admirer "
+        "_en": "Admire / Admired / Admired "
       },
       {
         "_pl": "Przyznać ",
@@ -5692,7 +5808,7 @@
       },
       {
         "_en": "occur",
-        "_pl": "zdarzać się "
+        "_pl": "zdarzać się, pojawiać"
       },
       {
         "_en": "term",
@@ -5764,7 +5880,7 @@
       },
       {
         "_en": "log",
-        "_pl": "kłoda"
+        "_pl": "kłoda, bela"
       },
       {
         "_en": "cotton",
@@ -5936,7 +6052,7 @@
       },
       {
         "_en": "cause",
-        "_pl": "przyczyna"
+        "_pl": "przyczyna, powód"
       },
       {
         "_en": "with",
@@ -9513,7 +9629,7 @@
       },
       {
         "_en": "sight",
-        "_pl": "wzrok"
+        "_pl": "wzrok, zobaczyć"
       },
       {
         "_en": "seat",
@@ -10234,7 +10350,7 @@
       },
       {
         "_pl": "Podziwiać ",
-        "_en": "Admire / Admired / Admirer "
+        "_en": "Admire / Admired / Admired "
       },
       {
         "_pl": "Przyznać ",
@@ -11134,7 +11250,7 @@
       "_en": "Present Continuous - Teraźniejszy ciągły"
     },
     "description": {
-      "_pl": "<strong>konstrukcja</strong>: podmiot + am/is/are + 1 forma czasownika z końcówką - ing",
+      "_pl": "<strong>konstr.</strong>: podmiot + am/is/are + 1 forma czasownika z końcówką - ing",
       "_en": "-"
     },
     "data": [
@@ -11158,10 +11274,18 @@
       "_en": "Present Simple - Teraźniejszy prosty"
     },
     "description": {
-      "_pl": "<strong>konstrukcja</strong>: podmiot + 1 forma czasownika + s (dla 3 osoby liczby pojedynczej)",
+      "_pl": "<strong>Konstr.</strong>: podmiot + 1 forma czasownika + s (dla 3 osoby liczby pojedynczej)",
       "_en": "-"
     },
     "data": [
+      {
+        "_en": "I don't go away very often.",
+        "_pl": "Nie wychodzę często."
+      },
+      {
+        "_en": "He doesn't do anything to help.",
+        "_pl": "Nie robi nic aby pomóc."
+      },
       {
         "_pl": "Lubię spacerować po parku.",
         "_en": "I like to walk in the park."
@@ -11182,7 +11306,7 @@
       "_en": "Present Perfect - Przeszły"
     },
     "description": {
-      "_pl": "<strong>konstrukcja</strong>: podmiot + have/has + 3 forma czasownika",
+      "_pl": "<strong>Konstr.</strong>: podmiot + have/has + 3 forma czasownika",
       "_en": "-"
     },
     "data": [
@@ -11226,7 +11350,7 @@
       "_en": "Past Simple - Przeszły prosty"
     },
     "description": {
-      "_pl": "<strong>konstrukcja twierdząca</strong>: podmiot + 2 forma czasownika<br><strong>konstrukcja pytająca</strong>: did + podmit + 1 forma czasownika",
+      "_pl": "<strong>Konstr. twierdząca</strong>: podmiot + 2 forma czasownika<br><strong>Konstr. pytająca</strong>: did + podmit + 1 forma czasownika",
       "_en": "-"
     },
     "data": [
@@ -11270,7 +11394,7 @@
       "_en": "Past Continuous - Przeszły ciągły"
     },
     "description": {
-      "_pl": "<strong>konstrukcja</strong>: podmiot + was/were + 1 forma czasownika z końcówką - ing",
+      "_pl": "<strong>Konstr.</strong>: podmiot + was/were + 1 forma czasownika z końcówką - ing",
       "_en": "-"
     },
     "data": [
@@ -11286,7 +11410,7 @@
       "_en": "Future Simple - Przyszły prosty"
     },
     "description": {
-      "_pl": "<strong>konstrukcja</strong>: podmiot + will + 1 forma czasownika",
+      "_pl": "<strong>Konstr.</strong>: podmiot + will + 1 forma czasownika",
       "_en": "-"
     },
     "data": [
@@ -11302,7 +11426,7 @@
       "_en": "Future Continuous - Przyszły ciągły"
     },
     "description": {
-      "_pl": "<strong>konstrukcja</strong>: podmiot + will be + 1 forma czasownika z końcówką - ing",
+      "_pl": "<strong>Konstr.</strong>: podmiot + will be + 1 forma czasownika z końcówką - ing",
       "_en": "-"
     },
     "data": [

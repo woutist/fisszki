@@ -415,7 +415,7 @@ a {
   .preloader {
     background-color: $color3;
     color: $color1;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
@@ -1122,6 +1122,7 @@ a {
   .main-list-exercise {
     transition: all 300ms ease-in-out;
     overflow-y: hidden;
+    position: relative;
     .category-box {
       > h2 {
         position: relative;
@@ -1315,6 +1316,7 @@ a {
   }
 
   .nav-buttons {
+    display: flex;
     button {
       padding: 10px;
       color: $color1;
@@ -1323,24 +1325,29 @@ a {
       box-shadow: 0 0 1px rgba(0,0,0,.8);
       margin-bottom: 0;
       font-size: 1.125rem;
+      width: 100%;
       &:hover {
         opacity: .8;
       }
 
       &.button-check-out {
-        width: 100%;
         background-color: $color4;
         border-radius: 8px;
       }
       &.button-i-know {
-        width: calc(50% - 5px);
         margin-right: 5px;
         background-color: $color5;
         border-bottom-left-radius: 8px;
         border-top-left-radius: 8px;
       }
+      &.button-simple-lottery {
+        margin-right: 5px;
+        margin-left: 5px;
+        width: auto;
+        background-color: $color4;
+        //box-shadow: 0 0 1px rgba(0,0,0,.4);
+      }
       &.button-i-dont-know {
-        width: calc(50% - 5px);
         margin-left: 5px;
         background-color: $color17;
         border-bottom-right-radius: 8px;
@@ -1507,6 +1514,11 @@ a {
       box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
 
+      button {
+        width: 100%;
+        max-width: 340px;
+      }
+
       @media (max-width: $md) {
         min-height: $mobile-height;
         height: 100%;
@@ -1541,7 +1553,8 @@ a {
       }
     }
     .button-i-know,
-    .button-i-dont-know {
+    .button-i-dont-know,
+    .button-simple-lottery {
       display: none;
     }
     .flash-card {
@@ -1614,8 +1627,24 @@ a {
                 font-size: .6rem;
               }
               tr {
+                &.tr-header {
+                  background-color: rgba(0, 0, 0, .1);
+                  color: $color3;
+                  th {
+                    font-size: .9rem;
+                    font-weight: 700;
+                  }
+                }
+                &.check-no {
+                  background-color: rgba(78, 135, 200, 0.6);
+                  color: $color1;
+                }
                 &.check-ok {
-                  background-color: rgba(44, 133, 72,.4);
+                  background-color: rgba(44, 133, 72,.6);
+                  color: $color1;
+                }
+                &.check-you-dont-know {
+                  background-color: rgba(133, 47, 40, .6);
                   color: $color1;
                 }
                 th {
@@ -1646,8 +1675,9 @@ a {
         display: none;
       }
       .button-i-know,
-      .button-i-dont-know {
-        display: inline-block;
+      .button-i-dont-know,
+      .button-simple-lottery {
+        display: block;
       }
       .flash-card {
         .flip-container .flipper {
@@ -1702,14 +1732,16 @@ a {
       .icon-volume {
         margin: 0;
         display: inline-block;
-        transition: all 300ms ease-in-out;
+        //transition: all 300ms ease-in-out;
 
         background-color: transparent;
-        color: rgba(196, 133, 0, 1);
-        opacity: 1;
+        color: $color1; // rgba(196, 133, 0, 1);
+        opacity: .8;
         margin-right: 5px;
         text-shadow: 0 0 0 $color2, 0 0 0 $color2;
-
+        &:before {
+          margin: 0;
+        }
         &.line-disable {
           opacity: .2;
           position: relative;
@@ -1744,15 +1776,22 @@ a {
           width: 100%;
           font-size: 1.125rem;
           cursor: pointer;
+          text-align: center;
           &:last-child {
             margin-bottom: 0;
           }
           &:hover {
             .icon-volume {
-              opacity: .8;
+              //opacity: .6;
               &.line-disable {
                 opacity: .2;
               }
+            }
+          }
+          &:active {
+            .icon-volume {
+              opacity: 1;
+              color: rgba(196, 133, 0, 1);
             }
           }
           span {
@@ -1763,13 +1802,25 @@ a {
             }
           }
           > strong {
-            color: $color3;
+            color: $color1;
+            position: absolute;
+            left: 10px;
             vertical-align: middle;
             width: 26px;
             font-size: 85%;
             display: inline-block;
             opacity: .8;
             font-weight: 400;
+          }
+          &.paragraph-top {
+            strong {
+              top: 5px;
+            }
+          }
+          &.paragraph-bottom {
+            strong {
+              bottom: 8px;
+            }
           }
         }
         hr {
@@ -1803,8 +1854,8 @@ a {
         }
         .list-extends-links {
           position: absolute;
-          bottom: 8px;
-          right: 10px;
+          bottom: 2px;
+          right: 4px;
           button {
             font-size: .6rem;
             background-color: transparent;
