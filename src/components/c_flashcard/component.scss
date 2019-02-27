@@ -379,6 +379,129 @@ a {
   }
 }
 
+.module-flash-cards .main-list-exercise .block-to-repeat {
+  overflow-y: auto;
+  .main-list-exercise-inset.list-to-repeat {
+    overflow: visible;
+    > li {
+      background-color: rgba(255,255,255,.6);
+      margin: 0 0 8px;
+      overflow: hidden;
+
+      .buttons-to-repeat {
+        padding: 10px;
+        button {
+          margin: 0;
+          font-size: 1rem;
+        }
+        .button-i-know, .button-i-dont-know {
+          display: none;
+        }
+        .button-i-know {
+          margin-right: 5px;
+        }
+        .button-i-dont-know {
+          margin-left: 5px;
+        }
+      }
+
+      .flip-container {
+        perspective: 1000px;
+        padding: 0 10px;
+      }
+      ///* flip the pane when hovered */
+      //.flip-container:hover .flipper, .flip-container.hover .flipper {
+      //  transform: rotateY(180deg);
+      //}
+
+      .flip-container, .front, .back {
+        width: 100%;
+        height: 160px;
+
+      }
+
+      /* flip speed goes here */
+      .flipper {
+        transition: 0.6s;
+        transform-style: preserve-3d;
+
+        position: relative;
+      }
+
+      /* hide back of pane during swap */
+      .front, .back {
+        backface-visibility: hidden;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+
+        padding: 10px;
+        text-align: center;
+        color: $color1;
+        border: 5px solid #fff;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+
+      }
+
+      /* front pane, placed above back */
+      .front {
+        z-index: 2;
+        /* for firefox 31 */
+        transform: rotateY(0deg);
+        background-color: rgba(170, 38, 38, 0.5);
+      }
+
+      /* back, initially hidden pane */
+      .back {
+        transform: rotateY(180deg);
+        background-color: rgba(51, 135, 152, 0.5);
+      }
+
+      /* vertical */
+      .vertical.flip-container {
+        position: relative;
+      }
+
+      .vertical .back {
+        transform: rotateX(180deg);
+      }
+
+      .vertical.flip-container .flipper {
+        transform-origin: 100% 80px; /* half of height */
+      }
+
+      //&:hover,
+      &.li-active {
+        .vertical.flip-container .flipper {
+          transform: rotateX(-180deg);
+        }
+        .buttons-to-repeat {
+          .button-check-out {
+            display: none;
+          }
+          .button-i-know, .button-i-dont-know {
+            display: block;
+          }
+        }
+      }
+
+      hr {
+        margin: 8px 0;
+        //height: 1px;
+        //background-color: red;
+        border-color: $color1;
+        width: 100%;
+      }
+
+    }
+
+  }
+}
+
+
 .module-flash-cards {
   .bg-close {
     position: fixed;
@@ -1141,7 +1264,7 @@ a {
           transform: rotate(180deg);
 
         }
-        + ul {
+        + ul, + .block-to-repeat {
           opacity: 1;
           transition: all 300ms ease-in-out;
           max-height: 2000px;
@@ -1154,7 +1277,7 @@ a {
             top: 7px;
             transform: rotate(0);
           }
-          + ul {
+          + ul, + .block-to-repeat {
             max-height: 0;
             opacity: 0;
             overflow: hidden;
@@ -1225,7 +1348,7 @@ a {
       li {
         margin-bottom: 8px;
         font-size: 1rem;
-        a {
+        a, h4 {
           display: block;
           width: 100%;
           background-color: rgba(255,255,255,.4);
@@ -1254,6 +1377,11 @@ a {
             color: $color12;
             text-shadow: 0 0 0 $color0, 0 0 1px $color1;
           }
+        }
+        h4 {
+          min-height: auto;
+          background-color: transparent;
+          margin-bottom: 0;
         }
         .buttons-option {
           margin: 0 0 0 8px;

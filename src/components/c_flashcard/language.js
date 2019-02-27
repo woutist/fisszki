@@ -37,7 +37,9 @@ export const setLanguage = (x) => {
                 sentenceYouDidntKnow: 'You didn\'t know (at least once)',
                 sentenceNotAnswered: 'You have not answered yet',
                 sentenceYouKnew: 'You knew (or you learned)',
-                toRepeat: 'To repeat'
+                toRepeat: 'To repeat',
+                toggleToRepeatShow: 'The whole list to repeat',
+                toggleToRepeatHide: 'Lottery'
             };
             break;
         default: //pl
@@ -76,7 +78,9 @@ export const setLanguage = (x) => {
                 sentenceYouDidntKnow: 'Nie wiedziałeś (przynajmniej raz)',
                 sentenceNotAnswered: 'Jeszcze nie odpowiadałeś',
                 sentenceYouKnew: 'Wiedziałeś (lub się nauczyłeś)',
-                toRepeat: 'Do powtórki'
+                toRepeat: 'Do powtórki',
+                toggleToRepeatShow: 'Cała lista do powtórki',
+                toggleToRepeatHide: 'Loteria'
             };
     }
 };

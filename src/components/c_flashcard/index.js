@@ -23,7 +23,9 @@ class ToRepeat extends Component {
         super(props);
         this.state = {
             categoryActive: false,
-            idRand: 0
+            idRand: 0,
+            selected: {},
+            toggleRepeat: false
         };
     };
 
@@ -32,8 +34,10 @@ class ToRepeat extends Component {
         this.newId = 0;
         dataJson.map(function (obj1) {
             obj1.data.map(function (obj2, i2) {
-                if(obj1.youDontKnowID.includes(i2)) {
-                    this.newArrayId.push(this.newId++);
+                if(typeof obj1.youDontKnowID.includes === 'function') {
+                    if (obj1.youDontKnowID.includes(i2)) {
+                        this.newArrayId.push(this.newId++);
+                    }
                 }
             },this)
         },this);
@@ -85,44 +89,110 @@ class ToRepeat extends Component {
         console.log(dataJson[idE].youDontKnowID);
     };
 
+    toggleRepeat = () => {
+        this.setState({
+            toggleRepeat: this.state.toggleRepeat?false:true
+        });
+    };
+
+    checkOut = (id) => {
+        // setTimeout(function (that) {
+        //     let selected = that.state.selected;
+        //     if(that.idActive !== id) {
+        //         for(let i=0; i<that.newArrayId.length; i++) {
+        //             selected[i] = false;
+        //         }
+        //     }
+        //     that.idActive = id;
+        //     selected[id] = !selected[id];
+        //     that.setState({selected: selected});
+        // },2000,this);
+        let selected = this.state.selected;
+        if(this.idActive !== id) {
+            for(let i=0; i<this.newArrayId.length; i++) {
+                selected[i] = false;
+            }
+        }
+        this.idActive = id;
+        selected[id] = !selected[id];
+        this.setState({selected: selected});
+    };
+
     componentWillMount = () => {
         this.createArrayRandom();
         this.randomItem();
+        console.log('count items: ' + this.lengthItems);
     };
 
+    componentDidMount = () => {
+        const { that } = this.props;
+        // first category active
+        that.global.categoryActive[0] = !this.newArrayId.length?true:false;
+    };
+
+    lengthItems = 0;
+
     render() {
-        //const { that } = this.props;
         const Aux = props => props.children;
+        const { that } = this.props;
         console.log("render");
         return (
+            !this.newArrayId.length ||
             <div className="category-box">
-                {/*<h2 onClick={() => this.showCategory()}  className={'category-tr ' + (this.state.categoryActive?'category-active':'')}>{translate.toRepeat} <span className="icon-down-open"></span></h2>*/}
-                <ul className="main-list-exercise-inset list-unstyled">
-                    {dataJson.map(function (obj1, i1) {
-                        return (
-                            <Aux key={i1}>
-                                {/*{obj1.youDontKnowID.length}*/}
-                                {obj1.data.map(function (obj2, i2) {
-                                    this.t++;
-                                    // console.log(obj1.youDontKnowID);
-                                    if(obj1.youDontKnowID.includes(i2) ) {
-                                        this.ti++;
-                                        return (
-                                            (this.ti === this.state.idRand) && //this.randomItem()
-                                            <li id={"xc-" + i2} key={i2}>
-                                                <button onClick={() => this.randomItem()}>Lottery</button>
-                                                <h4>{obj1.category._pl} / {obj1.name._pl}</h4>
-                                                {(this.ti) + ' | ' +this.t + ' | ' + i1 + ' | ' + i2} | {obj2._en} => {obj2._pl} - count id: {obj1.youDontKnowID.length}
-                                                <button onClick={() => this.justIKnow(i1,i2)}>Just I know</button>
-                                            </li>
-                                        )
-                                    }
+                <h2 onClick={() => this.showCategory()}  className={'category-tr ' + (!this.state.categoryActive?'category-active':'')}>
+                    {translate.toRepeat}
+                    <span className="icon-down-open"></span>
+                </h2>
+                <div className="block-to-repeat">
+                    <button className="w-100 border-content-bottom" onClick={() => this.toggleRepeat()}>{this.state.toggleRepeat?translate.toggleToRepeatHide:translate.toggleToRepeatShow + ' (' + this.newArrayId.length + ')'}</button>
+                    <ul className="main-list-exercise-inset list-to-repeat list-unstyled">
+                        {dataJson.map(function (obj1, i1) {
+                            return (
 
-                                },this)}
-                            </Aux>
-                        )
-                    },this,this.t = -1,this.ti = -1)}
-                </ul>
+                                    obj1.data.map(function (obj2, i2) {
+                                        this.t++;
+                                        let t;
+                                        // console.log(obj1.youDontKnowID);
+                                        if(typeof obj1.youDontKnowID.includes === 'function') {
+                                            if (obj1.youDontKnowID.includes(i2)) {
+                                                this.ti++;
+                                                t = this.ti
+                                                return (
+                                                    (this.ti === this.state.idRand || this.state.toggleRepeat) && //this.randomItem()
+                                                    <li className={this.state.selected[t] ? 'li-active' : ''} id={"xc-" + i2} key={i2}>
+                                                        <h4>{that.state.activePL ? obj1.category._pl : obj1.category._en} / {that.state.activePL ? obj1.name._pl : obj1.name._en}</h4>
+                                                        <span className="d-none">{t} / {this.t} / {i1} / {i2} / {obj1.youDontKnowID.length}</span>
+
+                                                        <div className="flip-container vertical">
+                                                            <div className="flipper">
+                                                                <div
+                                                                    className="front d-flex align-items-center justify-content-center flex-column">
+                                                                    {(that.global.flashCardDirection === 'e->p') ? obj2._en : obj2._pl}
+                                                                </div>
+                                                                <div
+                                                                    className="back d-flex align-items-center justify-content-center flex-column">
+                                                                    {(that.global.flashCardDirection === 'e->p') ? obj2._en : obj2._pl}
+                                                                    <hr/>
+                                                                    <strong>{(that.global.flashCardDirection === 'e->p') ? obj2._pl : obj2._en}</strong>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="buttons-to-repeat nav-buttons">
+                                                            <button className="button-check-out" onClick={() => this.checkOut(t)}>{translate.buttonCheckOut}</button>
+                                                            <button className="button-i-know" onClick={() => this.justIKnow(i1, i2)}><span className="icon-ok"></span></button>
+                                                            {this.state.toggleRepeat?<button className="button-i-dont-know" onClick={() => this.checkOut(t)}><span className="icon-cancel"></span></button>:<button className="button-i-dont-know" onClick={() => this.randomItem()}><span className="icon-cancel"></span></button>}
+                                                        </div>
+                                                    </li>
+                                                )
+                                            }
+                                        }
+
+                                    },this)
+
+                            )
+                        },this,this.t = -1,this.ti = -1)}
+                    </ul>
+                </div>
             </div>
         )
     }
@@ -412,6 +482,7 @@ class FlashCards extends Component {
             version: '1.0.2',
             searchTime: {},
             soundSeparator: new Audio(SoundSeparator),
+            //toRepeatComponent: <ToRepeat that={this} ref={instance => { this.child = instance; }}  />,
             directionText: () => {
                 return (this.global.flashCardDirection === 'e->p') ? translate.en + ' | ' + translate.pl : translate.pl + ' | ' + translate.en
             }
@@ -947,7 +1018,7 @@ class FlashCards extends Component {
         this.setState({searchWords: event.target.value});
     };
 
-    searchWordsMainSlideToggle = (event) => {
+    searchWordsMainSlideToggle = () => {
         this.setState({searchWordsMainSlideToggle: this.state.searchWordsMainSlideToggle?'':'search-words-main-slide-toggle'})
     };
 
@@ -1100,7 +1171,7 @@ class FlashCards extends Component {
         };
 
         // first category active
-        this.global.categoryActive[0] = true;
+        //this.global.categoryActive[0] = true;
     };
 
     render() {

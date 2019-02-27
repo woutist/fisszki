@@ -330,6 +330,77 @@ a {
   .icon-random-card.icon-random-card-5:after {
     background-color: #983990; }
 
+.module-flash-cards .main-list-exercise .block-to-repeat {
+  overflow-y: auto; }
+  .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat {
+    overflow: visible; }
+    .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li {
+      background-color: rgba(255, 255, 255, 0.6);
+      margin: 0 0 8px;
+      overflow: hidden;
+      /* flip speed goes here */
+      /* hide back of pane during swap */
+      /* front pane, placed above back */
+      /* back, initially hidden pane */
+      /* vertical */ }
+      .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .buttons-to-repeat {
+        padding: 10px; }
+        .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .buttons-to-repeat button {
+          margin: 0;
+          font-size: 1rem; }
+        .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .buttons-to-repeat .button-i-know, .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .buttons-to-repeat .button-i-dont-know {
+          display: none; }
+        .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .buttons-to-repeat .button-i-know {
+          margin-right: 5px; }
+        .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .buttons-to-repeat .button-i-dont-know {
+          margin-left: 5px; }
+      .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .flip-container {
+        perspective: 1000px;
+        padding: 0 10px; }
+      .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .flip-container, .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .front, .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .back {
+        width: 100%;
+        height: 160px; }
+      .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .flipper {
+        transition: 0.6s;
+        transform-style: preserve-3d;
+        position: relative; }
+      .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .front, .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .back {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        text-align: center;
+        color: #fff;
+        border: 5px solid #fff;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+        border-radius: 8px; }
+      .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .front {
+        z-index: 2;
+        /* for firefox 31 */
+        transform: rotateY(0deg);
+        background-color: rgba(170, 38, 38, 0.5); }
+      .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .back {
+        transform: rotateY(180deg);
+        background-color: rgba(51, 135, 152, 0.5); }
+      .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .vertical.flip-container {
+        position: relative; }
+      .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .vertical .back {
+        transform: rotateX(180deg); }
+      .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .vertical.flip-container .flipper {
+        transform-origin: 100% 80px;
+        /* half of height */ }
+      .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li.li-active .vertical.flip-container .flipper {
+        transform: rotateX(-180deg); }
+      .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li.li-active .buttons-to-repeat .button-check-out {
+        display: none; }
+      .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li.li-active .buttons-to-repeat .button-i-know, .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li.li-active .buttons-to-repeat .button-i-dont-know {
+        display: block; }
+      .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li hr {
+        margin: 8px 0;
+        border-color: #fff;
+        width: 100%; }
+
 .module-flash-cards {
   padding: 0 10px;
   max-width: 860px;
@@ -838,16 +909,16 @@ a {
         right: 10px;
         transition: all 300ms ease-in-out;
         transform: rotate(180deg); }
-      .module-flash-cards .main-list-exercise .category-box > h2 + ul {
+      .module-flash-cards .main-list-exercise .category-box > h2 + ul, .module-flash-cards .main-list-exercise .category-box > h2 + .block-to-repeat {
         opacity: 1;
         transition: all 300ms ease-in-out;
         max-height: 2000px; }
-        .module-flash-cards .main-list-exercise .category-box > h2 + ul .button-list {
+        .module-flash-cards .main-list-exercise .category-box > h2 + ul .button-list, .module-flash-cards .main-list-exercise .category-box > h2 + .block-to-repeat .button-list {
           background: linear-gradient(to bottom, rgba(151, 135, 83, 0.3) 0%, rgba(151, 135, 83, 0.35) 50%, rgba(151, 135, 83, 0.3) 100%); }
       .module-flash-cards .main-list-exercise .category-box > h2:not(.category-active) .icon-down-open {
         top: 7px;
         transform: rotate(0); }
-      .module-flash-cards .main-list-exercise .category-box > h2:not(.category-active) + ul {
+      .module-flash-cards .main-list-exercise .category-box > h2:not(.category-active) + ul, .module-flash-cards .main-list-exercise .category-box > h2:not(.category-active) + .block-to-repeat {
         max-height: 0;
         opacity: 0;
         overflow: hidden; }
@@ -888,7 +959,7 @@ a {
       .module-flash-cards .main-list-exercise .main-list-exercise-inset li {
         margin-bottom: 8px;
         font-size: 1rem; }
-        .module-flash-cards .main-list-exercise .main-list-exercise-inset li a {
+        .module-flash-cards .main-list-exercise .main-list-exercise-inset li a, .module-flash-cards .main-list-exercise .main-list-exercise-inset li h4 {
           display: block;
           width: 100%;
           background-color: rgba(255, 255, 255, 0.4);
@@ -900,20 +971,24 @@ a {
           line-height: 1.6;
           min-height: 76px; }
           @media (max-width: 991.98px) {
-            .module-flash-cards .main-list-exercise .main-list-exercise-inset li a {
+            .module-flash-cards .main-list-exercise .main-list-exercise-inset li a, .module-flash-cards .main-list-exercise .main-list-exercise-inset li h4 {
               min-height: 66px; } }
-          .module-flash-cards .main-list-exercise .main-list-exercise-inset li a i {
+          .module-flash-cards .main-list-exercise .main-list-exercise-inset li a i, .module-flash-cards .main-list-exercise .main-list-exercise-inset li h4 i {
             font-size: 0.85rem;
             display: block;
             color: #191919;
             font-weight: 400;
             font-style: normal; }
-          .module-flash-cards .main-list-exercise .main-list-exercise-inset li a:hover {
+          .module-flash-cards .main-list-exercise .main-list-exercise-inset li a:hover, .module-flash-cards .main-list-exercise .main-list-exercise-inset li h4:hover {
             opacity: .85;
             text-decoration: none; }
-          .module-flash-cards .main-list-exercise .main-list-exercise-inset li a .icon-ok, .module-flash-cards .main-list-exercise .main-list-exercise-inset li a .icon-award {
+          .module-flash-cards .main-list-exercise .main-list-exercise-inset li a .icon-ok, .module-flash-cards .main-list-exercise .main-list-exercise-inset li a .icon-award, .module-flash-cards .main-list-exercise .main-list-exercise-inset li h4 .icon-ok, .module-flash-cards .main-list-exercise .main-list-exercise-inset li h4 .icon-award {
             color: #26984b;
             text-shadow: 0 0 0 rgba(255, 255, 255, 0.5), 0 0 1px #fff; }
+        .module-flash-cards .main-list-exercise .main-list-exercise-inset li h4 {
+          min-height: auto;
+          background-color: transparent;
+          margin-bottom: 0; }
         .module-flash-cards .main-list-exercise .main-list-exercise-inset li .buttons-option {
           margin: 0 0 0 8px; }
           .module-flash-cards .main-list-exercise .main-list-exercise-inset li .buttons-option button {
