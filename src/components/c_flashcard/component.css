@@ -375,6 +375,12 @@ a {
         border: 5px solid #fff;
         box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
         border-radius: 8px; }
+        .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .front > span, .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .back > span {
+          cursor: pointer;
+          margin-right: 5px; }
+          .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .front > span:active > span, .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .back > span:active > span {
+            color: rgba(208, 119, 35, 0.8);
+            text-shadow: 0 0 0 #000, 0 0 0 #000; }
       .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .front {
         z-index: 2;
         /* for firefox 31 */

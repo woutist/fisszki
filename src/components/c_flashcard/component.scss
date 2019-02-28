@@ -444,6 +444,17 @@ a {
         box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
 
+        > span {
+          cursor: pointer;
+          margin-right: 5px;
+          &:active {
+            > span {
+              color: $color10;
+              text-shadow: 0 0 0 $color2, 0 0 0 $color2;
+            }
+          }
+        }
+
       }
 
       /* front pane, placed above back */

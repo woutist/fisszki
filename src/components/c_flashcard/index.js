@@ -118,6 +118,35 @@ class ToRepeat extends Component {
         this.setState({selected: selected});
     };
 
+    buttonIKnow = (that,i1,i2,id) => {
+        // setTimeout(function (that,thatThis,i1,i2) {
+        //     that.state.enableAutoVoice && that.global.soundSeparator.play();
+        //     thatThis.voiceEnable = true;
+        //     thatThis.justIKnow(i1, i2);
+        // },300,that,this,i1,i2);
+        this.checkOut(id); ////
+        that.state.enableAutoVoice && !this.state.toggleRepeat && that.global.soundSeparator.play();
+        this.voiceEnable = true;
+        this.justIKnow(i1, i2);
+    };
+
+    buttonCheckOut = (t) => {
+        this.voiceEnable = true;
+        this.checkOut(t);
+    };
+
+    buttonIDontKnow_1 = (that,t) => {
+        that.state.enableAutoVoice && !this.state.toggleRepeat && that.global.soundSeparator.play();
+        this.voiceEnable = true;
+        this.checkOut(t)
+    };
+
+    buttonIDontKnow_2 = (that) => {
+        that.state.enableAutoVoice && !this.state.toggleRepeat && that.global.soundSeparator.play();
+        this.voiceEnable = true;
+        this.randomItem();
+    };
+
     componentWillMount = () => {
         this.createArrayRandom();
         this.randomItem();
@@ -132,10 +161,14 @@ class ToRepeat extends Component {
 
     lengthItems = 0;
 
+    // that.state.enableAutoVoice
+
     render() {
-        const Aux = props => props.children;
+        //const Aux = props => props.children;
         const { that } = this.props;
         console.log("render");
+        console.log(that.state.enableAutoVoice);
+
         return (
             !this.newArrayId.length ||
             <div className="category-box">
@@ -160,6 +193,13 @@ class ToRepeat extends Component {
                                                 return (
                                                     (this.ti === this.state.idRand || this.state.toggleRepeat) && //this.randomItem()
                                                     <li className={this.state.selected[t] ? 'li-active' : ''} id={"xc-" + i2} key={i2}>
+                                                        {(that.state.enableAutoVoice && this.voiceEnable && !this.state.toggleRepeat)?
+                                                            ((that.global.flashCardDirection === 'p->e')?
+                                                                that.translateVoice(!this.state.selected[t]?obj2._pl:obj2._en, !this.state.selected[t]?"pl":"en",that.state.online)
+                                                                :
+                                                                that.translateVoice(!this.state.selected[t]?obj2._en:obj2._pl, !this.state.selected[t]?"en":"pl",that.state.online))
+                                                        :''}
+                                                        {(this.voiceEnable = false)}
                                                         <h4>{that.state.activePL ? obj1.category._pl : obj1.category._en} / {that.state.activePL ? obj1.name._pl : obj1.name._en}</h4>
                                                         <span className="d-none">{t} / {this.t} / {i1} / {i2} / {obj1.youDontKnowID.length}</span>
 
@@ -167,20 +207,30 @@ class ToRepeat extends Component {
                                                             <div className="flipper">
                                                                 <div
                                                                     className="front d-flex align-items-center justify-content-center flex-column">
-                                                                    {(that.global.flashCardDirection === 'e->p') ? obj2._en : obj2._pl}
+                                                                    <span onClick={() => that.translateVoice((that.global.flashCardDirection === 'e->p') ? obj2._en : obj2._pl, (that.global.flashCardDirection === 'e->p')?"en":"pl",that.state.online) }>
+                                                                        <span className="icon-volume"></span> {(that.global.flashCardDirection === 'e->p') ? obj2._en : obj2._pl}
+                                                                    </span>
                                                                 </div>
                                                                 <div
                                                                     className="back d-flex align-items-center justify-content-center flex-column">
-                                                                    {(that.global.flashCardDirection === 'e->p') ? obj2._en : obj2._pl}
+                                                                    <span onClick={() => that.translateVoice((that.global.flashCardDirection === 'e->p') ? obj2._en : obj2._pl, (that.global.flashCardDirection === 'e->p')?"en":"pl",that.state.online) }>
+                                                                        <span className="icon-volume"></span> {(that.global.flashCardDirection === 'e->p') ? obj2._en : obj2._pl}
+                                                                    </span>
                                                                     <hr/>
-                                                                    <strong>{(that.global.flashCardDirection === 'e->p') ? obj2._pl : obj2._en}</strong>
+                                                                    <span onClick={() => that.translateVoice((that.global.flashCardDirection === 'e->p') ? obj2._pl : obj2._en, (that.global.flashCardDirection === 'e->p')?"pl":"en",that.state.online) }>
+                                                                        <span className="icon-volume"></span> <strong>{(that.global.flashCardDirection === 'e->p') ? obj2._pl : obj2._en}</strong>
+                                                                    </span>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div className="buttons-to-repeat nav-buttons">
-                                                            <button className="button-check-out" onClick={() => this.checkOut(t)}>{translate.buttonCheckOut}</button>
-                                                            <button className="button-i-know" onClick={() => this.justIKnow(i1, i2)}><span className="icon-ok"></span></button>
-                                                            {this.state.toggleRepeat?<button className="button-i-dont-know" onClick={() => this.checkOut(t)}><span className="icon-cancel"></span></button>:<button className="button-i-dont-know" onClick={() => this.randomItem()}><span className="icon-cancel"></span></button>}
+                                                            <button className="button-check-out" onClick={() => this.buttonCheckOut(t)}>{translate.buttonCheckOut}</button>
+                                                            <button className="button-i-know" onClick={() => this.buttonIKnow(that, i1, i2, t)}><span className="icon-ok"></span></button>
+                                                            {this.state.toggleRepeat?
+                                                                <button className="button-i-dont-know" onClick={() => this.buttonIDontKnow_1(that,t)}><span className="icon-cancel"></span></button>
+                                                                :
+                                                                <button className="button-i-dont-know" onClick={() => this.buttonIDontKnow_2(that)}><span className="icon-cancel"></span></button>
+                                                            }
                                                         </div>
                                                     </li>
                                                 )
