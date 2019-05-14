@@ -166,14 +166,14 @@ class ToRepeat extends Component {
     render() {
         //const Aux = props => props.children;
         const { that } = this.props;
-        console.log("render");
-        console.log(that.state.enableAutoVoice);
+        //console.log("render");
+        //console.log(that.state.enableAutoVoice);
 
         return (
             !this.newArrayId.length ||
             <div className="category-box">
-                <h2 onClick={() => this.showCategory()}  className={'category-tr ' + (!this.state.categoryActive?'category-active':'')}>
-                    {translate.toRepeat}
+                <h2 onClick={() => this.showCategory()}  className={'category-tr ' + (this.state.categoryActive?'category-active':'')}> {/* open box: !this.state.categoryActive */}
+                    {translate.toRepeat} (<strong>{this.newArrayId.length}</strong>)
                     <span className="icon-down-open"></span>
                 </h2>
                 <div className="block-to-repeat">
@@ -289,15 +289,66 @@ class Congratulation extends Component {
  * Sub component Exercises
  */
 class Exercises extends Component {
-    // constructor(props){
-    //     super(props);
-    //     this.state = {
-    //     };
-    // };
+    constructor(props){
+        super(props);
+        this.state = {
+            checkWriteOk: '',
+            checkWriteValue: '',
+            translateForAMoment: ''
+        };
+    };
     fullItemsList = (e,that,idC) => {
         that.setState({showListActice:true});
         that.setExercise(e,that.state.idExercise,false,false,idC,false,true);
-    }
+    };
+
+    t = {};
+    oneTimeVoice = true;
+    writeAndCheck = (e,text) => {
+        this.setState({checkWriteValue: e.target.value});
+        clearTimeout(this.writeAndCheck.t);
+        //// use something like trime, and small case letters, remove, removing brackets
+        this.writeAndCheck.t = setTimeout(function (etext,text,that) {
+            let t1 = etext.toLowerCase()
+                    .split(/\(.+\)/g).join("")
+                    .split(".").join("")
+                    .split("/").join('')
+                    .split(",").join('')
+                    .split(/\s+/).join(' ')
+                    .trim(),
+                t2 = text.toLowerCase()
+                    .split(/\(.+\)/g).join("")
+                    .split(".").join("")
+                    .split("/").join('')
+                    .split(",").join('')
+                    .split(/\s+/).join(' ')
+                    .trim();
+
+            console.log(t1 + '===' + t2);
+
+            if(t1 === t2) {
+                that.setState({checkWriteOk: 'check-write-ok'});
+                that.props.that.setState({ buttonWriteOK: 'check-write-ok-button'});
+            } else {
+                that.setState({checkWriteOk: ''});
+                that.props.that.setState({ buttonWriteOK: ''});
+            }
+        },600,e.target.value,text,this);
+        //console.log(text + ' ?= ' + e.target.value);
+    };
+
+    timeoutTranslateForAMoment;
+    showTranslateForAMoment = (trans) => {
+        this.setState({
+            translateForAMoment: trans
+        });
+        this.timeoutTranslateForAMoment = setTimeout(function (that) {
+            that.setState({
+                translateForAMoment: ''
+            });
+        },5000,this);
+    };
+
     render() {
         const { o, that, voice, idItem, checkvoice, flashCardDirection, idC} = this.props;
         const thisComponent = this;
@@ -310,12 +361,13 @@ class Exercises extends Component {
                             background: 'linear-gradient(to right, #2c8548 0%,#2c8548 ' + percent + '%,#974c49 ' + percent + '%,#974c49 100%)'
                         };
 
-                    if(voice && checkvoice !== 'no-voice') {
+                    if(voice && checkvoice !== 'no-voice' && thisComponent.oneTimeVoice !== idItem) {
                         if(flashCardDirection === 'p->e') {
                             that.translateVoice(obj._pl, "pl",that.state.online);
                         } else {
                             that.translateVoice(obj._en, "en",that.state.online);
                         }
+                        thisComponent.oneTimeVoice = idItem;
                     }
 
                     let description;
@@ -345,6 +397,27 @@ class Exercises extends Component {
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
                                                     <span className={obj._pl.length>sizeText?'normal-size':'large-size'}>{obj._pl}</span>
                                                 </p>
+                                                <hr />
+                                                <input
+                                                    type="text"
+                                                    className={"write-and-check " + thisComponent.state.checkWriteOk}
+                                                    placeholder={translate.TryToWriteATranslate}
+                                                    value={thisComponent.state.checkWriteValue}
+                                                    onChange={(e) => thisComponent.writeAndCheck(e,obj._en)}
+                                                />
+                                                {(obj._en.indexOf('(') > -1 && obj._en.indexOf(')') > -1)?
+                                                    <div className={"additional-options"}>
+                                                        <p><span>{translate.additionally}:</span> {obj._en.match(/\((.*)\)/)[0]}</p>
+                                                    </div>
+                                                    : ''
+                                                }
+                                                {thisComponent.state.translateForAMoment ?
+                                                    <p className={"correct-show-answer"}>{thisComponent.state.translateForAMoment}</p>
+                                                    :
+                                                    <input type={"button"} className={"button-show-answer"}
+                                                           value={translate.showAnswer}
+                                                           onClick={() => thisComponent.showTranslateForAMoment(obj._en)}/>
+                                                }
                                             </div>
                                             <div className={'back ' + centerClass}>
                                                 <p className="paragraph-top" onClick={() => that.translateVoice(obj._pl, "pl",that.state.online) }>
@@ -375,7 +448,29 @@ class Exercises extends Component {
                                                 <p className="paragraph-top"  onClick={() => that.translateVoice(obj._en, "en", that.state.online)}>
                                                     <strong>{translate.english}</strong>
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
-                                                    <span className={obj._en.length>sizeText?'normal-size':'large-size'} >{obj._en}</span></p>
+                                                    <span className={obj._en.length>sizeText?'normal-size':'large-size'} >{obj._en}</span>
+                                                </p>
+                                                <hr />
+                                                <input
+                                                    type="text"
+                                                    className={"write-and-check " + thisComponent.state.checkWriteOk}
+                                                    placeholder={translate.TryToWriteATranslate}
+                                                    value={thisComponent.state.checkWriteValue}
+                                                    onChange={(e) => thisComponent.writeAndCheck(e,obj._pl)}
+                                                />
+                                                {(obj._pl.indexOf('(') > -1 && obj._pl.indexOf(')') > -1)?
+                                                    <div className={"additional-options"}>
+                                                        <p><span>{translate.additionally}:</span> {obj._pl.match(/\((.*)\)/)[0]}</p>
+                                                    </div>
+                                                    : ''
+                                                }
+                                                {thisComponent.state.translateForAMoment ?
+                                                    <p className={"correct-show-answer"}>{thisComponent.state.translateForAMoment}</p>
+                                                    :
+                                                    <input type={"button"} className={"button-show-answer"}
+                                                           value={translate.showAnswer}
+                                                           onClick={() => thisComponent.showTranslateForAMoment(obj._pl)}/>
+                                                }
                                             </div>
                                             <div className={'back ' + centerClass}>
                                                 <p className="paragraph-top"  onClick={() => that.translateVoice(obj._en, "en",that.state.online)}>
@@ -426,11 +521,16 @@ class ExercisesList extends Component {
     };
     items = (i,o,that,obj,check,flashCardDirection) => {
         // const Aux = props => props.children;
+        let hrefGT = (flashCardDirection !== 'p->e')?"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en:"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl;
         return (
 
             <tr key={i} className={"list-container " + check}>
                 <th>
-                    {i + 1}
+                    <small>{i + 1}</small>
+
+                    <button onClick={(e) => that.openHref(e,hrefGT)} className="google-translator" target='blank_'>
+                        <span className="icon-gt"></span>
+                    </button>
                 </th>
                 <td onClick={() => that.translateVoice((flashCardDirection === 'p->e')?obj._pl:obj._en, (flashCardDirection === 'p->e')?"pl":"en", that.state.online)}>
                     <span className={'icon-volume ' + (that.state.online ? '' : 'line-disable')}></span>
@@ -567,6 +667,8 @@ class FlashCards extends Component {
             resultsSearch: null,
             resultsSearchCount: 0,
             searchWordsMainSlideToggle: '',
+            buttonWriteOK: '',
+            infoFull: '',
             langNameExercise: (j,l=this.global.lang) => {
                 switch (l) {
                     case 'en': return j._en;
@@ -639,12 +741,13 @@ class FlashCards extends Component {
             if(o.youKnowID.length === o.data.length) {
                 return <Congratulation that={that} idC={idC} ide={idE} />;
             } else {
-                return <Exercises o={o} that={that} idC={idC} idItem={temp_idE} flashCardDirection={that.global.flashCardDirection} checkvoice={voiceOff} voice={that.state.enableAutoVoice} />;
+                return <Exercises o={o} that={that} idC={idC} idItem={temp_idE} flashCardDirection={that.global.flashCardDirection} checkvoice={voiceOff} voice={that.state.enableAutoVoice} ref={instance => { this.childExercises = instance; }} />;
             }
         }
     };
 
     setExercise = (event,idE,idForce,voiceOff,idC,closeCloude,showList) => {
+
         let temp_idE, o = dataJson[idE];
         this.global.idC = idC;
         if(idForce) {
@@ -728,7 +831,20 @@ class FlashCards extends Component {
         if(event) event.preventDefault();
     };
 
+    clearChildExerciseAlias = () => {
+        this.childExercises.setState({
+            checkWriteOk: '',
+            checkWriteValue: '',
+            translateForAMoment: ''
+        });
+        clearTimeout(this.childExercises.timeoutTranslateForAMoment);
+        this.setState({
+            buttonWriteOK: ''
+        });
+    };
+
     changeDirection = (event) => {
+
         if(this.global.flashCardDirection === 'p->e') {
             setCookies('flashcards_cookie', 'e->p');
             this.global.flashCardDirection = 'e->p';
@@ -743,6 +859,7 @@ class FlashCards extends Component {
         });
 
         if(this.state.idExercise > -1) {
+            this.clearChildExerciseAlias();
             this.setExercise(event,this.state.idExercise,this.state.idItem,false,this.global.idC,false,this.state.showListActice);
         }
         if(this.state.resultsSearch !== null) {
@@ -811,6 +928,9 @@ class FlashCards extends Component {
     };
 
     iKnow = (idI) => {
+
+        this.clearChildExerciseAlias();
+
         if(this.state.idExercise > -1) {
             const o = dataJson;
             if(typeof o[this.state.idExercise].youKnowID !== 'object') {
@@ -832,6 +952,9 @@ class FlashCards extends Component {
     };
 
     iDontKnow = (idI) => {
+
+        this.clearChildExerciseAlias();
+
         if(this.state.idExercise > -1) {
             const o = dataJson;
 
@@ -857,6 +980,9 @@ class FlashCards extends Component {
     };
 
     simpleLottery = () => {
+
+        this.clearChildExerciseAlias();
+
         if(this.state.idExercise > -1) {
             const o = dataJson;
             this.setState({classCheckOut: ''});
@@ -872,6 +998,7 @@ class FlashCards extends Component {
     checkOut = () => {
         //console.log(idExercise + ' / ' + idItem + ' / ' + flashCardDirection); // left = polish, right = english
         //console.log(dataJson[idExercise].data[idItem]._en);
+
         if(this.state.enableAutoVoice) {
             setTimeout(function (that) {
                 if(that.global.flashCardDirection === 'p->e') {
@@ -885,7 +1012,10 @@ class FlashCards extends Component {
         this.setState({
             classCheckOut: 'check-out-card',
             classCheckOutMore: 'check-out-card-more'
-        })
+        });
+        this.childExercises.setState({
+            checkWriteOk: ''
+        });
     };
 
     removeCookieExerciseId = (event,ide,o) => {
@@ -1163,6 +1293,14 @@ class FlashCards extends Component {
         },400,this);
     };
 
+    infoFull = () => {
+        if(this.state.infoFull) {
+            this.setState({infoFull:''});
+        } else {
+            this.setState({infoFull:'category-active'});
+        }
+    };
+
     componentWillMount(){
         dataJson.map(function (obj, i) {
             //console.log('x');
@@ -1364,12 +1502,16 @@ class FlashCards extends Component {
                         </header>
                     </div>
                     <div className={'main-list-exercise'}>
+                        <div className="category-box">
+                            <p className={"title-style-text category-info " + this.state.infoFull} onClick={() => this.infoFull()}>{this.state.infoFull?translate.infoDescription:(translate.infoDescription.substr(0, 49) + '...')} {!this.state.infoFull || <a href="mailto:aleksander.nyczyk@gmail.com" onClick={(e) => this.openHref(e,"mailto:aleksander.nyczyk@gmail.com")} >e-mail</a>}<span className="icon-down-open"></span></p>
+                        </div>
                         <ToRepeat that={this} ref={instance => { this.child = instance; }}  />
                         {this.global.uniqueCategoryArray.map(function (obj_category, j) {
                             return (
                                 <div className="category-box" key={j}>
 
                                     {obj_category && <h2 onClick={() => this.showCategory(j)}  className={'category-' + j + ' ' + (this.global.categoryActive[j]?'category-active':'')}>{obj_category} <span className="icon-down-open"></span></h2>}
+
                                     <ul className={'main-list-exercise-inset list-unstyled'}>
                                         {/* eslint-disable-next-line */}
                                         {dataJson.map(function (obj, i) {
@@ -1421,8 +1563,8 @@ class FlashCards extends Component {
                         </div>
 
                         <nav className={'nav-buttons ' + this.state.classHideNavButtons}>
-                            {!this.state.classCheckOutMore?<button className="button-check-out" onClick={() => this.checkOut()}>{translate.buttonCheckOut}</button>:<button className="button-check-out">{translate.lottery}...</button>}
-                            <button title={translate.buttonIKnow} className="button-i-know" onClick={() => this.iKnow(this.state.idItem)}><span className="icon-ok"></span></button>
+                            {!this.state.classCheckOutMore?<button className={"button-check-out " + this.state.buttonWriteOK} onClick={() => this.checkOut()}>{translate.buttonCheckOut}</button>:<button className="button-check-out">{translate.lottery}...</button>}
+                            <button title={translate.buttonIKnow} className="button-i-know" onClick={() => this.iKnow(this.state.idItem)}><span className="icon-ok"></span>{' ' + (this.state.buttonWriteOK?translate.buttonCheckOutToNext:'')}</button>
                             <button title={translate.buttonSimpleLotter} className="button-simple-lottery" onClick={() => this.simpleLottery()}><span className="icon-arrows-cw"></span></button>
                             <button title={translate.buttonIDontKnow} className="button-i-dont-know" onClick={() => this.iDontKnow(this.state.idItem)}><span className="icon-cancel"></span></button>
                         </nav>

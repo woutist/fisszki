@@ -31,7 +31,7 @@
       },
       {
         "_en": "shore",
-        "_pl": "wybrzeże, brzeg"
+        "_pl": "wybrzeże (brzeg)"
       },
       {
         "_en": "colony",
@@ -59,7 +59,7 @@
       },
       {
         "_en": "tie",
-        "_pl": "wiązać, krawat"
+        "_pl": "wiązać (krawat)"
       },
       {
         "_en": "favor",
@@ -75,11 +75,11 @@
       },
       {
         "_en": "major",
-        "_pl": "poważny, główny"
+        "_pl": "poważny (główny)"
       },
       {
         "_en": "post",
-        "_pl": "stanowisko, wysyłać pocztą"
+        "_pl": "wysyłać pocztą (słupek, stanowisko)"
       },
       {
         "_en": "fresh",
@@ -123,11 +123,11 @@
       },
       {
         "_en": "allow",
-        "_pl": "dopuszczać, pozwolić"
+        "_pl": "pozwolić (dopuszczać)"
       },
       {
         "_en": "share",
-        "_pl": "dzielić, udostępniać"
+        "_pl": "dzielić (udostępniać)"
       },
       {
         "_en": "print",
@@ -171,7 +171,7 @@
       },
       {
         "_en": "current",
-        "_pl": "obecny, prąd"
+        "_pl": "obecny (prąd)"
       },
       {
         "_en": "bar",
@@ -179,7 +179,7 @@
       },
       {
         "_en": "lift",
-        "_pl": "winda, wyciąg "
+        "_pl": "winda (wyciąg)"
       },
       {
         "_en": "offer",
@@ -215,7 +215,7 @@
       },
       {
         "_en": "instant",
-        "_pl": "natychmiastowy, nagły"
+        "_pl": "natychmiastowy (nagły)"
       },
       {
         "_en": "hat",
@@ -266,7 +266,7 @@
         "_pl": "wróg"
       },
       {
-        "_en": "particular, special",
+        "_en": "particular (special, especial)",
         "_pl": "szczególny"
       },
       {
@@ -287,7 +287,7 @@
       },
       {
         "_en": "occur",
-        "_pl": "zdarzać się, pojawiać"
+        "_pl": "pojawiać (zdarzać się)"
       },
       {
         "_en": "term",
@@ -303,7 +303,7 @@
       },
       {
         "_en": "speech",
-        "_pl": "mowa, przemówienie"
+        "_pl": "mowa (przemówienie)"
       },
       {
         "_en": "wife",
@@ -359,7 +359,7 @@
       },
       {
         "_en": "log",
-        "_pl": "kłoda, bela"
+        "_pl": "kłoda (bela, logować się)"
       },
       {
         "_en": "cotton",
@@ -367,7 +367,7 @@
       },
       {
         "_en": "meant",
-        "_pl": "znaczył - znaczyć (w czasię przeszłym)"
+        "_pl": "znaczył"
       },
       {
         "_en": "born",
@@ -423,7 +423,7 @@
       },
       {
         "_en": "through",
-        "_pl": "przez, poprzez, dzięki (czemuś)"
+        "_pl": "przez (poprzez, dzięki czemuś)"
       },
       {
         "_en": "and",
@@ -431,15 +431,15 @@
       },
       {
         "_en": "just",
-        "_pl": "właśnie, tylko"
+        "_pl": "właśnie (tylko)"
       },
       {
         "_en": "a",
         "_pl": "(stawiane przed rzeczownikiem zaczynającym się spółgłoską)"
       },
       {
-        "_en": "form, shape",
-        "_pl": "forma"
+        "_en": "form (shape)",
+        "_pl": "forma (kształt)"
       },
       {
         "_en": "in",
@@ -459,7 +459,7 @@
       },
       {
         "_en": "great",
-        "_pl": "świetnie, wspaniale"
+        "_pl": "świetnie (wspaniale)"
       },
       {
         "_en": "think",
@@ -475,7 +475,7 @@
       },
       {
         "_en": "that",
-        "_pl": "że, ten, to"
+        "_pl": "że (ten, to)"
       },
       {
         "_en": "help",
@@ -495,7 +495,7 @@
       },
       {
         "_en": "line",
-        "_pl": "linia, kolejka (np. w sklepie)"
+        "_pl": "linia (kolejka np. w sklepie)"
       },
       {
         "_en": "for",
@@ -519,7 +519,7 @@
       },
       {
         "_en": "cause",
-        "_pl": "przyczyna, powód"
+        "_pl": "przyczyna (powód)"
       },
       {
         "_en": "with",
@@ -531,11 +531,11 @@
       },
       {
         "_en": "as",
-        "_pl": "tak jak, kiedy "
+        "_pl": "tak jak (kiedy)"
       },
       {
         "_en": "mean",
-        "_pl": "oznaczać, znaczyć"
+        "_pl": "oznaczać (znaczyć)"
       },
       {
         "_en": "I",
@@ -559,7 +559,7 @@
       },
       {
         "_en": "right",
-        "_pl": "prawy, racja"
+        "_pl": "prawy (racja)"
       },
       {
         "_en": "be",
@@ -572,7 +572,7 @@
 
       {
         "_en": "at",
-        "_pl": "w, przy"
+        "_pl": "w (u, przy)"
       },
       {
         "_en": "old",
@@ -584,7 +584,7 @@
       },
       {
         "_en": "too",
-        "_pl": "także "
+        "_pl": "także (zbyt)"
       },
       {
         "_en": "have",
@@ -604,7 +604,7 @@
       },
       {
         "_en": "from",
-        "_pl": "od, z"
+        "_pl": "od (z)"
       },
       {
         "_en": "does",
@@ -612,15 +612,15 @@
       },
       {
         "_en": "or",
-        "_pl": "lub, albo"
+        "_pl": "lub (albo)"
       },
       {
         "_en": "set",
-        "_pl": "zestaw, komplet, osadzony"
+        "_pl": "ustawiać (zestaw, komplet, osadzony)"
       },
       {
         "_en": "had",
-        "_pl": "miał "
+        "_pl": "miał"
       },
       {
         "_en": "three",
@@ -670,7 +670,7 @@
       },
       {
         "_en": "some",
-        "_pl": "kilka, trochę"
+        "_pl": "kilka (trochę)"
       },
       {
         "_en": "small",
@@ -686,7 +686,7 @@
       },
       {
         "_en": "can",
-        "_pl": "umieć"
+        "_pl": "mieć (umieć)"
       },
       {
         "_en": "put",
@@ -698,7 +698,7 @@
       },
       {
         "_en": "home",
-        "_pl": "dom, ojczyzna"
+        "_pl": "dom (ojczyzna)"
       },
       {
         "_en": "other",
@@ -730,7 +730,7 @@
       },
       {
         "_en": "large",
-        "_pl": "olbrzymi"
+        "_pl": "duży"
       },
 
 
@@ -743,7 +743,7 @@
       },
       {
         "_en": "spell",
-        "_pl": "zaklęcie, literować"
+        "_pl": "zaklęcie (literować)"
       },
       {
         "_en": "up",
@@ -759,7 +759,7 @@
       },
       {
         "_en": "even",
-        "_pl": "nawet, parzysty"
+        "_pl": "nawet (parzysty)"
       },
       {
         "_en": "your",
@@ -791,11 +791,11 @@
       },
       {
         "_en": "big",
-        "_pl": "duży, wielki"
+        "_pl": "duży (wielki)"
       },
       {
         "_en": "each",
-        "_pl": "każdy, poszczególny"
+        "_pl": "każdy (poszczególny)"
       },
       {
         "_en": "high",
@@ -815,7 +815,7 @@
       },
       {
         "_en": "follow",
-        "_pl": "śledzić, podążać"
+        "_pl": "śledzić (podążać)"
       },
 
 
@@ -827,7 +827,7 @@
       },
       {
         "_en": "act",
-        "_pl": "działać, akt"
+        "_pl": "działać (akt)"
       },
       {
         "_en": "their",
@@ -863,7 +863,7 @@
       },
       {
         "_en": "way",
-        "_pl": "sposób, droga"
+        "_pl": "sposób (droga)"
       },
       {
         "_en": "went",
@@ -883,19 +883,19 @@
       },
       {
         "_en": "kind",
-        "_pl": "rodzaj, uprzejmy"
+        "_pl": "rodzaj (uprzejmy)"
       },
       {
         "_en": "then",
-        "_pl": "następnie, potem"
+        "_pl": "następnie (potem)"
       },
       {
-        "_en": "off, I am off",
-        "_pl": "poza, mam wolne w pracy"
+        "_en": "off (I am off)",
+        "_pl": "poza (mam wolne w pracy)"
       },
       {
         "_en": "them",
-        "_pl": "ich, im"
+        "_pl": "ich (im)"
       },
       {
         "_en": "need",
@@ -911,11 +911,11 @@
       },
       {
         "_en": "house",
-        "_pl": "dom, budynek"
+        "_pl": "dom (budynek)"
       },
       {
         "_en": "wardrobe",
-        "_pl": "szafa, garderoba"
+        "_pl": "szafa (garderoba)"
       },
       {
         "_en": "picture",
@@ -982,7 +982,7 @@
         "_pl": "widzieć"
       },
       {
-        "_en": "close, near",
+        "_en": "close (near)",
         "_pl": "blisko"
       },
 
@@ -1002,7 +1002,7 @@
       },
       {
         "_en": "self",
-        "_pl": "swoje, samego siębie"
+        "_pl": "swoje (samego siębie)"
       },
       {
         "_en": "has",
@@ -1026,7 +1026,7 @@
       },
       {
         "_en": "head",
-        "_pl": "głowa, główny"
+        "_pl": "głowa (główny)"
       },
       {
         "_en": "day",
@@ -1038,7 +1038,7 @@
       },
       {
         "_en": "could",
-        "_pl": "móc, mógłbyś"
+        "_pl": "mógłby"
       },
       {
         "_en": "own",
@@ -1054,7 +1054,7 @@
       },
       {
         "_en": "come",
-        "_pl": "przychodzić, przyjeżdżać"
+        "_pl": "przychodzić (przyjeżdżać)"
       },
       {
         "_en": "should",
@@ -1066,7 +1066,7 @@
       },
       {
         "_en": "country",
-        "_pl": "kraj, państwo, wieś"
+        "_pl": "kraj (państwo, wieś)"
       },
       {
         "_en": "number",
@@ -1178,7 +1178,7 @@
       },
       {
         "_en": "state",
-        "_pl": "stan, państwo"
+        "_pl": "stan (państwo)"
       },
       {
         "_en": "down",
@@ -1190,7 +1190,7 @@
       },
       {
         "_en": "side",
-        "_pl": "strona, bok"
+        "_pl": "strona (bok)"
       },
       {
         "_en": "eye",
@@ -1359,7 +1359,7 @@
         "_pl": "(przeczenie do not nie rób i operator w present simple w zdaniach przeczących)"
       },
       {
-        "_en": "(he) came",
+        "_en": "came",
         "_pl": "przyjechał, przybył"
       },
       {
@@ -1991,7 +1991,7 @@
       },
       {
         "_en": "leave",
-        "_pl": "opuścić, wychodzić "
+        "_pl": "opuścić, wychodzić, pozostawić"
       },
       {
         "_en": "clear",
@@ -2111,7 +2111,7 @@
       },
       {
         "_en": "object",
-        "_pl": "obiekt, przedmiot"
+        "_pl": "obiekt (przedmiot)"
       },
       {
         "_en": "half",
@@ -2131,7 +2131,7 @@
       },
       {
         "_en": "order",
-        "_pl": "porządek, zamówienie"
+        "_pl": "porządek (zamówienie)"
       },
       {
         "_en": "deep",
@@ -2167,11 +2167,11 @@
       },
       {
         "_en": "system",
-        "_pl": "system, układ"
+        "_pl": "system (układ)"
       },
       {
         "_en": "told",
-        "_pl": "powiedział - powiedzieć (w czasię przeszłym)"
+        "_pl": "powiedział"
       },
       {
         "_en": "busy",
@@ -2179,7 +2179,7 @@
       },
       {
         "_en": "knew",
-        "_pl": "widzieć"
+        "_pl": "wiedziałem"
       },
       {
         "_en": "test",
@@ -2191,7 +2191,7 @@
       },
       {
         "_en": "record",
-        "_pl": "zapis, nagrać, płyta"
+        "_pl": "zapis (nagrać, płyta)"
       },
       {
         "_en": "since",
@@ -2235,7 +2235,7 @@
       },
       {
         "_en": "heard",
-        "_pl": "słyszał - usłyszeć (w czasię przeszłym)"
+        "_pl": "słyszał (usłyszał)"
       },
       {
         "_en": "stead",
@@ -2287,7 +2287,7 @@
       },
       {
         "_en": "ran",
-        "_pl": "biegł - biegać (w czasię przeszłym)"
+        "_pl": "biegł (pobiegł)"
       },
       {
         "_en": "five",
@@ -3046,7 +3046,7 @@
       },
       {
         "_en": "kept",
-        "_pl": "(trzymany i trzymać w czasię perfect)"
+        "_pl": "trzymane"
       },
       {
         "_en": "melody",
@@ -3074,7 +3074,7 @@
       },
       {
         "_en": "receive",
-        "_pl": "otrzymać"
+        "_pl": "otrzymać (odbierać)"
       },
       {
         "_en": "job",
@@ -3417,7 +3417,7 @@
         "_pl": "bank"
       },
       {
-        "_en": "result",
+        "_en": "score | result",
         "_pl": "wynik"
       },
       {
@@ -3686,7 +3686,7 @@
       },
       {
         "_en": "hit",
-        "_pl": "uderzać"
+        "_pl": "trafiać, uderzać"
       },
       {
         "_en": "skill",
@@ -3754,7 +3754,7 @@
       },
       {
         "_en": "match",
-        "_pl": "pasować"
+        "_pl": "pasować, mecz"
       },
       {
         "_en": "agree",
@@ -4030,7 +4030,7 @@
       },
       {
         "_en": "fear",
-        "_pl": "obawiać się"
+        "_pl": "strach (obawiać się)"
       },
       {
         "_en": "double",
@@ -4065,6 +4065,432 @@
     },
     "data": [
       {
+        "_en": "betray",
+        "_pl": "zdrada"
+      },
+      {
+        "_en": "soap",
+        "_pl": "mydło"
+      },
+      {
+        "_en": "appointment",
+        "_pl": "spotkanie"
+      },
+      {
+        "_en": "principal",
+        "_pl": "dyrektor"
+      },
+      {
+        "_en": "insilt",
+        "_pl": "zniewaga, docinka"
+      },
+      {
+        "_en": "suspend",
+        "_pl": "zawieszać (wstrzymywać)"
+      },
+      {
+        "_en": "courage",
+        "_pl": "odwaga"
+      },
+      {
+        "_en": "honest",
+        "_pl": "szczery"
+      },
+      {
+        "_en": "nap",
+        "_pl": "drzemka"
+      },
+      {
+        "_en": "advantage",
+        "_pl": "korzyść (walor, zaleta)"
+      },
+      {
+        "_en": "oppose",
+        "_pl": "sprzeciwiać się"
+      },
+      {
+        "_en": "inflatable",
+        "_pl": "nadmuchiwać"
+      },
+      {
+        "_en": "get onto",
+        "_pl": "wsiąść (zająć się)"
+      },
+      {
+        "_en": "piece",
+        "_pl": "kawałek (np. wycinek popieru)"
+      },
+      {
+        "_en": "napkin",
+        "_pl": "serwetka"
+      },
+      {
+        "_en": "athlet",
+        "_pl": "sportowiec"
+      },
+      {
+        "_en": "slippers",
+        "_pl": "kapcie"
+      },
+      {
+        "_en": "prompt",
+        "_pl": "podpowiedź"
+      },
+      {
+        "_en": "impression",
+        "_pl": "wrażenie"
+      },
+      {
+        "_en": "I heve to",
+        "_pl": "muszę"
+      },
+      {
+        "_en": "I had to",
+        "_pl": "musiałem"
+      },
+      {
+        "_en": "I will have to",
+        "_pl": "będę musiał"
+      },
+      {
+        "_en": "fearless",
+        "_pl": "nieustraszony"
+      },
+
+      {
+        "_en": "urgent",
+        "_pl": "pilne"
+      },
+      {
+        "_en": "surround",
+        "_pl": "otaczać"
+      },
+      {
+        "_en": "rent",
+        "_pl": "wynajem, czynsz, dzierżawa, wypożyczenie"
+      },
+      {
+        "_en": "therefore ",
+        "_pl": "w związku z tym / zatem"
+      },
+      {
+        "_en": "risk ",
+        "_pl": "ryzyko"
+      },
+      {
+        "_en": "propose ",
+        "_pl": "zaproponować"
+      },
+      {
+        "_en": "approve ",
+        "_pl": "zatwierdzać"
+      },
+      {
+        "_en": "campaign ",
+        "_pl": "kampania"
+      },
+      {
+        "_en": "till ",
+        "_pl": "do"
+      },
+      {
+        "_en": "take a moment ",
+        "_pl": "poświeć chwile"
+      },
+      {
+        "_en": "to rate ",
+        "_pl": "ocenić"
+      },
+      {
+        "_en": "postpone ",
+        "_pl": "odraczać"
+      },
+      {
+        "_en": "found out ",
+        "_pl": "dowiedziałem się"
+      },
+      {
+        "_en": "till ",
+        "_pl": "do"
+      },
+      {
+        "_en": "weird ",
+        "_pl": "dziwne"
+      },
+      {
+        "_en": "deaf ",
+        "_pl": "głuchy"
+      },
+      {
+        "_en": "pour ",
+        "_pl": "lejemy / wlewamy"
+      },
+      {
+        "_en": "finally ",
+        "_pl": "wreszcie / w końcu"
+      },
+      {
+        "_en": "remain ",
+        "_pl": "pozostawić"
+      },
+      {
+        "_en": "anxiety ",
+        "_pl": "niepokój"
+      },
+      {
+        "_en": "start whit ",
+        "_pl": "zacznij od"
+      },
+      {
+        "_en": "influences ",
+        "_pl": "wpływ"
+      },
+      {
+        "_en": "aim ",
+        "_pl": "cel"
+      },
+      {
+        "_en": "coming up ",
+        "_pl": "nadchodzi"
+      },
+      {
+        "_en": "by the way ",
+        "_pl": "tak poza tym"
+      },
+      {
+        "_en": "lidership ",
+        "_pl": "przywódctwo"
+      },
+      {
+        "_en": "I won't ",
+        "_pl": "nie zrobie"
+      },
+      {
+        "_en": "I didn't ",
+        "_pl": "nie zrobilem"
+      },
+      {
+        "_en": "I wouldn't do it ",
+        "_pl": "nie zrobilbym tego"
+      },
+      {
+        "_en": "I am not doing this ",
+        "_pl": "nie robię tego"
+      },
+      {
+        "_en": "I get it. ",
+        "_pl": "Rozumiem."
+      },
+      {
+        "_en": "You got it? ",
+        "_pl": "Masz to? / Czaisz?"
+      },
+      {
+        "_en": "meal ",
+        "_pl": "posiłek"
+      },
+      {
+        "_en": "meat ",
+        "_pl": "mięso"
+      },
+      {
+        "_en": "mess ",
+        "_pl": "bałagan"
+      },
+      {
+        "_en": "excuses ",
+        "_pl": "tłumaczyć się"
+      },
+      {
+        "_en": "career ",
+        "_pl": "kariera"
+      },
+      {
+        "_en": "damage ",
+        "_pl": "uszkodzic"
+      },
+      {
+        "_en": "laundry ",
+        "_pl": "pralnia pranie"
+      },
+      {
+        "_en": "apparently ",
+        "_pl": "najwyraźniej (widocznie)"
+      },
+      {
+        "_en": "at least ",
+        "_pl": "przynajmniej (conajmniej)"
+      },
+      {
+        "_en": "read through ",
+        "_pl": "zapoznać się"
+      },
+      {
+        "_en": "disappointed ",
+        "_pl": "rozczarowany"
+      },
+      {
+        "_en": "addictive ",
+        "_pl": "wciągajacy"
+      },
+      {
+        "_en": "common ",
+        "_pl": "pospolite / częste"
+      },
+      {
+        "_en": "perhaps ",
+        "_pl": "być może"
+      },
+      {
+        "_en": "suspect",
+        "_pl": "posądzać"
+      },
+      {
+        "_en": "invent ",
+        "_pl": "zmyślać"
+      },
+      {
+        "_en": "nearst ",
+        "_pl": "najbliższy"
+      },
+      {
+        "_en": "get off ",
+        "_pl": "wysiadać"
+      },
+      {
+        "_en": "get on ",
+        "_pl": "wsiadać"
+      },
+      {
+        "_en": "get it ",
+        "_pl": "zdobyć / dostać za swoje / brać za swoje"
+      },
+      {
+        "_en": "break up ",
+        "_pl": "zerwać"
+      },
+      {
+        "_en": "I used to ",
+        "_pl": "kiedyś"
+      },
+      {
+        "_en": "I got you ",
+        "_pl": "mam Cię"
+      },
+      {
+        "_en": "Although ",
+        "_pl": "mimo że"
+      },
+      {
+        "_en": "journey ",
+        "_pl": "podróż"
+      },
+      {
+        "_en": "invent",
+        "_pl": "wynaleźć (wymyślać)"
+      },
+      {
+        "_en": "give up ",
+        "_pl": "poddać się"
+      },
+      {
+        "_en": "fix up ",
+        "_pl": "naprawić"
+      },
+      {
+        "_en": "blame ",
+        "_pl": "winić"
+      },
+      {
+        "_en": "I gotta go ",
+        "_pl": "muszę iść"
+      },
+      {
+        "_en": "prefer ",
+        "_pl": "woleć"
+      },
+      {
+        "_en": "miraculously ",
+        "_pl": "cudownie"
+      },
+      {
+        "_en": "aware ",
+        "_pl": "świadomy"
+      },
+      {
+        "_en": "expect ",
+        "_pl": "oczekiwać"
+      },
+      {
+        "_en": "except ",
+        "_pl": "z wyjątkiem / oprócz"
+      },
+      {
+        "_en": "involved ",
+        "_pl": "zaangażowany"
+      },
+      {
+        "_en": "would be ",
+        "_pl": "byłby"
+      },
+      {
+        "_en": "permission ",
+        "_pl": "pozwolenie"
+      },
+      {
+        "_en": "hook ",
+        "_pl": "hak / zaczep"
+      },
+      {
+        "_en": "grant ",
+        "_pl": "udzielić / dotować"
+      },
+      {
+        "_en": "boast ",
+        "_pl": "wychwalać"
+      },
+      {
+        "_en": "prise ",
+        "_pl": "chwalić"
+      },
+      {
+        "_en": "particular ",
+        "_pl": "szczególny / poszczególny"
+      },
+      {
+        "_en": "ensure ",
+        "_pl": "zapewnić"
+      },
+      {
+        "_en": "accordingly ",
+        "_pl": "odpowiednio"
+      },
+      {
+        "_en": "reflect ",
+        "_pl": "odzwierciedlić"
+      },
+      {
+        "_en": "purchase ",
+        "_pl": "zakup"
+      },
+      {
+        "_en": "several ",
+        "_pl": "kilka/ poszczególny"
+      },
+      {
+        "_en": "claim ",
+        "_pl": "roszczenie / żądanie"
+      },
+      {
+        "_en": "suppose ",
+        "_pl": "przypuszczać"
+      },
+      {
+        "_en": "do feel free ",
+        "_pl": "czuć się swobodnie / nie krępować się"
+      },
+
+      {
         "_en": "apart",
         "_pl": "niezależnie"
       },
@@ -4098,7 +4524,7 @@
       },
       {
         "_en": "improve",
-        "_pl": "poprawiać"
+        "_pl": "polepszać, ulepszać, poprawiać"
       },
       {
         "_en": "lazy",
@@ -4118,7 +4544,7 @@
       },
       {
         "_en": "insist",
-        "_pl": "upierać, domagać"
+        "_pl": "nalegać, upierać, domagać"
       },
       {
         "_en": "disagree",
@@ -4145,7 +4571,7 @@
         "_pl": "przedstawiać, wprowadzać"
       },
       {
-        "_en": "imstead",
+        "_en": "instead",
         "_pl": "zamiast"
       },
       {
@@ -4285,6 +4711,215 @@
       {
         "_en": "brand",
         "_pl": "marka"
+      },
+      {
+        "_en": "Greet",
+        "_pl": "powitać"
+      },
+      {
+        "_en": "actually",
+        "_pl": "tak właściwie"
+      },
+
+      {
+        "_en": "through ",
+        "_pl": "przez"
+      },
+      {
+        "_en": "thorough ",
+        "_pl": "dokładny"
+      },
+      {
+        "_en": "though ",
+        "_pl": "chociaż"
+      },
+      {
+        "_en": "thought ",
+        "_pl": "myśl"
+      },
+      {
+        "_en": "label ",
+        "_pl": "etykita"
+      },
+      {
+        "_en": "environment ",
+        "_pl": "środowisko"
+      },
+      {
+        "_en": "pronounce ",
+        "_pl": "wymawiać"
+      },
+      {
+        "_en": "literally ",
+        "_pl": "dosłownie"
+      },
+      {
+        "_en": "fluency ",
+        "_pl": "płynność"
+      },
+      {
+        "_en": "totally",
+        "_pl": "całkowicie"
+      },
+      {
+        "_en": "casual ",
+        "_pl": "codzienny"
+      },
+      {
+        "_en": "daily ",
+        "_pl": "codziennie"
+      },
+      {
+        "_en": "behavior ",
+        "_pl": "zachowanie"
+      },
+      {
+        "_en": "greet ",
+        "_pl": "powitać"
+      },
+      {
+        "_en": "greeting ",
+        "_pl": "powitanie"
+      },
+      {
+        "_en": "behave ",
+        "_pl": "zachować się"
+      },
+      {
+        "_en": "behaving ",
+        "_pl": "zachowywać się"
+      },
+      {
+        "_en": "expensive ",
+        "_pl": "kosztowny (drogi)"
+      },
+      {
+        "_en": "tear",
+        "_pl": "łza"
+      },
+      {
+        "_en": "likely ",
+        "_pl": "prawdopodobny"
+      },
+      {
+        "_en": "demand ",
+        "_pl": "popyt"
+      },
+      {
+        "_en": "according ",
+        "_pl": "zgodnie"
+      },
+      {
+        "_en": "availability ",
+        "_pl": "dostępność"
+      },
+      {
+        "_en": "incredible ",
+        "_pl": "niesamowite"
+      },
+      {
+        "_en": "introdaction ",
+        "_pl": "wprowadzenie"
+      },
+      {
+        "_en": "predictable",
+        "_pl": "przewidywalny"
+      },
+      {
+        "_en": "remind ",
+        "_pl": "przypominać"
+      },
+      {
+        "_en": "huge ",
+        "_pl": "olbrzymii"
+      },
+      {
+        "_en": "sculpture ",
+        "_pl": "rzeźba"
+      },
+      {
+        "_en": "target ",
+        "_pl": "cel"
+      },
+      {
+        "_en": "condition ",
+        "_pl": "stan"
+      },
+      {
+        "_en": "conditional",
+        "_pl": "warunkowy"
+      },
+      {
+        "_en": "insult ",
+        "_pl": "zniewaga"
+      },
+      {
+        "_en": "apparently ",
+        "_pl": "najwyraźniej"
+      },
+      {
+        "_en": "earnings ",
+        "_pl": "zarobki"
+      },
+      {
+        "_en": "compartment ",
+        "_pl": "przedział"
+      },
+      {
+        "_en": "compare ",
+        "_pl": "porównać"
+      },
+      {
+        "_en": "occasionaly ",
+        "_pl": "sporadycznie"
+      },
+      {
+        "_en": "exhausted",
+        "_pl": "wyniszczony"
+      },
+      {
+        "_en": "leisure ",
+        "_pl": "wolny czas"
+      },
+      {
+        "_en": "turned out",
+        "_pl": "okazało się"
+      },
+      {
+        "_en": "pretty much",
+        "_pl": "prawie tyle"
+      },
+      {
+        "_en": "look after someone",
+        "_pl": "opiekować się kimś"
+      },
+      {
+        "_en": "you go away",
+        "_pl": "wyjdź / odejdź"
+      },
+      {
+        "_en": "he goes away",
+        "_pl": "on wychodzi / Wyjeżdża"
+      },
+      {
+        "_en": "take place",
+        "_pl": "odbyć się / mieć miejsce"
+      },
+      {
+        "_en": "couple of minutes",
+        "_pl": "kilka minut"
+      },
+      {
+        "_pl": "być na bieżąco",
+        "_en": "keep up to date"
+      },
+      {
+        "_pl": "wzajemnie",
+        "_en": "each other"
+      },
+      {
+        "_en": "never mind",
+        "_pl": "nieważne"
       }
     ]
   },
@@ -4294,41 +4929,449 @@
       "_en": "Popular"
     },
     "name": {
-      "_pl": "Popularne frazy",
-      "_en": "Popular phrases"
+      "_pl": "Czasowniki frazowe",
+      "_en": "Phrasal verbs"
     },
     "data": [
       {
-        "_en": "Look after someone",
-        "_pl": "Opiekować się kimś"
+        "_en": "answer back ",
+        "_pl": "odpowiadać niegrzecznie"
       },
       {
-        "_en": "You go away",
-        "_pl": "Wyjdź / Odejdź"
+        "_en": "ask after ",
+        "_pl": "pytać o kogoś"
       },
       {
-        "_en": "He goes away",
-        "_pl": "On wychodzi / Wyjeżdża"
+        "_en": "ask out ",
+        "_pl": "zaprosić kogoś"
       },
       {
-        "_en": "Take place",
-        "_pl": "Odbyć się / Mieć miejsce"
+        "_en": "back out ",
+        "_pl": "wycofywać się"
       },
       {
-        "_en": "Couple of minutes",
-        "_pl": "Kilka minut"
+        "_en": "bring back ",
+        "_pl": "przywrócić"
       },
       {
-        "_pl": "Być na bieżąco",
-        "_en": "Keep up to date"
+        "_en": "bring down ",
+        "_pl": "obalić / zepsuć się / załamywać się / kończyć się niepowodzeniem"
       },
       {
-        "_pl": "(Mocno) Zgrany zespół",
-        "_en": "A Tight knit team"
+        "_en": "catch up ",
+        "_pl": "dogonić"
       },
       {
-        "_pl": "Wzajemnie",
-        "_en": "Each other"
+        "_en": "care for ",
+        "_pl": "opiekować się / troszczyć"
+      },
+      {
+        "_en": "carry on ",
+        "_pl": "kontynuować"
+      },
+      {
+        "_en": "check in ",
+        "_pl": "zgłosić się do odprawy"
+      },
+      {
+        "_en": "check out ",
+        "_pl": "sprawdzać / zdać pokój / wymeldować się"
+      },
+      {
+        "_en": "clean up ",
+        "_pl": "posprzątać / przejaśniać się / przechodzić"
+      },
+      {
+        "_en": "come across ",
+        "_pl": "natknąć się"
+      },
+      {
+        "_en": "come back ",
+        "_pl": "wracać"
+      },
+      {
+        "_en": "depend on ",
+        "_pl": "polegać na / zależeć"
+      },
+      {
+        "_en": "do without ",
+        "_pl": "radzić sobie bez czegoś"
+      },
+      {
+        "_en": "fall out ",
+        "_pl": "pokłócić się"
+      },
+      {
+        "_en": "fill in ",
+        "_pl": "wypełniać"
+      },
+      {
+        "_en": "fill up ",
+        "_pl": "wypełnić / zapełnić"
+      },
+      {
+        "_en": "find out ",
+        "_pl": "dowiedzieć się"
+      },
+      {
+        "_en": "get back ",
+        "_pl": "wracać / dostać coś z powrotem"
+      },
+      {
+        "_en": "get in ",
+        "_pl": "wsiadać / wchodzić / przychodzić / przyjeżdżać"
+      },
+      {
+        "_en": "get off ",
+        "_pl": "wysiadać / wychodzić"
+      },
+      {
+        "_en": "get on ",
+        "_pl": "wsiadać do/na / radzić sobie / mieć przyjazne stosunki z kimś"
+      },
+      {
+        "_en": "get out ",
+        "_pl": "wysiadać / wynosić się"
+      },
+      {
+        "_en": "go out ",
+        "_pl": "wychodzić / spotykać się z ludźmi"
+      },
+      {
+        "_en": "get over ",
+        "_pl": "dochodzić do siebie / pogodzić się z czymś / znaleźć rozwiązanie problemu"
+      },
+      {
+        "_en": "get through ",
+        "_pl": "dodzwonić się"
+      },
+      {
+        "_en": "get together ",
+        "_pl": "spotykać się"
+      },
+      {
+        "_en": "get up ",
+        "_pl": "wstawać / budzić się"
+      },
+      {
+        "_en": "give back ",
+        "_pl": "oddawać"
+      },
+      {
+        "_en": "give up ",
+        "_pl": "przestać coś robić"
+      },
+      {
+        "_en": "hang out ",
+        "_pl": "spędzać czas"
+      },
+      {
+        "_en": "go away ",
+        "_pl": "wyjeżdżać / iść"
+      },
+      {
+        "_en": "go back ",
+        "_pl": "wracać"
+      },
+      {
+        "_en": "go on ",
+        "_pl": "kontynuować / trwać"
+      },
+      {
+        "_en": "go out ",
+        "_pl": "wychodzić / wyjeżdżać / gasnąć"
+      },
+      {
+        "_en": "go together ",
+        "_pl": "pasować do siebie"
+      },
+      {
+        "_en": "go up ",
+        "_pl": "rosnąć"
+      },
+      {
+        "_en": "go with ",
+        "_pl": "towarzyszyć / dziać się jako skutek czegoś"
+      },
+      {
+        "_en": "grow up ",
+        "_pl": "dorastać"
+      },
+      {
+        "_en": "hang on ",
+        "_pl": "czekać przez chwilę / trzymać się"
+      },
+      {
+        "_en": "head for ",
+        "_pl": "iść/jechać w określonym kierunku / zmierzać do"
+      },
+      {
+        "_en": "hear from ",
+        "_pl": "otrzymywać od kogoś wiadomość"
+      },
+      {
+        "_en": "hold on ",
+        "_pl": "czekać chwilę"
+      },
+      {
+        "_en": "hurry up ",
+        "_pl": "pośpieszyć się"
+      },
+      {
+        "_en": "join in ",
+        "_pl": "przyłączać się"
+      },
+      {
+        "_en": "keep away ",
+        "_pl": "trzymać się z daleka od czegoś"
+      },
+      {
+        "_en": "keep on ",
+        "_pl": "kontynuować / robić coś dalej / bez przerwy"
+      },
+      {
+        "_en": "know of ",
+        "_pl": "wiedzieć o czymś / znać"
+      },
+      {
+        "_en": "laugh at ",
+        "_pl": "śmiać się z czegoś"
+      },
+      {
+        "_en": "leave out ",
+        "_pl": "opuszczać / pomijać / pozostawiać"
+      },
+      {
+        "_en": "let down ",
+        "_pl": "zawodzić"
+      },
+      {
+        "_en": "let out ",
+        "_pl": "wypuszczać"
+      },
+      {
+        "_en": "log in/on ",
+        "_pl": "zalogować się / włączyć do sieci"
+      },
+      {
+        "_en": "log out/off ",
+        "_pl": "wylogować się / wyłączyć się z sieci"
+      },
+      {
+        "_en": "look after ",
+        "_pl": "opiekować się / pilnować"
+      },
+      {
+        "_en": "look around ",
+        "_pl": "rozglądać się"
+      },
+      {
+        "_en": "look at ",
+        "_pl": "przyglądać się / patrzeć"
+      },
+      {
+        "_en": "look back ",
+        "_pl": "spoglądać w przeszłość"
+      },
+      {
+        "_en": "look forward ",
+        "_pl": "to cieszyć sie na coś / bardzo czekać na"
+      },
+      {
+        "_en": "look out ",
+        "_pl": "uważać"
+      },
+      {
+        "_en": "look up ",
+        "_pl": "sprawdzać"
+      },
+      {
+        "_en": "make up ",
+        "_pl": "robić makijaż"
+      },
+      {
+        "_en": "move in ",
+        "_pl": "wprowadzać się"
+      },
+      {
+        "_en": "move out ",
+        "_pl": "wyprowadzać się"
+      },
+      {
+        "_en": "pay off ",
+        "_pl": "spłacić"
+      },
+      {
+        "_en": "pick up ",
+        "_pl": "podnosić"
+      },
+      {
+        "_en": "put off ",
+        "_pl": "odkładać / przełożyć na inny termin"
+      },
+      {
+        "_en": "put on ",
+        "_pl": "zakładać"
+      },
+      {
+        "_en": "ring up ",
+        "_pl": "dzwonić / telefonować"
+      },
+      {
+        "_en": "run away ",
+        "_pl": "uciekać"
+      },
+      {
+        "_en": "run out ",
+        "_pl": "kończyć się / brakować"
+      },
+      {
+        "_en": "set off ",
+        "_pl": "wyruszyć / rozpocząć podróż"
+      },
+      {
+        "_en": "stay away ",
+        "_pl": "trzymać się z daleka"
+      },
+      {
+        "_en": "slow down ",
+        "_pl": "zwalniać"
+      },
+      {
+        "_en": "switch on ",
+        "_pl": "włączać"
+      },
+      {
+        "_en": "switch off ",
+        "_pl": "wyłączyć"
+      },
+      {
+        "_en": "take away ",
+        "_pl": "zabierać / odbierać"
+      },
+      {
+        "_en": "take back ",
+        "_pl": "oddawać / zwracać"
+      },
+      {
+        "_en": "take off ",
+        "_pl": "wystartować"
+      },
+      {
+        "_en": "take off ",
+        "_pl": "zdejmować / ściągać"
+      },
+      {
+        "_en": "take up ",
+        "_pl": "brać/zabierać się za coś"
+      },
+      {
+        "_en": "throw away ",
+        "_pl": "wyrzucać"
+      },
+      {
+        "_en": "try on ",
+        "_pl": "przymierzać"
+      },
+      {
+        "_en": "turn back ",
+        "_pl": "zawracać"
+      },
+      {
+        "_en": "turn off ",
+        "_pl": "wyłączać"
+      },
+      {
+        "_en": "turn on ",
+        "_pl": "włączać"
+      },
+      {
+        "_en": "wash up ",
+        "_pl": "zmywać"
+      },
+      {
+        "_en": "watch out ",
+        "_pl": "uważać"
+      },
+      {
+        "_en": "write down ",
+        "_pl": "zapisywać"
+      },
+      {
+        "_en": "name after ",
+        "_pl": "nazwać po kimś"
+      },
+      {
+        "_en": "note down ",
+        "_pl": "notować /zapisywać"
+      },
+      {
+        "_en": "bring up ",
+        "_pl": "wychować"
+      },
+      {
+        "_en": "calm down ",
+        "_pl": "uspokoić się"
+      },
+      {
+        "_en": "count on ",
+        "_pl": "liczyć na kogoś"
+      },
+      {
+        "_en": "cross out ",
+        "_pl": "skreślić / wykreślić"
+      },
+      {
+        "_en": "decide on ",
+        "_pl": "zdecydować się na coś"
+      },
+      {
+        "_en": "drop off ",
+        "_pl": "podrzucić kogoś gdzieś po drodze"
+      },
+      {
+        "_en": "fall behind ",
+        "_pl": "zostawać z tyłu"
+      },
+      {
+        "_en": "focus on/upon ",
+        "_pl": "koncentrować się"
+      },
+      {
+        "_en": "lay off ",
+        "_pl": "zwalniać"
+      },
+      {
+        "_en": "look for ",
+        "_pl": "szukać"
+      },
+      {
+        "_en": "match up ",
+        "_pl": "pasować / zgadzać się"
+      },
+      {
+        "_en": "rely on/upon ",
+        "_pl": "polegać na"
+      },
+      {
+        "_en": "result in ",
+        "_pl": "skutkować"
+      },
+      {
+        "_en": "save up ",
+        "_pl": "zaoszczędzić"
+      },
+      {
+        "_en": "take to ",
+        "_pl": "polubić"
+      },
+      {
+        "_en": "touch down ",
+        "_pl": "lądować"
+      },
+      {
+        "_en": "wake up ",
+        "_pl": "obudzić się"
       }
     ]
   },
@@ -4397,6 +5440,10 @@
       {
         "_pl": "gryźć / kąsać ",
         "_en": "bite / bit / bitten"
+      },
+      {
+        "_pl": "jeździć",
+        "_en": "ride / rode / ridden"
       },
       {
         "_pl": "krwawić ",
@@ -4594,7 +5641,7 @@
         "_en": "hide / hid / hidden"
       },
       {
-        "_pl": "uderzać ",
+        "_pl": "trafiać, uderzać",
         "_en": "hit / hit / hit"
       },
       {
@@ -4630,7 +5677,7 @@
         "_en": "lean / leant / leant"
       },
       {
-        "_pl": "wychodzić ",
+        "_pl": "wychodzić, pozostawić",
         "_en": "leave / left / left"
       },
       {
@@ -4686,7 +5733,7 @@
         "_en": "pay / paid / paid"
       },
       {
-        "_pl": "klaść / wsadzić ",
+        "_pl": "położyć, (kłaść, wsadzić)",
         "_en": "put / put / put"
       },
       {
@@ -4702,7 +5749,7 @@
         "_en": "rid / rid / rid"
       },
       {
-        "_pl": "jeździć konno ",
+        "_pl": "jeździć",
         "_en": "ride / rode / ridden"
       },
       {
@@ -4773,7 +5820,7 @@
         "_en": "shoot / shot / shot"
       },
       {
-        "_pl": "pokazywać ",
+        "_pl": "pokazywać",
         "_en": "show / showed / shown"
       },
       {
@@ -4801,7 +5848,7 @@
         "_en": "slay / slew / slain"
       },
       {
-        "_pl": "pośliznąć się ",
+        "_pl": "poślizgnąć się",
         "_en": "slide / slid / slid"
       },
       {
@@ -5202,7 +6249,7 @@
         "_en": "Employ / Employed / Employed "
       },
       {
-        "_pl": "Popierać ",
+        "_pl": "Popierać, zachęcać",
         "_en": "Encourage / Encouraged / Encouraged "
       },
       {
@@ -5338,7 +6385,7 @@
         "_en": "Need / Needed / Needed "
       },
       {
-        "_pl": "Schłuchać się ",
+        "_pl": "Słuchać się ",
         "_en": "Obey / Obeyed / Obeyed "
       },
       {
@@ -5516,6 +6563,199 @@
       {
         "_pl": "Krzyczeć ",
         "_en": "Yell / Yelled / Yelled "
+      }
+    ]
+  },
+
+  {
+    "category": {
+      "_pl": "Popularne",
+      "_en": "Popular"
+    },
+    "name": {
+      "_pl": "Stopniowanie przymiotników",
+      "_en": "Gradation of adjectives"
+    },
+    "data": [
+      {
+        "_pl": "czysty / czystszy / najczystszy",
+        "_en": "clean / cleaner / the cleanest"
+      },
+      {
+        "_pl": "zimny / zimniejszy / najzimniejszy",
+        "_en": "cold / colder / the coldest"
+      },
+      {
+        "_pl": "chłodny / chłodniejszy / najchłodniejszy",
+        "_en": "cool / cooler / the coolest"
+      },
+      {
+        "_pl": "wielki / większy / największy (świetny)",
+        "_en": "great / greater / the greatest"
+      },
+      {
+        "_pl": "trudny / trudniejszy / najtrudniejszy (ciężki)",
+        "_en": "hard / harder / the hardest"
+      },
+      {
+        "_pl": "wysoki / wyższy / najwyższy (m.in. wysokość terenu, np. gór)",
+        "_en": "high / higher / the highest"
+      },
+      {
+        "_pl": "niski / niższy / najniższy",
+        "_en": "low / lower / the lowest"
+      },
+      {
+        "_pl": "schludny / schludniejszy / najschludniejszy",
+        "_en": "neat / neater / the neatest"
+      },
+      {
+        "_pl": "nowy / nowszy / najnowszy",
+        "_en": "new / newer / the newest"
+      },
+      {
+        "_pl": "krótki / krótszy / najkrótszy",
+        "_en": "short / shorter / the shortest"
+      },
+      {
+        "_pl": "mały / mniejszy / najmniejszy",
+        "_en": "small / smaller / the smallest"
+      },
+      {
+        "_pl": "gruby / grubszy / najgrubszy",
+        "_en": "thick / thicker / the thickest"
+      },
+      {
+        "_pl": "słaby / słabszy / najsłabszy",
+        "_en": "weak / weaker / the weakest"
+      },
+      {
+        "_pl": "brudny / brudniejszy / najbrudniejszy",
+        "_en": "dirty / dirtier / the dirtiest"
+      },
+      {
+        "_pl": "łatwy / łatwiejszy / najłatwiejszy",
+        "_en": "easy / easier / the easiest"
+      },
+      {
+        "_pl": "szczęśliwy / szczęśliwszy / najszczęśliwszy (zadowolony, radosny)",
+        "_en": "happy / happier / the happiest"
+      },
+      {
+        "_pl": "szczęśliwy / szczęśliwszy / najszczęśliwszy (m.in. bycie szczęśliwym w grach losowych)",
+        "_en": "lucky / luckier / the luckiest"
+      },
+      {
+        "_pl": "ładny / ładniejszy / najładniejszy",
+        "_en": "pretty / prettier / the prettiest"
+      },
+      {
+        "_pl": "sprytny / sprytniejszy / najsprytniejszy (mądry, inteligentny)",
+        "_en": "clever / cleverer / the cleverest"
+      },
+      {
+        "_pl": "mądry / mądrzejszy / najmądrzejszy (sprytny, błyskotliwy)",
+        "_en": "smart / smarter / the smartest"
+      },
+      {
+        "_pl": "prosty / prostszy / najprostszy",
+        "_en": "simple / simpler / the simplest"
+      },
+      {
+        "_pl": "wąski / węższy / najwęższy",
+        "_en": "narrow / narrower / the narrowest"
+      },
+      {
+        "_pl": "duży / większy / największy (obszerny, szeroki)",
+        "_en": "large / larger / the largest"
+      },
+      {
+        "_pl": "późny / późniejszy / najpóźniejszy",
+        "_en": "late / later / the latest"
+      },
+      {
+        "_pl": "wielki / większy / największy (ogólnie duży)",
+        "_en": "big / bigger / the biggest"
+      },
+      {
+        "_pl": "tłusty / tłustszy / najtłustszy (gruby)",
+        "_en": "fat / fatter / the fattest"
+      },
+      {
+        "_pl": "smutny / smutniejszy / najsmutniejszy",
+        "_en": "sad / sadder / the saddest"
+      },
+      {
+        "_pl": "chudy / chydszy / najchudszy",
+        "_en": "thin / thinner / the thinnest"
+      },
+      {
+        "_pl": "wilgotny / wilgotniejszy / najwilgotniejszy (mokry)",
+        "_en": "wet / wetter / the wettest"
+      },
+      {
+        "_pl": "schludny / schludniejszy / najschludniejszy (czysty)",
+        "_en": "tidy / tidier / the tidiest"
+      },
+      {
+        "_pl": "zajęty / bardziej zajęty / najbardziej zajęty",
+        "_en": "busy / busier / the busiest"
+      },
+      {
+        "_pl": "suchy / suchszy / najsuchszy",
+        "_en": "dry / drier / the driest"
+      },
+      {
+        "_pl": "wczesny / wcześniejszy / najwcześniejszy (poranny)",
+        "_en": "early / earlier / the earliest"
+      },
+      {
+        "_pl": "pusty / pustszy / najpustszy",
+        "_en": "empty / emptier / the emptiest"
+      },
+      {
+        "_pl": "zabawny / zabawniejszy / najzabawniejszy",
+        "_en": "funny / funnier / the funniest"
+      },
+      {
+        "_pl": "mocny / mocniejszy / najmocniejszy (ciężki)",
+        "_en": "heavy / heavier / the heaviest"
+      },
+      {
+        "_pl": "gotowy / gotowszy / najgotowszy",
+        "_en": "ready / readier / the readiest"
+      },
+      {
+        "_pl": "nieśmiały / nieśmielszy / najnieśmielszy",
+        "_en": "shy / shyer / the shyest"
+      },
+      {
+        "_pl": "piękny / piękniejszy / najpiękniejszy",
+        "_en": "beautiful / more beautiful / the most beautiful"
+      },
+      {
+        "_pl": "dobry / lepszy / najlepszy (/przymiotnik nieregularny/)",
+        "_en": "good / better / the best"
+      },
+      {
+        "_pl": "zły / gorszy / najgorszy (/przymiotnik nieregularny/)",
+        "_en": "bad / worse / the worst"
+      },
+      {
+        "_pl": "duży / większy / największy (niepoliczalne, zazwyczaj jako przysłówek - dużo / więcej / najwięcej) (/przymiotnik nieregularny/)",
+        "_en": "much / more / the most"
+      },
+      {
+        "_pl": "duży / większy / największy (policzalne, zazwyczaj jako przysłówek -  dużo / więcej / najwięcej) (/przymiotnik nieregularny/)",
+        "_en": "many / more / the most"
+      },
+      {
+        "_pl": "mały / mniejszy / najmniejszy (/przymiotnik nieregularny/)",
+        "_en": "little / less / the least"
+      },
+      {
+        "_pl": "powszechny / powszechniejszy / najpowszechniejszy (pospolity) (/przymiotnik specjalny/)",
+        "_en": "common / commoner / the commonest (or: common / more common / most common)"
       }
     ]
   },
@@ -6116,7 +7356,7 @@
       },
       {
         "_en": "too",
-        "_pl": "także "
+        "_pl": "także, zbyt"
       },
       {
         "_en": "have",
@@ -6216,7 +7456,7 @@
       },
       {
         "_en": "can",
-        "_pl": "umieć"
+        "_pl": "mieć, umieć"
       },
       {
         "_en": "put",
@@ -6260,7 +7500,7 @@
       },
       {
         "_en": "large",
-        "_pl": "olbrzymi"
+        "_pl": "duży"
       },
       {
         "_en": "when",
@@ -6898,7 +8138,7 @@
         "_pl": "przeczenie do not nie rób lub operator w present simple w zdaniach przeczących"
       },
       {
-        "_en": "(he) came",
+        "_en": "came",
         "_pl": "przyjechał, przybył"
       },
       {
@@ -7539,7 +8779,7 @@
       },
       {
         "_en": "leave",
-        "_pl": "opuścić, wychodzić "
+        "_pl": "opuścić, wychodzić, pozostawić"
       },
       {
         "_en": "clear",
@@ -7735,7 +8975,7 @@
       },
       {
         "_en": "knew",
-        "_pl": "widzieć"
+        "_pl": "wiedziałem"
       },
       {
         "_en": "test",
@@ -8231,15 +9471,15 @@
       },
       {
         "_en": "broke",
-        "_pl": "złamałem, złamać (w czasię przeszłym)"
+        "_pl": "połamany (potłuczony)"
       },
       {
         "_en": "felt",
-        "_pl": "czułem, czuć (w czasię przeszłym)"
+        "_pl": "czułem"
       },
       {
         "_en": "case",
-        "_pl": "sprawa"
+        "_pl": "sprawa (przypadek)"
       },
       {
         "_en": "perhaps",
@@ -8648,7 +9888,7 @@
       },
       {
         "_en": "receive",
-        "_pl": "otrzymać"
+        "_pl": "otrzymać (odbierać)"
       },
       {
         "_en": "job",
@@ -9277,7 +10517,7 @@
       },
       {
         "_en": "hit",
-        "_pl": "uderzać"
+        "_pl": "trafiać, uderzać"
       },
       {
         "_en": "skill",
@@ -9345,7 +10585,7 @@
       },
       {
         "_en": "match",
-        "_pl": "pasować"
+        "_pl": "pasować, mecz"
       },
       {
         "_en": "agree",
@@ -9621,7 +10861,7 @@
       },
       {
         "_en": "fear",
-        "_pl": "obawiać się"
+        "_pl": "strach (obawiać się)"
       },
       {
         "_en": "double",
@@ -9719,6 +10959,10 @@
       {
         "_pl": "gryźć / kąsać ",
         "_en": "bite / bit / bitten"
+      },
+      {
+        "_pl": "jeździć",
+        "_en": "ride / rode / ridden"
       },
       {
         "_pl": "krwawić ",
@@ -9924,7 +11168,7 @@
         "_en": "hide / hid / hidden"
       },
       {
-        "_pl": "uderzać ",
+        "_pl": "trafiać, uderzać",
         "_en": "hit / hit / hit"
       },
       {
@@ -9960,7 +11204,7 @@
         "_en": "lean / leant / leant"
       },
       {
-        "_pl": "wychodzić ",
+        "_pl": "wychodzić, pozostawić",
         "_en": "leave / left / left"
       },
       {
@@ -10016,7 +11260,7 @@
         "_en": "pay / paid / paid"
       },
       {
-        "_pl": "klaść / wsadzić ",
+        "_pl": "położyć (kłaść, wsadzić)",
         "_en": "put / put / put"
       },
       {
@@ -10032,7 +11276,7 @@
         "_en": "rid / rid / rid"
       },
       {
-        "_pl": "jeździć konno ",
+        "_pl": "jeździć",
         "_en": "ride / rode / ridden"
       },
       {
@@ -10103,15 +11347,15 @@
         "_en": "shed / shed / shed"
       },
       {
-        "_pl": "świecić / zabłysnąć ",
+        "_pl": "świecić / zabłysnąć",
         "_en": "shine / shone / shone"
       },
       {
-        "_pl": "wystrzelić / strzelać ",
+        "_pl": "wystrzelić / strzelać",
         "_en": "shoot / shot / shot"
       },
       {
-        "_pl": "pokazywać ",
+        "_pl": "pokazywać",
         "_en": "show / showed / shown"
       },
       {
@@ -10139,7 +11383,7 @@
         "_en": "slay / slew / slain"
       },
       {
-        "_pl": "pośliznąć się ",
+        "_pl": "poślizgnąć się ",
         "_en": "slide / slid / slid"
       },
       {
@@ -10545,7 +11789,7 @@
         "_en": "Employ / Employed / Employed "
       },
       {
-        "_pl": "Popierać ",
+        "_pl": "Popierać, zachęcać",
         "_en": "Encourage / Encouraged / Encouraged "
       },
       {
@@ -10694,7 +11938,7 @@
         "_en": "Need / Needed / Needed "
       },
       {
-        "_pl": "Schłuchać się ",
+        "_pl": "Słuchać się ",
         "_en": "Obey / Obeyed / Obeyed "
       },
       {
@@ -11236,8 +12480,66 @@
     ]
   },
 
-
-
+  {
+    "category": {
+      "_pl": "Podstawowe słowa i frazy",
+      "_en": "Basic words and phrases"
+    },
+    "name": {
+      "_pl": "Popularne frazy",
+      "_en": "Popular phrases"
+    },
+    "data": [
+      {
+        "_en": "I want to be honest with you.",
+        "_pl": "Chcę być z Tobą szczery."
+      },
+      {
+        "_en": "I should be fair to you.",
+        "_pl": "powinienem być wobec ciebie uczciwy."
+      },
+      {
+        "_en": "I really appreciate it.",
+        "_pl": "Bardzo to doceniam."
+      },
+      {
+        "_en": "How does that sound?",
+        "_pl": "Jak to brzmi?"
+      },
+      {
+        "_en": "Sorry, what was that?",
+        "_pl": "Przepraszam, co to było / o co chodziło?"
+      },
+      {
+        "_en": "Let me confirm.",
+        "_pl": "Pozwól mi potwierdzić."
+      },
+      {
+        "_en": "Nice to meet you.",
+        "_pl": "Miło cię poznać."
+      },
+      {
+        "_en": "How are you? / How're you?",
+        "_pl": "Jak się masz? "
+      },
+      {
+        "_en": "How is everything? / How's everything?",
+        "_pl": "Jak tam ze wszystkim?"
+      },
+      {
+        "_en": "How is it going? / How's it? / How's it goin?",
+        "_pl": "Jak leci?"
+      },
+      {
+        "_en": "How is work? / How's work?",
+        "_pl": "Jak tam w pracy?"
+      },
+      {
+        "_en": "I am fine thank you, and you? / I'm good. How'bout you?",
+        "_pl": "W porządku, a co u Ciebie?"
+      }
+    ]
+  },
 
 
   {
@@ -11372,15 +12674,15 @@
       },
       {
         "_pl": "- Czy powiedziałeś to? - Tak, powiedziałem.",
-        "_en": "- Did you said that? - Yes, I said that."
+        "_en": "- Did you say that? - Yes, I said that."
       },
       {
         "_pl": "- Czy widziałeś to? - Nie, nie widziałem tego.",
-        "_en": "- Did you see that? - No, I did not (didn't) see."
+        "_en": "- Did you see that? - No, I didn't see."
       },
       {
         "_pl": "- Czy rozmawaiałaś wczoraj z mamą? - Nie, nie zrobiłam tego.",
-        "_en": "- Did you speak to mom yesterday? - No, I didn't (did not)."
+        "_en": "- Did you speak to mom yesterday? - No, I didn't."
       }
     ]
   },
@@ -11430,6 +12732,30 @@
       "_en": "-"
     },
     "data": [
+    ]
+  },
+  {
+    "category": {
+      "_pl": "Czasy (w trakcie budowy)",
+      "_en": "Tenses (under construction)"
+    },
+    "name": {
+      "_pl": "test",
+      "_en": "test"
+    },
+    "description": {
+      "_pl": "<strong>Konstr.</strong>: podmiot + will be + 1 forma czasownika z końcówką - ing",
+      "_en": "-"
+    },
+    "data": [
+      {
+        "_pl": "test nawias 3 (test nawias 3)",
+        "_en": "test bracket 3 (test bracket 3)"
+      },
+      {
+        "_pl": "test nawias 4 (test nawias 4) (test nawias 4)",
+        "_en": "test bracket 4 (test bracket 4) (test bracket 4) (test bracket 4)"
+      }
     ]
   }
 ]

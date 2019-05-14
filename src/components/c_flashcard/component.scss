@@ -379,136 +379,144 @@ a {
   }
 }
 
-.module-flash-cards .main-list-exercise .block-to-repeat {
-  overflow-y: auto;
-  .main-list-exercise-inset.list-to-repeat {
-    overflow: visible;
-    > li {
-      background-color: rgba(255,255,255,.6);
-      margin: 0 0 8px;
-      overflow: hidden;
+.module-flash-cards {
+  &.rotate-disable .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li {
+    .front, .back, .flipper {
+        transition-duration: unset;
 
-      .buttons-to-repeat {
-        padding: 10px;
-        button {
-          margin: 0;
-          font-size: 1rem;
+    }
+  }
+  .main-list-exercise .block-to-repeat {
+    overflow-y: auto;
+    .main-list-exercise-inset.list-to-repeat {
+      overflow: visible;
+      > li {
+        background-color: rgba(255,255,255,.6);
+        margin: 0 0 8px;
+        overflow: hidden;
+
+        .buttons-to-repeat {
+          padding: 10px;
+          button {
+            margin: 0;
+            font-size: 1rem;
+          }
+          .button-i-know, .button-i-dont-know {
+            display: none;
+          }
+          .button-i-know {
+            margin-right: 5px;
+          }
+          .button-i-dont-know {
+            margin-left: 5px;
+          }
         }
-        .button-i-know, .button-i-dont-know {
-          display: none;
+
+        .flip-container {
+          perspective: 1000px;
+          padding: 0 10px;
         }
-        .button-i-know {
-          margin-right: 5px;
+        ///* flip the pane when hovered */
+        //.flip-container:hover .flipper, .flip-container.hover .flipper {
+        //  transform: rotateY(180deg);
+        //}
+
+        .flip-container, .front, .back {
+          width: 100%;
+          height: 160px;
+
         }
-        .button-i-dont-know {
-          margin-left: 5px;
+
+        /* flip speed goes here */
+        .flipper {
+          transition: 0.6s;
+          transform-style: preserve-3d;
+
+          position: relative;
         }
-      }
 
-      .flip-container {
-        perspective: 1000px;
-        padding: 0 10px;
-      }
-      ///* flip the pane when hovered */
-      //.flip-container:hover .flipper, .flip-container.hover .flipper {
-      //  transform: rotateY(180deg);
-      //}
+        /* hide back of pane during swap */
+        .front, .back {
+          backface-visibility: hidden;
 
-      .flip-container, .front, .back {
-        width: 100%;
-        height: 160px;
-
-      }
-
-      /* flip speed goes here */
-      .flipper {
-        transition: 0.6s;
-        transform-style: preserve-3d;
-
-        position: relative;
-      }
-
-      /* hide back of pane during swap */
-      .front, .back {
-        backface-visibility: hidden;
-
-        position: absolute;
-        top: 0;
-        left: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
 
 
-        padding: 10px;
-        text-align: center;
-        color: $color1;
-        border: 5px solid #fff;
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
+          padding: 10px;
+          text-align: center;
+          color: $color1;
+          border: 5px solid #fff;
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
 
-        > span {
-          cursor: pointer;
-          margin-right: 5px;
-          &:active {
-            > span {
-              color: $color10;
-              text-shadow: 0 0 0 $color2, 0 0 0 $color2;
+          > span {
+            cursor: pointer;
+            margin-right: 5px;
+            &:active {
+              > span {
+                color: $color10;
+                text-shadow: 0 0 0 $color2, 0 0 0 $color2;
+              }
+            }
+          }
+
+        }
+
+        /* front pane, placed above back */
+        .front {
+          z-index: 2;
+          /* for firefox 31 */
+          transform: rotateY(0deg);
+          background-color: rgba(170, 38, 38, 0.5);
+        }
+
+        /* back, initially hidden pane */
+        .back {
+          transform: rotateY(180deg);
+          background-color: rgba(51, 135, 152, 0.5);
+        }
+
+        /* vertical */
+        .vertical.flip-container {
+          position: relative;
+        }
+
+        .vertical .back {
+          transform: rotateX(180deg);
+        }
+
+        .vertical.flip-container .flipper {
+          transform-origin: 100% 80px; /* half of height */
+        }
+
+        //&:hover,
+        &.li-active {
+          .vertical.flip-container .flipper {
+            transform: rotateX(-180deg);
+          }
+          .buttons-to-repeat {
+            .button-check-out {
+              display: none;
+            }
+            .button-i-know, .button-i-dont-know {
+              display: block;
             }
           }
         }
 
-      }
-
-      /* front pane, placed above back */
-      .front {
-        z-index: 2;
-        /* for firefox 31 */
-        transform: rotateY(0deg);
-        background-color: rgba(170, 38, 38, 0.5);
-      }
-
-      /* back, initially hidden pane */
-      .back {
-        transform: rotateY(180deg);
-        background-color: rgba(51, 135, 152, 0.5);
-      }
-
-      /* vertical */
-      .vertical.flip-container {
-        position: relative;
-      }
-
-      .vertical .back {
-        transform: rotateX(180deg);
-      }
-
-      .vertical.flip-container .flipper {
-        transform-origin: 100% 80px; /* half of height */
-      }
-
-      //&:hover,
-      &.li-active {
-        .vertical.flip-container .flipper {
-          transform: rotateX(-180deg);
+        hr {
+          margin: 8px 0;
+          //height: 1px;
+          //background-color: red;
+          border-color: $color1;
+          width: 100%;
         }
-        .buttons-to-repeat {
-          .button-check-out {
-            display: none;
-          }
-          .button-i-know, .button-i-dont-know {
-            display: block;
-          }
-        }
-      }
 
-      hr {
-        margin: 8px 0;
-        //height: 1px;
-        //background-color: red;
-        border-color: $color1;
-        width: 100%;
       }
 
     }
-
   }
 }
 
@@ -1258,7 +1266,7 @@ a {
     overflow-y: hidden;
     position: relative;
     .category-box {
-      > h2 {
+      > h2, .title-style-text {
         position: relative;
         padding: 8px 40px 8px 10px;
         opacity: .9;
@@ -1267,6 +1275,11 @@ a {
         text-shadow: 0 0 1px $color6, 0 0 1px $color2, 0 0 1px $color2;
         background: linear-gradient(to bottom, rgba(151,135,83,0.3) 0%,rgba(151,135,83,0.35) 50%,rgba(151,135,83,0.3) 100%);
         background-color: $color6;
+        strong {
+          color: #e2a1a1;
+          font-weight: 700;
+          text-shadow: 0 0 1px $color1;
+        }
         .icon-down-open {
           position: absolute;
           top: 10px;
@@ -1295,12 +1308,28 @@ a {
           }
         }
 
+        &.category-info {
+          background-color: rgba(183, 100, 100, 0.4);
+          cursor: pointer;
+          transition: all 300ms ease-in-out;
+          max-height: 160px;
+          &.category-active {
+            max-height: 1000px;
+          }
+        }
+
+        &.category-tr {
+          background-color: #982727;
+        }
+
         &.category-0 {
-          background-color: $color6;
+          //background-color: $color6;
+          background-color: #984c27;
           &+ul {
             .button-list {
               color: $color1;
-              background-color: $color6;
+              background-color: #984c27;
+              //background-color: $color6;
             }
           }
         }
@@ -1472,6 +1501,14 @@ a {
       &.button-check-out {
         background-color: $color4;
         border-radius: 8px;
+        &.check-write-ok-button {
+          display: none;
+          & + .button-i-know {
+            display: block;
+            border-radius: 8px;
+            margin-right: 0;
+          }
+        }
       }
       &.button-i-know {
         margin-right: 5px;
@@ -1746,6 +1783,12 @@ a {
               padding-left: 5px;
               padding-right: 5px;
               text-align: center;
+              text-align: center;
+              button {
+                padding: 0;
+                margin: 0 auto;
+                display: block;
+              }
             }
             thead {
               th {
@@ -1967,6 +2010,76 @@ a {
           background-color: $color1;
           width: 100%;
           margin: 10px 0;
+        }
+        .correct-show-answer {
+          cursor: auto;
+          margin-top: 15px;
+        }
+        .button-show-answer {
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+          outline: none;
+          margin-top: 15px;
+          width: 100%;
+          text-align: center;
+          display: block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: red;
+        }
+        .write-and-check {
+          background-color: rgba(255,255,255,.1);
+          transition: all 300ms ease-in-out;
+          border: 1px solid $color1;
+          + .additional-options {
+            opacity: 0;
+            visibility: hidden;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 300ms ease-in-out;
+            p {
+              cursor: auto;
+              font-size: .8rem;
+              color: #0b2e13;
+              margin-top: 15px;
+              span {
+                color: $color1;
+                vertical-align: top;
+              }
+            }
+          }
+          &.check-write-ok, &.check-write-ok:focus {
+            background-color: rgba(123, 152, 50, 0.5);
+            color: $color1;
+            + .button-show-answer, + .correct-show-answer {
+              display: none;
+            }
+            + .additional-options {
+              opacity: 1;
+              max-height: 600px;
+              visibility: visible;
+              + .button-show-answer, + .correct-show-answer {
+                display: none;
+              }
+            }
+          }
+          //font-size: 85%;
+          padding: 10px;
+          margin-top: 15px;
+          width: 100%;
+          text-align: center;
+          opacity: .8;
+          &::placeholder {
+            color: $color1;
+          }
+          &:focus {
+            background-color: rgba(255,255,255,.8);
+            outline: none;
+            &::placeholder {
+              color: transparent;
+            }
+          }
         }
       }
       .front {

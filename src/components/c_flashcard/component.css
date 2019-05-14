@@ -330,6 +330,8 @@ a {
   .icon-random-card.icon-random-card-5:after {
     background-color: #983990; }
 
+.module-flash-cards.rotate-disable .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .front, .module-flash-cards.rotate-disable .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .back, .module-flash-cards.rotate-disable .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat > li .flipper {
+  transition-duration: unset; }
 .module-flash-cards .main-list-exercise .block-to-repeat {
   overflow-y: auto; }
   .module-flash-cards .main-list-exercise .block-to-repeat .main-list-exercise-inset.list-to-repeat {
@@ -900,7 +902,7 @@ a {
     transition: all 300ms ease-in-out;
     overflow-y: hidden;
     position: relative; }
-    .module-flash-cards .main-list-exercise .category-box > h2 {
+    .module-flash-cards .main-list-exercise .category-box > h2, .module-flash-cards .main-list-exercise .category-box .title-style-text {
       position: relative;
       padding: 8px 40px 8px 10px;
       opacity: .9;
@@ -909,53 +911,66 @@ a {
       text-shadow: 0 0 1px transparent, 0 0 1px #000, 0 0 1px #000;
       background: linear-gradient(to bottom, rgba(151, 135, 83, 0.3) 0%, rgba(151, 135, 83, 0.35) 50%, rgba(151, 135, 83, 0.3) 100%);
       background-color: transparent; }
-      .module-flash-cards .main-list-exercise .category-box > h2 .icon-down-open {
+      .module-flash-cards .main-list-exercise .category-box > h2 strong, .module-flash-cards .main-list-exercise .category-box .title-style-text strong {
+        color: #e2a1a1;
+        font-weight: 700;
+        text-shadow: 0 0 1px #fff; }
+      .module-flash-cards .main-list-exercise .category-box > h2 .icon-down-open, .module-flash-cards .main-list-exercise .category-box .title-style-text .icon-down-open {
         position: absolute;
         top: 10px;
         right: 10px;
         transition: all 300ms ease-in-out;
         transform: rotate(180deg); }
-      .module-flash-cards .main-list-exercise .category-box > h2 + ul, .module-flash-cards .main-list-exercise .category-box > h2 + .block-to-repeat {
+      .module-flash-cards .main-list-exercise .category-box > h2 + ul, .module-flash-cards .main-list-exercise .category-box > h2 + .block-to-repeat, .module-flash-cards .main-list-exercise .category-box .title-style-text + ul, .module-flash-cards .main-list-exercise .category-box .title-style-text + .block-to-repeat {
         opacity: 1;
         transition: all 300ms ease-in-out;
         max-height: 2000px; }
-        .module-flash-cards .main-list-exercise .category-box > h2 + ul .button-list, .module-flash-cards .main-list-exercise .category-box > h2 + .block-to-repeat .button-list {
+        .module-flash-cards .main-list-exercise .category-box > h2 + ul .button-list, .module-flash-cards .main-list-exercise .category-box > h2 + .block-to-repeat .button-list, .module-flash-cards .main-list-exercise .category-box .title-style-text + ul .button-list, .module-flash-cards .main-list-exercise .category-box .title-style-text + .block-to-repeat .button-list {
           background: linear-gradient(to bottom, rgba(151, 135, 83, 0.3) 0%, rgba(151, 135, 83, 0.35) 50%, rgba(151, 135, 83, 0.3) 100%); }
-      .module-flash-cards .main-list-exercise .category-box > h2:not(.category-active) .icon-down-open {
+      .module-flash-cards .main-list-exercise .category-box > h2:not(.category-active) .icon-down-open, .module-flash-cards .main-list-exercise .category-box .title-style-text:not(.category-active) .icon-down-open {
         top: 7px;
         transform: rotate(0); }
-      .module-flash-cards .main-list-exercise .category-box > h2:not(.category-active) + ul, .module-flash-cards .main-list-exercise .category-box > h2:not(.category-active) + .block-to-repeat {
+      .module-flash-cards .main-list-exercise .category-box > h2:not(.category-active) + ul, .module-flash-cards .main-list-exercise .category-box > h2:not(.category-active) + .block-to-repeat, .module-flash-cards .main-list-exercise .category-box .title-style-text:not(.category-active) + ul, .module-flash-cards .main-list-exercise .category-box .title-style-text:not(.category-active) + .block-to-repeat {
         max-height: 0;
         opacity: 0;
         overflow: hidden; }
-      .module-flash-cards .main-list-exercise .category-box > h2.category-0 {
-        background-color: transparent; }
-        .module-flash-cards .main-list-exercise .category-box > h2.category-0 + ul .button-list {
+      .module-flash-cards .main-list-exercise .category-box > h2.category-info, .module-flash-cards .main-list-exercise .category-box .title-style-text.category-info {
+        background-color: rgba(183, 100, 100, 0.4);
+        cursor: pointer;
+        transition: all 300ms ease-in-out;
+        max-height: 160px; }
+        .module-flash-cards .main-list-exercise .category-box > h2.category-info.category-active, .module-flash-cards .main-list-exercise .category-box .title-style-text.category-info.category-active {
+          max-height: 1000px; }
+      .module-flash-cards .main-list-exercise .category-box > h2.category-tr, .module-flash-cards .main-list-exercise .category-box .title-style-text.category-tr {
+        background-color: #982727; }
+      .module-flash-cards .main-list-exercise .category-box > h2.category-0, .module-flash-cards .main-list-exercise .category-box .title-style-text.category-0 {
+        background-color: #984c27; }
+        .module-flash-cards .main-list-exercise .category-box > h2.category-0 + ul .button-list, .module-flash-cards .main-list-exercise .category-box .title-style-text.category-0 + ul .button-list {
           color: #fff;
-          background-color: transparent; }
-      .module-flash-cards .main-list-exercise .category-box > h2.category-1 {
+          background-color: #984c27; }
+      .module-flash-cards .main-list-exercise .category-box > h2.category-1, .module-flash-cards .main-list-exercise .category-box .title-style-text.category-1 {
         background-color: #273898; }
-        .module-flash-cards .main-list-exercise .category-box > h2.category-1 + ul .button-list {
+        .module-flash-cards .main-list-exercise .category-box > h2.category-1 + ul .button-list, .module-flash-cards .main-list-exercise .category-box .title-style-text.category-1 + ul .button-list {
           color: #fff;
           background-color: #273898; }
-      .module-flash-cards .main-list-exercise .category-box > h2.category-2 {
+      .module-flash-cards .main-list-exercise .category-box > h2.category-2, .module-flash-cards .main-list-exercise .category-box .title-style-text.category-2 {
         background-color: #298eaa; }
-        .module-flash-cards .main-list-exercise .category-box > h2.category-2 + ul .button-list {
+        .module-flash-cards .main-list-exercise .category-box > h2.category-2 + ul .button-list, .module-flash-cards .main-list-exercise .category-box .title-style-text.category-2 + ul .button-list {
           color: #fff;
           background-color: #298eaa; }
-      .module-flash-cards .main-list-exercise .category-box > h2.category-3 {
+      .module-flash-cards .main-list-exercise .category-box > h2.category-3, .module-flash-cards .main-list-exercise .category-box .title-style-text.category-3 {
         background-color: #26984b; }
-        .module-flash-cards .main-list-exercise .category-box > h2.category-3 + ul .button-list {
+        .module-flash-cards .main-list-exercise .category-box > h2.category-3 + ul .button-list, .module-flash-cards .main-list-exercise .category-box .title-style-text.category-3 + ul .button-list {
           color: #fff;
           background-color: #26984b; }
-      .module-flash-cards .main-list-exercise .category-box > h2.category-4 {
+      .module-flash-cards .main-list-exercise .category-box > h2.category-4, .module-flash-cards .main-list-exercise .category-box .title-style-text.category-4 {
         background-color: #bb9c2b; }
-        .module-flash-cards .main-list-exercise .category-box > h2.category-4 + ul .button-list {
+        .module-flash-cards .main-list-exercise .category-box > h2.category-4 + ul .button-list, .module-flash-cards .main-list-exercise .category-box .title-style-text.category-4 + ul .button-list {
           color: #fff;
           background-color: #bb9c2b; }
-      .module-flash-cards .main-list-exercise .category-box > h2.category-5 {
+      .module-flash-cards .main-list-exercise .category-box > h2.category-5, .module-flash-cards .main-list-exercise .category-box .title-style-text.category-5 {
         background-color: #983990; }
-        .module-flash-cards .main-list-exercise .category-box > h2.category-5 + ul .button-list {
+        .module-flash-cards .main-list-exercise .category-box > h2.category-5 + ul .button-list, .module-flash-cards .main-list-exercise .category-box .title-style-text.category-5 + ul .button-list {
           color: #fff;
           background-color: #983990; }
     .module-flash-cards .main-list-exercise .main-list-exercise-inset {
@@ -1057,6 +1072,12 @@ a {
       .module-flash-cards .nav-buttons button.button-check-out {
         background-color: #338798;
         border-radius: 8px; }
+        .module-flash-cards .nav-buttons button.button-check-out.check-write-ok-button {
+          display: none; }
+          .module-flash-cards .nav-buttons button.button-check-out.check-write-ok-button + .button-i-know {
+            display: block;
+            border-radius: 8px;
+            margin-right: 0; }
       .module-flash-cards .nav-buttons button.button-i-know {
         margin-right: 5px;
         background-color: #2c8548;
@@ -1292,7 +1313,12 @@ a {
             width: 40px;
             padding-left: 5px;
             padding-right: 5px;
+            text-align: center;
             text-align: center; }
+            .module-flash-cards .main-flash-cards .flash-card .flash-card-inset .table-wrap .table-list th:first-child button {
+              padding: 0;
+              margin: 0 auto;
+              display: block; }
           .module-flash-cards .main-flash-cards .flash-card .flash-card-inset .table-wrap .table-list thead th {
             font-weight: 600;
             text-align: center; }
@@ -1425,6 +1451,62 @@ a {
         background-color: #fff;
         width: 100%;
         margin: 10px 0; }
+      .module-flash-cards .main-flash-cards .flash-card .front .correct-show-answer, .module-flash-cards .main-flash-cards .flash-card .back .correct-show-answer {
+        cursor: auto;
+        margin-top: 15px; }
+      .module-flash-cards .main-flash-cards .flash-card .front .button-show-answer, .module-flash-cards .main-flash-cards .flash-card .back .button-show-answer {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        outline: none;
+        margin-top: 15px;
+        width: 100%;
+        text-align: center;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: red; }
+      .module-flash-cards .main-flash-cards .flash-card .front .write-and-check, .module-flash-cards .main-flash-cards .flash-card .back .write-and-check {
+        background-color: rgba(255, 255, 255, 0.1);
+        transition: all 300ms ease-in-out;
+        border: 1px solid #fff;
+        padding: 10px;
+        margin-top: 15px;
+        width: 100%;
+        text-align: center;
+        opacity: .8; }
+        .module-flash-cards .main-flash-cards .flash-card .front .write-and-check + .additional-options, .module-flash-cards .main-flash-cards .flash-card .back .write-and-check + .additional-options {
+          opacity: 0;
+          visibility: hidden;
+          max-height: 0;
+          overflow: hidden;
+          transition: all 300ms ease-in-out; }
+          .module-flash-cards .main-flash-cards .flash-card .front .write-and-check + .additional-options p, .module-flash-cards .main-flash-cards .flash-card .back .write-and-check + .additional-options p {
+            cursor: auto;
+            font-size: .8rem;
+            color: #0b2e13;
+            margin-top: 15px; }
+            .module-flash-cards .main-flash-cards .flash-card .front .write-and-check + .additional-options p span, .module-flash-cards .main-flash-cards .flash-card .back .write-and-check + .additional-options p span {
+              color: #fff;
+              vertical-align: top; }
+        .module-flash-cards .main-flash-cards .flash-card .front .write-and-check.check-write-ok, .module-flash-cards .main-flash-cards .flash-card .front .write-and-check.check-write-ok:focus, .module-flash-cards .main-flash-cards .flash-card .back .write-and-check.check-write-ok, .module-flash-cards .main-flash-cards .flash-card .back .write-and-check.check-write-ok:focus {
+          background-color: rgba(123, 152, 50, 0.5);
+          color: #fff; }
+          .module-flash-cards .main-flash-cards .flash-card .front .write-and-check.check-write-ok + .button-show-answer, .module-flash-cards .main-flash-cards .flash-card .front .write-and-check.check-write-ok + .correct-show-answer, .module-flash-cards .main-flash-cards .flash-card .front .write-and-check.check-write-ok:focus + .button-show-answer, .module-flash-cards .main-flash-cards .flash-card .front .write-and-check.check-write-ok:focus + .correct-show-answer, .module-flash-cards .main-flash-cards .flash-card .back .write-and-check.check-write-ok + .button-show-answer, .module-flash-cards .main-flash-cards .flash-card .back .write-and-check.check-write-ok + .correct-show-answer, .module-flash-cards .main-flash-cards .flash-card .back .write-and-check.check-write-ok:focus + .button-show-answer, .module-flash-cards .main-flash-cards .flash-card .back .write-and-check.check-write-ok:focus + .correct-show-answer {
+            display: none; }
+          .module-flash-cards .main-flash-cards .flash-card .front .write-and-check.check-write-ok + .additional-options, .module-flash-cards .main-flash-cards .flash-card .front .write-and-check.check-write-ok:focus + .additional-options, .module-flash-cards .main-flash-cards .flash-card .back .write-and-check.check-write-ok + .additional-options, .module-flash-cards .main-flash-cards .flash-card .back .write-and-check.check-write-ok:focus + .additional-options {
+            opacity: 1;
+            max-height: 600px;
+            visibility: visible; }
+            .module-flash-cards .main-flash-cards .flash-card .front .write-and-check.check-write-ok + .additional-options + .button-show-answer, .module-flash-cards .main-flash-cards .flash-card .front .write-and-check.check-write-ok + .additional-options + .correct-show-answer, .module-flash-cards .main-flash-cards .flash-card .front .write-and-check.check-write-ok:focus + .additional-options + .button-show-answer, .module-flash-cards .main-flash-cards .flash-card .front .write-and-check.check-write-ok:focus + .additional-options + .correct-show-answer, .module-flash-cards .main-flash-cards .flash-card .back .write-and-check.check-write-ok + .additional-options + .button-show-answer, .module-flash-cards .main-flash-cards .flash-card .back .write-and-check.check-write-ok + .additional-options + .correct-show-answer, .module-flash-cards .main-flash-cards .flash-card .back .write-and-check.check-write-ok:focus + .additional-options + .button-show-answer, .module-flash-cards .main-flash-cards .flash-card .back .write-and-check.check-write-ok:focus + .additional-options + .correct-show-answer {
+              display: none; }
+        .module-flash-cards .main-flash-cards .flash-card .front .write-and-check::placeholder, .module-flash-cards .main-flash-cards .flash-card .back .write-and-check::placeholder {
+          color: #fff; }
+        .module-flash-cards .main-flash-cards .flash-card .front .write-and-check:focus, .module-flash-cards .main-flash-cards .flash-card .back .write-and-check:focus {
+          background-color: rgba(255, 255, 255, 0.8);
+          outline: none; }
+          .module-flash-cards .main-flash-cards .flash-card .front .write-and-check:focus::placeholder, .module-flash-cards .main-flash-cards .flash-card .back .write-and-check:focus::placeholder {
+            color: transparent; }
     .module-flash-cards .main-flash-cards .flash-card .front {
       z-index: 2;
       background-color: rgba(123, 152, 50, 0.5);

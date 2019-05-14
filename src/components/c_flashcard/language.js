@@ -12,6 +12,7 @@ export const setLanguage = (x) => {
                 buttonIDontKnow: "I don't knew",
                 buttonSimpleLotter: 'Simple Lottery',
                 buttonCheckOut: 'Check out',
+                buttonCheckOutToNext: 'Next',
                 textSummary: 'Summary',
                 buttonEnableAutoVoice: 'Enable automatically voice',
                 buttonDisableRotate: 'Disable rotate',
@@ -39,7 +40,12 @@ export const setLanguage = (x) => {
                 sentenceYouKnew: 'You knew (or you learned)',
                 toRepeat: 'To repeat',
                 toggleToRepeatShow: 'The whole list to repeat',
-                toggleToRepeatHide: 'Lottery'
+                toggleToRepeatHide: 'Lottery',
+                TryToWriteATranslate: 'Try to write a translate',
+                infoDescription: 'Remember, English words often have many meanings that can also depend on the context. We chose the most popular words and sometimes less popular alternatives in brackets. If you need more complete translation, you can use the icon with the Google Translate. The icon is at the bottom-right corner of the back flashcard. If you have any questions or suggestions, please send an',
+                additionally: 'Additionally',
+                showAnswer: 'Show the correct answer for a moment'
+
             };
             break;
         default: //pl
@@ -53,6 +59,7 @@ export const setLanguage = (x) => {
                 buttonIDontKnow: "Nie wiedziałem/am",
                 buttonSimpleLotter: 'Zwykłe losowanie',
                 buttonCheckOut: 'Sprawdź',
+                buttonCheckOutToNext: 'Następny',
                 textSummary: 'Podsumowanie',
                 buttonEnableAutoVoice: 'Włączaj automatycznie głos',
                 buttonDisableRotate: 'Wyłącz obracanie',
@@ -80,7 +87,11 @@ export const setLanguage = (x) => {
                 sentenceYouKnew: 'Wiedziałeś (lub się nauczyłeś)',
                 toRepeat: 'Do powtórki',
                 toggleToRepeatShow: 'Cała lista do powtórki',
-                toggleToRepeatHide: 'Loteria'
+                toggleToRepeatHide: 'Loteria',
+                TryToWriteATranslate: 'Spróbuj napisać tłumaczenie',
+                infoDescription: 'Pamiętać należy, że angielskie słowa mają często wiele znaczeń, także zależnych od kontekstu. Do aplikacji starano się wybrać najczęściej stosowane tłumaczenia oraz ewentualne alternatywy w nawiasach. Jeśli potrzebujesz kompletniejszego tłumaczenia, możesz użyć ikony z Transaltora Google, która znajduje się w prawym dolnym rogu tylnej fiszki. Wszelkie pytania i sugestie proszę kierować na ',
+                additionally: 'Dodatkowo',
+                showAnswer: 'Pokaż na chwilę poprawną odpowieź'
             };
     }
 };
