@@ -44,7 +44,8 @@ export const setLanguage = (x) => {
                 TryToWriteATranslate: 'Try to write a translate',
                 infoDescription: 'Remember, English words often have many meanings that can also depend on the context. We chose the most popular words and sometimes less popular alternatives in brackets. If you need more complete translation, you can use the icon with the Google Translate. The icon is at the bottom-right corner of the back flashcard. If you have any questions or suggestions, please send an',
                 additionally: 'Additionally',
-                showAnswer: 'Show the correct answer for a moment'
+                showAnswer: 'Show the correct answer for a moment',
+                listenTranslate: 'Listen to the translation'
 
             };
             break;
@@ -91,7 +92,8 @@ export const setLanguage = (x) => {
                 TryToWriteATranslate: 'Spróbuj napisać tłumaczenie',
                 infoDescription: 'Pamiętać należy, że angielskie słowa mają często wiele znaczeń, także zależnych od kontekstu. Do aplikacji starano się wybrać najczęściej stosowane tłumaczenia oraz ewentualne alternatywy w nawiasach. Jeśli potrzebujesz kompletniejszego tłumaczenia, możesz użyć ikony z Transaltora Google, która znajduje się w prawym dolnym rogu tylnej fiszki. Wszelkie pytania i sugestie proszę kierować na ',
                 additionally: 'Dodatkowo',
-                showAnswer: 'Pokaż na chwilę poprawną odpowieź'
+                showAnswer: 'Pokaż na chwilę poprawną odpowieź',
+                listenTranslate: 'Wysłuchaj tłumaczenia'
             };
     }
 };

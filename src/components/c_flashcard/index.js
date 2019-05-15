@@ -342,11 +342,25 @@ class Exercises extends Component {
         this.setState({
             translateForAMoment: trans
         });
+        this.props.that.setState({
+            translateForAMomentCheck: 'translate-for-a-moment-check'
+        });
         this.timeoutTranslateForAMoment = setTimeout(function (that) {
             that.setState({
                 translateForAMoment: ''
             });
         },5000,this);
+    };
+
+    listenTranslate = (that,flashCardDirection,trans) => {
+        if(flashCardDirection === 'p->e') {
+            that.translateVoice(trans, "en",that.state.online);
+        } else {
+            that.translateVoice(trans, "pl",that.state.online);
+        }
+        that.setState({
+            translateForAMomentCheck: 'translate-for-a-moment-check'
+        });
     };
 
     render() {
@@ -414,10 +428,21 @@ class Exercises extends Component {
                                                 {thisComponent.state.translateForAMoment ?
                                                     <p className={"correct-show-answer"}>{thisComponent.state.translateForAMoment}</p>
                                                     :
-                                                    <input type={"button"} className={"button-show-answer"}
-                                                           value={translate.showAnswer}
-                                                           onClick={() => thisComponent.showTranslateForAMoment(obj._en)}/>
+                                                    <button className={"button-show-answer"}
+                                                            onClick={() => thisComponent.showTranslateForAMoment(obj._en)}>{translate.showAnswer}</button>
                                                 }
+                                                <button className={"button-listen-answer"} onClick={() => thisComponent.listenTranslate(that,flashCardDirection,obj._en)}><span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span> {translate.listenTranslate}</button>
+
+
+                                                <div className="list-extends-links">
+                                                    <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl)} className="google-translator" target='blank_'>
+                                                        {/*{translate.gt}*/}
+                                                        <span className="icon-gt"></span>
+                                                    </button>
+                                                    {/*<button onClick={(e) => that.openHref(e,"https://context.reverso.net/tłumaczenie/polski-angielski/" + obj._pl)} className="reverso-context" target='blank_'>*/}
+                                                    {/*Reverso context<span className="icon-arrows-cw"></span>*/}
+                                                    {/*</button>*/}
+                                                </div>
                                             </div>
                                             <div className={'back ' + centerClass}>
                                                 <p className="paragraph-top" onClick={() => that.translateVoice(obj._pl, "pl",that.state.online) }>
@@ -467,10 +492,20 @@ class Exercises extends Component {
                                                 {thisComponent.state.translateForAMoment ?
                                                     <p className={"correct-show-answer"}>{thisComponent.state.translateForAMoment}</p>
                                                     :
-                                                    <input type={"button"} className={"button-show-answer"}
-                                                           value={translate.showAnswer}
-                                                           onClick={() => thisComponent.showTranslateForAMoment(obj._pl)}/>
+                                                    <button className={"button-show-answer"}
+                                                            onClick={() => thisComponent.showTranslateForAMoment(obj._pl)}>{translate.showAnswer}</button>
                                                 }
+                                                <button className={"button-listen-answer"} onClick={() => thisComponent.listenTranslate(that,flashCardDirection,obj._pl)}><span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span> {translate.listenTranslate}</button>
+
+                                                <div className="list-extends-links">
+                                                    <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en)} className="google-translator" target='blank_'>
+                                                        {/*{translate.gt}*/}
+                                                        <span className="icon-gt"></span>
+                                                    </button>
+                                                    {/*<button onClick={(e) => that.openHref(e,"https://context.reverso.net/tłumaczenie/angielski-polski/" + obj._en)} className="reverso-context" target='blank_'>*/}
+                                                    {/*Reverso context<span className="icon-arrows-cw"></span>*/}
+                                                    {/*</button>*/}
+                                                </div>
                                             </div>
                                             <div className={'back ' + centerClass}>
                                                 <p className="paragraph-top"  onClick={() => that.translateVoice(obj._en, "en",that.state.online)}>
@@ -669,6 +704,7 @@ class FlashCards extends Component {
             searchWordsMainSlideToggle: '',
             buttonWriteOK: '',
             infoFull: '',
+            translateForAMomentCheck: '',
             langNameExercise: (j,l=this.global.lang) => {
                 switch (l) {
                     case 'en': return j._en;
@@ -839,7 +875,8 @@ class FlashCards extends Component {
         });
         clearTimeout(this.childExercises.timeoutTranslateForAMoment);
         this.setState({
-            buttonWriteOK: ''
+            buttonWriteOK: '',
+            translateForAMomentCheck: ''
         });
     };
 
@@ -1562,9 +1599,9 @@ class FlashCards extends Component {
                             {this.state.callObj}
                         </div>
 
-                        <nav className={'nav-buttons ' + this.state.classHideNavButtons}>
+                        <nav className={'nav-buttons ' + this.state.classHideNavButtons + ' ' + this.state.translateForAMomentCheck}>
                             {!this.state.classCheckOutMore?<button className={"button-check-out " + this.state.buttonWriteOK} onClick={() => this.checkOut()}>{translate.buttonCheckOut}</button>:<button className="button-check-out">{translate.lottery}...</button>}
-                            <button title={translate.buttonIKnow} className="button-i-know" onClick={() => this.iKnow(this.state.idItem)}><span className="icon-ok"></span>{' ' + (this.state.buttonWriteOK?translate.buttonCheckOutToNext:'')}</button>
+                            <button title={translate.buttonIKnow} className="button-i-know" onClick={() => this.iKnow(this.state.idItem)}><span className="icon-ok"></span>{' ' + ((this.state.buttonWriteOK && !this.state.translateForAMomentCheck)?translate.buttonCheckOutToNext:'')}</button>
                             <button title={translate.buttonSimpleLotter} className="button-simple-lottery" onClick={() => this.simpleLottery()}><span className="icon-arrows-cw"></span></button>
                             <button title={translate.buttonIDontKnow} className="button-i-dont-know" onClick={() => this.iDontKnow(this.state.idItem)}><span className="icon-cancel"></span></button>
                         </nav>

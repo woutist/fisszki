@@ -1058,6 +1058,17 @@ a {
               opacity: .4; }
   .module-flash-cards .nav-buttons {
     display: flex; }
+    .module-flash-cards .nav-buttons.translate-for-a-moment-check .check-write-ok-button.button-check-out {
+      display: none; }
+    .module-flash-cards .nav-buttons.translate-for-a-moment-check .check-write-ok-button + .button-i-know {
+      display: block;
+      border-bottom-right-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+      margin-right: 5px !important; }
+      .module-flash-cards .nav-buttons.translate-for-a-moment-check .check-write-ok-button + .button-i-know + .button-simple-lottery {
+        display: block; }
+        .module-flash-cards .nav-buttons.translate-for-a-moment-check .check-write-ok-button + .button-i-know + .button-simple-lottery + .button-i-dont-know {
+          display: block; }
     .module-flash-cards .nav-buttons button {
       padding: 10px;
       color: #fff;
@@ -1414,6 +1425,22 @@ a {
       position: absolute;
       top: 0;
       left: 0; }
+      .module-flash-cards .main-flash-cards .flash-card .front .list-extends-links, .module-flash-cards .main-flash-cards .flash-card .back .list-extends-links {
+        position: absolute;
+        bottom: 2px;
+        right: 4px; }
+        .module-flash-cards .main-flash-cards .flash-card .front .list-extends-links button, .module-flash-cards .main-flash-cards .flash-card .back .list-extends-links button {
+          font-size: .6rem;
+          background-color: transparent;
+          padding: 0;
+          margin: 0 0 0 5px;
+          color: rgba(255, 255, 255, 0.8); }
+          .module-flash-cards .main-flash-cards .flash-card .front .list-extends-links button:hover, .module-flash-cards .main-flash-cards .flash-card .back .list-extends-links button:hover {
+            opacity: 1; }
+          .module-flash-cards .main-flash-cards .flash-card .front .list-extends-links button .icon-gt, .module-flash-cards .main-flash-cards .flash-card .front .list-extends-links button .icon-arrows-cw, .module-flash-cards .main-flash-cards .flash-card .back .list-extends-links button .icon-gt, .module-flash-cards .main-flash-cards .flash-card .back .list-extends-links button .icon-arrows-cw {
+            display: inline-block;
+            padding: 1px;
+            font-size: 26px; }
       .module-flash-cards .main-flash-cards .flash-card .front p, .module-flash-cards .main-flash-cards .flash-card .back p {
         margin-bottom: 10px;
         width: 100%;
@@ -1453,19 +1480,26 @@ a {
         margin: 10px 0; }
       .module-flash-cards .main-flash-cards .flash-card .front .correct-show-answer, .module-flash-cards .main-flash-cards .flash-card .back .correct-show-answer {
         cursor: auto;
-        margin-top: 15px; }
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-size: .9rem;
+        line-height: 1.3; }
       .module-flash-cards .main-flash-cards .flash-card .front .button-show-answer, .module-flash-cards .main-flash-cards .flash-card .back .button-show-answer {
         border: none;
         background-color: transparent;
         cursor: pointer;
         outline: none;
         margin-top: 15px;
-        width: 100%;
-        text-align: center;
-        display: block;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        color: red; }
+        margin-bottom: 10px;
+        color: #85351f;
+        font-size: .9rem;
+        vertical-align: top;
+        line-height: 1.3;
+        padding: 0; }
+      .module-flash-cards .main-flash-cards .flash-card .front .button-listen-answer, .module-flash-cards .main-flash-cards .flash-card .back .button-listen-answer {
+        font-size: .9rem;
+        background-color: transparent;
+        color: #85351f; }
       .module-flash-cards .main-flash-cards .flash-card .front .write-and-check, .module-flash-cards .main-flash-cards .flash-card .back .write-and-check {
         background-color: rgba(255, 255, 255, 0.1);
         transition: all 300ms ease-in-out;
@@ -1527,21 +1561,5 @@ a {
       color: #fff; }
       .module-flash-cards .main-flash-cards .flash-card .back p {
         margin: 0; }
-      .module-flash-cards .main-flash-cards .flash-card .back .list-extends-links {
-        position: absolute;
-        bottom: 2px;
-        right: 4px; }
-        .module-flash-cards .main-flash-cards .flash-card .back .list-extends-links button {
-          font-size: .6rem;
-          background-color: transparent;
-          padding: 0;
-          margin: 0 0 0 5px;
-          color: rgba(255, 255, 255, 0.8); }
-          .module-flash-cards .main-flash-cards .flash-card .back .list-extends-links button:hover {
-            opacity: 1; }
-          .module-flash-cards .main-flash-cards .flash-card .back .list-extends-links button .icon-gt, .module-flash-cards .main-flash-cards .flash-card .back .list-extends-links button .icon-arrows-cw {
-            display: inline-block;
-            padding: 1px;
-            font-size: 26px; }
 
 /*# sourceMappingURL=component.css.map */

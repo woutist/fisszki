@@ -1485,6 +1485,25 @@ a {
 
   .nav-buttons {
     display: flex;
+    &.translate-for-a-moment-check {
+      .check-write-ok-button {
+        &.button-check-out {
+          display: none;
+        }
+        & + .button-i-know {
+          display: block;
+          border-bottom-right-radius: 0 !important;
+          border-top-right-radius: 0 !important;
+          margin-right: 5px !important;
+          & + .button-simple-lottery {
+            display: block;
+            & + .button-i-dont-know {
+              display: block;
+            }
+          }
+        }
+      }
+    }
     button {
       padding: 10px;
       color: $color1;
@@ -1951,7 +1970,28 @@ a {
         top: 0;
         left: 0;
 
-
+        .list-extends-links {
+          position: absolute;
+          bottom: 2px;
+          right: 4px;
+          button {
+            font-size: .6rem;
+            background-color: transparent;
+            padding: 0;
+            margin: 0 0 0 5px;
+            color: rgba(255,255,255,.8);
+            &:hover {
+              opacity: 1;
+            }
+            .icon-gt, .icon-arrows-cw {
+              display: inline-block;
+              padding: 1px;
+              //text-shadow: 2px -2px 0 $color1;
+              font-size: 26px;
+              //color: $color-google-transaltor;
+            }
+          }
+        }
 
         p {
           margin-bottom: 10px;
@@ -2014,6 +2054,9 @@ a {
         .correct-show-answer {
           cursor: auto;
           margin-top: 15px;
+          margin-bottom: 10px;
+          font-size: .9rem;
+          line-height: 1.3;
         }
         .button-show-answer {
           border: none;
@@ -2021,12 +2064,17 @@ a {
           cursor: pointer;
           outline: none;
           margin-top: 15px;
-          width: 100%;
-          text-align: center;
-          display: block;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          color: red;
+          margin-bottom: 10px;
+          color: #85351f;
+          font-size: .9rem;
+          vertical-align: top;
+          line-height: 1.3;
+          padding: 0;
+        }
+        .button-listen-answer {
+          font-size: .9rem;
+          background-color: transparent;
+          color: #85351f;
         }
         .write-and-check {
           background-color: rgba(255,255,255,.1);
@@ -2103,28 +2151,6 @@ a {
         color: $color1;
         p {
           margin: 0;
-        }
-        .list-extends-links {
-          position: absolute;
-          bottom: 2px;
-          right: 4px;
-          button {
-            font-size: .6rem;
-            background-color: transparent;
-            padding: 0;
-            margin: 0 0 0 5px;
-            color: rgba(255,255,255,.8);
-            &:hover {
-              opacity: 1;
-            }
-            .icon-gt, .icon-arrows-cw {
-              display: inline-block;
-              padding: 1px;
-              //text-shadow: 2px -2px 0 $color1;
-              font-size: 26px;
-              //color: $color-google-transaltor;
-            }
-          }
         }
 
       }
