@@ -310,14 +310,16 @@ class Exercises extends Component {
         //// use something like trime, and small case letters, remove, removing brackets
         this.writeAndCheck.t = setTimeout(function (etext,text,that) {
             let t1 = etext.toLowerCase()
-                    .split(/\(.+\)/g).join("")
+                    //.split(/\(.+\)/g).join("")
+                    .split(/\([^)]+\)/g).join("")
                     .split(".").join("")
                     .split("/").join('')
                     .split(",").join('')
                     .split(/\s+/).join(' ')
                     .trim(),
                 t2 = text.toLowerCase()
-                    .split(/\(.+\)/g).join("")
+                    //.split(/\(.+\)/g).join("")
+                    .split(/\([^)]+\)/g).join("")
                     .split(".").join("")
                     .split("/").join('')
                     .split(",").join('')
@@ -422,7 +424,8 @@ class Exercises extends Component {
                                                 />
                                                 {(obj._en.indexOf('(') > -1 && obj._en.indexOf(')') > -1)?
                                                     <div className={"additional-options"}>
-                                                        <p><span>{translate.additionally}:</span> {obj._en.match(/\((.*)\)/)[0]}</p>
+                                                        {/*<p><span>{translate.additionally}:</span> {obj._en.match(/\((.*)\)/)[0]}</p>*/}
+                                                        <p><span>{translate.additionally}:</span> {obj._en.match(/\(([^)]*)\)$/)[0]}</p>
                                                     </div>
                                                     : ''
                                                 }
@@ -486,7 +489,8 @@ class Exercises extends Component {
                                                 />
                                                 {(obj._pl.indexOf('(') > -1 && obj._pl.indexOf(')') > -1)?
                                                     <div className={"additional-options"}>
-                                                        <p><span>{translate.additionally}:</span> {obj._pl.match(/\((.*)\)/)[0]}</p>
+                                                        {/*<p><span>{translate.additionally}:</span> {obj._pl.match(/\((.*)\)/)[0]}</p>*/}
+                                                        <p><span>{translate.additionally}:</span> {obj._pl.match(/\(([^)]*)\)$/)[0]}</p>
                                                     </div>
                                                     : ''
                                                 }

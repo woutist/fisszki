@@ -13064,7 +13064,30 @@
       "_pl": "<strong>Konstr.</strong>: podmiot + will be + 1 forma czasownika z końcówką - ing",
       "_en": "-"
     },
+    "data": [{}]
+  },
+  {
+    "category": {
+      "_pl": "Czasy (w trakcie budowy)",
+      "_en": "Tenses (under construction)"
+    },
+    "name": {
+      "_pl": "test",
+      "_en": "test"
+    },
     "data": [
+      {
+        "_pl": "Czy (test1) powiedziałeś to? Tak, powiedziałem. (test1) (test1) (last test1)",
+        "_en": "Did you say that? Yes, (test1) I said that.(test2) (last test1)"
+      },
+      {
+        "_pl": "Czy (test1) powiedziałeś to? Tak, powiedziałem. (test1) (test1) (last test1)",
+        "_en": "Did you say that? Yes, (test1) I said that. (test2) (last test1)"
+      },
+      {
+        "_pl": "Czy (test1) powiedziałeś to? Tak, powiedziałem. (test1) (test1) (last test1)",
+        "_en": "Did you say that? Yes, (test1) I said that. (test2) (last test1)"
+      }
     ]
   }
 ]
