@@ -388,7 +388,7 @@ class Exercises extends Component {
                     if(typeof dataJson[that.state.idExercise].description === 'object') {
                         description = (that.global.lang === 'pl')?dataJson[that.state.idExercise].description._pl:dataJson[that.state.idExercise].description._en;
                     }
-                    const sizeText = 30;
+                    const sizeText = 30, sizeTextMore = 40;
                     return (
                         <div className={'flash-card-inset' + (isIE?' ie-fix':'')} key={i}>
                             <span className="percent-pro" style={stylePercent}></span>
@@ -399,7 +399,8 @@ class Exercises extends Component {
                             <p>
                                 {that.state.online?'online':'offline'} | <span className="icon-up color-5">{o.youKnowID.length}/{o.data.length} = {Math.ceil(o.youKnowID.length*100/o.data.length)}%</span> - <span className="icon-down color-17">{o.youDontKnowID.length} ({o.dontKnowClick})</span>
                             </p>
-                            {description?<p>{Parser(description)}</p>:''}
+                            {/*you will do description in cloud and this description you will open after hover button*/}
+                            <div className={"d-none"}>{description?<p>{Parser(description)}</p>:''}</div>
 
                             <div className="flip-container">
                                 {
@@ -409,7 +410,7 @@ class Exercises extends Component {
                                                 <p className="paragraph-top"  onClick={() => that.translateVoice(obj._pl, "pl",that.state.online)}>
                                                     <strong>{translate.polish}</strong>
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
-                                                    <span className={obj._pl.length>sizeText?'normal-size':'large-size'}>{obj._pl}</span>
+                                                    <span className={obj._pl.length>sizeText?(obj._pl.length>sizeTextMore?'small-size':'normal-size'):'large-size'}>{obj._pl}</span>
                                                 </p>
                                                 <hr />
                                                 <input
@@ -448,13 +449,13 @@ class Exercises extends Component {
                                                 <p className="paragraph-top" onClick={() => that.translateVoice(obj._pl, "pl",that.state.online) }>
                                                     <strong>{translate.polish}</strong>
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
-                                                    <span className={obj._pl.length>sizeText?'normal-size':'large-size'}>{obj._pl}</span>
+                                                    <span className={obj._pl.length>sizeText?(obj._pl.length>sizeTextMore?'small-size':'normal-size'):'large-size'}>{obj._pl}</span>
                                                 </p>
                                                 <hr />
                                                 <p className="paragraph-bottom" onClick={() => that.translateVoice(obj._en, "en",that.state.online)}>
                                                     <strong>{translate.english}</strong>
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
-                                                    <span className={obj._en.length>sizeText?'normal-size':'large-size'}><strong>{obj._en}</strong></span>
+                                                    <span className={obj._en.length>sizeText?(obj._en.length>sizeTextMore?'small-size':'normal-size'):'large-size'}><strong>{obj._en}</strong></span>
                                                 </p>
                                                 <div className="list-extends-links">
                                                     <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=pl&tl=en&text=" + obj._pl)} className="google-translator" target='blank_'>
@@ -473,7 +474,7 @@ class Exercises extends Component {
                                                 <p className="paragraph-top"  onClick={() => that.translateVoice(obj._en, "en", that.state.online)}>
                                                     <strong>{translate.english}</strong>
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
-                                                    <span className={obj._en.length>sizeText?'normal-size':'large-size'} >{obj._en}</span>
+                                                    <span className={obj._en.length>sizeText?(obj._en.length>sizeTextMore?'small-size':'normal-size'):'large-size'} >{obj._en}</span>
                                                 </p>
                                                 <hr />
                                                 <input
@@ -511,13 +512,13 @@ class Exercises extends Component {
                                                 <p className="paragraph-top"  onClick={() => that.translateVoice(obj._en, "en",that.state.online)}>
                                                     <strong>{translate.english}</strong>
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
-                                                    <span className={obj._en.length>sizeText?'normal-size':'large-size'}>{obj._en}</span></p>
+                                                    <span className={obj._en.length>sizeText?(obj._en.length>sizeTextMore?'small-size':'normal-size'):'large-size'}>{obj._en}</span></p>
                                                 <hr />
 
                                                 <p className="paragraph-bottom"  onClick={() => that.translateVoice(obj._pl, "pl",that.state.online) }>
                                                     <strong>{translate.polish}</strong>
                                                     <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
-                                                    <span className={obj._pl.length>sizeText?'normal-size':'large-size'}><strong>{obj._pl}</strong></span>
+                                                    <span className={obj._pl.length>sizeText?(obj._pl.length>sizeTextMore?'small-size':'normal-size'):'large-size'}><strong>{obj._pl}</strong></span>
                                                 </p>
                                                 <div className="list-extends-links">
                                                     <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en)} className="google-translator" target='blank_'>

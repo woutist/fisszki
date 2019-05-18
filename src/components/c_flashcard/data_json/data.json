@@ -12491,6 +12491,143 @@
     },
     "data": [
       {
+        "_en": "What do you like doing? (Past simple)",
+        "_pl": "Co lubisz robić?"
+      },
+      {
+        "_en": "What do you do? (Past simple)",
+        "_pl": "Co robisz? (czym się zajmujesz)"
+      },
+      {
+        "_en": "What are you doing? (Present continuous)",
+        "_pl": "Co robisz? (w tym momencie)"
+      },
+      {
+        "_en": "What did you do? (Past simple)",
+        "_pl": "Co zrobiłeś? (co zrobiłeś np. wczoraj, godzine temu, jakiś czas temu, co potencjalnie zostało dokonane)"
+      },
+      {
+        "_en": "What have you done? (Present perfect)",
+        "_pl": "Co zrobiłeś? (co ty zrobiłeś co ma związek z teraźniejszością, np. potłukłeś talerz i osoba widząc rozbity talerz może w ten sposó zapytać)"
+      },
+      {
+        "_en": "What did he do? (Past simple)",
+        "_pl": "Co on zrobił? (ogólnie, np. wczoraj albo miesiąc temu)"
+      },
+      {
+        "_en": "What has he done? (Present perfect)",
+        "_pl": "Co on zrobił? (w związku z teraźniejszością, np. gdy on potłukł przed chwilą wazon)"
+      },
+      {
+        "_en": "What was he doing? (Past continuous)",
+        "_pl": "Co on robił (co on robił co potencjalnie mogło nie zostać dokonane)?"
+      },
+      {
+        "_en": "What were you doing? (Past continuous) ",
+        "_pl": "Co robiłeś? (co robiłeś co potencjalnie mogło nie zostać dokonane)"
+      },
+      {
+        "_en": "What will you do? (Past simple)",
+        "_pl": "Co zrobisz?"
+      },
+      {
+        "_en": "What will you be doing? (future continuous)",
+        "_pl": "Co będziesz robić?  (co będziesz robił w jakimś okreśe czasu, np. z myślą co będziesz robił na wakacjach)"
+      },
+      {
+        "_en": "Am I supposed to do? (Present simple)",
+        "_pl": "Czy mam to zrobić?"
+      },
+      {
+        "_en": "I am supposed to do  (Present simple)",
+        "_pl": "Mam to zrobić"
+      },
+      {
+        "_en": "Do I have to do? (Present simple)",
+        "_pl": "Czy muszę to zrobić?"
+      },
+      {
+        "_en": "I have to do it (Present simple)",
+        "_pl": "Muszę to zrobić"
+      },
+      {
+        "_en": "I must to do it (Present simple)",
+        "_pl": "Muszę koniecznie to zrobić"
+      },
+      {
+        "_en": "I should to do it (Present simple)",
+        "_pl": "Powinienem to zrobić"
+      },
+      {
+        "_en": "What am I supposed to do? (Present simple)",
+        "_pl": "Co ja mam zrobić? (ogólnie)"
+      },
+      {
+        "_en": "What am I supposed to be doing? (Present continuous)",
+        "_pl": "Co ja mam zrobić? (w tym momencie)"
+      },
+      {
+        "_en": "I don't mind (Present simple)",
+        "_pl": "Nie przeszkadza mi to"
+      },
+      {
+        "_en": "I don't care (Present simple)",
+        "_pl": "Nie obchodzi mnie to (ie dbam o to)"
+      },
+      {
+        "_en": "Doesn't matter (or: Nevermind) (Present simple)",
+        "_pl": "Nieważne"
+      },
+      {
+        "_en": "What is it? (Present simple)",
+        "_pl": "O co chodzi?"
+      },
+      {
+        "_en": "What is going on? (Present continuous)",
+        "_pl": "Co tu sie dzieje?"
+      },
+      {
+        "_en": "...so what is your point? ",
+        "_pl": "...więc o co Ci chodzi?"
+      },
+      {
+        "_en": "Who do you want to talk with? (Present simple)",
+        "_pl": "Z kim chcesz rozmawiać?"
+      },
+
+      {
+        "_en": "Who were you with in the shop yesterday? (Past simple)",
+        "_pl": "Z kim wczoraj byłaś w mieście?"
+      },
+
+      {
+        "_en": "Who will you be shopping with tomorrow? (Future continuous)",
+        "_pl": "kim jutro będziesz robić zakupy?"
+      },
+
+      {
+        "_en": "Oddać to",
+        "_pl": "To give it away"
+      },
+
+
+      {
+        "_en": "Surrender is not defeat",
+        "_pl": "Poddanie się nie jest porażką"
+      },
+
+      {
+        "_en": "It's been a while",
+        "_pl": "Mineło trochę czasu"
+      },
+
+      {
+        "_en": "I am going to do something (or: I am about to do something)",
+        "_pl": "Mam zamiar coś zrobić"
+      },
+
+
+      {
         "_en": "I want to be honest with you.",
         "_pl": "Chcę być z Tobą szczery."
       },
@@ -12508,7 +12645,7 @@
       },
       {
         "_en": "Sorry, what was that?",
-        "_pl": "Przepraszam, co to było / o co chodziło?"
+        "_pl": "Przepraszam, co to było? (Przepraszam, o co chodziło?)"
       },
       {
         "_en": "Let me confirm.",
@@ -12519,28 +12656,100 @@
         "_pl": "Miło cię poznać."
       },
       {
-        "_en": "How are you? / How're you?",
+        "_en": "How are you? (How're you?)",
         "_pl": "Jak się masz? "
       },
       {
-        "_en": "How is everything? / How's everything?",
+        "_en": "How is everything? (How's everything?)",
         "_pl": "Jak tam ze wszystkim?"
       },
       {
-        "_en": "How is it going? / How's it? / How's it goin?",
+        "_en": "How is it going? (How's it? / How's it goin?)",
         "_pl": "Jak leci?"
       },
       {
-        "_en": "How is work? / How's work?",
+        "_en": "How is work? (How's work?)",
         "_pl": "Jak tam w pracy?"
       },
       {
-        "_en": "I am fine thank you, and you? / I'm good. How'bout you?",
+        "_en": "I am fine thank you, and you? (I'm good. How'bout you?)",
         "_pl": "W porządku, a co u Ciebie?"
       }
     ]
   },
 
+  {
+    "category": {
+      "_pl": "Podstawowe słowa i frazy",
+      "_en": "Basic words and phrases"
+    },
+    "name": {
+      "_pl": "Codzienne czynności",
+      "_en": "Daily activities"
+    },
+    "data": [
+      {
+        "_en": "I dream about something",
+        "_pl": "Marze o czymś"
+      },
+      {
+        "_en": "I fall asleep",
+        "_pl": "Zasypiam"
+      },
+      {
+        "_en": "I feel tired",
+        "_pl": "Czuje się zmęczony"
+      },
+      {
+        "_en": "I get dressed",
+        "_pl": "Ubieram się"
+      },
+      {
+        "_en": "I get into bed",
+        "_pl": "Ide do łóżka"
+      },
+      {
+        "_en": "I get out of bed",
+        "_pl": "wstaje z łóżka"
+      },
+      {
+        "_en": "I have a bath",
+        "_pl": "Biorę kąpiel"
+      },
+      {
+        "_en": "I have something to eat",
+        "_pl": "Mam coś do jedzenia"
+      },
+      {
+        "_en": "I set my alarm",
+        "_pl": "Ustawiam mój alarm"
+      },
+      {
+        "_en": "I switch off the alarm",
+        "_pl": "Wyłączam alarm"
+      },
+      {
+        "_en": "I turn off the light",
+        "_pl": "Wyłączam światło"
+      },
+      {
+        "_en": "I wake up",
+        "_pl": "Budze się"
+      },
+      {
+        "_en": "My alarm goes off",
+        "_pl": "Mój alarm się włącza"
+      },
+      {
+        "_en": "I go to school",
+        "_pl": "Idę do szkoły"
+      },
+      {
+        "_en": "I come home",
+        "_pl": "Wracam do domu"
+      }
+    ]
+  },
 
   {
     "category": {
@@ -12652,10 +12861,134 @@
       "_en": "Past Simple - Przeszły prosty"
     },
     "description": {
-      "_pl": "<strong>Konstr. twierdząca</strong>: podmiot + 2 forma czasownika<br><strong>Konstr. pytająca</strong>: did + podmit + 1 forma czasownika",
+      "_pl": "<strong>Konstr. twierdząca</strong>: podmiot + 2 forma czasownika<br><strong>Konstr. pytająca</strong>: did + podmit + 1 forma czasownika<br><strong>Konstr. pytająca o podmiot:</strong> zaimek + 2 forma czasownika<br><strong>Konstr. przecząca</strong>: podmiot + didn't (lub w odmianie 'być' wasn't lub weren't) + 1 forma czasownika",
       "_en": "-"
     },
     "data": [
+      {
+        "_pl": "Kto naprawił mój samochód?",
+        "_en": "Who repaired my car?"
+      },
+      {
+        "_pl": "On nie naprawił mojego samochodu.",
+        "_en": "He didn't repair my car."
+      },
+      {
+        "_pl": "Ile lat miała twoja mama gdy się urodziełeś?",
+        "_en": "How old was your mother when you were born?"
+      },
+      {
+        "_pl": "Jak miał na imię bohater książki?",
+        "_en": "What was the name of the book's hero?"
+      },
+      {
+        "_pl": "Uczniowie zaśpiewali hymn państwa.",
+        "_en": "The students sang national anthem."
+      },
+      {
+        "_pl": "Nikolasowi nie podobał się ten film.",
+        "_en": "Nicolas didn't like this movie."
+      },
+      {
+        "_pl": "Widziałem moich rodziców 2 tygodnie temu.",
+        "_en": "I saw my parents two weeks ago."
+      },
+      {
+        "_pl": "Nie poszedłem do szkoły w zeszły wtorek.",
+        "_en": "He didn't go to school last Tuesday."
+      },
+      {
+        "_pl": "Czy poznałeś wczoraj nowych sąsiadów?",
+        "_en": "Did you meet new neighbors yesterday?"
+      },
+      {
+        "_pl": "W co on był ubrany w zeszły weekend?",
+        "_en": "What was he wearing last weekend?"
+      },
+      {
+        "_pl": "On nie wiedział jak to zrobić.",
+        "_en": "He didn't know how to do it."
+      },
+      {
+        "_pl": "Czy byłeś grzeczny u babci?",
+        "_en": "Were you polite at grandma?"
+      },
+      {
+        "_pl": "Mój dziadek miał wielką gospodarkę kiedy był młody.",
+        "_en": "My grandfather had a big farmy when he was young."
+      },
+      {
+        "_pl": "Czy to było trudne?",
+        "_en": "Was it difficult?"
+      },
+      {
+        "_pl": "Jak spędziłeś zeszłe leto?",
+        "_en": "How did you spend last summer?"
+      },
+      {
+        "_pl": "On 10 lat temu nie miał samochodu.",
+        "_en": "He didn't have a car 10 yers ago."
+      },
+      {
+        "_pl": "Egzaminator nie był wymagający.",
+        "_en": "Examiner wasn't demanding."
+      },
+      {
+        "_pl": "Wczoraj siostra pomogła mi odrobić zadanie donowe.",
+        "_en": "My sister helped me do my homework yesterday."
+      },
+      {
+        "_pl": "Ona zapomniała umyć zęby w zeszły czwartek.",
+        "_en": "She forgot to brush her teeth last Thursday."
+      },
+      {
+        "_pl": "Wczoraj nie obejrzałem wiadomości.",
+        "_en": "I didn't watch the news yesterday."
+      },
+      {
+        "_pl": "Czy widzieliście wczoraj mojego brata? Tak, widzieliśmy. ",
+        "_en": "Did you see my brother yesterday? Yes, we did."
+      },
+      {
+        "_pl": "Nie zjadła śniadania ale zjadła duży obiad.",
+        "_en": "She didn't eat breakfast but she ate a big dinner."
+      },
+      {
+        "_pl": "Czy on posprzątał garaż wczoraj? Nie, nie posprzątał.",
+        "_en": "Did he clean the garage yestarday? No, he didn't."
+      },
+      {
+        "_pl": "Ona umyły naczynia w zeszłym miesiącu.",
+        "_en": "She washed the dishes last month."
+      },
+      {
+        "_pl": "Oni nie przybyli tu pić alkohol, oni przyjbyli tu uczyć się.",
+        "_en": "They didn't arrive (come) here to drink alkohol, they arrived (came) here to learn. "
+      },
+      {
+        "_pl": "Moja znajoma zaczeła nowe studia rok temu.",
+        "_en": "My friend started his new studies a year ago."
+      },
+      {
+        "_pl": "Co on zjadł? On zjadł kanapkę.",
+        "_en": "What did he eat? He ate a sandwich."
+      },
+      {
+        "_pl": "Gdzie on kupił ten samochód? On kupił ten samochód w salonie",
+        "_en": "Where did he buy this car? He bought this car in a car dealership."
+      },
+      {
+        "_pl": "On nie potrafił grać na gitarze, ale potrafił na pianinie.",
+        "_en": "He couldn't play the guitar, but he could play the piano"
+      },
+      {
+        "_pl": "Kiedy ona miała 1 rok potrafiła chodzic",
+        "_en": "When she was 1 year old, she was able to walk."
+      },
+      {
+        "_pl": "Ile puszek coli wypiłeś? Wypiłem 2 puszki coli.",
+        "_en": "How many cans of cola did you drink? I drank 2 cans of cola."
+      },
       {
         "_pl": "Wczoraj pojechałem do sklepu.",
         "_en": "Yesterday I drove to shop."
@@ -12673,16 +13006,16 @@
         "_en": "We walked all summer in the mountains."
       },
       {
-        "_pl": "- Czy powiedziałeś to? - Tak, powiedziałem.",
-        "_en": "- Did you say that? - Yes, I said that."
+        "_pl": "Czy powiedziałeś to? Tak, powiedziałem.",
+        "_en": "Did you say that? Yes, I said that."
       },
       {
-        "_pl": "- Czy widziałeś to? - Nie, nie widziałem tego.",
-        "_en": "- Did you see that? - No, I didn't see."
+        "_pl": "Czy widziałeś to? Nie, nie widziałem tego.",
+        "_en": "Did you see that? No, I didn't see."
       },
       {
-        "_pl": "- Czy rozmawaiałaś wczoraj z mamą? - Nie, nie zrobiłam tego.",
-        "_en": "- Did you speak to mom yesterday? - No, I didn't."
+        "_pl": "Czy rozmawiałaś wczoraj z mamą? Nie, nie zrobiłam tego.",
+        "_en": "Did you speak to mom yesterday? No, I didn't."
       }
     ]
   },
@@ -12732,30 +13065,6 @@
       "_en": "-"
     },
     "data": [
-    ]
-  },
-  {
-    "category": {
-      "_pl": "Czasy (w trakcie budowy)",
-      "_en": "Tenses (under construction)"
-    },
-    "name": {
-      "_pl": "test",
-      "_en": "test"
-    },
-    "description": {
-      "_pl": "<strong>Konstr.</strong>: podmiot + will be + 1 forma czasownika z końcówką - ing",
-      "_en": "-"
-    },
-    "data": [
-      {
-        "_pl": "test nawias 3 (test nawias 3)",
-        "_en": "test bracket 3 (test bracket 3)"
-      },
-      {
-        "_pl": "test nawias 4 (test nawias 4) (test nawias 4)",
-        "_en": "test bracket 4 (test bracket 4) (test bracket 4) (test bracket 4)"
-      }
     ]
   }
 ]
