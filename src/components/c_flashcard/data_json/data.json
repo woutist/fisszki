@@ -63,7 +63,7 @@
       },
       {
         "_en": "favor",
-        "_pl": "przychylność"
+        "_pl": "przysługa (przychylność)"
       },
       {
         "_en": "enter",
@@ -279,7 +279,7 @@
       },
       {
         "_en": "drink",
-        "_pl": "pic"
+        "_pl": "pić"
       },
       {
         "_en": "swim",
@@ -319,7 +319,7 @@
       },
       {
         "_en": "range",
-        "_pl": "łańcuch"
+        "_pl": "zasięg"
       },
       {
         "_en": "shoulder",
@@ -331,7 +331,7 @@
       },
       {
         "_en": "spread",
-        "_pl": "rozprzestrzenianie się"
+        "_pl": "rozprzestrzeniać się (rozpiętość)"
       },
       {
         "_en": "motion",
@@ -367,7 +367,7 @@
       },
       {
         "_en": "meant",
-        "_pl": "znaczył"
+        "_pl": "oznaczać (oznaczało)"
       },
       {
         "_en": "born",
@@ -503,7 +503,7 @@
       },
       {
         "_en": "differ",
-        "_pl": "różnic się"
+        "_pl": "różnić się"
       },
       {
         "_en": "on",
@@ -551,7 +551,7 @@
       },
       {
         "_en": "move",
-        "_pl": "ruszać"
+        "_pl": "ruszaj się (przenieść)"
       },
       {
         "_en": "they",
@@ -1432,7 +1432,7 @@
       },
       {
         "_en": "seem",
-        "_pl": "wydawać się, wyglądać na"
+        "_pl": "wydawać się (wyglądać na)"
       },
       {
         "_en": "simple",
@@ -1560,7 +1560,7 @@
       },
       {
         "_en": "mark",
-        "_pl": "zaznaczać "
+        "_pl": "znak (zaznaczać)"
       },
       {
         "_en": "map",
@@ -1659,7 +1659,7 @@
       },
       {
         "_en": "took",
-        "_pl": "wiął, zabrać (w czasię przeszłym)"
+        "_pl": "wziął"
       },
       {
         "_en": "certain",
@@ -1843,7 +1843,7 @@
       },
       {
         "_en": "stood",
-        "_pl": "stał - stać (w czasię przeszłym)"
+        "_pl": "stanął"
       },
       {
         "_en": "girl",
@@ -2083,7 +2083,7 @@
       },
       {
         "_en": "happen",
-        "_pl": "stać się "
+        "_pl": "zdarzyć (stać się)"
       },
       {
         "_en": "full",
@@ -2569,7 +2569,7 @@
       },
       {
         "_en": "industry",
-        "_pl": "przemysł, branża"
+        "_pl": "przemysł (branża)"
       },
       {
         "_en": "vary",
@@ -2581,7 +2581,7 @@
       },
       {
         "_en": "settle",
-        "_pl": "roztrzygać, osiadać"
+        "_pl": "osiadać (roztrzygać)"
       },
       {
         "_en": "fight",
@@ -2685,7 +2685,7 @@
       },
       {
         "_en": "pick",
-        "_pl": "podnosić"
+        "_pl": "wybierać"
       },
       {
         "_en": "kill",
@@ -2866,7 +2866,7 @@
       },
       {
         "_en": "race",
-        "_pl": "wyścig, rasa"
+        "_pl": "wyścig (rasa)"
       },
       {
         "_en": "surprise",
@@ -2882,7 +2882,7 @@
       },
       {
         "_en": "store",
-        "_pl": "zapas, sklep"
+        "_pl": "sklep (zapas)"
       },
       {
         "_en": "stone",
@@ -2982,7 +2982,7 @@
       },
       {
         "_en": "stick",
-        "_pl": "kij"
+        "_pl": "kij (wbić)"
       },
       {
         "_en": "board",
@@ -3202,7 +3202,7 @@
       },
       {
         "_en": "break",
-        "_pl": "łamać"
+        "_pl": "złamać (przerwa)"
       },
       {
         "_en": "flower",
@@ -3818,7 +3818,7 @@
       },
       {
         "_en": "discuss",
-        "_pl": "rozmawiać"
+        "_pl": "omawiać (dyskutować)"
       },
       {
         "_en": "thick",
@@ -4064,6 +4064,20 @@
       "_en": "Other popular words"
     },
     "data": [
+      {
+        "_en": "frequency",
+        "_pl": "częstotliwość"
+      },
+      {
+        "_en": "commit",
+        "_pl": "popełnić (angażować)"
+      },
+
+      {
+        "_en": "collaboration",
+        "_pl": "współpraca"
+      },
+
       {
         "_en": "betray",
         "_pl": "zdrada"
@@ -6824,7 +6838,7 @@
       },
       {
         "_en": "favor",
-        "_pl": "przychylność"
+        "_pl": "przysługa (przychylność)"
       },
       {
         "_en": "enter",
@@ -7040,7 +7054,7 @@
       },
       {
         "_en": "drink",
-        "_pl": "pic"
+        "_pl": "pić"
       },
       {
         "_en": "swim",
@@ -7080,7 +7094,7 @@
       },
       {
         "_en": "range",
-        "_pl": "łańcuch"
+        "_pl": "zasięg"
       },
       {
         "_en": "shoulder",
@@ -7128,7 +7142,7 @@
       },
       {
         "_en": "meant",
-        "_pl": "znaczyć w czasię przeszłym"
+        "_pl": "oznaczać (oznaczało)"
       },
       {
         "_en": "born",
@@ -7276,7 +7290,7 @@
       },
       {
         "_en": "differ",
-        "_pl": "różnic się"
+        "_pl": "różnić się"
       },
       {
         "_en": "on",
@@ -7324,7 +7338,7 @@
       },
       {
         "_en": "move",
-        "_pl": "ruszać"
+        "_pl": "ruszaj się (przenieść)"
       },
       {
         "_en": "they",
@@ -8211,7 +8225,7 @@
       },
       {
         "_en": "seem",
-        "_pl": "wydawać się, wyglądać na"
+        "_pl": "wydawać się (wyglądać na)"
       },
       {
         "_en": "simple",
@@ -8339,7 +8353,7 @@
       },
       {
         "_en": "mark",
-        "_pl": "zaznaczać "
+        "_pl": "znak (zaznaczać)"
       },
       {
         "_en": "map",
@@ -8447,7 +8461,7 @@
       },
       {
         "_en": "took",
-        "_pl": "wziął, zabrać w czasię przeszłym"
+        "_pl": "wziął"
       },
       {
         "_en": "certain",
@@ -8631,7 +8645,7 @@
       },
       {
         "_en": "stood",
-        "_pl": "stał - stać (w czasię przeszłym)"
+        "_pl": "stanął"
       },
       {
         "_en": "girl",
@@ -8879,7 +8893,7 @@
       },
       {
         "_en": "happen",
-        "_pl": "stać się "
+        "_pl": "zdarzyć (stać się)"
       },
       {
         "_en": "full",
@@ -9375,7 +9389,7 @@
       },
       {
         "_en": "industry",
-        "_pl": "przemysł, branża"
+        "_pl": "przemysł (branża)"
       },
       {
         "_en": "vary",
@@ -9387,7 +9401,7 @@
       },
       {
         "_en": "settle",
-        "_pl": "roztrzygać, osiadać"
+        "_pl": "osiadać (roztrzygać)"
       },
       {
         "_en": "fight",
@@ -9491,7 +9505,7 @@
       },
       {
         "_en": "pick",
-        "_pl": "podnosić"
+        "_pl": "wybierać"
       },
       {
         "_en": "kill",
@@ -9680,7 +9694,7 @@
       },
       {
         "_en": "race",
-        "_pl": "wyścig, rasa"
+        "_pl": "wyścig (rasa)"
       },
       {
         "_en": "surprise",
@@ -9796,7 +9810,7 @@
       },
       {
         "_en": "stick",
-        "_pl": "kij"
+        "_pl": "kij (wbić)"
       },
       {
         "_en": "board",
@@ -10016,7 +10030,7 @@
       },
       {
         "_en": "break",
-        "_pl": "łamać"
+        "_pl": "złamać (przerwa)"
       },
       {
         "_en": "flower",
@@ -10649,7 +10663,7 @@
       },
       {
         "_en": "discuss",
-        "_pl": "rozmawiać"
+        "_pl": "omawiać (dyskutować)"
       },
       {
         "_en": "thick",
@@ -13064,7 +13078,7 @@
       "_pl": "<strong>Konstr.</strong>: podmiot + will be + 1 forma czasownika z końcówką - ing",
       "_en": "-"
     },
-    "data": [{}]
+    "data": []
   },
   {
     "category": {
@@ -13075,19 +13089,6 @@
       "_pl": "test",
       "_en": "test"
     },
-    "data": [
-      {
-        "_pl": "Czy (test1) powiedziałeś to? Tak, powiedziałem. (test1) (test1) (last test1)",
-        "_en": "Did you say that? Yes, (test1) I said that.(test2) (last test1)"
-      },
-      {
-        "_pl": "Czy (test1) powiedziałeś to? Tak, powiedziałem. (test1) (test1) (last test1)",
-        "_en": "Did you say that? Yes, (test1) I said that. (test2) (last test1)"
-      },
-      {
-        "_pl": "Czy (test1) powiedziałeś to? Tak, powiedziałem. (test1) (test1) (last test1)",
-        "_en": "Did you say that? Yes, (test1) I said that. (test2) (last test1)"
-      }
-    ]
+    "data": []
   }
 ]
