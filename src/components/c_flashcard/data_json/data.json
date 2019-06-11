@@ -967,7 +967,7 @@
       },
       {
         "_en": "mother",
-        "_pl": "mama"
+        "_pl": "matka"
       },
       {
         "_en": "thing",
@@ -1276,11 +1276,11 @@
       },
       {
         "_en": "start",
-        "_pl": "początek, zaczynać"
+        "_pl": "zaczynać (początek)"
       },
       {
         "_en": "made",
-        "_pl": "robić w czasię przeszłym i zrobione"
+        "_pl": "zrobiony (stworzony, wyprodukowany)"
       },
       {
         "_en": "might",
@@ -1288,7 +1288,7 @@
       },
       {
         "_en": "live",
-        "_pl": "na żywo, żyć, mieszkać"
+        "_pl": "żyć (mieszkać, na żywo, żywy)"
       },
       {
         "_en": "story",
@@ -1300,7 +1300,7 @@
       },
       {
         "_en": "saw",
-        "_pl": "widzieć (w czasię przeszłym), piła"
+        "_pl": "piła (widział)"
       },
       {
         "_en": "after",
@@ -1360,7 +1360,7 @@
       },
       {
         "_en": "came",
-        "_pl": "przyjechał, przybył"
+        "_pl": "przyjechał (przybył)"
       },
       {
         "_en": "while",
@@ -1476,11 +1476,11 @@
       },
       {
         "_en": "lay",
-        "_pl": "leżeć (w czasię przeszłym)"
+        "_pl": "leżał"
       },
       {
         "_en": "got",
-        "_pl": "dostawać"
+        "_pl": "dostał"
       },
       {
         "_en": "against",
@@ -1552,7 +1552,7 @@
       },
       {
         "_en": "both",
-        "_pl": "obie, zarówno"
+        "_pl": "obie (zarówno)"
       },
       {
         "_en": "road",
@@ -1612,7 +1612,7 @@
       },
       {
         "_en": "notice",
-        "_pl": "ogłoszenie, zauważyć"
+        "_pl": "ogłoszenie (zauważyć)"
       },
       {
         "_en": "feet",
@@ -1628,7 +1628,7 @@
       },
       {
         "_en": "unit",
-        "_pl": "jednostka, rozdział"
+        "_pl": "jednostka (rozdział)"
       },
 
 
@@ -1739,15 +1739,15 @@
       },
       {
         "_en": "once",
-        "_pl": "pewnego razu, jeden raz"
+        "_pl": "pewnego razu (jeden raz)"
       },
       {
         "_en": "figure",
-        "_pl": "postać, figura, cyfra"
+        "_pl": "postać (figura, cyfra)"
       },
       {
         "_en": "base",
-        "_pl": "baza, podstawa"
+        "_pl": "baza (podstawa)"
       },
       {
         "_en": "star",
@@ -1811,15 +1811,15 @@
       },
       {
         "_en": "pound",
-        "_pl": "walić, funt"
+        "_pl": "walić (funt)"
       },
       {
         "_en": "wood",
-        "_pl": "drewno, las"
+        "_pl": "drewno (las)"
       },
       {
         "_en": "done",
-        "_pl": "(zrobione i do w czasię perfect)"
+        "_pl": "zrobione"
       },
       {
         "_en": "main",
@@ -1835,11 +1835,11 @@
       },
       {
         "_en": "drive",
-        "_pl": "prowadzić, przejażdżka"
+        "_pl": "prowadzić (kierować, napęd)"
       },
       {
         "_en": "plain",
-        "_pl": "zwykły, równina"
+        "_pl": "zwykły (równina)"
       },
       {
         "_en": "stood",
@@ -1883,7 +1883,7 @@
       },
       {
         "_en": "final",
-        "_pl": "finał, ostatni"
+        "_pl": "finał (ostatni)"
       },
       {
         "_en": "ever",
@@ -1991,11 +1991,11 @@
       },
       {
         "_en": "leave",
-        "_pl": "opuścić, wychodzić, pozostawić"
+        "_pl": "opuścić (wychodzić, pozostawić)"
       },
       {
         "_en": "clear",
-        "_pl": "jasny, wyraźny, oczyścić"
+        "_pl": "jasny (wyraźny, oczyścić)"
       },
       {
         "_en": "song",
@@ -2335,15 +2335,15 @@
       },
       {
         "_en": "miss",
-        "_pl": "tęsknić, chybić, tracić"
+        "_pl": "tęsknić (chybić, tracić)"
       },
       {
         "_en": "ground",
-        "_pl": "ziemia, grunt"
+        "_pl": "ziemia (grunt)"
       },
       {
         "_en": "brought",
-        "_pl": "przyniósł, przynosić (w czasię przeszłym)"
+        "_pl": "przyniósł"
       },
       {
         "_en": "interest",
@@ -2351,7 +2351,7 @@
       },
       {
         "_en": "heat",
-        "_pl": "ciepło, gorąco"
+        "_pl": "ciepło (gorąco)"
       },
       {
         "_en": "reach",
@@ -2367,7 +2367,7 @@
       },
       {
         "_en": "tire",
-        "_pl": "zmęczyć, opona"
+        "_pl": "zmęczyć (opona)"
       },
       {
         "_en": "verb",
@@ -2505,7 +2505,7 @@
       },
       {
         "_en": "phrase",
-        "_pl": "wyrażenie, zwrot"
+        "_pl": "wyrażenie (zwrot)"
       },
       {
         "_en": "dance",
@@ -2593,7 +2593,7 @@
       },
       {
         "_en": "lie",
-        "_pl": "leżeć, kłamstwo"
+        "_pl": "kłamstwo (leżeć)"
       },
       {
         "_en": "weight",
@@ -2621,7 +2621,7 @@
       },
       {
         "_en": "matter",
-        "_pl": "sprawa, znaczenie, materia"
+        "_pl": "sprawa (znaczenie, materia)"
       },
       {
         "_en": "view",
@@ -2629,7 +2629,7 @@
       },
       {
         "_en": "circle",
-        "_pl": "koło, okrąg"
+        "_pl": "koło (okrąg)"
       },
       {
         "_en": "sense",
@@ -2665,11 +2665,11 @@
       },
       {
         "_en": "broke",
-        "_pl": "złamałem, złamać (w czasię przeszłym)"
+        "_pl": "złamał"
       },
       {
         "_en": "felt",
-        "_pl": "czułem, czuć (w czasię przeszłym)"
+        "_pl": "czuł"
       },
       {
         "_en": "case",
@@ -2784,7 +2784,7 @@
         "_pl": "prawdopodobny"
       },
       {
-        "_en": "dictionary, glossary, vocabulary",
+        "_en": "dictionary (glossary, vocabulary)",
         "_pl": "słownik"
       },
       {
@@ -2837,7 +2837,7 @@
       },
       {
         "_en": "fraction",
-        "_pl": "frakcja, odrobina"
+        "_pl": "frakcja (odrobina)"
       },
       {
         "_en": "section",
@@ -2962,7 +2962,7 @@
       },
       {
         "_en": "mount",
-        "_pl": "góra, wierzchowiec"
+        "_pl": "góra (wierzchowiec)"
       },
       {
         "_en": "iron",
@@ -2970,7 +2970,7 @@
       },
       {
         "_en": "wish",
-        "_pl": "życzenie, pragnienie"
+        "_pl": "życzenie (pragnienie)"
       },
       {
         "_en": "single",
@@ -3026,7 +3026,7 @@
       },
       {
         "_en": "crease",
-        "_pl": "marszczyć, gnieść"
+        "_pl": "marszczyć (gnieść)"
       },
       {
         "_en": "wild",
@@ -3086,7 +3086,7 @@
       },
       {
         "_en": "edge",
-        "_pl": "krawędź, skraj"
+        "_pl": "krawędź (skraj)"
       },
       {
         "_en": "mouth",
@@ -3142,11 +3142,11 @@
       },
       {
         "_en": "gas",
-        "_pl": "benzyna, gaz"
+        "_pl": "benzyna (gaz)"
       },
       {
         "_en": "except",
-        "_pl": "z wyjątkiem, oprócz"
+        "_pl": "oprócz (z wyjątkiem)"
       },
       {
         "_en": "weather",
@@ -3230,7 +3230,7 @@
       },
       {
         "_en": "gone",
-        "_pl": "poszedł, odszedł, miniony"
+        "_pl": "poszedł (odszedł, miniony)"
       },
       {
         "_en": "bad",
@@ -3274,11 +3274,11 @@
       },
       {
         "_en": "meet",
-        "_pl": "spotykać, poznawać"
+        "_pl": "spotykać (poznawać)"
       },
       {
         "_en": "grew",
-        "_pl": "rósł - rosnąć (w czasię przeszłym)"
+        "_pl": "rosnął"
       },
       {
         "_en": "root",
@@ -3298,7 +3298,7 @@
       },
       {
         "_en": "raise",
-        "_pl": "podnieść, przesadzić, podwyżać"
+        "_pl": "podnieść (przesadzić, podwyżać)"
       },
       {
         "_en": "team",
@@ -3382,7 +3382,7 @@
       },
       {
         "_en": "fell",
-        "_pl": "spadłem, spadać (w czasię przeszłym), ścinać (w czasię terażniejszym)"
+        "_pl": "spadał (ścinać)"
       },
       {
         "_en": "describe",
@@ -3390,7 +3390,7 @@
       },
       {
         "_en": "fit",
-        "_pl": "dopasowanie, pasować"
+        "_pl": "dopasowanie (pasować)"
       },
       {
         "_en": "cook",
@@ -3398,7 +3398,7 @@
       },
       {
         "_en": "flow",
-        "_pl": "pływ, przepływ"
+        "_pl": "pływ (przepływ, płynąć)"
       },
       {
         "_en": "floor",
@@ -3410,7 +3410,7 @@
       },
       {
         "_en": "either",
-        "_pl": "zarówno, którykolwiek, obojętnie który"
+        "_pl": "zarówno (którykolwiek, obojętnie który)"
       },
       {
         "_en": "bank",
@@ -3430,7 +3430,7 @@
       },
       {
         "_en": "save",
-        "_pl": "zapisać, zaoszczędzać"
+        "_pl": "zapisać (zaoszczędzać)"
       },
       {
         "_en": "hill",
@@ -3518,7 +3518,7 @@
       },
       {
         "_en": "shine",
-        "_pl": "świecić, blask"
+        "_pl": "świecić (blask)"
       },
       {
         "_en": "noon",
@@ -3570,7 +3570,7 @@
       },
       {
         "_en": "caught",
-        "_pl": "łapałem, złapany, łapać (w czasię przeszłym)"
+        "_pl": "złapany"
       },
       {
         "_en": "repeat",
@@ -3630,7 +3630,7 @@
       },
       {
         "_en": "anger",
-        "_pl": "gniew, złość"
+        "_pl": "gniew (złość)"
       },
       {
         "_en": "effect",
@@ -3686,7 +3686,7 @@
       },
       {
         "_en": "hit",
-        "_pl": "trafiać, uderzać"
+        "_pl": "trafiać (uderzać)"
       },
       {
         "_en": "skill",
@@ -3750,11 +3750,11 @@
       },
       {
         "_en": "provide",
-        "_pl": "dostarczać, zapewniać"
+        "_pl": "dostarczać (zapewniać)"
       },
       {
         "_en": "match",
-        "_pl": "pasować, mecz"
+        "_pl": "pasować (mecz)"
       },
       {
         "_en": "agree",
@@ -3826,7 +3826,7 @@
       },
       {
         "_en": "forward",
-        "_pl": "Naprzód, do przodu"
+        "_pl": "Naprzód (do przodu)"
       },
       {
         "_en": "soldier",
@@ -3862,7 +3862,7 @@
       },
       {
         "_en": "necessary",
-        "_pl": "niezbędny, konieczny"
+        "_pl": "niezbędny (konieczny)"
       },
       {
         "_en": "apple",
@@ -3874,7 +3874,7 @@
       },
       {
         "_en": "bought",
-        "_pl": "kupiony, kupować (w czasię przeszłym)"
+        "_pl": "kupiony"
       },
       {
         "_en": "wing",
@@ -4038,7 +4038,7 @@
       },
       {
         "_en": "sight",
-        "_pl": "wzrok, zobaczyć"
+        "_pl": "wzrok (zobaczyć)"
       },
       {
         "_en": "seat",
@@ -4064,6 +4064,14 @@
       "_en": "Other popular words"
     },
     "data": [
+      {
+        "_en": "approach",
+        "_pl": "podejście"
+      },
+      {
+        "_en": "deserve",
+        "_pl": "zasłużyć"
+      },
       {
         "_en": "frequency",
         "_pl": "częstotliwość"
@@ -4570,7 +4578,7 @@
       },
       {
         "_en": "refuse",
-        "_pl": "odrzucać, odpadki"
+        "_pl": "odrzucać (odpadki)"
       },
       {
         "_en": "whisper",
@@ -4582,7 +4590,7 @@
       },
       {
         "_en": "introduce",
-        "_pl": "przedstawiać, wprowadzać"
+        "_pl": "przedstawiać (wprowadzać)"
       },
       {
         "_en": "instead",
@@ -5189,7 +5197,7 @@
       },
       {
         "_en": "look forward ",
-        "_pl": "to cieszyć sie na coś / bardzo czekać na"
+        "_pl": "cieszyć sie na coś / bardzo czekać na"
       },
       {
         "_en": "look out ",
@@ -7750,7 +7758,7 @@
       },
       {
         "_en": "mother",
-        "_pl": "mama"
+        "_pl": "matka"
       },
       {
         "_en": "thing",
@@ -10671,7 +10679,7 @@
       },
       {
         "_en": "forward",
-        "_pl": "Naprzód, do przodu"
+        "_pl": "Naprzód (do przodu)"
       },
       {
         "_en": "soldier",
@@ -12889,7 +12897,7 @@
       },
       {
         "_pl": "Ile lat miała twoja mama gdy się urodziełeś?",
-        "_en": "How old was your mother when you were born?"
+        "_en": "How old was your mom when you were born?"
       },
       {
         "_pl": "Jak miał na imię bohater książki?",

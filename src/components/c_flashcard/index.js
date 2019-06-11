@@ -13,6 +13,8 @@ import SoundSeparator from './sounds/pi-pum.mp3';
 
 const Detector = !isIE && require('react-detect-offline').Detector;
 
+// manual reset progress
+const prefixResetProgressCookies = '';
 
 
 /**
@@ -81,8 +83,8 @@ class ToRepeat extends Component {
         o.splice( o.indexOf(idI), 1 );
         dataJson[idE].dontKnowClick--;
         // dataJson[idE].youDontKnowID.push(idI);
-        setCookies('obj_exercise_cookie_you_dont_know_'+idE, JSON.stringify(dataJson[idE].youDontKnowID));
-        setCookies('obj_exercise_cookie_dk_click_'+idE, dataJson[idE].dontKnowClick);
+        setCookies(prefixResetProgressCookies+'obj_exercise_cookie_you_dont_know_'+idE, JSON.stringify(dataJson[idE].youDontKnowID));
+        setCookies(prefixResetProgressCookies+'obj_exercise_cookie_dk_click_'+idE, dataJson[idE].dontKnowClick);
 
         this.randomItem();
         that.setState({});
@@ -271,9 +273,9 @@ class Congratulation extends Component {
                     obj.youKnowID=[];
                     obj.youDontKnowID=[];
                     obj.dontKnowClick=0;
-                    removeCookies('obj_exercise_cookie_'+ide);
-                    removeCookies('obj_exercise_cookie_you_dont_know_'+ide);
-                    removeCookies('obj_exercise_cookie_dk_click_'+ide);
+                    removeCookies(prefixResetProgressCookies+'obj_exercise_cookie_'+ide);
+                    removeCookies(prefixResetProgressCookies+'obj_exercise_cookie_you_dont_know_'+ide);
+                    removeCookies(prefixResetProgressCookies+'obj_exercise_cookie_dk_click_'+ide);
                     // cookies.remove('obj_exercise_cookie_'+ide, { path: '/' });
                     // cookies.remove('obj_exercise_cookie_dk_click_'+ide, { path: '/' });
                     that.clearExercise();
@@ -901,7 +903,10 @@ class FlashCards extends Component {
         });
 
         if(this.state.idExercise > -1) {
-            this.clearChildExerciseAlias();
+            //// ////
+            if(!this.state.showListActice) {
+                this.clearChildExerciseAlias();
+            }
             this.setExercise(event,this.state.idExercise,this.state.idItem,false,this.global.idC,false,this.state.showListActice);
         }
         if(this.state.resultsSearch !== null) {
@@ -980,7 +985,7 @@ class FlashCards extends Component {
             }
             if(o[this.state.idExercise].youKnowID.length < o[this.state.idExercise].data.length && idI !== false ) {
                 o[this.state.idExercise].youKnowID.push(idI);
-                setCookies('obj_exercise_cookie_'+this.state.idExercise, JSON.stringify(o[this.state.idExercise].youKnowID));
+                setCookies(prefixResetProgressCookies+'obj_exercise_cookie_'+this.state.idExercise, JSON.stringify(o[this.state.idExercise].youKnowID));
             }
             this.setState({classCheckOut: ''});
             setTimeout(this.timeoutAnim,(this.state.rotateDisable)?0:400,this.state.idExercise);
@@ -1009,13 +1014,13 @@ class FlashCards extends Component {
                 if(typeof o[this.state.idExercise].youDontKnowID.includes === 'function') {
                     if(!o[this.state.idExercise].youDontKnowID.includes(idI)) {
                         o[this.state.idExercise].youDontKnowID.push(idI);
-                        setCookies('obj_exercise_cookie_you_dont_know_'+this.state.idExercise, JSON.stringify(o[this.state.idExercise].youDontKnowID));
+                        setCookies(prefixResetProgressCookies+'obj_exercise_cookie_you_dont_know_'+this.state.idExercise, JSON.stringify(o[this.state.idExercise].youDontKnowID));
                     }
                 }
             }
 
             o[this.state.idExercise].dontKnowClick += 1;
-            setCookies('obj_exercise_cookie_dk_click_'+this.state.idExercise, o[this.state.idExercise].dontKnowClick);
+            setCookies(prefixResetProgressCookies+'obj_exercise_cookie_dk_click_'+this.state.idExercise, o[this.state.idExercise].dontKnowClick);
             this.setState({classCheckOut: ''});
             setTimeout(this.timeoutAnim,400,this.state.idExercise);
         }
@@ -1061,9 +1066,9 @@ class FlashCards extends Component {
     };
 
     removeCookieExerciseId = (event,ide,o) => {
-        removeCookies('obj_exercise_cookie_'+ide);
-        removeCookies('obj_exercise_cookie_you_dont_know_'+ide);
-        removeCookies('obj_exercise_cookie_dk_click_'+ide);
+        removeCookies(prefixResetProgressCookies+'obj_exercise_cookie_'+ide);
+        removeCookies(prefixResetProgressCookies+'obj_exercise_cookie_you_dont_know_'+ide);
+        removeCookies(prefixResetProgressCookies+'obj_exercise_cookie_dk_click_'+ide);
         if(typeof o === 'object') {
             o.youKnowID = [];
             o.youDontKnowID = [];
@@ -1077,9 +1082,9 @@ class FlashCards extends Component {
     removeCookieExerciseAll = () => {
         // eslint-disable-next-line
         dataJson.map(function (obj, i) {
-            removeCookies('obj_exercise_cookie_'+i);
-            removeCookies('obj_exercise_cookie_you_dont_know_'+i);
-            removeCookies('obj_exercise_cookie_dk_click_'+i);
+            removeCookies(prefixResetProgressCookies+'obj_exercise_cookie_'+i);
+            removeCookies(prefixResetProgressCookies+'obj_exercise_cookie_you_dont_know_'+i);
+            removeCookies(prefixResetProgressCookies+'obj_exercise_cookie_dk_click_'+i);
             obj.youKnowID = [];
             obj.youDontKnowID = [];
             obj.dontKnowClick = 0;
@@ -1352,16 +1357,16 @@ class FlashCards extends Component {
                 obj.dontKnowClick = 0;
             }
 
-            if(getCookies('obj_exercise_cookie_' + i,'array') != null ) {
-                //alert(getCookies('obj_exercise_cookie_' + i,'array'));
-                obj.youKnowID = getCookies('obj_exercise_cookie_' + i,'array');
+            if(getCookies(prefixResetProgressCookies+'obj_exercise_cookie_' + i,'array') != null ) {
+                //alert(getCookies(prefixResetProgressCookies+'obj_exercise_cookie_' + i,'array'));
+                obj.youKnowID = getCookies(prefixResetProgressCookies+'obj_exercise_cookie_' + i,'array');
             }
-            if(getCookies('obj_exercise_cookie_you_dont_know_' + i,'array') != null ) {
-                //alert(getCookies('obj_exercise_cookie_you_dont_know_' + i,'array'));
-                obj.youDontKnowID = getCookies('obj_exercise_cookie_you_dont_know_' + i,'array');
+            if(getCookies(prefixResetProgressCookies+'obj_exercise_cookie_you_dont_know_' + i,'array') != null ) {
+                //alert(getCookies(prefixResetProgressCookies+'obj_exercise_cookie_you_dont_know_' + i,'array'));
+                obj.youDontKnowID = getCookies(prefixResetProgressCookies+'obj_exercise_cookie_you_dont_know_' + i,'array');
             }
-            if(getCookies('obj_exercise_cookie_dk_click_' + i) != null) {
-                obj.dontKnowClick = parseInt(getCookies('obj_exercise_cookie_dk_click_' + i));
+            if(getCookies(prefixResetProgressCookies+'obj_exercise_cookie_dk_click_' + i) != null) {
+                obj.dontKnowClick = parseInt(getCookies(prefixResetProgressCookies+'obj_exercise_cookie_dk_click_' + i));
             }
             return true;
         });
