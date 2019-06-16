@@ -936,7 +936,7 @@ class FlashCards extends Component {
 
                                             percent = isNaN(percent)?'blank':percent+'%';
 
-                                            if(this.state.langNameExercise(obj.category) === obj_category && obj.data.length) {
+                                            if(this.state.langNameExercise(obj.category) === obj_category && obj.data.length && !obj.hide) {
                                                 return (
                                                     <li key={i} className={"d-flex justify-content-between exercise-item-" + i}>
                                                         <a href={'#flashcard' + i} style={stylePercent2} onClick={(e) => this.setExercise(e,i,false,false,j,(obj.youKnowID.length!==obj.data.length))}>

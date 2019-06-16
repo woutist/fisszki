@@ -4104,7 +4104,7 @@
       },
       {
         "_en": "insilt",
-        "_pl": "zniewaga, docinka"
+        "_pl": "zniewaga (docinka)"
       },
       {
         "_en": "suspend",
@@ -4189,7 +4189,7 @@
       },
       {
         "_en": "rent",
-        "_pl": "wynajem, czynsz, dzierżawa, wypożyczenie"
+        "_pl": "wynajem (czynsz, dzierżawa, wypożyczenie)"
       },
       {
         "_en": "therefore ",
@@ -4518,7 +4518,7 @@
       },
       {
         "_en": "independent",
-        "_pl": "niepodległy, niezależny"
+        "_pl": "niepodległy (niezależny)"
       },
       {
         "_en": "lock",
@@ -4534,7 +4534,7 @@
       },
       {
         "_en": "rookie",
-        "_pl": "debiutant, rekrut"
+        "_pl": "debiutant (rekrut)"
       },
       {
         "_en": "deer",
@@ -4546,7 +4546,7 @@
       },
       {
         "_en": "improve",
-        "_pl": "polepszać, ulepszać, poprawiać"
+        "_pl": "polepszać (ulepszać, poprawiać)"
       },
       {
         "_en": "lazy",
@@ -4566,7 +4566,7 @@
       },
       {
         "_en": "insist",
-        "_pl": "nalegać, upierać, domagać"
+        "_pl": "nalegać (upierać, domagać)"
       },
       {
         "_en": "disagree",
@@ -4598,7 +4598,7 @@
       },
       {
         "_en": "couple",
-        "_pl": "para, kilka"
+        "_pl": "para (kilka)"
       },
       {
         "_en": "divorce",
@@ -4626,7 +4626,7 @@
       },
       {
         "_en": "neither",
-        "_pl": "ani, 'ani jeden, ani drugi', żaden"
+        "_pl": "ani (ani jeden, ani drugi, żaden)"
       },
       {
         "_en": "fortunately",
@@ -4664,7 +4664,7 @@
       },
       {
         "_en": "goal",
-        "_pl": "cel, gol"
+        "_pl": "cel (gol)"
       },
       {
         "_en": "adequate",
@@ -4680,15 +4680,15 @@
       },
       {
         "_en": "review",
-        "_pl": "przejrzeć, recenzja"
+        "_pl": "przejrzeć (recenzja)"
       },
       {
         "_en": "extensively",
-        "_pl": "rozlegle, obszernie, ekstensywnie"
+        "_pl": "rozlegle (obszernie, ekstensywnie)"
       },
       {
         "_en": "deliver",
-        "_pl": "dostarczyć, przekazać, wygłaszać"
+        "_pl": "dostarczyć (przekazać, wygłaszać)"
       },
       {
         "_en": "analysis",
@@ -4696,11 +4696,11 @@
       },
       {
         "_en": "tutorial",
-        "_pl": "seminarium, instruktaż, samouczek"
+        "_pl": "seminarium (instruktaż, samouczek)"
       },
       {
         "_en": "impact",
-        "_pl": "wpływ, uderzenie"
+        "_pl": "wpływ (uderzenie)"
       },
       {
         "_en": "focus",
@@ -4708,7 +4708,7 @@
       },
       {
         "_en": "tight",
-        "_pl": "mocno, szczelnie"
+        "_pl": "mocno (szczelnie)"
       },
       {
         "_en": "excellent",
@@ -4728,7 +4728,7 @@
       },
       {
         "_en": "opportunity",
-        "_pl": "okazja, możliwość, sposobność"
+        "_pl": "okazja (możliwość, sposobność)"
       },
       {
         "_en": "brand",
@@ -5596,7 +5596,7 @@
         "_en": "forbid / forbade / forbidden"
       },
       {
-        "_pl": "prognozować, przewidywać",
+        "_pl": "prognozować (przewidywać)",
         "_en": "forecast / forecast / forecast"
       },
       {
@@ -5604,15 +5604,15 @@
         "_en": "foretell / foretold / foretold"
       },
       {
-        "_pl": "zapominać ",
+        "_pl": "zapominać",
         "_en": "forget / forgot / forgotten"
       },
       {
-        "_pl": "wybaczać ",
+        "_pl": "wybaczać",
         "_en": "forgive / forgave / forgiven"
       },
       {
-        "_pl": "porzucać, opuszczać",
+        "_pl": "porzucać (opuszczać)",
         "_en": "forsake / forsook / forsaken"
       },
       {
@@ -5727,8 +5727,8 @@
         "_en": "make / made / made"
       },
       {
-        "_pl": "móc ",
-        "_en": "may / might / -"
+        "_pl": "móc (możliwość)",
+        "_en": "may / might / might"
       },
       {
         "_pl": "oznaczać / mieć na myśli ",
@@ -5830,7 +5830,7 @@
         "_en": "shear / sheared / shorn"
       },
       {
-        "_pl": "zrzucać, pozbywać się",
+        "_pl": "zrzucać (pozbywać się)",
         "_en": "shed / shed / shed"
       },
       {
@@ -5874,7 +5874,7 @@
         "_en": "slide / slid / slid"
       },
       {
-        "_pl": "zawieszać, podwieszać, cisnąć, miotać",
+        "_pl": "zawieszać (podwieszać, cisnąć, miotać)",
         "_en": "sling / slung / slung"
       },
       {
@@ -5926,7 +5926,7 @@
         "_en": "spread / spread / spread"
       },
       {
-        "_pl": "sprężynować, przeskakiwać, wyskakiwać, skakać",
+        "_pl": "sprężynować (przeskakiwać, wyskakiwać, skakać)",
         "_en": "spring / sprang / sprung"
       },
       {
@@ -5942,7 +5942,7 @@
         "_en": "stick / stuck / stuck"
       },
       {
-        "_pl": "kłuć, żądlić",
+        "_pl": "kłuć (żądlić)",
         "_en": "sting / stung / stung"
       },
       {
@@ -5954,11 +5954,11 @@
         "_en": "stride / strode / stridden"
       },
       {
-        "_pl": "strajkować, walić, uderzać ",
+        "_pl": "strajkować (walić, uderzać)",
         "_en": "strike / struck / struck"
       },
       {
-        "_pl": "dążyć do czegoś, usiłować, starać się",
+        "_pl": "dążyć do czegoś (usiłować, starać się)",
         "_en": "strive / strove / striven"
       },
       {
@@ -6010,7 +6010,7 @@
         "_en": "thrust / thrust / thrust"
       },
       {
-        "_pl": "stąpać, chodzić po czymś, dreptać",
+        "_pl": "stąpać (chodzić po czymś, dreptać)",
         "_en": "tread / trod / trodden"
       },
       {
@@ -6026,7 +6026,7 @@
         "_en": "weave / wove / woven"
       },
       {
-        "_pl": "płakać, szlochać",
+        "_pl": "płakać (szlochać)",
         "_en": "weep / wept / wept"
       },
       {
@@ -6034,11 +6034,11 @@
         "_en": "win / won / won"
       },
       {
-        "_pl": "owijać, nawijać, wić się",
+        "_pl": "owijać (nawijać, wić się)",
         "_en": "wind / wound / wound"
       },
       {
-        "_pl": "wykręcić, wyciskać",
+        "_pl": "wykręcić (wyciskać)",
         "_en": "wring / wrung / wrung"
       },
       {
@@ -6271,7 +6271,7 @@
         "_en": "Employ / Employed / Employed "
       },
       {
-        "_pl": "Popierać, zachęcać",
+        "_pl": "Popierać (zachęcać)",
         "_en": "Encourage / Encouraged / Encouraged "
       },
       {
@@ -6495,7 +6495,7 @@
         "_en": "Retire / Retired / Retired "
       },
       {
-        "_pl": "Zwrócić/Wrócić ",
+        "_pl": "Zwrócić (Wrócić)",
         "_en": "Return / Returned / Returned "
       },
       {
@@ -12624,14 +12624,13 @@
 
       {
         "_en": "Who will you be shopping with tomorrow? (Future continuous)",
-        "_pl": "kim jutro będziesz robić zakupy?"
+        "_pl": "Z kim jutro będziesz robić zakupy?"
       },
 
       {
         "_en": "Oddać to",
         "_pl": "To give it away"
       },
-
 
       {
         "_en": "Surrender is not defeat",
@@ -12647,7 +12646,6 @@
         "_en": "I am going to do something (or: I am about to do something)",
         "_pl": "Mam zamiar coś zrobić"
       },
-
 
       {
         "_en": "I want to be honest with you.",
@@ -12811,18 +12809,291 @@
       "_en": "-"
     },
     "data": [
+
+      {
+        "_pl": "On jest zawsze uparty aż do końca rozmowy.",
+        "_en": "He is always stubborn until the end of the conversation."
+      },
+
+      {
+        "_pl": "On mieszka w małym domu.",
+        "_en": "He lives in a small house."
+      },
+
+      {
+        "_pl": "On nie chodzi po pracy na zakupy.",
+        "_en": "He doesn't go shopping after work."
+      },
+
+      {
+        "_pl": "Ona myje podłogę 3 razy w tygodniu.",
+        "_en": "She cleans the floor three times a week"
+      },
+
+      {
+        "_pl": "Oni chodzą na basen w środy.",
+        "_en": "They go to the swimming pool on wednesdey."
+      },
+
+      {
+        "_pl": "Jak często masz możliwość jazdy drogim autem?",
+        "_en": "How often do you have the opportunity to drive an expensive car?"
+      },
+
+      {
+        "_pl": "Ona rzadko pracuje popołudniami.",
+        "_en": "She seldom (rarely) works in the afternoons."
+      },
+
+      {
+        "_pl": "Moi szkolni koledzy nigdy nie odrabiają lekcji.",
+        "_en": "My school friends never do thier homeworks."
+      },
+
+      {
+        "_pl": "Jej tata codziennie zmywa naczynia.",
+        "_en": "Her dad washes the dishes every day."
+      },
+
+      {
+        "_pl": "Nasz sąsiad wieczorami nie gra na pianinie.",
+        "_en": "Our neighbor doesn't play the piano in the evenings."
+      },
+
+      {
+        "_pl": "Lubię oglądać filmy przygodowe ale nie lubię komedii.",
+        "_en": "I like watching adventure movies but I don't like comedies."
+      },
+
+      {
+        "_pl": "Jej ciocia nie lubi spacerować po parku.",
+        "_en": "Her aunt dosen't like walking in the park."
+      },
+
+      {
+        "_pl": "Jego wujek uważa, że teatr jest lepszy niż kino.",
+        "_en": "His uncle thinks that theater is better than cinema."
+      },
+
+      {
+        "_pl": "On nigdy nie je ziemniaków na obiad.",
+        "_en": "He never eats potatoes for dinner."
+      },
+
+      {
+        "_pl": "Ona lubi jeść pomidory na śniadanie. ",
+        "_en": "She likes to eat tomatoes for breakfest."
+      },
+
+      {
+        "_pl": "On czasami pójdzie z rana do sklepu",
+        "_en": "Sometimes he goes to the shop in the morning. (Sometimes he does shoping in the morning)"
+      },
+
+      {
+        "_pl": "Oni są moimi najlepszymi przyjaciółmi.",
+        "_en": "They are my best friends."
+      },
+
+      {
+        "_pl": "On ma śniadanie o 7 rano.",
+        "_en": "He has breakfast at 7 in the morning."
+      },
+
+      {
+        "_pl": "Ona je śniadanie o 6 rano.",
+        "_en": "She eats breakfast at 6 am."
+      },
+
+      {
+        "_pl": "On bierze kąpiel rano i wieczorem.",
+        "_en": "He takes a bath in the morning and in the evening."
+      },
+
+      {
+        "_pl": "Czy on zawsze odrabia lekcje przed wyjściem do szkoły?",
+        "_en": "Does he always do his homework before going to school?"
+      },
+
+      {
+        "_pl": "Jak często Twoja mama gotuje obiad?",
+        "_en": "How often does your mom cook dinner?"
+      },
+
+      {
+        "_pl": "Ona myje zęby trzy razy dziennie.",
+        "_en": "She brushes his teeth three times a day."
+      },
+
+      {
+        "_pl": "Czy zaczynacie prace o 7 rano?",
+        "_en": "Do you start work at 7 in the morning?"
+      },
+
+      {
+        "_pl": "Mój wujek pochodzi z Kanady.",
+        "_en": "My uncle comes from Canada."
+      },
+
+      {
+        "_pl": "Ona nie gra w szachy w niedziele.",
+        "_en": "She doesn't play chess on Sundays."
+      },
+
+      {
+        "_pl": "Czy ona lubi gotować?",
+        "_en": "Does she like cooking?"
+      },
+
+      {
+        "_pl": "On często robi sok owocowy.",
+        "_en": "He often makes fruit juice."
+      },
+
+      {
+        "_pl": "Ona rzadko odwiedza swój rodzinny dom.",
+        "_en": "She seldom visits her family home."
+      },
+
+      {
+        "_pl": "Czy znasz jakiś język obcy? ",
+        "_en": "Do you know any foreign language?"
+      },
+
+      {
+        "_pl": "Ona chodzi spać późno w nocy.",
+        "_en": "She goes to sleep late at night."
+      },
+
+      {
+        "_pl": "Mam mleko.",
+        "_en": "I have some milk."
+      },
+
+      {
+        "_pl": "Mam samochód.",
+        "_en": "I have a car."
+      },
+
+      {
+        "_pl": "Czy ona zawsze chodzi na basen po pracy?",
+        "_en": "Does she always go to the swimming pool after work?"
+      },
+
+      {
+        "_pl": "Ona prawie nigdy nie odrabia lekcji.",
+        "_en": "She almost never does her homework."
+      },
+
+      {
+        "_pl": "On nigdy nie czyta książek.",
+        "_en": "He never reads books."
+      },
+
+      {
+        "_pl": "On nie czyta książek.",
+        "_en": "He doesn't read books."
+      },
+
+      {
+        "_pl": "On nigdy nie jest uprzejmy.",
+        "_en": "He is never polite."
+      },
+
+      {
+        "_pl": "Ona zawsze robi śniadanie swoim dzieciom.",
+        "_en": "She always makes breakfast for her children."
+      },
+
+      {
+        "_pl": "Czy masz samochód?",
+        "_en": "Do you have a car?"
+      },
+
+      {
+        "_pl": "On jest niski i wysportowany.",
+        "_en": "He is short and athletic."
+      },
+
+      {
+        "_pl": "On jest wysoki dlatego lubi grać w koszykówkę.",
+        "_en": "He is tall therefore he likes to play basketball."
+      },
+
+      {
+        "_pl": "Czy ona jest wysoka?",
+        "_en": "Is she tall?"
+      },
+
+      {
+        "_pl": "Czy wasi dziadkowie chodzą do kina w poniedziałki?",
+        "_en": "Do your grandparents go to the cinema on Mondays?"
+      },
+
+      {
+        "_pl": "Co robisz w sobotnie wieczory?",
+        "_en": "What do you do in the evenings on Saturdays?"
+      },
+
+      {
+        "_pl": "On je posiłki dwa razy dziennie.",
+        "_en": "He eats meals twice a day."
+      },
+      {
+        "_pl": "On nie spotyka się z dziewczyną codziennie.",
+        "_en": "He doesn't meet his girlfriend every day."
+      },
+
+      {
+        "_pl": "On nie lubi uczyć swoich uczni.",
+        "_en": "He doesn't like to teach his students."
+      },
+
+      {
+        "_pl": "Nienawidzę pozbywać się starych rzeczy.",
+        "_en": "I hate to get rid of old stuffs. (I hate getting rid of old stuffs.)"
+      },
+
+      {
+        "_pl": "Z kim chcesz dziś pracować?",
+        "_en": "Who do you want to work with today?"
+      },
+
+      {
+        "_pl": "Ona nie ma nic przeciwko głośnej muzyce.",
+        "_en": "She doesn't mind loud music."
+      },
+
+      {
+        "_pl": "Oni są przeciwko nam.",
+        "_en": "They are against us."
+      },
+
+      {
+        "_pl": "Ile ona ma lat?",
+        "_en": "How old is she?"
+      },
+
+      {
+        "_en": "You guys like quiet music.",
+        "_pl": "Wy lubicie cichą muzykę."
+      },
+
       {
         "_en": "I don't go away very often.",
         "_pl": "Nie wychodzę często."
       },
+
       {
         "_en": "He doesn't do anything to help.",
         "_pl": "Nie robi nic aby pomóc."
       },
+
       {
         "_pl": "Lubię spacerować po parku.",
         "_en": "I like to walk in the park."
       },
+
       {
         "_pl": "On szanuje swoje rzeczy. ",
         "_en": "He respects his things."
@@ -13089,6 +13360,7 @@
     "data": []
   },
   {
+    "hide": true,
     "category": {
       "_pl": "Czasy (w trakcie budowy)",
       "_en": "Tenses (under construction)"
@@ -13097,6 +13369,15 @@
       "_pl": "test",
       "_en": "test"
     },
-    "data": []
+    "data": [
+      {
+        "_pl": "Ona rzadko pracuje popołudniami 1.",
+        "_en": "She seldom (rarely) works (test) in the afternoons 1. "
+      },
+      {
+        "_pl": "Ona rzadko (sadsad) (asdsad) pracuje popołudniami 2. ",
+        "_en": "She seldom (rarely) works (rarely) in the afternoons 2. "
+      }
+    ]
   }
 ]
