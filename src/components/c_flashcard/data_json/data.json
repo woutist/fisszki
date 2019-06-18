@@ -3014,7 +3014,7 @@
       },
       {
         "_en": "sat",
-        "_pl": "siędzieć w czasię przeszłym"
+        "_pl": "siadł"
       },
       {
         "_en": "smile",
@@ -3022,7 +3022,7 @@
       },
       {
         "_en": "written",
-        "_pl": "napisane lub pisać w czasię perfect"
+        "_pl": "napisane"
       },
       {
         "_en": "crease",
@@ -3253,12 +3253,9 @@
         "_pl": "olej"
       },
 
-
-
-
       {
         "_en": "eight",
-        "_pl": "osięm"
+        "_pl": "osiem"
       },
       {
         "_en": "blood",
@@ -3406,7 +3403,7 @@
       },
       {
         "_en": "fair",
-        "_pl": "jasny"
+        "_pl": "sprawiedliwy"
       },
       {
         "_en": "either",
@@ -3602,7 +3599,7 @@
       },
       {
         "_en": "spoke",
-        "_pl": "mówić w czasię przeszłym"
+        "_pl": "mówił"
       },
       {
         "_en": "salt",
@@ -7986,7 +7983,7 @@
       },
       {
         "_en": "been",
-        "_pl": "być używane w czasie perfect lub w stronie biernej"
+        "_pl": "być (używane w czasie perfect lub w stronie biernej)"
       },
       {
         "_en": "never",
@@ -9850,7 +9847,7 @@
       },
       {
         "_en": "sat",
-        "_pl": "siędzieć w czasię przeszłym"
+        "_pl": "siadł"
       },
       {
         "_en": "smile",
@@ -10102,7 +10099,7 @@
     "data": [
       {
       "_en": "eight",
-      "_pl": "osięm"
+      "_pl": "osiem"
       },
       {
         "_en": "blood",
@@ -10250,7 +10247,7 @@
       },
       {
         "_en": "fair",
-        "_pl": "jasny"
+        "_pl": "sprawiedliwy"
       },
       {
         "_en": "either",
@@ -12404,7 +12401,7 @@
         "_en": "seven"
       },
       {
-        "_pl": "osięm",
+        "_pl": "osiem",
         "_en": "eight"
       },
       {
@@ -12444,7 +12441,7 @@
         "_en": "seventeen"
       },
       {
-        "_pl": "osięmnaście",
+        "_pl": "osiemnaście",
         "_en": "eighteen"
       },
       {
@@ -12476,7 +12473,7 @@
         "_en": "seventy"
       },
       {
-        "_pl": "osięmdziesiąt",
+        "_pl": "osiemdziesiąt",
         "_en": "eighty"
       },
       {
