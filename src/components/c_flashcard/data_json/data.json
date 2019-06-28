@@ -12789,6 +12789,166 @@
       {
         "_pl": "Oni teraz jedzą.",
         "_en": "They are eating now."
+      },
+      {
+        "_pl": "Uczymy się teraz angielskiego.",
+        "_en": "We are learning english now."
+      },
+      {
+        "_pl": "Piszemy teraz po angielsku.",
+        "_en": "We are writing english now."
+      },
+      {
+        "_pl": "Pracuję obecnie nad ważnym projektem.",
+        "_en": "I am currently working on an important project."
+      },
+      {
+        "_pl": "Pracuję teraz nad ważnym zadaniem.",
+        "_en": "I am working on an importand taks now."
+      },
+      {
+        "_pl": "Ania dużo się uczy w tych dniach.",
+        "_en": "She is studing hard these days."
+      },
+      {
+        "_pl": "On dużo pije wody w tych dniach.",
+        "_en": "He is drinking a lot of water these days."
+      },
+      {
+        "_pl": "Oni dzisiaj jadą do szkoły autobusem.",
+        "_en": "They are going to school by bus today."
+      },
+      {
+        "_pl": "Oni dzisiaj jadą do kina rowerami.",
+        "_en": "They are riding to the cinem by bicycles today."
+      },
+      {
+        "_pl": "Jedziemy do Londynu w tym tygodniu.",
+        "_en": "We are going to London this week."
+      },
+      {
+        "_pl": "Lecimy do Kanady w tym tygodniu.",
+        "_en": "We are flying to Canada this week."
+      },
+      {
+        "_pl": "Jutro zaczynam mój kurs angielskiego.",
+        "_en": "I am starting my english cours tomorrow."
+      },
+      {
+        "_pl": "Jutro zaczynam dietę.",
+        "_en": "I am starting my diet tomorrow."
+      },
+      {
+        "_pl": "W przyszłym tygodniu lecisz do Australii.",
+        "_en": "You are flying to Australi next week."
+      },
+      {
+        "_pl": "W przyszłym tygodniu jedziesz do Francji.",
+        "_en": "You are going to France next week."
+      },
+      {
+        "_pl": "On bierze prysznic.",
+        "_en": "He is taking a shower."
+      },
+      {
+        "_pl": "Twój głos się poprawia.",
+        "_en": "Your voice is improving."
+      },
+      {
+        "_pl": "On uczy się w tej chwili matematyki.",
+        "_en": "He is learning mathematics at the moment."
+      },
+      {
+        "_pl": "Ona jutro gra ze mną w szachy.",
+        "_en": "She is playing chess with me tomorrow."
+      },
+      {
+        "_pl": "Idziemy na zakupy dziś popołudniu.",
+        "_en": "We're going to the store in the afternoon."
+      },
+      {
+        "_pl": "Ona nie czeka teraz na nas.",
+        "_en": "She is not waiting for us now."
+      },
+      {
+        "_pl": "On nie czeka na nikogo.",
+        "_en": "He is not waiting for anybody."
+      },
+      {
+        "_pl": "Oni nie oglądają telewizji",
+        "_en": "They are not watching TV."
+      },
+      {
+        "_pl": "Dzisiaj nie pada deszcz.",
+        "_en": "It is not raining today."
+      },
+      {
+        "_pl": "Nie rozmawiamy głośno dziś w nocy.",
+        "_en": "We are not talking loud tonight."
+      },
+      {
+        "_pl": "Czy on czyta nudną książkę?",
+        "_en": "Is he reading a boring book?"
+      },
+      {
+        "_pl": "Co on robi? On ogląda film.",
+        "_en": "What is he doing? He is watching a movie."
+      },
+      {
+        "_pl": "Czy on uczy się teraz prowadzić samochód? Tak, on uczy się.",
+        "_en": "Is he learning to drive a car at the moment? Yes, he is learning."
+      },
+      {
+        "_pl": "Dokąd idziesz?",
+        "_en": "Where are you going?"
+      },
+      {
+        "_pl": "Czy ona idzie do swojej pracy dzisiaj po południu?",
+        "_en": "Is she going to her work this afternoon?"
+      },
+      {
+        "_pl": "Co wy robicie dziś wieczorem?",
+        "_en": "What are you guys doing tonight?"
+      },
+      {
+        "_pl": "Czy Twoje zdrowie się poprawia?",
+        "_en": "Is your health improving?"
+      },
+      {
+        "_pl": "On mieszka we Francji. (tymczasowo)",
+        "_en": "He is living in France."
+      },
+      {
+        "_pl": "On studiuje inżynierie. (jakiś okres - np. parę lat)",
+        "_en": "He is studying engineering."
+      },
+      {
+        "_pl": "Jutro kupuję komputer.",
+        "_en": "I'm buying a computer tomorrow."
+      },
+      {
+        "_pl": "Gdzie jedziesz w ten weekend?",
+        "_en": "Where are you going this weekend?"
+      },
+      {
+        "_pl": "On patrzy teraz na nią.",
+        "_en": "He is looking at her now."
+      },
+      {
+        "_pl": "On ma teraz śniadanie.",
+        "_en": "He is having breakfast now."
+      },
+      {
+        "_pl": "Widzę się z moim nauczycielem jutro.",
+        "_en": "I am seeing my teacher tomorrow."
+      },
+      {
+        "_pl": "Ona wącha teraz piwonie.",
+        "_en": "She is smelling the peonies now."
+      },
+      {
+        "_pl": "On kosztuje mój chleb.",
+        "_en": "He is tasting my bread."
       }
     ]
   },
@@ -13212,7 +13372,7 @@
         "_en": "Was it difficult?"
       },
       {
-        "_pl": "Jak spędziłeś zeszłe leto?",
+        "_pl": "Jak spędziłeś zeszłe lato?",
         "_en": "How did you spend last summer?"
       },
       {
@@ -13224,7 +13384,7 @@
         "_en": "Examiner wasn't demanding."
       },
       {
-        "_pl": "Wczoraj siostra pomogła mi odrobić zadanie donowe.",
+        "_pl": "Wczoraj siostra pomogła mi odrobić zadanie domowe.",
         "_en": "My sister helped me do my homework yesterday."
       },
       {
@@ -13252,7 +13412,7 @@
         "_en": "She washed the dishes last month."
       },
       {
-        "_pl": "Oni nie przybyli tu pić alkohol, oni przyjbyli tu uczyć się.",
+        "_pl": "Oni nie przybyli tu pić alkohol, oni przybyli tu uczyć się.",
         "_en": "They didn't arrive (come) here to drink alkohol, they arrived (came) here to learn. "
       },
       {
@@ -13272,12 +13432,12 @@
         "_en": "He couldn't play the guitar, but he could play the piano"
       },
       {
-        "_pl": "Kiedy ona miała 1 rok potrafiła chodzic",
+        "_pl": "Kiedy ona miała 1 rok potrafiła chodzić",
         "_en": "When she was 1 year old, she was able to walk."
       },
       {
-        "_pl": "Ile puszek coli wypiłeś? Wypiłem 2 puszki coli.",
-        "_en": "How many cans of cola did you drink? I drank 2 cans of cola."
+        "_pl": "Ile puszek coli wypiłeś? Wypiłem dwie puszki coli.",
+        "_en": "How many cans of cola did you drink? I drank two cans of cola."
       },
       {
         "_pl": "Wczoraj pojechałem do sklepu.",
