@@ -122,18 +122,31 @@ class FlashCards extends Component {
     };
 
     translateVoice = (text,lang,active) => {
-        if(active && typeof window.responsiveVoice === 'object') {
+
+        if(active && typeof window.speechSynthesis === 'object') {
             switch (lang) {
                 case 'pl':
-                    window.responsiveVoice.speak(text, "Polish Female");
+                    this.speak(text,"pl-PL");
                     break;
                 case 'en':
-                    window.responsiveVoice.speak(text, "UK English Male");
+                    this.speak(text,"en-US");
                     break;
                 default:
-                    window.responsiveVoice.speak(text, "UK English Male");
+                    this.speak(text,"en-US");
             }
-        } 
+        }
+        // if(active && typeof window.responsiveVoice === 'object') {
+        //     switch (lang) {
+        //         case 'pl':
+        //             window.responsiveVoice.speak(text, "Polish Female");
+        //             break;
+        //         case 'en':
+        //             window.responsiveVoice.speak(text, "UK English Male");
+        //             break;
+        //         default:
+        //             window.responsiveVoice.speak(text, "UK English Male");
+        //     }
+        // }
     };
 
     layer = (o,that,idC, idE, temp_idE, voiceOff, showList) => {
@@ -153,6 +166,9 @@ class FlashCards extends Component {
     };
 
     setExercise = (event,idE,idForce,voiceOff,idC,closeCloude,showList) => {
+        if(typeof window.speechSynthesis === 'object') {
+            window.speechSynthesis.cancel();
+        }
 
         let temp_idE, o = dataJson[idE];
         this.global.idC = idC;
@@ -187,6 +203,9 @@ class FlashCards extends Component {
     };
 
     clearExercise = event => {
+        if(typeof window.speechSynthesis === 'object') {
+            window.speechSynthesis.cancel();
+        }
         this.setState({
             idExercise: -1,
             callObj: '',
@@ -238,6 +257,10 @@ class FlashCards extends Component {
     };
 
     clearChildExerciseAlias = () => {
+        if(typeof window.speechSynthesis === 'object') {
+            window.speechSynthesis.cancel();
+        }
+
         this.childExercises.setState({
             checkWriteOk: '',
             checkWriteValue: '',
@@ -338,7 +361,6 @@ class FlashCards extends Component {
     };
 
     iKnow = (idI) => {
-
         this.clearChildExerciseAlias();
 
         if(this.state.idExercise > -1) {
@@ -362,7 +384,6 @@ class FlashCards extends Component {
     };
 
     iDontKnow = (idI) => {
-
         this.clearChildExerciseAlias();
 
         if(this.state.idExercise > -1) {
@@ -412,10 +433,12 @@ class FlashCards extends Component {
         if(this.state.enableAutoVoice) {
             setTimeout(function (that) {
                 if(that.global.flashCardDirection === 'p->e') {
-                    that.translateVoice(dataJson[that.state.idExercise].data[that.state.idItem]._en, "en",that.state.online);
+                    //that.translateVoice(dataJson[that.state.idExercise].data[that.state.idItem]._en, "en",that.state.online);
+                    that.translateVoice(dataJson[that.state.idExercise].data[that.state.idItem]._en, "en",true);
 
                 } else {
-                    that.translateVoice(dataJson[that.state.idExercise].data[that.state.idItem]._pl, "pl",that.state.online);
+                    //that.translateVoice(dataJson[that.state.idExercise].data[that.state.idItem]._pl, "pl",that.state.online);
+                    that.translateVoice(dataJson[that.state.idExercise].data[that.state.idItem]._pl, "pl",true);
                 }
             }, 300,this);
         }
@@ -513,6 +536,7 @@ class FlashCards extends Component {
             },800,that);
         },4000,this);
     };
+
     closeApplication = () => {
         if(detectionDevice) {
             navigator.app.exitApp();
@@ -654,11 +678,13 @@ class FlashCards extends Component {
                             <p className={"d-flex id-" + (idSearch ++)}>
                                 <span className={"col-6 d-flex"}>
                                     <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=" + ((lang==='p->e')?('pl&tl=en&text=' + obj2._pl):('en&tl=pl&text=' + obj2._en)))} className="icon-gt"></button>
-                                    <i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(lang==='p->e'?obj2._pl:obj2._en,(lang==='p->e'?"pl":"en"),that.state.online)}>{lang==='p->e'?obj2._pl:obj2._en}</i>
+                                    {/*<i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(lang==='p->e'?obj2._pl:obj2._en,(lang==='p->e'?"pl":"en"),that.state.online)}>{lang==='p->e'?obj2._pl:obj2._en}</i>*/}
+                                    <i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(lang==='p->e'?obj2._pl:obj2._en,(lang==='p->e'?"pl":"en"),true)}>{lang==='p->e'?obj2._pl:obj2._en}</i>
                                 </span>
                                 <span className={"col-6 d-flex"}>
                                     <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=" + ((lang==='p->e')?('en&tl=pl&text=' + obj2._en):('pl&tl=en&text=' + obj2._pl)))} className="icon-gt"></button>
-                                    <i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(lang==='p->e'?obj2._en:obj2._pl,(lang==='p->e'?"en":"pl"),that.state.online)}>{lang==='p->e'?obj2._en:obj2._pl}</i>
+                                    {/*<i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(lang==='p->e'?obj2._en:obj2._pl,(lang==='p->e'?"en":"pl"),that.state.online)}>{lang==='p->e'?obj2._en:obj2._pl}</i>*/}
+                                    <i className={!that.state.online || " icon-volume"} onClick={() => that.translateVoice(lang==='p->e'?obj2._en:obj2._pl,(lang==='p->e'?"en":"pl"),true)}>{lang==='p->e'?obj2._en:obj2._pl}</i>
                                 </span>
                             </p>
                         </li>:'')
@@ -770,6 +796,13 @@ class FlashCards extends Component {
 
         // first category active
         //this.global.categoryActive[0] = true;
+    };
+
+    speak = (message, language) => {
+        window.speechSynthesis.cancel();
+        const msg = new SpeechSynthesisUtterance(message);
+        msg.lang = language;
+        window.speechSynthesis.speak(msg);
     };
 
     render() {

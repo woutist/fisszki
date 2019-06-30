@@ -75,9 +75,9 @@ class Exercises extends Component {
 
     listenTranslate = (that,flashCardDirection,trans) => {
         if(flashCardDirection === 'p->e') {
-            that.translateVoice(trans, "en",that.state.online);
+            that.translateVoice(trans, "en",true);
         } else {
-            that.translateVoice(trans, "pl",that.state.online);
+            that.translateVoice(trans, "pl",true);
         }
         that.setState({
             translateForAMomentCheck: 'translate-for-a-moment-check'
@@ -98,9 +98,9 @@ class Exercises extends Component {
 
                     if(voice && checkvoice !== 'no-voice' && thisComponent.oneTimeVoice !== idItem) {
                         if(flashCardDirection === 'p->e') {
-                            that.translateVoice(obj._pl, "pl",that.state.online);
+                            that.translateVoice(obj._pl, "pl",true);
                         } else {
-                            that.translateVoice(obj._en, "en",that.state.online);
+                            that.translateVoice(obj._en, "en",true);
                         }
                         thisComponent.oneTimeVoice = idItem;
                     }
@@ -128,9 +128,9 @@ class Exercises extends Component {
                                     flashCardDirection === 'p->e' ?
                                         <div className="flipper">
                                             <div className={'front ' + centerClass}>
-                                                <p className="paragraph-top"  onClick={() => that.translateVoice(obj._pl, "pl",that.state.online)}>
+                                                <p className="paragraph-top"  onClick={() => that.translateVoice(obj._pl, "pl",true)}>
                                                     <strong>{translate.polish}</strong>
-                                                    <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
+                                                    <span className={'icon-volume '}></span>
                                                     <span className={obj._pl.length>sizeText?(obj._pl.length>sizeTextMore?'small-size':'normal-size'):'large-size'}>{obj._pl}</span>
                                                 </p>
                                                 <hr />
@@ -156,7 +156,7 @@ class Exercises extends Component {
                                                     <button className={"button-show-answer"}
                                                             onClick={() => thisComponent.showTranslateForAMoment(obj._en)}>{translate.showAnswer}</button>
                                                 }
-                                                <button className={"button-listen-answer"} onClick={() => thisComponent.listenTranslate(that,flashCardDirection,obj._en)}><span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span> {translate.listenTranslate}</button>
+                                                <button className={"button-listen-answer"} onClick={() => thisComponent.listenTranslate(that,flashCardDirection,obj._en)}><span className={'icon-volume '}></span> {translate.listenTranslate}</button>
 
 
                                                 <div className="list-extends-links">
@@ -170,15 +170,15 @@ class Exercises extends Component {
                                                 </div>
                                             </div>
                                             <div className={'back ' + centerClass}>
-                                                <p className="paragraph-top" onClick={() => that.translateVoice(obj._pl, "pl",that.state.online) }>
+                                                <p className="paragraph-top" onClick={() => that.translateVoice(obj._pl, "pl",true) }>
                                                     <strong>{translate.polish}</strong>
-                                                    <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
+                                                    <span className={'icon-volume '}></span>
                                                     <span className={obj._pl.length>sizeText?(obj._pl.length>sizeTextMore?'small-size':'normal-size'):'large-size'}>{obj._pl}</span>
                                                 </p>
                                                 <hr />
-                                                <p className="paragraph-bottom" onClick={() => that.translateVoice(obj._en, "en",that.state.online)}>
+                                                <p className="paragraph-bottom" onClick={() => that.translateVoice(obj._en, "en",true)}>
                                                     <strong>{translate.english}</strong>
-                                                    <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
+                                                    <span className={'icon-volume '}></span>
                                                     <span className={obj._en.length>sizeText?(obj._en.length>sizeTextMore?'small-size':'normal-size'):'large-size'}><strong>{obj._en}</strong></span>
                                                 </p>
                                                 <div className="list-extends-links">
@@ -195,9 +195,9 @@ class Exercises extends Component {
                                         :
                                         <div className="flipper">
                                             <div className={'front ' + centerClass}>
-                                                <p className="paragraph-top"  onClick={() => that.translateVoice(obj._en, "en", that.state.online)}>
+                                                <p className="paragraph-top"  onClick={() => that.translateVoice(obj._en, "en", true)}>
                                                     <strong>{translate.english}</strong>
-                                                    <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
+                                                    <span className={'icon-volume '}></span>
                                                     <span className={obj._en.length>sizeText?(obj._en.length>sizeTextMore?'small-size':'normal-size'):'large-size'} >{obj._en}</span>
                                                 </p>
                                                 <hr />
@@ -223,7 +223,7 @@ class Exercises extends Component {
                                                     <button className={"button-show-answer"}
                                                             onClick={() => thisComponent.showTranslateForAMoment(obj._pl)}>{translate.showAnswer}</button>
                                                 }
-                                                <button className={"button-listen-answer"} onClick={() => thisComponent.listenTranslate(that,flashCardDirection,obj._pl)}><span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span> {translate.listenTranslate}</button>
+                                                <button className={"button-listen-answer"} onClick={() => thisComponent.listenTranslate(that,flashCardDirection,obj._pl)}><span className={'icon-volume '}></span> {translate.listenTranslate}</button>
 
                                                 <div className="list-extends-links">
                                                     <button onClick={(e) => that.openHref(e,"https://translate.google.pl/#view=home&op=translate&sl=en&tl=pl&text=" + obj._en)} className="google-translator" target='blank_'>
@@ -236,15 +236,15 @@ class Exercises extends Component {
                                                 </div>
                                             </div>
                                             <div className={'back ' + centerClass}>
-                                                <p className="paragraph-top"  onClick={() => that.translateVoice(obj._en, "en",that.state.online)}>
+                                                <p className="paragraph-top"  onClick={() => that.translateVoice(obj._en, "en",true)}>
                                                     <strong>{translate.english}</strong>
-                                                    <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
+                                                    <span className={'icon-volume '}></span>
                                                     <span className={obj._en.length>sizeText?(obj._en.length>sizeTextMore?'small-size':'normal-size'):'large-size'}>{obj._en}</span></p>
                                                 <hr />
 
-                                                <p className="paragraph-bottom"  onClick={() => that.translateVoice(obj._pl, "pl",that.state.online) }>
+                                                <p className="paragraph-bottom"  onClick={() => that.translateVoice(obj._pl, "pl",true) }>
                                                     <strong>{translate.polish}</strong>
-                                                    <span className={'icon-volume ' + (that.state.online?'':'line-disable')}></span>
+                                                    <span className={'icon-volume '}></span>
                                                     <span className={obj._pl.length>sizeText?(obj._pl.length>sizeTextMore?'small-size':'normal-size'):'large-size'}><strong>{obj._pl}</strong></span>
                                                 </p>
                                                 <div className="list-extends-links">
